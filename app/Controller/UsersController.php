@@ -1,103 +1,76 @@
 <?php
 App::uses('AppController', 'Controller');
-    /**
-     * Users Controller
-     *
-     * @property User $User
+/**
+ * Users Controller
+ *
+ * @property User $User
  * @property PaginatorComponent $Paginator
-     */
+ */
 class UsersController extends AppController {
 
-/**
- * Components
- *
- * @var array
- */
+    /**
+     * Components
+     *
+     * @var array
+     */
 	public $components = array('Paginator');
 
     /**
+     * 返却はJson形式
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function beforeFilter() {
+        $this->viewClass = 'Json';
+    }
+
+    /**
      * index method
- *
- * @return void
+     *
+     * @author imanishi 
+     * @return json
      */
 	public function index() {
-		$this->User->recursive = 0;
-		$this->set('users', $this->Paginator->paginate());
+
+        $fields = func_get_args();
+        $list = $this->User->getAllFind($this->request->query, $fields);
+        $this->setJson($list);
 	}
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-		$this->set('user', $this->User->find('first', $options));
+    /**
+     * 条件検索
+     *
+     * @author imanishi 
+     * @return json 検索結果一覧
+     */
+    public function find() {
+
+        $fields = func_get_args();
+        $list = $this->User->getAllFind($this->request->query, $fields);
+        $this->setJson($list);
+    }
+
+    /**
+     * 登録更新
+     *
+     * @author imanishi 
+     * @return json 0:失敗 1:成功 2:post以外のリクエスト
+     */
+	public function init() {
+
+        if ($this->request->is(array('put'))) {
+            if ($this->User->save($this->request->query)) {
+                $ary = array('result' => 1);
+            } else {
+                $ary = array('result' => 0);
+            }
+        } else {
+            $ary = array('result' => 2);
+        }
+
+        $this->setJson($ary);
 	}
 
-/**
- * add method
- *
- * @return void
- */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->User->create();
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
-			}
-		}
-	}
 
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-		if (!$this->User->exists($id)) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		if ($this->request->is(array('post', 'put'))) {
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The user could not be saved. Please, try again.'));
-			}
-		} else {
-			$options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-			$this->request->data = $this->User->find('first', $options);
-		}
-	}
-
-/**
- * delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		$this->User->id = $id;
-		if (!$this->User->exists()) {
-			throw new NotFoundException(__('Invalid user'));
-		}
-		$this->request->onlyAllow('post', 'delete');
-		if ($this->User->delete()) {
-			$this->Session->setFlash(__('The user has been deleted.'));
-		} else {
-			$this->Session->setFlash(__('The user could not be deleted. Please, try again.'));
-		}
-		return $this->redirect(array('action' => 'index'));
-	}}
+}

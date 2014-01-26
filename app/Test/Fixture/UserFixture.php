@@ -11,14 +11,16 @@ class UserFixture extends CakeTestFixture {
  * @var array
  */
 	public $fields = array(
-		'id' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 10, 'key' => 'primary'),
+		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'opensosial_owner_id' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 50, 'key' => 'unique', 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'carrer' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 3, 'comment' => '1.android 2.iphone'),
 		'delete_flg' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 3),
-		'created_at' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'updated_at' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
-			
+			'PRIMARY' => array('column' => 'user_id', 'unique' => 1),
+			'インデックス 2' => array('column' => 'opensosial_owner_id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -30,12 +32,13 @@ class UserFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => 1,
+			'user_id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
+			'opensosial_owner_id' => 'Lorem ipsum dolor sit amet',
 			'carrer' => 1,
 			'delete_flg' => 1,
-			'created_at' => '2014-01-26 08:39:56',
-			'updated_at' => '2014-01-26 08:39:56'
+			'created' => '2014-01-26 19:11:41',
+			'modified' => '2014-01-26 19:11:41'
 		),
 	);
 

@@ -26,6 +26,14 @@ class SnsUsersControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testFind method
+ *
+ * @return void
+ */
+	public function testFind() {
+	}
+
+/**
  * testView method
  *
  * @return void

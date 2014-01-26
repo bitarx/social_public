@@ -13,7 +13,9 @@ class UsersControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.user'
+		'app.user',
+		'app.opensosial_owner',
+		'app.viewer'
 	);
 
 /**
@@ -25,35 +27,19 @@ class UsersControllerTest extends ControllerTestCase {
 	}
 
 /**
- * testView method
+ * testFind method
  *
  * @return void
  */
-	public function testView() {
+	public function testFind() {
 	}
 
 /**
- * testAdd method
+ * testInit method
  *
  * @return void
  */
-	public function testAdd() {
-	}
-
-/**
- * testEdit method
- *
- * @return void
- */
-	public function testEdit() {
-	}
-
-/**
- * testDelete method
- *
- * @return void
- */
-	public function testDelete() {
+	public function testInit() {
 	}
 
 }

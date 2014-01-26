@@ -8,13 +8,6 @@ App::uses('AppModel', 'Model');
 class SnsUser extends AppModel {
 
 /**
- * Primary key field
- *
- * @var string
- */
-	public $primaryKey = 'owner_id';
-
-/**
  * Validation rules
  *
  * @var array
@@ -30,7 +23,7 @@ class SnsUser extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'nickname' => array(
+		'sne_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -43,26 +36,6 @@ class SnsUser extends AppModel {
 		'delete_flg' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'created_at' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'updated_at' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

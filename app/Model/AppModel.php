@@ -30,4 +30,55 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    public $recursive = 0;
+
+    protected $_filDelFlg = 'delete_flg';
+
+    protected $_pageLimit = 10;
+
+    /**
+     * 返却はJson形式
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function beforeFilter() {
+        $this->viewClass = 'Json';
+    }
+
+    /**
+     * 条件検索
+     *
+     * @author imanishi 
+     * @param array $where  検索条件
+     * @param array $fields 取得カラム
+     * @return array 検索結果
+     */
+    public function getAllFind( $where = array(), $fields = array() ) {
+        $options = array();
+        $conditions = array($this->getTableAlias(). '.'. $this->_filDelFlg => 0);
+        if (0 < count($where)) {
+            foreach ($where as $field => $val) {
+                $conditions[$this->getTableAlias(). '.'. $field] = $val; 
+            }
+        }
+        if (0 < count($fields)) {
+            $options['fields'] = $fields;
+        }
+
+        $options['conditions'] = $conditions;
+
+        return $this->find('all', $options);
+    }
+
+    /**
+     * テーブルエイリアス取得
+     *
+     * @author imanishi 
+     * @return string テーブルエイリアス
+     */
+     public function getTableAlias() {
+         return ucfirst(substr($this->useTable, 0, -1));
+     }
 }
