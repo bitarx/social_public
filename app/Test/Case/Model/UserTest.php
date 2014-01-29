@@ -14,8 +14,7 @@ class UserTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.user',
-		'app.opensosial_owner',
-		'app.viewer'
+		'app.sns_user'
 	);
 
 /**

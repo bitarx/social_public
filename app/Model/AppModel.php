@@ -73,12 +73,18 @@ class AppModel extends Model {
     }
 
     /**
-     * テーブルエイリアス取得
+     * テーブルエイリアス生成
      *
      * @author imanishi 
      * @return string テーブルエイリアス
      */
      public function getTableAlias() {
-         return ucfirst(substr($this->useTable, 0, -1));
+         $table = substr($this->useTable, 0, -1);
+         $ary = explode('_', $table);
+         $tablename = '';
+         foreach ($ary as $val) {
+             $tablename .= ucfirst($val); 
+         }
+         return $tablename;
      }
 }

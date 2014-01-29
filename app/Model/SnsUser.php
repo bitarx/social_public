@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * SnsUser Model
  *
- * @property Viewer $Viewer
+ * @property User $User
  */
 class SnsUser extends AppModel {
 
@@ -13,7 +13,7 @@ class SnsUser extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'viewer_id' => array(
+		'viewer' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -23,7 +23,7 @@ class SnsUser extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'sne_name' => array(
+		'sns_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -48,17 +48,24 @@ class SnsUser extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
+ * hasMany associations
  *
  * @var array
  */
-	public $belongsTo = array(
-		'Viewer' => array(
-			'className' => 'Viewer',
-			'foreignKey' => 'viewer_id',
+	public $hasMany = array(
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'sns_user_id',
+			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
-			'order' => ''
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
+
 }

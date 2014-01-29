@@ -19,7 +19,7 @@
  */
 
 echo "<?php\n";
-echo "App::uses('{$plugin}AppController', '{$pluginPath}Controller');\n";
+echo "App::uses('{$plugin}ApiController', '{$pluginPath}Controller');\n";
 ?>
 /**
  * <?php echo $controllerName; ?> Controller
@@ -36,7 +36,7 @@ if (!$isScaffold) {
 }
 ?>
  */
-class <?php echo $controllerName; ?>Controller extends <?php echo $plugin; ?>AppController {
+class <?php echo $controllerName; ?>Controller extends <?php echo $plugin; ?>ApiController {
 
 <?php if ($isScaffold): ?>
     /**

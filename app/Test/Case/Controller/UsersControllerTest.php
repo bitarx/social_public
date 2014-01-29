@@ -14,8 +14,7 @@ class UsersControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user',
-		'app.opensosial_owner',
-		'app.viewer'
+		'app.sns_user'
 	);
 
 /**

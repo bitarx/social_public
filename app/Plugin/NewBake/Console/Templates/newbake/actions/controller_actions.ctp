@@ -17,16 +17,6 @@
  */
 ?>
     /**
-     * 返却はJson形式
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function beforeFilter() {
-        $this->viewClass = 'Json';
-    }
-
-    /**
      * <?php echo $admin ?>index method
      *
      * @author imanishi 

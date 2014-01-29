@@ -14,7 +14,7 @@ class SnsUserTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.sns_user',
-		'app.viewer'
+		'app.user'
 	);
 
 /**

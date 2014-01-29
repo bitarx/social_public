@@ -52,6 +52,10 @@ class AppController extends Controller {
         } else {
             $keys = $data;
         }
-        $this->set('_serialize', $keys);
+        $this->viewClass = 'Json';
+        $this->header('Access-Control-Allow-Origin: *');
+        $this->set(array(
+            '_serialize'=> $keys
+        ));
     }
 }

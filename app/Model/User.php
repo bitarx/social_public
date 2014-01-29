@@ -3,17 +3,57 @@ App::uses('AppModel', 'Model');
 /**
  * User Model
  *
- * @property OpensosialOwner $OpensosialOwner
+ * @property SnsUser $SnsUser
  */
 class User extends AppModel {
 
 /**
- * Primary key field
+ * Validation rules
  *
- * @var string
+ * @var array
  */
-	public $primaryKey = 'user_id';
-
+	public $validate = array(
+		'name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'sns_user_id' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'carrer' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'delete_flg' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
@@ -23,9 +63,9 @@ class User extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'OpensosialOwner' => array(
-			'className' => 'OpensosialOwner',
-			'foreignKey' => 'opensosial_owner_id',
+		'SnsUser' => array(
+			'className' => 'SnsUser',
+			'foreignKey' => 'sns_user_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -14,7 +14,7 @@ class SnsUsersControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.sns_user',
-		'app.viewer'
+		'app.user'
 	);
 
 /**
@@ -34,35 +34,11 @@ class SnsUsersControllerTest extends ControllerTestCase {
 	}
 
 /**
- * testView method
+ * testInit method
  *
  * @return void
  */
-	public function testView() {
-	}
-
-/**
- * testAdd method
- *
- * @return void
- */
-	public function testAdd() {
-	}
-
-/**
- * testEdit method
- *
- * @return void
- */
-	public function testEdit() {
-	}
-
-/**
- * testDelete method
- *
- * @return void
- */
-	public function testDelete() {
+	public function testInit() {
 	}
 
 }
