@@ -25,32 +25,40 @@
 	public function <?php echo $admin ?>index() {
 
         $fields = func_get_args();
-        $list = $this-><?php echo $currentModelName; ?>->getAllFind($this->request->query, $fields);
-        $this->setJson($list);
+        $this-><?php echo $currentModelName; ?>->getAllFind($this->request->query, $fields);
+        $this->set('<?php echo $pluralName ?>', $this->Paginator->paginate());
 	}
 
     /**
-     * <?php echo $admin ?>条件検索
+     * <?php echo $admin ?>条件検索(変更禁止)
      *
      * @author imanishi 
      * @return json 検索結果一覧
      */
     public function find() {
 
-        $fields = func_get_args();
-        $list = $this-><?php echo $currentModelName; ?>->getAllFind($this->request->query, $fields);
-        $this->setJson($list);
+        if ($this->request->is(array('ajax'))) {
+
+            $this->autoRender = false;   // 自動描画をさせない
+
+            $fields = func_get_args();
+            $list = $this-><?php echo $currentModelName; ?>->getAllFind($this->request->query, $fields);
+            $this->setJson($list);
+        }
     }
 
     /**
-     * <?php echo $admin ?>登録更新
+     * <?php echo $admin ?>登録更新(変更禁止)
      *
      * @author imanishi 
-     * @return json 0:失敗 1:成功 2:post以外のリクエスト
+     * @return json 0:失敗 1:成功 2:put以外のリクエスト
      */
 	public function <?php echo $admin ?>init() {
 
-        if ($this->request->is(array('put'))) {
+        if ($this->request->is(array('ajax'))) {
+
+            $this->autoRender = false;   // 自動描画をさせない
+
             if ($this-><?php echo $currentModelName; ?>->save($this->request->query)) {
                 $ary = array('result' => 1);
             } else {

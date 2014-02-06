@@ -12,8 +12,8 @@ class SnsUserFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'key' => 'primary', 'collate' => 'utf8_general_ci', 'comment' => 'opensocial_owner_id', 'charset' => 'utf8'),
-		'viewer' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'comment' => 'SNS側のID', 'charset' => 'utf8'),
-		'sne_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'comment' => 'SNS側の名前', 'charset' => 'utf8'),
+		'viewer' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'comment' => 'opensocial_viewer_id', 'charset' => 'utf8'),
+		'sns_name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'comment' => 'SNS側の名前', 'charset' => 'utf8'),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 4),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
@@ -32,10 +32,10 @@ class SnsUserFixture extends CakeTestFixture {
 		array(
 			'id' => 'Lorem ipsum dolor sit amet',
 			'viewer' => 'Lorem ipsum dolor sit amet',
-			'sne_name' => 'Lorem ipsum dolor sit amet',
+			'sns_name' => 'Lorem ipsum dolor sit amet',
 			'delete_flg' => 1,
-			'created' => '2014-01-28 13:35:26',
-			'modified' => '2014-01-28 13:35:26'
+			'created' => '2014-02-06 09:56:56',
+			'modified' => '2014-02-06 09:56:56'
 		),
 	);
 

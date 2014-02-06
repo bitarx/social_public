@@ -32,30 +32,4 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    /**
-     * Json返却用
-     *
-     * @author imanishi 
-     * @param array
-     * @return void
-     */
-    public function setJson($data) {
-
-        $keys = array();
-
-        if (is_array($data)) {        
-            foreach ($data as $key => $val) {
-
-                $this->set($key, $val);
-                $keys[] = $key;
-            }
-        } else {
-            $keys = $data;
-        }
-        $this->viewClass = 'Json';
-        $this->header('Access-Control-Allow-Origin: *');
-        $this->set(array(
-            '_serialize'=> $keys
-        ));
-    }
 }

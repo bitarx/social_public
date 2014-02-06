@@ -1,12 +1,12 @@
 <?php
-App::uses('AppController', 'Controller');
+App::uses('ApiController', 'Controller');
 /**
  * SnsUsers Controller
  *
  * @property SnsUser $SnsUser
  * @property PaginatorComponent $Paginator
  */
-class SnsUsersController extends AppController {
+class SnsUsersController extends ApiController {
 
     /**
      * Components
@@ -14,16 +14,6 @@ class SnsUsersController extends AppController {
      * @var array
      */
 	public $components = array('Paginator');
-
-    /**
-     * 返却はJson形式
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function beforeFilter() {
-        $this->viewClass = 'Json';
-    }
 
     /**
      * index method
@@ -34,34 +24,40 @@ class SnsUsersController extends AppController {
 	public function index() {
 
         $fields = func_get_args();
-        $list = $this->SnsUser->getAllFind($this->request->query, $fields);
-        $this->setJson($list);
+        $this->SnsUser->getAllFind($this->request->query, $fields);
+        $this->set('snsUsers', $this->Paginator->paginate());
 	}
 
     /**
-     * 条件検索
+     * 条件検索(変更禁止)
      *
      * @author imanishi 
      * @return json 検索結果一覧
      */
     public function find() {
 
-        $fields = func_get_args();
-        $list = $this->SnsUser->getAllFind($this->request->query, $fields);
-        $list = array('action' => 'top_index', 'regist' => 0);
+        if ($this->request->is(array('ajax'))) {
 
-        $this->setJson($list);
+            $this->autoRender = false;   // 自動描画をさせない
+
+            $fields = func_get_args();
+            $list = $this->SnsUser->getAllFind($this->request->query, $fields);
+            $this->setJson($list);
+        }
     }
 
     /**
-     * 登録更新
+     * 登録更新(変更禁止)
      *
      * @author imanishi 
-     * @return json 0:失敗 1:成功 2:post以外のリクエスト
+     * @return json 0:失敗 1:成功 2:put以外のリクエスト
      */
 	public function init() {
 
-        if ($this->request->is(array('put'))) {
+        if ($this->request->is(array('ajax'))) {
+
+            $this->autoRender = false;   // 自動描画をさせない
+
             if ($this->SnsUser->save($this->request->query)) {
                 $ary = array('result' => 1);
             } else {

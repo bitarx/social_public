@@ -78,7 +78,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'barx',
 		'password' => 'arx0505q',
-		'database' => 'eres',
+		'database' => 'test_eres',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

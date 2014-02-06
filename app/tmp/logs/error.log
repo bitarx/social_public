@@ -1,807 +1,79 @@
-2014-01-24 16:59:03 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css/css/css/cake.generic.css
+2014-02-04 14:21:35 Error: Testing LogError() basic function
+2014-02-04 14:21:35 Error: Testing with multi-line string
+2014-02-04 14:48:22 Error: [UnexpectedValueException] Referenced fixture class UserTarget (Test/Fixture/UserTargetFixture.php) not found
 Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 16:59:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
-Exception Attributes: array (
-  'class' => 'Favicon.icoController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/favicon.ico/favicon.ico
+#0 /var/app/asns/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(77): CakeFixtureManager->_loadFixtures(Array)
+#1 /var/app/asns/lib/Cake/TestSuite/CakeTestRunner.php(55): CakeFixtureManager->fixturize(Object(SnsUserTest))
+#2 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteCommand.php(95): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(243): CakeTestSuiteCommand->run(Array)
+#4 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(96): CakeTestSuiteDispatcher->_runTestCase()
+#5 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(113): CakeTestSuiteDispatcher->dispatch()
+#6 /var/app/asns/app/webroot/test.php(98): CakeTestSuiteDispatcher::run()
+#7 {main}
+2014-02-04 14:48:44 Error: [UnexpectedValueException] Referenced fixture class UserTarget (Test/Fixture/UserTargetFixture.php) not found
 Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 16:59:04 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif/img/img/cake.power.gif
+#0 /var/app/asns/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(77): CakeFixtureManager->_loadFixtures(Array)
+#1 /var/app/asns/lib/Cake/TestSuite/CakeTestRunner.php(55): CakeFixtureManager->fixturize(Object(SnsUserTest))
+#2 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteCommand.php(95): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(243): CakeTestSuiteCommand->run(Array)
+#4 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(96): CakeTestSuiteDispatcher->_runTestCase()
+#5 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(113): CakeTestSuiteDispatcher->dispatch()
+#6 /var/app/asns/app/webroot/test.php(98): CakeTestSuiteDispatcher::run()
+#7 {main}
+2014-02-04 14:56:25 Error: [UnexpectedValueException] Referenced fixture class Card (Test/Fixture/CardFixture.php) not found
 Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 16:59:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
-Exception Attributes: array (
-  'class' => 'Favicon.icoController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/favicon.ico/favicon.ico
+#0 /var/app/asns/lib/Cake/TestSuite/Fixture/CakeFixtureManager.php(77): CakeFixtureManager->_loadFixtures(Array)
+#1 /var/app/asns/lib/Cake/TestSuite/CakeTestRunner.php(55): CakeFixtureManager->fixturize(Object(SnsUserTest))
+#2 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteCommand.php(95): CakeTestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array)
+#3 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(243): CakeTestSuiteCommand->run(Array)
+#4 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(96): CakeTestSuiteDispatcher->_runTestCase()
+#5 /var/app/asns/lib/Cake/TestSuite/CakeTestSuiteDispatcher.php(113): CakeTestSuiteDispatcher->dispatch()
+#6 /var/app/asns/app/webroot/test.php(98): CakeTestSuiteDispatcher::run()
+#7 {main}
+2014-02-04 16:15:35 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/app/asns/app/Test/Case/Model/SnsUserTest.php, line 23]
+2014-02-04 16:15:35 Error: [FatalErrorException] syntax error, unexpected ';'
 Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 16:59:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
-Exception Attributes: array (
-  'class' => 'Favicon.icoController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/favicon.ico/favicon.ico
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 16:59:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
-Exception Attributes: array (
-  'class' => 'Favicon.icoController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/favicon.ico/favicon.ico
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 17:08:50 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css/css/css/cake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 17:08:50 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif/img/img/cake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 17:10:39 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css/css/css/cake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-24 17:10:40 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif/img/img/cake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 /var/app/asns/index.php(41): require('/var/app/asns/a...')
-#2 {main}
-2014-01-25 18:39:33 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 18:41:15 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 18:41:17 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 18:43:40 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 18:48:05 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 18:50:37 Error: [MissingControllerException] Controller class AsnsController could not be found.
-Exception Attributes: array (
-  'class' => 'AsnsController',
-  'plugin' => NULL,
-)
-Request URL: /asns/index.php/asns/
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:11:05 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css?q=%2Fcss%2Fcake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:11:05 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif?q=%2Fimg%2Fcake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:11:23 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/index/?q=%2Fsample%2Findex%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:11:23 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css?q=%2Fcss%2Fcake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:11:23 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif?q=%2Fimg%2Fcake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:18:19 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css?q=%2Fcss%2Fcake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:18:19 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif?q=%2Fimg%2Fcake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:18:46 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:19:09 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:19:11 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:19:38 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:19:40 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:20:09 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:20:22 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:20:22 Error: [MissingControllerException] Controller class CssController could not be found.
-Exception Attributes: array (
-  'class' => 'CssController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/css/cake.generic.css?q=%2Fcss%2Fcake.generic.css
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:20:23 Error: [MissingControllerException] Controller class ImgController could not be found.
-Exception Attributes: array (
-  'class' => 'ImgController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/img/cake.power.gif?q=%2Fimg%2Fcake.power.gif
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-25 20:20:32 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-25 20:27:54 Error: [MissingViewException] View file "/var/app/asns/app/View/Sample/index.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Sample/index.ctp',
-)
-Request URL: /index.php/sample/?q=%2Fsample%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SampleController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-26 00:08:48 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
-Exception Attributes: array (
-  'class' => 'Robots.txtController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/robots.txt?q=%2Frobots.txt
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-26 09:06:46 Error: [MissingPluginException] Plugin ‘NewBake’ could not be found.
-Exception Attributes: array (
-  'plugin' => '‘NewBake’',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('???NewBake???', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(72): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(136): require('/var/app/asns/l...')
-#5 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(98): ShellDispatcher->_bootstrap()
-#6 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(54): ShellDispatcher->_initEnvironment()
-#7 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(65): ShellDispatcher->__construct(Array)
-#8 /var/app/asns/app/Console/cake.php(36): ShellDispatcher::run(Array)
-#9 {main}
-2014-01-26 09:07:40 Error: [MissingPluginException] Plugin ‘NewBake’ could not be found.
-Exception Attributes: array (
-  'plugin' => '‘NewBake’',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('???NewBake???', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(72): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(136): require('/var/app/asns/l...')
-#5 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(98): ShellDispatcher->_bootstrap()
-#6 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(54): ShellDispatcher->_initEnvironment()
-#7 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(65): ShellDispatcher->__construct(Array)
-#8 /var/app/asns/app/Console/cake.php(36): ShellDispatcher::run(Array)
-#9 {main}
-2014-01-26 09:08:05 Error: [MissingPluginException] Plugin ‘NewBake’ could not be found.
-Exception Attributes: array (
-  'plugin' => '‘NewBake’',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('???NewBake???', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(72): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(136): require('/var/app/asns/l...')
-#5 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(98): ShellDispatcher->_bootstrap()
-#6 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(54): ShellDispatcher->_initEnvironment()
-#7 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(65): ShellDispatcher->__construct(Array)
-#8 /var/app/asns/app/Console/cake.php(36): ShellDispatcher::run(Array)
-#9 {main}
-2014-01-26 09:10:27 Error: [MissingPluginException] Plugin ‘NewBake’ could not be found.
-Exception Attributes: array (
-  'plugin' => '‘NewBake’',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('???NewBake???', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(72): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(136): require('/var/app/asns/l...')
-#5 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(98): ShellDispatcher->_bootstrap()
-#6 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(54): ShellDispatcher->_initEnvironment()
-#7 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(65): ShellDispatcher->__construct(Array)
-#8 /var/app/asns/app/Console/cake.php(36): ShellDispatcher::run(Array)
-#9 {main}
-2014-01-26 09:10:56 Error: [MissingPluginException] Plugin ‘NewBake’ could not be found.
-Exception Attributes: array (
-  'plugin' => '‘NewBake’',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('???NewBake???', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(72): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(136): require('/var/app/asns/l...')
-#5 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(98): ShellDispatcher->_bootstrap()
-#6 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(54): ShellDispatcher->_initEnvironment()
-#7 /var/app/asns/lib/Cake/Console/ShellDispatcher.php(65): ShellDispatcher->__construct(Array)
-#8 /var/app/asns/app/Console/cake.php(36): ShellDispatcher::run(Array)
-#9 {main}
-2014-01-26 16:32:53 Error: [MissingControllerException] Controller class SnsuserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsuserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/snsuser/index/?q=%2Fsnsuser%2Findex%2F
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-26 16:33:11 Error: [MissingControllerException] Controller class Sns-userController could not be found.
-Exception Attributes: array (
-  'class' => 'Sns-userController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns-user/index/?q=%2Fsns-user%2Findex%2F
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-26 16:33:19 Error: [MissingControllerException] Controller class SnsUserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsUserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns_user/index/?q=%2Fsns_user%2Findex%2F
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-26 17:09:42 Error: [MissingTableException] Table viewers for model Viewer was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'viewers',
-  'class' => 'Viewer',
-  'ds' => 'default',
-)
-Request URL: /index.php/sns_users/?q=%2Fsns_users%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('viewers')
-#1 /var/app/asns/lib/Cake/Model/Model.php(1355): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(1447): Model->schema()
-#3 /var/app/asns/lib/Cake/Model/Model.php(1434): Model->hasField('title', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(880): Model->hasField(Array)
-#5 /var/app/asns/lib/Cake/Controller/Scaffold.php(427): Model->__get('displayField')
-#6 /var/app/asns/lib/Cake/Controller/Scaffold.php(137): Scaffold->_associations()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(SnsUsersController), Object(CakeRequest))
-#8 /var/app/asns/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#11 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#12 {main}
-2014-01-26 17:11:21 Error: [MissingTableException] Table viewers for model Viewer was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'viewers',
-  'class' => 'Viewer',
-  'ds' => 'default',
-)
-Request URL: /index.php/sns_users/?q=%2Fsns_users%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('viewers')
-#1 /var/app/asns/lib/Cake/Model/Model.php(1355): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(1447): Model->schema()
-#3 /var/app/asns/lib/Cake/Model/Model.php(1434): Model->hasField('title', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(880): Model->hasField(Array)
-#5 /var/app/asns/lib/Cake/Controller/Scaffold.php(427): Model->__get('displayField')
-#6 /var/app/asns/lib/Cake/Controller/Scaffold.php(137): Scaffold->_associations()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(535): Scaffold->__construct(Object(SnsUsersController), Object(CakeRequest))
-#8 /var/app/asns/lib/Cake/Controller/Controller.php(494): Controller->_getScaffold(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#11 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#12 {main}
-2014-01-26 19:00:01 Error: [MissingTableException] Table viewers for model Viewer was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'viewers',
-  'class' => 'Viewer',
-  'ds' => 'default',
-)
-Request URL: /index.php/sns_users/?q=%2Fsns_users%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('viewers')
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#3 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#4 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#5 /var/app/asns/app/Controller/SnsUsersController.php(37): AppModel->getAllFind(Array)
-#6 [internal function]: SnsUsersController->index()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#10 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2014-01-26 19:00:12 Error: [MissingTableException] Table viewers for model Viewer was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'viewers',
-  'class' => 'Viewer',
-  'ds' => 'default',
-)
-Request URL: /index.php/sns_users/?q=%2Fsns_users%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('viewers')
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#3 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#4 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#5 /var/app/asns/app/Controller/SnsUsersController.php(37): AppModel->getAllFind(Array)
-#6 [internal function]: SnsUsersController->index()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#10 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2014-01-26 19:01:37 Error: [MissingTableException] Table viewers for model Viewer was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'viewers',
-  'class' => 'Viewer',
-  'ds' => 'default',
-)
-Request URL: /index.php/sns_users/?q=%2Fsns_users%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('viewers')
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#3 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#4 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#5 /var/app/asns/app/Controller/SnsUsersController.php(37): AppModel->getAllFind(Array)
-#6 [internal function]: SnsUsersController->index()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#10 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2014-01-26 19:02:31 Error: [MissingTableException] Table owners for model Owner was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'owners',
-  'class' => 'Owner',
-  'ds' => 'default',
-)
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('owners')
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#3 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#4 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#5 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#6 [internal function]: UsersController->index()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#10 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2014-01-26 19:03:53 Error: [MissingTableException] Table owners for model Owner was not found in datasource default.
-Exception Attributes: array (
-  'table' => 'owners',
-  'class' => 'Owner',
-  'ds' => 'default',
-)
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Model.php(3496): Model->setSource('owners')
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1063): Model->getDataSource()
-#2 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#3 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#4 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#5 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#6 [internal function]: UsersController->index()
-#7 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#9 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#10 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#11 {main}
-2014-01-26 19:11:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'delete_flg' in where clause is ambiguous
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->index()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-26 19:15:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.delete_flg' in 'where clause'
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->index()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-26 19:16:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.delete_flg' in 'where clause'
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->index()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-26 19:17:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.delete_flg' in 'where clause'
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->index()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-26 19:17:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users.delete_flg' in 'where clause'
-Request URL: /index.php/users/?q=%2Fusers%2F
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(37): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->index()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-27 04:44:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.' in 'where clause'
-Request URL: /index.php/users/find/?user_id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(60): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/UsersController.php(51): AppModel->getAllFind(Array)
-#8 [internal function]: UsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-27 05:49:41 Error: Fatal Error (1): Using $this when not in object context in [/var/app/asns/app/Controller/AppController.php, line 41]
-2014-01-27 05:49:41 Error: [FatalErrorException] Using $this when not in object context
-Request URL: /index.php/users/find/?user_id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Using $this whe...', '/var/app/asns/a...', 41)
-#1 [internal function]: ErrorHandler::handleError(1, 'Using $this whe...', '/var/app/asns/a...', 41, Array)
-#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Using $this whe...', '/var/app/asns/a...', 41, Array)
+#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/app/asns/a...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/app/asns/a...', 23, Array)
+#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/app/asns/a...', 23, Array)
 #3 /var/app/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
-2014-01-27 06:28:53 Error: Fatal Error (1): Call to undefined method UsersController::getAllFind() in [/var/app/asns/app/Controller/UsersController.php, line 37]
-2014-01-27 06:28:53 Error: [FatalErrorException] Call to undefined method UsersController::getAllFind()
-Request URL: /index.php/users/find/user_id/?carrer=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/app/asns/a...', 37)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/app/asns/a...', 37, Array)
-#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/app/asns/a...', 37, Array)
-#3 /var/app/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2014-01-27 06:29:18 Error: Fatal Error (1): Call to a member function getAllFind() on a non-object in [/var/app/asns/app/Controller/UsersController.php, line 37]
-2014-01-27 06:29:18 Error: [FatalErrorException] Call to a member function getAllFind() on a non-object
-Request URL: /index.php/users/find/user_id/?carrer=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/app/asns/a...', 37)
-#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/app/asns/a...', 37, Array)
-#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/app/asns/a...', 37, Array)
-#3 /var/app/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2014-01-27 06:29:29 Error: [MissingViewException] View file "/var/app/asns/app/View/Users/find.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Users/find.ctp',
-)
-Request URL: /index.php/users/find/user_id/?carrer=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-27 06:29:46 Error: [MissingViewException] View file "/var/app/asns/app/View/Users/find.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Users/find.ctp',
-)
-Request URL: /index.php/users/find/user_id/?carrer=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-27 06:29:47 Error: [MissingViewException] View file "/var/app/asns/app/View/Users/find.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/Users/find.ctp',
-)
-Request URL: /index.php/users/find/user_id/?carrer=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-27 08:02:29 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
-Request URL: /index.php/users/init/?user_id=1&carrer=1
+2014-02-04 17:11:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.{id:1}' in 'where clause'
+Request URL: /index.php/sns_users/index?%7Bid%3A1%7D=
 Stack Trace:
 #0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
-#3 /var/app/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(User), Array, Array)
-#4 /var/app/asns/app/Controller/UsersController.php(61): Model->save(Array)
-#5 [internal function]: UsersController->init()
-#6 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
-#7 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#9 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#10 {main}
-2014-01-27 08:10:35 Error: [PrivateActionException] Private Action UsersController::init() is not directly accessible.
-Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'init',
-)
-Request URL: /index.php/users/init/?user_id=2&carrer=2
+#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
+#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
+#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
+#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
+#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/app/asns/app/Controller/SnsUsersController.php(27): AppModel->getAllFind(Array, Array)
+#8 [internal function]: SnsUsersController->index()
+#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
+#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-04 17:29:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.{id:1}' in 'where clause'
+Request URL: /index.php/sns_users/index?%7Bid%3A1%7D=
 Stack Trace:
-#0 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#1 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#2 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2014-01-27 08:11:00 Error: [PrivateActionException] Private Action UsersController::init() is not directly accessible.
-Exception Attributes: array (
-  'controller' => 'UsersController',
-  'action' => 'init',
-)
-Request URL: /index.php/users/init/?user_id=2&carrer=2
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#1 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
-#2 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#3 {main}
-2014-01-27 14:57:05 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
+#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
+#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
+#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
+#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/app/asns/app/Controller/SnsUsersController.php(27): AppModel->getAllFind(Array, Array)
+#8 [internal function]: SnsUsersController->index()
+#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
+#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-05 01:02:37 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
 Exception Attributes: array (
   'class' => 'Robots.txtController',
   'plugin' => NULL,
@@ -810,340 +82,45 @@ Request URL: /index.php/robots.txt
 Stack Trace:
 #0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2014-01-27 21:59:19 Error: [MissingPluginException] Plugin DebugKit could not be found.
-Exception Attributes: array (
-  'plugin' => 'DebugKit',
-)
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Core/CakePlugin.php(72): CakePlugin::load('DebugKit', Array)
-#1 /var/app/asns/app/Config/bootstrap.php(73): CakePlugin::load(Array)
-#2 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#3 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#4 /var/app/asns/app/webroot/index.php(90): include('/var/app/asns/l...')
-#5 {main}
-2014-01-27 22:00:21 Error: [MissingPluginException] Plugin DebugKit could not be found.
-Exception Attributes: array (
-  'plugin' => 'DebugKit',
-)
-Stack Trace:
-#0 /var/app/asns/app/Config/bootstrap.php(73): CakePlugin::load('DebugKit')
-#1 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#2 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#3 /var/app/asns/app/webroot/index.php(90): include('/var/app/asns/l...')
-#4 {main}
-2014-01-27 22:00:23 Error: [MissingPluginException] Plugin DebugKit could not be found.
-Exception Attributes: array (
-  'plugin' => 'DebugKit',
-)
-Stack Trace:
-#0 /var/app/asns/app/Config/bootstrap.php(73): CakePlugin::load('DebugKit')
-#1 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#2 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#3 /var/app/asns/app/webroot/index.php(90): include('/var/app/asns/l...')
-#4 {main}
-2014-01-27 22:01:34 Error: [MissingPluginException] Plugin DebugKit could not be found.
-Exception Attributes: array (
-  'plugin' => 'DebugKit',
-)
-Stack Trace:
-#0 /var/app/asns/app/Config/bootstrap.php(73): CakePlugin::load('DebugKit')
-#1 /var/app/asns/lib/Cake/Core/Configure.php(92): include('/var/app/asns/a...')
-#2 /var/app/asns/lib/Cake/bootstrap.php(175): Configure::bootstrap(true)
-#3 /var/app/asns/app/webroot/index.php(90): include('/var/app/asns/l...')
-#4 {main}
-2014-01-28 14:06:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`users`, CONSTRAINT `FK_users_sns_users` FOREIGN KEY (`sns_user_id`) REFERENCES `sns_users` (`id`))
-Request URL: /index.php/users/init/?carrer=1&name=hoge
+2014-02-05 20:35:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/user_tutorials/init
 Stack Trace:
 #0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
 #1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
 #2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
-#3 /var/app/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(User), Array, Array)
-#4 /var/app/asns/app/Controller/UsersController.php(63): Model->save(Array)
-#5 [internal function]: UsersController->init()
-#6 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#3 /var/app/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/app/asns/app/Controller/UserTutorialsController.php(53): Model->save(Array)
+#5 [internal function]: UserTutorialsController->init()
+#6 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UserTutorialsController), Array)
 #7 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserTutorialsController), Object(CakeRequest), Object(CakeResponse))
 #9 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-2014-01-28 17:23:32 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-28 17:25:32 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 00:08:49 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
-Exception Attributes: array (
-  'class' => 'Robots.txtController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/robots.txt
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 17:22:37 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 17:23:30 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 17:39:20 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:14:53 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:15:03 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:20:05 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:23:17 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:39:59 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:42:06 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:42:43 Error: [MissingControllerException] Controller class BaseController could not be found.
-Exception Attributes: array (
-  'class' => 'BaseController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/base/top/index.json?a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:44:56 Error: [MissingControllerException] Controller class SnsUserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsUserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns_user/find/?id=1&a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:45:22 Error: [MissingControllerException] Controller class SnsUserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsUserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns_user/find/?id=1
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:50:30 Error: [MissingControllerException] Controller class SnsUserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsUserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns_user/find/?id=1
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:50:32 Error: [MissingControllerException] Controller class SnsUserController could not be found.
-Exception Attributes: array (
-  'class' => 'SnsUserController',
-  'plugin' => NULL,
-)
-Request URL: /index.php/sns_user/find/?id=1
-Stack Trace:
-#0 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#1 {main}
-2014-01-29 18:50:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Sns_user.delete_flg' in 'where clause'
-Request URL: /index.php/sns_users/find/?id=1
+2014-02-05 20:35:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/user_tutorials/init
 Stack Trace:
 #0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/SnsUsersController.php(50): AppModel->getAllFind(Array, Array)
-#8 [internal function]: SnsUsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-29 19:06:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.a' in 'where clause'
-Request URL: /index.php/sns_users/find/?id=1&a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
+#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/app/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/app/asns/app/Controller/UserTutorialsController.php(53): Model->save(Array)
+#5 [internal function]: UserTutorialsController->init()
+#6 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UserTutorialsController), Array)
+#7 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserTutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-06 03:19:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/user_tutorials/init
 Stack Trace:
 #0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/SnsUsersController.php(50): AppModel->getAllFind(Array, Array)
-#8 [internal function]: SnsUsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-29 19:06:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.a' in 'where clause'
-Request URL: /index.php/sns_users/find/?id=1&a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/SnsUsersController.php(50): AppModel->getAllFind(Array, Array)
-#8 [internal function]: SnsUsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-29 19:06:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.a' in 'where clause'
-Request URL: /index.php/sns_users/find/?id=1&a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/SnsUsersController.php(50): AppModel->getAllFind(Array, Array)
-#8 [internal function]: SnsUsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-29 19:07:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SnsUser.a' in 'where clause'
-Request URL: /index.php/sns_users/find/?id=1&a%5Bone%5D=1&a%5Btwo%5D=2&a%5Bthree%5D=3&b%5B0%5D=1&b%5B1%5D=2&b%5B2%5D=3
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
-#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `SnsUser...', Array)
-#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `SnsUser...', Array, Array)
-#3 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `SnsUser...', false)
-#4 /var/app/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(SnsUser), Array)
-#5 /var/app/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
-#6 /var/app/asns/app/Model/AppModel.php(72): Model->find('all', Array)
-#7 /var/app/asns/app/Controller/SnsUsersController.php(50): AppModel->getAllFind(Array, Array)
-#8 [internal function]: SnsUsersController->find()
-#9 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SnsUsersController), Array)
-#10 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
-#11 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#12 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#13 {main}
-2014-01-29 19:20:27 Error: [MissingViewException] View file "/var/app/asns/app/View/SnsUsers/json/find.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/SnsUsers/json/find.ctp',
-)
-Request URL: /index.php/sns_users/find/?id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): JsonView->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-29 19:20:29 Error: [MissingViewException] View file "/var/app/asns/app/View/SnsUsers/json/find.ctp" is missing.
-Exception Attributes: array (
-  'file' => '/var/app/asns/app/View/SnsUsers/json/find.ctp',
-)
-Request URL: /index.php/sns_users/find/?id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/View/JsonView.php(107): View->_getViewFileName(NULL)
-#1 /var/app/asns/lib/Cake/Controller/Controller.php(952): JsonView->render(NULL, NULL)
-#2 /var/app/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
-#3 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
-#4 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2014-01-29 20:03:32 Error: Fatal Error (1): Class 'JsonpView' not found in [/var/app/asns/lib/Cake/Controller/Controller.php, line 1240]
-2014-01-29 20:03:32 Error: [FatalErrorException] Class 'JsonpView' not found
-Request URL: /index.php/sns_users/find/?id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240)
-#1 [internal function]: ErrorHandler::handleError(1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240, Array)
-#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240, Array)
-#3 /var/app/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
-2014-01-29 20:03:35 Error: Fatal Error (1): Class 'JsonpView' not found in [/var/app/asns/lib/Cake/Controller/Controller.php, line 1240]
-2014-01-29 20:03:35 Error: [FatalErrorException] Class 'JsonpView' not found
-Request URL: /index.php/sns_users/find/?id=1
-Stack Trace:
-#0 /var/app/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240)
-#1 [internal function]: ErrorHandler::handleError(1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240, Array)
-#2 /var/app/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'JsonpVie...', '/var/app/asns/l...', 1240, Array)
-#3 /var/app/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
-#4 [internal function]: App::shutdown()
-#5 {main}
+#1 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/app/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/app/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/app/asns/app/Controller/UserTutorialsController.php(53): Model->save(Array)
+#5 [internal function]: UserTutorialsController->init()
+#6 /var/app/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UserTutorialsController), Array)
+#7 /var/app/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/app/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserTutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/app/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
