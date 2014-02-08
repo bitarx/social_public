@@ -40,7 +40,6 @@ class SkillTest extends CakeTestCase {
 		'app.stage_prob',
 		'app.user_raid_log',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_ev_stage',
 		'app.user_login_all_log',

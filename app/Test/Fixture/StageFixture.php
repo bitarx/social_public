@@ -46,8 +46,8 @@ class StageFixture extends CakeTestFixture {
 			'prob_get' => 1,
 			'enemy_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-08 09:55:29',
-			'modified' => '2014-02-08 09:55:29'
+			'created' => '2014-02-08 13:12:04',
+			'modified' => '2014-02-08 13:12:04'
 		),
 	);
 

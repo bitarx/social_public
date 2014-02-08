@@ -42,7 +42,6 @@ class UserEvStageTest extends CakeTestCase {
 		'app.user_collect',
 		'app.user_cur_stage',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_login_all_log',
 		'app.user_login_day',

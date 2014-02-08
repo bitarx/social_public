@@ -37,8 +37,8 @@ class UserDeckFixture extends CakeTestFixture {
 			'kind' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'delete_flg' => 1,
-			'created' => '2014-02-08 09:55:31',
-			'modified' => '2014-02-08 09:55:31'
+			'created' => '2014-02-08 13:12:06',
+			'modified' => '2014-02-08 13:12:06'
 		),
 	);
 

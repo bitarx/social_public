@@ -35,7 +35,6 @@ class EnemyTest extends CakeTestCase {
 		'app.stage_prob',
 		'app.raid',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_ev_stage',
 		'app.ev_stage',

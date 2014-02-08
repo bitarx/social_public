@@ -51,8 +51,7 @@ class UserDeckCardTest extends CakeTestCase {
 		'app.user_prof',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial',
-		'app.deck'
+		'app.tutorial'
 	);
 
 /**

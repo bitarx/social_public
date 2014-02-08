@@ -38,7 +38,6 @@ class UserGachaLogTest extends CakeTestCase {
 		'app.user_collect',
 		'app.user_cur_stage',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_ev_stage',
 		'app.user_gacha_day',

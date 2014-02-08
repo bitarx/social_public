@@ -36,8 +36,8 @@ class UserCurStageFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'stage_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-08 09:55:30',
-			'modified' => '2014-02-08 09:55:30'
+			'created' => '2014-02-08 13:12:06',
+			'modified' => '2014-02-08 13:12:06'
 		),
 	);
 

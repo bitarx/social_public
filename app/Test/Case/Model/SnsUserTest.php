@@ -41,7 +41,6 @@ class SnsUserTest extends CakeTestCase {
 		'app.user_collect',
 		'app.user_cur_stage',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_ev_stage',
 		'app.user_login_all_log',
@@ -75,5 +74,17 @@ class SnsUserTest extends CakeTestCase {
 
 		parent::tearDown();
 	}
+
+    /**
+     * 対象ユーザが初回登録しているか
+     *
+     * @author imanishi 
+     */
+     public function testJudgeRegistUser () { 
+         $ret = $this->judgeRegistUser($ownerId = 1); 
+         $this->assertTrue(true);
+         $ret = $this->judgeRegistUser($ownerId = 999999); 
+         $this->assertFalse(false);
+     } 
 
 }

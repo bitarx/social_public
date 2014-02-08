@@ -46,8 +46,8 @@ class RankEvBattleFixture extends CakeTestFixture {
 			'point' => 1,
 			'unit' => 'Lorem ipsum dolor sit amet',
 			'delete_flg' => 1,
-			'created' => '2014-02-08 09:55:27',
-			'modified' => '2014-02-08 09:55:27'
+			'created' => '2014-02-08 13:12:03',
+			'modified' => '2014-02-08 13:12:03'
 		),
 	);
 
