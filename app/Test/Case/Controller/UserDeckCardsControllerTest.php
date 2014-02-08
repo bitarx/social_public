@@ -17,7 +17,6 @@ class UserDeckCardsControllerTest extends ControllerTestCase {
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
-		'app.user_target',
 		'app.friend',
 		'app.message',
 		'app.rank_ev_battle',
@@ -36,7 +35,6 @@ class UserDeckCardsControllerTest extends ControllerTestCase {
 		'app.user_raid',
 		'app.user_raid_log',
 		'app.card_group',
-		'app.group',
 		'app.gacha_prob',
 		'app.gacha',
 		'app.user_gacha_day',
@@ -53,8 +51,7 @@ class UserDeckCardsControllerTest extends ControllerTestCase {
 		'app.user_prof',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial',
-		'app.deck'
+		'app.tutorial'
 	);
 
 /**

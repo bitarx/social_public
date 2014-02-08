@@ -31,8 +31,8 @@ class RaidFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'start_time' => '2014-02-06 09:56:55',
-			'end_time' => '2014-02-06 09:56:55',
+			'start_time' => '2014-02-08 09:55:27',
+			'end_time' => '2014-02-08 09:55:27',
 			'delete_flg' => 1
 		),
 	);

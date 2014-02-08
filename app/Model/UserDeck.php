@@ -4,6 +4,7 @@ App::uses('AppModel', 'Model');
  * UserDeck Model
  *
  * @property User $User
+ * @property UserDeckCard $UserDeckCard
  */
 class UserDeck extends AppModel {
 
@@ -71,4 +72,26 @@ class UserDeck extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'UserDeckCard' => array(
+			'className' => 'UserDeckCard',
+			'foreignKey' => 'user_deck_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

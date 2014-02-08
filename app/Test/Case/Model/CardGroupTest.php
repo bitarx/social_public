@@ -14,7 +14,6 @@ class CardGroupTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.card_group',
-		'app.group',
 		'app.card',
 		'app.skill',
 		'app.enemy',
@@ -29,7 +28,6 @@ class CardGroupTest extends CakeTestCase {
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
-		'app.user_target',
 		'app.friend',
 		'app.message',
 		'app.rank_ev_battle',

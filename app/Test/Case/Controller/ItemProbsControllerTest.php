@@ -15,8 +15,7 @@ class ItemProbsControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.item_prob',
 		'app.item',
-		'app.item_effect',
-		'app.target'
+		'app.item_effect'
 	);
 
 /**

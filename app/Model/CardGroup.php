@@ -3,7 +3,6 @@ App::uses('AppModel', 'Model');
 /**
  * CardGroup Model
  *
- * @property Group $Group
  * @property Card $Card
  */
 class CardGroup extends AppModel {
@@ -14,7 +13,7 @@ class CardGroup extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'group_id' => array(
+		'evol_group' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -74,13 +73,6 @@ class CardGroup extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Group' => array(
-			'className' => 'Group',
-			'foreignKey' => 'group_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Card' => array(
 			'className' => 'Card',
 			'foreignKey' => 'card_id',

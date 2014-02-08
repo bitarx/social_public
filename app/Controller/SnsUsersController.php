@@ -24,8 +24,13 @@ class SnsUsersController extends ApiController {
 	public function index() {
 
         $fields = func_get_args();
-        $this->SnsUser->getAllFind($this->request->query, $fields);
-        $this->set('snsUsers', $this->Paginator->paginate());
+
+        $where['id']  = isset($this->request->query['opensocial_owner_id']) ? $this->request->query['opensocial_owner_id'] : '';
+        $where['viewer'] = isset($this->request->query['opensocial_viewer_id']) ? $this->request->query['opensocial_viewer_id'] : '';
+        $list = $this->SnsUser->getAllFind($where, $fields);
+        if (empty($list)) {
+            return $this->redirect(array('controller' => 'tutorials', 'action' => 'index'));
+        }
 	}
 
     /**

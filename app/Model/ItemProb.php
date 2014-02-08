@@ -4,7 +4,6 @@ App::uses('AppModel', 'Model');
  * ItemProb Model
  *
  * @property Item $Item
- * @property Target $Target
  */
 class ItemProb extends AppModel {
 
@@ -44,7 +43,7 @@ class ItemProb extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'target_id' => array(
+		'target' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -87,13 +86,6 @@ class ItemProb extends AppModel {
 		'Item' => array(
 			'className' => 'Item',
 			'foreignKey' => 'item_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Target' => array(
-			'className' => 'Target',
-			'foreignKey' => 'target_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

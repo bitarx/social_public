@@ -35,8 +35,8 @@ class UserProfFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'prof' => 'Lorem ipsum dolor sit amet',
 			'delete_flg' => 1,
-			'created' => '2014-02-06 09:57:00',
-			'modified' => '2014-02-06 09:57:00'
+			'created' => '2014-02-08 09:55:33',
+			'modified' => '2014-02-08 09:55:33'
 		),
 	);
 

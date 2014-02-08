@@ -29,7 +29,6 @@ class GachaTest extends CakeTestCase {
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
-		'app.user_target',
 		'app.friend',
 		'app.message',
 		'app.rank_ev_battle',
@@ -53,7 +52,6 @@ class GachaTest extends CakeTestCase {
 		'app.user_tutorial',
 		'app.tutorial',
 		'app.card_group',
-		'app.group',
 		'app.user_gacha_log'
 	);
 

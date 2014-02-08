@@ -35,11 +35,11 @@ class GachaFixture extends CakeTestFixture {
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
 			'detail' => 'Lorem ipsum dolor sit amet',
-			'start_time' => '2014-02-06 09:56:53',
-			'end_time' => '2014-02-06 09:56:53',
+			'start_time' => '2014-02-08 09:55:26',
+			'end_time' => '2014-02-08 09:55:26',
 			'delete_flg' => 1,
-			'created' => '2014-02-06 09:56:53',
-			'modified' => '2014-02-06 09:56:53'
+			'created' => '2014-02-08 09:55:26',
+			'modified' => '2014-02-08 09:55:26'
 		),
 	);
 

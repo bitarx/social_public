@@ -36,8 +36,8 @@ class UserGachaDayFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'gacha_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-06 09:56:58',
-			'modified' => '2014-02-06 09:56:58'
+			'created' => '2014-02-08 09:55:31',
+			'modified' => '2014-02-08 09:55:31'
 		),
 	);
 

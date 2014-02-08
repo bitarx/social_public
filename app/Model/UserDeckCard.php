@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * UserDeckCard Model
  *
  * @property User $User
- * @property Deck $Deck
+ * @property UserDeck $UserDeck
  * @property Card $Card
  */
 class UserDeckCard extends AppModel {
@@ -25,7 +25,7 @@ class UserDeckCard extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'deck_id' => array(
+		'user_deck_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -72,9 +72,9 @@ class UserDeckCard extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Deck' => array(
-			'className' => 'Deck',
-			'foreignKey' => 'deck_id',
+		'UserDeck' => array(
+			'className' => 'UserDeck',
+			'foreignKey' => 'user_deck_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

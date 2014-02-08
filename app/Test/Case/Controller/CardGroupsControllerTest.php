@@ -14,7 +14,6 @@ class CardGroupsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.card_group',
-		'app.group',
 		'app.card',
 		'app.skill',
 		'app.enemy',
@@ -29,7 +28,6 @@ class CardGroupsControllerTest extends ControllerTestCase {
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
-		'app.user_target',
 		'app.friend',
 		'app.message',
 		'app.rank_ev_battle',
@@ -38,7 +36,6 @@ class CardGroupsControllerTest extends ControllerTestCase {
 		'app.user_collect',
 		'app.user_cur_stage',
 		'app.user_deck_card',
-		'app.deck',
 		'app.user_deck',
 		'app.user_ev_stage',
 		'app.user_gacha_day',

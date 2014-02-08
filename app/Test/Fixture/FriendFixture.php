@@ -38,8 +38,8 @@ class FriendFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'state' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-06 09:56:53',
-			'modified' => '2014-02-06 09:56:53'
+			'created' => '2014-02-08 09:55:25',
+			'modified' => '2014-02-08 09:55:25'
 		),
 	);
 

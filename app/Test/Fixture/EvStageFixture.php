@@ -46,8 +46,8 @@ class EvStageFixture extends CakeTestFixture {
 			'prob_get' => 1,
 			'enemy_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-06 09:56:52',
-			'modified' => '2014-02-06 09:56:52'
+			'created' => '2014-02-08 09:55:25',
+			'modified' => '2014-02-08 09:55:25'
 		),
 	);
 

@@ -15,7 +15,7 @@ class ItemProbFixture extends CakeTestFixture {
 		'item_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'key' => 'index'),
 		'prob' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'comment' => '同一item_idの合算が分母'),
 		'kind' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'comment' => '1:card 2:item 3:money'),
-		'target_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5),
+		'target' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5),
 		'num' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 10),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'indexes' => array(
@@ -36,7 +36,7 @@ class ItemProbFixture extends CakeTestFixture {
 			'item_id' => 1,
 			'prob' => 1,
 			'kind' => 1,
-			'target_id' => 1,
+			'target' => 1,
 			'num' => 1,
 			'delete_flg' => 1
 		),

@@ -4,7 +4,6 @@ App::uses('AppModel', 'Model');
  * Message Model
  *
  * @property User $User
- * @property UserTarget $UserTarget
  */
 class Message extends AppModel {
 
@@ -24,7 +23,7 @@ class Message extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'user_id_target' => array(
+		'target_user' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -77,13 +76,6 @@ class Message extends AppModel {
 		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'UserTarget' => array(
-			'className' => 'UserTarget',
-			'foreignKey' => 'user_id_target',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
