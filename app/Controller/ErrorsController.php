@@ -14,4 +14,17 @@ class ErrorsController extends ApiController {
 	public $scaffold;
 
 
+    /**
+     * index method
+     *
+     * @author imanishi
+     * @return json
+     */
+    public function index() {
+
+        $where['id'] = $this->request->query['error'];
+
+        $mes = $this->Error->getAllFind($where, $fields = array('message'));
+        $this->set('mes', $mes[0]['Error']['message']);
+    }
 }

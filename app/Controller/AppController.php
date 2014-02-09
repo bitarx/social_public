@@ -34,34 +34,28 @@ class AppController extends Controller {
 
     public $uses = array('SnsUser');
 
-    public static $ownerId = '';
-    public static $viewerId = '';
+    public $components = array('Cookie');
+
+    public $ownerId  = "";
+    public $viewerId = "";
 
     // SnsUserテーブルにデータがなくても処理される
-    public static $preRegist = array('Tutorials', 'Errors');
+    public static $preRegist = array('Tutorials');
+
+    public static $preError = array('CakeError', 'Errors');
 
     public function beforeFilter() { 
 var_dump($this->name);
 var_dump($this->action);
          
-        $fields = array('id');
-
-        self::$ownerId  = isset($this->request->query['opensocial_owner_id']) ? $this->request->query['opensocial_owner_id'] : '';
-        self::$viewerId = isset($this->request->query['opensocial_viewer_id']) ? $this->request->query['opensocial_viewer_id'] : '';
-
-        if ($this->name != 'Errors' && (!self::$ownerId || !self::$viewerId) ) {
+        /*
             return $this->redirect
                 (array('controller' => 'errors', 'action' => 'index'
                 , '?' => array('error' => 1)));
-        }
+        */
+        
+        $this->ownerId  = $this->Cookie->read('owner_id');
+        $this->viewerId = $this->Cookie->read('viewer_id');
 
-        $where = array(
-            'id' => self::$ownerId
-        ,   'viewer' => self::$viewerId
-        );
-        $list = $this->SnsUser->getAllFind($where, $fields);
-        if (empty($list) && !in_array($this->name , self::$preRegist)) {
-            return $this->redirect(array('controller' => 'tutorials', 'action' => 'index'));
-        }
     } 
 }

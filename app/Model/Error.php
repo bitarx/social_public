@@ -11,7 +11,7 @@ class Error extends AppModel {
  *
  * @var mixed False or table name
  */
-	public $useTable = 'error';
+	public $useTable = 'errors';
 
 /**
  * Validation rules

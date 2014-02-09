@@ -82,7 +82,7 @@ class SnsUserTest extends CakeTestCase {
      */
      public function testJudgeRegistUser () { 
          $ret = $this->judgeRegistUser($ownerId = 1); 
-         $this->assertTrue(true);
+         $this->assertTrue();
          $ret = $this->judgeRegistUser($ownerId = 999999); 
          $this->assertFalse(false);
      } 
