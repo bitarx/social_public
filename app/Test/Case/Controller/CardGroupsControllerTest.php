@@ -25,6 +25,7 @@ class CardGroupsControllerTest extends ControllerTestCase {
 		'app.stage_prob',
 		'app.raid',
 		'app.user_raid',
+		'app.user_raid_log',
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
@@ -48,7 +49,6 @@ class CardGroupsControllerTest extends ControllerTestCase {
 		'app.user_param',
 		'app.user_present_box',
 		'app.user_prof',
-		'app.user_raid_log',
 		'app.user_stage',
 		'app.user_tutorial',
 		'app.tutorial'

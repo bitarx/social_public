@@ -27,6 +27,28 @@ class UserEvStagesController extends ApiController {
         $where  = array();
         $this->UserEvStage->getAllFind($where, $fields);
         $this->set('userEvStages', $this->Paginator->paginate());
+
+        $this->UserEvStage->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserEvStage->save($values);
+            if (!$ret) {
+                throw new AppException('UserEvStage save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserEvStage->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserEvStage->commit();
 	}
 
     /**

@@ -27,6 +27,28 @@ class CardsController extends ApiController {
         $where  = array();
         $this->Card->getAllFind($where, $fields);
         $this->set('cards', $this->Paginator->paginate());
+
+        $this->Card->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Card->save($values);
+            if (!$ret) {
+                throw new AppException('Card save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Card->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Card->commit();
 	}
 
     /**

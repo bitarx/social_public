@@ -41,7 +41,7 @@ class TutorialsController extends ApiController {
                 );
                 $ret = $this->User->save($values);
                 if (!$ret) {
-                    throw new AppException('save failed :' . $this->name . '/' . $this->action);
+                    throw new AppException('User save failed :' . $this->name . '/' . $this->action);
                 }
                 $userId = $ret['User']['id'];
             }
@@ -58,23 +58,21 @@ class TutorialsController extends ApiController {
                 );
                 $ret = $this->UserTutorial->save($values);
                 if (!$ret) {
-                    throw new AppException('save failed :' . $this->name . '/' . $this->action);
+                    throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
                 }
             }
-      
+
         } catch (AppException $e) {
 
             $this->User->rollback();
 
-            $this->log('error : ' . $this->name . '/' . $this->action);
+            $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
                              , '?' => array('error' => 2)
                    ));
         }
         $this->User->commit();
-
-//        $this->set('tutorials', $this->Paginator->paginate());
 	}
 
     /**

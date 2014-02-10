@@ -14,8 +14,8 @@ class UserProfsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_prof',
-		'app.user',
 		'app.sns_user',
+		'app.user',
 		'app.battle_log',
 		'app.friend',
 		'app.message',

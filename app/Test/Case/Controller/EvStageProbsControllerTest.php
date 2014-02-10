@@ -23,6 +23,14 @@ class EvStageProbsControllerTest extends ControllerTestCase {
 		'app.gacha_prob',
 		'app.gacha',
 		'app.user_gacha_day',
+		'app.user_gacha_log',
+		'app.user_collect',
+		'app.stage',
+		'app.quest',
+		'app.stage_prob',
+		'app.raid',
+		'app.user_raid',
+		'app.user_raid_log',
 		'app.user',
 		'app.sns_user',
 		'app.battle_log',
@@ -31,12 +39,7 @@ class EvStageProbsControllerTest extends ControllerTestCase {
 		'app.rank_ev_battle',
 		'app.rank_ev_raid',
 		'app.user_card',
-		'app.user_collect',
 		'app.user_cur_stage',
-		'app.stage',
-		'app.quest',
-		'app.stage_prob',
-		'app.raid',
 		'app.user_deck_card',
 		'app.user_deck',
 		'app.user_ev_stage',
@@ -46,12 +49,9 @@ class EvStageProbsControllerTest extends ControllerTestCase {
 		'app.user_param',
 		'app.user_present_box',
 		'app.user_prof',
-		'app.user_raid_log',
-		'app.user_raid',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial',
-		'app.user_gacha_log'
+		'app.tutorial'
 	);
 
 /**

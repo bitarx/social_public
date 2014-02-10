@@ -27,6 +27,28 @@ class EnemiesController extends ApiController {
         $where  = array();
         $this->Enemy->getAllFind($where, $fields);
         $this->set('enemies', $this->Paginator->paginate());
+
+        $this->Enemy->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Enemy->save($values);
+            if (!$ret) {
+                throw new AppException('Enemy save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Enemy->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Enemy->commit();
 	}
 
     /**

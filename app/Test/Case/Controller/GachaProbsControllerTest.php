@@ -16,14 +16,7 @@ class GachaProbsControllerTest extends ControllerTestCase {
 		'app.gacha_prob',
 		'app.gacha',
 		'app.user_gacha_day',
-		'app.user',
-		'app.sns_user',
-		'app.battle_log',
-		'app.friend',
-		'app.message',
-		'app.rank_ev_battle',
-		'app.rank_ev_raid',
-		'app.user_card',
+		'app.user_gacha_log',
 		'app.card',
 		'app.skill',
 		'app.enemy',
@@ -36,9 +29,15 @@ class GachaProbsControllerTest extends ControllerTestCase {
 		'app.raid',
 		'app.user_raid',
 		'app.user_raid_log',
-		'app.card_group',
+		'app.user',
+		'app.sns_user',
+		'app.battle_log',
+		'app.friend',
+		'app.message',
+		'app.rank_ev_battle',
+		'app.rank_ev_raid',
+		'app.user_card',
 		'app.user_collect',
-		'app.user_gacha_log',
 		'app.user_cur_stage',
 		'app.user_deck_card',
 		'app.user_deck',
@@ -51,7 +50,8 @@ class GachaProbsControllerTest extends ControllerTestCase {
 		'app.user_prof',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial'
+		'app.tutorial',
+		'app.card_group'
 	);
 
 /**

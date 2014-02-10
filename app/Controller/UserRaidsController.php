@@ -27,6 +27,28 @@ class UserRaidsController extends ApiController {
         $where  = array();
         $this->UserRaid->getAllFind($where, $fields);
         $this->set('userRaids', $this->Paginator->paginate());
+
+        $this->UserRaid->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserRaid->save($values);
+            if (!$ret) {
+                throw new AppException('UserRaid save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserRaid->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserRaid->commit();
 	}
 
     /**

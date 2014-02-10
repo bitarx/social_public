@@ -27,6 +27,28 @@ class MessagesController extends ApiController {
         $where  = array();
         $this->Message->getAllFind($where, $fields);
         $this->set('messages', $this->Paginator->paginate());
+
+        $this->Message->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Message->save($values);
+            if (!$ret) {
+                throw new AppException('Message save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Message->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Message->commit();
 	}
 
     /**

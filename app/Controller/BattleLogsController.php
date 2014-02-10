@@ -27,6 +27,28 @@ class BattleLogsController extends ApiController {
         $where  = array();
         $this->BattleLog->getAllFind($where, $fields);
         $this->set('battleLogs', $this->Paginator->paginate());
+
+        $this->BattleLog->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->BattleLog->save($values);
+            if (!$ret) {
+                throw new AppException('BattleLog save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->BattleLog->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->BattleLog->commit();
 	}
 
     /**

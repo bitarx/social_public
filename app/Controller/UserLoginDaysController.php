@@ -27,6 +27,28 @@ class UserLoginDaysController extends ApiController {
         $where  = array();
         $this->UserLoginDay->getAllFind($where, $fields);
         $this->set('userLoginDays', $this->Paginator->paginate());
+
+        $this->UserLoginDay->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserLoginDay->save($values);
+            if (!$ret) {
+                throw new AppException('UserLoginDay save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserLoginDay->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserLoginDay->commit();
 	}
 
     /**

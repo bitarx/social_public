@@ -27,6 +27,28 @@ class StagesController extends ApiController {
         $where  = array();
         $this->Stage->getAllFind($where, $fields);
         $this->set('stages', $this->Paginator->paginate());
+
+        $this->Stage->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Stage->save($values);
+            if (!$ret) {
+                throw new AppException('Stage save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Stage->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Stage->commit();
 	}
 
     /**

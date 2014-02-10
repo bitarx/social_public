@@ -27,6 +27,28 @@ class UsersController extends ApiController {
         $where  = array();
         $this->User->getAllFind($where, $fields);
         $this->set('users', $this->Paginator->paginate());
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->User->save($values);
+            if (!$ret) {
+                throw new AppException('User save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
 	}
 
     /**

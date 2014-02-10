@@ -27,6 +27,28 @@ class UserCollectsController extends ApiController {
         $where  = array();
         $this->UserCollect->getAllFind($where, $fields);
         $this->set('userCollects', $this->Paginator->paginate());
+
+        $this->UserCollect->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserCollect->save($values);
+            if (!$ret) {
+                throw new AppException('UserCollect save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserCollect->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserCollect->commit();
 	}
 
     /**

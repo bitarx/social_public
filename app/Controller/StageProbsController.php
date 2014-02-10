@@ -27,6 +27,28 @@ class StageProbsController extends ApiController {
         $where  = array();
         $this->StageProb->getAllFind($where, $fields);
         $this->set('stageProbs', $this->Paginator->paginate());
+
+        $this->StageProb->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->StageProb->save($values);
+            if (!$ret) {
+                throw new AppException('StageProb save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->StageProb->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->StageProb->commit();
 	}
 
     /**

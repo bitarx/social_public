@@ -27,6 +27,28 @@ class GachaProbsController extends ApiController {
         $where  = array();
         $this->GachaProb->getAllFind($where, $fields);
         $this->set('gachaProbs', $this->Paginator->paginate());
+
+        $this->GachaProb->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->GachaProb->save($values);
+            if (!$ret) {
+                throw new AppException('GachaProb save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->GachaProb->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->GachaProb->commit();
 	}
 
     /**

@@ -27,6 +27,28 @@ class UserTutorialsController extends ApiController {
         $where  = array();
         $this->UserTutorial->getAllFind($where, $fields);
         $this->set('userTutorials', $this->Paginator->paginate());
+
+        $this->UserTutorial->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserTutorial->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserTutorial->commit();
 	}
 
     /**

@@ -27,6 +27,28 @@ class UserRaidLogsController extends ApiController {
         $where  = array();
         $this->UserRaidLog->getAllFind($where, $fields);
         $this->set('userRaidLogs', $this->Paginator->paginate());
+
+        $this->UserRaidLog->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserRaidLog->save($values);
+            if (!$ret) {
+                throw new AppException('UserRaidLog save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserRaidLog->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserRaidLog->commit();
 	}
 
     /**

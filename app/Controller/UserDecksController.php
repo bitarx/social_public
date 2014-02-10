@@ -27,6 +27,28 @@ class UserDecksController extends ApiController {
         $where  = array();
         $this->UserDeck->getAllFind($where, $fields);
         $this->set('userDecks', $this->Paginator->paginate());
+
+        $this->UserDeck->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserDeck->save($values);
+            if (!$ret) {
+                throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserDeck->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserDeck->commit();
 	}
 
     /**

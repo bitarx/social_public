@@ -27,6 +27,28 @@ class UserStagesController extends ApiController {
         $where  = array();
         $this->UserStage->getAllFind($where, $fields);
         $this->set('userStages', $this->Paginator->paginate());
+
+        $this->UserStage->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserStage->save($values);
+            if (!$ret) {
+                throw new AppException('UserStage save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserStage->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserStage->commit();
 	}
 
     /**

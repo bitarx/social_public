@@ -27,6 +27,28 @@ class FriendsController extends ApiController {
         $where  = array();
         $this->Friend->getAllFind($where, $fields);
         $this->set('friends', $this->Paginator->paginate());
+
+        $this->Friend->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Friend->save($values);
+            if (!$ret) {
+                throw new AppException('Friend save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Friend->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Friend->commit();
 	}
 
     /**

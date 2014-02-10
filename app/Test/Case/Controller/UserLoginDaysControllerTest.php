@@ -14,8 +14,8 @@ class UserLoginDaysControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_login_day',
-		'app.user',
 		'app.sns_user',
+		'app.user',
 		'app.battle_log',
 		'app.friend',
 		'app.message',

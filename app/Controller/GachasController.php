@@ -27,6 +27,28 @@ class GachasController extends ApiController {
         $where  = array();
         $this->Gacha->getAllFind($where, $fields);
         $this->set('gachas', $this->Paginator->paginate());
+
+        $this->Gacha->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Gacha->save($values);
+            if (!$ret) {
+                throw new AppException('Gacha save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Gacha->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Gacha->commit();
 	}
 
     /**

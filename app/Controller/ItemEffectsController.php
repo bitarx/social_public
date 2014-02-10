@@ -27,6 +27,28 @@ class ItemEffectsController extends ApiController {
         $where  = array();
         $this->ItemEffect->getAllFind($where, $fields);
         $this->set('itemEffects', $this->Paginator->paginate());
+
+        $this->ItemEffect->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->ItemEffect->save($values);
+            if (!$ret) {
+                throw new AppException('ItemEffect save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->ItemEffect->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->ItemEffect->commit();
 	}
 
     /**

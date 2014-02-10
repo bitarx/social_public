@@ -28,6 +28,28 @@
         $where  = array();
         $this-><?php echo $currentModelName; ?>->getAllFind($where, $fields);
         $this->set('<?php echo $pluralName ?>', $this->Paginator->paginate());
+
+        $this-><?php echo $currentModelName; ?>->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this-><?php echo $currentModelName; ?>->save($values);
+            if (!$ret) {
+                throw new AppException('<?php echo $currentModelName; ?> save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this-><?php echo $currentModelName; ?>->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this-><?php echo $currentModelName; ?>->commit();
 	}
 
     /**

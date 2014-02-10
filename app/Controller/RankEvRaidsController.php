@@ -27,6 +27,28 @@ class RankEvRaidsController extends ApiController {
         $where  = array();
         $this->RankEvRaid->getAllFind($where, $fields);
         $this->set('rankEvRaids', $this->Paginator->paginate());
+
+        $this->RankEvRaid->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->RankEvRaid->save($values);
+            if (!$ret) {
+                throw new AppException('RankEvRaid save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->RankEvRaid->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->RankEvRaid->commit();
 	}
 
     /**

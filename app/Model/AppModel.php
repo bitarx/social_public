@@ -55,7 +55,7 @@ class AppModel extends Model {
      * @param array $fields 取得カラム
      * @return array 検索結果
      */
-    public function getAllFind( $where = array(), $fields = array() ) {
+    public function getAllFind( $fields = array(), $where = array() ) {
         $options = array();
         $conditions = array($this->getTableAlias(). '.'. $this->_filDelFlg => 0);
         if (0 < count($where)) {

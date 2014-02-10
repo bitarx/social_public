@@ -27,6 +27,28 @@ class CardGroupsController extends ApiController {
         $where  = array();
         $this->CardGroup->getAllFind($where, $fields);
         $this->set('cardGroups', $this->Paginator->paginate());
+
+        $this->CardGroup->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->CardGroup->save($values);
+            if (!$ret) {
+                throw new AppException('CardGroup save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->CardGroup->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->CardGroup->commit();
 	}
 
     /**

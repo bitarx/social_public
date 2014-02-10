@@ -27,6 +27,28 @@ class SkillsController extends ApiController {
         $where  = array();
         $this->Skill->getAllFind($where, $fields);
         $this->set('skills', $this->Paginator->paginate());
+
+        $this->Skill->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Skill->save($values);
+            if (!$ret) {
+                throw new AppException('Skill save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Skill->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Skill->commit();
 	}
 
     /**

@@ -27,6 +27,28 @@ class ItemProbsController extends ApiController {
         $where  = array();
         $this->ItemProb->getAllFind($where, $fields);
         $this->set('itemProbs', $this->Paginator->paginate());
+
+        $this->ItemProb->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->ItemProb->save($values);
+            if (!$ret) {
+                throw new AppException('ItemProb save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->ItemProb->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->ItemProb->commit();
 	}
 
     /**

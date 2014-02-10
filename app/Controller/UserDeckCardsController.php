@@ -27,6 +27,28 @@ class UserDeckCardsController extends ApiController {
         $where  = array();
         $this->UserDeckCard->getAllFind($where, $fields);
         $this->set('userDeckCards', $this->Paginator->paginate());
+
+        $this->UserDeckCard->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserDeckCard->save($values);
+            if (!$ret) {
+                throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserDeckCard->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserDeckCard->commit();
 	}
 
     /**

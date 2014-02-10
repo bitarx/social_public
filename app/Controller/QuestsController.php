@@ -27,6 +27,28 @@ class QuestsController extends ApiController {
         $where  = array();
         $this->Quest->getAllFind($where, $fields);
         $this->set('quests', $this->Paginator->paginate());
+
+        $this->Quest->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Quest->save($values);
+            if (!$ret) {
+                throw new AppException('Quest save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Quest->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Quest->commit();
 	}
 
     /**

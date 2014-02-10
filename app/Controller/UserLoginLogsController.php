@@ -27,6 +27,28 @@ class UserLoginLogsController extends ApiController {
         $where  = array();
         $this->UserLoginLog->getAllFind($where, $fields);
         $this->set('userLoginLogs', $this->Paginator->paginate());
+
+        $this->UserLoginLog->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserLoginLog->save($values);
+            if (!$ret) {
+                throw new AppException('UserLoginLog save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserLoginLog->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserLoginLog->commit();
 	}
 
     /**

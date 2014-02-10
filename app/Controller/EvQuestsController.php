@@ -27,6 +27,28 @@ class EvQuestsController extends ApiController {
         $where  = array();
         $this->EvQuest->getAllFind($where, $fields);
         $this->set('evQuests', $this->Paginator->paginate());
+
+        $this->EvQuest->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->EvQuest->save($values);
+            if (!$ret) {
+                throw new AppException('EvQuest save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->EvQuest->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->EvQuest->commit();
 	}
 
     /**

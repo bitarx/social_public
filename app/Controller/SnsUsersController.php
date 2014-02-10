@@ -36,10 +36,10 @@ class SnsUsersController extends ApiController {
         ,   'viewer' => $viewerId
         );
         $fields = array('id');
-        $list = $this->SnsUser->getAllFind($where, $fields);
+        $list = $this->SnsUser->getAllFind($fields, $where);
         if (empty($list)) {
             return $this->redirect(array('controller' => 'tutorials', 'action' => 'index'));
-        } 
+        }
 	}
 
     /**

@@ -14,8 +14,9 @@ class UserTutorialsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_tutorial',
-		'app.user',
+		'app.tutorial',
 		'app.sns_user',
+		'app.user',
 		'app.battle_log',
 		'app.friend',
 		'app.message',
@@ -50,8 +51,7 @@ class UserTutorialsControllerTest extends ControllerTestCase {
 		'app.user_param',
 		'app.user_present_box',
 		'app.user_prof',
-		'app.user_stage',
-		'app.tutorial'
+		'app.user_stage'
 	);
 
 /**

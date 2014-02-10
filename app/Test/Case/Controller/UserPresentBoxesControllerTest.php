@@ -14,8 +14,8 @@ class UserPresentBoxesControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_present_box',
-		'app.user',
 		'app.sns_user',
+		'app.user',
 		'app.battle_log',
 		'app.friend',
 		'app.message',

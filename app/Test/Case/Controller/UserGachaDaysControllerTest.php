@@ -14,14 +14,8 @@ class UserGachaDaysControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_gacha_day',
-		'app.user',
-		'app.sns_user',
-		'app.battle_log',
-		'app.friend',
-		'app.message',
-		'app.rank_ev_battle',
-		'app.rank_ev_raid',
-		'app.user_card',
+		'app.gacha',
+		'app.gacha_prob',
 		'app.card',
 		'app.skill',
 		'app.enemy',
@@ -34,10 +28,14 @@ class UserGachaDaysControllerTest extends ControllerTestCase {
 		'app.raid',
 		'app.user_raid',
 		'app.user_raid_log',
-		'app.card_group',
-		'app.gacha_prob',
-		'app.gacha',
-		'app.user_gacha_log',
+		'app.user',
+		'app.sns_user',
+		'app.battle_log',
+		'app.friend',
+		'app.message',
+		'app.rank_ev_battle',
+		'app.rank_ev_raid',
+		'app.user_card',
 		'app.user_collect',
 		'app.user_cur_stage',
 		'app.user_deck_card',
@@ -51,7 +49,9 @@ class UserGachaDaysControllerTest extends ControllerTestCase {
 		'app.user_prof',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial'
+		'app.tutorial',
+		'app.card_group',
+		'app.user_gacha_log'
 	);
 
 /**

@@ -27,6 +27,28 @@ class EvStageProbsController extends ApiController {
         $where  = array();
         $this->EvStageProb->getAllFind($where, $fields);
         $this->set('evStageProbs', $this->Paginator->paginate());
+
+        $this->EvStageProb->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->EvStageProb->save($values);
+            if (!$ret) {
+                throw new AppException('EvStageProb save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->EvStageProb->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->EvStageProb->commit();
 	}
 
     /**

@@ -27,6 +27,28 @@ class UserParamsController extends ApiController {
         $where  = array();
         $this->UserParam->getAllFind($where, $fields);
         $this->set('userParams', $this->Paginator->paginate());
+
+        $this->UserParam->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserParam->save($values);
+            if (!$ret) {
+                throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserParam->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserParam->commit();
 	}
 
     /**

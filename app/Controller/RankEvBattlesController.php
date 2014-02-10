@@ -27,6 +27,28 @@ class RankEvBattlesController extends ApiController {
         $where  = array();
         $this->RankEvBattle->getAllFind($where, $fields);
         $this->set('rankEvBattles', $this->Paginator->paginate());
+
+        $this->RankEvBattle->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->RankEvBattle->save($values);
+            if (!$ret) {
+                throw new AppException('RankEvBattle save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->RankEvBattle->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->RankEvBattle->commit();
 	}
 
     /**

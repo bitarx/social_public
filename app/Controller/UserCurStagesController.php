@@ -27,6 +27,28 @@ class UserCurStagesController extends ApiController {
         $where  = array();
         $this->UserCurStage->getAllFind($where, $fields);
         $this->set('userCurStages', $this->Paginator->paginate());
+
+        $this->UserCurStage->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserCurStage->save($values);
+            if (!$ret) {
+                throw new AppException('UserCurStage save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserCurStage->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserCurStage->commit();
 	}
 
     /**

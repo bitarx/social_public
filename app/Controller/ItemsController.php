@@ -27,6 +27,28 @@ class ItemsController extends ApiController {
         $where  = array();
         $this->Item->getAllFind($where, $fields);
         $this->set('items', $this->Paginator->paginate());
+
+        $this->Item->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->Item->save($values);
+            if (!$ret) {
+                throw new AppException('Item save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->Item->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->Item->commit();
 	}
 
     /**

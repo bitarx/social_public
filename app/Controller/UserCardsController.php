@@ -27,6 +27,28 @@ class UserCardsController extends ApiController {
         $where  = array();
         $this->UserCard->getAllFind($where, $fields);
         $this->set('userCards', $this->Paginator->paginate());
+
+        $this->UserCard->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserCard->save($values);
+            if (!$ret) {
+                throw new AppException('UserCard save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserCard->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserCard->commit();
 	}
 
     /**

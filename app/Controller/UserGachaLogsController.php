@@ -27,6 +27,28 @@ class UserGachaLogsController extends ApiController {
         $where  = array();
         $this->UserGachaLog->getAllFind($where, $fields);
         $this->set('userGachaLogs', $this->Paginator->paginate());
+
+        $this->UserGachaLog->begin();
+        try {
+            $values = array(
+                'user_id'     => $userId
+            );
+            $ret = $this->UserGachaLog->save($values);
+            if (!$ret) {
+                throw new AppException('UserGachaLog save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->UserGachaLog->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->UserGachaLog->commit();
 	}
 
     /**
