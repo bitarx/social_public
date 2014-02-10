@@ -52,6 +52,76 @@ class CardsController extends ApiController {
 	}
 
     /**
+     * 素材選択
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function select() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * 合成前確認
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function conf() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * 強化合成演出
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * 進化合成演出
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function elproduct() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * 合成完了
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function comp() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
      * 条件検索(変更禁止)
      *
      * @author imanishi 

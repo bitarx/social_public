@@ -16,7 +16,7 @@ class UserParamsController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * index method
+     * バトル対戦車一覧
      *
      * @author imanishi 
      * @return json
@@ -50,6 +50,34 @@ class UserParamsController extends ApiController {
         }
         $this->UserParam->commit();
 	}
+
+    /**
+     * バトル演出
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * バトル完了
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function comp() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
 
     /**
      * 条件検索(変更禁止)

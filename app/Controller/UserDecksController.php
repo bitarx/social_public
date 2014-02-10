@@ -16,7 +16,7 @@ class UserDecksController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * index method
+     * デッキ一覧
      *
      * @author imanishi 
      * @return json
@@ -50,6 +50,20 @@ class UserDecksController extends ApiController {
         }
         $this->UserDeck->commit();
 	}
+
+    /**
+     * デッキカード選択
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function conf() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
 
     /**
      * 条件検索(変更禁止)

@@ -18,16 +18,38 @@ class TutorialsController extends ApiController {
     public $uses = array('User', 'UserTutorial');
 
     /**
-     * index method
+     * チュートリアル振り分け
      *
      * @author imanishi 
      * @return json
+     */
+    private function _routeTutorial() {
+
+        // チュートリアル終了判定
+$this->log('action:'. $this->action);
+        $where = array('user_id' => $this->userId);
+        $fields = array('tutorial_id', 'end_flg');
+        $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
+        if (!empty($row['UserTutorial']['end_flg'])) {
+            return $this->rd('SnsUser', 'index');
+        }
+        if (!empty($row['UserTutorial']['tutorial_id'])) {
+            return $this->rd('Tutorial', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+        }
+    }
+
+    /**
+     * オープニング演出
+     *
+     * @author imanishi 
      */
 	public function index() {
 
         $fields = array('id');
         $where  = array('sns_user_id' => $this->ownerId);
         $userId = $this->User->field('id', $where);
+$this->log($this->ownerId); 
+$this->log($userId); 
 
         $this->User->begin();
         try {
@@ -74,6 +96,136 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 	}
+
+    /**
+     * チュートリアル2
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_2() { 
+     
+     } 
+
+    /**
+     * チュートリアル3
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_3() { 
+     
+     } 
+
+    /**
+     * チュートリアル4
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_4() { 
+     
+     } 
+
+    /**
+     * チュートリアル5
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_5() { 
+     
+     } 
+
+    /**
+     * チュートリアル6
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_6() { 
+     
+     } 
+
+    /**
+     * チュートリアル7
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_7() { 
+     
+     } 
+
+    /**
+     * チュートリアル8
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_8() { 
+     
+     } 
+
+    /**
+     * チュートリアル9
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function futorial_9() { 
+     
+     } 
+
+    /**
+     * チュートリアル10
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_10() { 
+     
+     } 
+
+    /**
+     * チュートリアル11
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_11() { 
+     
+     } 
+
+    /**
+     * チュートリアル12
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_12() { 
+     
+     } 
+
+    /**
+     * チュートリアル13
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_13() { 
+     
+     } 
+
+    /**
+     * チュートリアル14
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function tutorial_14() { 
+     
+     } 
 
     /**
      * 条件検索(変更禁止)

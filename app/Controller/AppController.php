@@ -32,32 +32,44 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $uses = array('SnsUser');
+    public $uses = array('SnsUser', 'User', 'UserTutorial');
 
     public $components = array('Cookie');
 
     public $ownerId  = "";
     public $viewerId = "";
+    public $userId   = 0;
     public $params   = array();
 
-    // SnsUserテーブルにデータがなくても処理される
     public static $preRegist = array('Tutorials');
 
     public static $preError = array('CakeError', 'Errors');
 
-    public function beforeFilter() { 
-var_dump($this->name);
-var_dump($this->action);
+    public final function beforeFilter() { 
         
         $this->params =  $this->request->query;
-        /*
-            return $this->redirect
-                (array('controller' => 'errors', 'action' => 'index'
-                , '?' => array('error' => 1)));
-        */
         
         $this->ownerId  = $this->Cookie->read('owner_id');
+$this->log('cookie' . $this->ownerId);      
         $this->viewerId = $this->Cookie->read('viewer_id');
 
+        if (!empty($this->ownerId)) {
+            $where = array('User.id' => $this->ownerId); 
+            $this->userId = $this->User->field('id', $where);
+        }
+
+    } 
+
+    /**
+     * リダイレクト
+     *
+     * @author imanishi 
+     * @param string $ctl 遷移先コントローラー名
+     * @param string $act 遷移先アクション名
+     * @param array  $params 付属パラメート
+     */
+    public function rd($ctl, $act, $params = array()) { 
+        return $this->redirect(array('controller' => $ctl, 'action' => $act 
+                   , '?' => $params)); 
     } 
 }

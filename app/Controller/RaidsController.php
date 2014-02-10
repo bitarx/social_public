@@ -52,6 +52,48 @@ class RaidsController extends ApiController {
 	}
 
     /**
+     * レイドボス戦前
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function conf() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * レイドボス戦演出
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * レイドボス戦後
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function comp() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
      * 条件検索(変更禁止)
      *
      * @author imanishi 

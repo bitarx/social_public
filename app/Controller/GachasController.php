@@ -52,6 +52,35 @@ class GachasController extends ApiController {
 	}
 
     /**
+     * ガチャ演出
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+
+    }
+
+    /**
+     * ガチャ完了
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function comp() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
      * 条件検索(変更禁止)
      *
      * @author imanishi 

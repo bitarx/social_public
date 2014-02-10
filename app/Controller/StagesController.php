@@ -16,7 +16,7 @@ class StagesController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * index method
+     * ステージ一覧
      *
      * @author imanishi 
      * @return json
@@ -52,7 +52,80 @@ class StagesController extends ApiController {
 	}
 
     /**
-     * 条件検索(変更禁止)
+     * クエスト実行
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function main() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+
+    }
+
+    /**
+     * ボス戦前
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function conf() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+
+    }
+
+    /**
+     * ボス戦
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * ボス戦後
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function comp() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+
+    }
+
+    /**
+     * クエスト完了
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function end() {
+
+        $fields = array('id');
+        $where  = array();
+        $this->User->getAllFind($where, $fields);
+        $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * データ取得(更新不可)
      *
      * @author imanishi 
      * @return json 検索結果一覧

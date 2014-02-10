@@ -16,10 +16,10 @@ class UsersController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * index method
+     * マイページ
      *
      * @author imanishi 
-     * @return json
+     * @return void
      */
 	public function index() {
 
@@ -50,6 +50,7 @@ class UsersController extends ApiController {
         }
         $this->User->commit();
 	}
+
 
     /**
      * 条件検索(変更禁止)

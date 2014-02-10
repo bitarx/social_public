@@ -53,9 +53,10 @@ class AppModel extends Model {
      * @author imanishi 
      * @param array $where  検索条件
      * @param array $fields 取得カラム
+     * @param string $kind  findメソッド第一引数の値
      * @return array 検索結果
      */
-    public function getAllFind( $fields = array(), $where = array() ) {
+    public function getAllFind( $fields = array(), $where = array(), $kind = 'all' ) {
         $options = array();
         $conditions = array($this->getTableAlias(). '.'. $this->_filDelFlg => 0);
         if (0 < count($where)) {
@@ -69,7 +70,7 @@ class AppModel extends Model {
 
         $options['conditions'] = $conditions;
 
-        return $this->find('all', $options);
+        return $this->find($kind, $options);
     }
 
 
