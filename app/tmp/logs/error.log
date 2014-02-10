@@ -1864,3 +1864,372 @@ Stack Trace:
 #3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-02-09 14:15:03 Error: Fatal Error (4): syntax error, unexpected '}' in [/var/www/asns/app/Controller/TutorialsController.php, line 38]
+2014-02-09 14:15:03 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 38, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 38, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-09 14:15:20 Error: Fatal Error (1): Call to a member function getAllFind() on a non-object in [/var/www/asns/app/Controller/TutorialsController.php, line 28]
+2014-02-09 14:15:20 Error: [FatalErrorException] Call to a member function getAllFind() on a non-object
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 28, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 28, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-09 14:16:15 Error: Fatal Error (1): Call to a member function getAllFind() on a non-object in [/var/www/asns/app/Controller/TutorialsController.php, line 41]
+2014-02-09 14:16:15 Error: [FatalErrorException] Call to a member function getAllFind() on a non-object
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 41)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 41, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 41, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-09 14:17:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tutorial.sns_user_id' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Tutoria...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Tutoria...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Tutoria...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Tutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(41): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:22:08 Error: Fatal Error (1): Call to a member function getAllFind() on a non-object in [/var/www/asns/app/Controller/TutorialsController.php, line 44]
+2014-02-09 14:22:08 Error: [FatalErrorException] Call to a member function getAllFind() on a non-object
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 44, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 44, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-09 14:22:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(44): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:24:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(44): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:24:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(44): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:25:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(44): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:25:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('all', Array)
+#6 /var/www/asns/app/Model/AppModel.php(72): Model->find('all', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(44): AppModel->getAllFind(Array, Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-09 14:29:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(53): Model->save(Array)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-09 16:28:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(53): Model->save(Array)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-09 16:52:47 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-09 16:59:33 Error: [MissingActionException] Action TutorialsController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'add',
+)
+Request URL: /index.php/tutorials/add
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-09 17:00:04 Error: [MissingActionException] Action TutorialsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'edit',
+)
+Request URL: /index.php/tutorials/edit
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-09 17:00:38 Error: [MissingActionException] Action TutorialsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'view',
+)
+Request URL: /index.php/tutorials/view
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-09 19:54:50 Error: Fatal Error (1): Call to a member function begin() on a non-object in [/var/www/asns/app/Controller/TutorialsController.php, line 32]
+2014-02-09 19:54:50 Error: [FatalErrorException] Call to a member function begin() on a non-object
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 32, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 32, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 06:50:13 Error: Fatal Error (4): syntax error, unexpected '}', expecting catch (T_CATCH) in [/var/www/asns/app/Controller/TutorialsController.php, line 60]
+2014-02-10 06:50:13 Error: [FatalErrorException] syntax error, unexpected '}', expecting catch (T_CATCH)
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 60, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 60, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 06:50:15 Error: Fatal Error (4): syntax error, unexpected '}', expecting catch (T_CATCH) in [/var/www/asns/app/Controller/TutorialsController.php, line 60]
+2014-02-10 06:50:15 Error: [FatalErrorException] syntax error, unexpected '}', expecting catch (T_CATCH)
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 60, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 60, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 06:50:25 Error: Fatal Error (1): Call to undefined method AppException::message() in [/var/www/asns/app/Controller/TutorialsController.php, line 60]
+2014-02-10 06:50:25 Error: [FatalErrorException] Call to undefined method AppException::message()
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 60, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 60, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 07:03:54 Error: Fatal Error (1): Call to undefined method AppException::message() in [/var/www/asns/app/Controller/TutorialsController.php, line 60]
+2014-02-10 07:03:54 Error: [FatalErrorException] Call to undefined method AppException::message()
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 60, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 60, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 07:04:13 Error: error
+2014-02-10 07:04:13 Error: Fatal Error (1): Class 'AccSystemErrorException' not found in [/var/www/asns/app/Controller/TutorialsController.php, line 62]
+2014-02-10 07:04:13 Error: [FatalErrorException] Class 'AccSystemErrorException' not found
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'AccSyste...', '/var/www/asns/a...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AccSyste...', '/var/www/asns/a...', 62, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'AccSyste...', '/var/www/asns/a...', 62, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 07:04:34 Error: error
+2014-02-10 07:04:34 Error: Fatal Error (1): Class 'AppErrorException' not found in [/var/www/asns/app/Controller/TutorialsController.php, line 62]
+2014-02-10 07:04:34 Error: [FatalErrorException] Class 'AppErrorException' not found
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'AppError...', '/var/www/asns/a...', 62)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppError...', '/var/www/asns/a...', 62, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'AppError...', '/var/www/asns/a...', 62, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-10 07:04:49 Error: error
+2014-02-10 07:04:49 Error: [AppException] システムエラーが発生しました。管理者にお問い合わせください。
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 [internal function]: TutorialsController->index()
+#1 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#2 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-02-10 07:05:02 Error: error
+2014-02-10 07:17:43 Error: error
+2014-02-10 07:33:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK__mst_tutorials` FOREIGN KEY (`tutorial_id`) REFERENCES `tutorials` (`id`))
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(57): Model->save(NULL)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-10 07:40:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'user_id'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(62): Model->save(Array)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-10 09:49:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.id' in 'field list'
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(48): Model->field('id', Array)
+#8 [internal function]: TutorialsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-10 09:50:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK_user_tutorials_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(55): Model->save(Array)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-10 09:51:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK_user_tutorials_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(55): Model->save(Array)
+#5 [internal function]: TutorialsController->index()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

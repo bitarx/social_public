@@ -23,8 +23,9 @@ class UserLoginDaysController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserLoginDay->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserLoginDay->getAllFind($where, $fields);
         $this->set('userLoginDays', $this->Paginator->paginate());
 	}
 

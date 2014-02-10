@@ -23,8 +23,9 @@ class UserCurStagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserCurStage->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserCurStage->getAllFind($where, $fields);
         $this->set('userCurStages', $this->Paginator->paginate());
 	}
 

@@ -23,8 +23,9 @@ class ItemsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Item->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Item->getAllFind($where, $fields);
         $this->set('items', $this->Paginator->paginate());
 	}
 

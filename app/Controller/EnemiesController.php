@@ -23,8 +23,9 @@ class EnemiesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Enemy->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Enemy->getAllFind($where, $fields);
         $this->set('enemies', $this->Paginator->paginate());
 	}
 

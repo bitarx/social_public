@@ -23,8 +23,9 @@ class UserEvStagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserEvStage->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserEvStage->getAllFind($where, $fields);
         $this->set('userEvStages', $this->Paginator->paginate());
 	}
 

@@ -23,8 +23,9 @@ class UserTutorialsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserTutorial->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserTutorial->getAllFind($where, $fields);
         $this->set('userTutorials', $this->Paginator->paginate());
 	}
 

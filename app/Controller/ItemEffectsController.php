@@ -23,8 +23,9 @@ class ItemEffectsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->ItemEffect->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->ItemEffect->getAllFind($where, $fields);
         $this->set('itemEffects', $this->Paginator->paginate());
 	}
 

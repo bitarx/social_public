@@ -23,8 +23,9 @@ class UserDeckCardsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserDeckCard->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserDeckCard->getAllFind($where, $fields);
         $this->set('userDeckCards', $this->Paginator->paginate());
 	}
 

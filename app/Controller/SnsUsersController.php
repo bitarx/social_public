@@ -16,7 +16,7 @@ class SnsUsersController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * トップページ
+     * index method
      *
      * @author imanishi 
      * @return json
@@ -31,17 +31,15 @@ class SnsUsersController extends ApiController {
             $this->Cookie->write('viewer_id', $viewerId);
         }
 
-
         $where = array(
             'id' => $ownerId
         ,   'viewer' => $viewerId
         );
-        var_dump($where);
         $fields = array('id');
         $list = $this->SnsUser->getAllFind($where, $fields);
         if (empty($list)) {
             return $this->redirect(array('controller' => 'tutorials', 'action' => 'index'));
-        }
+        } 
 	}
 
     /**

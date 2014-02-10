@@ -23,8 +23,9 @@ class CardsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Card->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Card->getAllFind($where, $fields);
         $this->set('cards', $this->Paginator->paginate());
 	}
 

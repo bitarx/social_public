@@ -23,8 +23,9 @@ class SkillsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Skill->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Skill->getAllFind($where, $fields);
         $this->set('skills', $this->Paginator->paginate());
 	}
 

@@ -30,12 +30,12 @@ class SnsUserFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '1',
+			'id' => 'Lorem ipsum dolor sit amet',
 			'viewer' => 'Lorem ipsum dolor sit amet',
 			'sns_name' => 'Lorem ipsum dolor sit amet',
-			'delete_flg' => 0,
-			'created' => '2014-02-08 13:12:04',
-			'modified' => '2014-02-08 13:12:04'
+			'delete_flg' => 1,
+			'created' => '2014-02-10 09:47:40',
+			'modified' => '2014-02-10 09:47:40'
 		),
 	);
 

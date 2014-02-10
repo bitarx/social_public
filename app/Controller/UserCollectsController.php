@@ -23,8 +23,9 @@ class UserCollectsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserCollect->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserCollect->getAllFind($where, $fields);
         $this->set('userCollects', $this->Paginator->paginate());
 	}
 

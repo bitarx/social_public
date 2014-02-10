@@ -23,8 +23,9 @@ class UserLoginAllLogsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserLoginAllLog->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserLoginAllLog->getAllFind($where, $fields);
         $this->set('userLoginAllLogs', $this->Paginator->paginate());
 	}
 

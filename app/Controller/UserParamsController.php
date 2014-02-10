@@ -23,8 +23,9 @@ class UserParamsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserParam->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserParam->getAllFind($where, $fields);
         $this->set('userParams', $this->Paginator->paginate());
 	}
 

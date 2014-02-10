@@ -23,8 +23,9 @@ class GachasController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Gacha->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Gacha->getAllFind($where, $fields);
         $this->set('gachas', $this->Paginator->paginate());
 	}
 

@@ -23,8 +23,9 @@ class CardGroupsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->CardGroup->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->CardGroup->getAllFind($where, $fields);
         $this->set('cardGroups', $this->Paginator->paginate());
 	}
 

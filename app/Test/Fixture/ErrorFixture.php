@@ -6,13 +6,6 @@
 class ErrorFixture extends CakeTestFixture {
 
 /**
- * Table name
- *
- * @var string
- */
-	public $table = 'error';
-
-/**
  * Fields
  *
  * @var array

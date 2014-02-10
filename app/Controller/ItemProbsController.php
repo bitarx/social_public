@@ -23,8 +23,9 @@ class ItemProbsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->ItemProb->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->ItemProb->getAllFind($where, $fields);
         $this->set('itemProbs', $this->Paginator->paginate());
 	}
 

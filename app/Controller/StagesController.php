@@ -23,8 +23,9 @@ class StagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Stage->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Stage->getAllFind($where, $fields);
         $this->set('stages', $this->Paginator->paginate());
 	}
 

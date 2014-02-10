@@ -23,8 +23,9 @@ class RaidsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Raid->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Raid->getAllFind($where, $fields);
         $this->set('raids', $this->Paginator->paginate());
 	}
 

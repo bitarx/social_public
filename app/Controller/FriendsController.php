@@ -23,8 +23,9 @@ class FriendsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Friend->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Friend->getAllFind($where, $fields);
         $this->set('friends', $this->Paginator->paginate());
 	}
 

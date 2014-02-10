@@ -23,8 +23,9 @@ class UserGachaLogsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserGachaLog->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserGachaLog->getAllFind($where, $fields);
         $this->set('userGachaLogs', $this->Paginator->paginate());
 	}
 

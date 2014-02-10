@@ -23,8 +23,9 @@ class QuestsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Quest->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Quest->getAllFind($where, $fields);
         $this->set('quests', $this->Paginator->paginate());
 	}
 

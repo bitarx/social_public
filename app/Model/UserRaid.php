@@ -3,7 +3,6 @@ App::uses('AppModel', 'Model');
 /**
  * UserRaid Model
  *
- * @property User $User
  * @property Raid $Raid
  * @property Enemy $Enemy
  * @property UserRaidLog $UserRaidLog
@@ -11,21 +10,18 @@ App::uses('AppModel', 'Model');
 class UserRaid extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'user_id';
+
+/**
  * Validation rules
  *
  * @var array
  */
 	public $validate = array(
-		'user_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'raid_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -76,13 +72,6 @@ class UserRaid extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Raid' => array(
 			'className' => 'Raid',
 			'foreignKey' => 'raid_id',

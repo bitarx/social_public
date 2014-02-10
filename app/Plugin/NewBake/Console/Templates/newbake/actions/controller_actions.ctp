@@ -24,8 +24,9 @@
      */
 	public function <?php echo $admin ?>index() {
 
-        $fields = func_get_args();
-        $this-><?php echo $currentModelName; ?>->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this-><?php echo $currentModelName; ?>->getAllFind($where, $fields);
         $this->set('<?php echo $pluralName ?>', $this->Paginator->paginate());
 	}
 

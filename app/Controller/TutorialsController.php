@@ -15,6 +15,8 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('User', 'UserTutorial');
+
     /**
      * index method
      *
@@ -23,9 +25,56 @@ class TutorialsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Tutorial->getAllFind($this->request->query, $fields);
-        $this->set('tutorials', $this->Paginator->paginate());
+        $fields = array('id');
+        $where  = array('sns_user_id' => $this->ownerId);
+        $userId = $this->User->field('id', $where);
+
+        $this->User->begin();
+        try {
+            if (empty($userId)) {
+                $name   = 'test';
+                $carrer = 1;
+                $values = array(
+                    'name'        => $name
+                ,   'sns_user_id' => $this->ownerId
+                ,   'carrer'      => $carrer
+                );
+                $ret = $this->User->save($values);
+                if (!$ret) {
+                    throw new AppException('save failed :' . $this->name . '/' . $this->action);
+                }
+                $userId = $ret['User']['id'];
+            }
+
+            $where = array(
+                'user_id' => $userId
+            );
+            $utid = $this->UserTutorial->field('user_id', $where);
+            if (empty($utid)) {
+                $tutorialId = 1;
+                $values = array(
+                    'user_id'     => $userId
+                ,   'tutorial_id' => $tutorialId
+                );
+                $ret = $this->UserTutorial->save($values);
+                if (!$ret) {
+                    throw new AppException('save failed :' . $this->name . '/' . $this->action);
+                }
+            }
+      
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log('error : ' . $this->name . '/' . $this->action);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+//        $this->set('tutorials', $this->Paginator->paginate());
 	}
 
     /**

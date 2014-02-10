@@ -23,8 +23,9 @@ class EvStageProbsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->EvStageProb->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->EvStageProb->getAllFind($where, $fields);
         $this->set('evStageProbs', $this->Paginator->paginate());
 	}
 

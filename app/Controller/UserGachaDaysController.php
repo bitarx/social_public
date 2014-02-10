@@ -23,8 +23,9 @@ class UserGachaDaysController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserGachaDay->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserGachaDay->getAllFind($where, $fields);
         $this->set('userGachaDays', $this->Paginator->paginate());
 	}
 

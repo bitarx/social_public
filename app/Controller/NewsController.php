@@ -23,8 +23,9 @@ class NewsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->News->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->News->getAllFind($where, $fields);
         $this->set('news', $this->Paginator->paginate());
 	}
 

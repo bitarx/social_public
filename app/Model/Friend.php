@@ -3,11 +3,16 @@ App::uses('AppModel', 'Model');
 /**
  * Friend Model
  *
- * @property Friend $Friend
  * @property User $User
- * @property Friend $Friend
  */
 class Friend extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'friend_id';
 
 /**
  * Validation rules
@@ -15,16 +20,6 @@ class Friend extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'friend_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'user_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -65,13 +60,6 @@ class Friend extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Friend' => array(
-			'className' => 'Friend',
-			'foreignKey' => 'friend_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'user_id',
@@ -80,26 +68,4 @@ class Friend extends AppModel {
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Friend' => array(
-			'className' => 'Friend',
-			'foreignKey' => 'friend_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

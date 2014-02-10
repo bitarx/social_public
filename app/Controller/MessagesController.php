@@ -23,8 +23,9 @@ class MessagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->Message->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->Message->getAllFind($where, $fields);
         $this->set('messages', $this->Paginator->paginate());
 	}
 

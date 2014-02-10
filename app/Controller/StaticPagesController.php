@@ -23,8 +23,9 @@ class StaticPagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->StaticPage->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->StaticPage->getAllFind($where, $fields);
         $this->set('staticPages', $this->Paginator->paginate());
 	}
 

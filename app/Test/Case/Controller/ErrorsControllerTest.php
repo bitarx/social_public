@@ -55,4 +55,28 @@ class ErrorsControllerTest extends ControllerTestCase {
 		'app.tutorial'
 	);
 
+/**
+ * testIndex method
+ *
+ * @return void
+ */
+	public function testIndex() {
+	}
+
+/**
+ * testFind method
+ *
+ * @return void
+ */
+	public function testFind() {
+	}
+
+/**
+ * testInit method
+ *
+ * @return void
+ */
+	public function testInit() {
+	}
+
 }

@@ -23,8 +23,9 @@ class BattleLogsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->BattleLog->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->BattleLog->getAllFind($where, $fields);
         $this->set('battleLogs', $this->Paginator->paginate());
 	}
 

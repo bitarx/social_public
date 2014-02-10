@@ -3,10 +3,16 @@ App::uses('AppModel', 'Model');
 /**
  * UserTutorial Model
  *
- * @property User $User
  * @property Tutorial $Tutorial
  */
 class UserTutorial extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'user_id';
 
 /**
  * Validation rules
@@ -14,16 +20,6 @@ class UserTutorial extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'user_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'tutorial_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -64,13 +60,6 @@ class UserTutorial extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Tutorial' => array(
 			'className' => 'Tutorial',
 			'foreignKey' => 'tutorial_id',

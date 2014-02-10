@@ -23,8 +23,9 @@ class GachaProbsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->GachaProb->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->GachaProb->getAllFind($where, $fields);
         $this->set('gachaProbs', $this->Paginator->paginate());
 	}
 

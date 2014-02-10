@@ -72,6 +72,22 @@ class AppModel extends Model {
         return $this->find('all', $options);
     }
 
+
+    public function begin() {
+        $dataSource = $this->getDataSource();
+        $dataSource->begin($this);
+    }
+
+    public function commit() {
+        $dataSource = $this->getDataSource();
+        $dataSource->commit($this);
+    }
+
+    public function rollback() {
+        $dataSource = $this->getDataSource();
+        $dataSource->rollback($this);
+    }
+
     /**
      * テーブルエイリアス生成
      *

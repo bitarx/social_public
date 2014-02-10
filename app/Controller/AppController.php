@@ -38,6 +38,7 @@ class AppController extends Controller {
 
     public $ownerId  = "";
     public $viewerId = "";
+    public $params   = array();
 
     // SnsUserテーブルにデータがなくても処理される
     public static $preRegist = array('Tutorials');
@@ -47,7 +48,8 @@ class AppController extends Controller {
     public function beforeFilter() { 
 var_dump($this->name);
 var_dump($this->action);
-         
+        
+        $this->params =  $this->request->query;
         /*
             return $this->redirect
                 (array('controller' => 'errors', 'action' => 'index'

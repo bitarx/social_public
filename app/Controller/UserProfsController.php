@@ -23,8 +23,9 @@ class UserProfsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserProf->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserProf->getAllFind($where, $fields);
         $this->set('userProfs', $this->Paginator->paginate());
 	}
 

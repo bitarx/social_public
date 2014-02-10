@@ -42,8 +42,8 @@ class UserRaidLogFixture extends CakeTestFixture {
 			'win_flg' => 1,
 			'log' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'delete_flg' => 1,
-			'created' => '2014-02-08 13:12:10',
-			'updated' => '2014-02-08 13:12:10'
+			'created' => '2014-02-10 09:47:45',
+			'updated' => '2014-02-10 09:47:45'
 		),
 	);
 

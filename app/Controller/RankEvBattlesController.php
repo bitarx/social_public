@@ -23,8 +23,9 @@ class RankEvBattlesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->RankEvBattle->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->RankEvBattle->getAllFind($where, $fields);
         $this->set('rankEvBattles', $this->Paginator->paginate());
 	}
 

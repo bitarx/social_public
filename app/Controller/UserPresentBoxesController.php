@@ -23,8 +23,9 @@ class UserPresentBoxesController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->UserPresentBox->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->UserPresentBox->getAllFind($where, $fields);
         $this->set('userPresentBoxes', $this->Paginator->paginate());
 	}
 

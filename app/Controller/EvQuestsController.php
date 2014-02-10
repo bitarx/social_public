@@ -23,8 +23,9 @@ class EvQuestsController extends ApiController {
      */
 	public function index() {
 
-        $fields = func_get_args();
-        $this->EvQuest->getAllFind($this->request->query, $fields);
+        $fields = array('id');
+        $where  = array();
+        $this->EvQuest->getAllFind($where, $fields);
         $this->set('evQuests', $this->Paginator->paginate());
 	}
 
