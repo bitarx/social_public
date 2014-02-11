@@ -3039,3 +3039,176 @@ Stack Trace:
 2014-02-11 09:46:27 Error: AppuserId:14
 2014-02-11 09:46:27 Error: action:tutorial_4
 2014-02-11 09:46:27 Error: userId:14
+2014-02-11 10:31:57 Error: cookie
+2014-02-11 10:31:57 Error: AppuserId:
+2014-02-11 10:31:58 Error: cookie
+2014-02-11 10:31:58 Error: AppuserId:
+2014-02-11 10:31:59 Error: cookie
+2014-02-11 10:31:59 Error: AppuserId:
+2014-02-11 13:05:30 Error: cookie
+2014-02-11 13:05:30 Error: AppuserId:
+2014-02-11 13:05:30 Error: cookie
+2014-02-11 13:05:30 Error: AppuserId:
+2014-02-11 13:05:31 Error: cookie
+2014-02-11 13:05:31 Error: AppuserId:
+2014-02-11 15:21:07 Error: cookie1
+2014-02-11 15:21:07 Error: AppuserId:
+2014-02-11 15:21:07 Error: cookie1
+2014-02-11 15:21:07 Error: AppuserId:
+2014-02-11 15:21:07 Error: 1
+2014-02-11 15:21:07 Error: 
+2014-02-11 15:22:48 Error: cookie
+2014-02-11 15:22:48 Error: AppuserId:
+2014-02-11 15:23:07 Error: cookie1
+2014-02-11 15:23:07 Error: AppuserId:16
+2014-02-11 15:23:07 Error: action:tutorial_1
+2014-02-11 15:23:07 Error: userId:16
+2014-02-11 15:23:07 Error: 1
+2014-02-11 15:23:07 Error: 16
+2014-02-11 15:24:07 Error: cookie1
+2014-02-11 15:24:07 Error: AppuserId:16
+2014-02-11 15:24:07 Error: action:tutorial_1
+2014-02-11 15:24:07 Error: userId:16
+2014-02-11 15:24:07 Error: 1
+2014-02-11 15:24:07 Error: 16
+2014-02-11 15:24:29 Error: cookie1
+2014-02-11 15:24:29 Error: AppuserId:16
+2014-02-11 15:24:29 Error: action:tutorial_1
+2014-02-11 15:24:29 Error: userId:16
+2014-02-11 15:24:29 Error: 1
+2014-02-11 15:24:29 Error: 16
+2014-02-11 15:27:49 Error: cookie1
+2014-02-11 15:27:49 Error: AppuserId:16
+2014-02-11 15:27:49 Error: action:tutorial_2
+2014-02-11 15:27:49 Error: userId:16
+2014-02-11 15:31:26 Error: cookie1
+2014-02-11 15:31:26 Error: AppuserId:
+2014-02-11 15:31:26 Error: cookie1
+2014-02-11 15:31:26 Error: AppuserId:
+2014-02-11 15:31:26 Error: action:tutorial_1
+2014-02-11 15:31:26 Error: userId:
+2014-02-11 15:31:27 Error: cookie1
+2014-02-11 15:31:27 Error: AppuserId:
+2014-02-11 15:31:27 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 15:31:27 Error: cookie1
+2014-02-11 15:31:27 Error: AppuserId:
+2014-02-11 15:31:45 Error: cookie1
+2014-02-11 15:31:45 Error: AppuserId:
+2014-02-11 15:31:45 Error: cookie1
+2014-02-11 15:31:45 Error: AppuserId:
+2014-02-11 15:31:45 Error: action:tutorial_1
+2014-02-11 15:31:45 Error: userId:
+2014-02-11 15:31:45 Error: cookie1
+2014-02-11 15:31:45 Error: AppuserId:
+2014-02-11 15:31:45 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 15:31:45 Error: cookie1
+2014-02-11 15:31:45 Error: AppuserId:
+2014-02-11 15:36:17 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [/var/www/asns/app/Controller/AppController.php, line 90]
+2014-02-11 15:36:17 Error: [FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 90)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 90, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 90, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-11 15:36:32 Error: cookie1
+2014-02-11 15:36:32 Error: AppuserId:
+2014-02-11 15:36:32 Error: cookie1
+2014-02-11 15:36:32 Error: AppuserId:
+2014-02-11 15:36:32 Error: action:tutorial_1
+2014-02-11 15:36:32 Error: userId:
+2014-02-11 15:36:32 Error: cookie1
+2014-02-11 15:36:32 Error: AppuserId:
+2014-02-11 15:36:32 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 15:36:32 Error: cookie1
+2014-02-11 15:36:32 Error: AppuserId:
+2014-02-11 16:35:04 Error: Fatal Error (1): Call to a member function getAllFind() on a non-object in [/var/www/asns/app/Model/Tutorial.php, line 81]
+2014-02-11 16:35:04 Error: [FatalErrorException] Call to a member function getAllFind() on a non-object
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 81, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 81, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-11 16:35:04 Error: cookie1
+2014-02-11 16:35:04 Error: AppuserId:
+2014-02-11 16:47:44 Error: cookie1
+2014-02-11 16:47:44 Error: AppuserId:
+2014-02-11 16:47:44 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 16:47:44 Error: cookie1
+2014-02-11 16:47:44 Error: AppuserId:
+2014-02-11 16:47:56 Error: cookie1
+2014-02-11 16:47:56 Error: AppuserId:
+2014-02-11 16:47:56 Error: cookie1
+2014-02-11 16:47:56 Error: AppuserId:
+2014-02-11 16:48:05 Error: cookie1
+2014-02-11 16:48:05 Error: AppuserId:17
+2014-02-11 16:48:05 Error: action:tutorial_2
+2014-02-11 16:48:05 Error: userId:17
+2014-02-11 16:48:39 Error: cookie1
+2014-02-11 16:48:39 Error: AppuserId:17
+2014-02-11 16:48:39 Error: action:tutorial_2
+2014-02-11 16:48:39 Error: userId:17
+2014-02-11 16:50:09 Error: cookie1
+2014-02-11 16:50:09 Error: AppuserId:17
+2014-02-11 16:50:09 Error: action:tutorial_2
+2014-02-11 16:50:09 Error: userId:17
+2014-02-11 16:50:34 Error: cookie1
+2014-02-11 16:50:34 Error: AppuserId:17
+2014-02-11 16:50:34 Error: action:tutorial_2
+2014-02-11 16:50:34 Error: userId:17
+2014-02-11 16:51:42 Error: cookie1
+2014-02-11 16:51:42 Error: AppuserId:17
+2014-02-11 16:51:42 Error: action:tutorial_3
+2014-02-11 16:51:42 Error: userId:17
+2014-02-11 16:52:03 Error: cookie1
+2014-02-11 16:52:03 Error: AppuserId:17
+2014-02-11 16:52:03 Error: action:tutorial_6
+2014-02-11 16:52:03 Error: userId:17
+2014-02-11 16:52:03 Error: cookie1
+2014-02-11 16:52:03 Error: AppuserId:17
+2014-02-11 16:52:03 Error: action:tutorial_3
+2014-02-11 16:52:03 Error: userId:17

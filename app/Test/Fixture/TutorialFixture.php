@@ -37,7 +37,7 @@ class TutorialFixture extends CakeTestFixture {
 			'words2' => 'Lorem ipsum dolor sit amet',
 			'words3' => 'Lorem ipsum dolor sit amet',
 			'next' => 1,
-			'delete_flg' => 1
+			'delete_flg' => 0
 		),
 	);
 

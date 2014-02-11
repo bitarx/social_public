@@ -17,6 +17,8 @@ class TutorialsController extends ApiController {
 
     public $uses = array('User', 'UserTutorial', 'Tutorial');
 
+    public $row  = array();
+
     public static $actionPref = 'tutorial_';
 
     /**
@@ -48,6 +50,9 @@ $this->log('userId:'. $this->userId);
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
+
+        // データ格納
+        $this->row = $this->Tutorial->getMstData($current);
     }
 
     /**
@@ -57,9 +62,11 @@ $this->log('userId:'. $this->userId);
      */
 	public function tutorial_1() {
 
+        // マスタデータ格納
+        $current = str_replace(self::$actionPref, '', $this->action);
+        $this->row = $this->Tutorial->getMstData($current);
+
         $userId = $this->userId;
-$this->log($this->ownerId); 
-$this->log($userId); 
 
         $this->User->begin();
         try {
@@ -106,12 +113,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $current = str_replace(self::$actionPref, '', $this->action);
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
 
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
 	}
 
    /**
@@ -149,11 +154,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
 
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row', $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -191,12 +195,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
     
+        // アサイン
+        $this->set('row', $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -234,12 +236,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
      
+        // アサイン
+        $this->set('row', $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -277,12 +277,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
      
+        // アサイン
+        $this->set('row', $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -320,12 +318,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
      
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -363,12 +359,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
      
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -406,12 +400,10 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
      
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -449,11 +441,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -491,11 +481,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -533,11 +521,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -575,11 +561,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -617,11 +601,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -659,11 +641,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -701,11 +681,9 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
 
     /**
@@ -715,90 +693,6 @@ $this->log($userId);
      * @return void
      */
     public function tutorial_16() { 
-     
-        $this->_routeTutorial();
-
-        $current = str_replace(self::$actionPref, '', $this->action);
-
-        $this->User->begin();
-        try {
-            $values = array(
-                'user_id'     => $this->userId
-            ,   'tutorial_id' => $current
-            );
-            $ret = $this->UserTutorial->save($values);
-            if (!$ret) {
-                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->User->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->User->commit();
-
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
-    } 
-
-    /**
-     * チュートリアル17
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function tutorial_17() { 
-     
-        $this->_routeTutorial();
-
-        $current = str_replace(self::$actionPref, '', $this->action);
-
-        $this->User->begin();
-        try {
-            $values = array(
-                'user_id'     => $this->userId
-            ,   'tutorial_id' => $current
-            );
-            $ret = $this->UserTutorial->save($values);
-            if (!$ret) {
-                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->User->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->User->commit();
-
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
-    } 
-
-    /**
-     * チュートリアル18
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function tutorial_18() { 
      
         $this->_routeTutorial();
 
@@ -828,12 +722,11 @@ $this->log($userId);
         }
         $this->User->commit();
 
-        // 次のチュートリアルID
-        $where = array('id' => $current); 
-        $next = $this->Tutorial->field('next', $where);
-
-        $this->set('next', self::$actionPref . $next);
+        // アサイン
+        $this->set('row',  $this->row);
+        $this->set('next', self::$actionPref . $this->row['next']);
     } 
+
 
     /**
      * 条件検索(変更禁止)

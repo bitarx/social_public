@@ -87,7 +87,7 @@ $this->log('AppuserId:'. $this->userId);
                 // チュートリアルを終えていない
                 if (empty($row['UserTutorial']['end_flg'])) {
                     if (!empty($row['UserTutorial']['tutorial_id'])) {
-
+$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
                         // チュートリアル途中
                         return $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                     } else {

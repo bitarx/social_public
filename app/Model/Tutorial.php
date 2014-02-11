@@ -73,4 +73,13 @@ class Tutorial extends AppModel {
 			),
 		),
 	);
+
+    public function getMstData($id) { 
+        
+        $where = array('id' => $id);
+        $fields = array('id', 'title', 'words', 'words2', 'words3', 'next');
+        $row = $this->getAllFind($fields, $where, 'first');
+
+        return $row['Tutorial'];
+    } 
 }
