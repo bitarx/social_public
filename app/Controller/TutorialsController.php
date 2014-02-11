@@ -15,26 +15,38 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'UserTutorial');
+    public $uses = array('User', 'UserTutorial', 'Tutorial');
+
+    public static $actionPref = 'tutorial_';
 
     /**
      * チュートリアル振り分け
      *
      * @author imanishi 
-     * @return json
+     * @return void
      */
     private function _routeTutorial() {
 
         // チュートリアル終了判定
 $this->log('action:'. $this->action);
+$this->log('userId:'. $this->userId); 
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
-        if (!empty($row['UserTutorial']['end_flg'])) {
+        $row = $row['UserTutorial'];
+        if (!empty($row['end_flg'])) {
             return $this->rd('SnsUser', 'index');
         }
-        if (!empty($row['UserTutorial']['tutorial_id'])) {
-            return $this->rd('Tutorial', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        // 不正遷移は戻す
+        $where = array('id' => $row['tutorial_id']); 
+        $next = $this->Tutorial->field('next', $where);
+        if ($current != $row['tutorial_id']) {
+            if ($current != $next) {
+                return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
+            }
         }
     }
 
@@ -43,11 +55,9 @@ $this->log('action:'. $this->action);
      *
      * @author imanishi 
      */
-	public function index() {
+	public function tutorial_1() {
 
-        $fields = array('id');
-        $where  = array('sns_user_id' => $this->ownerId);
-        $userId = $this->User->field('id', $where);
+        $userId = $this->userId;
 $this->log($this->ownerId); 
 $this->log($userId); 
 
@@ -95,17 +105,56 @@ $this->log($userId);
                    ));
         }
         $this->User->commit();
+
+        // 次のチュートリアルID
+        $current = str_replace(self::$actionPref, '', $this->action);
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
 	}
 
-    /**
-     * チュートリアル2
-     *
-     * @author imanishi 
-     * @return void
-     */
-     public function tutorial_2() { 
+   /**
+    * チュートリアル2
+    *
+    * @author imanishi 
+    * @return void
+    */
+    public function tutorial_2() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル3
@@ -113,9 +162,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_3() { 
-     
-     } 
+    public function tutorial_3() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    
+    } 
 
     /**
      * チュートリアル4
@@ -123,9 +205,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_4() { 
+    public function tutorial_4() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
      
-     } 
+    } 
 
     /**
      * チュートリアル5
@@ -133,9 +248,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_5() { 
+    public function tutorial_5() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
      
-     } 
+    } 
 
     /**
      * チュートリアル6
@@ -143,9 +291,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_6() { 
+    public function tutorial_6() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
      
-     } 
+    } 
 
     /**
      * チュートリアル7
@@ -153,9 +334,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_7() { 
+    public function tutorial_7() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
      
-     } 
+    } 
 
     /**
      * チュートリアル8
@@ -163,9 +377,42 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_8() { 
+    public function tutorial_8() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
      
-     } 
+    } 
 
     /**
      * チュートリアル9
@@ -173,9 +420,41 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function futorial_9() { 
+    public function futorial_9() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル10
@@ -183,9 +462,41 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_10() { 
+    public function tutorial_10() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル11
@@ -193,9 +504,41 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_11() { 
+    public function tutorial_11() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル12
@@ -203,9 +546,41 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_12() { 
+    public function tutorial_12() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル13
@@ -213,9 +588,41 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_13() { 
+    public function tutorial_13() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * チュートリアル14
@@ -223,9 +630,210 @@ $this->log($userId);
      * @author imanishi 
      * @return void
      */
-     public function tutorial_14() { 
+    public function tutorial_14() { 
      
-     } 
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
+
+    /**
+     * チュートリアル15
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_15() { 
+     
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
+
+    /**
+     * チュートリアル16
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_16() { 
+     
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
+
+    /**
+     * チュートリアル17
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_17() { 
+     
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
+
+    /**
+     * チュートリアル18
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_18() { 
+     
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            ,   'end_flg'     => 1
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+        // 次のチュートリアルID
+        $where = array('id' => $current); 
+        $next = $this->Tutorial->field('next', $where);
+
+        $this->set('next', self::$actionPref . $next);
+    } 
 
     /**
      * 条件検索(変更禁止)

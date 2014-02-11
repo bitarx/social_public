@@ -2661,3 +2661,381 @@ Stack Trace:
 2014-02-10 19:48:22 Error: cookie
 2014-02-10 19:48:22 Error: cookie
 2014-02-10 19:48:23 Error: cookie
+2014-02-10 20:54:42 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-10 20:54:42 Error: cookie
+2014-02-10 21:03:15 Error: cookie
+2014-02-10 21:03:16 Error: cookie
+2014-02-10 21:03:20 Error: cookie
+2014-02-11 01:01:31 Error: cookie
+2014-02-11 01:01:35 Error: cookie
+2014-02-11 01:01:44 Error: cookie
+2014-02-11 01:06:38 Error: cookie
+2014-02-11 01:06:49 Error: cookie
+2014-02-11 01:06:50 Error: cookie
+2014-02-11 04:12:03 Error: cookie
+2014-02-11 04:12:03 Error: cookie
+2014-02-11 04:12:03 Error: 
+2014-02-11 04:12:03 Error: 
+2014-02-11 04:12:03 Error: User save failed :Tutorials/index
+2014-02-11 04:12:03 Error: cookie
+2014-02-11 04:36:27 Error: cookie
+2014-02-11 04:36:29 Error: cookie
+2014-02-11 04:36:45 Error: cookie
+2014-02-11 04:36:51 Error: cookie
+2014-02-11 04:37:20 Error: cookie
+2014-02-11 04:37:27 Error: cookie
+2014-02-11 04:37:27 Error: [MissingActionException] Action ErrorsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ErrorsController',
+  'action' => 'view',
+)
+Request URL: /index.php/errors/view
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 04:37:27 Error: cookie
+2014-02-11 04:37:43 Error: cookie
+2014-02-11 04:38:09 Error: cookie
+2014-02-11 04:48:23 Error: cookie
+2014-02-11 04:48:35 Error: cookie
+2014-02-11 04:49:41 Error: cookie
+2014-02-11 04:49:50 Error: cookie
+2014-02-11 04:50:05 Error: cookie
+2014-02-11 04:50:29 Error: cookie
+2014-02-11 04:50:29 Error: cookie
+2014-02-11 04:50:29 Error: 
+2014-02-11 04:50:29 Error: 
+2014-02-11 04:50:29 Error: User save failed :Tutorials/index
+2014-02-11 04:50:29 Error: cookie
+2014-02-11 05:39:36 Error: cookie
+2014-02-11 05:39:36 Error: Fatal Error (1): Function name must be a string in [/var/www/asns/app/Controller/AppController.php, line 57]
+2014-02-11 05:39:36 Error: [FatalErrorException] Function name must be a string
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Function name m...', '/var/www/asns/a...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Function name m...', '/var/www/asns/a...', 57, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Function name m...', '/var/www/asns/a...', 57, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-11 05:39:36 Error: cookie
+2014-02-11 05:39:54 Error: cookie
+2014-02-11 05:39:54 Error: cookie
+2014-02-11 05:39:54 Error: cookie
+2014-02-11 05:39:54 Error: cookie
+2014-02-11 05:39:54 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:55 Error: cookie
+2014-02-11 05:39:56 Error: cookie
+2014-02-11 05:39:56 Error: cookie
+2014-02-11 05:40:45 Error: cookie
+2014-02-11 05:40:45 Error: cookie
+2014-02-11 05:40:47 Error: cookie
+2014-02-11 05:45:25 Error: cookie
+2014-02-11 05:45:25 Error: cookie
+2014-02-11 05:45:25 Error: 
+2014-02-11 05:45:25 Error: 
+2014-02-11 05:45:25 Error: User save failed :Tutorials/index
+2014-02-11 05:45:26 Error: cookie
+2014-02-11 05:45:39 Error: cookie
+2014-02-11 05:45:39 Error: cookie
+2014-02-11 05:45:39 Error: 
+2014-02-11 05:45:39 Error: 
+2014-02-11 05:45:39 Error: User save failed :Tutorials/index
+2014-02-11 05:45:39 Error: cookie
+2014-02-11 05:46:03 Error: cookie
+2014-02-11 05:46:03 Error: cookie
+2014-02-11 05:46:03 Error: 
+2014-02-11 05:46:03 Error: 
+2014-02-11 05:46:03 Error: User save failed :Tutorials/index
+2014-02-11 05:46:03 Error: cookie
+2014-02-11 05:46:21 Error: cookie
+2014-02-11 05:46:21 Error: cookie
+2014-02-11 05:46:21 Error: 
+2014-02-11 05:46:21 Error: 
+2014-02-11 05:46:21 Error: User save failed :Tutorials/index
+2014-02-11 05:46:22 Error: cookie
+2014-02-11 05:50:48 Error: cookie
+2014-02-11 05:50:48 Error: cookie
+2014-02-11 05:50:48 Error: 
+2014-02-11 05:50:48 Error: 
+2014-02-11 05:50:48 Error: User save failed :Tutorials/index
+2014-02-11 05:50:48 Error: cookie
+2014-02-11 05:51:11 Error: cookie
+2014-02-11 05:51:11 Error: cookie
+2014-02-11 05:51:11 Error: 
+2014-02-11 05:51:11 Error: 
+2014-02-11 05:51:11 Error: User save failed :Tutorials/index
+2014-02-11 05:51:11 Error: cookie
+2014-02-11 05:51:28 Error: cookie
+2014-02-11 05:51:28 Error: cookie
+2014-02-11 05:51:28 Error: 
+2014-02-11 05:51:28 Error: 
+2014-02-11 05:51:28 Error: User save failed :Tutorials/index
+2014-02-11 05:51:29 Error: cookie
+2014-02-11 05:52:38 Error: cookie
+2014-02-11 05:52:45 Error: cookie
+2014-02-11 05:52:45 Error: cookie
+2014-02-11 05:52:45 Error: 
+2014-02-11 05:52:45 Error: 
+2014-02-11 05:52:45 Error: User save failed :Tutorials/index
+2014-02-11 05:52:45 Error: cookie
+2014-02-11 05:53:30 Error: params:Array
+2014-02-11 05:53:30 Error: cookie
+2014-02-11 05:53:30 Error: params:Array
+2014-02-11 05:53:30 Error: cookie
+2014-02-11 05:53:30 Error: 
+2014-02-11 05:53:30 Error: 
+2014-02-11 05:53:30 Error: User save failed :Tutorials/index
+2014-02-11 05:53:30 Error: params:Array
+2014-02-11 05:53:30 Error: cookie
+2014-02-11 05:56:33 Error: setcookie :1
+2014-02-11 05:56:33 Error: cookie1
+2014-02-11 05:56:49 Error: cookie1
+2014-02-11 06:37:04 Error: cookie
+2014-02-11 06:37:05 Error: cookie
+2014-02-11 06:37:06 Error: cookie
+2014-02-11 06:43:11 Error: cookie1
+2014-02-11 06:43:11 Error: [MissingControllerException] Controller class TutorialController could not be found.
+Exception Attributes: array (
+  'class' => 'TutorialController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/Tutorial
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-11 06:43:11 Error: cookie1
+2014-02-11 06:43:37 Error: cookie1
+2014-02-11 06:43:37 Error: cookie1
+2014-02-11 06:43:37 Error: 1
+2014-02-11 06:43:37 Error: 14
+2014-02-11 08:26:00 Error: Fatal Error (4): syntax error, unexpected '}' in [/var/www/asns/app/Controller/TutorialsController.php, line 113]
+2014-02-11 08:26:00 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /index.php/Tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 113)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 113, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 113, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-11 08:26:00 Error: cookie1
+2014-02-11 08:26:21 Error: cookie1
+2014-02-11 08:26:21 Error: [MissingActionException] Action TutorialsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'index',
+)
+Request URL: /index.php/Tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 08:26:21 Error: cookie1
+2014-02-11 08:26:36 Error: cookie1
+2014-02-11 08:26:37 Error: cookie1
+2014-02-11 08:26:37 Error: 1
+2014-02-11 08:26:37 Error: 14
+2014-02-11 08:26:37 Error: [MissingViewException] View file "/var/www/asns/app/View/Tutorials/tutorial_1.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/asns/app/View/Tutorials/tutorial_1.ctp',
+)
+Request URL: /index.php/Tutorials/tutorial_1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-02-11 08:26:37 Error: cookie1
+2014-02-11 08:27:17 Error: cookie
+2014-02-11 08:27:17 Error: [MissingActionException] Action TutorialsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'index',
+)
+Request URL: /index.php/Tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 08:27:17 Error: cookie
+2014-02-11 08:28:37 Error: cookie1
+2014-02-11 08:28:37 Error: 1
+2014-02-11 08:28:37 Error: 14
+2014-02-11 08:40:01 Error: cookie1
+2014-02-11 08:40:01 Error: 1
+2014-02-11 08:40:01 Error: 14
+2014-02-11 08:40:42 Error: cookie1
+2014-02-11 08:40:42 Error: 1
+2014-02-11 08:40:42 Error: 14
+2014-02-11 08:41:40 Error: cookie1
+2014-02-11 08:41:40 Error: 1
+2014-02-11 08:41:40 Error: 
+2014-02-11 08:52:59 Error: cookie1
+2014-02-11 08:52:59 Error: action:tutorial_2
+2014-02-11 08:52:59 Error: cookie1
+2014-02-11 08:52:59 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 08:52:59 Error: cookie1
+2014-02-11 08:54:54 Error: cookie1
+2014-02-11 08:54:54 Error: action:tutorial_2
+2014-02-11 08:54:54 Error: userId:
+2014-02-11 08:54:54 Error: cookie1
+2014-02-11 08:54:54 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 08:54:54 Error: cookie1
+2014-02-11 09:21:33 Error: cookie1
+2014-02-11 09:21:33 Error: AppuserId:
+2014-02-11 09:21:33 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 09:21:33 Error: cookie1
+2014-02-11 09:21:33 Error: AppuserId:
+2014-02-11 09:23:26 Error: cookie1
+2014-02-11 09:23:26 Error: AppuserId:14
+2014-02-11 09:23:26 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 09:23:26 Error: cookie1
+2014-02-11 09:23:26 Error: AppuserId:14
+2014-02-11 09:23:42 Error: cookie1
+2014-02-11 09:23:42 Error: AppuserId:14
+2014-02-11 09:23:42 Error: [MissingActionException] Action TutorialsController::tutorial_() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'tutorial_',
+)
+Request URL: /index.php/Tutorials/tutorial_
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-02-11 09:23:42 Error: cookie1
+2014-02-11 09:23:42 Error: AppuserId:14
+2014-02-11 09:24:13 Error: cookie1
+2014-02-11 09:24:13 Error: AppuserId:14
+2014-02-11 09:24:13 Error: cookie1
+2014-02-11 09:24:13 Error: AppuserId:14
+2014-02-11 09:24:13 Error: 1
+2014-02-11 09:24:13 Error: 14
+2014-02-11 09:24:17 Error: cookie1
+2014-02-11 09:24:17 Error: AppuserId:14
+2014-02-11 09:24:17 Error: action:tutorial_2
+2014-02-11 09:24:17 Error: userId:14
+2014-02-11 09:24:17 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`eres`.`user_tutorials`, CONSTRAINT `FK_user_tutorials_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `er...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `er...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1832): DboSource->create(Object(UserTutorial), Array, Array)
+#4 /var/www/asns/app/Controller/TutorialsController.php(135): Model->save(Array)
+#5 [internal function]: TutorialsController->tutorial_2()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-02-11 09:24:17 Error: cookie1
+2014-02-11 09:24:17 Error: AppuserId:14
+2014-02-11 09:33:46 Error: cookie1
+2014-02-11 09:33:46 Error: AppuserId:14
+2014-02-11 09:33:46 Error: action:tutorial_2
+2014-02-11 09:33:46 Error: userId:14
+2014-02-11 09:33:46 Error: [MissingViewException] View file "/var/www/asns/app/View/Tutorials/tutorial_2.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/asns/app/View/Tutorials/tutorial_2.ctp',
+)
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/View.php(457): View->_getViewFileName(NULL)
+#1 /var/www/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-02-11 09:33:46 Error: cookie1
+2014-02-11 09:33:46 Error: AppuserId:14
+2014-02-11 09:34:21 Error: cookie
+2014-02-11 09:34:31 Error: cookie1
+2014-02-11 09:34:31 Error: AppuserId:14
+2014-02-11 09:34:31 Error: action:tutorial_2
+2014-02-11 09:34:31 Error: userId:14
+2014-02-11 09:41:38 Error: cookie1
+2014-02-11 09:41:38 Error: AppuserId:14
+2014-02-11 09:41:38 Error: action:tutorial_3
+2014-02-11 09:41:38 Error: userId:14
+2014-02-11 09:46:12 Error: cookie1
+2014-02-11 09:46:12 Error: AppuserId:14
+2014-02-11 09:46:12 Error: action:tutorial_6
+2014-02-11 09:46:12 Error: userId:14
+2014-02-11 09:46:12 Error: cookie1
+2014-02-11 09:46:12 Error: AppuserId:14
+2014-02-11 09:46:12 Error: action:tutorial_3
+2014-02-11 09:46:12 Error: userId:14
+2014-02-11 09:46:27 Error: cookie1
+2014-02-11 09:46:27 Error: AppuserId:14
+2014-02-11 09:46:27 Error: action:tutorial_4
+2014-02-11 09:46:27 Error: userId:14

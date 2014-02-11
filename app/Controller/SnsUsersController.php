@@ -23,17 +23,10 @@ class SnsUsersController extends ApiController {
      */
 	public function index() {
 
-        $ownerId  = isset($this->request->query['opensocial_owner_id']) ? $this->request->query['opensocial_owner_id'] : '';
-        $viewerId = isset($this->request->query['opensocial_viewer_id']) ? $this->request->query['opensocial_viewer_id'] : '';
-        if ( !empty($ownerId) && !empty($viewerId) ) {
-
-            $this->Cookie->write('owner_id', $ownerId);
-            $this->Cookie->write('viewer_id', $viewerId);
-        }
 
         $where = array(
-            'id' => $ownerId
-        ,   'viewer' => $viewerId
+            'id' => $this->ownerId
+        ,   'viewer' => $this->viewerId
         );
         $fields = array('id');
         $list = $this->SnsUser->getAllFind($fields, $where);

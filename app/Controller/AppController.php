@@ -41,21 +41,61 @@ class AppController extends Controller {
     public $userId   = 0;
     public $params   = array();
 
-    public static $preRegist = array('Tutorials');
+    public static $ctlRegist = array('Tutorials');
 
-    public static $preError = array('CakeError', 'Errors');
+    public static $ctlError = array('CakeError', 'Errors');
 
     public final function beforeFilter() { 
         
         $this->params =  $this->request->query;
-        
+
+        // 正常な初回アクセスはリクエストにIDが含まれる
+        $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
+        $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
+
+        if ( !empty($ownerId) && !empty($viewerId) ) {
+
+$this->log('setcookie :' . $ownerId);      
+            // 初回アクセスが正常に行われている場合はIDをCookieにセット
+            $this->Cookie->write('owner_id', $ownerId, true, '+20 years');
+            $this->Cookie->write('viewer_id', $viewerId, true, '+20 years');
+        }
+
         $this->ownerId  = $this->Cookie->read('owner_id');
 $this->log('cookie' . $this->ownerId);      
         $this->viewerId = $this->Cookie->read('viewer_id');
 
-        if (!empty($this->ownerId)) {
-            $where = array('User.id' => $this->ownerId); 
+        if ( !in_array($this->name, self::$ctlError)
+            && ('SnsUser' != $this->name && 'index' != $this->action)
+            && (!$this->ownerId || !$this->viewerId)) {
+
+            // Cookieセットされていない場合は不正アクセス
+            $this->rd('Errors', 'index', array('error' => 1 ));
+        } else { 
+            // 正常なアクセスの場合はユーザIDをセット
+            $where = array('User.sns_user_id' => $this->ownerId); 
             $this->userId = $this->User->field('id', $where);
+$this->log('AppuserId:'. $this->userId); 
+
+            // チュートリアル判定
+            $where = array('user_id' => $this->userId);
+            $fields = array('tutorial_id', 'end_flg');
+            $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
+
+            $ary = array_merge(self::$ctlRegist , self::$ctlError);
+            if (!in_array($this->name, $ary)) {
+                // チュートリアルを終えていない
+                if (empty($row['UserTutorial']['end_flg'])) {
+                    if (!empty($row['UserTutorial']['tutorial_id'])) {
+
+                        // チュートリアル途中
+                        return $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+                    } else {
+                        // チュートリアル初めて
+                        return $this->rd('Tutorials', 'tutorial_1');
+                    }
+                }
+            }
         }
 
     } 
