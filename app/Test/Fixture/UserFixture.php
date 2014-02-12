@@ -32,9 +32,9 @@ class UserFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'sns_user_id' => 'Lorem ipsum dolor sit amet',
+			'sns_user_id' => '1',
 			'carrer' => 1,
-			'delete_flg' => 1
+			'delete_flg' => 0
 		),
 	);
 

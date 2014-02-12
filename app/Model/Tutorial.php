@@ -74,6 +74,13 @@ class Tutorial extends AppModel {
 		),
 	);
 
+    /**
+     * マスタデータ取得
+     *
+     * @author imanishi 
+     * @param int $id チュートリアルID
+     * @return array マスタデータ１レコード
+     */
     public function getMstData($id) { 
         
         $where = array('id' => $id);

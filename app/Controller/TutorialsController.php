@@ -35,6 +35,7 @@ $this->log('userId:'. $this->userId);
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
+$this->log('row:'. json_encode($row)); 
         $row = $row['UserTutorial'];
         if (!empty($row['end_flg'])) {
             return $this->rd('SnsUser', 'index');
@@ -47,11 +48,14 @@ $this->log('userId:'. $this->userId);
         $next = $this->Tutorial->field('next', $where);
         if ($current != $row['tutorial_id']) {
             if ($current != $next) {
+$this->log('rdcurrent:'. $current); 
+$this->log('rdnext:'. $next); 
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
 
         // データ格納
+$this->log('current:'. $current); 
         $this->row = $this->Tutorial->getMstData($current);
     }
 
@@ -412,7 +416,7 @@ $this->log('userId:'. $this->userId);
      * @author imanishi 
      * @return void
      */
-    public function futorial_9() { 
+    public function tutorial_9() { 
      
         $this->_routeTutorial();
 
