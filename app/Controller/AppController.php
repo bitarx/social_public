@@ -55,15 +55,20 @@ class AppController extends Controller {
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
-$this->log('setcookie :' . $ownerId);      
+//$this->log('setcookie :' . $ownerId);      
             // 初回アクセスが正常に行われている場合はIDをCookieにセット
             $this->Cookie->write('owner_id', $ownerId, true, '+20 years');
             $this->Cookie->write('viewer_id', $viewerId, true, '+20 years');
         }
 
-        $this->ownerId  = $this->Cookie->read('owner_id');
-$this->log('cookie' . $this->ownerId);      
-        $this->viewerId = $this->Cookie->read('viewer_id');
+        if (false !== strpos($_SERVER['SCRIPT_FILENAME'], 'Console')) {
+            // コンソールからのテスト
+            $this->ownerId  = 1;
+            $this->viewerId = 1;
+        } else {
+            $this->ownerId  = $this->Cookie->read('owner_id');
+            $this->viewerId = $this->Cookie->read('viewer_id');
+        }
 
         if ( !in_array($this->name, self::$ctlError)
             && ('SnsUser' != $this->name && 'index' != $this->action)
@@ -75,7 +80,7 @@ $this->log('cookie' . $this->ownerId);
             // 正常なアクセスの場合はユーザIDをセット
             $where = array('User.sns_user_id' => $this->ownerId); 
             $this->userId = $this->User->field('id', $where);
-$this->log('AppuserId:'. $this->userId); 
+//$this->log('AppuserId:'. $this->userId); 
 
             // チュートリアル判定
             $where = array('user_id' => $this->userId);
@@ -87,7 +92,7 @@ $this->log('AppuserId:'. $this->userId);
                 // チュートリアルを終えていない
                 if (empty($row['UserTutorial']['end_flg'])) {
                     if (!empty($row['UserTutorial']['tutorial_id'])) {
-$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
+//$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
                         // チュートリアル途中
                         return $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                     } else {

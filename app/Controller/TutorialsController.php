@@ -30,12 +30,12 @@ class TutorialsController extends ApiController {
     private function _routeTutorial() {
 
         // チュートリアル終了判定
-$this->log('action:'. $this->action);
-$this->log('userId:'. $this->userId); 
+//$this->log('action:'. $this->action);
+//$this->log('userId:'. $this->userId); 
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
-$this->log('row:'. json_encode($row)); 
+//$this->log('row:'. json_encode($row)); 
         $row = $row['UserTutorial'];
         if (!empty($row['end_flg'])) {
             return $this->rd('SnsUser', 'index');
@@ -48,14 +48,11 @@ $this->log('row:'. json_encode($row));
         $next = $this->Tutorial->field('next', $where);
         if ($current != $row['tutorial_id']) {
             if ($current != $next) {
-$this->log('rdcurrent:'. $current); 
-$this->log('rdnext:'. $next); 
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
 
         // データ格納
-$this->log('current:'. $current); 
         $this->row = $this->Tutorial->getMstData($current);
     }
 

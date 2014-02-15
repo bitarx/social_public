@@ -75,4 +75,16 @@ class UserCardTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * 初回カード登録
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function testRegistStartCard() { 
+         $userId = 1;
+         $ret = $this->UserCard->reginsStartCard ($userId);
+var_dump($ret);
+         $this->assertTrue($ret);
+     } 
 }

@@ -7588,3 +7588,1395 @@ Stack Trace:
 2014-02-13 09:39:41 Error: AppuserId:
 2014-02-13 09:39:42 Error: cookie
 2014-02-13 09:39:42 Error: AppuserId:
+2014-02-13 11:17:05 Error: cookie
+2014-02-13 11:17:05 Error: AppuserId:
+2014-02-13 11:17:06 Error: cookie
+2014-02-13 11:17:06 Error: AppuserId:
+2014-02-13 11:17:07 Error: cookie
+2014-02-13 11:17:07 Error: AppuserId:
+2014-02-13 19:29:24 Error: cookie
+2014-02-13 19:29:24 Error: AppuserId:
+2014-02-13 19:29:25 Error: cookie
+2014-02-13 19:29:25 Error: AppuserId:
+2014-02-13 19:29:26 Error: cookie
+2014-02-13 19:29:26 Error: AppuserId:
+2014-02-13 20:34:56 Error: cookie
+2014-02-13 20:34:56 Error: AppuserId:
+2014-02-13 20:34:56 Error: cookie
+2014-02-13 20:34:57 Error: AppuserId:
+2014-02-13 20:35:02 Error: cookie
+2014-02-13 20:35:04 Error: cookie
+2014-02-13 20:35:10 Error: cookie
+2014-02-13 20:35:10 Error: AppuserId:
+2014-02-13 20:35:15 Error: cookie
+2014-02-13 20:35:15 Error: AppuserId:
+2014-02-13 20:35:27 Error: cookie
+2014-02-13 20:35:27 Error: AppuserId:
+2014-02-13 20:35:27 Error: [MissingControllerException] Controller class TutoController could not be found.
+Exception Attributes: array (
+  'class' => 'TutoController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/tuto/index
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-13 20:35:27 Error: cookie
+2014-02-13 20:35:27 Error: AppuserId:
+2014-02-13 20:35:36 Error: cookie
+2014-02-13 20:35:44 Error: cookie
+2014-02-13 20:35:44 Error: AppuserId:
+2014-02-13 20:35:54 Error: [MissingControllerException] Controller class HtmlController could not be found.
+Exception Attributes: array (
+  'class' => 'HtmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/html
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-13 20:35:54 Error: cookie
+2014-02-13 20:35:54 Error: AppuserId:
+2014-02-13 22:59:11 Error: cookie
+2014-02-13 22:59:11 Error: AppuserId:
+2014-02-13 22:59:12 Error: cookie
+2014-02-13 22:59:12 Error: AppuserId:
+2014-02-13 22:59:13 Error: cookie
+2014-02-13 22:59:13 Error: AppuserId:
+2014-02-13 23:13:47 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-13 23:13:47 Error: cookie
+2014-02-13 23:13:47 Error: AppuserId:
+2014-02-13 23:13:47 Error: cookie
+2014-02-13 23:13:47 Error: AppuserId:
+2014-02-13 23:13:48 Error: cookie
+2014-02-13 23:13:48 Error: cookie
+2014-02-13 23:13:48 Error: AppuserId:
+2014-02-14 03:31:53 Error: cookie
+2014-02-14 03:31:53 Error: AppuserId:
+2014-02-14 03:31:54 Error: cookie
+2014-02-14 03:31:54 Error: AppuserId:
+2014-02-14 03:51:47 Error: cookie
+2014-02-14 03:51:47 Error: AppuserId:
+2014-02-14 03:51:49 Error: cookie
+2014-02-14 03:51:49 Error: AppuserId:
+2014-02-14 03:51:50 Error: cookie
+2014-02-14 03:51:50 Error: AppuserId:
+2014-02-14 09:08:54 Error: cookie
+2014-02-14 09:08:54 Error: AppuserId:
+2014-02-14 09:09:04 Error: cookie
+2014-02-14 09:09:04 Error: AppuserId:
+2014-02-14 11:20:08 Error: cookie
+2014-02-14 11:20:08 Error: AppuserId:
+2014-02-14 11:20:09 Error: cookie
+2014-02-14 11:20:09 Error: AppuserId:
+2014-02-14 11:20:10 Error: cookie
+2014-02-14 11:20:10 Error: AppuserId:
+2014-02-14 13:56:04 Error: [MissingControllerException] Controller class WordpressController could not be found.
+Exception Attributes: array (
+  'class' => 'WordpressController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wordpress/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-14 13:56:04 Error: cookie
+2014-02-14 13:56:04 Error: AppuserId:
+2014-02-14 14:11:23 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/blog/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-14 14:11:23 Error: cookie
+2014-02-14 14:11:23 Error: AppuserId:
+2014-02-14 14:26:27 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-14 14:26:27 Error: cookie
+2014-02-14 14:26:27 Error: AppuserId:
+2014-02-14 14:41:02 Error: [MissingControllerException] Controller class WpController could not be found.
+Exception Attributes: array (
+  'class' => 'WpController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-14 14:41:02 Error: cookie
+2014-02-14 14:41:02 Error: AppuserId:
+2014-02-14 14:49:47 Error: cookie
+2014-02-14 14:49:47 Error: User save failed :Tutorials/tutorial_1
+2014-02-14 14:49:47 Error: cookie
+2014-02-14 14:49:47 Error: action:tutorial_2
+2014-02-14 14:49:47 Error: userId:0
+2014-02-14 14:49:47 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-14 14:49:47 Error: current:2
+2014-02-14 14:49:48 Error: cookie
+2014-02-14 14:49:48 Error: action:tutorial_3
+2014-02-14 14:49:48 Error: userId:0
+2014-02-14 14:49:48 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-14 14:49:48 Error: current:3
+2014-02-14 14:49:48 Error: cookie
+2014-02-14 14:49:48 Error: action:tutorial_4
+2014-02-14 14:49:48 Error: userId:0
+2014-02-14 14:49:48 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-14 14:49:48 Error: current:4
+2014-02-14 14:49:48 Error: cookie
+2014-02-14 14:49:48 Error: action:tutorial_5
+2014-02-14 14:49:48 Error: userId:0
+2014-02-14 14:49:48 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-14 14:49:48 Error: current:5
+2014-02-14 14:49:49 Error: cookie
+2014-02-14 14:49:49 Error: action:tutorial_6
+2014-02-14 14:49:49 Error: userId:0
+2014-02-14 14:49:49 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-14 14:49:49 Error: current:6
+2014-02-14 14:49:49 Error: cookie
+2014-02-14 14:49:49 Error: action:tutorial_7
+2014-02-14 14:49:49 Error: userId:0
+2014-02-14 14:49:49 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-14 14:49:49 Error: current:7
+2014-02-14 14:49:50 Error: cookie
+2014-02-14 14:49:50 Error: action:tutorial_8
+2014-02-14 14:49:50 Error: userId:0
+2014-02-14 14:49:50 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-14 14:49:50 Error: current:8
+2014-02-14 14:49:50 Error: cookie
+2014-02-14 14:49:50 Error: action:tutorial_9
+2014-02-14 14:49:50 Error: userId:0
+2014-02-14 14:49:50 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-14 14:49:50 Error: current:9
+2014-02-14 14:49:50 Error: cookie
+2014-02-14 14:49:50 Error: action:tutorial_10
+2014-02-14 14:49:50 Error: userId:0
+2014-02-14 14:49:50 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-14 14:49:50 Error: current:10
+2014-02-14 14:49:51 Error: cookie
+2014-02-14 14:49:51 Error: action:tutorial_11
+2014-02-14 14:49:51 Error: userId:0
+2014-02-14 14:49:51 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-14 14:49:51 Error: current:11
+2014-02-14 14:49:51 Error: cookie
+2014-02-14 14:49:51 Error: action:tutorial_12
+2014-02-14 14:49:51 Error: userId:0
+2014-02-14 14:49:51 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-14 14:49:51 Error: current:12
+2014-02-14 14:49:52 Error: cookie
+2014-02-14 14:49:52 Error: action:tutorial_13
+2014-02-14 14:49:52 Error: userId:0
+2014-02-14 14:49:52 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-14 14:49:52 Error: current:13
+2014-02-14 14:49:52 Error: cookie
+2014-02-14 14:49:52 Error: action:tutorial_14
+2014-02-14 14:49:52 Error: userId:0
+2014-02-14 14:49:52 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-14 14:49:52 Error: current:14
+2014-02-14 14:58:23 Error: cookie
+2014-02-14 14:58:23 Error: User save failed :Tutorials/tutorial_1
+2014-02-14 14:58:23 Error: cookie
+2014-02-14 14:58:23 Error: action:tutorial_2
+2014-02-14 14:58:23 Error: userId:0
+2014-02-14 14:58:23 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-14 14:58:23 Error: current:2
+2014-02-14 14:58:23 Error: cookie
+2014-02-14 14:58:23 Error: action:tutorial_3
+2014-02-14 14:58:23 Error: userId:0
+2014-02-14 14:58:23 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-14 14:58:23 Error: current:3
+2014-02-14 14:58:24 Error: cookie
+2014-02-14 14:58:24 Error: action:tutorial_4
+2014-02-14 14:58:24 Error: userId:0
+2014-02-14 14:58:24 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-14 14:58:24 Error: current:4
+2014-02-14 14:58:24 Error: cookie
+2014-02-14 14:58:24 Error: action:tutorial_5
+2014-02-14 14:58:24 Error: userId:0
+2014-02-14 14:58:24 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-14 14:58:24 Error: current:5
+2014-02-14 14:58:25 Error: cookie
+2014-02-14 14:58:25 Error: action:tutorial_6
+2014-02-14 14:58:25 Error: userId:0
+2014-02-14 14:58:25 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-14 14:58:25 Error: current:6
+2014-02-14 14:58:25 Error: cookie
+2014-02-14 14:58:25 Error: action:tutorial_7
+2014-02-14 14:58:25 Error: userId:0
+2014-02-14 14:58:25 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-14 14:58:25 Error: current:7
+2014-02-14 14:58:26 Error: cookie
+2014-02-14 14:58:26 Error: action:tutorial_8
+2014-02-14 14:58:26 Error: userId:0
+2014-02-14 14:58:26 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-14 14:58:26 Error: current:8
+2014-02-14 14:58:26 Error: cookie
+2014-02-14 14:58:26 Error: action:tutorial_9
+2014-02-14 14:58:26 Error: userId:0
+2014-02-14 14:58:26 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-14 14:58:26 Error: current:9
+2014-02-14 14:58:27 Error: cookie
+2014-02-14 14:58:27 Error: action:tutorial_10
+2014-02-14 14:58:27 Error: userId:0
+2014-02-14 14:58:27 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-14 14:58:27 Error: current:10
+2014-02-14 14:58:28 Error: cookie
+2014-02-14 14:58:28 Error: action:tutorial_11
+2014-02-14 14:58:28 Error: userId:0
+2014-02-14 14:58:28 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-14 14:58:28 Error: current:11
+2014-02-14 14:58:28 Error: cookie
+2014-02-14 14:58:28 Error: action:tutorial_12
+2014-02-14 14:58:28 Error: userId:0
+2014-02-14 14:58:28 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-14 14:58:28 Error: current:12
+2014-02-14 14:58:29 Error: cookie
+2014-02-14 14:58:29 Error: action:tutorial_13
+2014-02-14 14:58:29 Error: userId:0
+2014-02-14 14:58:29 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-14 14:58:29 Error: current:13
+2014-02-14 14:58:29 Error: cookie
+2014-02-14 14:58:29 Error: action:tutorial_14
+2014-02-14 14:58:29 Error: userId:0
+2014-02-14 14:58:29 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-14 14:58:29 Error: current:14
+2014-02-14 15:31:05 Error: cookie
+2014-02-14 15:31:05 Error: User save failed :Tutorials/tutorial_1
+2014-02-14 15:31:05 Error: cookie
+2014-02-14 15:31:05 Error: action:tutorial_2
+2014-02-14 15:31:05 Error: userId:0
+2014-02-14 15:31:05 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-14 15:31:05 Error: current:2
+2014-02-14 15:31:06 Error: cookie
+2014-02-14 15:31:06 Error: action:tutorial_3
+2014-02-14 15:31:06 Error: userId:0
+2014-02-14 15:31:06 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-14 15:31:06 Error: current:3
+2014-02-14 15:31:07 Error: cookie
+2014-02-14 15:31:07 Error: action:tutorial_4
+2014-02-14 15:31:07 Error: userId:0
+2014-02-14 15:31:07 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-14 15:31:07 Error: current:4
+2014-02-14 15:31:07 Error: cookie
+2014-02-14 15:31:07 Error: action:tutorial_5
+2014-02-14 15:31:07 Error: userId:0
+2014-02-14 15:31:07 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-14 15:31:07 Error: current:5
+2014-02-14 15:31:08 Error: cookie
+2014-02-14 15:31:08 Error: action:tutorial_6
+2014-02-14 15:31:08 Error: userId:0
+2014-02-14 15:31:08 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-14 15:31:08 Error: current:6
+2014-02-14 15:31:09 Error: cookie
+2014-02-14 15:31:09 Error: action:tutorial_7
+2014-02-14 15:31:09 Error: userId:0
+2014-02-14 15:31:09 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-14 15:31:09 Error: current:7
+2014-02-14 15:31:09 Error: cookie
+2014-02-14 15:31:09 Error: action:tutorial_8
+2014-02-14 15:31:09 Error: userId:0
+2014-02-14 15:31:09 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-14 15:31:09 Error: current:8
+2014-02-14 15:31:09 Error: cookie
+2014-02-14 15:31:09 Error: action:tutorial_9
+2014-02-14 15:31:09 Error: userId:0
+2014-02-14 15:31:09 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-14 15:31:09 Error: current:9
+2014-02-14 15:31:10 Error: cookie
+2014-02-14 15:31:10 Error: action:tutorial_10
+2014-02-14 15:31:10 Error: userId:0
+2014-02-14 15:31:10 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-14 15:31:10 Error: current:10
+2014-02-14 15:31:10 Error: cookie
+2014-02-14 15:31:10 Error: action:tutorial_11
+2014-02-14 15:31:10 Error: userId:0
+2014-02-14 15:31:10 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-14 15:31:10 Error: current:11
+2014-02-14 15:31:11 Error: cookie
+2014-02-14 15:31:11 Error: action:tutorial_12
+2014-02-14 15:31:11 Error: userId:0
+2014-02-14 15:31:11 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-14 15:31:11 Error: current:12
+2014-02-14 15:31:12 Error: cookie
+2014-02-14 15:31:12 Error: action:tutorial_13
+2014-02-14 15:31:12 Error: userId:0
+2014-02-14 15:31:12 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-14 15:31:12 Error: current:13
+2014-02-14 15:31:12 Error: cookie
+2014-02-14 15:31:12 Error: action:tutorial_14
+2014-02-14 15:31:12 Error: userId:0
+2014-02-14 15:31:12 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-14 15:31:12 Error: current:14
+2014-02-14 17:17:55 Error: cookie
+2014-02-14 17:17:55 Error: User save failed :Tutorials/tutorial_1
+2014-02-14 17:17:56 Error: cookie
+2014-02-14 17:17:56 Error: action:tutorial_2
+2014-02-14 17:17:56 Error: userId:0
+2014-02-14 17:17:56 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-14 17:17:56 Error: current:2
+2014-02-14 17:17:56 Error: cookie
+2014-02-14 17:17:56 Error: action:tutorial_3
+2014-02-14 17:17:56 Error: userId:0
+2014-02-14 17:17:56 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-14 17:17:56 Error: current:3
+2014-02-14 17:17:57 Error: cookie
+2014-02-14 17:17:57 Error: action:tutorial_4
+2014-02-14 17:17:57 Error: userId:0
+2014-02-14 17:17:57 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-14 17:17:57 Error: current:4
+2014-02-14 17:17:57 Error: cookie
+2014-02-14 17:17:57 Error: action:tutorial_5
+2014-02-14 17:17:57 Error: userId:0
+2014-02-14 17:17:57 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-14 17:17:57 Error: current:5
+2014-02-14 17:17:57 Error: cookie
+2014-02-14 17:17:57 Error: action:tutorial_6
+2014-02-14 17:17:57 Error: userId:0
+2014-02-14 17:17:57 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-14 17:17:57 Error: current:6
+2014-02-14 17:17:58 Error: cookie
+2014-02-14 17:17:58 Error: action:tutorial_7
+2014-02-14 17:17:58 Error: userId:0
+2014-02-14 17:17:58 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-14 17:17:58 Error: current:7
+2014-02-14 17:17:58 Error: cookie
+2014-02-14 17:17:58 Error: action:tutorial_8
+2014-02-14 17:17:58 Error: userId:0
+2014-02-14 17:17:58 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-14 17:17:58 Error: current:8
+2014-02-14 17:17:59 Error: cookie
+2014-02-14 17:17:59 Error: action:tutorial_9
+2014-02-14 17:17:59 Error: userId:0
+2014-02-14 17:17:59 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-14 17:17:59 Error: current:9
+2014-02-14 17:17:59 Error: cookie
+2014-02-14 17:17:59 Error: action:tutorial_10
+2014-02-14 17:17:59 Error: userId:0
+2014-02-14 17:17:59 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-14 17:17:59 Error: current:10
+2014-02-14 17:17:59 Error: cookie
+2014-02-14 17:17:59 Error: action:tutorial_11
+2014-02-14 17:17:59 Error: userId:0
+2014-02-14 17:17:59 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-14 17:17:59 Error: current:11
+2014-02-14 17:18:00 Error: cookie
+2014-02-14 17:18:00 Error: action:tutorial_12
+2014-02-14 17:18:00 Error: userId:0
+2014-02-14 17:18:00 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-14 17:18:00 Error: current:12
+2014-02-14 17:18:00 Error: cookie
+2014-02-14 17:18:00 Error: action:tutorial_13
+2014-02-14 17:18:00 Error: userId:0
+2014-02-14 17:18:00 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-14 17:18:00 Error: current:13
+2014-02-14 17:18:01 Error: cookie
+2014-02-14 17:18:01 Error: action:tutorial_14
+2014-02-14 17:18:01 Error: userId:0
+2014-02-14 17:18:01 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-14 17:18:01 Error: current:14
+2014-02-14 17:27:02 Error: cookie
+2014-02-14 17:27:02 Error: AppuserId:
+2014-02-14 17:27:03 Error: cookie
+2014-02-14 17:27:03 Error: AppuserId:
+2014-02-14 17:27:04 Error: cookie
+2014-02-14 17:27:04 Error: AppuserId:
+2014-02-14 17:59:46 Error: cookie
+2014-02-14 17:59:46 Error: AppuserId:
+2014-02-14 17:59:47 Error: cookie
+2014-02-14 17:59:47 Error: AppuserId:
+2014-02-14 17:59:48 Error: cookie
+2014-02-14 17:59:48 Error: AppuserId:
+2014-02-14 21:18:00 Error: cookie
+2014-02-14 21:18:01 Error: User save failed :Tutorials/tutorial_1
+2014-02-14 21:18:01 Error: cookie
+2014-02-14 21:18:01 Error: action:tutorial_2
+2014-02-14 21:18:01 Error: userId:0
+2014-02-14 21:18:01 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-14 21:18:01 Error: current:2
+2014-02-14 21:18:01 Error: cookie
+2014-02-14 21:18:01 Error: action:tutorial_3
+2014-02-14 21:18:01 Error: userId:0
+2014-02-14 21:18:01 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-14 21:18:02 Error: current:3
+2014-02-14 21:18:02 Error: cookie
+2014-02-14 21:18:02 Error: action:tutorial_4
+2014-02-14 21:18:02 Error: userId:0
+2014-02-14 21:18:02 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-14 21:18:02 Error: current:4
+2014-02-14 21:18:02 Error: cookie
+2014-02-14 21:18:02 Error: action:tutorial_5
+2014-02-14 21:18:02 Error: userId:0
+2014-02-14 21:18:02 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-14 21:18:02 Error: current:5
+2014-02-14 21:18:03 Error: cookie
+2014-02-14 21:18:03 Error: action:tutorial_6
+2014-02-14 21:18:03 Error: userId:0
+2014-02-14 21:18:03 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-14 21:18:03 Error: current:6
+2014-02-14 21:18:04 Error: cookie
+2014-02-14 21:18:04 Error: action:tutorial_7
+2014-02-14 21:18:04 Error: userId:0
+2014-02-14 21:18:04 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-14 21:18:04 Error: current:7
+2014-02-14 21:18:04 Error: cookie
+2014-02-14 21:18:04 Error: action:tutorial_8
+2014-02-14 21:18:04 Error: userId:0
+2014-02-14 21:18:04 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-14 21:18:04 Error: current:8
+2014-02-14 21:18:05 Error: cookie
+2014-02-14 21:18:05 Error: action:tutorial_9
+2014-02-14 21:18:05 Error: userId:0
+2014-02-14 21:18:05 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-14 21:18:05 Error: current:9
+2014-02-14 21:18:05 Error: cookie
+2014-02-14 21:18:05 Error: action:tutorial_10
+2014-02-14 21:18:05 Error: userId:0
+2014-02-14 21:18:05 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-14 21:18:05 Error: current:10
+2014-02-14 21:18:06 Error: cookie
+2014-02-14 21:18:06 Error: action:tutorial_11
+2014-02-14 21:18:06 Error: userId:0
+2014-02-14 21:18:06 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-14 21:18:06 Error: current:11
+2014-02-14 21:18:06 Error: cookie
+2014-02-14 21:18:06 Error: action:tutorial_12
+2014-02-14 21:18:06 Error: userId:0
+2014-02-14 21:18:06 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-14 21:18:06 Error: current:12
+2014-02-14 21:18:07 Error: cookie
+2014-02-14 21:18:07 Error: action:tutorial_13
+2014-02-14 21:18:07 Error: userId:0
+2014-02-14 21:18:07 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-14 21:18:07 Error: current:13
+2014-02-14 21:18:07 Error: cookie
+2014-02-14 21:18:07 Error: action:tutorial_14
+2014-02-14 21:18:07 Error: userId:0
+2014-02-14 21:18:07 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-14 21:18:07 Error: current:14
+2014-02-14 21:24:09 Error: cookie
+2014-02-14 21:24:09 Error: AppuserId:
+2014-02-14 21:24:11 Error: cookie
+2014-02-14 21:24:11 Error: AppuserId:
+2014-02-14 21:24:12 Error: cookie
+2014-02-14 21:24:12 Error: AppuserId:
+2014-02-14 21:53:02 Error: cookie
+2014-02-14 21:53:02 Error: AppuserId:
+2014-02-14 21:53:03 Error: cookie
+2014-02-14 21:53:03 Error: AppuserId:
+2014-02-14 21:53:04 Error: cookie
+2014-02-14 21:53:04 Error: AppuserId:
+2014-02-14 22:04:39 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-14 22:04:39 Error: cookie
+2014-02-14 22:04:39 Error: AppuserId:
+2014-02-14 22:04:41 Error: cookie
+2014-02-14 22:04:41 Error: AppuserId:
+2014-02-14 22:04:52 Error: cookie
+2014-02-14 22:05:16 Error: cookie
+2014-02-14 22:05:16 Error: AppuserId:
+2014-02-15 00:17:58 Error: cookie
+2014-02-15 00:17:58 Error: User save failed :Tutorials/tutorial_1
+2014-02-15 00:17:58 Error: cookie
+2014-02-15 00:17:58 Error: action:tutorial_2
+2014-02-15 00:17:58 Error: userId:0
+2014-02-15 00:17:59 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-15 00:17:59 Error: current:2
+2014-02-15 00:17:59 Error: cookie
+2014-02-15 00:17:59 Error: action:tutorial_3
+2014-02-15 00:17:59 Error: userId:0
+2014-02-15 00:17:59 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-15 00:17:59 Error: current:3
+2014-02-15 00:17:59 Error: cookie
+2014-02-15 00:17:59 Error: action:tutorial_4
+2014-02-15 00:17:59 Error: userId:0
+2014-02-15 00:17:59 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-15 00:17:59 Error: current:4
+2014-02-15 00:18:00 Error: cookie
+2014-02-15 00:18:00 Error: action:tutorial_5
+2014-02-15 00:18:00 Error: userId:0
+2014-02-15 00:18:00 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-15 00:18:00 Error: current:5
+2014-02-15 00:18:00 Error: cookie
+2014-02-15 00:18:00 Error: action:tutorial_6
+2014-02-15 00:18:00 Error: userId:0
+2014-02-15 00:18:00 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-15 00:18:00 Error: current:6
+2014-02-15 00:18:01 Error: cookie
+2014-02-15 00:18:01 Error: action:tutorial_7
+2014-02-15 00:18:01 Error: userId:0
+2014-02-15 00:18:01 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-15 00:18:01 Error: current:7
+2014-02-15 00:18:01 Error: cookie
+2014-02-15 00:18:01 Error: action:tutorial_8
+2014-02-15 00:18:01 Error: userId:0
+2014-02-15 00:18:01 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-15 00:18:01 Error: current:8
+2014-02-15 00:18:01 Error: cookie
+2014-02-15 00:18:01 Error: action:tutorial_9
+2014-02-15 00:18:01 Error: userId:0
+2014-02-15 00:18:01 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-15 00:18:01 Error: current:9
+2014-02-15 00:18:02 Error: cookie
+2014-02-15 00:18:02 Error: action:tutorial_10
+2014-02-15 00:18:02 Error: userId:0
+2014-02-15 00:18:02 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-15 00:18:02 Error: current:10
+2014-02-15 00:18:03 Error: cookie
+2014-02-15 00:18:03 Error: action:tutorial_11
+2014-02-15 00:18:03 Error: userId:0
+2014-02-15 00:18:03 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-15 00:18:03 Error: current:11
+2014-02-15 00:18:03 Error: cookie
+2014-02-15 00:18:03 Error: action:tutorial_12
+2014-02-15 00:18:03 Error: userId:0
+2014-02-15 00:18:03 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-15 00:18:03 Error: current:12
+2014-02-15 00:18:03 Error: cookie
+2014-02-15 00:18:03 Error: action:tutorial_13
+2014-02-15 00:18:03 Error: userId:0
+2014-02-15 00:18:03 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-15 00:18:03 Error: current:13
+2014-02-15 00:18:04 Error: cookie
+2014-02-15 00:18:04 Error: action:tutorial_14
+2014-02-15 00:18:04 Error: userId:0
+2014-02-15 00:18:04 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-15 00:18:04 Error: current:14
+2014-02-15 01:30:00 Error: [MissingControllerException] Controller class WordpressController could not be found.
+Exception Attributes: array (
+  'class' => 'WordpressController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wordpress/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-15 01:30:00 Error: cookie
+2014-02-15 01:30:00 Error: AppuserId:
+2014-02-15 01:42:37 Error: [MissingControllerException] Controller class BlogController could not be found.
+Exception Attributes: array (
+  'class' => 'BlogController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/blog/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-15 01:42:37 Error: cookie
+2014-02-15 01:42:37 Error: AppuserId:
+2014-02-15 01:54:53 Error: [MissingControllerException] Controller class Wp-adminController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-adminController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-15 01:54:53 Error: cookie
+2014-02-15 01:54:53 Error: AppuserId:
+2014-02-15 02:07:08 Error: [MissingControllerException] Controller class WpController could not be found.
+Exception Attributes: array (
+  'class' => 'WpController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp/wp-admin/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-15 02:07:08 Error: cookie
+2014-02-15 02:07:08 Error: AppuserId:
+2014-02-15 07:09:07 Error: cookie
+2014-02-15 07:09:07 Error: AppuserId:
+2014-02-15 07:09:08 Error: cookie
+2014-02-15 07:09:08 Error: AppuserId:
+2014-02-15 07:16:02 Error: cookie
+2014-02-15 07:16:02 Error: AppuserId:
+2014-02-15 07:16:03 Error: cookie
+2014-02-15 07:16:03 Error: cookie
+2014-02-15 07:16:03 Error: AppuserId:
+2014-02-15 07:31:35 Error: cookie1
+2014-02-15 07:31:35 Error: AppuserId:1
+2014-02-15 07:31:36 Error: cookie1
+2014-02-15 07:31:36 Error: AppuserId:1
+2014-02-15 07:31:36 Error: action:tutorial_2
+2014-02-15 07:31:36 Error: userId:1
+2014-02-15 07:31:36 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-15 07:31:36 Error: current:2
+2014-02-15 07:31:36 Error: cookie1
+2014-02-15 07:31:36 Error: AppuserId:1
+2014-02-15 07:31:36 Error: action:tutorial_3
+2014-02-15 07:31:36 Error: userId:1
+2014-02-15 07:31:36 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-15 07:31:36 Error: current:3
+2014-02-15 07:31:36 Error: cookie1
+2014-02-15 07:31:36 Error: AppuserId:1
+2014-02-15 07:31:36 Error: action:tutorial_4
+2014-02-15 07:31:36 Error: userId:1
+2014-02-15 07:31:36 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-15 07:31:36 Error: current:4
+2014-02-15 07:31:37 Error: cookie1
+2014-02-15 07:31:37 Error: AppuserId:1
+2014-02-15 07:31:37 Error: action:tutorial_5
+2014-02-15 07:31:37 Error: userId:1
+2014-02-15 07:31:37 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-15 07:31:37 Error: current:5
+2014-02-15 07:31:37 Error: cookie1
+2014-02-15 07:31:37 Error: AppuserId:1
+2014-02-15 07:31:37 Error: action:tutorial_6
+2014-02-15 07:31:37 Error: userId:1
+2014-02-15 07:31:37 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-15 07:31:37 Error: current:6
+2014-02-15 07:31:38 Error: cookie1
+2014-02-15 07:31:38 Error: AppuserId:1
+2014-02-15 07:31:38 Error: action:tutorial_7
+2014-02-15 07:31:38 Error: userId:1
+2014-02-15 07:31:38 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-15 07:31:38 Error: current:7
+2014-02-15 07:31:38 Error: cookie1
+2014-02-15 07:31:38 Error: AppuserId:1
+2014-02-15 07:31:38 Error: action:tutorial_8
+2014-02-15 07:31:38 Error: userId:1
+2014-02-15 07:31:38 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-15 07:31:38 Error: current:8
+2014-02-15 07:31:39 Error: cookie1
+2014-02-15 07:31:39 Error: AppuserId:1
+2014-02-15 07:31:39 Error: action:tutorial_9
+2014-02-15 07:31:39 Error: userId:1
+2014-02-15 07:31:39 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-15 07:31:39 Error: current:9
+2014-02-15 07:31:39 Error: cookie1
+2014-02-15 07:31:39 Error: AppuserId:1
+2014-02-15 07:31:39 Error: action:tutorial_10
+2014-02-15 07:31:39 Error: userId:1
+2014-02-15 07:31:39 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-15 07:31:39 Error: current:10
+2014-02-15 07:31:40 Error: cookie1
+2014-02-15 07:31:40 Error: AppuserId:1
+2014-02-15 07:31:40 Error: action:tutorial_11
+2014-02-15 07:31:40 Error: userId:1
+2014-02-15 07:31:40 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-15 07:31:40 Error: current:11
+2014-02-15 07:31:40 Error: cookie1
+2014-02-15 07:31:40 Error: AppuserId:1
+2014-02-15 07:31:40 Error: action:tutorial_12
+2014-02-15 07:31:40 Error: userId:1
+2014-02-15 07:31:40 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-15 07:31:40 Error: current:12
+2014-02-15 07:31:41 Error: cookie1
+2014-02-15 07:31:41 Error: AppuserId:1
+2014-02-15 07:31:41 Error: action:tutorial_13
+2014-02-15 07:31:41 Error: userId:1
+2014-02-15 07:31:41 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-15 07:31:41 Error: current:13
+2014-02-15 07:31:41 Error: cookie1
+2014-02-15 07:31:41 Error: AppuserId:1
+2014-02-15 07:31:41 Error: action:tutorial_14
+2014-02-15 07:31:41 Error: userId:1
+2014-02-15 07:31:41 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-15 07:31:41 Error: current:14
+2014-02-15 07:34:45 Error: current:2
+2014-02-15 07:34:46 Error: current:3
+2014-02-15 07:34:46 Error: current:4
+2014-02-15 07:34:47 Error: current:5
+2014-02-15 07:34:47 Error: current:6
+2014-02-15 07:34:47 Error: current:7
+2014-02-15 07:34:48 Error: current:8
+2014-02-15 07:34:48 Error: current:9
+2014-02-15 07:34:49 Error: current:10
+2014-02-15 07:34:49 Error: current:11
+2014-02-15 07:34:49 Error: current:12
+2014-02-15 07:34:50 Error: current:13
+2014-02-15 07:34:50 Error: current:14
+2014-02-15 07:55:44 Error: User save failed :Tutorials/tutorial_1
+2014-02-15 08:43:30 Error: User save failed :Tutorials/tutorial_1
+2014-02-15 08:48:43 Error: Console cookie set!
+2014-02-15 08:48:43 Error: Console cookie set!
+2014-02-15 08:48:44 Error: Console cookie set!
+2014-02-15 08:48:44 Error: Console cookie set!
+2014-02-15 08:48:45 Error: Console cookie set!
+2014-02-15 08:48:45 Error: Console cookie set!
+2014-02-15 08:48:46 Error: Console cookie set!
+2014-02-15 08:48:46 Error: Console cookie set!
+2014-02-15 08:48:46 Error: Console cookie set!
+2014-02-15 08:48:47 Error: Console cookie set!
+2014-02-15 08:48:47 Error: Console cookie set!
+2014-02-15 08:48:48 Error: Console cookie set!
+2014-02-15 08:48:48 Error: Console cookie set!
+2014-02-15 08:48:48 Error: Console cookie set!
+2014-02-15 17:10:19 Error: Fatal Error (1): Call to undefined method UserCardTest::log() in [/var/www/asns/app/Test/Case/Model/UserCardTest.php, line 91]
+2014-02-15 17:10:19 Error: [FatalErrorException] Call to undefined method UserCardTest::log()
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 91)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 91, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 91, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-15 17:13:34 Error: aaaaaaaaaaaaa
+2014-02-15 17:14:15 Error: aaaaaaaaaaaaa
+2014-02-15 17:14:15 Error: bbbbbbbbbb
+2014-02-15 17:14:15 Error: cccccccccc
+2014-02-15 17:15:04 Error: aaaaaaaaaaaaa
+2014-02-15 17:15:04 Error: bbbbbbbbbb
+2014-02-15 17:15:04 Error: cccccccccc
+2014-02-15 17:16:34 Error: aaaaaaaaaaaaa
+2014-02-15 17:16:34 Error: bbbbbbbbbb
+2014-02-15 17:16:34 Error: cccccccccc
+2014-02-15 17:16:34 Error: INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:16:57 Error: aaaaaaaaaaaaa
+2014-02-15 17:16:57 Error: bbbbbbbbbb
+2014-02-15 17:16:57 Error: cccccccccc
+2014-02-15 17:16:57 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:18:00 Error: aaaaaaaaaaaaa
+2014-02-15 17:18:00 Error: bbbbbbbbbb
+2014-02-15 17:18:00 Error: cccccccccc
+2014-02-15 17:18:00 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?) ;
+2014-02-15 17:18:38 Error: aaaaaaaaaaaaa
+2014-02-15 17:18:38 Error: bbbbbbbbbb
+2014-02-15 17:18:38 Error: cccccccccc
+2014-02-15 17:18:38 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:18:38 Error: Array
+(
+    [0] => Array
+        (
+            [user_id] => 1
+            [cardId] => 2
+            [atk] => 2
+            [def] => 3
+        )
+
+    [1] => Array
+        (
+            [user_id] => 1
+            [cardId] => 2
+            [atk] => 2
+            [def] => 3
+        )
+
+    [2] => Array
+        (
+            [user_id] => 1
+            [cardId] => 2
+            [atk] => 2
+            [def] => 3
+        )
+
+    [3] => Array
+        (
+            [user_id] => 1
+            [cardId] => 2
+            [atk] => 2
+            [def] => 3
+        )
+
+    [4] => 2014-02-15 17:18:38
+    [5] => Array
+        (
+            [user_id] => 1
+            [cardId] => 3
+            [atk] => 9
+            [def] => 20
+        )
+
+    [6] => Array
+        (
+            [user_id] => 1
+            [cardId] => 3
+            [atk] => 9
+            [def] => 20
+        )
+
+    [7] => Array
+        (
+            [user_id] => 1
+            [cardId] => 3
+            [atk] => 9
+            [def] => 20
+        )
+
+    [8] => Array
+        (
+            [user_id] => 1
+            [cardId] => 3
+            [atk] => 9
+            [def] => 20
+        )
+
+    [9] => 2014-02-15 17:18:38
+)
+
+2014-02-15 17:21:03 Error: aaaaaaaaaaaaa
+2014-02-15 17:21:03 Error: bbbbbbbbbb
+2014-02-15 17:21:03 Error: cccccccccc
+2014-02-15 17:21:03 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:21:03 Error: Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [1] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [2] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [3] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [4] => 2014-02-15 17:21:03
+    [5] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [6] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [7] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [8] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [9] => 2014-02-15 17:21:03
+)
+
+2014-02-15 17:21:29 Error: aaaaaaaaaaaaa
+2014-02-15 17:21:29 Error: bbbbbbbbbb
+2014-02-15 17:21:29 Error: cccccccccc
+2014-02-15 17:21:29 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:21:29 Error: Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [1] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [2] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [3] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [4] => 2014-02-15 17:21:29
+    [5] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [6] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [7] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [8] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [9] => 2014-02-15 17:21:29
+)
+
+2014-02-15 17:21:45 Error: aaaaaaaaaaaaa
+2014-02-15 17:21:45 Error: bbbbbbbbbb
+2014-02-15 17:21:45 Error: cccccccccc
+2014-02-15 17:21:45 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:21:45 Error: Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [1] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [2] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [3] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [4] => 2014-02-15 17:21:45
+    [5] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [6] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [7] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [8] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+    [9] => 2014-02-15 17:21:45
+)
+
+2014-02-15 17:26:18 Error: aaaaaaaaaaaaa
+2014-02-15 17:26:18 Error: bbbbbbbbbb
+2014-02-15 17:26:18 Error: cccccccccc
+2014-02-15 17:26:18 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:26:18 Error: Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 1
+    [3] => 1
+    [4] => 2014-02-15 17:26:18
+    [5] => 2
+    [6] => 2
+    [7] => 2
+    [8] => 2
+    [9] => 2014-02-15 17:26:18
+    [10] => 2
+    [11] => 2
+    [12] => 2
+    [13] => 2
+    [14] => 2014-02-15 17:26:18
+    [15] => 3
+    [16] => 3
+    [17] => 3
+    [18] => 3
+    [19] => 2014-02-15 17:26:18
+    [20] => 1
+    [21] => 1
+    [22] => 1
+    [23] => 1
+    [24] => 2014-02-15 17:26:18
+    [25] => 3
+    [26] => 3
+    [27] => 3
+    [28] => 3
+    [29] => 2014-02-15 17:26:18
+    [30] => 9
+    [31] => 9
+    [32] => 9
+    [33] => 9
+    [34] => 2014-02-15 17:26:18
+    [35] => 20
+    [36] => 20
+    [37] => 20
+    [38] => 20
+    [39] => 2014-02-15 17:26:18
+)
+
+2014-02-15 17:29:49 Error: aaaaaaaaaaaaa
+2014-02-15 17:29:49 Error: bbbbbbbbbb
+2014-02-15 17:30:17 Error: aaaaaaaaaaaaa
+2014-02-15 17:30:17 Error: bbbbbbbbbb
+2014-02-15 17:30:17 Error: cccccccccc
+2014-02-15 17:30:17 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:30:17 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:30:17
+    [5] => 1
+    [6] => 3
+    [7] => 9
+    [8] => 20
+    [9] => 2014-02-15 17:30:17
+)
+
+2014-02-15 17:31:33 Error: aaaaaaaaaaaaa
+2014-02-15 17:31:33 Error: bbbbbbbbbb
+2014-02-15 17:31:33 Error: cccccccccc
+2014-02-15 17:31:33 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:31:33 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:31:33
+    [5] => 1
+    [6] => 3
+    [7] => 9
+    [8] => 20
+    [9] => 2014-02-15 17:31:33
+)
+
+2014-02-15 17:31:47 Error: aaaaaaaaaaaaa
+2014-02-15 17:31:47 Error: bbbbbbbbbb
+2014-02-15 17:31:47 Error: cccccccccc
+2014-02-15 17:31:47 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:31:47 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:31:47
+    [5] => 1
+    [6] => 3
+    [7] => 9
+    [8] => 20
+    [9] => 2014-02-15 17:31:47
+)
+
+2014-02-15 17:32:14 Error: aaaaaaaaaaaaa
+2014-02-15 17:32:14 Error: bbbbbbbbbb
+2014-02-15 17:32:14 Error: cccccccccc
+2014-02-15 17:32:14 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:32:14 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:32:14
+    [5] => 1
+    [6] => 3
+    [7] => 9
+    [8] => 20
+    [9] => 2014-02-15 17:32:14
+)
+
+2014-02-15 17:36:55 Error: aaaaaaaaaaaaa
+2014-02-15 17:36:55 Error: bbbbbbbbbb
+2014-02-15 17:36:55 Error: cccccccccc
+2014-02-15 17:36:55 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?),(?,?,?,?,?)
+2014-02-15 17:36:55 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:36:55
+    [5] => 1
+    [6] => 3
+    [7] => 9
+    [8] => 20
+    [9] => 2014-02-15 17:36:55
+)
+
+2014-02-15 17:43:52 Error: aaaaaaaaaaaaa
+2014-02-15 17:43:52 Error: bbbbbbbbbb
+2014-02-15 17:43:52 Error: cccccccccc
+2014-02-15 17:43:52 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created,created,modified) VALUES (?,?,?,?,?,?,?),(?,?,?,?,?,?,?)
+2014-02-15 17:43:52 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:43:52
+    [5] => 2014-02-15 17:43:52
+    [6] => 2014-02-15 17:43:52
+    [7] => 1
+    [8] => 3
+    [9] => 9
+    [10] => 20
+    [11] => 2014-02-15 17:43:52
+    [12] => 2014-02-15 17:43:52
+    [13] => 2014-02-15 17:43:52
+)
+
+2014-02-15 17:45:54 Error: aaaaaaaaaaaaa
+2014-02-15 17:45:54 Error: bbbbbbbbbb
+2014-02-15 17:45:54 Error: cccccccccc
+2014-02-15 17:45:54 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created,modified) VALUES (?,?,?,?,?,?),(?,?,?,?,?,?)
+2014-02-15 17:45:54 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 2014-02-15 17:45:54
+    [5] => 2014-02-15 17:45:54
+    [6] => 1
+    [7] => 3
+    [8] => 9
+    [9] => 20
+    [10] => 2014-02-15 17:45:54
+    [11] => 2014-02-15 17:45:54
+)
+
+2014-02-15 17:46:32 Error: aaaaaaaaaaaaa
+2014-02-15 17:46:32 Error: bbbbbbbbbb
+2014-02-15 17:46:32 Error: cccccccccc
+2014-02-15 17:46:32 Error: INSERT INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:46:32 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:47:34 Error: aaaaaaaaaaaaa
+2014-02-15 17:47:34 Error: bbbbbbbbbb
+2014-02-15 17:47:34 Error: cccccccccc
+2014-02-15 17:47:34 Error: INSERT INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:47:34 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:50:40 Error: aaaaaaaaaaaaa
+2014-02-15 17:50:40 Error: bbbbbbbbbb
+2014-02-15 17:50:40 Error: cccccccccc
+2014-02-15 17:50:40 Error: INSERT IGNORE INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:50:40 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:50:40 Error: ddddddd
+2014-02-15 17:50:40 Error: fffff
+2014-02-15 17:52:01 Error: aaaaaaaaaaaaa
+2014-02-15 17:52:01 Error: bbbbbbbbbb
+2014-02-15 17:52:01 Error: cccccccccc
+2014-02-15 17:52:01 Error: INSERT IGNORE INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:52:01 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:52:01 Error: ddddddd
+2014-02-15 17:52:01 Error: fffff
+2014-02-15 17:52:53 Error: aaaaaaaaaaaaa
+2014-02-15 17:52:53 Error: bbbbbbbbbb
+2014-02-15 17:52:53 Error: cccccccccc
+2014-02-15 17:52:53 Error: INSERT IGNORE INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:52:53 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:52:53 Error: ddddddd
+2014-02-15 17:52:53 Error: fffff
+2014-02-15 17:52:53 Error: 0
+2014-02-15 17:52:53 Error: Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [1] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+)
+
+2014-02-15 17:57:39 Error: aaaaaaaaaaaaa
+2014-02-15 17:57:39 Error: bbbbbbbbbb
+2014-02-15 17:57:39 Error: cccccccccc
+2014-02-15 17:57:39 Error: INSERT IGNORE INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?),(?,?,?,?)
+2014-02-15 17:57:39 Error: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 2
+    [3] => 3
+    [4] => 1
+    [5] => 3
+    [6] => 9
+    [7] => 20
+)
+
+2014-02-15 17:57:39 Error: ddddddd
+2014-02-15 17:57:39 Error: fffff
+2014-02-15 17:57:39 Error: 2
+2014-02-15 17:57:39 Error: Array
+(
+    [0] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 2
+            [3] => 3
+        )
+
+    [1] => Array
+        (
+            [0] => 1
+            [1] => 3
+            [2] => 9
+            [3] => 20
+        )
+
+)
+
+2014-02-15 17:57:39 Error: ggggggg

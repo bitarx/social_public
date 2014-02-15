@@ -38,16 +38,6 @@ class AppModel extends Model {
     protected $_pageLimit = 10;
 
     /**
-     * 返却はJson形式
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function beforeFilter() {
-        $this->viewClass = 'Json';
-    }
-
-    /**
      * 条件検索
      *
      * @author imanishi 
@@ -71,6 +61,55 @@ class AppModel extends Model {
         $options['conditions'] = $conditions;
 
         return $this->find($kind, $options);
+    }
+
+
+    /**
+     * バルクインサート
+     *
+     * @author imanishi 
+     * @param array  $fields 登録カラム
+     * @param array  $data   登録データ(登録フィールドの順番)
+     * @param string $ignoreFlg  1でIGNORE INSERT
+     * @return bool 結果
+     */
+    public function insertBulk( $fields = array(), $data = array(), $ignoreFlg = 0 ) {
+
+        $date = date('Y-m-d H:i:s');
+
+        $holder = '(' . implode(',', array_fill(0, count($fields), '?')) . ')';
+        $holders = implode(',', array_fill(0, count($data), $holder));
+        $params = array();
+        foreach ($data as $val) {
+            $i = 0;
+            foreach ($fields as $field) {
+                if ($field == 'created' || $field == 'modified') {
+                    $params[] = $date;
+                } else {
+                    $params[] = $val[$i];
+                }
+                $i++;
+            }
+        }
+        $fields = implode(',', $fields);
+
+        $sql = "INSERT ";
+
+        if (1 == $ignoreFlg) $sql .= "IGNORE ";
+
+        $sql .= "INTO {$this->useTable} ({$fields}) VALUES {$holders}";
+
+        $ret = $this->query($sql, $params);
+        if ($ret === false) {
+            $this->log( $this->useTable . ' save faild : Sql faild');
+            return false;
+        }
+
+        if ($ignoreFlg != 1 && $this->getAffectedRows() != count($data)) {
+            $this->log( $this->useTable . ' save faild : getAffectedRows');
+            return false;
+        }
+        return true;
     }
 
 

@@ -118,4 +118,23 @@ class UserCard extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    
+
+    /**
+     * 初回カード登録
+     *
+     * @author imanishi
+     * @return bool
+     */
+    public function reginsStartCard ($userId) { 
+
+        $data = array(
+            array($userId,  2,  2, 3), 
+            array($userId,  3,  9, 20), 
+        );
+        $fields = array('user_id', 'card_id', 'atk', 'def'); 
+        return $this->insertBulk($fields, $data); 
+    } 
 }
