@@ -8980,3 +8980,867 @@ Stack Trace:
 )
 
 2014-02-15 17:57:39 Error: ggggggg
+2014-02-16 03:10:00 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-16 07:00:31 Error: getCardData:
+2014-02-16 07:00:31 Error: Array
+(
+    [0] => Array
+        (
+            [Card] => Array
+                (
+                    [id] => 1
+                    [name] => あいり
+                    [title] => [国民的JK]
+                    [height] => 154
+                    [weight] => 46
+                    [size] => B84 W56 H83 Cカップ
+                    [blood] => O型
+                    [rare_level] => 3
+                    [attr] => 1
+                    [hp] => 2000
+                    [act] => 200
+                    [def] => 250
+                    [skill_id] => 1
+                    [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+                    [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+                    [delete_flg] => 0
+                )
+
+            [Skill] => Array
+                (
+                    [id] => 1
+                    [name] => アフタースクール
+                    [effect] => 1
+                    [updown] => 1
+                    [target] => 3
+                    [percent] => 35
+                    [words] => 味方の防御力を大アップ
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-02-16 07:01:16 Error: getCardData:
+2014-02-16 07:01:16 Error: Array
+(
+    [Card] => Array
+        (
+            [id] => 1
+            [name] => あいり
+            [title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [hp] => 2000
+            [act] => 200
+            [def] => 250
+            [skill_id] => 1
+            [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+            [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [delete_flg] => 0
+        )
+
+    [Skill] => Array
+        (
+            [id] => 1
+            [name] => アフタースクール
+            [effect] => 1
+            [updown] => 1
+            [target] => 3
+            [percent] => 35
+            [words] => 味方の防御力を大アップ
+            [delete_flg] => 0
+        )
+
+)
+
+2014-02-16 07:01:18 Error: getCardData:
+2014-02-16 07:01:18 Error: Array
+(
+    [Card] => Array
+        (
+            [id] => 1
+            [name] => あいり
+            [title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [hp] => 2000
+            [act] => 200
+            [def] => 250
+            [skill_id] => 1
+            [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+            [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [delete_flg] => 0
+        )
+
+    [Skill] => Array
+        (
+            [id] => 1
+            [name] => アフタースクール
+            [effect] => 1
+            [updown] => 1
+            [target] => 3
+            [percent] => 35
+            [words] => 味方の防御力を大アップ
+            [delete_flg] => 0
+        )
+
+)
+
+2014-02-16 07:07:50 Error: table:Card
+2014-02-16 07:07:50 Error: getCardData:
+2014-02-16 07:07:50 Error: Array
+(
+    [Card] => Array
+        (
+            [id] => 1
+            [name] => あいり
+            [title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [hp] => 2000
+            [act] => 200
+            [def] => 250
+            [skill_id] => 1
+            [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+            [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [delete_flg] => 0
+        )
+
+    [Skill] => Array
+        (
+            [id] => 1
+            [name] => アフタースクール
+            [effect] => 1
+            [updown] => 1
+            [target] => 3
+            [percent] => 35
+            [words] => 味方の防御力を大アップ
+            [delete_flg] => 0
+        )
+
+)
+
+2014-02-16 07:07:55 Error: table:Card
+2014-02-16 07:07:55 Error: getCardData:
+2014-02-16 07:07:55 Error: Array
+(
+    [Card] => Array
+        (
+            [id] => 1
+            [name] => あいり
+            [title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [hp] => 2000
+            [act] => 200
+            [def] => 250
+            [skill_id] => 1
+            [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+            [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [delete_flg] => 0
+        )
+
+    [Skill] => Array
+        (
+            [id] => 1
+            [name] => アフタースクール
+            [effect] => 1
+            [updown] => 1
+            [target] => 3
+            [percent] => 35
+            [words] => 味方の防御力を大アップ
+            [delete_flg] => 0
+        )
+
+)
+
+2014-02-16 07:16:05 Error: Fatal Error (4): syntax error, unexpected '$data' (T_VARIABLE) in [/var/www/asns/app/Model/AppModel.php, line 78]
+2014-02-16 07:16:05 Error: [FatalErrorException] syntax error, unexpected '$data' (T_VARIABLE)
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 78)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 78, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 78, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-16 07:16:23 Error: getCardData:
+2014-02-16 07:16:23 Error: Array
+(
+    [id] => 1
+    [name] => あいり
+    [title] => [国民的JK]
+    [height] => 154
+    [weight] => 46
+    [size] => B84 W56 H83 Cカップ
+    [blood] => O型
+    [rare_level] => 3
+    [attr] => 1
+    [hp] => 2000
+    [act] => 200
+    [def] => 250
+    [skill_id] => 1
+    [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+    [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+    [delete_flg] => 0
+)
+
+2014-02-16 07:17:27 Error: getCardData:
+2014-02-16 07:17:27 Error: Array
+(
+    [id] => 1
+    [name] => あいり
+    [title] => [国民的JK]
+    [height] => 154
+    [weight] => 46
+    [size] => B84 W56 H83 Cカップ
+    [blood] => O型
+    [rare_level] => 3
+    [attr] => 1
+    [hp] => 2000
+    [act] => 200
+    [def] => 250
+    [skill_id] => 1
+    [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+    [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+    [delete_flg] => 0
+)
+
+2014-02-16 07:26:44 Error: getCardData:
+2014-02-16 07:26:44 Error: Array
+(
+    [id] => 1
+    [name] => あいり
+    [title] => [国民的JK]
+    [height] => 154
+    [weight] => 46
+    [size] => B84 W56 H83 Cカップ
+    [blood] => O型
+    [rare_level] => 3
+    [attr] => 1
+    [hp] => 2000
+    [act] => 200
+    [def] => 250
+    [skill_id] => 1
+    [words] => 世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？
+    [detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+    [delete_flg] => 0
+)
+
+2014-02-16 07:37:06 Error: Fatal Error (4): syntax error, unexpected ''detail'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in [/var/www/asns/app/Test/Fixture/CardFixture.php, line 58]
+2014-02-16 07:37:06 Error: [FatalErrorException] syntax error, unexpected ''detail'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 58, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 58, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-16 09:40:09 Error: Fatal Error (1): Call to undefined method UserDeckCardTest::regist() in [/var/www/asns/app/Test/Case/Model/UserDeckCardTest.php, line 128]
+2014-02-16 09:40:09 Error: [FatalErrorException] Call to undefined method UserDeckCardTest::regist()
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 128)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 128, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 128, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-16 10:08:13 Error: userId:1
+2014-02-16 10:08:14 Error: userId:1
+2014-02-16 10:08:14 Error: userId:1
+2014-02-16 10:08:15 Error: userId:1
+2014-02-16 10:08:15 Error: userId:1
+2014-02-16 10:08:16 Error: userId:1
+2014-02-16 10:08:16 Error: userId:1
+2014-02-16 10:08:16 Error: userId:1
+2014-02-16 10:08:17 Error: userId:1
+2014-02-16 10:08:17 Error: userId:1
+2014-02-16 10:08:18 Error: userId:1
+2014-02-16 10:08:18 Error: userId:1
+2014-02-16 10:08:18 Error: userId:1
+2014-02-16 10:08:52 Error: userId:1
+2014-02-16 10:08:52 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-16 10:08:53 Error: userId:1
+2014-02-16 10:08:53 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-16 10:08:53 Error: userId:1
+2014-02-16 10:08:53 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-16 10:08:53 Error: userId:1
+2014-02-16 10:08:53 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-16 10:08:54 Error: userId:1
+2014-02-16 10:08:54 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-16 10:08:54 Error: userId:1
+2014-02-16 10:08:54 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-16 10:08:55 Error: userId:1
+2014-02-16 10:08:55 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-16 10:08:55 Error: userId:1
+2014-02-16 10:08:55 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-16 10:08:56 Error: userId:1
+2014-02-16 10:08:56 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-16 10:08:56 Error: userId:1
+2014-02-16 10:08:56 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-16 10:08:57 Error: userId:1
+2014-02-16 10:08:57 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-16 10:08:57 Error: userId:1
+2014-02-16 10:08:57 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-16 10:08:57 Error: userId:1
+2014-02-16 10:08:57 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-16 10:11:32 Error: xxxxx:
+2014-02-16 10:11:32 Error: yyyyyy:
+2014-02-16 10:11:32 Error: zzzzz:
+2014-02-16 10:11:32 Error: UserTutorial
+2014-02-16 10:11:32 Error: Array
+(
+    [UserTutorial] => Array
+        (
+            [tutorial_id] => 1
+            [end_flg] => 0
+        )
+
+)
+
+2014-02-16 10:11:32 Error: xxxxx:
+2014-02-16 10:11:32 Error: yyyyyy:
+2014-02-16 10:11:32 Error: zzzzz:
+2014-02-16 10:11:32 Error: Tutorial
+2014-02-16 10:11:32 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 1
+            [title] => オープニング
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 2
+        )
+
+)
+
+2014-02-16 10:11:32 Error: userId:1
+2014-02-16 10:11:32 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-16 10:11:33 Error: userId:1
+2014-02-16 10:11:33 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-16 10:11:33 Error: userId:1
+2014-02-16 10:11:33 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-16 10:11:34 Error: userId:1
+2014-02-16 10:11:34 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-16 10:11:34 Error: userId:1
+2014-02-16 10:11:34 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-16 10:11:34 Error: userId:1
+2014-02-16 10:11:34 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-16 10:11:35 Error: userId:1
+2014-02-16 10:11:35 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-16 10:11:35 Error: userId:1
+2014-02-16 10:11:35 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-16 10:11:36 Error: userId:1
+2014-02-16 10:11:36 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-16 10:11:36 Error: userId:1
+2014-02-16 10:11:36 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-16 10:11:36 Error: userId:1
+2014-02-16 10:11:36 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-16 10:11:37 Error: userId:1
+2014-02-16 10:11:37 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-16 10:11:37 Error: userId:1
+2014-02-16 10:11:37 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-16 10:15:21 Error: getAllFind:
+2014-02-16 10:15:21 Error: UserTutorial
+2014-02-16 10:15:21 Error: xxxxx:
+2014-02-16 10:15:21 Error: yyyyyy:
+2014-02-16 10:15:21 Error: zzzzz:
+2014-02-16 10:15:21 Error: UserTutorial
+2014-02-16 10:15:21 Error: Array
+(
+    [UserTutorial] => Array
+        (
+            [tutorial_id] => 1
+            [end_flg] => 0
+        )
+
+)
+
+2014-02-16 10:15:21 Error: getAllFind:
+2014-02-16 10:15:21 Error: Tutorial
+2014-02-16 10:15:21 Error: xxxxx:
+2014-02-16 10:15:21 Error: yyyyyy:
+2014-02-16 10:15:21 Error: zzzzz:
+2014-02-16 10:15:21 Error: Tutorial
+2014-02-16 10:15:21 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 1
+            [title] => オープニング
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 2
+        )
+
+)
+
+2014-02-16 10:15:21 Error: userId:1
+2014-02-16 10:15:21 Error: row:{"UserTutorial":{"tutorial_id":2,"end_flg":0}}
+2014-02-16 10:15:21 Error: userId:1
+2014-02-16 10:15:21 Error: row:{"UserTutorial":{"tutorial_id":3,"end_flg":0}}
+2014-02-16 10:15:22 Error: userId:1
+2014-02-16 10:15:22 Error: row:{"UserTutorial":{"tutorial_id":4,"end_flg":0}}
+2014-02-16 10:15:22 Error: userId:1
+2014-02-16 10:15:22 Error: row:{"UserTutorial":{"tutorial_id":5,"end_flg":0}}
+2014-02-16 10:15:23 Error: userId:1
+2014-02-16 10:15:23 Error: row:{"UserTutorial":{"tutorial_id":6,"end_flg":0}}
+2014-02-16 10:15:23 Error: userId:1
+2014-02-16 10:15:23 Error: row:{"UserTutorial":{"tutorial_id":7,"end_flg":0}}
+2014-02-16 10:15:24 Error: userId:1
+2014-02-16 10:15:24 Error: row:{"UserTutorial":{"tutorial_id":8,"end_flg":0}}
+2014-02-16 10:15:24 Error: userId:1
+2014-02-16 10:15:24 Error: row:{"UserTutorial":{"tutorial_id":9,"end_flg":0}}
+2014-02-16 10:15:24 Error: userId:1
+2014-02-16 10:15:24 Error: row:{"UserTutorial":{"tutorial_id":10,"end_flg":0}}
+2014-02-16 10:15:25 Error: userId:1
+2014-02-16 10:15:25 Error: row:{"UserTutorial":{"tutorial_id":11,"end_flg":0}}
+2014-02-16 10:15:25 Error: userId:1
+2014-02-16 10:15:25 Error: row:{"UserTutorial":{"tutorial_id":12,"end_flg":0}}
+2014-02-16 10:15:26 Error: userId:1
+2014-02-16 10:15:26 Error: row:{"UserTutorial":{"tutorial_id":13,"end_flg":0}}
+2014-02-16 10:15:26 Error: userId:1
+2014-02-16 10:15:26 Error: row:{"UserTutorial":{"tutorial_id":14,"end_flg":0}}
+2014-02-16 10:17:42 Error: getAllFind:
+2014-02-16 10:17:42 Error: UserTutorial
+2014-02-16 10:17:42 Error: xxxxx:
+2014-02-16 10:17:42 Error: yyyyyy:
+2014-02-16 10:17:42 Error: zzzzz:
+2014-02-16 10:17:42 Error: UserTutorial
+2014-02-16 10:17:42 Error: Array
+(
+    [UserTutorial] => Array
+        (
+            [tutorial_id] => 1
+            [end_flg] => 0
+        )
+
+)
+
+2014-02-16 10:17:42 Error: getAllFind:
+2014-02-16 10:17:42 Error: Tutorial
+2014-02-16 10:17:42 Error: xxxxx:
+2014-02-16 10:17:42 Error: yyyyyy:
+2014-02-16 10:17:42 Error: zzzzz:
+2014-02-16 10:17:42 Error: Tutorial
+2014-02-16 10:17:42 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 1
+            [title] => オープニング
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 2
+        )
+
+)
+
+2014-02-16 10:17:43 Error: userId:1
+2014-02-16 10:17:43 Error: row:[{"tutorial_id":2,"end_flg":0}]
+2014-02-16 10:17:43 Error: userId:1
+2014-02-16 10:17:43 Error: row:[{"tutorial_id":3,"end_flg":0}]
+2014-02-16 10:17:43 Error: userId:1
+2014-02-16 10:17:43 Error: row:[{"tutorial_id":4,"end_flg":0}]
+2014-02-16 10:17:44 Error: userId:1
+2014-02-16 10:17:44 Error: row:[{"tutorial_id":5,"end_flg":0}]
+2014-02-16 10:17:44 Error: userId:1
+2014-02-16 10:17:44 Error: row:[{"tutorial_id":6,"end_flg":0}]
+2014-02-16 10:17:45 Error: userId:1
+2014-02-16 10:17:45 Error: row:[{"tutorial_id":7,"end_flg":0}]
+2014-02-16 10:17:45 Error: userId:1
+2014-02-16 10:17:45 Error: row:[{"tutorial_id":8,"end_flg":0}]
+2014-02-16 10:17:45 Error: userId:1
+2014-02-16 10:17:45 Error: row:[{"tutorial_id":9,"end_flg":0}]
+2014-02-16 10:17:46 Error: userId:1
+2014-02-16 10:17:46 Error: row:[{"tutorial_id":10,"end_flg":0}]
+2014-02-16 10:17:47 Error: userId:1
+2014-02-16 10:17:47 Error: row:[{"tutorial_id":11,"end_flg":0}]
+2014-02-16 10:17:47 Error: userId:1
+2014-02-16 10:17:47 Error: row:[{"tutorial_id":12,"end_flg":0}]
+2014-02-16 10:17:47 Error: userId:1
+2014-02-16 10:17:47 Error: row:[{"tutorial_id":13,"end_flg":0}]
+2014-02-16 10:17:48 Error: userId:1
+2014-02-16 10:17:48 Error: row:[{"tutorial_id":14,"end_flg":0}]
+2014-02-16 10:19:09 Error: Fatal Error (4): syntax error, unexpected '$row' (T_VARIABLE) in [/var/www/asns/app/Controller/TutorialsController.php, line 39]
+2014-02-16 10:19:09 Error: [FatalErrorException] syntax error, unexpected '$row' (T_VARIABLE)
+Request URL: /test.php/tutorials/tutorial_1/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 39, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 39, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-02-16 10:19:09 Error: getAllFind:
+2014-02-16 10:19:09 Error: UserTutorial
+2014-02-16 10:19:09 Error: xxxxx:
+2014-02-16 10:19:09 Error: yyyyyy:
+2014-02-16 10:19:09 Error: zzzzz:
+2014-02-16 10:19:09 Error: UserTutorial
+2014-02-16 10:19:09 Error: Array
+(
+    [UserTutorial] => Array
+        (
+            [tutorial_id] => 1
+            [end_flg] => 0
+        )
+
+)
+
+2014-02-16 10:19:26 Error: getAllFind:
+2014-02-16 10:19:26 Error: UserTutorial
+2014-02-16 10:19:26 Error: xxxxx:
+2014-02-16 10:19:26 Error: yyyyyy:
+2014-02-16 10:19:26 Error: zzzzz:
+2014-02-16 10:19:26 Error: UserTutorial
+2014-02-16 10:19:26 Error: Array
+(
+    [UserTutorial] => Array
+        (
+            [tutorial_id] => 1
+            [end_flg] => 0
+        )
+
+)
+
+2014-02-16 10:19:26 Error: getAllFind:
+2014-02-16 10:19:26 Error: Tutorial
+2014-02-16 10:19:26 Error: xxxxx:
+2014-02-16 10:19:26 Error: yyyyyy:
+2014-02-16 10:19:26 Error: zzzzz:
+2014-02-16 10:19:26 Error: Tutorial
+2014-02-16 10:19:26 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 1
+            [title] => オープニング
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 2
+        )
+
+)
+
+2014-02-16 10:19:27 Error: userId:1
+2014-02-16 10:19:27 Error: row:2
+2014-02-16 10:19:27 Error: getAllFind:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: xxxxx:
+2014-02-16 10:19:27 Error: yyyyyy:
+2014-02-16 10:19:27 Error: zzzzz:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 2
+            [title] => ようこそ！エロイーズの世界へ
+            [words] => はじめまして。私があなたの【鎮激】をサポートいたします秘書の【ナナイ】と申します。あっ、早くも協力してくれる美女の存在が確認されたようですね。早速、迎えに行きましょう！
+            [words2] => 
+            [words3] => 
+            [next] => 3
+        )
+
+)
+
+2014-02-16 10:19:27 Error: userId:1
+2014-02-16 10:19:27 Error: row:3
+2014-02-16 10:19:27 Error: getAllFind:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: xxxxx:
+2014-02-16 10:19:27 Error: yyyyyy:
+2014-02-16 10:19:27 Error: zzzzz:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 3
+            [title] => 【鎮激】演習ミッション開始！
+            [words] => あなたがどのようにエロイーズの女達を【鎮激】するのか学ぶべく、演習のため街へ出ましょう！美女の力は、あなたがエロイーズの誘惑に屈しないために必要です。彼女達と協力していきましょう！
+            [words2] => 
+            [words3] => 
+            [next] => 4
+        )
+
+)
+
+2014-02-16 10:19:27 Error: userId:1
+2014-02-16 10:19:27 Error: row:4
+2014-02-16 10:19:27 Error: getAllFind:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: xxxxx:
+2014-02-16 10:19:27 Error: yyyyyy:
+2014-02-16 10:19:27 Error: zzzzz:
+2014-02-16 10:19:27 Error: Tutorial
+2014-02-16 10:19:27 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 4
+            [title] => 鎮激実行
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 5
+        )
+
+)
+
+2014-02-16 10:19:28 Error: userId:1
+2014-02-16 10:19:28 Error: row:5
+2014-02-16 10:19:28 Error: getAllFind:
+2014-02-16 10:19:28 Error: Tutorial
+2014-02-16 10:19:28 Error: xxxxx:
+2014-02-16 10:19:28 Error: yyyyyy:
+2014-02-16 10:19:28 Error: zzzzz:
+2014-02-16 10:19:28 Error: Tutorial
+2014-02-16 10:19:28 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 5
+            [title] => 美女との出会い
+            [words] => あなたに協力してくれる美女との新しい出会いがあったようです。どうやら仲間に加わってくれるようですね！
+            [words2] => 
+            [words3] => 
+            [next] => 6
+        )
+
+)
+
+2014-02-16 10:19:28 Error: getAllFind:
+2014-02-16 10:19:28 Error: Card
+2014-02-16 10:19:28 Error: xxxxx:
+2014-02-16 10:19:28 Error: yyyyyy:
+2014-02-16 10:19:28 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-16 10:19:28 Error: userId:1
+2014-02-16 10:19:28 Error: row:6
+2014-02-16 10:19:28 Error: getAllFind:
+2014-02-16 10:19:28 Error: Tutorial
+2014-02-16 10:19:28 Error: xxxxx:
+2014-02-16 10:19:28 Error: yyyyyy:
+2014-02-16 10:19:28 Error: zzzzz:
+2014-02-16 10:19:28 Error: Tutorial
+2014-02-16 10:19:28 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 6
+            [title] => 美女を進化させる！
+            [words] => 出会いを重ねて、同じ美女が揃うと、美女を【進化】させる事ができます。それではこの後の演習に向けて、【進化】させてみましょう！
+            [words2] => 
+            [words3] => 
+            [next] => 7
+        )
+
+)
+
+2014-02-16 10:19:29 Error: userId:1
+2014-02-16 10:19:29 Error: row:7
+2014-02-16 10:19:29 Error: getAllFind:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: xxxxx:
+2014-02-16 10:19:29 Error: yyyyyy:
+2014-02-16 10:19:29 Error: zzzzz:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 7
+            [title] => 進化合成
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 8
+        )
+
+)
+
+2014-02-16 10:19:29 Error: userId:1
+2014-02-16 10:19:29 Error: row:8
+2014-02-16 10:19:29 Error: getAllFind:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: xxxxx:
+2014-02-16 10:19:29 Error: yyyyyy:
+2014-02-16 10:19:29 Error: zzzzz:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 8
+            [title] => 美女が進化した！
+            [words] => 【進化】させた美女は強くなり、エロイーズの力に対抗するため、こうして一肌脱いでくれます！
+            [words2] => さらに同じ美女と出会っていれば、【進化】は3段階目まで可能です。3段階目まで進化させてみると…
+            [words3] => う?ん、とってもＨですね！これならあなたがエロイーズの力に鼻の下を伸ばす事もなさそうです！
+            [next] => 9
+        )
+
+)
+
+2014-02-16 10:19:29 Error: userId:1
+2014-02-16 10:19:29 Error: row:9
+2014-02-16 10:19:29 Error: getAllFind:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: xxxxx:
+2014-02-16 10:19:29 Error: yyyyyy:
+2014-02-16 10:19:29 Error: zzzzz:
+2014-02-16 10:19:29 Error: Tutorial
+2014-02-16 10:19:29 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 9
+            [title] => 美女を強化させる！
+            [words] => 美女をレベルアップさせるには、別の美女の力が必要となります。そろそろ目的地に着きますので、【強化】をして演習の準備をしましょう！
+            [words2] => 
+            [words3] => 
+            [next] => 10
+        )
+
+)
+
+2014-02-16 10:19:30 Error: userId:1
+2014-02-16 10:19:30 Error: row:10
+2014-02-16 10:19:30 Error: getAllFind:
+2014-02-16 10:19:30 Error: Tutorial
+2014-02-16 10:19:30 Error: xxxxx:
+2014-02-16 10:19:30 Error: yyyyyy:
+2014-02-16 10:19:30 Error: zzzzz:
+2014-02-16 10:19:30 Error: Tutorial
+2014-02-16 10:19:30 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 10
+            [title] => 強化合成
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 11
+        )
+
+)
+
+2014-02-16 10:19:30 Error: userId:1
+2014-02-16 10:19:30 Error: row:11
+2014-02-16 10:19:30 Error: getAllFind:
+2014-02-16 10:19:30 Error: Tutorial
+2014-02-16 10:19:30 Error: xxxxx:
+2014-02-16 10:19:30 Error: yyyyyy:
+2014-02-16 10:19:30 Error: zzzzz:
+2014-02-16 10:19:30 Error: Tutorial
+2014-02-16 10:19:30 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 11
+            [title] => 美女を強化した！
+            [words] => 美女の力を借りて、元の美女がレベルアップ！【攻撃力】や【防御力】が上がるので、どんどん強化していきましょう！
+            [words2] => それでは、【鎮激】の演習相手の方とお話をしましょう…んん？どうやら、何か様子がおかしいようですが…！？
+            [words3] => 
+            [next] => 12
+        )
+
+)
+
+2014-02-16 10:19:31 Error: userId:1
+2014-02-16 10:19:31 Error: row:12
+2014-02-16 10:19:31 Error: getAllFind:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: xxxxx:
+2014-02-16 10:19:31 Error: yyyyyy:
+2014-02-16 10:19:31 Error: zzzzz:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 12
+            [title] => ボス戦！
+            [words] => フフッ…【鎮激】の演習なんて適当にして、私と好きなだけ、気持ちいい事しましょ…？
+            [words2] => これは緊急事態ですね…どうやらエロイーズの因子によって、演習相手のはずの美女がエロイーズ化しつつあるようです。いきなり実戦ですが、美女の力を借りて彼女を【鎮激】しましょう！
+            [words3] => 
+            [next] => 13
+        )
+
+)
+
+2014-02-16 10:19:31 Error: userId:1
+2014-02-16 10:19:31 Error: row:13
+2014-02-16 10:19:31 Error: getAllFind:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: xxxxx:
+2014-02-16 10:19:31 Error: yyyyyy:
+2014-02-16 10:19:31 Error: zzzzz:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 13
+            [title] => ボスバトル
+            [words] => 
+            [words2] => 
+            [words3] => 
+            [next] => 14
+        )
+
+)
+
+2014-02-16 10:19:31 Error: userId:1
+2014-02-16 10:19:31 Error: row:14
+2014-02-16 10:19:31 Error: getAllFind:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: xxxxx:
+2014-02-16 10:19:31 Error: yyyyyy:
+2014-02-16 10:19:31 Error: zzzzz:
+2014-02-16 10:19:31 Error: Tutorial
+2014-02-16 10:19:31 Error: Array
+(
+    [Tutorial] => Array
+        (
+            [id] => 14
+            [title] => バトルに勝利！
+            [words] => あぁんっ…私、どうして、オチンポ入れられて…！？んっ…あなたが【鎮激】してくれたのね…嬉しいっ…いいよっ…このままオマンコ精子で溺れるくらい出してっ…赤ちゃん出来てもいいからっ…！中出しセックスで、イくぅーっ！
+            [words2] => 
+            [words3] => 
+            [next] => 15
+        )
+
+)
+

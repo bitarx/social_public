@@ -15,7 +15,8 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'UserTutorial', 'Tutorial');
+    public $uses = array('User', 'UserTutorial', 'Tutorial', 'Card', 'UserCard',
+                    'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox');
 
     public $row  = array();
 
@@ -30,13 +31,9 @@ class TutorialsController extends ApiController {
     private function _routeTutorial() {
 
         // チュートリアル終了判定
-//$this->log('action:'. $this->action);
-//$this->log('userId:'. $this->userId); 
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
-//$this->log('row:'. json_encode($row)); 
-        $row = $row['UserTutorial'];
         if (!empty($row['end_flg'])) {
             return $this->rd('SnsUser', 'index');
         }
@@ -264,6 +261,35 @@ class TutorialsController extends ApiController {
             $ret = $this->UserTutorial->save($values);
             if (!$ret) {
                 throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+            /********************************************** 
+            * 初期カードとデッキの登録
+            ***********************************************/ 
+            // カードデータ取得
+            $list = $this->Card->getStartCardList();
+            if (empty($list)) {
+                throw new AppException('getStartCardData faild :' . $this->name . '/' . $this->action);
+            }
+
+            $ret = $this->UserCard->reginsStartCard($this->userId, $list);
+            if (!$ret) {
+                throw new AppException('UserCard save failed :' . $this->name . '/' . $this->action);
+            }
+
+            $values = array(
+                'user_id' => $this->userId 
+            ,   'kind' => 1
+            ,   'name' => ''
+            );
+            $ret = $this->UserDeck->save($values);
+            if (!$ret) {
+                throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
+            }
+
+            $ret = $this->UserDeckCard->save($values);
+            if (!$ret) {
+                throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
             }
 
         } catch (AppException $e) {

@@ -47,11 +47,14 @@ class AppModel extends Model {
      * @return array 検索結果
      */
     public function getAllFind( $fields = array(), $where = array(), $kind = 'all' ) {
+
+        $tableAlias = $this->getTableAlias();
         $options = array();
-        $conditions = array($this->getTableAlias(). '.'. $this->_filDelFlg => 0);
+        $conditions = array($tableAlias. '.'. $this->_filDelFlg => 0);
+
         if (0 < count($where)) {
             foreach ($where as $field => $val) {
-                $conditions[$this->getTableAlias(). '.'. $field] = $val; 
+                $conditions[$tableAlias. '.'. $field] = $val; 
             }
         }
         if (0 < count($fields)) {
@@ -60,7 +63,19 @@ class AppModel extends Model {
 
         $options['conditions'] = $conditions;
 
-        return $this->find($kind, $options);
+        $ret = $this->find($kind, $options);
+
+        $data = array();
+        if (!empty($ret)) {
+            if ($kind == 'first') { 
+                $data = $ret[$tableAlias]; 
+            } else {
+                foreach ($ret as $val) {
+                    $data[] = $val[$tableAlias];
+                }
+            }
+        }
+        return $data;
     }
 
 

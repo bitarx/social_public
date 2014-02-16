@@ -56,12 +56,11 @@ class TutorialsControllerTest extends ControllerTestCase {
 
     private function _setStab($tutorialId) {
 
-        $record = array(
-            'UserTutorial' => array(
+        $record = 
+            array(
                 'tutorial_id' => $tutorialId,
                 'end_flg' => 0
-            )
-        );
+            );
 
         $stab = $this->generate("Tutorials", array(
             'models' => array(

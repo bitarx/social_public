@@ -75,4 +75,56 @@ class UserDeckCardTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * デッキ登録
+     *
+     * @author imanishi 
+     */
+    public function testRegistUserDeckCard() { 
+        $userDeckId = 1;
+
+         $list = array(
+            array(
+                'id' => '1',
+                'name' => 'あいり',
+                'title' => '[国民的JK]',
+                'height' => '154',
+                'weight' => '46',
+                'size' => 'B84 W56 H83 Cカップ',
+                'blood' => 'O型',
+                'rare_level' => '3',
+                'attr' => '1',
+                'hp' => '2000',
+                'atk' => '200',
+                'def' => '250',
+                'skill_id' => '1',
+                'words' => 'test',
+                'detail' => '名門学園に通う清楚で真面目な学生。とはいっても人並みにそ
+っち
+    方面への興味もしっかり持っている。',
+                'delete_flg' => '0'
+            ),
+            array(
+                'id' => '2',
+                'name' => 'あいり',
+                'title' => '[国民的JK]',
+                'height' => '154',
+                'weight' => '46',
+                'size' => 'B84 W56 H83 Cカップ',
+                'blood' => 'O型',
+                'rare_level' => '4',
+                'attr' => '1',
+                'hp' => '3000',
+                'atk' => '250',
+                'def' => '350',
+                'skill_id' => '1',
+                'words' => '私がHな気持ちになればなるほど、強くなるのはわかったけど…私、いやらしい子になっちゃうの…？',
+                'detail' => '名門学園に通う清楚で真面目な学生。人好きのするルックスと
+体つ
+    きに誰もが目を見張ってしまう所も。',
+                'delete_flg' => '0'
+            ),
+        );
+        $list = $this->UserDeckCard->regist ($userDeckId, $list); 
+    } 
 }

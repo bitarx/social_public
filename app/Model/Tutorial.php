@@ -87,6 +87,6 @@ class Tutorial extends AppModel {
         $fields = array('id', 'title', 'words', 'words2', 'words3', 'next');
         $row = $this->getAllFind($fields, $where, 'first');
 
-        return $row['Tutorial'];
+        return $row;
     } 
 }

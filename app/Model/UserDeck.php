@@ -94,4 +94,21 @@ class UserDeck extends AppModel {
 		)
 	);
 
+    /**
+     * デッキ登録
+     *
+     * @author imanishi
+     * @param int $userDeckId
+     * @param array $list カードデータ
+     * @return bool
+     */
+    public function reginsUserDeckCard ($userDeckId, $list) {
+
+        $fields = array('user_deck_id', 'card_id');
+        $data = array();
+        foreach ($list as $val) {
+            $data[] = array($userDeceId, $val['card_id']);
+        }
+        return $this->insertBulk($fields, $data);
+    }
 }

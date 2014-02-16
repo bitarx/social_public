@@ -11,6 +11,9 @@ App::uses('AppModel', 'Model');
  */
 class Card extends AppModel {
 
+    // 初期配布カードID
+    public $startCardIds = array( 13, 43 );
+
 /**
  * Validation rules
  *
@@ -107,7 +110,7 @@ class Card extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'act' => array(
+		'atk' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -246,4 +249,30 @@ class Card extends AppModel {
 		)
 	);
 
+    /**
+     * カードデータ取得
+     *
+     * @author imanishi 
+     * @param int カードID
+     * @return array 指定レコード
+     */
+     public function getCardData($id) { 
+         
+         $where = array('id' => $id); 
+         $row = $this->getAllFind(array(), $where, 'first'); 
+         return $row;
+     } 
+
+    /**
+     * 初期カードデータ取得
+     *
+     * @author imanishi 
+     * @return array 指定レコード
+     */
+     public function getStartCardList() { 
+         
+         $where = array('id' => $this->startCardIds); 
+         $row = $this->getAllFind(array(), $where); 
+         return $row;
+     } 
 }

@@ -75,4 +75,53 @@ class CardTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * カードデータ取得
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function testGetCardData() { 
+
+         $id = 1;
+         $data = $this->Card->getCardData($id);
+
+         $expected = array(
+             'id' => '1',
+             'name' => 'あいり',
+             'title' => '[国民的JK]',
+             'height' => '154',
+             'weight' => '46',
+             'size' => 'B84 W56 H83 Cカップ',
+             'blood' => 'O型',
+             'rare_level' => '3',
+             'attr' => '1',
+             'hp' => '2000',
+             'atk' => '200',
+             'def' => '250',
+             'skill_id' => '1',
+             'words' => 'test',
+             'detail' => '名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。',
+             'delete_flg' => '0'
+         );
+
+         $this->assertEquals($data, $expected);
+     } 
+
+    /**
+     * 初期カードデータ取得
+     *
+     * @author imanishi 
+     * @return void
+     */
+     public function testGetStartCardList() { 
+
+         // カード枚数
+         $num = 2;
+
+         $data = $this->Card->getStartCardList();
+         $retNum = count($data);
+
+         $this->assertEquals($retNum, $num);
+     } 
 }

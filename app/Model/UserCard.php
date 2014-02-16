@@ -126,14 +126,16 @@ class UserCard extends AppModel {
      * 初回カード登録
      *
      * @author imanishi
+     * @param int $userId
+     * @param array $list カードデータ
      * @return bool
      */
-    public function reginsStartCard ($userId) { 
+    public function reginsStartCard ($userId, $list) { 
 
-        $data = array(
-            array($userId,  2,  2, 3), 
-            array($userId,  3,  9, 20), 
-        );
+        $data = array();
+        foreach ($list as $val) {
+            $data[] = array($userId, $val['id'], $val['atk'], $val['def']);
+        }
         $fields = array('user_id', 'card_id', 'atk', 'def'); 
         return $this->insertBulk($fields, $data); 
     } 
