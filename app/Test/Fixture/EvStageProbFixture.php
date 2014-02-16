@@ -20,7 +20,7 @@ class EvStageProbFixture extends CakeTestFixture {
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
-			'FK_mst_ev_stage_probs_mst_ev_stages' => array('column' => 'ev_stage_id', 'unique' => 0)
+			'FK_ev_stage_probs_ev_stages' => array('column' => 'ev_stage_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -32,13 +32,85 @@ class EvStageProbFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => 1,
-			'ev_stage_id' => 1,
-			'kind' => 1,
-			'target' => 1,
-			'num' => 1,
-			'prob' => 1,
-			'delete_flg' => 1
+			'id' => '1',
+			'ev_stage_id' => '1',
+			'kind' => '1',
+			'target' => '37',
+			'num' => '1',
+			'prob' => '5',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '2',
+			'ev_stage_id' => '1',
+			'kind' => '2',
+			'target' => '20',
+			'num' => '1',
+			'prob' => '15',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '3',
+			'ev_stage_id' => '1',
+			'kind' => '3',
+			'target' => '0',
+			'num' => '100',
+			'prob' => '80',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '4',
+			'ev_stage_id' => '2',
+			'kind' => '1',
+			'target' => '43',
+			'num' => '1',
+			'prob' => '5',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '5',
+			'ev_stage_id' => '2',
+			'kind' => '2',
+			'target' => '20',
+			'num' => '1',
+			'prob' => '15',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '6',
+			'ev_stage_id' => '2',
+			'kind' => '3',
+			'target' => '0',
+			'num' => '100',
+			'prob' => '80',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '7',
+			'ev_stage_id' => '3',
+			'kind' => '1',
+			'target' => '52',
+			'num' => '1',
+			'prob' => '5',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '8',
+			'ev_stage_id' => '3',
+			'kind' => '2',
+			'target' => '21',
+			'num' => '1',
+			'prob' => '15',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '9',
+			'ev_stage_id' => '3',
+			'kind' => '3',
+			'target' => '0',
+			'num' => '100',
+			'prob' => '80',
+			'delete_flg' => '0'
 		),
 	);
 

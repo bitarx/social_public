@@ -17,8 +17,6 @@ class GachaFixture extends CakeTestFixture {
 		'start_time' => array('type' => 'datetime', 'null' => false, 'default' => '0000-00-00 00:00:00'),
 		'end_time' => array('type' => 'datetime', 'null' => false, 'default' => '3000-01-01 00:00:00'),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 4),
-		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
-		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -32,14 +30,20 @@ class GachaFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => 1,
-			'name' => 'Lorem ipsum dolor sit amet',
-			'detail' => 'Lorem ipsum dolor sit amet',
-			'start_time' => '2014-02-10 09:47:37',
-			'end_time' => '2014-02-10 09:47:37',
-			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:37',
-			'modified' => '2014-02-10 09:47:37'
+			'id' => '1',
+			'name' => 'ノーマルガチャ',
+			'detail' => '',
+			'start_time' => '0000-00-00 00:00:00',
+			'end_time' => '3000-00-00 00:00:00',
+			'delete_flg' => '0'
+		),
+		array(
+			'id' => '2',
+			'name' => 'プレミアムガチャ',
+			'detail' => '',
+			'start_time' => '0000-00-00 00:00:00',
+			'end_time' => '3000-00-00 00:00:00',
+			'delete_flg' => '0'
 		),
 	);
 

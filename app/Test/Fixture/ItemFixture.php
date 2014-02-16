@@ -23,7 +23,6 @@ class ItemFixture extends CakeTestFixture {
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
 			'FK_items_items' => array('column' => 'item_effect_id', 'unique' => 0),
-			'FK_items' => array('column' => 'item_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);

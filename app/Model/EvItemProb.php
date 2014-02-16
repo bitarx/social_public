@@ -1,14 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Item Model
+ * EvItemProb Model
  *
- * @property ItemEffect $ItemEffect
  * @property Item $Item
- * @property ItemProb $ItemProb
- * @property Item $Item
+ * @property Stage $Stage
  */
-class Item extends AppModel {
+class EvItemProb extends AppModel {
 
 /**
  * Validation rules
@@ -16,67 +14,57 @@ class Item extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'detail' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'point' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'money' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'item_effect_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'box_num' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'item_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'stage_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'prob' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'kind' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'target' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'num' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -106,49 +94,19 @@ class Item extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'ItemEffect' => array(
-			'className' => 'ItemEffect',
-			'foreignKey' => 'item_effect_id',
+		'Item' => array(
+			'className' => 'Item',
+			'foreignKey' => 'item_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'ItemProb' => array(
-			'className' => 'ItemProb',
-			'foreignKey' => 'item_id',
-			'dependent' => false,
+		'Stage' => array(
+			'className' => 'Stage',
+			'foreignKey' => 'stage_id',
 			'conditions' => '',
 			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
+			'order' => ''
+		)
 	);
-
-
-    /**
-     * カードデータ取得
-     *
-     * @author imanishi
-     * @return array 取得データ
-     */
-    public function getItemData ($id) {
-
-        $where = array('id' => $id); 
-        $fields = array('id', 'name', 'detail', 'point', 'money', 'item_effect_id'
-                  , 'box_num'); 
-        $data = $this->getAllFind($fields = array(), $where, 'first');
-        return $data; 
-    }
 }

@@ -1,11 +1,11 @@
 <?php
-App::uses('EvStageProb', 'Model');
+App::uses('EvItemProb', 'Model');
 
 /**
- * EvStageProb Test Case
+ * EvItemProb Test Case
  *
  */
-class EvStageProbTest extends CakeTestCase {
+class EvItemProbTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,12 @@ class EvStageProbTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.ev_stage_prob',
-		'app.ev_stage',
-		'app.ev_quest',
+		'app.ev_item_prob',
+		'app.item',
+		'app.item_effect',
+		'app.item_prob',
+		'app.stage',
+		'app.quest',
 		'app.enemy',
 		'app.skill',
 		'app.card',
@@ -25,11 +28,12 @@ class EvStageProbTest extends CakeTestCase {
 		'app.user_gacha_day',
 		'app.user_gacha_log',
 		'app.user_collect',
-		'app.stage',
-		'app.quest',
-		'app.stage_prob',
-		'app.raid',
+		'app.ev_stage',
+		'app.ev_quest',
+		'app.ev_stage_prob',
 		'app.user_raid',
+		'app.raid',
+		'app.stage_prob',
 		'app.user_raid_log',
 		'app.user',
 		'app.sns_user',
@@ -51,11 +55,7 @@ class EvStageProbTest extends CakeTestCase {
 		'app.user_prof',
 		'app.user_stage',
 		'app.user_tutorial',
-		'app.tutorial',
-		'app.ev_item_prob',
-		'app.item',
-		'app.item_effect',
-		'app.item_prob'
+		'app.tutorial'
 	);
 
 /**
@@ -65,7 +65,7 @@ class EvStageProbTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->EvStageProb = ClassRegistry::init('EvStageProb');
+		$this->EvItemProb = ClassRegistry::init('EvItemProb');
 	}
 
 /**
@@ -74,7 +74,7 @@ class EvStageProbTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->EvStageProb);
+		unset($this->EvItemProb);
 
 		parent::tearDown();
 	}

@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property EvQuest $EvQuest
  * @property Enemy $Enemy
+ * @property EvItemProb $EvItemProb
  * @property EvStageProb $EvStageProb
  */
 class EvStage extends AppModel {
@@ -26,26 +27,6 @@ class EvStage extends AppModel {
 			),
 		),
 		'title' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'boss_before' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'boss_after' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -127,6 +108,19 @@ class EvStage extends AppModel {
  * @var array
  */
 	public $hasMany = array(
+		'EvItemProb' => array(
+			'className' => 'EvItemProb',
+			'foreignKey' => 'ev_stage_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
 		'EvStageProb' => array(
 			'className' => 'EvStageProb',
 			'foreignKey' => 'ev_stage_id',
