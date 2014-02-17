@@ -7,6 +7,13 @@ App::uses('AppModel', 'Model');
 class Error extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'error_id';
+
+/**
  * Validation rules
  *
  * @var array

@@ -22,8 +22,8 @@ class UserRaidLogFixture extends CakeTestFixture {
 		'updated' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
-			'FK_user_raid_log_users' => array('column' => 'user_id', 'unique' => 0),
-			'FK_user_raid_log_user_raid' => array('column' => 'user_raid_id', 'unique' => 0)
+			'FK_user_raid_logs_users' => array('column' => 'user_id', 'unique' => 0),
+			'FK_user_raid_logs_user_raids' => array('column' => 'user_raid_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -42,8 +42,8 @@ class UserRaidLogFixture extends CakeTestFixture {
 			'win_flg' => 1,
 			'log' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:45',
-			'updated' => '2014-02-10 09:47:45'
+			'created' => '2014-02-17 19:26:00',
+			'updated' => '2014-02-17 19:26:00'
 		),
 	);
 

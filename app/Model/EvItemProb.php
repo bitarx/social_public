@@ -4,9 +4,16 @@ App::uses('AppModel', 'Model');
  * EvItemProb Model
  *
  * @property Item $Item
- * @property Stage $Stage
+ * @property EvStage $EvStage
  */
 class EvItemProb extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'ev_item_prob_id';
 
 /**
  * Validation rules
@@ -24,7 +31,7 @@ class EvItemProb extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'stage_id' => array(
+		'ev_stage_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -101,9 +108,9 @@ class EvItemProb extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Stage' => array(
-			'className' => 'Stage',
-			'foreignKey' => 'stage_id',
+		'EvStage' => array(
+			'className' => 'EvStage',
+			'foreignKey' => 'ev_stage_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

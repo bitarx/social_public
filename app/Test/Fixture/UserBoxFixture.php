@@ -38,6 +38,15 @@ class UserBoxFixture extends CakeTestFixture {
  * @var array
  */
 	public $records = array(
+		array(
+			'user_id' => 1,
+			'user_item_id' => 1,
+			'kind' => 1,
+			'target' => 1,
+			'delete_flg' => 1,
+			'created' => '2014-02-17 19:25:56',
+			'modified' => '2014-02-17 19:25:56'
+		),
 	);
 
 }

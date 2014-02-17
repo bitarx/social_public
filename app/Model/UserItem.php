@@ -1,18 +1,13 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * User Model
+ * UserItem Model
  *
- * @property SnsUser $SnsUser
+ * @property User $User
+ * @property Item $Item
+ * @property UserBox $UserBox
  */
-class User extends AppModel {
-
-/**
- * Primary key field
- *
- * @var string
- */
-	public $primaryKey = 'user_id';
+class UserItem extends AppModel {
 
 /**
  * Validation rules
@@ -20,9 +15,9 @@ class User extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+		'user_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -30,9 +25,9 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'sns_user_id' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
+		'item_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -40,7 +35,7 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'carrer' => array(
+		'num' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -70,12 +65,41 @@ class User extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'SnsUser' => array(
-			'className' => 'SnsUser',
-			'foreignKey' => 'sns_user_id',
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Item' => array(
+			'className' => 'Item',
+			'foreignKey' => 'item_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'UserBox' => array(
+			'className' => 'UserBox',
+			'foreignKey' => 'user_item_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

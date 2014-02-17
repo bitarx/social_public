@@ -4,11 +4,15 @@ App::uses('AppModel', 'Model');
  * Item Model
  *
  * @property ItemEffect $ItemEffect
- * @property Item $Item
- * @property ItemProb $ItemProb
- * @property Item $Item
  */
 class Item extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'item_id';
 
 /**
  * Validation rules
@@ -76,7 +80,7 @@ class Item extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'item_id' => array(
+		'item' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -112,43 +116,6 @@ class Item extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'ItemProb' => array(
-			'className' => 'ItemProb',
-			'foreignKey' => 'item_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-	);
-
-
-    /**
-     * カードデータ取得
-     *
-     * @author imanishi
-     * @return array 取得データ
-     */
-    public function getItemData ($id) {
-
-        $where = array('id' => $id); 
-        $fields = array('id', 'name', 'detail', 'point', 'money', 'item_effect_id'
-                  , 'box_num'); 
-        $data = $this->getAllFind($fields = array(), $where, 'first');
-        return $data; 
-    }
 }

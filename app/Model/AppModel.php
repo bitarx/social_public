@@ -46,7 +46,7 @@ class AppModel extends Model {
      * @param string $kind  findメソッド第一引数の値
      * @return array 検索結果
      */
-    public function getAllFind( $fields = array(), $where = array(), $kind = 'all' ) {
+    public function getAllFind( $where = array(), $fields = array(), $kind = 'all' ) {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
@@ -67,11 +67,15 @@ class AppModel extends Model {
 
         $data = array();
         if (!empty($ret)) {
-            if ($kind == 'first') { 
-                $data = $ret[$tableAlias]; 
-            } else {
-                foreach ($ret as $val) {
-                    $data[] = $val[$tableAlias];
+            foreach ($ret as $values) {
+                $row = array();
+                foreach ($values as $val) {
+                     $row = array_merge($row, $val);
+                }
+                if ($kind == 'first') {
+                    $data = $row;
+                } else {
+                    $data[] = $row;
                 }
             }
         }

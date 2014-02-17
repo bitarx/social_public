@@ -15,7 +15,11 @@ class ItemProbTest extends CakeTestCase {
 	public $fixtures = array(
 		'app.item_prob',
 		'app.item',
-		'app.item_effect'
+		'app.item_effect',
+		'app.stage',
+		'app.quest',
+		'app.enemy',
+		'app.skill'
 	);
 
 /**

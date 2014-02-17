@@ -7,6 +7,13 @@ App::uses('AppModel', 'Model');
 class StaticPage extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'static_page_id';
+
+/**
  * Validation rules
  *
  * @var array

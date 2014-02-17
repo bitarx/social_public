@@ -5,9 +5,15 @@ App::uses('AppModel', 'Model');
  *
  * @property Quest $Quest
  * @property Enemy $Enemy
- * @property StageProb $StageProb
  */
 class Stage extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'stage_id';
 
 /**
  * Validation rules
@@ -26,26 +32,6 @@ class Stage extends AppModel {
 			),
 		),
 		'title' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'boss_before' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'boss_after' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -120,26 +106,4 @@ class Stage extends AppModel {
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'StageProb' => array(
-			'className' => 'StageProb',
-			'foreignKey' => 'stage_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

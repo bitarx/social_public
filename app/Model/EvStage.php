@@ -5,10 +5,15 @@ App::uses('AppModel', 'Model');
  *
  * @property EvQuest $EvQuest
  * @property Enemy $Enemy
- * @property EvItemProb $EvItemProb
- * @property EvStageProb $EvStageProb
  */
 class EvStage extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'ev_stage_id';
 
 /**
  * Validation rules
@@ -101,39 +106,4 @@ class EvStage extends AppModel {
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'EvItemProb' => array(
-			'className' => 'EvItemProb',
-			'foreignKey' => 'ev_stage_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'EvStageProb' => array(
-			'className' => 'EvStageProb',
-			'foreignKey' => 'ev_stage_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

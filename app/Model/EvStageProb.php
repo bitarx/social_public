@@ -8,6 +8,13 @@ App::uses('AppModel', 'Model');
 class EvStageProb extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'ev_stage_prob_id';
+
+/**
  * Validation rules
  *
  * @var array

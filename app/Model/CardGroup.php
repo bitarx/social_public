@@ -8,6 +8,13 @@ App::uses('AppModel', 'Model');
 class CardGroup extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'card_group_id';
+
+/**
  * Validation rules
  *
  * @var array
@@ -33,7 +40,7 @@ class CardGroup extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'next' => array(
+		'prev' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -43,7 +50,7 @@ class CardGroup extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'prev' => array(
+		'next' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',

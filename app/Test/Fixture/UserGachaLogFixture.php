@@ -20,8 +20,8 @@ class UserGachaLogFixture extends CakeTestFixture {
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
-			'FK_user_gacha_log_mst_gachas' => array('column' => 'gacha_id', 'unique' => 0),
-			'FK_user_gacha_log_mst_cards' => array('column' => 'card_id', 'unique' => 0)
+			'FK_user_gacha_logs_gachas' => array('column' => 'gacha_id', 'unique' => 0),
+			'FK_user_gacha_logs_cards' => array('column' => 'card_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -38,8 +38,8 @@ class UserGachaLogFixture extends CakeTestFixture {
 			'card_id' => 1,
 			'end_flg' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:43',
-			'modified' => '2014-02-10 09:47:43'
+			'created' => '2014-02-17 19:25:58',
+			'modified' => '2014-02-17 19:25:58'
 		),
 	);
 

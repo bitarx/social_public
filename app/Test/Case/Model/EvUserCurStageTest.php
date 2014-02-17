@@ -1,11 +1,11 @@
 <?php
-App::uses('UserDeckCard', 'Model');
+App::uses('EvUserCurStage', 'Model');
 
 /**
- * UserDeckCard Test Case
+ * EvUserCurStage Test Case
  *
  */
-class UserDeckCardTest extends CakeTestCase {
+class EvUserCurStageTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,8 +13,10 @@ class UserDeckCardTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.user_deck_card',
-		'app.card',
+		'app.ev_user_cur_stage',
+		'app.ev_stage',
+		'app.ev_quest',
+		'app.enemy',
 		'app.skill'
 	);
 
@@ -25,7 +27,7 @@ class UserDeckCardTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->UserDeckCard = ClassRegistry::init('UserDeckCard');
+		$this->EvUserCurStage = ClassRegistry::init('EvUserCurStage');
 	}
 
 /**
@@ -34,7 +36,7 @@ class UserDeckCardTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->UserDeckCard);
+		unset($this->EvUserCurStage);
 
 		parent::tearDown();
 	}

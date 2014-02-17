@@ -11,7 +11,7 @@ class SkillFixture extends CakeTestFixture {
  * @var array
  */
 	public $fields = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+		'skill_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'effect' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3, 'comment' => '1:def 2:atk'),
 		'updown' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 3, 'comment' => '1:up 2:down'),
@@ -20,7 +20,7 @@ class SkillFixture extends CakeTestFixture {
 		'words' => array('type' => 'string', 'null' => false, 'default' => '0', 'length' => 60, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1)
+			'PRIMARY' => array('column' => 'skill_id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -32,7 +32,7 @@ class SkillFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '1',
+			'skill_id' => '1',
 			'name' => 'アフタースクール',
 			'effect' => '1',
 			'updown' => '1',
@@ -42,7 +42,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '2',
+			'skill_id' => '2',
 			'name' => 'アデージョの真髄',
 			'effect' => '2',
 			'updown' => '1',
@@ -52,7 +52,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '3',
+			'skill_id' => '3',
 			'name' => '危険な昼下がり',
 			'effect' => '1',
 			'updown' => '2',
@@ -62,7 +62,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '4',
+			'skill_id' => '4',
 			'name' => '母は強し',
 			'effect' => '1',
 			'updown' => '1',
@@ -72,7 +72,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '5',
+			'skill_id' => '5',
 			'name' => 'アイドルマスタリー',
 			'effect' => '2',
 			'updown' => '1',
@@ -82,7 +82,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '6',
+			'skill_id' => '6',
 			'name' => 'ボトル入りまーす！',
 			'effect' => '2',
 			'updown' => '1',
@@ -92,7 +92,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '7',
+			'skill_id' => '7',
 			'name' => '渋谷で17時',
 			'effect' => '2',
 			'updown' => '2',
@@ -102,7 +102,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '8',
+			'skill_id' => '8',
 			'name' => '人間狩り',
 			'effect' => '2',
 			'updown' => '1',
@@ -112,7 +112,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '9',
+			'skill_id' => '9',
 			'name' => 'お姉ちゃんにおまかせ',
 			'effect' => '1',
 			'updown' => '2',
@@ -122,7 +122,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '10',
+			'skill_id' => '10',
 			'name' => 'お帰りなさいませ',
 			'effect' => '1',
 			'updown' => '1',
@@ -132,7 +132,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '11',
+			'skill_id' => '11',
 			'name' => 'サークルクラッシュ',
 			'effect' => '1',
 			'updown' => '2',
@@ -142,7 +142,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '12',
+			'skill_id' => '12',
 			'name' => 'おとなだもん！',
 			'effect' => '1',
 			'updown' => '2',
@@ -152,7 +152,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '13',
+			'skill_id' => '13',
 			'name' => 'ジューンブライド',
 			'effect' => '2',
 			'updown' => '1',
@@ -162,7 +162,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '14',
+			'skill_id' => '14',
 			'name' => 'ムカ着火ファイヤー',
 			'effect' => '2',
 			'updown' => '1',
@@ -172,7 +172,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '15',
+			'skill_id' => '15',
 			'name' => '強制尿検査',
 			'effect' => '2',
 			'updown' => '2',
@@ -182,7 +182,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '16',
+			'skill_id' => '16',
 			'name' => 'テストのご褒美',
 			'effect' => '2',
 			'updown' => '2',
@@ -192,7 +192,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '17',
+			'skill_id' => '17',
 			'name' => '射精管理',
 			'effect' => '2',
 			'updown' => '1',
@@ -202,7 +202,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '18',
+			'skill_id' => '18',
 			'name' => '箱入り娘',
 			'effect' => '1',
 			'updown' => '1',
@@ -212,7 +212,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '19',
+			'skill_id' => '19',
 			'name' => '四十九日の誓い',
 			'effect' => '1',
 			'updown' => '1',
@@ -222,7 +222,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '20',
+			'skill_id' => '20',
 			'name' => '積み木くずし',
 			'effect' => '2',
 			'updown' => '1',
@@ -232,7 +232,7 @@ class SkillFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '21',
+			'skill_id' => '21',
 			'name' => '放課後マニアック',
 			'effect' => '1',
 			'updown' => '1',

@@ -11,7 +11,7 @@ class CardFixture extends CakeTestFixture {
  * @var array
  */
 	public $fields = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+		'card_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'name' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'comment' => '肩書き', 'charset' => 'utf8'),
 		'height' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3, 'comment' => '身長'),
@@ -28,7 +28,7 @@ class CardFixture extends CakeTestFixture {
 		'detail' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 250, 'collate' => 'utf8_general_ci', 'comment' => '解説', 'charset' => 'utf8'),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1),
+			'PRIMARY' => array('column' => 'card_id', 'unique' => 1),
 			'FK_mst_cards_mst_skill' => array('column' => 'skill_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
@@ -41,7 +41,7 @@ class CardFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '1',
+			'card_id' => '1',
 			'name' => 'あいり',
 			'title' => '[国民的JK]',
 			'height' => '154',
@@ -54,12 +54,12 @@ class CardFixture extends CakeTestFixture {
 			'atk' => '200',
 			'def' => '250',
 			'skill_id' => '1',
-			'words' => 'test',
+			'words' => '世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？',
 			'detail' => '名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。',
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '2',
+			'card_id' => '2',
 			'name' => 'あいり',
 			'title' => '[国民的JK]',
 			'height' => '154',
@@ -77,7 +77,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '3',
+			'card_id' => '3',
 			'name' => 'あいり',
 			'title' => '[国民的JK]',
 			'height' => '154',
@@ -95,7 +95,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '4',
+			'card_id' => '4',
 			'name' => '玲奈',
 			'title' => '[完全無欠の艶女]',
 			'height' => '165',
@@ -113,7 +113,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '5',
+			'card_id' => '5',
 			'name' => '玲奈',
 			'title' => '[完全無欠の艶女]',
 			'height' => '165',
@@ -131,7 +131,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '6',
+			'card_id' => '6',
 			'name' => '玲奈',
 			'title' => '[完全無欠の艶女]',
 			'height' => '165',
@@ -149,7 +149,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '7',
+			'card_id' => '7',
 			'name' => 'みさき',
 			'title' => '[背徳の人妻]',
 			'height' => '156',
@@ -167,7 +167,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '8',
+			'card_id' => '8',
 			'name' => 'みさき',
 			'title' => '[背徳の人妻]',
 			'height' => '156',
@@ -185,7 +185,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '9',
+			'card_id' => '9',
 			'name' => 'みさき',
 			'title' => '[背徳の人妻]',
 			'height' => '156',
@@ -203,7 +203,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '10',
+			'card_id' => '10',
 			'name' => 'さつき',
 			'title' => '[大いなる母性]',
 			'height' => '153',
@@ -221,7 +221,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '11',
+			'card_id' => '11',
 			'name' => 'さつき',
 			'title' => '[大いなる母性]',
 			'height' => '153',
@@ -239,7 +239,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '12',
+			'card_id' => '12',
 			'name' => 'さつき',
 			'title' => '[大いなる母性]',
 			'height' => '153',
@@ -257,7 +257,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '13',
+			'card_id' => '13',
 			'name' => 'つぼみ',
 			'title' => '[絶対美少女]',
 			'height' => '163',
@@ -275,7 +275,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '14',
+			'card_id' => '14',
 			'name' => 'つぼみ',
 			'title' => '[絶対美少女]',
 			'height' => '163',
@@ -293,7 +293,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '15',
+			'card_id' => '15',
 			'name' => 'つぼみ',
 			'title' => '[絶対美少女]',
 			'height' => '163',
@@ -311,7 +311,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '16',
+			'card_id' => '16',
 			'name' => 'リオ',
 			'title' => '[アゲ☆アゲ]',
 			'height' => '158',
@@ -329,7 +329,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '17',
+			'card_id' => '17',
 			'name' => 'リオ',
 			'title' => '[アゲ☆アゲ]',
 			'height' => '158',
@@ -347,7 +347,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '18',
+			'card_id' => '18',
 			'name' => 'リオ',
 			'title' => '[アゲ☆アゲ]',
 			'height' => '158',
@@ -365,7 +365,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '19',
+			'card_id' => '19',
 			'name' => '瞳',
 			'title' => '[アフター5]',
 			'height' => '156',
@@ -383,7 +383,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '20',
+			'card_id' => '20',
 			'name' => '瞳',
 			'title' => '[アフター5]',
 			'height' => '156',
@@ -401,7 +401,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '21',
+			'card_id' => '21',
 			'name' => '瞳',
 			'title' => '[アフター5]',
 			'height' => '156',
@@ -419,7 +419,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '22',
+			'card_id' => '22',
 			'name' => 'ジェシー',
 			'title' => '[マンハント]',
 			'height' => '157',
@@ -437,7 +437,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '23',
+			'card_id' => '23',
 			'name' => 'ジェシー',
 			'title' => '[マンハント]',
 			'height' => '157',
@@ -455,7 +455,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '24',
+			'card_id' => '24',
 			'name' => 'ジェシー',
 			'title' => '[マンハント]',
 			'height' => '157',
@@ -473,7 +473,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '25',
+			'card_id' => '25',
 			'name' => '佳穂',
 			'title' => '[隣のお姉さん]',
 			'height' => '160',
@@ -491,7 +491,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '26',
+			'card_id' => '26',
 			'name' => '佳穂',
 			'title' => '[隣のお姉さん]',
 			'height' => '160',
@@ -509,7 +509,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '27',
+			'card_id' => '27',
 			'name' => '佳穂',
 			'title' => '[隣のお姉さん]',
 			'height' => '160',
@@ -527,7 +527,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '28',
+			'card_id' => '28',
 			'name' => '浅黄',
 			'title' => '[夜のご奉仕]',
 			'height' => '152',
@@ -545,7 +545,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '29',
+			'card_id' => '29',
 			'name' => '浅黄',
 			'title' => '[夜のご奉仕]',
 			'height' => '152',
@@ -563,7 +563,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '30',
+			'card_id' => '30',
 			'name' => '浅黄',
 			'title' => '[夜のご奉仕]',
 			'height' => '152',
@@ -581,7 +581,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '31',
+			'card_id' => '31',
 			'name' => '結依',
 			'title' => '[ゆとり育ち]',
 			'height' => '158',
@@ -599,7 +599,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '32',
+			'card_id' => '32',
 			'name' => '結依',
 			'title' => '[ゆとり育ち]',
 			'height' => '158',
@@ -617,7 +617,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '33',
+			'card_id' => '33',
 			'name' => '結依',
 			'title' => '[ゆとり育ち]',
 			'height' => '158',
@@ -635,7 +635,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '34',
+			'card_id' => '34',
 			'name' => 'ひな',
 			'title' => '[合法処女]',
 			'height' => '134',
@@ -653,7 +653,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '35',
+			'card_id' => '35',
 			'name' => 'ひな',
 			'title' => '[合法処女]',
 			'height' => '134',
@@ -671,7 +671,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '36',
+			'card_id' => '36',
 			'name' => 'ひな',
 			'title' => '[合法処女]',
 			'height' => '134',
@@ -689,7 +689,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '37',
+			'card_id' => '37',
 			'name' => '純',
 			'title' => '[バージンロード]',
 			'height' => '160',
@@ -707,7 +707,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '38',
+			'card_id' => '38',
 			'name' => '純',
 			'title' => '[バージンロード]',
 			'height' => '160',
@@ -725,7 +725,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '39',
+			'card_id' => '39',
 			'name' => '純',
 			'title' => '[バージンロード]',
 			'height' => '160',
@@ -743,7 +743,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '40',
+			'card_id' => '40',
 			'name' => 'ゆう',
 			'title' => '[ナマイキ娘]',
 			'height' => '154',
@@ -761,7 +761,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '41',
+			'card_id' => '41',
 			'name' => 'ゆう',
 			'title' => '[ナマイキ娘]',
 			'height' => '154',
@@ -779,7 +779,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '42',
+			'card_id' => '42',
 			'name' => 'ゆう',
 			'title' => '[ナマイキ娘]',
 			'height' => '154',
@@ -797,7 +797,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '43',
+			'card_id' => '43',
 			'name' => '沙希',
 			'title' => '[看護しちゃうぞ]',
 			'height' => '158',
@@ -815,7 +815,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '44',
+			'card_id' => '44',
 			'name' => '沙希',
 			'title' => '[看護しちゃうぞ]',
 			'height' => '158',
@@ -833,7 +833,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '45',
+			'card_id' => '45',
 			'name' => '沙希',
 			'title' => '[看護しちゃうぞ]',
 			'height' => '158',
@@ -851,7 +851,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '46',
+			'card_id' => '46',
 			'name' => '真奈美',
 			'title' => '[個人レッスン]',
 			'height' => '160',
@@ -869,7 +869,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '47',
+			'card_id' => '47',
 			'name' => '真奈美',
 			'title' => '[個人レッスン]',
 			'height' => '160',
@@ -887,7 +887,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '48',
+			'card_id' => '48',
 			'name' => '真奈美',
 			'title' => '[個人レッスン]',
 			'height' => '160',
@@ -905,7 +905,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '49',
+			'card_id' => '49',
 			'name' => '更紗',
 			'title' => '[性病専門医]',
 			'height' => '166',
@@ -923,7 +923,7 @@ class CardFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '50',
+			'card_id' => '50',
 			'name' => '更紗',
 			'title' => '[性病専門医]',
 			'height' => '166',
@@ -938,6 +938,240 @@ class CardFixture extends CakeTestFixture {
 			'skill_id' => '17',
 			'words' => '男性器の機能を大事にしたいなら、ちゃんと性病予防はしなくちゃダメよ？世界の命運がかかっているなら尚更！',
 			'detail' => '世界を救うペニスを管理するために派遣されてきた女医。これまで幾多もの性病を治療してきた女傑ぶりは本物。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '51',
+			'name' => '更紗',
+			'title' => '[性病専門医]',
+			'height' => '166',
+			'weight' => '55',
+			'size' => 'B91 W60 H89 Fカップ',
+			'blood' => 'O型',
+			'rare_level' => '3',
+			'attr' => '2',
+			'hp' => '1500',
+			'atk' => '180',
+			'def' => '120',
+			'skill_id' => '17',
+			'words' => 'すごい精液の量…熱くて濃くて、まるでゼリーみたい…こんなに膣に出されたら…絶対に…妊娠させられちゃう…',
+			'detail' => '世界を救うペニスを管理するために派遣されてきた女医。自分に性欲は無いと思ってたが、そんな事はなかった。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '52',
+			'name' => 'かえで',
+			'title' => '[世間知らず]',
+			'height' => '155',
+			'weight' => '46',
+			'size' => 'B75 W48 H74 Cカップ',
+			'blood' => 'A型',
+			'rare_level' => '1',
+			'attr' => '3',
+			'hp' => '1000',
+			'atk' => '80',
+			'def' => '80',
+			'skill_id' => '18',
+			'words' => '世界を守るため、私が男女の営みを覚える必要があるのですか？とりあえず、詳しくお聞かせ下さいませ。',
+			'detail' => '世間知らずのお嬢様。性知識はもちろんの事、自分が備えている魅力についても全く気づいていない状態。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '53',
+			'name' => 'かえで',
+			'title' => '[世間知らず]',
+			'height' => '155',
+			'weight' => '46',
+			'size' => 'B75 W48 H74 Cカップ',
+			'blood' => 'A型',
+			'rare_level' => '2',
+			'attr' => '3',
+			'hp' => '1500',
+			'atk' => '100',
+			'def' => '100',
+			'skill_id' => '18',
+			'words' => 'こうして先の方を撫でながら、舌先でつんつんとご奉仕すればよいのですね…こんな風でよろしいですか？',
+			'detail' => '世間知らずのお嬢様。Hなお願いにも勤勉的に自然体で臨むために、下心や下品さは全くみられない。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '54',
+			'name' => 'かえで',
+			'title' => '[世間知らず]',
+			'height' => '155',
+			'weight' => '46',
+			'size' => 'B75 W48 H74 Cカップ',
+			'blood' => 'A型',
+			'rare_level' => '3',
+			'attr' => '3',
+			'hp' => '2000',
+			'atk' => '130',
+			'def' => '130',
+			'skill_id' => '18',
+			'words' => 'あんっ…赤ちゃんが出来てはいけないので、射精は外にお願いします…お口で飲んでも大丈夫なのかしら？',
+			'detail' => '世間知らずのお嬢様。素敵なお嫁さんにもらわれるには、Hが上手じゃないといけないと勘違いしている。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '55',
+			'name' => '絵里子',
+			'title' => '[欲求不満]',
+			'height' => '157',
+			'weight' => '51',
+			'size' => 'B93 W55 H95 Iカップ',
+			'blood' => 'O型',
+			'rare_level' => '1',
+			'attr' => '3',
+			'hp' => '1000',
+			'atk' => '80',
+			'def' => '80',
+			'skill_id' => '19',
+			'words' => '私に何の用があるというのです？何かいかがわしい事をしているようですが…私に関わらないで下さい。',
+			'detail' => '夫が亡くなってから操を守り続けていた未亡人。だがその熟れた体はそろそろ限界に達しようとしている…',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '56',
+			'name' => '絵里子',
+			'title' => '[欲求不満]',
+			'height' => '157',
+			'weight' => '51',
+			'size' => 'B93 W55 H95 Iカップ',
+			'blood' => 'O型',
+			'rare_level' => '2',
+			'attr' => '3',
+			'hp' => '1500',
+			'atk' => '100',
+			'def' => '100',
+			'skill_id' => '19',
+			'words' => 'いけない事なのに、どうしてこんなに体が熱くなっているの…私が愛しているのはあの人だけなのに…！',
+			'detail' => '夫が亡くなってから操を守り続けていた未亡人。不貞を働いている後ろめたさが、熟れた体を熱くする…',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '57',
+			'name' => '絵里子',
+			'title' => '[欲求不満]',
+			'height' => '157',
+			'weight' => '51',
+			'size' => 'B93 W55 H95 Iカップ',
+			'blood' => 'O型',
+			'rare_level' => '3',
+			'attr' => '3',
+			'hp' => '2000',
+			'atk' => '130',
+			'def' => '130',
+			'skill_id' => '19',
+			'words' => 'ごめんなさい、あなた…私、女に戻ってしまいました…でも、あなたの事は今でも…ああっ、イクぅっ…！',
+			'detail' => '夫が亡くなってから操を守り続けていた未亡人。他の男を受け入れた事に心は涙し、子宮は悦んでいる…',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '58',
+			'name' => '深雪',
+			'title' => '[新しい家族]',
+			'height' => '158',
+			'weight' => '50',
+			'size' => 'B94 W60 H95 Gカップ',
+			'blood' => 'AB型',
+			'rare_level' => '1',
+			'attr' => '3',
+			'hp' => '1000',
+			'atk' => '80',
+			'def' => '80',
+			'skill_id' => '20',
+			'words' => 'あたしをお母さんとして迎え入れるなんて、ふふっ…鼻の下伸ばして…ナニが起こっても、あたし知らないわよ？',
+			'detail' => '女の魅力で入り込んだ家庭をひっかき回すセカンドワイフ。だがその目的は金や贅沢な暮らしではないらしい…',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '59',
+			'name' => '深雪',
+			'title' => '[新しい家族]',
+			'height' => '158',
+			'weight' => '50',
+			'size' => 'B94 W60 H95 Gカップ',
+			'blood' => 'AB型',
+			'rare_level' => '2',
+			'attr' => '3',
+			'hp' => '1500',
+			'atk' => '100',
+			'def' => '100',
+			'skill_id' => '20',
+			'words' => 'とっても元気なの持ってるじゃない…ほら、ね、あたしの中に入れたいんでしょ？ふふ、やっぱり勃起してきた！',
+			'detail' => '女の魅力で入り込んだ家庭をひっかき回すセカンドワイフ。いい男なら夫でも息子でもお構いなしに味見する。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '60',
+			'name' => '深雪',
+			'title' => '[新しい家族]',
+			'height' => '158',
+			'weight' => '50',
+			'size' => 'B94 W60 H95 Gカップ',
+			'blood' => 'AB型',
+			'rare_level' => '3',
+			'attr' => '3',
+			'hp' => '2000',
+			'atk' => '130',
+			'def' => '130',
+			'skill_id' => '20',
+			'words' => '結局、困ってる人の笑顔が見たいだけなのかもしれないわね…ほらっ、孕ませるつもりで、あたしの中に出して？',
+			'detail' => '女の魅力で入り込んだ家庭をひっかき回すセカンドワイフ。彼女が去った家は不思議と福が訪れるとの事らしい。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '61',
+			'name' => '摩耶',
+			'title' => '[課外授業]',
+			'height' => '156',
+			'weight' => '52',
+			'size' => 'B98 W58 H92 Jカップ',
+			'blood' => 'B型',
+			'rare_level' => '1',
+			'attr' => '3',
+			'hp' => '1000',
+			'atk' => '80',
+			'def' => '80',
+			'skill_id' => '21',
+			'words' => '私があなたに教える事なんてあるのかしら？まあ、他の子に教える事は出来そうだし、そこから始めましょうか。',
+			'detail' => '名門学園の女教師。業務にも教え方にも定評があるが、その有り余るフェロモンは色々と問題を引き起こしがち。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '62',
+			'name' => '摩耶',
+			'title' => '[課外授業]',
+			'height' => '156',
+			'weight' => '52',
+			'size' => 'B98 W58 H92 Jカップ',
+			'blood' => 'B型',
+			'rare_level' => '2',
+			'attr' => '3',
+			'hp' => '1500',
+			'atk' => '100',
+			'def' => '100',
+			'skill_id' => '21',
+			'words' => 'いかがわしい事を考えているわけではないのに、そんな風に思われるのは心外だわ。どうしたらいいのかしら…？',
+			'detail' => '名門学園の女教師。自分でも自分がちょっとエロ過ぎると分かっていて、上手くコントロールしたいと思う日々。',
+			'delete_flg' => '0'
+		),
+		array(
+			'card_id' => '63',
+			'name' => '摩耶',
+			'title' => '[課外授業]',
+			'height' => '156',
+			'weight' => '52',
+			'size' => 'B98 W58 H92 Jカップ',
+			'blood' => 'B型',
+			'rare_level' => '3',
+			'attr' => '3',
+			'hp' => '2000',
+			'atk' => '130',
+			'def' => '130',
+			'skill_id' => '21',
+			'words' => '自分の魅力を制御するのも、案外難しいんだから…今日の放課後も二人きりの補習、付き合ってもらうわよ？',
+			'detail' => '名門学園の女教師。自分のセクシーさを理解する事で、エロさをコントロール出来るようになって嬉しく微笑む。',
 			'delete_flg' => '0'
 		),
 	);

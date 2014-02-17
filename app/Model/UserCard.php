@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * UserCard Model
  *
+ * @property User $User
  * @property Card $Card
  */
 class UserCard extends AppModel {
@@ -12,7 +13,7 @@ class UserCard extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'user_id';
+	public $primaryKey = 'user_card_id';
 
 /**
  * Validation rules
@@ -20,6 +21,16 @@ class UserCard extends AppModel {
  * @var array
  */
 	public $validate = array(
+		'user_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'card_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -110,6 +121,13 @@ class UserCard extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
 		'Card' => array(
 			'className' => 'Card',
 			'foreignKey' => 'card_id',
@@ -118,25 +136,4 @@ class UserCard extends AppModel {
 			'order' => ''
 		)
 	);
-
-
-    
-
-    /**
-     * 初回カード登録
-     *
-     * @author imanishi
-     * @param int $userId
-     * @param array $list カードデータ
-     * @return bool
-     */
-    public function reginsStartCard ($userId, $list) { 
-
-        $data = array();
-        foreach ($list as $val) {
-            $data[] = array($userId, $val['id'], $val['atk'], $val['def']);
-        }
-        $fields = array('user_id', 'card_id', 'atk', 'def'); 
-        return $this->insertBulk($fields, $data); 
-    } 
 }

@@ -3,9 +3,15 @@ App::uses('AppModel', 'Model');
 /**
  * Quest Model
  *
- * @property Stage $Stage
  */
 class Quest extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'quest_id';
 
 /**
  * Validation rules
@@ -74,28 +80,4 @@ class Quest extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Stage' => array(
-			'className' => 'Stage',
-			'foreignKey' => 'quest_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

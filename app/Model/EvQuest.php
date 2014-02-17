@@ -3,9 +3,15 @@ App::uses('AppModel', 'Model');
 /**
  * EvQuest Model
  *
- * @property EvStage $EvStage
  */
 class EvQuest extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'ev_quest_id';
 
 /**
  * Validation rules
@@ -94,28 +100,4 @@ class EvQuest extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'EvStage' => array(
-			'className' => 'EvStage',
-			'foreignKey' => 'ev_quest_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

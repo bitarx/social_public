@@ -30,8 +30,8 @@ class UserLoginDayFixture extends CakeTestFixture {
 		array(
 			'user_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:44',
-			'modified' => '2014-02-10 09:47:44'
+			'created' => '2014-02-17 19:25:59',
+			'modified' => '2014-02-17 19:25:59'
 		),
 	);
 

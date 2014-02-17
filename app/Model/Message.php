@@ -8,6 +8,13 @@ App::uses('AppModel', 'Model');
 class Message extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'message_id';
+
+/**
  * Validation rules
  *
  * @var array

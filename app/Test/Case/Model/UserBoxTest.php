@@ -14,7 +14,11 @@ class UserBoxTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.user_box',
-		'app.user_item'
+		'app.user_item',
+		'app.user',
+		'app.sns_user',
+		'app.item',
+		'app.item_effect'
 	);
 
 /**

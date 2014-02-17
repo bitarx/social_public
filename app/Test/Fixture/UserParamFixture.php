@@ -48,8 +48,8 @@ class UserParamFixture extends CakeTestFixture {
 			'win' => 1,
 			'lose' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:44',
-			'modified' => '2014-02-10 09:47:44'
+			'created' => '2014-02-17 19:26:00',
+			'modified' => '2014-02-17 19:26:00'
 		),
 	);
 

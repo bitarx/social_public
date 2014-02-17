@@ -15,6 +15,13 @@ class RankEvBattle extends AppModel {
 	public $useTable = 'rank_ev_battle';
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'rank_ev_battle_id';
+
+/**
  * Validation rules
  *
  * @var array

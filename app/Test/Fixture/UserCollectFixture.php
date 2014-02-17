@@ -35,8 +35,8 @@ class UserCollectFixture extends CakeTestFixture {
 			'card_id' => 1,
 			'new_flg' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:41',
-			'modified' => '2014-02-10 09:47:41'
+			'created' => '2014-02-17 19:25:57',
+			'modified' => '2014-02-17 19:25:57'
 		),
 	);
 

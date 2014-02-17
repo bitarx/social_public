@@ -9,6 +9,13 @@ App::uses('AppModel', 'Model');
 class GachaProb extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'gacha_prob_id';
+
+/**
  * Validation rules
  *
  * @var array

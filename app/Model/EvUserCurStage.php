@@ -1,11 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * User Model
+ * EvUserCurStage Model
  *
- * @property SnsUser $SnsUser
+ * @property EvStage $EvStage
  */
-class User extends AppModel {
+class EvUserCurStage extends AppModel {
 
 /**
  * Primary key field
@@ -20,27 +20,7 @@ class User extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'sns_user_id' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'carrer' => array(
+		'ev_stage_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -70,9 +50,9 @@ class User extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'SnsUser' => array(
-			'className' => 'SnsUser',
-			'foreignKey' => 'sns_user_id',
+		'EvStage' => array(
+			'className' => 'EvStage',
+			'foreignKey' => 'ev_stage_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

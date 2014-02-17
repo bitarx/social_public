@@ -11,7 +11,7 @@ class StageProbFixture extends CakeTestFixture {
  * @var array
  */
 	public $fields = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
+		'stage_prob_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'stage_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'key' => 'index'),
 		'raid_id' => array('type' => 'integer', 'null' => false, 'default' => '1', 'length' => 5, 'comment' => '1:通常クエスト 2:レイドイベントID'),
 		'kind' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3, 'comment' => '1:card 2:item 3:money 4:enemy'),
@@ -20,7 +20,7 @@ class StageProbFixture extends CakeTestFixture {
 		'prob' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'indexes' => array(
-			'PRIMARY' => array('column' => 'id', 'unique' => 1),
+			'PRIMARY' => array('column' => 'stage_prob_id', 'unique' => 1),
 			'stage_id' => array('column' => 'stage_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
@@ -33,7 +33,7 @@ class StageProbFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => '1',
+			'stage_prob_id' => '1',
 			'stage_id' => '1',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -43,7 +43,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '2',
+			'stage_prob_id' => '2',
 			'stage_id' => '1',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -53,7 +53,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '3',
+			'stage_prob_id' => '3',
 			'stage_id' => '1',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -63,7 +63,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '4',
+			'stage_prob_id' => '4',
 			'stage_id' => '2',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -73,7 +73,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '5',
+			'stage_prob_id' => '5',
 			'stage_id' => '2',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -83,7 +83,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '6',
+			'stage_prob_id' => '6',
 			'stage_id' => '2',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -93,7 +93,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '7',
+			'stage_prob_id' => '7',
 			'stage_id' => '3',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -103,7 +103,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '8',
+			'stage_prob_id' => '8',
 			'stage_id' => '3',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -113,7 +113,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '9',
+			'stage_prob_id' => '9',
 			'stage_id' => '3',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -123,7 +123,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '10',
+			'stage_prob_id' => '10',
 			'stage_id' => '4',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -133,7 +133,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '11',
+			'stage_prob_id' => '11',
 			'stage_id' => '4',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -143,7 +143,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '12',
+			'stage_prob_id' => '12',
 			'stage_id' => '4',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -153,7 +153,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '13',
+			'stage_prob_id' => '13',
 			'stage_id' => '5',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -163,7 +163,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '14',
+			'stage_prob_id' => '14',
 			'stage_id' => '5',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -173,7 +173,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '15',
+			'stage_prob_id' => '15',
 			'stage_id' => '5',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -183,7 +183,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '16',
+			'stage_prob_id' => '16',
 			'stage_id' => '6',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -193,7 +193,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '17',
+			'stage_prob_id' => '17',
 			'stage_id' => '6',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -203,7 +203,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '18',
+			'stage_prob_id' => '18',
 			'stage_id' => '6',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -213,7 +213,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '19',
+			'stage_prob_id' => '19',
 			'stage_id' => '7',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -223,7 +223,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '20',
+			'stage_prob_id' => '20',
 			'stage_id' => '7',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -233,7 +233,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '21',
+			'stage_prob_id' => '21',
 			'stage_id' => '7',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -243,7 +243,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '22',
+			'stage_prob_id' => '22',
 			'stage_id' => '8',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -253,7 +253,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '23',
+			'stage_prob_id' => '23',
 			'stage_id' => '8',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -263,7 +263,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '24',
+			'stage_prob_id' => '24',
 			'stage_id' => '8',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -273,7 +273,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '25',
+			'stage_prob_id' => '25',
 			'stage_id' => '9',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -283,7 +283,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '26',
+			'stage_prob_id' => '26',
 			'stage_id' => '9',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -293,7 +293,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '27',
+			'stage_prob_id' => '27',
 			'stage_id' => '9',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -303,7 +303,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '28',
+			'stage_prob_id' => '28',
 			'stage_id' => '10',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -313,7 +313,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '29',
+			'stage_prob_id' => '29',
 			'stage_id' => '10',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -323,7 +323,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '30',
+			'stage_prob_id' => '30',
 			'stage_id' => '10',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -333,7 +333,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '31',
+			'stage_prob_id' => '31',
 			'stage_id' => '11',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -343,7 +343,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '32',
+			'stage_prob_id' => '32',
 			'stage_id' => '11',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -353,7 +353,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '33',
+			'stage_prob_id' => '33',
 			'stage_id' => '11',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -363,7 +363,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '34',
+			'stage_prob_id' => '34',
 			'stage_id' => '12',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -373,7 +373,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '35',
+			'stage_prob_id' => '35',
 			'stage_id' => '12',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -383,7 +383,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '36',
+			'stage_prob_id' => '36',
 			'stage_id' => '12',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -393,7 +393,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '37',
+			'stage_prob_id' => '37',
 			'stage_id' => '13',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -403,7 +403,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '38',
+			'stage_prob_id' => '38',
 			'stage_id' => '13',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -413,7 +413,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '39',
+			'stage_prob_id' => '39',
 			'stage_id' => '13',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -423,7 +423,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '40',
+			'stage_prob_id' => '40',
 			'stage_id' => '14',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -433,7 +433,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '41',
+			'stage_prob_id' => '41',
 			'stage_id' => '14',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -443,7 +443,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '42',
+			'stage_prob_id' => '42',
 			'stage_id' => '14',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -453,7 +453,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '43',
+			'stage_prob_id' => '43',
 			'stage_id' => '15',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -463,7 +463,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '44',
+			'stage_prob_id' => '44',
 			'stage_id' => '15',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -473,7 +473,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '45',
+			'stage_prob_id' => '45',
 			'stage_id' => '15',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -483,7 +483,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '46',
+			'stage_prob_id' => '46',
 			'stage_id' => '16',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -493,7 +493,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '47',
+			'stage_prob_id' => '47',
 			'stage_id' => '16',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -503,7 +503,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '48',
+			'stage_prob_id' => '48',
 			'stage_id' => '16',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -513,7 +513,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '49',
+			'stage_prob_id' => '49',
 			'stage_id' => '17',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -523,7 +523,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '50',
+			'stage_prob_id' => '50',
 			'stage_id' => '17',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -533,7 +533,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '51',
+			'stage_prob_id' => '51',
 			'stage_id' => '17',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -543,7 +543,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '52',
+			'stage_prob_id' => '52',
 			'stage_id' => '18',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -553,7 +553,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '53',
+			'stage_prob_id' => '53',
 			'stage_id' => '18',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -563,7 +563,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '54',
+			'stage_prob_id' => '54',
 			'stage_id' => '18',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -573,7 +573,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '55',
+			'stage_prob_id' => '55',
 			'stage_id' => '19',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -583,7 +583,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '56',
+			'stage_prob_id' => '56',
 			'stage_id' => '19',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -593,7 +593,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '57',
+			'stage_prob_id' => '57',
 			'stage_id' => '19',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -603,7 +603,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '58',
+			'stage_prob_id' => '58',
 			'stage_id' => '20',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -613,7 +613,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '59',
+			'stage_prob_id' => '59',
 			'stage_id' => '20',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -623,7 +623,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '60',
+			'stage_prob_id' => '60',
 			'stage_id' => '20',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -633,7 +633,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '61',
+			'stage_prob_id' => '61',
 			'stage_id' => '21',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -643,7 +643,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '62',
+			'stage_prob_id' => '62',
 			'stage_id' => '21',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -653,7 +653,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '63',
+			'stage_prob_id' => '63',
 			'stage_id' => '21',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -663,7 +663,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '64',
+			'stage_prob_id' => '64',
 			'stage_id' => '22',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -673,7 +673,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '65',
+			'stage_prob_id' => '65',
 			'stage_id' => '22',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -683,7 +683,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '66',
+			'stage_prob_id' => '66',
 			'stage_id' => '22',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -693,7 +693,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '67',
+			'stage_prob_id' => '67',
 			'stage_id' => '23',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -703,7 +703,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '68',
+			'stage_prob_id' => '68',
 			'stage_id' => '23',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -713,7 +713,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '69',
+			'stage_prob_id' => '69',
 			'stage_id' => '23',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -723,7 +723,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '70',
+			'stage_prob_id' => '70',
 			'stage_id' => '24',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -733,7 +733,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '71',
+			'stage_prob_id' => '71',
 			'stage_id' => '24',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -743,7 +743,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '72',
+			'stage_prob_id' => '72',
 			'stage_id' => '24',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -753,7 +753,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '73',
+			'stage_prob_id' => '73',
 			'stage_id' => '25',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -763,7 +763,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '74',
+			'stage_prob_id' => '74',
 			'stage_id' => '25',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -773,7 +773,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '75',
+			'stage_prob_id' => '75',
 			'stage_id' => '25',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -783,7 +783,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '76',
+			'stage_prob_id' => '76',
 			'stage_id' => '26',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -793,7 +793,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '77',
+			'stage_prob_id' => '77',
 			'stage_id' => '26',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -803,7 +803,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '78',
+			'stage_prob_id' => '78',
 			'stage_id' => '26',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -813,7 +813,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '79',
+			'stage_prob_id' => '79',
 			'stage_id' => '27',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -823,7 +823,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '80',
+			'stage_prob_id' => '80',
 			'stage_id' => '27',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -833,7 +833,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '81',
+			'stage_prob_id' => '81',
 			'stage_id' => '27',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -843,7 +843,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '82',
+			'stage_prob_id' => '82',
 			'stage_id' => '28',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -853,7 +853,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '83',
+			'stage_prob_id' => '83',
 			'stage_id' => '28',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -863,7 +863,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '84',
+			'stage_prob_id' => '84',
 			'stage_id' => '28',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -873,7 +873,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '85',
+			'stage_prob_id' => '85',
 			'stage_id' => '29',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -883,7 +883,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '86',
+			'stage_prob_id' => '86',
 			'stage_id' => '29',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -893,7 +893,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '87',
+			'stage_prob_id' => '87',
 			'stage_id' => '29',
 			'raid_id' => '0',
 			'kind' => '3',
@@ -903,7 +903,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '88',
+			'stage_prob_id' => '88',
 			'stage_id' => '30',
 			'raid_id' => '0',
 			'kind' => '1',
@@ -913,7 +913,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '89',
+			'stage_prob_id' => '89',
 			'stage_id' => '30',
 			'raid_id' => '0',
 			'kind' => '2',
@@ -923,7 +923,7 @@ class StageProbFixture extends CakeTestFixture {
 			'delete_flg' => '0'
 		),
 		array(
-			'id' => '90',
+			'stage_prob_id' => '90',
 			'stage_id' => '30',
 			'raid_id' => '0',
 			'kind' => '3',

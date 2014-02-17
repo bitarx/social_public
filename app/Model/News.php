@@ -7,6 +7,13 @@ App::uses('AppModel', 'Model');
 class News extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'news_id';
+
+/**
  * Validation rules
  *
  * @var array

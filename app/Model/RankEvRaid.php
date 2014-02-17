@@ -15,6 +15,13 @@ class RankEvRaid extends AppModel {
 	public $useTable = 'rank_ev_raid';
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'rank_ev_raid_id';
+
+/**
  * Validation rules
  *
  * @var array

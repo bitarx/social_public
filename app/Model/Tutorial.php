@@ -7,6 +7,13 @@ App::uses('AppModel', 'Model');
 class Tutorial extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'tutorial_id';
+
+/**
  * Validation rules
  *
  * @var array
@@ -73,20 +80,4 @@ class Tutorial extends AppModel {
 			),
 		),
 	);
-
-    /**
-     * マスタデータ取得
-     *
-     * @author imanishi 
-     * @param int $id チュートリアルID
-     * @return array マスタデータ１レコード
-     */
-    public function getMstData($id) { 
-        
-        $where = array('id' => $id);
-        $fields = array('id', 'title', 'words', 'words2', 'words3', 'next');
-        $row = $this->getAllFind($fields, $where, 'first');
-
-        return $row;
-    } 
 }

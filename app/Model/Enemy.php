@@ -4,9 +4,6 @@ App::uses('AppModel', 'Model');
  * Enemy Model
  *
  * @property Skill $Skill
- * @property EvStage $EvStage
- * @property Stage $Stage
- * @property UserRaid $UserRaid
  */
 class Enemy extends AppModel {
 
@@ -16,6 +13,13 @@ class Enemy extends AppModel {
  * @var mixed False or table name
  */
 	public $useTable = 'enemys';
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'enemy_id';
 
 /**
  * Validation rules
@@ -131,52 +135,4 @@ class Enemy extends AppModel {
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'EvStage' => array(
-			'className' => 'EvStage',
-			'foreignKey' => 'enemy_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Stage' => array(
-			'className' => 'Stage',
-			'foreignKey' => 'enemy_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'UserRaid' => array(
-			'className' => 'UserRaid',
-			'foreignKey' => 'enemy_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

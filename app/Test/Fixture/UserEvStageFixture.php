@@ -20,8 +20,8 @@ class UserEvStageFixture extends CakeTestFixture {
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'user_id', 'unique' => 1),
-			'FK_user_ev_stages_mst_ev_stages' => array('column' => 'ev_stage_id', 'unique' => 0),
-			'user_ev_stage_id' => array('column' => array('user_id', 'ev_stage_id'), 'unique' => 0)
+			'user_ev_stage_id' => array('column' => array('user_id', 'ev_stage_id'), 'unique' => 0),
+			'FK_user_ev_stages_ev_stages' => array('column' => 'ev_stage_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -38,8 +38,8 @@ class UserEvStageFixture extends CakeTestFixture {
 			'progress' => 1,
 			'state' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:42',
-			'modified' => '2014-02-10 09:47:42'
+			'created' => '2014-02-17 19:25:58',
+			'modified' => '2014-02-17 19:25:58'
 		),
 	);
 

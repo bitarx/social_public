@@ -13,9 +13,7 @@ class ItemEffectTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.item_effect',
-		'app.item',
-		'app.item_prob'
+		'app.item_effect'
 	);
 
 /**

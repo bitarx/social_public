@@ -9,6 +9,13 @@ App::uses('AppModel', 'Model');
 class StageProb extends AppModel {
 
 /**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'stage_prob_id';
+
+/**
  * Validation rules
  *
  * @var array

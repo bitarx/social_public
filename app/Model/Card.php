@@ -4,15 +4,15 @@ App::uses('AppModel', 'Model');
  * Card Model
  *
  * @property Skill $Skill
- * @property CardGroup $CardGroup
- * @property GachaProb $GachaProb
- * @property UserCollect $UserCollect
- * @property UserGachaLog $UserGachaLog
  */
 class Card extends AppModel {
 
-    // 初期配布カードID
-    public $startCardIds = array( 13, 43 );
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'card_id';
 
 /**
  * Validation rules
@@ -188,91 +188,4 @@ class Card extends AppModel {
 			'order' => ''
 		)
 	);
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'CardGroup' => array(
-			'className' => 'CardGroup',
-			'foreignKey' => 'card_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'GachaProb' => array(
-			'className' => 'GachaProb',
-			'foreignKey' => 'card_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'UserCollect' => array(
-			'className' => 'UserCollect',
-			'foreignKey' => 'card_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'UserGachaLog' => array(
-			'className' => 'UserGachaLog',
-			'foreignKey' => 'card_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
-    /**
-     * カードデータ取得
-     *
-     * @author imanishi 
-     * @param int カードID
-     * @return array 指定レコード
-     */
-     public function getCardData($id) { 
-         
-         $where = array('id' => $id); 
-         $row = $this->getAllFind(array(), $where, 'first'); 
-         return $row;
-     } 
-
-    /**
-     * 初期カードデータ取得
-     *
-     * @author imanishi 
-     * @return array 指定レコード
-     */
-     public function getStartCardList() { 
-         
-         $where = array('id' => $this->startCardIds); 
-         $row = $this->getAllFind(array(), $where); 
-         return $row;
-     } 
 }

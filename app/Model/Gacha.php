@@ -3,11 +3,15 @@ App::uses('AppModel', 'Model');
 /**
  * Gacha Model
  *
- * @property GachaProb $GachaProb
- * @property UserGachaDay $UserGachaDay
- * @property UserGachaLog $UserGachaLog
  */
 class Gacha extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'gacha_id';
 
 /**
  * Validation rules
@@ -66,54 +70,4 @@ class Gacha extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'GachaProb' => array(
-			'className' => 'GachaProb',
-			'foreignKey' => 'gacha_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'UserGachaDay' => array(
-			'className' => 'UserGachaDay',
-			'foreignKey' => 'gacha_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'UserGachaLog' => array(
-			'className' => 'UserGachaLog',
-			'foreignKey' => 'gacha_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

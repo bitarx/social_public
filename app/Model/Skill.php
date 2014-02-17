@@ -3,10 +3,15 @@ App::uses('AppModel', 'Model');
 /**
  * Skill Model
  *
- * @property Card $Card
- * @property Enemy $Enemy
  */
 class Skill extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'skill_id';
 
 /**
  * Validation rules
@@ -85,41 +90,4 @@ class Skill extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Card' => array(
-			'className' => 'Card',
-			'foreignKey' => 'skill_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Enemy' => array(
-			'className' => 'Enemy',
-			'foreignKey' => 'skill_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

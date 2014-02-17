@@ -3,9 +3,15 @@ App::uses('AppModel', 'Model');
 /**
  * ItemEffect Model
  *
- * @property Item $Item
  */
 class ItemEffect extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'item_effect_id';
 
 /**
  * Validation rules
@@ -64,28 +70,4 @@ class ItemEffect extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasMany associations
- *
- * @var array
- */
-	public $hasMany = array(
-		'Item' => array(
-			'className' => 'Item',
-			'foreignKey' => 'item_effect_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
-	);
-
 }

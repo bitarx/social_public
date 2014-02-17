@@ -18,7 +18,7 @@ class UserCurStageFixture extends CakeTestFixture {
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'user_id', 'unique' => 1),
-			'FK_user_current_stages_mst_stages' => array('column' => 'stage_id', 'unique' => 0)
+			'FK_user_cur_stages_stages' => array('column' => 'stage_id', 'unique' => 0)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -33,8 +33,8 @@ class UserCurStageFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'stage_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:42',
-			'modified' => '2014-02-10 09:47:42'
+			'created' => '2014-02-17 19:25:57',
+			'modified' => '2014-02-17 19:25:57'
 		),
 	);
 

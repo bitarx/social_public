@@ -38,8 +38,8 @@ class UserStageFixture extends CakeTestFixture {
 			'progress' => 1,
 			'state' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-10 09:47:46',
-			'modified' => '2014-02-10 09:47:46'
+			'created' => '2014-02-17 19:26:01',
+			'modified' => '2014-02-17 19:26:01'
 		),
 	);
 
