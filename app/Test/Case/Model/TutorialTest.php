@@ -37,4 +37,24 @@ class TutorialTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * マスタデータ取得を確認
+     *
+     * @author imanishi
+     */
+     public function testGetTutorialData () {
+         $id = 1;
+         $data = $this->Tutorial->getMstData($id);
+
+         $expected = array(
+            'tutorial_id' => '1',
+            'tutorial_title' => 'オープニング',
+            'tutorial_words' => '',
+            'tutorial_words2' => '',
+            'tutorial_words3' => '',
+            'tutorial_next' => '2',
+         );
+         $this->assertEquals($data, $expected);
+     }
 }
