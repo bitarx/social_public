@@ -12,7 +12,7 @@ class ItemEffectFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'item_effect_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 5, 'key' => 'primary'),
-		'detail' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 250, 'collate' => 'utf8_general_ci', 'comment' => '使用前の説明', 'charset' => 'utf8'),
+		'item_effect_detail' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 250, 'collate' => 'utf8_general_ci', 'comment' => '使用前の説明', 'charset' => 'utf8'),
 		'detail_after' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 250, 'collate' => 'utf8_general_ci', 'comment' => '使用後の説明', 'charset' => 'utf8'),
 		'effect' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3, 'comment' => '1:act 2:bp 3.カード出現率アップ 4.金庫出現率アップ 5.クエストの全力進行アップ'),
 		'percent' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3, 'comment' => '回復の割合'),
@@ -31,7 +31,7 @@ class ItemEffectFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'item_effect_id' => '1',
-			'detail' => '最大BPの50%が回復します。',
+			'item_effect_detail' => '最大BPの50%が回復します。',
 			'detail_after' => '最大BPの50%が回復しました！',
 			'effect' => '2',
 			'percent' => '50',
@@ -39,7 +39,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '2',
-			'detail' => 'BPが全回復します。',
+			'item_effect_detail' => 'BPが全回復します。',
 			'detail_after' => 'BPが全回復しました！',
 			'effect' => '2',
 			'percent' => '100',
@@ -47,7 +47,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '3',
-			'detail' => '最大体力の50%が回復します。',
+			'item_effect_detail' => '最大体力の50%が回復します。',
 			'detail_after' => '最大体力の50%が回復しました！',
 			'effect' => '1',
 			'percent' => '50',
@@ -55,7 +55,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '4',
-			'detail' => '体力が全回復します。',
+			'item_effect_detail' => '体力が全回復します。',
 			'detail_after' => '体力が全回復しました！',
 			'effect' => '1',
 			'percent' => '100',
@@ -63,7 +63,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '5',
-			'detail' => '使用後30分間、クエストのカード出現率がアップします。',
+			'item_effect_detail' => '使用後30分間、クエストのカード出現率がアップします。',
 			'detail_after' => '30分間、クエストのカード出現率がアップします！',
 			'effect' => '3',
 			'percent' => '0',
@@ -71,7 +71,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '6',
-			'detail' => '使用後30分間、クエストの金庫出現率がアップします。',
+			'item_effect_detail' => '使用後30分間、クエストの金庫出現率がアップします。',
 			'detail_after' => '30分間、クエストの金庫出現率がアップします！',
 			'effect' => '4',
 			'percent' => '0',
@@ -79,7 +79,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '7',
-			'detail' => '使用後30分間、クエストの全力進行出現率がアップします。',
+			'item_effect_detail' => '使用後30分間、クエストの全力進行出現率がアップします。',
 			'detail_after' => '30分間、クエストの全力進行出現率がアップします！',
 			'effect' => '5',
 			'percent' => '0',
@@ -87,7 +87,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '8',
-			'detail' => '使用すると中身がプレゼントボックスに振り込まれます。',
+			'item_effect_detail' => '使用すると中身がプレゼントボックスに振り込まれます。',
 			'detail_after' => '以下のアイテムがプレゼントボックスに振り込まれました！',
 			'effect' => '6',
 			'percent' => '0',
@@ -95,7 +95,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '9',
-			'detail' => '使用すると以下の中身がプレゼントボックスに振り込まれます。',
+			'item_effect_detail' => '使用すると以下の中身がプレゼントボックスに振り込まれます。',
 			'detail_after' => '以下のアイテムがプレゼントボックスに振り込まれました！',
 			'effect' => '6',
 			'percent' => '0',
@@ -103,7 +103,7 @@ class ItemEffectFixture extends CakeTestFixture {
 		),
 		array(
 			'item_effect_id' => '99',
-			'detail' => '効果なし',
+			'item_effect_detail' => '効果なし',
 			'detail_after' => '効果なし',
 			'effect' => '0',
 			'percent' => '0',

@@ -19,7 +19,7 @@ class Gacha extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
+		'gacha_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -29,7 +29,7 @@ class Gacha extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail' => array(
+		'gacha_detail' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

@@ -43,8 +43,8 @@ class UserPresentBoxFixture extends CakeTestFixture {
 			'target' => 1,
 			'message' => 'Lorem ipsum dolor sit amet',
 			'delete_flg' => 1,
-			'created' => '2014-02-17 19:26:00',
-			'modified' => '2014-02-17 19:26:00'
+			'created' => '2014-02-17 21:30:47',
+			'modified' => '2014-02-17 21:30:47'
 		),
 	);
 

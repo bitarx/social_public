@@ -19,7 +19,7 @@ class Raid extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
+		'raid_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

@@ -19,7 +19,7 @@ class EvQuest extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'title' => array(
+		'ev_quest_title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -29,7 +29,7 @@ class EvQuest extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail' => array(
+		'ev_quest_detail' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

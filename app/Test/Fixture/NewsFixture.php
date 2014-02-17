@@ -12,8 +12,8 @@ class NewsFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'news_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
-		'title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'detail' => array('type' => 'text', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'news_title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'news_detail' => array('type' => 'text', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'start_time' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'end_time' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 3),

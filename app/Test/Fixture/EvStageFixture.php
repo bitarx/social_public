@@ -13,7 +13,7 @@ class EvStageFixture extends CakeTestFixture {
 	public $fields = array(
 		'ev_stage_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 8, 'key' => 'primary'),
 		'ev_quest_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'key' => 'index'),
-		'title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'ev_stage_title' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 50, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'use_act' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'comment' => '消費行動力'),
 		'prob_get' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 5, 'comment' => '何かを取得する確率'),
 		'enemy_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 10, 'key' => 'index', 'comment' => 'ステージのボス'),
@@ -35,7 +35,7 @@ class EvStageFixture extends CakeTestFixture {
 		array(
 			'ev_stage_id' => '1',
 			'ev_quest_id' => '1',
-			'title' => '留学生と勝負！',
+			'ev_stage_title' => '留学生と勝負！',
 			'use_act' => '5',
 			'prob_get' => '20',
 			'enemy_id' => '31',
@@ -44,7 +44,7 @@ class EvStageFixture extends CakeTestFixture {
 		array(
 			'ev_stage_id' => '2',
 			'ev_quest_id' => '1',
-			'title' => '留学生に初ハメ！',
+			'ev_stage_title' => '留学生に初ハメ！',
 			'use_act' => '5',
 			'prob_get' => '20',
 			'enemy_id' => '32',
@@ -53,7 +53,7 @@ class EvStageFixture extends CakeTestFixture {
 		array(
 			'ev_stage_id' => '3',
 			'ev_quest_id' => '1',
-			'title' => '魔女と子作り！',
+			'ev_stage_title' => '魔女と子作り！',
 			'use_act' => '5',
 			'prob_get' => '20',
 			'enemy_id' => '33',

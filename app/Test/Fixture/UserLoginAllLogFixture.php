@@ -37,8 +37,8 @@ class UserLoginAllLogFixture extends CakeTestFixture {
 			'kind' => 1,
 			'target' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-17 19:25:59',
-			'modified' => '2014-02-17 19:25:59'
+			'created' => '2014-02-17 21:30:46',
+			'modified' => '2014-02-17 21:30:46'
 		),
 	);
 

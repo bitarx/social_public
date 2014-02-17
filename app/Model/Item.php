@@ -20,7 +20,7 @@ class Item extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
+		'item_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -30,7 +30,7 @@ class Item extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail' => array(
+		'item_detail' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

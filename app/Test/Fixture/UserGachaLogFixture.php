@@ -38,8 +38,8 @@ class UserGachaLogFixture extends CakeTestFixture {
 			'card_id' => 1,
 			'end_flg' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-17 19:25:58',
-			'modified' => '2014-02-17 19:25:58'
+			'created' => '2014-02-17 21:30:45',
+			'modified' => '2014-02-17 21:30:45'
 		),
 	);
 

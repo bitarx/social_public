@@ -19,7 +19,7 @@ class Skill extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
+		'skill_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -69,7 +69,7 @@ class Skill extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'words' => array(
+		'skill_words' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

@@ -41,8 +41,8 @@ class UserRaidFixture extends CakeTestFixture {
 			'enemy_id' => 1,
 			'hp' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-17 19:26:01',
-			'updated' => '2014-02-17 19:26:01'
+			'created' => '2014-02-17 21:30:48',
+			'updated' => '2014-02-17 21:30:48'
 		),
 	);
 

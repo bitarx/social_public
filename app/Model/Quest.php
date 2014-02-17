@@ -19,7 +19,7 @@ class Quest extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'title' => array(
+		'quest_title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -29,7 +29,7 @@ class Quest extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail' => array(
+		'quest_detail' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

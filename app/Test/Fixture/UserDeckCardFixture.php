@@ -33,8 +33,8 @@ class UserDeckCardFixture extends CakeTestFixture {
 			'user_deck_id' => 1,
 			'card_id' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-17 19:25:57',
-			'modified' => '2014-02-17 19:25:57'
+			'created' => '2014-02-17 21:30:44',
+			'modified' => '2014-02-17 21:30:44'
 		),
 	);
 

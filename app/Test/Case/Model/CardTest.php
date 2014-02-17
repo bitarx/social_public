@@ -38,4 +38,20 @@ class CardTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+/**
+ * testGetCardData method
+ *
+ * @return void
+ */
+	public function testGetCardData() {
+	}
+
+/**
+ * testGetStartCardList method
+ *
+ * @return void
+ */
+	public function testGetStartCardList() {
+	}
+
 }

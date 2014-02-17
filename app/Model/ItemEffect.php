@@ -19,7 +19,7 @@ class ItemEffect extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'detail' => array(
+		'item_effect_detail' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',

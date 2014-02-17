@@ -67,14 +67,18 @@ class AppModel extends Model {
 
         $data = array();
         if (!empty($ret)) {
-            foreach ($ret as $values) {
+            if ($kind == 'first') {
                 $row = array();
-                foreach ($values as $val) {
+                foreach ($ret as $val) {
                      $row = array_merge($row, $val);
                 }
-                if ($kind == 'first') {
-                    $data = $row;
-                } else {
+                $data = $row;
+            } else {
+                foreach ($ret as $values) {
+                    $row = array();
+                    foreach ($values as $val) {
+                         $row = array_merge($row, $val);
+                    }
                     $data[] = $row;
                 }
             }

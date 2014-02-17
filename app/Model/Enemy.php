@@ -27,7 +27,7 @@ class Enemy extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'name' => array(
+		'card_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -37,7 +37,7 @@ class Enemy extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'hp' => array(
+		'enemy_hp' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -47,7 +47,7 @@ class Enemy extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'atk' => array(
+		'enemy_atk' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -57,7 +57,7 @@ class Enemy extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'def' => array(
+		'enemy_def' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
