@@ -9974,3 +9974,636 @@ Stack Trace:
 #12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
 #13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 {main}
+2014-02-18 05:37:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 05:37:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 05:37:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 07:47:19 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-18 07:47:19 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-18 07:47:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 07:47:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 12:50:35 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg`, `Skill`.`skill_id`, `Skill`.`skill_name`, `Skill`.`effect`, `Skill`.`updown`, `Skill`.`target`, `Skill`.`percent`, `Skill`.`skill_words`, `Skill`.`delete_flg` FROM `test_eres`.`cards` AS `Card` LEFT JOIN `test_eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` IS NULL
+2014-02-18 12:51:20 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg`, `Skill`.`skill_id`, `Skill`.`skill_name`, `Skill`.`effect`, `Skill`.`updown`, `Skill`.`target`, `Skill`.`percent`, `Skill`.`skill_words`, `Skill`.`delete_flg` FROM `test_eres`.`cards` AS `Card` LEFT JOIN `test_eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` IS NULL
+2014-02-18 13:04:29 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg`, `Skill`.`skill_id`, `Skill`.`skill_name`, `Skill`.`effect`, `Skill`.`updown`, `Skill`.`target`, `Skill`.`percent`, `Skill`.`skill_words`, `Skill`.`delete_flg` FROM `test_eres`.`cards` AS `Card` LEFT JOIN `test_eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` IN (13, 43)
+2014-02-18 13:16:41 Error: SELECT `UserCard`.`user_card_id`, `UserCard`.`user_id`, `UserCard`.`card_id`, `UserCard`.`atk`, `UserCard`.`def`, `UserCard`.`level`, `UserCard`.`exp`, `UserCard`.`skill_level`, `UserCard`.`skill_exp`, `UserCard`.`delete_flg`, `UserCard`.`created`, `UserCard`.`modified`, `User`.`user_id`, `User`.`user_name`, `User`.`sns_user_id`, `User`.`carrer`, `User`.`delete_flg`, `User`.`created`, `User`.`modified`, `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg` FROM `test_eres`.`user_cards` AS `UserCard` LEFT JOIN `test_eres`.`users` AS `User` ON (`UserCard`.`user_id` = `User`.`user_id`) LEFT JOIN `test_eres`.`cards` AS `Card` ON (`UserCard`.`card_id` = `Card`.`card_id`)  WHERE `UserCard`.`delete_flg` = 0 AND `UserCard`.`user_id` = 1
+2014-02-18 13:17:11 Error: SELECT `UserCard`.`user_card_id`, `UserCard`.`user_id`, `UserCard`.`card_id`, `UserCard`.`atk`, `UserCard`.`def`, `UserCard`.`level`, `UserCard`.`exp`, `UserCard`.`skill_level`, `UserCard`.`skill_exp`, `UserCard`.`delete_flg`, `UserCard`.`created`, `UserCard`.`modified`, `User`.`user_id`, `User`.`user_name`, `User`.`sns_user_id`, `User`.`carrer`, `User`.`delete_flg`, `User`.`created`, `User`.`modified`, `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg` FROM `test_eres`.`user_cards` AS `UserCard` LEFT JOIN `test_eres`.`users` AS `User` ON (`UserCard`.`user_id` = `User`.`user_id`) LEFT JOIN `test_eres`.`cards` AS `Card` ON (`UserCard`.`card_id` = `Card`.`card_id`)  WHERE `UserCard`.`delete_flg` = 0 AND `UserCard`.`user_id` = 1
+2014-02-18 13:20:45 Error: SELECT `UserCard`.`user_card_id`, `UserCard`.`user_id`, `UserCard`.`card_id`, `UserCard`.`atk`, `UserCard`.`def`, `UserCard`.`level`, `UserCard`.`exp`, `UserCard`.`skill_level`, `UserCard`.`skill_exp`, `UserCard`.`delete_flg`, `UserCard`.`created`, `UserCard`.`modified`, `User`.`user_id`, `User`.`user_name`, `User`.`sns_user_id`, `User`.`carrer`, `User`.`delete_flg`, `User`.`created`, `User`.`modified`, `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_title`, `Card`.`height`, `Card`.`weight`, `Card`.`size`, `Card`.`blood`, `Card`.`rare_level`, `Card`.`attr`, `Card`.`card_hp`, `Card`.`card_atk`, `Card`.`card_def`, `Card`.`skill_id`, `Card`.`card_words`, `Card`.`card_detail`, `Card`.`delete_flg` FROM `test_eres`.`user_cards` AS `UserCard` LEFT JOIN `test_eres`.`users` AS `User` ON (`UserCard`.`user_id` = `User`.`user_id`) LEFT JOIN `test_eres`.`cards` AS `Card` ON (`UserCard`.`card_id` = `Card`.`card_id`)  WHERE `UserCard`.`delete_flg` = 0 AND `UserCard`.`user_id` = 1
+2014-02-18 14:08:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 14:08:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 14:08:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 16:24:16 Error: [MissingControllerException] Controller class Wp-includesController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-includesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp-includes/js/tinymce/themes/advanced/about.htm
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-18 17:09:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 17:09:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 17:09:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 19:03:14 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-18 19:07:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 19:07:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 19:13:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 19:16:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(User), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/AppController.php(82): Model->field('id', Array)
+#8 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#9 /var/www/asns/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(SnsUsersController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-02-18 19:50:23 Error: User save failed :Tutorials/tutorial_1
+2014-02-18 19:55:30 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 19:58:10 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 19:59:33 Error: User save failed :Tutorials/tutorial_1
+2014-02-18 20:21:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-18 20:40:00 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 20:41:37 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 20:41:46 Error: User save failed :Tutorials/tutorial_1
+2014-02-18 20:41:50 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 21:12:00 Error: UserCard save failed :Tutorials/tutorial_5
+2014-02-18 21:17:00 Error: UserCard save failed :Tutorials/tutorial_5
+2014-02-18 21:30:06 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-02-18 21:47:03 Error: ownerId:1
+2014-02-18 21:47:03 Error: AppuserId:
+2014-02-18 21:47:04 Error: ownerId:1
+2014-02-18 21:47:04 Error: AppuserId:
+2014-02-18 21:47:04 Error: ownerId:1
+2014-02-18 21:47:04 Error: AppuserId:
+2014-02-18 21:47:05 Error: ownerId:1
+2014-02-18 21:47:05 Error: AppuserId:
+2014-02-18 21:47:05 Error: ownerId:1
+2014-02-18 21:47:05 Error: AppuserId:
+2014-02-18 21:47:32 Error: ownerId:1
+2014-02-18 21:47:32 Error: AppuserId:
+2014-02-18 21:47:32 Error: ownerId:1
+2014-02-18 21:47:32 Error: AppuserId:
+2014-02-18 21:47:33 Error: ownerId:1
+2014-02-18 21:47:33 Error: AppuserId:
+2014-02-18 21:47:33 Error: ownerId:1
+2014-02-18 21:47:33 Error: AppuserId:
+2014-02-18 21:47:34 Error: ownerId:1
+2014-02-18 21:47:34 Error: AppuserId:
+2014-02-18 21:47:36 Error: ownerId:1
+2014-02-18 21:47:36 Error: AppuserId:
+2014-02-18 21:47:38 Error: ownerId:1
+2014-02-18 21:47:38 Error: AppuserId:
+2014-02-18 21:47:40 Error: ownerId:1
+2014-02-18 21:47:40 Error: AppuserId:
+2014-02-18 21:47:43 Error: ownerId:1
+2014-02-18 21:47:43 Error: AppuserId:
+2014-02-18 21:47:45 Error: ownerId:1
+2014-02-18 21:47:45 Error: AppuserId:
+2014-02-18 21:47:47 Error: ownerId:1
+2014-02-18 21:47:47 Error: AppuserId:
+2014-02-18 21:47:49 Error: ownerId:1
+2014-02-18 21:47:49 Error: AppuserId:
+2014-02-18 21:47:51 Error: ownerId:1
+2014-02-18 21:47:51 Error: AppuserId:
+2014-02-18 21:47:53 Error: ownerId:1
+2014-02-18 21:47:53 Error: AppuserId:
+2014-02-18 21:48:18 Error: ownerId:1
+2014-02-18 21:48:18 Error: AppuserId:
+2014-02-18 21:48:18 Error: ownerId:1
+2014-02-18 21:48:18 Error: AppuserId:
+2014-02-18 21:48:19 Error: ownerId:1
+2014-02-18 21:48:19 Error: AppuserId:
+2014-02-18 21:48:20 Error: ownerId:1
+2014-02-18 21:48:20 Error: AppuserId:
+2014-02-18 21:48:20 Error: ownerId:1
+2014-02-18 21:48:20 Error: AppuserId:
+2014-02-18 21:48:23 Error: ownerId:1
+2014-02-18 21:48:23 Error: AppuserId:
+2014-02-18 21:48:44 Error: ownerId:1
+2014-02-18 21:48:44 Error: AppuserId:1
+2014-02-18 21:48:44 Error: ownerId:1
+2014-02-18 21:48:44 Error: AppuserId:1
+2014-02-18 21:48:44 Error: ownerId:1
+2014-02-18 21:48:44 Error: AppuserId:1
+2014-02-18 21:48:45 Error: ownerId:1
+2014-02-18 21:48:45 Error: AppuserId:1
+2014-02-18 21:48:46 Error: ownerId:1
+2014-02-18 21:48:46 Error: AppuserId:1
+2014-02-18 21:48:48 Error: ownerId:1
+2014-02-18 21:48:48 Error: AppuserId:1
+2014-02-18 21:48:50 Error: ownerId:1
+2014-02-18 21:48:50 Error: AppuserId:1
+2014-02-18 21:48:52 Error: ownerId:1
+2014-02-18 21:48:52 Error: AppuserId:1
+2014-02-18 21:48:55 Error: ownerId:1
+2014-02-18 21:48:55 Error: AppuserId:1
+2014-02-18 21:48:57 Error: ownerId:1
+2014-02-18 21:48:57 Error: AppuserId:1
+2014-02-18 21:48:59 Error: ownerId:1
+2014-02-18 21:48:59 Error: AppuserId:1
+2014-02-18 21:49:01 Error: ownerId:1
+2014-02-18 21:49:01 Error: AppuserId:1
+2014-02-18 21:49:03 Error: ownerId:1
+2014-02-18 21:49:03 Error: AppuserId:1
+2014-02-18 21:49:06 Error: ownerId:1
+2014-02-18 21:49:06 Error: AppuserId:1
+2014-02-18 21:49:28 Error: ownerId:1
+2014-02-18 21:49:28 Error: AppuserId:1
+2014-02-18 21:49:29 Error: ownerId:1
+2014-02-18 21:49:29 Error: AppuserId:1
+2014-02-18 21:49:29 Error: ownerId:1
+2014-02-18 21:49:29 Error: AppuserId:1
+2014-02-18 21:49:30 Error: ownerId:1
+2014-02-18 21:49:30 Error: AppuserId:1
+2014-02-18 21:49:30 Error: ownerId:1
+2014-02-18 21:49:30 Error: AppuserId:1
+2014-02-18 21:52:26 Error: ownerId:1
+2014-02-18 21:52:26 Error: AppuserId:1
+2014-02-18 21:52:27 Error: ownerId:1
+2014-02-18 21:52:27 Error: AppuserId:1
+2014-02-18 21:52:28 Error: ownerId:1
+2014-02-18 21:52:28 Error: AppuserId:1
+2014-02-18 21:52:28 Error: ownerId:1
+2014-02-18 21:52:28 Error: AppuserId:1
+2014-02-18 21:52:29 Error: ownerId:1
+2014-02-18 21:52:29 Error: AppuserId:1
+2014-02-18 21:52:29 Error: INSERT INTO `test_eres`.`card_groups` (`card_group_id`, `evol_group`, `card_id`, `prev`, `next`, `delete_flg`) VALUES (?,?,?,?,?,?)
+2014-02-18 22:13:01 Error: ownerId:1
+2014-02-18 22:13:01 Error: AppuserId:1
+2014-02-18 22:13:02 Error: ownerId:1
+2014-02-18 22:13:02 Error: AppuserId:1
+2014-02-18 22:13:02 Error: ownerId:1
+2014-02-18 22:13:02 Error: AppuserId:1
+2014-02-18 22:13:03 Error: ownerId:1
+2014-02-18 22:13:03 Error: AppuserId:1
+2014-02-18 22:13:03 Error: ownerId:1
+2014-02-18 22:13:03 Error: AppuserId:1
+2014-02-18 22:13:05 Error: ownerId:1
+2014-02-18 22:13:05 Error: AppuserId:1
+2014-02-18 22:13:08 Error: ownerId:1
+2014-02-18 22:13:08 Error: AppuserId:1
+2014-02-18 22:13:10 Error: ownerId:1
+2014-02-18 22:13:10 Error: AppuserId:1
+2014-02-18 22:13:12 Error: ownerId:1
+2014-02-18 22:13:12 Error: AppuserId:1
+2014-02-18 22:13:14 Error: ownerId:1
+2014-02-18 22:13:14 Error: AppuserId:1
+2014-02-18 22:13:16 Error: ownerId:1
+2014-02-18 22:13:16 Error: AppuserId:1
+2014-02-18 22:13:18 Error: ownerId:1
+2014-02-18 22:13:18 Error: AppuserId:1
+2014-02-18 22:13:20 Error: ownerId:1
+2014-02-18 22:13:20 Error: AppuserId:1
+2014-02-18 22:13:23 Error: ownerId:1
+2014-02-18 22:13:23 Error: AppuserId:1
+2014-02-18 22:15:55 Error: ownerId:1
+2014-02-18 22:15:55 Error: AppuserId:1
+2014-02-18 22:15:56 Error: ownerId:1
+2014-02-18 22:15:56 Error: AppuserId:1
+2014-02-18 22:15:56 Error: ownerId:1
+2014-02-18 22:15:56 Error: AppuserId:1
+2014-02-18 22:15:57 Error: ownerId:1
+2014-02-18 22:15:57 Error: AppuserId:1
+2014-02-18 22:15:57 Error: ownerId:1
+2014-02-18 22:15:57 Error: AppuserId:1
+2014-02-18 22:15:59 Error: ownerId:1
+2014-02-18 22:15:59 Error: AppuserId:1
+2014-02-18 22:16:02 Error: ownerId:1
+2014-02-18 22:16:02 Error: AppuserId:1
+2014-02-18 22:16:04 Error: ownerId:1
+2014-02-18 22:16:04 Error: AppuserId:1
+2014-02-18 22:16:07 Error: ownerId:1
+2014-02-18 22:16:07 Error: AppuserId:1
+2014-02-18 22:16:09 Error: ownerId:1
+2014-02-18 22:16:09 Error: AppuserId:1
+2014-02-18 22:16:11 Error: ownerId:1
+2014-02-18 22:16:11 Error: AppuserId:1
+2014-02-18 22:16:13 Error: ownerId:1
+2014-02-18 22:16:13 Error: AppuserId:1
+2014-02-18 22:16:16 Error: ownerId:1
+2014-02-18 22:16:16 Error: AppuserId:1
+2014-02-18 22:16:18 Error: ownerId:1
+2014-02-18 22:16:18 Error: AppuserId:1
+2014-02-18 22:17:13 Error: ownerId:1
+2014-02-18 22:17:13 Error: AppuserId:1
+2014-02-18 22:17:13 Error: ownerId:1
+2014-02-18 22:17:13 Error: AppuserId:1
+2014-02-18 22:17:14 Error: ownerId:1
+2014-02-18 22:17:14 Error: AppuserId:1
+2014-02-18 22:17:15 Error: ownerId:1
+2014-02-18 22:17:15 Error: AppuserId:1
+2014-02-18 22:17:15 Error: ownerId:1
+2014-02-18 22:17:15 Error: AppuserId:1
+2014-02-18 22:17:18 Error: ownerId:1
+2014-02-18 22:17:18 Error: AppuserId:1
+2014-02-18 22:17:20 Error: ownerId:1
+2014-02-18 22:17:20 Error: AppuserId:1
+2014-02-18 22:17:22 Error: ownerId:1
+2014-02-18 22:17:22 Error: AppuserId:1
+2014-02-18 22:17:24 Error: ownerId:1
+2014-02-18 22:17:24 Error: AppuserId:1
+2014-02-18 22:17:26 Error: ownerId:1
+2014-02-18 22:17:26 Error: AppuserId:1
+2014-02-18 22:17:28 Error: ownerId:1
+2014-02-18 22:17:28 Error: AppuserId:1
+2014-02-18 22:17:31 Error: ownerId:1
+2014-02-18 22:17:31 Error: AppuserId:1
+2014-02-18 22:17:33 Error: ownerId:1
+2014-02-18 22:17:33 Error: AppuserId:1
+2014-02-18 22:17:35 Error: ownerId:1
+2014-02-18 22:17:35 Error: AppuserId:1
+2014-02-18 22:19:58 Error: ownerId:1
+2014-02-18 22:19:58 Error: AppuserId:1
+2014-02-18 22:19:59 Error: ownerId:1
+2014-02-18 22:19:59 Error: AppuserId:1
+2014-02-18 22:19:59 Error: ownerId:1
+2014-02-18 22:19:59 Error: AppuserId:1
+2014-02-18 22:20:00 Error: ownerId:1
+2014-02-18 22:20:00 Error: AppuserId:1
+2014-02-18 22:20:00 Error: ownerId:1
+2014-02-18 22:20:00 Error: AppuserId:1
+2014-02-18 22:20:03 Error: ownerId:1
+2014-02-18 22:20:03 Error: AppuserId:1
+2014-02-18 22:20:05 Error: ownerId:1
+2014-02-18 22:20:05 Error: AppuserId:1
+2014-02-18 22:20:08 Error: ownerId:1
+2014-02-18 22:20:08 Error: AppuserId:1
+2014-02-18 22:20:10 Error: ownerId:1
+2014-02-18 22:20:10 Error: AppuserId:1
+2014-02-18 22:20:13 Error: ownerId:1
+2014-02-18 22:20:13 Error: AppuserId:1
+2014-02-18 22:20:15 Error: ownerId:1
+2014-02-18 22:20:15 Error: AppuserId:1
+2014-02-18 22:20:17 Error: ownerId:1
+2014-02-18 22:20:17 Error: AppuserId:1
+2014-02-18 22:20:19 Error: ownerId:1
+2014-02-18 22:20:19 Error: AppuserId:1
+2014-02-18 22:20:21 Error: ownerId:1
+2014-02-18 22:20:21 Error: AppuserId:1
+2014-02-18 22:20:50 Error: ownerId:1
+2014-02-18 22:20:50 Error: AppuserId:1
+2014-02-18 22:20:50 Error: ownerId:1
+2014-02-18 22:20:50 Error: AppuserId:1
+2014-02-18 22:20:50 Error: ownerId:1
+2014-02-18 22:20:50 Error: AppuserId:1
+2014-02-18 22:20:51 Error: ownerId:1
+2014-02-18 22:20:51 Error: AppuserId:1
+2014-02-18 22:20:52 Error: ownerId:1
+2014-02-18 22:20:52 Error: AppuserId:1
+2014-02-18 22:25:45 Error: ownerId:
+2014-02-18 22:25:45 Error: AppuserId:
+2014-02-18 22:25:46 Error: ownerId:
+2014-02-18 22:25:46 Error: AppuserId:
+2014-02-18 22:25:47 Error: ownerId:
+2014-02-18 22:25:47 Error: AppuserId:
+2014-02-18 22:26:06 Error: ownerId:1
+2014-02-18 22:26:06 Error: AppuserId:1
+2014-02-18 22:26:07 Error: ownerId:1
+2014-02-18 22:26:07 Error: AppuserId:1
+2014-02-18 22:26:08 Error: ownerId:1
+2014-02-18 22:26:08 Error: AppuserId:1
+2014-02-18 22:26:08 Error: ownerId:1
+2014-02-18 22:26:08 Error: AppuserId:1
+2014-02-18 22:26:08 Error: ownerId:1
+2014-02-18 22:26:08 Error: AppuserId:1
+2014-02-18 22:26:22 Error: ownerId:1
+2014-02-18 22:26:22 Error: AppuserId:1
+2014-02-18 22:26:22 Error: ownerId:1
+2014-02-18 22:26:22 Error: AppuserId:1
+2014-02-18 22:26:23 Error: ownerId:1
+2014-02-18 22:26:23 Error: AppuserId:1
+2014-02-18 22:26:24 Error: ownerId:1
+2014-02-18 22:26:24 Error: AppuserId:1
+2014-02-18 22:26:24 Error: ownerId:1
+2014-02-18 22:26:24 Error: AppuserId:1
+2014-02-18 22:26:25 Error: ownerId:1
+2014-02-18 22:26:25 Error: AppuserId:1
+2014-02-18 22:26:25 Error: ownerId:1
+2014-02-18 22:26:25 Error: AppuserId:1
+2014-02-18 22:26:26 Error: ownerId:1
+2014-02-18 22:26:26 Error: AppuserId:1
+2014-02-18 22:26:27 Error: ownerId:1
+2014-02-18 22:26:27 Error: AppuserId:1
+2014-02-18 22:26:28 Error: ownerId:1
+2014-02-18 22:26:28 Error: AppuserId:1
+2014-02-18 22:26:28 Error: ownerId:1
+2014-02-18 22:26:28 Error: AppuserId:1
+2014-02-18 22:26:29 Error: ownerId:1
+2014-02-18 22:26:29 Error: AppuserId:1
+2014-02-18 22:26:29 Error: ownerId:1
+2014-02-18 22:26:29 Error: AppuserId:1
+2014-02-18 22:26:30 Error: ownerId:1
+2014-02-18 22:26:30 Error: AppuserId:1
+2014-02-18 22:27:09 Error: ownerId:1
+2014-02-18 22:27:09 Error: AppuserId:1
+2014-02-18 22:27:10 Error: ownerId:1
+2014-02-18 22:27:10 Error: AppuserId:1
+2014-02-18 22:27:10 Error: ownerId:1
+2014-02-18 22:27:10 Error: AppuserId:1
+2014-02-18 22:27:11 Error: ownerId:1
+2014-02-18 22:27:11 Error: AppuserId:1
+2014-02-18 22:27:11 Error: ownerId:1
+2014-02-18 22:27:11 Error: AppuserId:1
+2014-02-18 22:27:12 Error: ownerId:1
+2014-02-18 22:27:12 Error: AppuserId:1
+2014-02-18 22:27:12 Error: ownerId:1
+2014-02-18 22:27:12 Error: AppuserId:1
+2014-02-18 22:27:12 Error: ownerId:1
+2014-02-18 22:27:12 Error: AppuserId:1
+2014-02-18 22:27:13 Error: ownerId:1
+2014-02-18 22:27:13 Error: AppuserId:1
+2014-02-18 22:27:14 Error: ownerId:1
+2014-02-18 22:27:14 Error: AppuserId:1
+2014-02-18 22:27:14 Error: ownerId:1
+2014-02-18 22:27:14 Error: AppuserId:1
+2014-02-18 22:27:15 Error: ownerId:1
+2014-02-18 22:27:15 Error: AppuserId:1
+2014-02-18 22:27:15 Error: ownerId:1
+2014-02-18 22:27:15 Error: AppuserId:1
+2014-02-18 22:27:16 Error: ownerId:1
+2014-02-18 22:27:16 Error: AppuserId:1

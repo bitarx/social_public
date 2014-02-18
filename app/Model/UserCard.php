@@ -136,4 +136,38 @@ class UserCard extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * 初回カード登録
+     *
+     * @author imanishi
+     * @param int $userId
+     * @param array $list カードデータ
+     * @return bool
+     */
+    public function reginsStartCard ($userId, $list) {
+
+        $data = array();
+        foreach ($list as $val) {
+            $data[] = array($userId, $val['card_id'], $val['card_atk'], $val['card_def']);
+        }
+        $fields = array('user_id', 'card_id', 'atk', 'def');
+        return $this->insertBulk($fields, $data);
+    }
+
+    /**
+     * 所持カードデータ取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @param array $data 所持カードデータ
+     * @return bool
+     */
+    public function getUserCard ($userId) {
+
+        $where = array('user_id' => $userId);
+        $data = $this->getAllFind($where);
+        return $data;
+    }
 }

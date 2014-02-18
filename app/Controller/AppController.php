@@ -78,14 +78,15 @@ class AppController extends Controller {
             $this->rd('Errors', 'index', array('error' => 1 ));
         } else { 
             // 正常なアクセスの場合はユーザIDをセット
+//$this->log('ownerId:'. $this->ownerId); 
             $where = array('User.sns_user_id' => $this->ownerId); 
-            $this->userId = $this->User->field('id', $where);
+            $this->userId = $this->User->field('user_id', $where);
 //$this->log('AppuserId:'. $this->userId); 
 
             // チュートリアル判定
             $where = array('user_id' => $this->userId);
             $fields = array('tutorial_id', 'end_flg');
-            $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
+            $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
 
             $ary = array_merge(self::$ctlRegist , self::$ctlError);
             if (!in_array($this->name, $ary)) {

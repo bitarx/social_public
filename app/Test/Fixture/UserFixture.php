@@ -34,9 +34,9 @@ class UserFixture extends CakeTestFixture {
 		array(
 			'user_id' => 1,
 			'user_name' => 'Lorem ipsum dolor sit amet',
-			'sns_user_id' => 'Lorem ipsum dolor sit amet',
+			'sns_user_id' => '1',
 			'carrer' => 1,
-			'delete_flg' => 1,
+			'delete_flg' => 0,
 			'created' => '2014-02-17 21:30:49',
 			'modified' => '2014-02-17 21:30:49'
 		),

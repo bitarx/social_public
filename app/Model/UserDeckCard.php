@@ -20,7 +20,7 @@ class UserDeckCard extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'card_id' => array(
+		'user_card_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -58,4 +58,23 @@ class UserDeckCard extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * デッキ登録
+     *
+     * @author imanishi
+     * @param int $userDeckId
+     * @param array $list カードデータ
+     * @return bool
+     */
+    public function regist ($userDeckId, $list) {
+
+        $fields = array('user_deck_id', 'user_card_id');
+        $data = array();
+        foreach ($list as $val) {
+            $data[] = array($userDeckId, $val['user_card_id']);
+        }
+        return $this->insertBulk($fields, $data);
+    }
 }

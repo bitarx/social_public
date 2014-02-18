@@ -47,7 +47,7 @@ class UserCardFixture extends CakeTestFixture {
 			'exp' => 1,
 			'skill_level' => 1,
 			'skill_exp' => 1,
-			'delete_flg' => 1,
+			'delete_flg' => 0,
 			'created' => '2014-02-17 21:30:43',
 			'modified' => '2014-02-17 21:30:43'
 		),

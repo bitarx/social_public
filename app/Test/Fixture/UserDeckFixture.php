@@ -31,6 +31,7 @@ class UserDeckFixture extends CakeTestFixture {
  * @var array
  */
 	public $records = array(
+    /*
 		array(
 			'id' => 1,
 			'user_id' => 1,
@@ -40,6 +41,7 @@ class UserDeckFixture extends CakeTestFixture {
 			'created' => '2014-02-17 21:30:44',
 			'modified' => '2014-02-17 21:30:44'
 		),
+     */
 	);
 
 }

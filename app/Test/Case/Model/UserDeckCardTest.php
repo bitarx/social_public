@@ -39,4 +39,23 @@ class UserDeckCardTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * デッキ登録
+     *
+     * @author imanishi
+     */
+    public function testRegistUserDeckCard() {
+        $userDeckId = 1;
+
+         $list = array(
+            array(
+                'user_card_id' => '1',
+            ),
+            array(
+                'user_card_id' => '2',
+            ),
+        );
+        $list = $this->UserDeckCard->regist ($userDeckId, $list);
+    }
 }

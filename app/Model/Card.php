@@ -7,6 +7,10 @@ App::uses('AppModel', 'Model');
  */
 class Card extends AppModel {
 
+
+    // 初期配布カードID
+    public $startCardIds = array( 13, 43 );
+
 /**
  * Primary key field
  *
@@ -188,4 +192,33 @@ class Card extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * カードデータ取得
+     *
+     * @author imanishi
+     * @param int カードID
+     * @return array 指定レコード
+     */
+     public function getCardData($id) {
+
+         $where = array('card_id' => $id);
+         $row = $this->getAllFind($where, array(), 'first');
+         return $row;
+     }
+
+    /**
+     * 初期カードデータ取得
+     *
+     * @author imanishi
+     * @return array 指定レコード
+     */
+     public function getStartCardList() {
+
+         $where = array('card_id' => $this->startCardIds);
+         $row = $this->getAllFind($where);
+
+         return $row;
+     }
 }

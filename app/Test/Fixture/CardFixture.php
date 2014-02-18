@@ -54,7 +54,7 @@ class CardFixture extends CakeTestFixture {
 			'card_atk' => '200',
 			'card_def' => '250',
 			'skill_id' => '1',
-			'card_words' => '世のため人のためとかはわからないけど、私の力が役に立つなら、まあ協力してあげてもいい……かな？',
+			'card_words' => 'test',
 			'card_detail' => '名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。',
 			'delete_flg' => '0'
 		),

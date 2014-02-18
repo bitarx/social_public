@@ -41,10 +41,10 @@ class TutorialsController extends ApiController {
         $current = str_replace(self::$actionPref, '', $this->action);
 
         // 不正遷移は戻す
-        $where = array('id' => $row['tutorial_id']); 
-        $next = $this->Tutorial->field('next', $where);
+        $where = array('tutorial_id' => $row['tutorial_id']); 
+        $tutorial_next = $this->Tutorial->field('tutorial_next', $where);
         if ($current != $row['tutorial_id']) {
-            if ($current != $next) {
+            if ($current != $tutorial_next) {
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
@@ -80,7 +80,7 @@ class TutorialsController extends ApiController {
                 if (!$ret) {
                     throw new AppException('User save failed :' . $this->name . '/' . $this->action);
                 }
-                $userId = $ret['User']['id'];
+                $userId = $ret['User']['user_id'];
             }
 
             $where = array(
@@ -114,7 +114,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
 	}
 
    /**
@@ -155,7 +155,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row', $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -196,7 +196,7 @@ class TutorialsController extends ApiController {
     
         // アサイン
         $this->set('row', $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -237,7 +237,7 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row', $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -280,14 +280,17 @@ class TutorialsController extends ApiController {
             $values = array(
                 'user_id' => $this->userId 
             ,   'kind' => 1
-            ,   'name' => ''
             );
             $ret = $this->UserDeck->save($values);
-            if (!$ret) {
+            if (empty($ret['UserDeck']['id'])) {
                 throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
             }
 
-            $ret = $this->UserDeckCard->save($values);
+            $list = $this->UserCard->getUserCard ($this->userId);
+            if (empty($list[0]['user_card_id'])) {
+                throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
+            }
+            $ret = $this->UserDeckCard->regist($ret['UserDeck']['id'], $list);
             if (!$ret) {
                 throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
             }
@@ -307,7 +310,7 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row', $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -348,7 +351,7 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -389,7 +392,7 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -430,7 +433,7 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -470,7 +473,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -510,7 +513,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -550,7 +553,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -590,7 +593,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -630,7 +633,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -670,7 +673,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -710,7 +713,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
     /**
@@ -751,7 +754,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['next']);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
 

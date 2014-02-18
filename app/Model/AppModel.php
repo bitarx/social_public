@@ -166,4 +166,16 @@ class AppModel extends Model {
          }
          return $tablename;
      }
+
+     /**
+      * デバッグ:最後のクエリを出力
+      */
+    public function qlog() {
+
+         $log = $this->getDataSource()->getLog(false, false);
+         $num = count($log['count']);
+         $querylog = $log['log'][$num -1 ]['query'];
+         $this->log($querylog);
+         return $querylog;
+    }
 }
