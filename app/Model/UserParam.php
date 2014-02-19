@@ -133,4 +133,20 @@ class UserParam extends AppModel {
         $ret = $this->getAllFind($where, array(), 'first'); 
         return $ret;
     } 
+
+    /**
+     * ユーザステータスを更新
+     *
+     * @param int $userId
+     * @param array $data 更新データ
+     * @return array 更新デー
+     */
+    public function setUserParams($userId, $data) { 
+
+        $values = array('user_id' => $userId); 
+        foreach ($data as $key => $val) {
+            $values[$key] = $val;
+        }
+        return $this->save($values);
+    } 
 }

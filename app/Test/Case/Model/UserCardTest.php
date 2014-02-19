@@ -112,4 +112,20 @@ class UserCardTest extends CakeTestCase {
          $this->assertEquals($data[0]['user_card_id'], $expected[0]['user_card_id']);
     }
 
+    /**
+     * 取得したアイテム等を登録するメソッド確認
+     *
+     * @author imanishi 
+     */
+    public function testRegistCard() {
+
+        $targetId = 1;
+        $userId = 1;
+
+        // カード
+        $num = 2;
+        $ret = $this->UserCard->registCard($userId, $targetId, $num);
+        $this->assertTrue($ret);
+    }
+
 }

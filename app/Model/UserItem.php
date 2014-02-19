@@ -1,5 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Item', 'Model');
 /**
  * UserItem Model
  *
@@ -102,4 +103,22 @@ class UserItem extends AppModel {
 		)
 	);
 
+    /**
+     * 取得アイテムを登録
+     * @author imanishi 
+     * @param int $userId
+     * @param int $itemId
+     * @param int $num
+     * @return bool 
+     */
+    public function registItem($userId, $itemId, $num) {
+
+        $values = array(
+            'user_id' => $userId
+        ,   'item_id' => $itemId
+        ,   'num' => $num
+        );
+        $ret = $this->save($values);
+        return $ret;
+    }
 }

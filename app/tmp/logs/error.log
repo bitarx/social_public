@@ -10642,3 +10642,11 @@ Request URL: /index.php/robots.txt
 Stack Trace:
 #0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-02-20 06:33:21 Error: sql:INSERT INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?)
+2014-02-20 06:34:03 Error: sql:INSERT INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?)
+2014-02-20 06:34:49 Error: sql:INSERT INTO user_cards (user_id,card_id,atk,def) VALUES (?,?,?,?)
+2014-02-20 07:10:47 Error: BEGIN
+2014-02-20 07:11:51 Error: BEGIN
+2014-02-20 07:12:25 Error: BEGIN
+2014-02-20 07:15:06 Error: BEGIN
+2014-02-20 07:15:07 Error: INSERT INTO `test_eres`.`skills` (`skill_id`, `skill_name`, `effect`, `updown`, `target`, `percent`, `skill_words`, `delete_flg`) VALUES (?,?,?,?,?,?,?,?)

@@ -1,5 +1,10 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Card', 'Model');
+App::uses('UserCard', 'Model');
+App::uses('Item', 'Model');
+App::uses('UserItem', 'Model');
+App::uses('UserParam', 'Model');
 
 /**
  * User Model
@@ -80,4 +85,51 @@ class User extends AppModel {
 		)
 	);
 
+
+    /**
+     * 取得したアイテム等を登録するメソッド確認
+     *
+     * @author imanishi
+     * @param int 1:カード 2:アイテム 3:お金
+     * @return bool
+     */
+    public function registGetData($userId, $kind, $targetId, $num) { 
+    
+        switch ($kind) 
+        {
+            // カード
+            case 1:
+                $card = new Card();
+                $userCard = new UserCard();
+
+                $data = array();
+                $where = array('card_id' => $targetId);
+                $fields = array('card_atk' , 'card_def');
+                $row = $card->getAllFind($where, $fields, 'first');
+                die;
+                for ($i = 0; $i < $num; $i++) {
+                    $data[] = array($userId, $targetId, $row['card_atk'], $row['card_def']);
+                }
+                $fields = array('user_id', 'card_id', 'atk', 'def');
+                $ret = $userCard->insertBulk($fields, $data);
+
+                break;
+
+            // アイテム
+            case 2:
+                $item = new Item();
+                $userItem = new UserItem();
+
+                break;
+
+            // お金
+            case 3:
+                $userParam = new UserParam();
+
+                break;
+            default:
+               return false;
+        }
+        return $ret; 
+    } 
 }

@@ -42,4 +42,15 @@ class UserItemTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+   /**
+    * アイテム登録メソッドをテスト
+    * @author imanishi 
+    */
+   public function testRegistItem () {
+       $userId = 1;
+       $itemId = 8;
+       $num = 2;
+       $ret = $this->UserItem->registItem($userId, $itemId, $num); 
+       $this->assertNotEmpty($ret['UserItem']); 
+   } 
 }

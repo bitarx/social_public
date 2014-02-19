@@ -1,5 +1,6 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Card', 'Model');
 /**
  * UserCard Model
  *
@@ -169,5 +170,28 @@ class UserCard extends AppModel {
         $where = array('user_id' => $userId);
         $data = $this->getAllFind($where);
         return $data;
+    }
+
+    /**
+     * 取得カードを登録
+     * @author imanishi 
+     * @param int $userId
+     * @param int $cardId
+     * @param int $num
+     * @return bool 
+     */
+    public function registCard($userId, $cardId, $num) {
+
+        $card = new Card();
+        $where = array('card_id' => $cardId);
+        $fields = array('card_atk' , 'card_def');
+        $row = $card->getAllFind($where, $fields, 'first');
+        for ($i = 0; $i < $num; $i++) {
+            $data[] = array($userId, $cardId, $row['card_atk'], $row['card_def']);
+        }
+
+        $fields = array('user_id', 'card_id', 'atk', 'def');
+        $ret = $this->insertBulk($fields, $data);
+        return $ret;
     }
 }

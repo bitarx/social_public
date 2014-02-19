@@ -32,7 +32,7 @@ class UserFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'user_id' => 1,
+			'user_id' => "1",
 			'user_name' => 'Lorem ipsum dolor sit amet',
 			'sns_user_id' => '1',
 			'carrer' => 1,

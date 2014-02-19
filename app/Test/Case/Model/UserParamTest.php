@@ -54,4 +54,18 @@ class UserParamTest extends CakeTestCase {
         $this->assertEquals($data['act_max'], $expected['act_max']);
         $this->assertEquals($data['user_id'], $expected['user_id']);
     }
+
+
+   /**
+    * ユーザステータス登録メソッドをテスト
+    * @author imanishi 
+    */
+   public function testSetUserParams () { 
+       $userId = 1;
+       $data = array(
+           'money' => 300
+       );
+       $ret = $this->UserParam->setUserParams($userId, $data);
+       $this->assertNotEmpty($ret['UserParam']);
+   }
 }
