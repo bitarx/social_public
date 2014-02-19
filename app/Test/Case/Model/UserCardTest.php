@@ -93,7 +93,7 @@ class UserCardTest extends CakeTestCase {
                 'delete_flg' => '0'
             ),
          );
-         $ret = $this->UserCard->reginsStartCard ($userId, $list);
+         $ret = $this->UserCard->registStartCard ($userId, $list);
          $this->assertTrue($ret);
      }
 
@@ -106,10 +106,10 @@ class UserCardTest extends CakeTestCase {
 
          $userId = 1;
          $data = $this->UserCard->getUserCard($userId);
-
          $expected[] = array(
             'user_card_id' => 1,
          );
          $this->assertEquals($data[0]['user_card_id'], $expected[0]['user_card_id']);
     }
+
 }

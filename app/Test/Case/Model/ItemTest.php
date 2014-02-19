@@ -38,4 +38,24 @@ class ItemTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * カードデータ取得
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function testGetItemData() {
+        $id = 1;
+        $data = $this->Item->getItemData($id);
+
+        $expected = array(
+            'item_id' => '1',
+            'item_name' => 'BP回復薬ハーフ',
+        );
+
+         $this->assertEquals($data, $expected);
+    }
+
+
 }

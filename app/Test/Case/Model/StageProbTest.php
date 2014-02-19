@@ -42,4 +42,20 @@ class StageProbTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * ステージアイテム抽選確率取得メソッドをテスト
+     *
+     * @author imanishi 
+     */
+    public function testGetStageProb() { 
+        $stageId = 1;
+        $data = $this->StageProb->getStageProb($stageId); 
+
+        $expected[0] = array(
+            'kind' => 1
+        ,   'target' => 28 
+        );
+        $this->assertEquals($data[0]['kind'], $expected[0]['kind']);
+        $this->assertEquals($data[0]['target'], $expected[0]['target']);
+    } 
 }

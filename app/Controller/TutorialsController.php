@@ -272,7 +272,7 @@ class TutorialsController extends ApiController {
                 throw new AppException('getStartCardData faild :' . $this->name . '/' . $this->action);
             }
 
-            $ret = $this->UserCard->reginsStartCard($this->userId, $list);
+            $ret = $this->UserCard->registStartCard($this->userId, $list);
             if (!$ret) {
                 throw new AppException('UserCard save failed :' . $this->name . '/' . $this->action);
             }

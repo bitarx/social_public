@@ -34,7 +34,7 @@ class AppController extends Controller {
 
     public $uses = array('SnsUser', 'User', 'UserTutorial');
 
-    public $components = array('Cookie');
+    public $components = array('Cookie', 'Common');
 
     public $ownerId  = "";
     public $viewerId = "";

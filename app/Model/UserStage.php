@@ -78,4 +78,38 @@ class UserStage extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * ユーザクエスト進捗を取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @return array 対象データ
+     */
+    public function getUserStage($userId) {
+        $where = array('user_id' => $userId);
+        $ret = $this->getAllFind($where);
+        return $ret;
+    }
+
+    /**
+     * ユーザクエスト進捗を取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @return array 対象データ
+     */
+    public function initUserStage($data) {
+
+        $values = array(
+            'user_id'  => $data['user_id']
+        ,   'stage_id' => $data['stage_id']
+        ,   'quest_id' => $data['quest_id']
+        ,   'progress' => $data['progress']
+        ,   'state'    => $data['state']
+        );
+        $ret = $this->save($values);
+        return $ret;
+    }
 }

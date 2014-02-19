@@ -116,4 +116,17 @@ class StageProb extends AppModel {
 			'order' => ''
 		)
 	);
+
+    /**
+     * ステージアイテム抽選確率取得
+     *
+     * @author imanishi 
+     * @param int $stageId
+     * @return array 抽選確率リスト
+     */
+    public function getStageProb($stageId) { 
+        $where = array('stage_id' => $stageId );  
+        $list = $this->getAllFind($where); 
+        return $list;
+    } 
 }

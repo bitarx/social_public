@@ -146,7 +146,7 @@ class UserCard extends AppModel {
      * @param array $list カードデータ
      * @return bool
      */
-    public function reginsStartCard ($userId, $list) {
+    public function registStartCard ($userId, $list) {
 
         $data = array();
         foreach ($list as $val) {
