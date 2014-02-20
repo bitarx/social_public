@@ -39,4 +39,61 @@ class BattleLogTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * バトルログリスト取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetBattleLogList() {
+
+        $userId = 1;
+        $list = $this->BattleLog->getBattleLogList($userId);
+
+        $expected[] = array(
+            'id' => '1',
+            'target_user' => '1'
+        );
+
+         $this->assertEquals($list[0]['id'], $expected[0]['id']);
+         $this->assertEquals($list[0]['target_user'], $expected[0]['target_user']);
+    }
+
+    /**
+     * バトルログデータ取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetBattleLogData() {
+
+        $id = 1;
+        $data = $this->BattleLog->getBattleLogData($id);
+
+        $expected = array(
+            'id' => '1',
+            'target_user' => '1'
+        );
+
+         $this->assertEquals($data['id'], $expected['id']);
+         $this->assertEquals($data['target_user'], $expected['target_user']);
+    }
+
+    /**
+     * バトルログデータ登録更新メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testInitBattleLogData() {
+
+        $values = array(
+           'id' => 1
+        ,  'user_id' =>  1    
+        ,  'target_user' =>  1    
+        ,  'result' =>  1    
+        ,  'log' =>  '{"id":1}'    
+        );
+        $ret = $this->BattleLog->initBattleLogData($values);
+
+         $this->assertNotEmpty($ret['BattleLog']);
+    }
 }

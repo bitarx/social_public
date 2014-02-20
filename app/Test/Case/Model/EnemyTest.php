@@ -38,4 +38,21 @@ class EnemyTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * 敵データ取得メソッドを確認
+     *
+     * @author imanishi 
+     */
+    public function testGetEnemyData() { 
+        $enemyId = 1; 
+        $data = $this->Enemy->getEnemyData($enemyId);
+
+        $expected = array(
+            'enemy_id' => '1',
+            'skill_id' => '1'
+        );
+
+         $this->assertEquals($data['enemy_id'], $expected['enemy_id']);
+         $this->assertEquals($data['skill_id'], $expected['skill_id']);
+    } 
 }

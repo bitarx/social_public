@@ -10650,3 +10650,21 @@ Stack Trace:
 2014-02-20 07:12:25 Error: BEGIN
 2014-02-20 07:15:06 Error: BEGIN
 2014-02-20 07:15:07 Error: INSERT INTO `test_eres`.`skills` (`skill_id`, `skill_name`, `effect`, `updown`, `target`, `percent`, `skill_words`, `delete_flg`) VALUES (?,?,?,?,?,?,?,?)
+2014-02-20 13:31:56 Error: [MissingControllerException] Controller class Wp-includesController could not be found.
+Exception Attributes: array (
+  'class' => 'Wp-includesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/wp-includes/js/tinymce/themes/advanced/about.htm
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-20 16:30:35 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

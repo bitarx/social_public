@@ -80,4 +80,19 @@ class Quest extends AppModel {
 			),
 		),
 	);
+
+
+    /**
+     * クエストデータ取得
+     *
+     * @author imanishi
+     * @param int $enemyId
+     * @return array 敵データ
+     */
+    public function getQuestData($questId) {
+
+        $where = array('quest_id' => $questId);
+        $ret = $this->getAllFind($where, $fields = array(), 'first');
+        return $ret;
+    }
 }

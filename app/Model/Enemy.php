@@ -135,4 +135,19 @@ class Enemy extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * 敵データ取得
+     *
+     * @author imanishi
+     * @param int $enemyId
+     * @return array 敵データ
+     */
+    public function getEnemyData($enemyId) { 
+
+        $where = array('enemy_id' => $enemyId); 
+        $ret = $this->getAllFind($where, $fields = array(), 'first');  
+        return $ret;
+    }  
 }

@@ -81,4 +81,48 @@ class BattleLog extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * バトルログリスト取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array ログリスト
+     */
+    public function getBattleLogList($userId) {
+
+        $where = array('user_id' => $userId);
+        $fields = array('id', 'target_user', 'result', 'log');
+        $ret = $this->getAllFind($where, $fields);
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ取得
+     *
+     * @author imanishi
+     * @param int $id
+     * @return array ログデータ
+     */
+    public function getBattleLogData($id) {
+
+        $where = array('id' => $id);
+        $fields = array('id', 'target_user', 'result', 'log');
+        $ret = $this->getAllFind($where, $fields, 'first');
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ登録更新
+     *
+     * @author imanishi
+     * @param array $values
+     * @return array ログデータ
+     */
+    public function initBattleLogData($values) {
+
+        $ret = $this->save($values);
+        return $ret;
+    }
 }
