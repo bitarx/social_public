@@ -44,9 +44,12 @@ class AppModel extends Model {
      * @param array $where  検索条件
      * @param array $fields 取得カラム
      * @param string $kind  findメソッド第一引数の値
+     * @param array $order  ソート　array('Model.created DESC')
+     * @param int $limit
+     * @param int $offset
      * @return array 検索結果
      */
-    public function getAllFind( $where = array(), $fields = array(), $kind = 'all' ) {
+    public function getAllFind( $where = array(), $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0 ) {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
@@ -62,6 +65,21 @@ class AppModel extends Model {
         }
 
         $options['conditions'] = $conditions;
+
+        // ソート
+        if (0 < count($order)) { 
+            $options['order'] = $order;
+        } 
+
+        // リミット
+        if (!empty($limit)) { 
+            $options['limit'] = $limit;
+        } 
+
+        // オフセット
+        if (!empty($offset)) { 
+            $options['offset'] = $order;
+        } 
 
         $ret = $this->find($kind, $options);
 

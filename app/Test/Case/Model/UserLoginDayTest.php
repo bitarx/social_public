@@ -37,4 +37,20 @@ class UserLoginDayTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+    /**
+     * ログインデイズ更新日取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetLoginDaysMod() {
+
+        $userId = 1;
+        $data = $this->UserLoginDay->getLoginDaysMod($userId);
+
+        $expected = array(
+            'modified' => '2014-02-17 21:30:46',
+        );
+
+        $this->assertEquals($data['modified'], $expected['modified']);
+    }
 }

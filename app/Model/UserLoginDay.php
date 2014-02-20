@@ -30,4 +30,20 @@ class UserLoginDay extends AppModel {
 			),
 		),
 	);
+
+
+    /**
+     * ログインデイズデータ取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return string 更新日
+     */
+    public function getLoginDaysMod($userId) {
+
+        $where = array('user_id' => $userId);
+        $fields = array('modified');
+        $ret = $this->getAllFind($where, $fields, 'first');
+        return $ret;
+    }
 }

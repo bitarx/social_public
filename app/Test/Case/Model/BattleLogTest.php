@@ -51,8 +51,8 @@ class BattleLogTest extends CakeTestCase {
         $list = $this->BattleLog->getBattleLogList($userId);
 
         $expected[] = array(
-            'id' => '1',
-            'target_user' => '1'
+            'id' => '2',
+            'target_user' => '2',
         );
 
          $this->assertEquals($list[0]['id'], $expected[0]['id']);

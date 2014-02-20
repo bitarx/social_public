@@ -38,4 +38,21 @@ class UserGachaDayTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * ガチャデイズ更新日取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetGachaDaysMod() {
+
+        $userId = 1;
+        $data = $this->UserGachaDay->getGachaDaysMod($userId);
+
+        $expected = array(
+            'modified' => '2014-02-17 21:30:45',
+        );
+
+        $this->assertEquals($data['modified'], $expected['modified']);
+    }
 }
