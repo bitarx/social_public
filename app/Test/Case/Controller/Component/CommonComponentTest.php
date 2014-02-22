@@ -31,4 +31,22 @@ class CommonComponentTest extends CakeTestCase {
 
         $this->assertNotEmpty($data['kind']);
     }
+
+
+    /**
+     * 現在は当日であるかを判定メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testIsToday() {
+        
+        $modified = date("Y-m-d H:i:s");
+        $ret = $this->commonComponent->isToday($modified);
+        $this->assertTrue($ret);
+
+        $timeSp = time() - 3700;
+        $modified = date("Y-m-d H:i:s", $timeSp);
+        $ret = $this->commonComponent->isToday($modified);
+        $this->assertFalse($ret);
+    }
 }

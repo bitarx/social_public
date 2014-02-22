@@ -40,4 +40,29 @@ class UserGachaLogTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+
+    /**
+     * がチャログデータ取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetGachaLogData() {
+
+        $id = 1;
+        $data = $this->UserGachaLog->getGachaLogData($id);
+
+        $expected = array(
+            'id' => 1,
+            'gacha_id' => 1,
+            'card_id' => 1,
+            'end_flg' => 1,
+            'delete_flg' => 0,
+            'created' => '2014-02-17 21:30:45',
+            'modified' => '2014-02-17 21:30:45'
+        );
+
+         $this->assertEquals($data['gacha_id'], $expected['gacha_id']);
+    }
+
 }

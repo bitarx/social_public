@@ -88,4 +88,20 @@ class CardGroup extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * 進化情報を取得する
+     *
+     * @author imanishi
+     * @param int $cardId
+     * @return array $data
+     */
+    public function getCardGroup ($cardId) {
+
+        $where = array('card_id' => $cardId);
+        $field = array();
+        $data = $this->getAllFind($where, $field, 'first');
+        return $data;
+    }
 }

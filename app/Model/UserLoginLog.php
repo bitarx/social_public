@@ -71,4 +71,19 @@ class UserLoginLog extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+   /**
+     * ログインログデータ取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array リスト
+     */
+    public function getLoginLogList($userId) {
+
+        $where = array('user_id' => $userId);
+        $ret = $this->getAllFind($where, $fields = array(), 'all');
+        return $ret;
+    }
 }

@@ -39,4 +39,27 @@ class UserLoginLogTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * ログインログリスト取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetLoginLogData() {
+
+        $userId = 1;
+        $list = $this->UserLoginLog->getLoginLogList($userId);
+
+        $expected[] = array(
+            'id' => 1,
+            'user_id' => 1,
+            'kind' => 1,
+            'target' => 1,
+            'delete_flg' => 0,
+            'created' => '2014-02-17 21:30:46',
+            'modified' => '2014-02-17 21:30:46'
+        );
+
+         $this->assertEquals($list[0]['kind'], $expected[0]['kind']);
+    }
 }

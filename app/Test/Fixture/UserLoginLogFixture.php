@@ -36,7 +36,7 @@ class UserLoginLogFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'kind' => 1,
 			'target' => 1,
-			'delete_flg' => 1,
+			'delete_flg' => 0,
 			'created' => '2014-02-17 21:30:46',
 			'modified' => '2014-02-17 21:30:46'
 		),

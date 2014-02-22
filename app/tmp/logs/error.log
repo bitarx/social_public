@@ -10668,3 +10668,52 @@ Request URL: /index.php/robots.txt
 Stack Trace:
 #0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-02-21 22:50:32 Error: [MissingControllerException] Controller class AdministratorController could not be found.
+Exception Attributes: array (
+  'class' => 'AdministratorController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/administrator/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-22 06:32:14 Error: 11111:
+2014-02-22 06:32:14 Error: 22222:
+2014-02-22 06:32:14 Error: 11111:
+2014-02-22 06:32:14 Error: 22222:
+2014-02-22 06:33:30 Error: nowTImeSp:1393018410
+2014-02-22 06:33:30 Error: targetTimeSp:
+2014-02-22 06:33:30 Error: 11111:
+2014-02-22 06:33:30 Error: 22222:
+2014-02-22 06:33:30 Error: nowTImeSp:1393018410
+2014-02-22 06:33:30 Error: targetTimeSp:1393014710
+2014-02-22 06:33:30 Error: 11111:
+2014-02-22 06:33:30 Error: 22222:
+2014-02-22 06:34:01 Error: nowTImeSp:1393018441
+2014-02-22 06:34:01 Error: targetTimeSp:1393018441
+2014-02-22 06:34:01 Error: 11111:
+2014-02-22 06:34:01 Error: 333333:
+2014-02-22 06:34:01 Error: 77777:
+2014-02-22 06:34:01 Error: 88888:
+2014-02-22 06:34:22 Error: nowTImeSp:1393018462
+2014-02-22 06:34:22 Error: targetTimeSp:1393018462
+2014-02-22 06:34:22 Error: 11111:
+2014-02-22 06:34:22 Error: 333333:
+2014-02-22 06:34:22 Error: 77777:
+2014-02-22 06:34:22 Error: 88888:
+2014-02-22 06:34:22 Error: nowTImeSp:1393018462
+2014-02-22 06:34:22 Error: targetTimeSp:1393014762
+2014-02-22 06:34:22 Error: 11111:
+2014-02-22 06:34:22 Error: 22222:
+2014-02-22 06:37:18 Error: nowTImeSp:1393018638
+2014-02-22 06:37:18 Error: targetTimeSp:1393018638
+2014-02-22 06:37:18 Error: 11111:
+2014-02-22 06:37:18 Error: 333333:
+2014-02-22 06:37:18 Error: dayChangeH:8
+2014-02-22 06:37:18 Error: nowH:6
+2014-02-22 06:37:18 Error: 77777:
+2014-02-22 06:37:18 Error: 88888:
+2014-02-22 06:37:18 Error: nowTImeSp:1393018638
+2014-02-22 06:37:18 Error: targetTimeSp:1393014938
+2014-02-22 06:37:18 Error: 11111:
+2014-02-22 06:37:18 Error: 22222:

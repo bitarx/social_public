@@ -163,13 +163,13 @@ class UserCard extends AppModel {
      * @author imanishi
      * @param int $userId
      * @param array $data 所持カードデータ
-     * @return bool
+     * @return array $list
      */
     public function getUserCard ($userId) {
 
         $where = array('user_id' => $userId);
-        $data = $this->getAllFind($where);
-        return $data;
+        $list = $this->getAllFind($where);
+        return $list;
     }
 
     /**
@@ -193,5 +193,21 @@ class UserCard extends AppModel {
         $fields = array('user_id', 'card_id', 'atk', 'def');
         $ret = $this->insertBulk($fields, $data);
         return $ret;
+    }
+
+    /**
+     * ユーザの保有カード情報をuserCardIdで取得
+     *
+     * @author imanishi
+     * @param int $userCardId
+     * @param array $data 所持カードデータ
+     * @return array $data
+     */
+    public function getUserCardById ($userCardId) {
+
+        $where = array('user_card_id' => $userCardId);
+        $field = array();
+        $data = $this->getAllFind($where, $field, 'first');
+        return $data;
     }
 }

@@ -79,4 +79,18 @@ class UserGachaLog extends AppModel {
 			'order' => ''
 		)
 	);
+
+   /**
+     * がチャログデータ取得
+     *
+     * @author imanishi
+     * @param int $id
+     * @return array データ
+     */
+    public function getGachaLogData($id) { 
+
+        $where = array('id' => $id);  
+        $ret = $this->getAllFind($where, $fields = array(), 'first'); 
+        return $ret;
+    } 
 }

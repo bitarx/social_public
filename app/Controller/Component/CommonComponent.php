@@ -5,7 +5,11 @@
 App::uses('Component', 'Controller');
 class CommonComponent extends Component {
 
+    // 重みのフィールド名
     public $probField = 'prob';
+
+    // 日の変わる時間
+    public $dayChangeH = 8;
 
     /**
      * prob系テーブルのデータより抽選を行う
@@ -29,5 +33,41 @@ class CommonComponent extends Component {
         
         $data = $list[$lot[$hit]];
         return $data;
+    }
+
+    /**
+     * 現在は当日であるかを判定
+     *
+     * @author imanishi 
+     * @param string $modified 判定の起点となる時間
+     * @return bool true:当日 false:当日ではない
+     */
+    public function isToday($modified) {
+    
+        $targetTimeSp = strtotime($modified);
+        $nowTimeSp = time();
+        $targetH = date("G", $targetTimeSp);
+        $nowH = date("G");
+
+        $passTimeSp = $nowTimeSp - $targetTimeSp;
+        if (3600 < $passTimeSp) {
+            return false;
+        } else {
+            if ($this->dayChangeH <= $nowH) {
+                if ($targetH < $this->dayChangeH) {
+                var_dump($targetH);
+                die;
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                if ($targetH < $this->dayChangeH) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
     }
 }

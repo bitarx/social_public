@@ -128,4 +128,20 @@ class UserCardTest extends CakeTestCase {
         $this->assertTrue($ret);
     }
 
+    /**
+     * ユーザの保有カード情報をuserCardIdで取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetUserCardById() {
+
+         $userCardId = 1;
+         $data = $this->UserCard->getUserCardById($userCardId);
+         $expected = array(
+            'user_card_id' => 1,
+            'card_atk' => 200 
+         );
+         $this->assertEquals($data['user_card_id'], $expected['user_card_id']);
+         $this->assertEquals($data['card_atk'], $expected['card_atk']);
+    }
 }
