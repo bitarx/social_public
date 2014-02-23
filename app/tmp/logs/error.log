@@ -10717,3 +10717,75 @@ Stack Trace:
 2014-02-22 06:37:18 Error: targetTimeSp:1393014938
 2014-02-22 06:37:18 Error: 11111:
 2014-02-22 06:37:18 Error: 22222:
+2014-02-23 00:59:28 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-23 00:59:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-02-23 04:17:31 Error: Fixture creation for "user_decks" failed "SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'id' doesn't exist in table"
+2014-02-23 15:40:52 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-23 16:48:57 Error: [MissingControllerException] Controller class HtmlController could not be found.
+Exception Attributes: array (
+  'class' => 'HtmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/html
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-23 16:49:02 Error: [MissingControllerException] Controller class TutoController could not be found.
+Exception Attributes: array (
+  'class' => 'TutoController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/tuto/index
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-23 20:18:24 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-02-23 20:26:22 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

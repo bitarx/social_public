@@ -1,12 +1,22 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Card', 'Model');
 /**
  * UserDeck Model
  *
+ * @property UserDeck $UserDeck
  * @property User $User
  * @property UserDeckCard $UserDeckCard
+ * @property UserDeck $UserDeck
  */
 class UserDeck extends AppModel {
+
+/**
+ * Primary key field
+ *
+ * @var string
+ */
+	public $primaryKey = 'user_deck_id';
 
 /**
  * Validation rules
@@ -14,6 +24,16 @@ class UserDeck extends AppModel {
  * @var array
  */
 	public $validate = array(
+		'user_deck_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'user_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -91,7 +111,23 @@ class UserDeck extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
-		)
+		),
 	);
 
+
+    /**
+     * ユーザデッキ情報取得
+     *
+     * @author imanishi
+     * @param int $userCardId
+     * @param int $userId
+     * @return array $data
+     */
+    public function getUserDeckData ($userId) {
+
+        $where = array('user_id' => $userId);
+        $field = array();
+        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recu = 1);
+        return $data;
+    }
 }

@@ -55,7 +55,7 @@ class UserStageTest extends CakeTestCase {
          ,  'quest_id' => 1
          );
          $this->assertEquals($data[0]['stage_id'], $expected[0]['stage_id']);
-         $this->assertEquals($data[0]['stage_id'], $expected[0]['quest_id']);
+         $this->assertEquals($data[0]['quest_id'], $expected[0]['quest_id']);
     } 
 
     /**

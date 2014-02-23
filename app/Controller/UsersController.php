@@ -23,11 +23,11 @@ class UsersController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
+        $fields = array('user_id');
         $where  = array();
         $this->User->getAllFind($where, $fields);
         $this->set('users', $this->Paginator->paginate());
-
+/*
         $this->User->begin();
         try {
             $values = array(
@@ -49,6 +49,7 @@ class UsersController extends ApiController {
                    ));
         }
         $this->User->commit();
+*/
 	}
 
 

@@ -49,7 +49,7 @@ class AppModel extends Model {
      * @param int $offset
      * @return array 検索結果
      */
-    public function getAllFind( $where = array(), $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0 ) {
+    public function getAllFind( $where = array(), $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 0 ) {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
@@ -81,8 +81,12 @@ class AppModel extends Model {
             $options['offset'] = $order;
         } 
 
-        $ret = $this->find($kind, $options);
+        // 結合レベル
+        if (0 < $recursive) { 
+            $options['recursive'] = $recursive;
+        } 
 
+        $ret = $this->find($kind, $options);
         $data = array();
         if (!empty($ret)) {
             if ($kind == 'first') {

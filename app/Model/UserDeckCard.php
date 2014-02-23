@@ -3,7 +3,8 @@ App::uses('AppModel', 'Model');
 /**
  * UserDeckCard Model
  *
- * @property Card $Card
+ * @property UserDeck $UserDeck
+ * @property UserCard $UserCard
  */
 class UserDeckCard extends AppModel {
 
@@ -20,6 +21,16 @@ class UserDeckCard extends AppModel {
  * @var array
  */
 	public $validate = array(
+		'user_deck_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'user_card_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -50,31 +61,19 @@ class UserDeckCard extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Card' => array(
-			'className' => 'Card',
-			'foreignKey' => 'card_id',
+		'UserDeck' => array(
+			'className' => 'UserDeck',
+			'foreignKey' => 'user_deck_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'UserCard' => array(
+			'className' => 'UserCard',
+			'foreignKey' => 'user_card_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
-
-
-    /**
-     * デッキ登録
-     *
-     * @author imanishi
-     * @param int $userDeckId
-     * @param array $list カードデータ
-     * @return bool
-     */
-    public function regist ($userDeckId, $list) {
-
-        $fields = array('user_deck_id', 'user_card_id');
-        $data = array();
-        foreach ($list as $val) {
-            $data[] = array($userDeckId, $val['user_card_id']);
-        }
-        return $this->insertBulk($fields, $data);
-    }
 }

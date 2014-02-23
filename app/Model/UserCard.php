@@ -210,4 +210,6 @@ class UserCard extends AppModel {
         $data = $this->getAllFind($where, $field, 'first');
         return $data;
     }
+
+
 }

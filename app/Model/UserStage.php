@@ -94,7 +94,7 @@ class UserStage extends AppModel {
     }
 
     /**
-     * ユーザクエスト進捗を取得
+     * ユーザクエスト進捗を更新
      *
      * @author imanishi 
      * @param int $userId

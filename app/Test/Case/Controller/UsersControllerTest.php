@@ -55,11 +55,13 @@ class UsersControllerTest extends ControllerTestCase {
 	);
 
 /**
- * testIndex method
+ * マイページ確認 
  *
  * @return void
  */
 	public function testIndex() {
+        $ret = $this->testAction('/users/index/');
+        debug($ret);
 	}
 
 /**

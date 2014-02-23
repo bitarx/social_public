@@ -98,4 +98,18 @@ class EvStageProb extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * イベントステージアイテム抽選確率取得
+     *
+     * @author imanishi
+     * @param int $evStageId
+     * @return array 抽選確率リスト
+     */
+    public function getEvStageProb($evStageId) {
+        $where = array('ev_stage_id' => $evStageId );
+        $list = $this->getAllFind($where);
+        return $list;
+    }
 }

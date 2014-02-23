@@ -78,4 +78,18 @@ class UserEvStage extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * ユーザイベントクエストリストを取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array 対象データ
+     */
+    public function getUserEvStage($userId) {
+        $where = array('user_id' => $userId);
+        $ret = $this->getAllFind($where);
+        return $ret;
+    }
 }
