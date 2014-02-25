@@ -105,6 +105,22 @@ class BattleLog extends AppModel {
     }
 
     /**
+     * 最新バトルログデータ取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array 最新ログデータ
+     */
+    public function getBattleLogDataLatest($userId) {
+
+        $where = array('user_id' => $userId);
+        $fields = array('id', 'target_user', 'result', 'log');
+        $order = array($this->getTableAlias() . '.created DESC'); 
+        $ret = $this->getAllFind($where, $fields, 'first', $order);
+        return $ret;
+    }
+
+    /**
      * バトルログデータ取得
      *
      * @author imanishi

@@ -79,6 +79,25 @@ class BattleLogTest extends CakeTestCase {
     }
 
     /**
+     * 最新バトルログデータ取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetBattleLogDataLatest() {
+
+        $userId = 1;
+        $data = $this->BattleLog->getBattleLogDataLatest($userId);
+
+        $expected = array(
+            'id' => '2',
+            'target_user' => '2'
+        );
+
+         $this->assertEquals($data['id'], $expected['id']);
+         $this->assertEquals($data['target_user'], $expected['target_user']);
+    }
+
+    /**
      * バトルログデータ登録更新メソッドを確認
      *
      * @author imanishi

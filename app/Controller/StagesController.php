@@ -108,10 +108,8 @@ class StagesController extends ApiController {
      */
     public function comp() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
+        $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $this->set('data', $data);
 
     }
 
