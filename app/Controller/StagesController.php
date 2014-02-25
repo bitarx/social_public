@@ -15,6 +15,8 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserStage', 'Enemy');
+
     /**
      * ステージ一覧
      *
@@ -23,11 +25,11 @@ class StagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->Stage->getAllFind($where, $fields);
-        $this->set('stages', $this->Paginator->paginate());
+        // 到達したステージリスト
+        $userStageList = $this->UserStage->getUserStage($this->userId);
+        $this->set('userStageList', $userStageList);
 
+/*
         $this->Stage->begin();
         try {
             $values = array(
@@ -49,6 +51,7 @@ class StagesController extends ApiController {
                    ));
         }
         $this->Stage->commit();
+*/
 	}
 
     /**
@@ -59,10 +62,11 @@ class StagesController extends ApiController {
      */
     public function main() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
+        $stageId = $this->params['stage_id'];
+
+        $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
+
+        $this->set('userStageData', $userStageData);
 
     }
 
@@ -74,10 +78,11 @@ class StagesController extends ApiController {
      */
     public function conf() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
+        $stageId = $this->params['stage_id'];
+
+        $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
+        $enemyData = $this->Enemy->getEnemyData($userStageData['enemy_id']);
+        $this->set('enemyData', $enemyData);
 
     }
 

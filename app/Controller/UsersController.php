@@ -15,6 +15,8 @@ class UsersController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserCard', 'UserParam', 'BattleLog');
+
     /**
      * マイページ
      *
@@ -23,10 +25,20 @@ class UsersController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('user_id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
+        // カーソリスト
+        $userCardList = $this->UserCard->getUserCard ($this->userId);
+
+        // ステータス
+        $userParamData = $this->UserParam->getUserParams ($this->userId);
+
+        // バトルログ
+        $battleLogList = $this->BattleLog->getBattleLogList ($this->userId);
+
+
+        // アサイン
+        $this->set('userCardList', $userCardList);
+        $this->set('userParamData', $userParamData);
+        $this->set('battleLogList', $battleLogList);
 /*
         $this->User->begin();
         try {

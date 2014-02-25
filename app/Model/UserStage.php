@@ -85,11 +85,23 @@ class UserStage extends AppModel {
      *
      * @author imanishi 
      * @param int $userId
+     * @param int $stageId
+     * @param int $recu 2でクエスト情報を含むステーッジ取得
      * @return array 対象データ
      */
-    public function getUserStage($userId) {
+    public function getUserStage($userId, $stageId = 0, $recu = 0) {
+
+        $kind = 'all';
         $where = array('user_id' => $userId);
-        $ret = $this->getAllFind($where);
+        if (!empty($stageId)) {
+            $where['stage_id'] = $stageId;
+            
+            // 対象のステージのみ取得
+            $kind = 'first';
+        }
+        $fields = array();
+        $order = array();
+        $ret = $this->getAllFind($where, $fields, $kind, $order, 0, 0, $recu);
         return $ret;
     }
 

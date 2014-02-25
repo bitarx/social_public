@@ -15,6 +15,8 @@ class QuestsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserStage');
+
     /**
      * index method
      *
@@ -22,12 +24,11 @@ class QuestsController extends ApiController {
      * @return json
      */
 	public function index() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->Quest->getAllFind($where, $fields);
-        $this->set('quests', $this->Paginator->paginate());
-
+        
+        // 到達したステージリスト
+        $userStageList = $this->UserStage->getUserStage($this->userId, $stageId = 0, $recu = 2);
+        $this->set('userStageList', $userStageList);
+/*
         $this->Quest->begin();
         try {
             $values = array(
@@ -49,6 +50,7 @@ class QuestsController extends ApiController {
                    ));
         }
         $this->Quest->commit();
+*/
 	}
 
     /**

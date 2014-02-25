@@ -60,6 +60,31 @@ class StagesControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+
+        $ret = $this->testAction('/stages/index/');
+        debug($ret);
+	}
+
+/**
+ * testMain method
+ *
+ * @return void
+ */
+	public function testMain() {
+
+        $ret = $this->testAction('/stages/main/?stage_id=1');
+        debug($ret);
+	}
+
+/**
+ * testConff method
+ *
+ * @return void
+ */
+	public function testConf() {
+
+        $ret = $this->testAction('/stages/conf/?stage_id=1');
+        debug($ret);
 	}
 
 /**

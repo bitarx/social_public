@@ -92,7 +92,12 @@ class BattleLog extends AppModel {
      */
     public function getBattleLogList($userId, $limit = 2, $offset = 0) {
 
-        $where = array('user_id' => $userId);
+        $where = array(
+            'OR' => array(
+                'user_id' => $userId
+            ,   'target_user' => $userId
+            ) 
+        );
         $fields = array('id', 'target_user', 'result', 'log');
         $order = array('BattleLog.created DESC');
         $ret = $this->getAllFind($where, $fields, 'all', $order, $limit, $offset);

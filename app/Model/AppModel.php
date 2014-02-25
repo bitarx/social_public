@@ -57,7 +57,13 @@ class AppModel extends Model {
 
         if (0 < count($where)) {
             foreach ($where as $field => $val) {
-                $conditions[$tableAlias. '.'. $field] = $val; 
+                if ($field == 'OR') {
+                    foreach ($val as $f => $v) {
+                        $conditions['OR'][$tableAlias. '.'. $f] = $v; 
+                    }
+                } else {
+                    $conditions[$tableAlias. '.'. $field] = $val; 
+                }
             }
         }
         if (0 < count($fields)) {
@@ -87,6 +93,7 @@ class AppModel extends Model {
         } 
 
         $ret = $this->find($kind, $options);
+
         $data = array();
         if (!empty($ret)) {
             if ($kind == 'first') {

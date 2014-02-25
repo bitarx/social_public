@@ -54,13 +54,6 @@ class QuestsControllerTest extends ControllerTestCase {
 		'app.tutorial'
 	);
 
-/**
- * testIndex method
- *
- * @return void
- */
-	public function testIndex() {
-	}
 
 /**
  * testFind method
@@ -78,4 +71,14 @@ class QuestsControllerTest extends ControllerTestCase {
 	public function testInit() {
 	}
 
+
+/**
+ * クエスト一覧確認 
+ *
+ * @return void
+ */
+    public function testIndex() {
+        $ret = $this->testAction('/quests/index/');
+        debug($ret);
+    }
 }

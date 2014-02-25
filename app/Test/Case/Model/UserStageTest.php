@@ -48,7 +48,7 @@ class UserStageTest extends CakeTestCase {
      */
     public function testGetUserStage() {
         $userId = 1;
-        $data = $this->UserStage->getUserStage($userId); 
+        $data = $this->UserStage->getUserStage($userId, $stageId = 0); 
          
          $expected[] = array(
             'stage_id' => 1
@@ -56,6 +56,15 @@ class UserStageTest extends CakeTestCase {
          );
          $this->assertEquals($data[0]['stage_id'], $expected[0]['stage_id']);
          $this->assertEquals($data[0]['quest_id'], $expected[0]['quest_id']);
+
+        $data = $this->UserStage->getUserStage($userId, $stageId = 1); 
+         
+         $expected = array(
+            'stage_id' => 1
+         ,  'quest_id' => 1
+         );
+         $this->assertEquals($data['stage_id'], $expected['stage_id']);
+         $this->assertEquals($data['quest_id'], $expected['quest_id']);
     } 
 
     /**
