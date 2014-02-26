@@ -51,7 +51,8 @@ class UserDeckTest extends CakeTestCase {
     public function testGetUserDeckData() {
 
          $userId = 1;
-         $data = $this->UserDeck->getUserDeckData($userId);
+         $kind = 1;
+         $data = $this->UserDeck->getUserDeckData($userId, $kind);
          $expected = array(
             'user_deck_id' => 1,
             'user_id' => 1,

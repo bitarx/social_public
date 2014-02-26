@@ -60,6 +60,9 @@ class UserCardsControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+
+        $ret = $this->testAction('/user_cards/index/');
+        debug($ret);
 	}
 
 /**

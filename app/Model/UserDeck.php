@@ -119,13 +119,16 @@ class UserDeck extends AppModel {
      * ユーザデッキ情報取得
      *
      * @author imanishi
-     * @param int $userCardId
      * @param int $userId
+     * @param int $kind 1:攻撃 2:防御
      * @return array $data
      */
-    public function getUserDeckData ($userId) {
+    public function getUserDeckData ($userId, $kind = 1) {
 
-        $where = array('user_id' => $userId);
+        $where = array(
+            'user_id' => $userId
+       ,    'kind' => $kind     
+        );
         $field = array();
         $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recu = 1);
         return $data;

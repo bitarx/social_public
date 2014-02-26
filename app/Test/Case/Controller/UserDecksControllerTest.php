@@ -60,6 +60,11 @@ class UserDecksControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+
+        $ret = $this->testAction('/user_decks/index/?kind=1');
+        debug($ret);
+        $ret = $this->testAction('/user_decks/index/?kind=2');
+        debug($ret);
 	}
 
 /**
