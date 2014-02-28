@@ -15,6 +15,8 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserCard', 'UserBaseCard');
+
     /**
      * 強化合成一覧
      *
@@ -25,6 +27,9 @@ class UserCardsController extends ApiController {
 
         $list = $this->UserCard->getUserCard($this->userId);
         $this->set('list', $this->Paginator->paginate());
+
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+        $this->set('data', $userBaseCard);
 
 	}
 

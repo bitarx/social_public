@@ -14,6 +14,7 @@ class UserCardsControllerTest extends ControllerTestCase {
  */
 	public $fixtures = array(
 		'app.user_card',
+		'app.user_base_card',
 		'app.card',
 		'app.skill',
 		'app.enemy',
