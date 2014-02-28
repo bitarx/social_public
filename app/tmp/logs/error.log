@@ -12881,3 +12881,60 @@ Request URL: /index.php/robots.txt
 Stack Trace:
 #0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-02-28 14:53:30 Error: BEGIN
+2014-02-28 14:53:49 Error: BEGIN
+2014-02-28 15:05:05 Error: BEGIN
+2014-02-28 15:05:19 Error: BEGIN
+2014-02-28 15:07:07 Error: BEGIN
+2014-03-01 00:03:16 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-01 00:03:16 Error: [MissingActionException] Action TutorialsController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'TutorialsController',
+  'action' => 'index',
+)
+Request URL: /index.php/tutorials
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-01 04:45:11 Error: BEGIN
+2014-03-01 04:45:43 Error: BEGIN
+2014-03-01 04:46:02 Error: BEGIN
+2014-03-01 05:24:49 Error: BEGIN
+2014-03-01 05:26:05 Error: BEGIN
+2014-03-01 05:27:47 Error: BEGIN
+2014-03-01 05:31:20 Error: BEGIN
+2014-03-01 05:33:01 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `test_eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`level` IN (0, 1, 2) AND NOT (user_id = (1))
+2014-03-01 05:36:25 Error: BEGIN
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: COMMIT
+2014-03-01 05:36:25 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `test_eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 1    LIMIT 1
+2014-03-01 05:36:25 Error: BEGIN
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: INSERT INTO `test_eres`.`user_params` (`user_id`, `money`, `act`, `act_max`, `cost_atk`, `cost_def`, `level`, `exp`, `win`, `lose`, `delete_flg`, `created`, `modified`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+2014-03-01 05:36:25 Error: COMMIT
+2014-03-01 05:36:25 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `test_eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 1    LIMIT 1
+2014-03-01 05:36:25 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `test_eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`level` IN (0, 1, 2) AND NOT (user_id = (1))
+2014-03-01 05:55:35 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

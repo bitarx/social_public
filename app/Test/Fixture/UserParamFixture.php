@@ -51,6 +51,51 @@ class UserParamFixture extends CakeTestFixture {
 			'created' => '2014-02-17 21:30:47',
 			'modified' => '2014-02-17 21:30:47'
 		),
+		array(
+			'user_id' => 2,
+			'money' => 1,
+			'act' => 1,
+			'act_max' => 1,
+			'cost_atk' => 1,
+			'cost_def' => 1,
+			'level' => 2,
+			'exp' => 1,
+			'win' => 1,
+			'lose' => 1,
+			'delete_flg' => 0,
+			'created' => '2014-02-17 21:30:47',
+			'modified' => '2014-02-17 21:30:47'
+		),
+		array(
+			'user_id' => 3,
+			'money' => 1,
+			'act' => 1,
+			'act_max' => 1,
+			'cost_atk' => 1,
+			'cost_def' => 1,
+			'level' => 2,
+			'exp' => 1,
+			'win' => 1,
+			'lose' => 1,
+			'delete_flg' => 0,
+			'created' => '2014-02-17 21:30:47',
+			'modified' => '2014-02-17 21:30:47'
+		),
+		array(
+			'user_id' => 4,
+			'money' => 1,
+			'act' => 1,
+			'act_max' => 1,
+			'cost_atk' => 1,
+			'cost_def' => 1,
+			'level' => 3,
+			'exp' => 1,
+			'win' => 1,
+			'lose' => 1,
+			'delete_flg' => 0,
+			'created' => '2014-02-17 21:30:47',
+			'modified' => '2014-02-17 21:30:47'
+		),
 	);
 
 }

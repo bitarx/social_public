@@ -23,11 +23,9 @@ class UserParamsController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->UserParam->getAllFind($where, $fields);
+        $this->UserParam->getBattleList($userId);
         $this->set('userParams', $this->Paginator->paginate());
-
+/*
         $this->UserParam->begin();
         try {
             $values = array(
@@ -49,6 +47,7 @@ class UserParamsController extends ApiController {
                    ));
         }
         $this->UserParam->commit();
+*/
 	}
 
     /**

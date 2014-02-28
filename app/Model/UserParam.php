@@ -149,4 +149,26 @@ class UserParam extends AppModel {
         }
         return $this->save($values);
     } 
+
+    /**
+     * 対戦一覧を取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @return array 対象データ
+     */
+    public function getBattleList($userId) { 
+        $userParams = $this->getUserParams($userId);
+        $level = $userParams['level'];
+        $minus = $level - 1;
+        $plus  = $level + 1;
+        $where = array(
+            'level' => array($minus, $level, $plus),
+            'AND' => array(
+                'NOT' => array('user_id' => array($userId) ) 
+            )
+        ); 
+        $ret = $this->getAllFind($where, array(), 'all'); 
+        return $ret;
+    } 
 }

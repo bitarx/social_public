@@ -57,9 +57,13 @@ class AppModel extends Model {
 
         if (0 < count($where)) {
             foreach ($where as $field => $val) {
-                if ($field == 'OR') {
+                if ($field == 'OR' || $field == 'NOT' || $field == 'AND') {
                     foreach ($val as $f => $v) {
-                        $conditions['OR'][$tableAlias. '.'. $f] = $v; 
+                        $fname = $tableAlias. '.'. $f;
+                        if ($f == 'OR' || $f == 'NOT' || $f == 'AND') {
+                            $fname = $f;
+                        }
+                        $conditions[$field][$fname] = $v; 
                     }
                 } else {
                     $conditions[$tableAlias. '.'. $field] = $val; 
@@ -91,7 +95,6 @@ class AppModel extends Model {
         if (0 < $recursive) { 
             $options['recursive'] = $recursive;
         } 
-
         $ret = $this->find($kind, $options);
 
         $data = array();
@@ -196,14 +199,16 @@ class AppModel extends Model {
      }
 
      /**
-      * デバッグ:最後のクエリを出力
+      * デバッグ:実行されたクエリを出力
       */
     public function qlog() {
 
          $log = $this->getDataSource()->getLog(false, false);
-         $num = count($log['count']);
-         $querylog = $log['log'][$num -1 ]['query'];
-         $this->log($querylog);
+         $num = $log['count'];
+         for ($i = 0; $i < $num; $i++) {
+             $querylog = $log['log'][$i ]['query'];
+             $this->log($querylog);
+         }
          return $querylog;
     }
 }

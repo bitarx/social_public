@@ -55,6 +55,33 @@ class UserParamTest extends CakeTestCase {
         $this->assertEquals($data['user_id'], $expected['user_id']);
     }
 
+    /**
+     * 対戦一覧を取得するメソッドを確認
+     *
+     * @author imanishi 
+     */
+    public function testGetBattleList() {
+
+        $userId = 1;
+        $data = $this->UserParam->getBattleList($userId);
+
+        $expected = array(
+
+            array(
+                'user_id' => 2,
+                'level' => 2,
+            ),
+            array(
+                'user_id' => 3,
+                'level' => 2,
+            ),
+        );
+        $this->assertEquals($data[0]['user_id'], $expected[0]['user_id']);
+        $this->assertEquals($data[0]['level'], $expected[0]['level']);
+        $this->assertEquals($data[1]['user_id'], $expected[1]['user_id']);
+        $this->assertEquals($data[1]['level'], $expected[1]['level']);
+    }
+
 
    /**
     * ユーザステータス登録メソッドをテスト
