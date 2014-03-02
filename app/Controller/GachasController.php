@@ -23,11 +23,9 @@ class GachasController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->Gacha->getAllFind($where, $fields);
-        $this->set('gachas', $this->Paginator->paginate());
-
+        $list = $this->Gacha->getList();
+        $this->set('list', $list);
+/*
         $this->Gacha->begin();
         try {
             $values = array(
@@ -49,6 +47,7 @@ class GachasController extends ApiController {
                    ));
         }
         $this->Gacha->commit();
+ */
 	}
 
     /**
@@ -59,10 +58,6 @@ class GachasController extends ApiController {
      */
     public function product() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
 
     }
 

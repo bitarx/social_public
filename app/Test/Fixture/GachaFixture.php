@@ -41,7 +41,7 @@ class GachaFixture extends CakeTestFixture {
 			'gacha_id' => '2',
 			'gacha_name' => 'プレミアムガチャ',
 			'gacha_detail' => '',
-			'start_time' => '0000-00-00 00:00:00',
+			'start_time' => '2018-01-01 00:00:00',
 			'end_time' => '3000-00-00 00:00:00',
 			'delete_flg' => '0'
 		),

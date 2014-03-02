@@ -72,10 +72,8 @@ class UserParamsController extends ApiController {
      */
     public function comp() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
+        $data = $this->getBattleLogDataLatest($this->userId);
+        $this->set('data', $data);
     }
 
     /**

@@ -70,4 +70,23 @@ class Gacha extends AppModel {
 			),
 		),
 	);
+
+
+    /**
+     * ガチャ一覧取得
+     *
+     * @author imanishi
+     * @return array $list
+     */
+    public function getList() {
+
+        $date = date("Y-m-d H:i:s");
+        $where = array(
+            'start_time <' => $date
+        ,   'end_time >' => $date
+        );
+        $list = $this->getAllFind($where);
+        return $list;
+    }
+
 }
