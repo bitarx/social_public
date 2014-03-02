@@ -40,4 +40,26 @@ class GachaProbTest extends CakeTestCase {
 		parent::tearDown();
 	}
 
+
+    /**
+     * ガチャ確率リスト取得メソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testGetGachaProbList() {
+
+        $gachaId = 1;
+        $list = $this->GachaProb->getGachaProbList($gachaId);
+
+        $expected[] = array(
+            'gacha_prob_id' => '1',
+        );
+        $expected[] = array(
+            'gacha_prob_id' => '30',
+        );
+
+         $this->assertEquals($list[0]['gacha_prob_id'], $expected[0]['gacha_prob_id']);
+         $this->assertEquals($list[29]['gacha_prob_id'], $expected[1]['gacha_prob_id']);
+    }
+
 }

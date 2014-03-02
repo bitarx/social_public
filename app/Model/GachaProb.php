@@ -86,4 +86,21 @@ class GachaProb extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+
+    /**
+     * ガチャ確率リスト取得
+     *
+     * @author imanishi
+     * @param int $gachaId
+     * @param array $list ガチャ確率リスト
+     * @return array $list
+     */
+    public function getGachaProbList ($gachaId) {
+
+        $where = array('gacha_id' => $gachaId);
+        $list = $this->getAllFind($where);
+        return $list;
+    }
 }

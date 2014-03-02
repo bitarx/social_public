@@ -135,15 +135,13 @@ class UserCardTest extends CakeTestCase {
      */
     public function testGetUserCardById() {
 
-         $userId = 1;
-         $data = $this->UserCard->getUserCardById($userId);
+         $userCardId = 1;
+         $data = $this->UserCard->getUserCardById($userCardId);
          $expected = array(
-            'user_deck_id' => 1, 
-                 array(
-                    'user_card_id' => 1
-                 )
+            'card_id' => 1
+         ,  'user_card_id' => 1
          );
-         $this->assertEquals($data[0]['user_card_id'], $expected[0]['user_card_id']);
-         $this->assertEquals($data['user_deck_id'], $expected['user_deck_id']);
+         $this->assertEquals($data['user_card_id'], $expected['user_card_id']);
+         $this->assertEquals($data['card_id'], $expected['card_id']);
     }
 }

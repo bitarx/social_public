@@ -87,6 +87,6 @@ class Gacha extends AppModel {
         );
         $list = $this->getAllFind($where);
         return $list;
-    }
+   }
 
 }
