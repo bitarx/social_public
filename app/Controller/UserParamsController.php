@@ -15,6 +15,8 @@ class UserParamsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserParam', 'UserDeck', 'BattleLog');
+
     /**
      * バトル対戦車一覧
      *
@@ -23,7 +25,7 @@ class UserParamsController extends ApiController {
      */
 	public function index() {
 
-        $this->UserParam->getBattleList($userId);
+        $this->UserParam->getBattleList($this->userId);
         $this->set('userParams', $this->Paginator->paginate());
 /*
         $this->UserParam->begin();
@@ -51,6 +53,23 @@ class UserParamsController extends ApiController {
 	}
 
     /**
+     * バトル実行
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function act() {
+
+        $targetId = $this->params['target_id'];
+
+        // ターゲットの防御デッキ取得
+        $targetCards = $this->UserDeck->getUserDeckData($targetId);
+        // プレイヤーのデッキ取得
+        $userCards = $this->UserDeck->getUserDeckData($this->userId);
+        $this->rd('user_params', 'product');
+    }
+
+    /**
      * バトル演出
      *
      * @author imanishi
@@ -58,10 +77,6 @@ class UserParamsController extends ApiController {
      */
     public function product() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
     }
 
     /**
@@ -72,7 +87,7 @@ class UserParamsController extends ApiController {
      */
     public function comp() {
 
-        $data = $this->getBattleLogDataLatest($this->userId);
+        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
         $this->set('data', $data);
     }
 
