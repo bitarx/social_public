@@ -59,11 +59,12 @@ class UserParamsControllerTest extends ControllerTestCase {
  *
  * @return void
  */
+/*
 	public function testIndex() {
           $ret = $this->testAction('/user_params/index/');
           debug($ret);
 	}
-
+*/
 
 /**
  * testAct method
@@ -80,20 +81,23 @@ class UserParamsControllerTest extends ControllerTestCase {
  *
  * @return void
  */
+/*
     public function testProduct() {
           $ret = $this->testAction('/user_params/product/');
           debug($ret);
     }
-
+*/
 /**
  * testComp method
  *
  * @return void
  */
+/*
     public function testComp() {
           $ret = $this->testAction('/user_params/comp/');
           debug($ret);
     }
+*/
 
 
 /**

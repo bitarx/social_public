@@ -18,7 +18,7 @@ class UserParamsController extends ApiController {
     public $uses = array('UserParam', 'UserDeck', 'BattleLog');
 
     /**
-     * バトル対戦車一覧
+     * バトル対戦者一覧
      *
      * @author imanishi 
      * @return json
@@ -66,6 +66,8 @@ class UserParamsController extends ApiController {
         $targetCards = $this->UserDeck->getUserDeckData($targetId);
         // プレイヤーのデッキ取得
         $userCards = $this->UserDeck->getUserDeckData($this->userId);
+  var_dump($targetCards['UserDeckCard']);
+  var_dump($userCards['UserDeckCard']);
         $this->rd('user_params', 'product');
     }
 
