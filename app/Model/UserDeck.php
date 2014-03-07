@@ -1,6 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 App::uses('Card', 'Model');
+App::uses('UserCard', 'Model');
 /**
  * UserDeck Model
  *

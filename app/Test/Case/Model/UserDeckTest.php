@@ -18,6 +18,7 @@ class UserDeckTest extends CakeTestCase {
 		'app.sns_user',
 		'app.user_deck_card',
 		'app.card',
+		'app.user_card',
 		'app.skill'
 	);
 
