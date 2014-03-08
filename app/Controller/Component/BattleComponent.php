@@ -20,7 +20,6 @@ class BattleComponent extends Component {
      * @return array バトル結果
      */
     public function doBattle($selfCards, $targetCards) {
-
         foreach ($selfCards as $val) {
             
             $targetNum = count($targetCards) - 1;
@@ -66,4 +65,41 @@ class BattleComponent extends Component {
         return $ret; 
 
     }
+
+    /**
+     * スキルの実行
+     *
+     * @author imanishi 
+     * @param string $skillData スキルデータ
+     * @param int key 攻撃側何番目のカードか
+     * @param string $selfCards 攻撃側カードデータ
+     * @param string $targetCards 防御側カードデータ
+     * @return void
+     */
+    public function doSkill($skillData, $key, &$selfCards, &$targetCards) {
+
+        switch($skillData['effect'])
+        {
+            // 防御
+            case 1: 
+                // 自分をアップ
+                if($skillData['updown'] == 1 && $skillData['target'] == 1) {
+                    $up = $selfCards[$key]['def'] *  ($skillData['percent'] / 100); 
+                    $selfCards[$key]['def'] += floor($up);
+                }
+                break;
+
+            // 攻撃
+            case 2: 
+                // 自分をアップ
+                if ( $skillData['updown'] == 1 && $skillData['target'] == 1) {
+
+                    $up = $selfCards[$key]['atk'] *  ($skillData['percent'] / 100); 
+                    $selfCards[$key]['atk'] += floor($up);
+                }
+                break;
+        }
+
+    }
+
 }

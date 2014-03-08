@@ -13,9 +13,9 @@ class UserParamsController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserParam', 'UserDeck', 'BattleLog');
+    public $uses = array('UserParam', 'UserDeck', 'BattleLog', 'Card');
 
     /**
      * バトル対戦者一覧
@@ -62,12 +62,55 @@ class UserParamsController extends ApiController {
 
         $targetId = $this->params['target_id'];
 
-        // ターゲットの防御デッキ取得
+        // 防御側のデッキ取得
         $targetCards = $this->UserDeck->getUserDeckData($targetId);
-        // プレイヤーのデッキ取得
+        // 攻撃側のデッキ取得
         $userCards = $this->UserDeck->getUserDeckData($this->userId);
-  var_dump($targetCards['UserDeckCard']);
-  var_dump($userCards['UserDeckCard']);
+
+        $userCards = $userCards['UserDeckCard'];
+        $targetCards = $targetCards['UserDeckCard'];
+
+        // 攻撃側のスキル発動
+        foreach ($userCards as $key => $val) {
+            $userCard = $val['UserCard'];
+            $hit = mt_rand(1, 100);
+            // 当選
+            if ($userCard['skill_level'] <= $hit) {
+                // カードのスキル取得 
+                $skillData = $this->Card->getCardData($userCard['card_id']);
+
+                // スキル実行
+                $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+            }
+        }
+
+        // 防御側のスキル発動
+        foreach ($targetCards as $key => $val) {
+            $userCard = $val['UserCard'];
+            $hit = mt_rand(1, 100);
+            // 当選
+            if ($userCard['skill_level'] <= $hit) {
+                // カードのスキル取得 
+                $skillData = $this->Card->getCardData($userCard['card_id']);
+
+                // スキル実行
+                $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+            }
+        }
+
+        // 1:攻撃側勝利 2:防御側勝利
+        $winner = 1;
+        while(true) {
+            $targetCards = $this->Battle->doBattle($userCards, $targetCards);
+            if (empty($targetCards)) break;
+
+            $userCards = $this->Battle->doBattle($targetCards, $userCards);
+            if (empty($userCards)) {
+                $winner = 2;
+                break;
+            }
+        }
+
         $this->rd('user_params', 'product');
     }
 
