@@ -59,7 +59,7 @@ class UserDeckTest extends CakeTestCase {
             'user_id' => 1,
             array('user_card_id' => 1 )
          );
-         $this->assertEquals($data[0]['user_card_id'], $expected[0]['user_card_id']);
+         $this->assertEquals($data['UserDeckCard'][0]['user_card_id'], $expected[0]['user_card_id']);
          $this->assertEquals($data['user_deck_id'], $expected['user_deck_id']);
          $this->assertEquals($data['user_id'], $expected['user_id']);
     }
