@@ -75,10 +75,9 @@ class UserParamsController extends ApiController {
             $userCard = $val['UserCard'];
             $hit = mt_rand(1, 100);
             // 当選
-            if ($userCard['skill_level'] <= $hit) {
+            if ($hit <= $userCard['skill_level']) {
                 // カードのスキル取得 
                 $skillData = $this->Card->getCardData($userCard['card_id']);
-
                 // スキル実行
                 $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
             }
@@ -89,7 +88,7 @@ class UserParamsController extends ApiController {
             $userCard = $val['UserCard'];
             $hit = mt_rand(1, 100);
             // 当選
-            if ($userCard['skill_level'] <= $hit) {
+            if ($hit <= $userCard['skill_level']) {
                 // カードのスキル取得 
                 $skillData = $this->Card->getCardData($userCard['card_id']);
 
