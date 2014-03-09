@@ -82,22 +82,47 @@ class BattleComponent extends Component {
         {
             // 防御
             case 1: 
-                // 自分をアップ
-                if($skillData['updown'] == 1 && $skillData['target'] == 1) {
-                    $up = $selfCards[$key]['def'] *  ($skillData['percent'] / 100); 
-                    $selfCards[$key]['def'] += floor($up);
-                }
+                $eff = 'def';
                 break;
 
             // 攻撃
             case 2: 
-                // 自分をアップ
-                if ( $skillData['updown'] == 1 && $skillData['target'] == 1) {
-
-                    $up = $selfCards[$key]['atk'] *  ($skillData['percent'] / 100); 
-                    $selfCards[$key]['atk'] += floor($up);
-                }
+                $eff = 'atk';
                 break;
+        }
+
+
+        // 自分をアップ
+        if($skillData['updown'] == 1 && $skillData['target'] == 1) {
+            $up = $selfCards[$key][$eff] *  ($skillData['percent'] / 100); 
+            $selfCards[$key][$eff] += floor($up);
+        }
+        // 相手をダウン
+         elseif ($skillData['updown'] == 2 && $skillData['target'] == 2) 
+        {
+            $tnum = count($targetCards) - 1;
+            $tKey = mt_rand(0, $tnum);
+
+            $down = $targetCards[$tKey][$eff] *  ($skillData['percent'] / 100); 
+            $targetCards[$tKey][$eff] -= floor($down);
+
+            $targetCards['t_key'] = $tKey;
+        }
+        // 味方をアップ
+         elseif ($skillData['updown'] == 1 && $skillData['target'] == 3) 
+        {
+            foreach ($selfCards as $no => $val) {
+                $up = $selfCards[$no][$eff] *  ($skillData['percent'] / 100); 
+                $selfCards[$no][$eff] += floor($up);
+            }
+        }
+        // 相手全体をダウン
+         elseif ($skillData['updown'] == 2 && $skillData['target'] == 4) 
+        {
+            foreach ($targetCards as $no => $val) {
+                $down = $targetCards[$no][$eff] *  ($skillData['percent'] / 100); 
+                $targetCards[$no][$eff] -= floor($down);
+            }
         }
 
     }
