@@ -94,8 +94,8 @@ class BattleComponent extends Component {
 
         // 自分をアップ
         if($skillData['updown'] == 1 && $skillData['target'] == 1) {
-            $up = $selfCards[$key][$eff] *  ($skillData['percent'] / 100); 
-            $selfCards[$key][$eff] += floor($up);
+            $up = $selfCards[$key]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
+            $selfCards[$key]['UserCard'][$eff] += floor($up);
         }
         // 相手をダウン
          elseif ($skillData['updown'] == 2 && $skillData['target'] == 2) 
@@ -103,8 +103,8 @@ class BattleComponent extends Component {
             $tnum = count($targetCards) - 1;
             $tKey = mt_rand(0, $tnum);
 
-            $down = $targetCards[$tKey][$eff] *  ($skillData['percent'] / 100); 
-            $targetCards[$tKey][$eff] -= floor($down);
+            $down = $targetCards[$tKey]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
+            $targetCards[$tKey]['UserCard'][$eff] -= floor($down);
 
             $targetCards['t_key'] = $tKey;
         }
@@ -112,16 +112,16 @@ class BattleComponent extends Component {
          elseif ($skillData['updown'] == 1 && $skillData['target'] == 3) 
         {
             foreach ($selfCards as $no => $val) {
-                $up = $selfCards[$no][$eff] *  ($skillData['percent'] / 100); 
-                $selfCards[$no][$eff] += floor($up);
+                $up = $selfCards[$no]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
+                $selfCards[$no]['UserCard'][$eff] += floor($up);
             }
         }
         // 相手全体をダウン
          elseif ($skillData['updown'] == 2 && $skillData['target'] == 4) 
         {
             foreach ($targetCards as $no => $val) {
-                $down = $targetCards[$no][$eff] *  ($skillData['percent'] / 100); 
-                $targetCards[$no][$eff] -= floor($down);
+                $down = $targetCards[$no]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
+                $targetCards[$no]['UserCard'][$eff] -= floor($down);
             }
         }
 
