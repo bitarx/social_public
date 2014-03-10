@@ -88,6 +88,17 @@ class StagesControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testAct method
+ *
+ * @return void
+ */
+	public function testAct() {
+
+        $ret = $this->testAction('/stages/act/?target_id=1');
+        debug($ret);
+	}
+
+/**
  * testFind method
  *
  * @return void
