@@ -13,12 +13,12 @@ class UserCardsController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Synth');
 
     public $uses = array('UserCard', 'UserBaseCard');
 
     /**
-     * 強化合成一覧
+     * カード一覧
      *
      * @author imanishi 
      * @return json
@@ -31,6 +31,142 @@ class UserCardsController extends ApiController {
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
         $this->set('data', $userBaseCard);
 
+	}
+
+    /**
+     * 合成確認
+     *
+     * @author imanishi 
+     * @return json
+     */
+	public function conf() {
+
+        $userCardId = $this->params['user_card_id'];
+
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+        $this->set('data', $userBaseCard);
+
+        $targetData = $this->UserCard->getUserCardById($userCardId);
+        $this->set('target', $targetData);
+	}
+
+    /**
+     * 進化合成実行
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function actEvol() {
+
+        $userCardId = $this->params['user_card_id'];
+
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+
+        $targetData = $this->UserCard->getUserCardById($userCardId);
+
+        $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['id']);
+
+        if (!empty($afterCardId)) {
+            // 進化後のカードデータ取得
+            $cardData = $this->Card->getCardData($afterCardId);
+
+            $this->UserCard->begin(); 
+            try {  
+                $userCardId = array(
+                    'user_card_id' => $userBaseCard['card_id'] 
+                ,   'card_id' => $cardData['card_id'] 
+                ,   'hp' => $cardData['card_hp'] 
+                ,   'hp_max' => $cardData['card_hp'] 
+                ,   'atk' => $cardData['card_atk'] 
+                ,   'def' => $cardData['card_def'] 
+                );
+                $this->UserCard->init($values);
+            
+            } catch (Exception $e) { 
+                $this->UserCard->rollback(); 
+                $this->log($e->errmes);
+                return $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+            $this->UserCard->commit(); 
+
+        } else {
+            // 進化できる組み合わせではない
+            return $this->rd('UserCards', 'conf', array('error'=> 1)); 
+        }
+
+
+        $params = array(
+            'base_card' => $userBaseCard['card_id']
+        ,   'target' => $targetData['card_id']
+        ,   'after_card' => $afterCardId
+        );
+
+        $this->rd('UserCards', 'product', $params);
+	}
+
+    /**
+     * 強化合成実行
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function actUp() {
+
+        $targetCards = array();
+        for ($i = 1;$i <= 9; $i++) {
+            if (isset($this->params['user_card_id_'. $i])) {
+                $targetCards['target_card_'. $i] = $this->params['user_card_id_'. $i];
+            }
+        }
+
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+
+        $targetList = array(); 
+        foreach ($targetCards as $key => $userCardId) {
+            $targetList[$key] = $this->UserCard->getUserCardById($userCardId);
+        }
+
+        if (empty($targetList)) {
+            // 素材がない
+            return $this->rd('UserCards', 'conf', array('error'=> 2)); 
+        }
+
+        $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList);
+
+        $this->UserCard->begin(); 
+        try {  
+            $userCardId = array(
+                'user_card_id' => $userBaseCard['card_id'] 
+            ,   'card_id' => $cardData['card_id'] 
+            ,   'hp' => $cardData['card_hp'] 
+            ,   'hp_max' => $cardData['card_hp'] 
+            ,   'atk' => $cardData['card_atk'] 
+            ,   'def' => $cardData['card_def'] 
+            );
+            $this->UserCard->init($values);
+        
+        } catch (Exception $e) { 
+            $this->UserCard->rollback(); 
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->UserCard->commit(); 
+
+
+        $params = array(
+            'base_card' => $userBaseCard['card_id']
+        ,   'target_1' => $targetData['card_id_1']
+        ,   'target_2' => $targetData['card_id_2']
+        ,   'target_3' => $targetData['card_id_3']
+        ,   'target_4' => $targetData['card_id_4']
+        ,   'target_5' => $targetData['card_id_5']
+        ,   'target_6' => $targetData['card_id_6']
+        ,   'target_7' => $targetData['card_id_7']
+        ,   'target_8' => $targetData['card_id_8']
+        ,   'target_9' => $targetData['card_id_9']
+        );
+
+        $this->rd('UserCards', 'product', $params);
 	}
 
     /**

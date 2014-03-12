@@ -67,6 +67,17 @@ class UserCardsControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testConf method
+ *
+ * @return void
+ */
+	public function testConf() {
+
+        $ret = $this->testAction('/user_cards/conf/?user_card_id=1');
+        debug($ret);
+	}
+
+/**
  * testFind method
  *
  * @return void
