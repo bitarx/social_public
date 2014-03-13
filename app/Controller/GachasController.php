@@ -13,7 +13,9 @@ class GachasController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Common');
+
+    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog');
 
     /**
      * index method
@@ -49,6 +51,62 @@ class GachasController extends ApiController {
         $this->Gacha->commit();
  */
 	}
+
+
+    /**
+     * ガチャ実行
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function act() {
+
+        $gachaId = $this->params['gacha_id'];
+
+        if (empty($gachaId)) {
+            // 選択がない
+            return $this->rd('Gacha', 'index', array('error'=> 1));
+        }
+
+        $probList = $this->GachaProb->getGachaProbList ($gachaId);
+
+        $data = $this->Common->doLot($probList);
+
+        $cardData = $this->Card->getCardData($data['card_id']);
+
+        $this->UserCard->begin();
+        try {
+            $values = array(
+                'card_id' => $cardData['card_id']
+            ,   'hp' => $cardData['card_hp']
+            ,   'hp_max' => $cardData['card_hp']
+            ,   'atk' => $cardData['card_atk']
+            ,   'def' => $cardData['card_def']
+            );
+            $this->UserCard->save($values);
+
+            // ログ記述
+            $values = array(
+                'user_id' => $this->userId 
+            ,   'gacha_id' => $gachaId
+            ,   'card_id'  => $cardData['card_id']
+            );
+            $this->UserGachaLog->save($values);
+
+        } catch (Exception $e) {
+            $this->UserCard->rollback();
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> 2));
+        }
+        $this->UserCard->commit();
+
+
+        $params = array(
+            'rare_level' => $cardData['rare_level']
+        );
+
+        $this->rd('Gacha', 'product', $params);
+    }
 
     /**
      * ガチャ演出

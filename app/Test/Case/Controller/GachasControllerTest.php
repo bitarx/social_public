@@ -60,6 +60,20 @@ class GachasControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+
+        $ret = $this->testAction('/gachas/index/');
+        debug($ret);
+	}
+
+/**
+ * testAct method
+ *
+ * @return void
+ */
+	public function testAct() {
+
+        $ret = $this->testAction('/gachas/act/?gacha_id=1');
+        debug($ret);
 	}
 
 /**

@@ -15,7 +15,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card');
 
     /**
      * カード一覧
@@ -64,7 +64,7 @@ class UserCardsController extends ApiController {
 
         $targetData = $this->UserCard->getUserCardById($userCardId);
 
-        $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['id']);
+        $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['card_id']);
 
         if (!empty($afterCardId)) {
             // 進化後のカードデータ取得
@@ -72,7 +72,7 @@ class UserCardsController extends ApiController {
 
             $this->UserCard->begin(); 
             try {  
-                $userCardId = array(
+                $values = array(
                     'user_card_id' => $userBaseCard['card_id'] 
                 ,   'card_id' => $cardData['card_id'] 
                 ,   'hp' => $cardData['card_hp'] 
@@ -80,7 +80,7 @@ class UserCardsController extends ApiController {
                 ,   'atk' => $cardData['card_atk'] 
                 ,   'def' => $cardData['card_def'] 
                 );
-                $this->UserCard->init($values);
+                $this->UserCard->save($values);
             
             } catch (Exception $e) { 
                 $this->UserCard->rollback(); 
@@ -135,7 +135,7 @@ class UserCardsController extends ApiController {
 
         $this->UserCard->begin(); 
         try {  
-            $userCardId = array(
+            $values = array(
                 'user_card_id' => $userBaseCard['card_id'] 
             ,   'card_id' => $cardData['card_id'] 
             ,   'hp' => $cardData['card_hp'] 
@@ -143,7 +143,7 @@ class UserCardsController extends ApiController {
             ,   'atk' => $cardData['card_atk'] 
             ,   'def' => $cardData['card_def'] 
             );
-            $this->UserCard->init($values);
+            $this->UserCard->save($values);
         
         } catch (Exception $e) { 
             $this->UserCard->rollback(); 

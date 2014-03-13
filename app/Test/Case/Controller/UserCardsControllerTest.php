@@ -78,6 +78,28 @@ class UserCardsControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testActEvol method
+ *
+ * @return void
+ */
+	public function testActEvol() {
+
+        $ret = $this->testAction('/user_cards/actEvol/?user_card_id=1');
+        debug($ret);
+	}
+
+/**
+ * testActUp method
+ *
+ * @return void
+ */
+	public function testActUp() {
+
+        $ret = $this->testAction('/user_cards/actUp/?user_card_id=1');
+        debug($ret);
+	}
+
+/**
  * testFind method
  *
  * @return void
