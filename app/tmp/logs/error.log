@@ -13679,3 +13679,562 @@ Request URL: /index.php/archives/11
 Stack Trace:
 #0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-03-13 13:39:14 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 15:09:52 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 17:35:30 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 18:34:57 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 18:34:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 18:48:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 19:49:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 21:52:23 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 21:52:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 22:00:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-13 23:02:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/Errors?error=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-14 05:18:21 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-14 05:18:52 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-14 09:56:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 09:57:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 09:59:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:04:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:12:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:12:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:12:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(128): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:13:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:13:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:14:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:26:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(98): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:26:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(99): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 10:27:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserTutorial.17' in 'field list'
+Request URL: /index.php/Tutorials/tutorial_2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserTut...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserTut...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserTut...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserTutorial), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(99): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(36): AppModel->getAllFind(Array, Array, 'first')
+#8 /var/www/asns/app/Controller/TutorialsController.php(129): TutorialsController->_routeTutorial()
+#9 [internal function]: TutorialsController->tutorial_2()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-14 11:16:03 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-03-14 11:16:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/errors?error=2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-14 11:17:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+Request URL: /index.php/errors?error=2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Error`....', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `Error`....', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Error`....', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(Error), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/ErrorsController.php(28): Model->field('message', Array)
+#8 [internal function]: ErrorsController->index()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ErrorsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(ErrorsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-14 11:26:59 Error: UserDeck save failed :Tutorials/tutorial_5
+2014-03-14 11:33:10 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'regist' at line 1
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('regist', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('regist', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(609): DboSource->fetchAll('regist', Array, Array)
+#4 /var/www/asns/lib/Cake/Model/Model.php(800): DboSource->query('regist', Array, Object(UserDeckCard))
+#5 /var/www/asns/app/Controller/TutorialsController.php(293): Model->__call('regist', Array)
+#6 /var/www/asns/app/Controller/TutorialsController.php(293): UserDeckCard->regist(NULL, Array)
+#7 [internal function]: TutorialsController->tutorial_5()
+#8 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-14 11:37:49 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'regist' at line 1
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('regist', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('regist', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(609): DboSource->fetchAll('regist', Array, Array)
+#4 /var/www/asns/lib/Cake/Model/Model.php(800): DboSource->query('regist', Array, Object(UserDeckCard))
+#5 /var/www/asns/app/Controller/TutorialsController.php(293): Model->__call('regist', Array)
+#6 /var/www/asns/app/Controller/TutorialsController.php(293): UserDeckCard->regist(NULL, Array)
+#7 [internal function]: TutorialsController->tutorial_5()
+#8 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-14 11:37:51 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'regist' at line 1
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('regist', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('regist', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(609): DboSource->fetchAll('regist', Array, Array)
+#4 /var/www/asns/lib/Cake/Model/Model.php(800): DboSource->query('regist', Array, Object(UserDeckCard))
+#5 /var/www/asns/app/Controller/TutorialsController.php(293): Model->__call('regist', Array)
+#6 /var/www/asns/app/Controller/TutorialsController.php(293): UserDeckCard->regist(NULL, Array)
+#7 [internal function]: TutorialsController->tutorial_5()
+#8 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-14 11:38:45 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'regist' at line 1
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('regist', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('regist', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(609): DboSource->fetchAll('regist', Array, Array)
+#4 /var/www/asns/lib/Cake/Model/Model.php(800): DboSource->query('regist', Array, Object(UserDeckCard))
+#5 /var/www/asns/app/Controller/TutorialsController.php(293): Model->__call('regist', Array)
+#6 /var/www/asns/app/Controller/TutorialsController.php(293): UserDeckCard->regist(NULL, Array)
+#7 [internal function]: TutorialsController->tutorial_5()
+#8 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-14 17:26:27 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in where clause is ambiguous
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserCar...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserCar...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserCar...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserCard), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(280): Model->field('user_card_id', Array)
+#8 [internal function]: TutorialsController->tutorial_5()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-14 17:29:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in where clause is ambiguous
+Request URL: /index.php/Tutorials/tutorial_5
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserCar...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserCar...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserCar...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2900): DboSource->read(Object(UserCard), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2872): Model->_readDataSource('first', Array)
+#6 /var/www/asns/lib/Cake/Model/Model.php(1623): Model->find('first', Array)
+#7 /var/www/asns/app/Controller/TutorialsController.php(280): Model->field('user_card_id', Array)
+#8 [internal function]: TutorialsController->tutorial_5()
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TutorialsController), Array)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(TutorialsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-03-14 17:43:47 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-14 17:44:39 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

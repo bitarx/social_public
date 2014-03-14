@@ -95,6 +95,8 @@ class AppModel extends Model {
         if (0 < $recursive) { 
             $options['recursive'] = $recursive;
         } 
+
+        // SELECT実行
         $ret = $this->find($kind, $options);
 
         $data = array();
@@ -135,6 +137,8 @@ class AppModel extends Model {
     public function insertBulk( $fields = array(), $data = array(), $ignoreFlg = 0 ) {
 
         $date = date('Y-m-d H:i:s');
+
+        array_push($fields, 'created');
 
         $holder = '(' . implode(',', array_fill(0, count($fields), '?')) . ')';
         $holders = implode(',', array_fill(0, count($data), $holder));

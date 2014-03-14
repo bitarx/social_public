@@ -33,7 +33,7 @@ class TutorialsController extends ApiController {
         // チュートリアル終了判定
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
-        $row = $this->UserTutorial->getAllFind($fields, $where, 'first');
+        $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
         if (!empty($row['end_flg'])) {
             return $this->rd('SnsUser', 'index');
         }
@@ -124,7 +124,7 @@ class TutorialsController extends ApiController {
     * @return void
     */
     public function tutorial_2() { 
-     
+
         $this->_routeTutorial();
 
         $current = str_replace(self::$actionPref, '', $this->action);
@@ -272,27 +272,41 @@ class TutorialsController extends ApiController {
                 throw new AppException('getStartCardData faild :' . $this->name . '/' . $this->action);
             }
 
-            $ret = $this->UserCard->registStartCard($this->userId, $list);
-            if (!$ret) {
-                throw new AppException('UserCard save failed :' . $this->name . '/' . $this->action);
-            }
+            // 初回カード振込確認
+            $where = array(
+                'UserCard.user_id' => $this->userId
+            ,   'UserCard.card_id' => $list[0]['card_id'] 
+            ); 
+            $userCard = $this->UserCard->field('user_card_id', $where);
+            // 未振込であれば振込処理
+            if (!$userCard) {
 
-            $values = array(
-                'user_id' => $this->userId 
-            ,   'kind' => 1
-            );
-            $ret = $this->UserDeck->save($values);
-            if (empty($ret['UserDeck']['id'])) {
-                throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
-            }
+                // カード登録
+                $ret = $this->UserCard->registStartCard($this->userId, $list);
+                if (!$ret) {
+                    throw new AppException('UserCard save failed :' . $this->name . '/' . $this->action);
+                }
 
-            $list = $this->UserCard->getUserCard ($this->userId);
-            if (empty($list[0]['user_card_id'])) {
-                throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
-            }
-            $ret = $this->UserDeckCard->regist($ret['UserDeck']['id'], $list);
-            if (!$ret) {
-                throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
+                // デッキ登録
+                $values = array(
+                    'user_id' => $this->userId 
+                ,   'kind' => 1
+                );
+                $ret = $this->UserDeck->save($values);
+                if (empty($ret['UserDeck']['user_id'])) {
+                    throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
+                }
+
+                $list = $this->UserCard->getUserCard ($this->userId);
+                if (empty($list[0]['user_card_id'])) {
+                    throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
+                }
+
+                // デッキとユーザ所有カードを紐づけ
+                $ret = $this->UserDeckCard->regist($ret['UserDeck']['user_deck_id'], $list);
+                if (!$ret) {
+                    throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
+                }
             }
 
         } catch (AppException $e) {
