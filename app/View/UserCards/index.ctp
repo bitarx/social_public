@@ -1,4 +1,3 @@
 <div class="userCards index">
-	<h2><?php echo __('User Cards'); ?></h2>
-				<?php echo $this->Html->link(__('Index'), array('action' => 'index')); ?>
+	<h2>User Cards</h2>
 </div>

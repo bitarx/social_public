@@ -32,6 +32,16 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    /**
+     * 定数
+     *
+     * @var array
+     */
+    public $gameTitle = '鎮激のエロイース';
+
+
+    public $viewClass = 'Smarty';
+
     public $uses = array('SnsUser', 'User', 'UserTutorial');
 
     public $components = array('Cookie', 'Common');
@@ -71,7 +81,7 @@ class AppController extends Controller {
         }
 
         if ( !in_array($this->name, self::$ctlError)
-            && ('SnsUser' != $this->name && 'index' != $this->action)
+            && ('SnsUsers' != $this->name && 'index' != $this->action)
             && (!$this->ownerId || !$this->viewerId)) {
 
             // Cookieセットされていない場合は不正アクセス
@@ -91,7 +101,7 @@ class AppController extends Controller {
             $ary = array_merge(self::$ctlRegist , self::$ctlError);
             if (!in_array($this->name, $ary)) {
                 // チュートリアルを終えていない
-                if (empty($row['UserTutorial']['end_flg'])) {
+                if (empty($row['end_flg'])) {
                     if (!empty($row['UserTutorial']['tutorial_id'])) {
 //$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
                         // チュートリアル途中
@@ -103,8 +113,29 @@ class AppController extends Controller {
                 }
             }
         }
+        $this->set('gameTitle', $this->gameTitle); 
 
+        // URLアサイン
+        $this->_setUrl();
     } 
+
+    /**
+     * URLアサイン
+     *
+     * @author imanishi 
+     * @return void
+     */
+    private function _setUrl() {
+
+        // マイページ
+        $this->set('linkUser', BASE_URL . 'Users/index'); 
+        // クエスト
+        $this->set('linkQuest', BASE_URL . 'Quests/index'); 
+        // 強化進化
+        $this->set('linkUserCard', BASE_URL . 'UserCards/index'); 
+        // ガチャ
+        $this->set('linkGacha', BASE_URL . 'Gachas/index'); 
+    }
 
     /**
      * リダイレクト

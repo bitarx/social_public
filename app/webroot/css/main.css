@@ -23,7 +23,7 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	background: #000000;
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -80,6 +80,16 @@ p {
 #header{
 	padding: 10px 20px;
 }
+.header{
+    position: relative;
+    width: 1640px;
+}
+.btn_my{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 #header h1 {
 	line-height:20px;
 	background: #003d4c url('../img/cake.icon.png') no-repeat left;

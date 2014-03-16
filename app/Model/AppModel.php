@@ -219,4 +219,5 @@ class AppModel extends Model {
          }
          return $querylog;
     }
+
 }

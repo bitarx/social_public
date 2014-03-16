@@ -1,4 +1,3 @@
 <div class="quests index">
-	<h2><?php echo __('Quests'); ?></h2>
-				<?php echo $this->Html->link(__('Index'), array('action' => 'index')); ?>
+	<h2>Quests</h2>
 </div>

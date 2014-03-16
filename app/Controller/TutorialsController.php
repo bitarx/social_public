@@ -35,7 +35,7 @@ class TutorialsController extends ApiController {
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
         if (!empty($row['end_flg'])) {
-            return $this->rd('SnsUser', 'index');
+            return $this->rd('SnsUsers', 'index');
         }
 
         $current = str_replace(self::$actionPref, '', $this->action);

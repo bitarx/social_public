@@ -31,6 +31,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 		echo $this->Html->css('main');
         echo $this->Html->script( 'jquery-2.1.0.min.js', array( 'inline' => false ) );
+        echo $this->Html->script('jquery.leanModal.min.js');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -39,10 +40,52 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+		<div class="header">
+		    <?=	$this->Html->image('header_base.png', array('alt' => $cakeDescription, 'border' => '0', 'width' => '663px')); ?>
+		</div>
+		<div class="btn_my">
+		    <?= $this->Html->link(	
+                    $this->Html->image('btn_my_on.png', array('alt' => $cakeDescription, 'border' => '0')) 
+                ,   array('controller' => 'Users' , 'action' => 'index')
+                ,   array('escape' => false)
+                );
+            ?>
+		    <?= $this->Html->link(	
+                    $this->Html->image('btn_synth_on.png', array('alt' => $cakeDescription, 'border' => '0'))
+                ,   array('controller' => 'UserCards' , 'action' => 'index')
+                ,   array('escape' => false)
+                );
+            ?>
+		    <?= $this->Html->link(	
+                    $this->Html->image('btn_quest_on.png', array('alt' => $cakeDescription, 'border' => '0'))
+                ,   array('controller' => 'Quests' , 'action' => 'index')
+                ,   array('escape' => false)
+                );
+            ?>
+		    <?= $this->Html->link(	
+                    $this->Html->image('btn_gacha_on.png', array('alt' => $cakeDescription, 'border' => '0'))
+                ,   array('controller' => 'Gachas' , 'action' => 'index')
+                ,   array('escape' => false)
+                );
+            ?>
+
+		    <?=	$this->Html->image('btn_menu_on.png', array('alt' => $cakeDescription, 'border' => '0')); ?>
 		</div>
 		<div id="content">
+
+
+            <a rel="leanModal" href="#div787">Edit</a>
+            <div id="div787"><<モーダルウィンドウ内に表示する要素>></div>
+
+            <script type="text/javascript">
+            $(function() {
+                $( 'a[rel*=leanModal]').leanModal({
+                    top: 50,                     // モーダルウィンドウの縦位置を指定
+                    overlay : 0.5,               // 背面の透明度 
+                    closeButton: ".modal_close"  // 閉じるボタンのCSS classを指定
+                });
+            }); 
+            </script>
 
 			<?php echo $this->Session->flash(); ?>
 
