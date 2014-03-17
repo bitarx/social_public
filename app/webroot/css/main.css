@@ -23,7 +23,7 @@
 
 /** General Style Info **/
 body {
-	background: #000000;
+    background-image: url('../img/bg.png');
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -89,6 +89,7 @@ p {
     top: 0px;
     left: 0px;
 }
+
 
 #header h1 {
 	line-height:20px;
@@ -749,4 +750,39 @@ pre {
 /** Elements **/
 #url-rewriting-warning {
 	display:none;
+}
+
+
+#lean_overlay{
+  position: fixed; z-index:100; 
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+}
+#div_menu{
+  background: none repeat scroll 0 0 #FFFFFF;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  display: none;
+  padding: 0px;
+ }
+.modal_close{ 
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: block; 
+  width: 14px;
+  height: 14px; 
+  background: url(../img/modal_close.png);
+  z-index: 2;
+}
+.menu_base{
+    position: relative;
+}
+.menu_child{
+    position: absolute;
+    top: 20px;
+    left: 2px;
 }

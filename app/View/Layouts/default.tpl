@@ -19,6 +19,20 @@
             <a href="<{$linkGacha}>"><img src="../img/btn_gacha_on.png"></a>             
             <a href=""><img src="../img/btn_menu_on.png"></a>             
         </div>
+
+        <a rel="leanModal" href="#div_menu">Edit</a>
+        <{include file="../Elements/menu.tpl"}>
+
+        <script type="text/javascript">
+        $(function() {
+            $( 'a[rel*=leanModal]').leanModal({
+                top: 80,                     // モーダルウィンドウの縦位置を指定
+                overlay : 1.0,               // 背面の透明度
+                closeButton: ".modal_close"  // 閉じるボタンのCSS classを指定
+            });
+        });
+        </script>
+
         <{$content_for_layout}>
     </div>
 
