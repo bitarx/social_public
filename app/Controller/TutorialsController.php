@@ -15,7 +15,7 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'UserTutorial', 'Tutorial', 'Card', 'UserCard',
+    public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard',
                     'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox');
 
     public $row  = array();
@@ -71,8 +71,19 @@ class TutorialsController extends ApiController {
             if (empty($userId)) {
                 $name   = 'test';
                 $carrer = 1;
+
                 $values = array(
-                    'name'        => $name
+                    'sns_user_id'   => $this->ownerId
+                ,   'viewer'        => $this->viewerId
+                ,   'sns_name'      => $name
+                );
+                $ret = $this->SnsUser->save($values);
+                if (!$ret) {
+                    throw new AppException('SnsUser save failed :' . $this->name . '/' . $this->action);
+                }
+
+                $values = array(
+                    'user_name'        => $name
                 ,   'sns_user_id' => $this->ownerId
                 ,   'carrer'      => $carrer
                 );
@@ -100,7 +111,7 @@ class TutorialsController extends ApiController {
             }
 
         } catch (AppException $e) {
-
+$this->log('###############################:'); 
             $this->User->rollback();
 
             $this->log($e->errmes);
@@ -110,7 +121,6 @@ class TutorialsController extends ApiController {
                    ));
         }
         $this->User->commit();
-
 
         // アサイン
         $this->set('row',  $this->row);
@@ -769,6 +779,18 @@ class TutorialsController extends ApiController {
         // アサイン
         $this->set('row',  $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
+    } 
+
+    /**
+     * チュートリアル最終処理
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_99() { 
+     
+
+        $this->rd('SnsUsers', 'index');
     } 
 
 

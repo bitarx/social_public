@@ -763,26 +763,23 @@ pre {
   display: none;
 }
 #div_menu{
-  background: none repeat scroll 0 0 #FFFFFF;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   display: none;
   padding: 0px;
- }
-.modal_close{ 
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: block; 
-  width: 14px;
-  height: 14px; 
-  background: url(../img/modal_close.png);
-  z-index: 2;
 }
 .menu_base{
     position: relative;
 }
-.menu_child{
+.head_child {
+    position: relative;
+}
+.menu_head {
     position: absolute;
-    top: 20px;
-    left: 2px;
+    top: 15px;
+    margin-left:14px;
+}
+.menu_close {
+    position: absolute;
+    top: 0px;
+    margin-left:520px;
+    margin-top:0px;
 }

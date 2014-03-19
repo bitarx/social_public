@@ -79,19 +79,64 @@ class AppController extends Controller {
             $this->ownerId  = $this->Cookie->read('owner_id');
             $this->viewerId = $this->Cookie->read('viewer_id');
         }
-
+$this->log('&&&&&&&&&&&&&:'); 
+$this->log($this->name); 
         if ( !in_array($this->name, self::$ctlError)
             && ('SnsUsers' != $this->name && 'index' != $this->action)
             && (!$this->ownerId || !$this->viewerId)) {
 
+$this->log('Error!!!!!'); 
             // Cookieセットされていない場合は不正アクセス
             $this->rd('Errors', 'index', array('error' => 1 ));
         } else { 
             // 正常なアクセスの場合はユーザIDをセット
-//$this->log('ownerId:'. $this->ownerId); 
+$this->log('ownerId:'. $this->ownerId); 
             $where = array('User.sns_user_id' => $this->ownerId); 
             $this->userId = $this->User->field('user_id', $where);
-//$this->log('AppuserId:'. $this->userId); 
+
+
+            // ユーザデータ登録
+            $this->User->begin();
+            try {
+                if (empty($this->userId)) {
+                    $name   = 'test';
+                    $carrer = 1;
+
+                    $values = array(
+                        'sns_user_id'   => $this->ownerId
+                    ,   'viewer'        => $this->viewerId
+                    ,   'sns_name'      => $name
+                    );
+                    $ret = $this->SnsUser->save($values);
+                    if (!$ret) {
+                        throw new AppException('SnsUser save failed :' . $this->name . '/' . $this->action);
+                    }
+
+                    $values = array(
+                        'user_name'        => $name
+                    ,   'sns_user_id' => $this->ownerId
+                    ,   'carrer'      => $carrer
+                    );
+                    $ret = $this->User->save($values);
+                    if (!$ret) {
+                        throw new AppException('User save failed :' . $this->name . '/' . $this->action);
+                    }
+                    $this->userId = $ret['User']['user_id'];
+                }
+
+            } catch (AppException $e) {
+    $this->log('###############################:');
+                $this->User->rollback();
+
+                $this->log($e->errmes);
+                return $this->redirect(
+                           array('controller' => 'errors', 'action' => 'index'
+                                 , '?' => array('error' => 2)
+                       ));
+            }
+            $this->User->commit();
+
+$this->log('AppuserId:'. $this->userId); 
 
             // チュートリアル判定
             $where = array('user_id' => $this->userId);
@@ -99,14 +144,18 @@ class AppController extends Controller {
             $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
 
             $ary = array_merge(self::$ctlRegist , self::$ctlError);
+$this->log('name:'. $this->name); 
             if (!in_array($this->name, $ary)) {
+$this->log('aaaaaaaaaaaaaaaaa:'. $this->userId); 
                 // チュートリアルを終えていない
                 if (empty($row['end_flg'])) {
+$this->log('bbbbbbbb:'. $this->userId); 
                     if (!empty($row['UserTutorial']['tutorial_id'])) {
-//$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
+$this->log('tuto:' . $row['UserTutorial']['tutorial_id']); 
                         // チュートリアル途中
                         return $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                     } else {
+$this->log('tutoFIrst:' . $row['UserTutorial']['tutorial_id']); 
                         // チュートリアル初めて
                         return $this->rd('Tutorials', 'tutorial_1');
                     }

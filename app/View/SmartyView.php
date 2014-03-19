@@ -15,7 +15,6 @@ class SmartyView extends View {
 		$this->Smarty = new Smarty();
 
 		//$this->subDir = 'smarty'.DS;
-
 		$this->ext= '.tpl';
 		//$this->Smarty->plugins_dir[] = VENDORS.DS.'smarty'.DS.'plugins';
 		$this->Smarty->compile_dir = TMP.'smarty'.DS.'compile'.DS;

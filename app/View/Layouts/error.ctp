@@ -1,61 +1,40 @@
-<?php
-/**
- *
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.leanModal.min.js"></script>
 
-		echo $this->Html->css('cake.generic');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+<title><{$gameTitle}></title>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
+    <div id="container">
+        <div class="header">
+            <img src="../img/header_base.png" width="663px">
+        </div>
+        <div class="btn_my">
+            <a href="<{$linkUser}>"><img src="../img/btn_my_on.png"></a>             
+            <a href="<{$linkUserCard}>"><img src="../img/btn_synth_on.png"></a>             
+            <a href="<{$linkQuest}>"><img src="../img/btn_quest_on.png"></a>             
+            <a href="<{$linkGacha}>"><img src="../img/btn_gacha_on.png"></a>             
+            <a rel="leanModal" href="#div_menu"><img src="../img/btn_menu_on.png"></a>             
+        </div>
 
-			<?php echo $this->Session->flash(); ?>
+        <{include file="../Elements/menu.tpl"}>
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
+        <script type="text/javascript">
+        $(function() {
+            $( 'a[rel*=leanModal]').leanModal({
+                top: 1,                      // モーダルウィンドウの縦位置を指定
+                left: 1,                     // モーダルウィンドウの左位置を指定
+                overlay : 1.0,               // 背面の透明度
+                closeButton: ".menu_close"  // 閉じるボタンのCSS classを指定
+            });
+        });
+        </script>
+
+        <{$content_for_layout}>
+    </div>
+
 </body>
 </html>

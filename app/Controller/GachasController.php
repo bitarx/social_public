@@ -27,6 +27,7 @@ class GachasController extends ApiController {
 
         $list = $this->Gacha->getList();
         $this->set('list', $list);
+
 /*
         $this->Gacha->begin();
         try {
