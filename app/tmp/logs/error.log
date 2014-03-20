@@ -26107,3 +26107,824 @@ Stack Trace:
 2014-03-20 04:30:08 Error: &&&&&&&&&&&&&:
 2014-03-20 04:30:08 Error: Tutorials
 2014-03-20 04:30:08 Error: Error!!!!!
+2014-03-20 04:30:30 Error: SnsUser save failed :Users/index
+2014-03-20 04:34:29 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 04:46:52 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 04:46:52 Error: SnsUser save failed :UserCards/index
+2014-03-20 05:00:29 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 05:00:30 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 05:00:31 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 05:12:45 Error: SnsUser save failed :Quests/index
+2014-03-20 05:12:45 Error: SnsUser save failed :Users/index
+2014-03-20 05:12:45 Error: SnsUser save failed :Gachas/index
+2014-03-20 07:09:04 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 07:09:05 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 07:09:06 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:18:47 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:18:48 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:18:49 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:29:24 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:40:35 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:41:13 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:41:58 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:45:03 Error: 11111111111:
+2014-03-20 13:45:03 Error: 33333333333333:
+2014-03-20 13:45:03 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:46:08 Error: 11111111111:
+2014-03-20 13:46:08 Error: 33333333333333:
+2014-03-20 13:46:08 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:46:45 Error: 11111111111:
+2014-03-20 13:46:45 Error: 33333333333333:
+2014-03-20 13:46:45 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:47:38 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/asns/app/Controller/AppController.php, line 86]
+2014-03-20 13:47:38 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 86)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 86, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 86, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-20 13:48:22 Error: 11111111111:
+2014-03-20 13:48:22 Error: 33333333333333:
+2014-03-20 13:48:22 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:49:04 Error: 11111111111:
+2014-03-20 13:49:04 Error: viewer:
+2014-03-20 13:49:04 Error: 33333333333333:
+2014-03-20 13:49:04 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:49:49 Error: 11111111111:
+2014-03-20 13:49:49 Error: viewer:
+2014-03-20 13:49:49 Error: viewer:SnsUsers
+2014-03-20 13:49:49 Error: 33333333333333:
+2014-03-20 13:49:49 Error: SnsUser save failed :SnsUsers/index
+2014-03-20 13:50:16 Error: 11111111111:
+2014-03-20 13:50:16 Error: viewer:
+2014-03-20 13:50:16 Error: viewer:SnsUsers
+2014-03-20 13:50:16 Error: 22222222222222222:
+2014-03-20 13:51:50 Error: ownerId:
+2014-03-20 13:51:50 Error: className:Errors
+2014-03-20 13:51:50 Error: userId:0
+2014-03-20 13:51:52 Error: ownerId:
+2014-03-20 13:51:52 Error: className:SnsUsers
+2014-03-20 13:51:53 Error: ownerId:
+2014-03-20 13:51:53 Error: className:Errors
+2014-03-20 13:51:53 Error: userId:0
+2014-03-20 14:00:40 Error: ownerId:1
+2014-03-20 14:00:40 Error: className:SnsUsers
+2014-03-20 14:00:40 Error: userId:17
+2014-03-20 14:00:43 Error: ownerId:1
+2014-03-20 14:00:43 Error: className:Gachas
+2014-03-20 14:00:43 Error: userId:17
+2014-03-20 14:00:44 Error: ownerId:1
+2014-03-20 14:00:44 Error: className:Users
+2014-03-20 14:00:44 Error: userId:17
+2014-03-20 14:01:24 Error: ownerId:
+2014-03-20 14:01:24 Error: className:SnsUsers
+2014-03-20 14:01:49 Error: ownerId:
+2014-03-20 14:01:49 Error: className:Users
+2014-03-20 14:01:56 Error: ownerId:
+2014-03-20 14:01:56 Error: className:Gachas
+2014-03-20 15:05:34 Error: ownerId:
+2014-03-20 15:05:34 Error: className:SnsUsers
+2014-03-20 15:05:35 Error: ownerId:
+2014-03-20 15:05:35 Error: className:Errors
+2014-03-20 15:05:35 Error: userId:0
+2014-03-20 15:05:54 Error: ownerId:2
+2014-03-20 15:05:54 Error: className:SnsUsers
+2014-03-20 15:05:54 Error: userId:42
+2014-03-20 15:22:23 Error: ownerId:5
+2014-03-20 15:22:23 Error: className:SnsUsers
+2014-03-20 15:22:24 Error: ownerId:5
+2014-03-20 15:22:24 Error: className:Tutorials
+2014-03-20 15:22:24 Error: userId:44
+2014-03-20 15:22:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:22:24 Error: ownerId:5
+2014-03-20 15:22:24 Error: className:CakeError
+2014-03-20 15:22:24 Error: userId:0
+2014-03-20 15:22:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:22:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:22:24 Error: ownerId:5
+2014-03-20 15:22:24 Error: ownerId:5
+2014-03-20 15:22:24 Error: className:CakeError
+2014-03-20 15:22:24 Error: className:CakeError
+2014-03-20 15:22:24 Error: userId:0
+2014-03-20 15:22:24 Error: userId:0
+2014-03-20 15:23:10 Error: ownerId:5
+2014-03-20 15:23:10 Error: className:SnsUsers
+2014-03-20 15:23:15 Error: ownerId:
+2014-03-20 15:23:15 Error: className:Tutorials
+2014-03-20 15:35:08 Error: ownerId:5
+2014-03-20 15:35:08 Error: className:Tutorials
+2014-03-20 15:35:08 Error: userId:44
+2014-03-20 15:35:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:35:09 Error: ownerId:5
+2014-03-20 15:35:09 Error: className:CakeError
+2014-03-20 15:35:09 Error: userId:0
+2014-03-20 15:35:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:35:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:35:09 Error: ownerId:5
+2014-03-20 15:35:09 Error: className:CakeError
+2014-03-20 15:35:09 Error: userId:0
+2014-03-20 15:35:09 Error: ownerId:5
+2014-03-20 15:35:09 Error: className:CakeError
+2014-03-20 15:35:09 Error: userId:0
+2014-03-20 15:40:37 Error: ownerId:5
+2014-03-20 15:40:37 Error: className:Tutorials
+2014-03-20 15:40:37 Error: userId:44
+2014-03-20 15:40:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:40:38 Error: ownerId:5
+2014-03-20 15:40:38 Error: className:CakeError
+2014-03-20 15:40:38 Error: userId:0
+2014-03-20 15:40:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:40:38 Error: ownerId:5
+2014-03-20 15:40:38 Error: className:CakeError
+2014-03-20 15:40:38 Error: userId:0
+2014-03-20 15:40:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:40:38 Error: ownerId:5
+2014-03-20 15:40:38 Error: className:CakeError
+2014-03-20 15:40:38 Error: userId:0
+2014-03-20 15:42:36 Error: ownerId:5
+2014-03-20 15:42:36 Error: className:Tutorials
+2014-03-20 15:42:36 Error: userId:44
+2014-03-20 15:42:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:37 Error: ownerId:5
+2014-03-20 15:42:37 Error: className:CakeError
+2014-03-20 15:42:37 Error: userId:0
+2014-03-20 15:42:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:37 Error: ownerId:5
+2014-03-20 15:42:37 Error: className:CakeError
+2014-03-20 15:42:37 Error: userId:0
+2014-03-20 15:42:37 Error: ownerId:5
+2014-03-20 15:42:37 Error: className:CakeError
+2014-03-20 15:42:37 Error: userId:0
+2014-03-20 15:42:38 Error: ownerId:5
+2014-03-20 15:42:38 Error: className:Tutorials
+2014-03-20 15:42:38 Error: userId:44
+2014-03-20 15:42:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:38 Error: ownerId:5
+2014-03-20 15:42:38 Error: className:CakeError
+2014-03-20 15:42:38 Error: userId:0
+2014-03-20 15:42:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:38 Error: ownerId:5
+2014-03-20 15:42:38 Error: className:CakeError
+2014-03-20 15:42:38 Error: userId:0
+2014-03-20 15:42:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:38 Error: ownerId:5
+2014-03-20 15:42:38 Error: className:CakeError
+2014-03-20 15:42:38 Error: userId:0
+2014-03-20 15:42:40 Error: ownerId:
+2014-03-20 15:42:40 Error: className:Tutorials
+2014-03-20 15:42:40 Error: ownerId:5
+2014-03-20 15:42:40 Error: className:Tutorials
+2014-03-20 15:42:40 Error: userId:44
+2014-03-20 15:42:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:41 Error: ownerId:5
+2014-03-20 15:42:41 Error: className:CakeError
+2014-03-20 15:42:41 Error: userId:0
+2014-03-20 15:42:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:41 Error: ownerId:5
+2014-03-20 15:42:41 Error: className:CakeError
+2014-03-20 15:42:41 Error: userId:0
+2014-03-20 15:42:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:41 Error: ownerId:5
+2014-03-20 15:42:41 Error: className:CakeError
+2014-03-20 15:42:41 Error: userId:0
+2014-03-20 15:42:42 Error: ownerId:5
+2014-03-20 15:42:42 Error: className:Tutorials
+2014-03-20 15:42:42 Error: userId:44
+2014-03-20 15:42:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:42 Error: ownerId:5
+2014-03-20 15:42:42 Error: className:CakeError
+2014-03-20 15:42:42 Error: userId:0
+2014-03-20 15:42:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:42 Error: ownerId:5
+2014-03-20 15:42:42 Error: className:CakeError
+2014-03-20 15:42:42 Error: userId:0
+2014-03-20 15:42:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:42 Error: ownerId:5
+2014-03-20 15:42:42 Error: className:CakeError
+2014-03-20 15:42:42 Error: userId:0
+2014-03-20 15:42:44 Error: ownerId:5
+2014-03-20 15:42:44 Error: className:Tutorials
+2014-03-20 15:42:44 Error: userId:44
+2014-03-20 15:42:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:44 Error: ownerId:5
+2014-03-20 15:42:44 Error: className:CakeError
+2014-03-20 15:42:44 Error: userId:0
+2014-03-20 15:42:44 Error: ownerId:5
+2014-03-20 15:42:44 Error: className:CakeError
+2014-03-20 15:42:44 Error: userId:0
+2014-03-20 15:42:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:44 Error: ownerId:5
+2014-03-20 15:42:44 Error: className:CakeError
+2014-03-20 15:42:44 Error: userId:0
+2014-03-20 15:42:47 Error: ownerId:5
+2014-03-20 15:42:47 Error: className:Tutorials
+2014-03-20 15:42:47 Error: userId:44
+2014-03-20 15:42:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:47 Error: ownerId:5
+2014-03-20 15:42:47 Error: className:CakeError
+2014-03-20 15:42:47 Error: userId:0
+2014-03-20 15:42:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:47 Error: ownerId:5
+2014-03-20 15:42:47 Error: className:CakeError
+2014-03-20 15:42:47 Error: userId:0
+2014-03-20 15:42:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:47 Error: ownerId:5
+2014-03-20 15:42:47 Error: className:CakeError
+2014-03-20 15:42:47 Error: userId:0
+2014-03-20 15:42:48 Error: ownerId:5
+2014-03-20 15:42:48 Error: className:Tutorials
+2014-03-20 15:42:48 Error: userId:44
+2014-03-20 15:42:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:48 Error: ownerId:5
+2014-03-20 15:42:48 Error: className:CakeError
+2014-03-20 15:42:48 Error: userId:0
+2014-03-20 15:42:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:48 Error: ownerId:5
+2014-03-20 15:42:48 Error: className:CakeError
+2014-03-20 15:42:48 Error: userId:0
+2014-03-20 15:42:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:48 Error: ownerId:5
+2014-03-20 15:42:48 Error: className:CakeError
+2014-03-20 15:42:48 Error: userId:0
+2014-03-20 15:42:50 Error: ownerId:5
+2014-03-20 15:42:50 Error: className:Tutorials
+2014-03-20 15:42:50 Error: userId:44
+2014-03-20 15:42:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:50 Error: ownerId:5
+2014-03-20 15:42:50 Error: className:CakeError
+2014-03-20 15:42:50 Error: userId:0
+2014-03-20 15:42:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:50 Error: ownerId:5
+2014-03-20 15:42:50 Error: className:CakeError
+2014-03-20 15:42:50 Error: userId:0
+2014-03-20 15:42:50 Error: ownerId:5
+2014-03-20 15:42:50 Error: className:CakeError
+2014-03-20 15:42:50 Error: userId:0
+2014-03-20 15:42:52 Error: ownerId:5
+2014-03-20 15:42:52 Error: className:Tutorials
+2014-03-20 15:42:52 Error: userId:44
+2014-03-20 15:42:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:52 Error: ownerId:5
+2014-03-20 15:42:52 Error: className:CakeError
+2014-03-20 15:42:52 Error: userId:0
+2014-03-20 15:42:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:53 Error: ownerId:5
+2014-03-20 15:42:53 Error: className:CakeError
+2014-03-20 15:42:53 Error: userId:0
+2014-03-20 15:42:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:53 Error: ownerId:5
+2014-03-20 15:42:53 Error: className:CakeError
+2014-03-20 15:42:53 Error: userId:0
+2014-03-20 15:42:54 Error: ownerId:5
+2014-03-20 15:42:54 Error: className:Tutorials
+2014-03-20 15:42:54 Error: userId:44
+2014-03-20 15:42:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:55 Error: ownerId:5
+2014-03-20 15:42:55 Error: className:CakeError
+2014-03-20 15:42:55 Error: userId:0
+2014-03-20 15:42:55 Error: ownerId:5
+2014-03-20 15:42:55 Error: className:CakeError
+2014-03-20 15:42:55 Error: userId:0
+2014-03-20 15:42:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:55 Error: ownerId:5
+2014-03-20 15:42:55 Error: className:CakeError
+2014-03-20 15:42:55 Error: userId:0
+2014-03-20 15:42:56 Error: ownerId:5
+2014-03-20 15:42:56 Error: className:Tutorials
+2014-03-20 15:42:56 Error: userId:44
+2014-03-20 15:42:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:56 Error: ownerId:5
+2014-03-20 15:42:56 Error: className:CakeError
+2014-03-20 15:42:56 Error: userId:0
+2014-03-20 15:42:56 Error: ownerId:5
+2014-03-20 15:42:56 Error: className:CakeError
+2014-03-20 15:42:56 Error: userId:0
+2014-03-20 15:42:56 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:56 Error: ownerId:5
+2014-03-20 15:42:56 Error: className:CakeError
+2014-03-20 15:42:56 Error: userId:0
+2014-03-20 15:42:58 Error: ownerId:5
+2014-03-20 15:42:58 Error: className:Tutorials
+2014-03-20 15:42:58 Error: userId:44
+2014-03-20 15:42:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:58 Error: ownerId:5
+2014-03-20 15:42:58 Error: className:CakeError
+2014-03-20 15:42:58 Error: userId:0
+2014-03-20 15:42:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:58 Error: ownerId:5
+2014-03-20 15:42:58 Error: className:CakeError
+2014-03-20 15:42:58 Error: userId:0
+2014-03-20 15:42:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:42:58 Error: ownerId:5
+2014-03-20 15:42:58 Error: className:CakeError
+2014-03-20 15:42:58 Error: userId:0
+2014-03-20 15:43:00 Error: ownerId:5
+2014-03-20 15:43:00 Error: className:Tutorials
+2014-03-20 15:43:00 Error: userId:44
+2014-03-20 15:43:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:00 Error: ownerId:5
+2014-03-20 15:43:00 Error: className:CakeError
+2014-03-20 15:43:00 Error: userId:0
+2014-03-20 15:43:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:00 Error: ownerId:5
+2014-03-20 15:43:00 Error: className:CakeError
+2014-03-20 15:43:00 Error: userId:0
+2014-03-20 15:43:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:00 Error: ownerId:5
+2014-03-20 15:43:00 Error: className:CakeError
+2014-03-20 15:43:00 Error: userId:0
+2014-03-20 15:43:01 Error: ownerId:5
+2014-03-20 15:43:01 Error: className:Tutorials
+2014-03-20 15:43:01 Error: userId:44
+2014-03-20 15:43:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_base.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:01 Error: ownerId:5
+2014-03-20 15:43:01 Error: className:CakeError
+2014-03-20 15:43:01 Error: userId:0
+2014-03-20 15:43:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/clear.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/img/menu_head.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 15:43:01 Error: ownerId:5
+2014-03-20 15:43:01 Error: className:CakeError
+2014-03-20 15:43:01 Error: userId:0
+2014-03-20 15:43:01 Error: ownerId:5
+2014-03-20 15:43:01 Error: className:CakeError
+2014-03-20 15:43:01 Error: userId:0
+2014-03-20 15:43:03 Error: ownerId:5
+2014-03-20 15:43:03 Error: className:Tutorials
+2014-03-20 15:43:03 Error: userId:44
+2014-03-20 15:43:03 Error: ownerId:5
+2014-03-20 15:43:03 Error: className:SnsUsers
+2014-03-20 15:43:03 Error: userId:44
+2014-03-20 15:43:10 Error: ownerId:5
+2014-03-20 15:43:10 Error: className:Tutorials
+2014-03-20 15:43:10 Error: userId:44
+2014-03-20 15:43:10 Error: ownerId:5
+2014-03-20 15:43:10 Error: className:SnsUsers
+2014-03-20 15:43:10 Error: userId:44
+2014-03-20 15:43:15 Error: ownerId:5
+2014-03-20 15:43:15 Error: className:Tutorials
+2014-03-20 15:43:15 Error: userId:44
+2014-03-20 15:43:15 Error: ownerId:5
+2014-03-20 15:43:15 Error: className:SnsUsers
+2014-03-20 15:43:15 Error: userId:44
+2014-03-20 15:43:52 Error: ownerId:
+2014-03-20 15:43:52 Error: className:Tutorials
+2014-03-20 15:43:54 Error: ownerId:
+2014-03-20 15:43:54 Error: className:Tutorials
+2014-03-20 15:43:55 Error: ownerId:
+2014-03-20 15:43:55 Error: className:Tutorials
+2014-03-20 15:44:00 Error: ownerId:
+2014-03-20 15:44:00 Error: className:Tutorials
+2014-03-20 15:44:00 Error: ownerId:
+2014-03-20 15:44:00 Error: className:Tutorials
+2014-03-20 15:44:00 Error: ownerId:
+2014-03-20 15:44:00 Error: className:Tutorials
+2014-03-20 15:44:03 Error: ownerId:
+2014-03-20 15:44:03 Error: className:Tutorials
+2014-03-20 15:44:12 Error: ownerId:
+2014-03-20 15:44:12 Error: className:Tutorials
+2014-03-20 15:44:14 Error: ownerId:
+2014-03-20 15:44:14 Error: className:Tutorials
+2014-03-20 15:44:24 Error: ownerId:
+2014-03-20 15:44:24 Error: className:Tutorials
+2014-03-20 15:44:36 Error: ownerId:
+2014-03-20 15:44:36 Error: className:Tutorials
+2014-03-20 15:44:37 Error: ownerId:
+2014-03-20 15:44:37 Error: className:Tutorials
+2014-03-20 15:44:40 Error: ownerId:
+2014-03-20 15:44:40 Error: className:Tutorials
+2014-03-20 15:44:44 Error: ownerId:
+2014-03-20 15:44:44 Error: className:SnsUsers
+2014-03-20 15:44:57 Error: ownerId:
+2014-03-20 15:44:57 Error: className:Tutorials
+2014-03-20 15:44:57 Error: ownerId:
+2014-03-20 15:44:57 Error: className:Tutorials
+2014-03-20 15:56:22 Error: ownerId:
+2014-03-20 15:56:22 Error: className:SnsUsers
+2014-03-20 15:56:23 Error: ownerId:
+2014-03-20 15:56:23 Error: className:SnsUsers
+2014-03-20 15:56:24 Error: ownerId:
+2014-03-20 15:56:24 Error: className:SnsUsers

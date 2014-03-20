@@ -80,10 +80,10 @@ class AppController extends Controller {
             $this->viewerId = $this->Cookie->read('viewer_id');
         }
 
+$this->log('ownerId:'. $this->ownerId); 
+$this->log('className:'. $this->name); 
         if ( !in_array($this->name, self::$ctlError) ) {
-
-            if ( ('SnsUsers' != $this->name && 'index' != $this->action)
-                && (!$this->ownerId || !$this->viewerId)) {
+            if ( (empty($this->ownerId) || empty($this->viewerId) ) ) {
 
                 // Cookieセットされていない場合は不正アクセス
                 $this->rd('Errors', 'index', array('error' => 1 ));
@@ -94,9 +94,10 @@ class AppController extends Controller {
 
 
                 // ユーザデータ登録
-                $this->User->begin();
-                try {
-                    if (empty($this->userId)) {
+                if (empty($this->userId)) {
+                    $this->User->begin();
+                    try {
+
                         $name   = 'test';
                         $carrer = 1;
 
@@ -120,18 +121,18 @@ class AppController extends Controller {
                             throw new AppException('User save failed :' . $this->name . '/' . $this->action);
                         }
                         $this->userId = $ret['User']['user_id'];
+
+                    } catch (AppException $e) {
+                        $this->User->rollback();
+
+                        $this->log($e->errmes);
+                        return $this->redirect(
+                                   array('controller' => 'errors', 'action' => 'index'
+                                         , '?' => array('error' => 2)
+                               ));
                     }
-
-                } catch (AppException $e) {
-                    $this->User->rollback();
-
-                    $this->log($e->errmes);
-                    return $this->redirect(
-                               array('controller' => 'errors', 'action' => 'index'
-                                     , '?' => array('error' => 2)
-                           ));
+                    $this->User->commit();
                 }
-                $this->User->commit();
 
                 // チュートリアル判定
                 $where = array('user_id' => $this->userId);
@@ -155,6 +156,7 @@ class AppController extends Controller {
         }
         $this->set('gameTitle', $this->gameTitle); 
 
+$this->log('userId:'. $this->userId); 
         // URLアサイン
         $this->_setUrl();
     } 
