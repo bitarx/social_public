@@ -26928,3 +26928,193 @@ Stack Trace:
 2014-03-20 15:56:23 Error: className:SnsUsers
 2014-03-20 15:56:24 Error: ownerId:
 2014-03-20 15:56:24 Error: className:SnsUsers
+2014-03-20 16:33:12 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 16:33:12 Error: ownerId:
+2014-03-20 16:33:12 Error: className:CakeError
+2014-03-20 16:33:12 Error: userId:0
+2014-03-20 16:33:13 Error: ownerId:
+2014-03-20 16:33:13 Error: className:SnsUsers
+2014-03-20 16:33:15 Error: ownerId:
+2014-03-20 16:33:15 Error: className:SnsUsers
+2014-03-20 16:33:16 Error: ownerId:
+2014-03-20 16:33:16 Error: className:SnsUsers
+2014-03-20 17:13:50 Error: ownerId:
+2014-03-20 17:13:50 Error: className:SnsUsers
+2014-03-20 17:13:51 Error: ownerId:
+2014-03-20 17:13:51 Error: className:SnsUsers
+2014-03-20 17:13:52 Error: ownerId:
+2014-03-20 17:13:52 Error: className:SnsUsers
+2014-03-20 22:57:21 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-20 22:57:21 Error: ownerId:
+2014-03-20 22:57:21 Error: className:CakeError
+2014-03-20 22:57:21 Error: userId:0
+2014-03-20 22:57:23 Error: ownerId:
+2014-03-20 22:57:23 Error: className:SnsUsers
+2014-03-20 22:57:25 Error: ownerId:
+2014-03-20 22:57:25 Error: className:Errors
+2014-03-20 22:57:25 Error: userId:0
+2014-03-21 06:15:18 Error: ownerId:
+2014-03-21 06:15:18 Error: className:SnsUsers
+2014-03-21 06:15:19 Error: ownerId:
+2014-03-21 06:15:19 Error: className:SnsUsers
+2014-03-21 07:16:49 Error: ownerId:
+2014-03-21 07:16:49 Error: className:SnsUsers
+2014-03-21 07:16:50 Error: ownerId:
+2014-03-21 07:16:50 Error: className:SnsUsers
+2014-03-21 07:16:51 Error: ownerId:
+2014-03-21 07:16:51 Error: className:SnsUsers
+2014-03-21 08:22:18 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-21 08:22:18 Error: ownerId:
+2014-03-21 08:22:18 Error: className:CakeError
+2014-03-21 08:22:18 Error: userId:0
+2014-03-21 08:22:19 Error: ownerId:
+2014-03-21 08:22:19 Error: className:SnsUsers
+2014-03-21 08:22:19 Error: ownerId:
+2014-03-21 08:22:19 Error: className:Errors
+2014-03-21 08:22:19 Error: userId:0
+2014-03-21 15:11:25 Error: ownerId:
+2014-03-21 15:11:25 Error: className:SnsUsers
+2014-03-21 15:11:33 Error: ownerId:
+2014-03-21 15:11:33 Error: className:Errors
+2014-03-21 15:11:33 Error: userId:0
+2014-03-21 15:19:39 Error: ownerId:
+2014-03-21 15:19:39 Error: className:SnsUsers
+2014-03-21 15:19:39 Error: ownerId:
+2014-03-21 15:19:39 Error: className:SnsUsers
+2014-03-21 15:19:39 Error: ownerId:
+2014-03-21 15:19:39 Error: className:SnsUsers
+2014-03-21 15:19:40 Error: ownerId:
+2014-03-21 15:19:40 Error: className:SnsUsers
+2014-03-21 15:19:40 Error: ownerId:
+2014-03-21 15:19:40 Error: className:SnsUsers
+2014-03-21 15:19:40 Error: ownerId:
+2014-03-21 15:19:40 Error: className:SnsUsers
+2014-03-21 20:16:08 Error: ownerId:
+2014-03-21 20:16:08 Error: className:SnsUsers
+2014-03-21 20:16:10 Error: ownerId:
+2014-03-21 20:16:10 Error: className:SnsUsers
+2014-03-21 20:16:11 Error: ownerId:
+2014-03-21 20:16:11 Error: className:SnsUsers
+2014-03-21 21:21:29 Error: ownerId:
+2014-03-21 21:21:29 Error: className:SnsUsers
+2014-03-21 21:21:29 Error: ownerId:
+2014-03-21 21:21:29 Error: className:SnsUsers
+2014-03-21 21:21:30 Error: ownerId:
+2014-03-21 21:21:30 Error: className:SnsUsers
+2014-03-21 22:39:20 Error: ownerId:
+2014-03-21 22:39:20 Error: className:SnsUsers
+2014-03-21 22:39:22 Error: ownerId:
+2014-03-21 22:39:22 Error: className:SnsUsers
+2014-03-21 22:57:51 Error: ownerId:
+2014-03-21 22:57:51 Error: className:SnsUsers
+2014-03-21 22:57:52 Error: ownerId:
+2014-03-21 22:57:52 Error: className:Errors
+2014-03-21 22:57:52 Error: userId:0
+2014-03-22 05:51:37 Error: ownerId:
+2014-03-22 05:51:37 Error: className:SnsUsers
+2014-03-22 05:51:38 Error: ownerId:
+2014-03-22 05:51:38 Error: className:SnsUsers
+2014-03-22 05:51:39 Error: ownerId:
+2014-03-22 05:51:39 Error: className:SnsUsers
+2014-03-22 09:18:03 Error: ownerId:
+2014-03-22 09:18:03 Error: className:SnsUsers
+2014-03-22 09:18:03 Error: ownerId:
+2014-03-22 09:18:03 Error: className:SnsUsers
+2014-03-22 09:18:04 Error: ownerId:
+2014-03-22 09:18:04 Error: className:SnsUsers
+2014-03-22 09:41:07 Error: ownerId:
+2014-03-22 09:41:07 Error: className:SnsUsers
+2014-03-22 09:41:17 Error: ownerId:
+2014-03-22 09:41:17 Error: className:SnsUsers
+2014-03-22 09:41:17 Error: ownerId:
+2014-03-22 09:41:17 Error: className:SnsUsers
+2014-03-22 11:45:19 Error: ownerId:
+2014-03-22 11:45:19 Error: className:SnsUsers
+2014-03-22 11:45:20 Error: ownerId:
+2014-03-22 11:45:20 Error: className:SnsUsers
+2014-03-22 11:45:21 Error: ownerId:
+2014-03-22 11:45:21 Error: className:SnsUsers
+2014-03-22 11:45:24 Error: ownerId:1
+2014-03-22 11:45:24 Error: className:SnsUsers
+2014-03-22 11:45:24 Error: userId:17
+2014-03-22 11:46:39 Error: ownerId:
+2014-03-22 11:46:39 Error: className:SnsUsers
+2014-03-22 11:53:29 Error: ownerId:
+2014-03-22 11:53:29 Error: className:SnsUsers
+2014-03-22 11:59:22 Error: ownerId:1
+2014-03-22 11:59:22 Error: className:SnsUsers
+2014-03-22 11:59:22 Error: userId:17
+2014-03-22 11:59:25 Error: ownerId:1
+2014-03-22 11:59:25 Error: className:SnsUsers
+2014-03-22 11:59:25 Error: userId:17
+2014-03-22 11:59:26 Error: ownerId:1
+2014-03-22 11:59:26 Error: className:UserCards
+2014-03-22 11:59:26 Error: userId:17
+2014-03-22 11:59:26 Error: [MissingHelperException] Helper class SmartyHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SmartyHelper',
+  'plugin' => false,
+)
+Request URL: /index.php/UserCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Smarty')
+#1 /var/www/asns/lib/Cake/View/View.php(824): HelperCollection->__isset('Smarty')
+#2 /var/www/asns/app/View/SmartyView.php(63): View->__get('Smarty')
+#3 /var/www/asns/lib/Cake/View/View.php(347): SmartyView->loadHelpers()
+#4 /var/www/asns/app/View/SmartyView.php(4): View->__construct(Object(UserCardsController))
+#5 /var/www/asns/lib/Cake/Controller/Controller.php(1240): SmartyView->__construct(Object(UserCardsController))
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(938): Controller->_getViewObject()
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-03-22 11:59:26 Error: ownerId:1
+2014-03-22 11:59:26 Error: className:CakeError
+2014-03-22 11:59:26 Error: userId:0
+2014-03-22 11:59:27 Error: ownerId:1
+2014-03-22 11:59:27 Error: className:Quests
+2014-03-22 11:59:27 Error: userId:17
+2014-03-22 11:59:28 Error: ownerId:1
+2014-03-22 11:59:28 Error: className:Gachas
+2014-03-22 11:59:28 Error: userId:17
+2014-03-22 11:59:30 Error: ownerId:1
+2014-03-22 11:59:30 Error: className:Users
+2014-03-22 11:59:30 Error: userId:17
+2014-03-22 11:59:33 Error: ownerId:1
+2014-03-22 11:59:33 Error: className:Quests
+2014-03-22 11:59:33 Error: userId:17
+2014-03-22 11:59:34 Error: ownerId:1
+2014-03-22 11:59:34 Error: className:Users
+2014-03-22 11:59:34 Error: userId:17
+2014-03-22 12:00:37 Error: ownerId:
+2014-03-22 12:00:37 Error: className:UserCards
+2014-03-22 12:00:38 Error: ownerId:
+2014-03-22 12:00:38 Error: className:Users
+2014-03-22 12:00:42 Error: ownerId:
+2014-03-22 12:00:42 Error: className:Gachas
+2014-03-22 12:00:43 Error: ownerId:
+2014-03-22 12:00:43 Error: className:Quests

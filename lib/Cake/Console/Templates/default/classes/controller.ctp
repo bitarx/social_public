@@ -77,5 +77,4 @@ class <?php echo $controllerName; ?>Controller extends <?php echo $plugin; ?>App
 	echo trim($actions);
 
 endif; ?>
-<?php echo "\r\n"; ?>
 }
