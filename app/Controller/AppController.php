@@ -155,6 +155,12 @@ $this->log('className:'. $this->name);
             }
         }
         $this->set('gameTitle', $this->gameTitle); 
+        
+        if (empty($row['end_flg'])) {
+            $this->set('tutoEnd', 0); 
+        } else {
+            $this->set('tutoEnd', 1); 
+        }
 
 $this->log('userId:'. $this->userId); 
         // URLアサイン
@@ -177,6 +183,24 @@ $this->log('userId:'. $this->userId);
         $this->set('linkUserCard', BASE_URL . 'UserCards/index'); 
         // ガチャ
         $this->set('linkGacha', BASE_URL . 'Gachas/index'); 
+        // トップ
+        $this->set('linkSnsUser', BASE_URL . 'SnsUsers/index'); 
+        // 合成
+        $this->set('linkUserCard', BASE_URL . 'UserCard/index'); 
+        // デッキ
+        $this->set('linkDeck', BASE_URL . 'Deck/index'); 
+        // プレゼントボックス
+        $this->set('linkPbox', BASE_URL . 'PresentBoxes/index'); 
+        // アイテム
+        $this->set('linkUserItem', BASE_URL . 'UserItems/index'); 
+        // ショップ
+        $this->set('linkItem', BASE_URL . 'Items/index'); 
+        // バトル
+        $this->set('linkUserParam', BASE_URL . 'UserParams/index'); 
+        // シーン鑑賞
+        $this->set('linkUserStages', BASE_URL . 'UserStages/index'); 
+        // ヘルプ
+        $this->set('linkHelp', BASE_URL . 'Helps/index'); 
     }
 
     /**

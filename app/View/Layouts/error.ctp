@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+   < meta name="viewport" content="width=40px" >
     <link rel="stylesheet" href="../css/main.css" />
     <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
     <script type="text/javascript" src="../js/jquery.leanModal.min.js"></script>
@@ -21,7 +22,8 @@
         </div>
 
         <{include file="../Elements/menu.tpl"}>
-
+    bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+eeeeeeeeeeeeeeee
         <script type="text/javascript">
         $(function() {
             $( 'a[rel*=leanModal]').leanModal({
