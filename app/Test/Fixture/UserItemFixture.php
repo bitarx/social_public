@@ -38,8 +38,8 @@ class UserItemFixture extends CakeTestFixture {
 			'item_id' => 1,
 			'num' => 1,
 			'delete_flg' => 1,
-			'created' => '2014-02-17 21:30:46',
-			'updated' => '2014-02-17 21:30:46'
+			'created' => '2014-03-23 06:45:17',
+			'updated' => '2014-03-23 06:45:17'
 		),
 	);
 

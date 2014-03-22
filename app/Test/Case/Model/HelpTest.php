@@ -1,11 +1,11 @@
 <?php
-App::uses('UserItem', 'Model');
+App::uses('Help', 'Model');
 
 /**
- * UserItem Test Case
+ * Help Test Case
  *
  */
-class UserItemTest extends CakeTestCase {
+class HelpTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,12 +13,7 @@ class UserItemTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.user_item',
-		'app.user',
-		'app.sns_user',
-		'app.item',
-		'app.item_effect',
-		'app.user_box'
+		'app.help'
 	);
 
 /**
@@ -28,7 +23,7 @@ class UserItemTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->UserItem = ClassRegistry::init('UserItem');
+		$this->Help = ClassRegistry::init('Help');
 	}
 
 /**
@@ -37,7 +32,7 @@ class UserItemTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->UserItem);
+		unset($this->Help);
 
 		parent::tearDown();
 	}
