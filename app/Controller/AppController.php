@@ -179,6 +179,8 @@ $this->log('userId:'. $this->userId);
         $this->set('linkUser', BASE_URL . 'Users/index'); 
         // クエスト
         $this->set('linkQuest', BASE_URL . 'Quests/index'); 
+        // ステージ
+        $this->set('linkStage', BASE_URL . 'Stages/index'); 
         // 強化進化
         $this->set('linkUserCard', BASE_URL . 'UserCards/index'); 
         // ガチャ
@@ -200,7 +202,7 @@ $this->log('userId:'. $this->userId);
         // シーン鑑賞
         $this->set('linkUserStages', BASE_URL . 'UserStages/index'); 
         // ヘルプ
-        $this->set('linkHelp', BASE_URL . 'Helps/index'); 
+        $this->set('linkStaticPage', BASE_URL . 'StaticPages/index'); 
     }
 
     /**

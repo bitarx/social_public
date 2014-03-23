@@ -15,44 +15,78 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage');
+
+
 
     /**
      * ステージ一覧
      *
      * @author imanishi 
-     * @return json
+     * @return void
      */
 	public function index() {
 
-        // 到達したステージリスト
-        $userStageList = $this->UserStage->getUserStage($this->userId);
-        $this->set('userStageList', $userStageList);
+        $questId = $this->params['quest_id'];
 
-/*
-        $this->Stage->begin();
+        // 到達したステージリスト
+        $ret = $this->UserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
+
+        // このクエストは初めて
+        if (empty($ret)) {
+            $list[] = $this->Stage->getFirstStage($questId);
+        } else {
+            // 現在のクエストステージを抽出
+            foreach ($ret as $val)  {
+                if ($va['quest_id'] == $questId) {
+                    $list[] = $val;
+                }
+            }
+        }
+        
+        $this->set('list', $list);
+	}
+
+    /**
+     * 現在のステージ更新
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function initStage() {
+
+        $stageId = $this->params['stage_id'];
+
+        // 現在到達最大stageId
+        $curMaxStageId = $this->UserStage->getUserMaxStageId($this->userId);
+
+        // 初めてのアクセス
+        if (empty($curMaxStageId)) {
+            $curMaxStageId = 1;
+            $stageId = 1;
+        }
+
+        // 不正
+        if ( ($curMaxStageId < $stageId) || empty($stageId) ) {
+            $this->rd('errors', 'index', array('error' => 2)); 
+        }
+
+        $this->UserCurStage->begin(); 
         try {
             $values = array(
-                'user_id'     => $userId
+                'user_id' => $this->userId  
+            ,   'stage_id' => $stageId
             );
-            $ret = $this->Stage->save($values);
-            if (!$ret) {
-                throw new AppException('Stage save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->Stage->rollback();
-
+            $this->UserCurStage->save($values);    
+        } catch (Exception $e) { 
+            $this->UserCurStage->rollback(); 
             $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->Stage->commit();
-*/
-	}
+            return $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->UserCurStage->commit(); 
+
+        return $this->rd('Stages', 'main');
+    }
 
     /**
      * クエスト実行

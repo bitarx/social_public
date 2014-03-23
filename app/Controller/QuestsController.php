@@ -15,10 +15,10 @@ class QuestsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserStage');
+    public $uses = array('UserStage', 'Quest');
 
     /**
-     * index method
+     * プレイ可能なクエスト一覧
      *
      * @author imanishi 
      * @return json
@@ -27,7 +27,17 @@ class QuestsController extends ApiController {
         
         // 到達したステージリスト
         $userStageList = $this->UserStage->getUserStage($this->userId, $stageId = 0, $recu = 2);
-        $this->set('userStageList', $userStageList);
+
+        // 到達クエスト
+        if (!empty($userStageList[0]['quest_id'])) {
+            $questId = $userStageList[0]['quest_id'];
+        } else {
+            $questId = 1;
+        }
+
+        $list = $this->Quest->getQuestList($questId);
+
+        $this->set('list', $list);
 /*
         $this->Quest->begin();
         try {

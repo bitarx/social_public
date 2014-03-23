@@ -86,13 +86,28 @@ class Quest extends AppModel {
      * クエストデータ取得
      *
      * @author imanishi
-     * @param int $enemyId
-     * @return array 敵データ
+     * @param int $questId
+     * @return array 対象データ
      */
     public function getQuestData($questId) {
 
         $where = array('quest_id' => $questId);
         $ret = $this->getAllFind($where, $fields = array(), 'first');
+        return $ret;
+    }
+
+    /**
+     * 進行可能クエストリスト取得
+     *
+     * @author imanishi
+     * @param int $questId
+     * @return array 対象リスト
+     */
+    public function getQuestList($questId) {
+
+        $where = array('quest_id <=' => $questId);
+        $order = array('quest_id DESC');
+        $ret = $this->getAllFind($where, $fields = array(), $kind = 'all', $order);
         return $ret;
     }
 }

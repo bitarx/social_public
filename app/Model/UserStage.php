@@ -81,16 +81,33 @@ class UserStage extends AppModel {
 
 
     /**
+     * ユーザ到達ステージ最大を取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @return int 到達最大stageId
+     */
+    public function getUserMaxStageId($userId) {
+
+        $where  = array('user_id' => $userId); 
+        $fields = array('MAX(UserStage.stage_id) AS stage_id');
+        $data = $this->getAllFind($where, $fields);
+        return $data['stage_id'];
+    }
+
+    /**
      * ユーザクエスト進捗を取得
      *
      * @author imanishi 
      * @param int $userId
      * @param int $stageId
-     * @param int $recu 2でクエスト情報を含むステーッジ取得
+     * @param int $recu 2でクエスト情報を含むステージ取得
      * @return array 対象データ
      */
     public function getUserStage($userId, $stageId = 0, $recu = 0) {
 
+        $fields = array();
+        $order  = array();
         $kind = 'all';
         $where = array('user_id' => $userId);
         if (!empty($stageId)) {
@@ -98,9 +115,10 @@ class UserStage extends AppModel {
             
             // 対象のステージのみ取得
             $kind = 'first';
+        } else {
+            $order = array('quest_id DESC', 'Stage.stage_id DESC');
         }
-        $fields = array();
-        $order = array();
+
         $ret = $this->getAllFind($where, $fields, $kind, $order, 0, 0, $recu);
         return $ret;
     }

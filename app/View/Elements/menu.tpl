@@ -47,7 +47,7 @@
             <a href="<{$linkUserStage}> "><img src="../img/icon_scene.png" ></a>
         </div>
         <div class="icon_help">
-            <a href="<{$linkHelp}> "><img src="../img/icon_help.png" ></a>
+            <a href="<{$linkStaticPage}> "><img src="../img/icon_help.png" ></a>
         </div>
     </div>
 </div>

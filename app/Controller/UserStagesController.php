@@ -16,7 +16,7 @@ class UserStagesController extends ApiController {
 	public $components = array('Paginator');
 
     /**
-     * index method
+     * シーン鑑賞
      *
      * @author imanishi 
      * @return json

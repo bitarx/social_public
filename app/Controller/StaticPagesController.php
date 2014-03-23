@@ -23,32 +23,11 @@ class StaticPagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
+        $fields = array('static_page_id');
         $where  = array();
-        $this->StaticPage->getAllFind($where, $fields);
-        $this->set('staticPages', $this->Paginator->paginate());
+        $list = $this->StaticPage->getAllFind($where, $fields);
+        $this->set('staticPages', $list);
 
-        $this->StaticPage->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->StaticPage->save($values);
-            if (!$ret) {
-                throw new AppException('StaticPage save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->StaticPage->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->StaticPage->commit();
 	}
 
     /**

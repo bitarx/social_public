@@ -106,4 +106,23 @@ class Stage extends AppModel {
 			'order' => ''
 		)
 	);
+
+    /**
+     * クエストの最初のステージを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return array 対象のステージデータ
+     */
+    public function getFirstStage($questId) {
+
+        $fields = array();
+        $order  = array();
+        $kind = 'first';
+        $where = array('quest_id' => $questId);
+        $order = array('stage_id ASC');
+
+        $data = $this->getAllFind($where, $fields, $kind, $order, $limit = 1);
+        return $data;
+    }
 }
