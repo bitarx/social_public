@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb');
 
 
 
@@ -38,12 +38,11 @@ class StagesController extends ApiController {
         } else {
             // 現在のクエストステージを抽出
             foreach ($ret as $val)  {
-                if ($va['quest_id'] == $questId) {
+                if ($val['quest_id'] == $questId) {
                     $list[] = $val;
                 }
             }
         }
-        
         $this->set('list', $list);
 	}
 
@@ -55,6 +54,7 @@ class StagesController extends ApiController {
      */
 	public function initStage() {
 
+        $first = 0;
         $stageId = $this->params['stage_id'];
 
         // 現在到達最大stageId
@@ -64,6 +64,7 @@ class StagesController extends ApiController {
         if (empty($curMaxStageId)) {
             $curMaxStageId = 1;
             $stageId = 1;
+            $first = 1;
         }
 
         // 不正
@@ -73,6 +74,15 @@ class StagesController extends ApiController {
 
         $this->UserCurStage->begin(); 
         try {
+            if ($first == 1) {
+                $values = array(
+                    'user_id'  => $this->userId  
+                ,   'stage_id' => $stageId
+                ,   'progress' => 0
+                ,   'state'    => 1
+                );
+                $this->UserStage->save($values);    
+            }
             $values = array(
                 'user_id' => $this->userId  
             ,   'stage_id' => $stageId
@@ -81,11 +91,12 @@ class StagesController extends ApiController {
         } catch (Exception $e) { 
             $this->UserCurStage->rollback(); 
             $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> 2)); 
         } 
         $this->UserCurStage->commit(); 
 
-        return $this->rd('Stages', 'main');
+        $params = array('stage_id' => $stageId);
+        $this->rd('Stages', 'main', $params);
     }
 
     /**
@@ -98,10 +109,22 @@ class StagesController extends ApiController {
 
         $stageId = $this->params['stage_id'];
 
-        $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
+        $data = $this->UserStage->getUserStage($this->userId, $stageId, $recu = 2);
+        $userParam = $this->UserParam->getUserParams($this->userId);
 
-        $this->set('userStageData', $userStageData);
+        $params = array(
+            'stage_id' => $stageId
+        ,   'quest_id' => $data['quest_id']
+        ,   'progress' => $data['progress']
+        ,   'state'    => $data['state']
+        );
 
+        $params = json_encode($params);
+$this->log('main_params:'. $params); 
+        $this->set('data', $data);
+        $this->set('userParam', $userParam);
+        $this->set('param', $params);
+        $this->set('prog', $data['progress']);
     }
 
     /**
@@ -179,7 +202,7 @@ class StagesController extends ApiController {
             }
         }
 
-        $this->rd('stage', 'product');
+        $this->rd('Stages', 'product');
     }
 
     /**
@@ -189,11 +212,12 @@ class StagesController extends ApiController {
      * @return void
      */
     public function product() {
-
+/*
         $fields = array('id');
         $where  = array();
         $this->User->getAllFind($where, $fields);
         $this->set('users', $this->Paginator->paginate());
+*/
     }
 
     /**
@@ -248,20 +272,51 @@ class StagesController extends ApiController {
      * @return json 0:失敗 1:成功 2:put以外のリクエスト
      */
 	public function init() {
+$this->log('aaaaaaaaaaaaaa:');
 
         if ($this->request->is(array('ajax'))) {
+$this->log('bbbbbbbbbbbbbbbb:');
+            $userId = $this->userId;
+$this->log('userId;:'. $userId);
+            $data = $this->params['params'];
+            $data = (array)json_decode($data);
+            $data['user_id'] = $userId;
 
-            $this->autoRender = false;   // 自動描画をさせない
+            // 現在のユーザステージ情報取得
+            $stageData = $this->UserStage->getUserStage($userId, $data['stage_id']);
+            $data['progress'] = $stageData['progress'];
 
-            if ($this->Stage->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
+            $this->UserStage->begin(); 
+            try {
+
+                // 抽選
+                $list = $this->StageProb->getStageProb($data['stage_id']);
+                $lotData = $this->Common->doLot($list);
+
+                if ($data['progress'] < 100) {
+                    $data['progress'] = $data['progress'] + 1;
+                }
+                $this->UserStage->initUserStage($data);    
+     
+                $ary = array(
+                    'result'   => 1
+                ,   'progress' => $data['progress']     
+                ,   'kind'     => $lotData['kind']
+                );
+            } catch (Exception $e) { 
+                $this->UserStage->rollback(); 
+                $this->log($e->errmes);
+                $ary = array('result' => 2);
+            } 
+            $this->UserStage->commit(); 
+
+$this->log('cccccccccccc:');
         } else {
+$this->log('eeeeeeeeeeeeee:');
             $ary = array('result' => 2);
         }
 
+$this->log('fffffffffff:');
         $this->setJson($ary);
 	}
 

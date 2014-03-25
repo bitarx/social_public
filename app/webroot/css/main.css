@@ -32,12 +32,12 @@ body {
 
 
 a {
-	color: #003d4c;
+	color: #fff;
 	text-decoration: underline;
 	font-weight: bold;
 }
 a:hover {
-	color: #367889;
+	color: #FFA500;
 	text-decoration:none;
 }
 
@@ -174,17 +174,26 @@ a:hover {
 .icon_battle {
     position: absolute;
     top: 315px;
-    left: 0px;
+    left: 388px;
 }
 .icon_scene {
     position: absolute;
     top: 315px;
-    left: 194px;
+    left: 0px;
 }
 .icon_help {
     position: absolute;
     top: 315px;
-    left: 388px;
+    left: 194px;
+}
+
+/** プログレスバー */
+.progQuest {
+    background: url(../img/progress_base.png) top repeat-x;
+    border : 1px solid #d3d3d3;
+    line-height: 0;
+    height: 20px;
+    width: 240px;
 }
 
 

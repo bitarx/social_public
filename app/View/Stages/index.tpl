@@ -1,6 +1,11 @@
 <div class="stages index">
 	<h2>Stages</h2>
+    <div>
+        <{$list[0]['quest_detail']}> 
+    </div>
     <{foreach from=$list item=val}>
-        <a href="initStage?stage_id=<{$val['stage_id']}> "><{$val['stage_id']}>. <{$val['stage_title']}> </a>
+        <div>
+            <a href="initStage?stage_id=<{$val['stage_id']}> "><{$val['stage_id']}>. <{$val['stage_title']}> </a>
+        </div>
     <{/foreach}>
 </div>

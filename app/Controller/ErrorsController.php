@@ -22,7 +22,6 @@ class ErrorsController extends ApiController {
      * @return json
      */
 	public function index() {
-
         $id = $this->request->query['error'];
         $where  = array('error_id' => $id);
         $mes = $this->Error->field('message', $where);

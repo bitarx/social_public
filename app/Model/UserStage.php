@@ -89,10 +89,12 @@ class UserStage extends AppModel {
      */
     public function getUserMaxStageId($userId) {
 
+        $ret = 0;
         $where  = array('user_id' => $userId); 
         $fields = array('MAX(UserStage.stage_id) AS stage_id');
-        $data = $this->getAllFind($where, $fields);
-        return $data['stage_id'];
+        $data = $this->getAllFind($where, $fields, $kind = 'first');
+        if (!empty($data['stage_id'])) { $ret = $data['stage_id']; } 
+        return $ret;
     }
 
     /**

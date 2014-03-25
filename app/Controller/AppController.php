@@ -145,13 +145,20 @@ $this->log('className:'. $this->name);
                     if (empty($row['end_flg'])) {
                         if (!empty($row['UserTutorial']['tutorial_id'])) {
                             // チュートリアル途中
-                            return $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+                            $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                         } else {
                             // チュートリアル初めて
-                            return $this->rd('Tutorials', 'tutorial_1');
+                            $this->rd('Tutorials', 'tutorial_1');
                         }
                     }
                 }
+            }
+        } else {
+
+            if ( !isset($this->params['error']) ) {
+$this->log('userIdErr:'. $this->userId); 
+$this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:'); 
+                $this->rd('Errors', 'index', array('error' => 1 ));
             }
         }
         $this->set('gameTitle', $this->gameTitle); 
