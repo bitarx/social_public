@@ -15,8 +15,15 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard');
 
+    /**
+     *　定数
+     *
+     */
+    const STAGE_PROG_NORMAL = 2; // 通常進行
+
+    const STAGE_PROG_HIGHT  = 5; // 全力進行
 
 
     /**
@@ -125,6 +132,8 @@ $this->log('main_params:'. $params);
         $this->set('userParam', $userParam);
         $this->set('param', $params);
         $this->set('prog', $data['progress']);
+        $this->set('act', $userParam['act']);
+        $this->set('exp', $userParam['exp']);
     }
 
     /**
@@ -266,7 +275,7 @@ $this->log('main_params:'. $params);
     }
 
     /**
-     * 登録更新(変更禁止)
+     * 登録更新
      *
      * @author imanishi 
      * @return json 0:失敗 1:成功 2:put以外のリクエスト
@@ -277,31 +286,110 @@ $this->log('aaaaaaaaaaaaaa:');
         if ($this->request->is(array('ajax'))) {
 $this->log('bbbbbbbbbbbbbbbb:');
             $userId = $this->userId;
+
+            // 進行度の基本
+            $baseInt = self::STAGE_PROG_NORMAL;
+
+            // 取得対象のデータ
+            $targetData = array(
+                'name' => "" 
+            ,   'id'   => 0
+            );
 $this->log('userId;:'. $userId);
             $data = $this->params['params'];
             $data = (array)json_decode($data);
             $data['user_id'] = $userId;
 
             // 現在のユーザステージ情報取得
-            $stageData = $this->UserStage->getUserStage($userId, $data['stage_id']);
-            $data['progress'] = $stageData['progress'];
+            $userStageData = $this->UserStage->getUserStage($userId, $data['stage_id']);
+            $data['progress'] = $userStageData['progress'];
 
-            $this->UserStage->begin(); 
-            try {
+            // ユーザステータス取得
+            $userParam = $this->UserParam->getUserParams($userId);
 
+            // 何かもらえるかどうか
+            $lotData['kind']   = 0;
+            $lotData['target'] = 0;
+            $lotData['num']    = 0;
+            $hit = mt_rand(1, 100);
+            if ($hit <= $userStageData['prob_get']) {
                 // 抽選
                 $list = $this->StageProb->getStageProb($data['stage_id']);
                 $lotData = $this->Common->doLot($list);
+ 
+            }
 
+            $this->UserStage->begin(); 
+            try {
+                // 入手カード振込など
+                switch($lotData['kind'])
+                {
+                    // カード
+                    case KIND_CARD:
+                        $row = array();
+                        $this->UserCard->registCard($userId, $lotData['target'], $lotData['num'], $row);
+                        $targetData['name'] = $row['card_name'];
+                        $targetData['id']   = $row['card_id'];
+
+                        break;
+                    // アイテム
+                    case KIND_ITEM:
+                        break;
+                    // ゴールド
+                    case KIND_GOLD:
+                        $userParam['money'] += $lotData['num'];
+                        break;
+                    // 敵
+                    case KIND_ENEMY:
+                        break;
+                    // 全力進行
+                    case KIND_PROG_HIGHT:
+                        $baseInt = self::STAGE_PROG_HIGHT;
+                        break;
+                    // 出会い
+                    case KIND_NEW_FRIEND:
+                        break;
+                }
+
+                // 進行度アップ
                 if ($data['progress'] < 100) {
-                    $data['progress'] = $data['progress'] + 1;
+                    $range   = 1;
+  $this->log('baseInt:' . $baseInt); 
+                    $add = $this->Common->lotRange($baseInt, $range);
+  $this->log('lotRange:' . $add); 
+                    $data['progress'] = $data['progress'] + $add;
+                    if (100 < $data['progress']) $data['progress'] = 100;
                 }
                 $this->UserStage->initUserStage($data);    
+
+
+                // 行動力の減算と経験値アップ
+                $levelUp = 0;
+                $userParam['act'] -= $userStageData['use_act'];
+                if ($userParam['act'] < 0) $userParam['act'] = 0;
+
+                $getExp = $this->Common->lotRange($userStageData['use_act'], $range);
+                $userParam['exp'] += $getExp;
+                if (100 < $userParam['exp']) {
+                    $userParam['exp'] = 100;
+                    $userParam['level']++;
+                    $levelUp = 1;
+                }
+                $this->UserParam->setUserParams($userId, $userParam);
+
      
+                // 返却データを配列に格納
                 $ary = array(
                     'result'   => 1
                 ,   'progress' => $data['progress']     
                 ,   'kind'     => $lotData['kind']
+                ,   'target'   => $lotData['target']
+                ,   'num'      => $lotData['num']
+                ,   'exp'      => $userParam['exp']
+                ,   'act'      => $userParam['act']
+                ,   'level_up' => $levelUp
+                ,   'name'     => $targetData['name']
+                ,   'id'       => $targetData['id']
                 );
             } catch (Exception $e) { 
                 $this->UserStage->rollback(); 

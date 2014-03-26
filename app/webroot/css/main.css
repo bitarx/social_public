@@ -187,13 +187,23 @@ a:hover {
     left: 194px;
 }
 
-/** プログレスバー */
+/** クエストのプログレスバー */
 .progQuest {
+    margin: 0 auto;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height: 20px;
     width: 240px;
+}
+
+/** クエストの抽選結果表示 */
+.lotResultQuest {
+    margin: 0 auto;
+    width: 150px;
+}
+.lotResultDataQuest {
+    margin: 0 auto;
 }
 
 

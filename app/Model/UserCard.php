@@ -174,17 +174,19 @@ class UserCard extends AppModel {
 
     /**
      * 取得カードを登録
+     *stCard
      * @author imanishi 
      * @param int $userId
      * @param int $cardId
      * @param int $num
-     * @return bool 
+     * @param array $row 対象カード情報(参照用)
+     e @return bool 
      */
-    public function registCard($userId, $cardId, $num) {
+    public function registCard($userId, $cardId, $num, &$row) {
 
         $card = new Card();
         $where = array('card_id' => $cardId);
-        $fields = array('card_atk' , 'card_def');
+        $fields = array('card_id', 'card_name', 'card_atk' , 'card_def');
         $row = $card->getAllFind($where, $fields, 'first');
         for ($i = 0; $i < $num; $i++) {
             $data[] = array($userId, $cardId, $row['card_atk'], $row['card_def']);

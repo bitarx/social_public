@@ -55,8 +55,6 @@ class CommonComponent extends Component {
         } else {
             if ($this->dayChangeH <= $nowH) {
                 if ($targetH < $this->dayChangeH) {
-                var_dump($targetH);
-                die;
                     return false;
                 } else {
                     return true;
@@ -69,5 +67,21 @@ class CommonComponent extends Component {
                 }
             }
         }
+    }
+
+    /**
+     * レンジで抽選
+     *
+     * @author imanishi 
+     * @param int $baseInt 基準となる数値
+     * @param int $range 上下のレンジ
+     * @return int 抽選結果
+     */
+    public function lotRange($baseInt, $range) {
+        $min = $baseInt - $range;
+        $max = $baseInt + $range;
+
+        $ret = mt_rand($min, $max);
+        return $ret;
     }
 }
