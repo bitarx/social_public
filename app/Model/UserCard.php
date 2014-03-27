@@ -162,12 +162,16 @@ class UserCard extends AppModel {
      *
      * @author imanishi
      * @param int $userId
+     * @param int $cardId
      * @param array $data 所持カードデータ
      * @return array $list
      */
-    public function getUserCard ($userId) {
+    public function getUserCard ($userId, $cardId = 0) {
 
         $where = array('user_id' => $userId);
+        if (!empty($cardId)) { 
+            $where['card_id'] = $cardId;
+        } 
         $list = $this->getAllFind($where);
         return $list;
     }
@@ -202,12 +206,16 @@ class UserCard extends AppModel {
      *
      * @author imanishi
      * @param int $userCardId
+     * @param int $userId
      * @param array $data 所持カードデータ
      * @return array $data
      */
-    public function getUserCardById ($userCardId) {
+    public function getUserCardById ($userCardId, $userId = 0) {
 
         $where = array('user_card_id' => $userCardId);
+        if (!empty($userId)) { 
+            $where['user_id'] = $userId;
+        } 
         $field = array();
         $data = $this->getAllFind($where, $field, 'first');
         return $data;

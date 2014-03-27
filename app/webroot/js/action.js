@@ -13,6 +13,7 @@ console.log('routes');
 console.log(data);
 console.log(data.action);
 console.log(data.kind);
+console.log(data.id);
 
     switch(data.action)
     {
@@ -33,7 +34,7 @@ function dispProgressQuest(prog)
 {
 console.log('proggggggggggggggggggggg');
 console.log(prog);
-    $('#progQuest').html( '<img src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
+    $('#progQuestMain').html( '<img src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
     $('#progQuest').show(); 
      
 }
@@ -49,8 +50,6 @@ console.log(act);
 
 function dispProgressQuestExp(exp)
 {
-console.log('acttttttttttttttt');
-console.log(exp);
     $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
     $('#progQuestExp').show(); 
      
@@ -58,18 +57,22 @@ console.log(exp);
 
 function dispRotResultQuest(data)
 {
-console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
-console.log(data.kind);
-console.log(data.name);
-console.log(data.id);
-    var kind = data.kind;
+
+    if (undefined == data) { 
+        var kind = "99";
+    } else {
+        var kind = data.kind;
+    }
+
+    var str = "";
     var filename = 'card_prog_on.png';
     switch(kind)
     {
        // カード
        case "1":
            filename = 'card_get_on.png';
-           str = data.name + 'が仲間に加わった！';
+           str = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.id + '" width="160px">'; 
+           str += data.name + 'が仲間に加わった！';
            break;
        // 金庫
        case "2":
@@ -92,8 +95,13 @@ console.log(data.id);
        case "6":
            filename = 'card_bestprog_on.png';
            break;
+       // カードの裏
+       case "99":
+           filename = 'card_back.png';
+           break;
     }
-    // カード
+
+    // クエストカード
     $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
     $('#lotResultQuest').show(); 
 

@@ -351,9 +351,10 @@ $this->log('userId;:'. $userId);
                         break;
                 }
 
+                $range   = 1;
+
                 // 進行度アップ
                 if ($data['progress'] < 100) {
-                    $range   = 1;
   $this->log('baseInt:' . $baseInt); 
                     $add = $this->Common->lotRange($baseInt, $range);
   $this->log('lotRange:' . $add); 
@@ -398,13 +399,10 @@ $this->log('userId;:'. $userId);
             } 
             $this->UserStage->commit(); 
 
-$this->log('cccccccccccc:');
         } else {
-$this->log('eeeeeeeeeeeeee:');
             $ary = array('result' => 2);
         }
 
-$this->log('fffffffffff:');
         $this->setJson($ary);
 	}
 
