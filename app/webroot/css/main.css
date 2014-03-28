@@ -253,6 +253,11 @@ a:hover {
     top: 450px;
     position: relative;
 }
+.btnQuestNotProg {
+    left: 0px;
+    top: 420px;
+    position: relative;
+}
 .strQuestProg {
     position: absolute;
     top: 12px;

@@ -47105,3 +47105,1886 @@ Stack Trace:
 2014-03-27 18:02:51 Error: /var/www/asns/app/webroot/img/
 2014-03-27 18:02:51 Error: card
 2014-03-27 18:02:51 Error: /var/www/asns/app/webroot/img/card/card_m_28.jpg
+2014-03-27 18:40:03 Error: ownerId:
+2014-03-27 18:40:03 Error: className:SnsUsers
+2014-03-27 18:40:04 Error: ownerId:
+2014-03-27 18:40:04 Error: className:SnsUsers
+2014-03-27 18:40:05 Error: ownerId:
+2014-03-27 18:40:05 Error: className:SnsUsers
+2014-03-27 18:58:10 Error: ownerId:
+2014-03-27 18:58:10 Error: className:SnsUsers
+2014-03-27 18:58:11 Error: ownerId:
+2014-03-27 18:58:11 Error: className:SnsUsers
+2014-03-27 18:58:13 Error: ownerId:
+2014-03-27 18:58:13 Error: className:SnsUsers
+2014-03-27 20:22:50 Error: ownerId:
+2014-03-27 20:22:50 Error: className:SnsUsers
+2014-03-27 20:22:50 Error: ownerId:
+2014-03-27 20:22:50 Error: className:SnsUsers
+2014-03-27 20:22:51 Error: ownerId:
+2014-03-27 20:22:51 Error: className:SnsUsers
+2014-03-27 21:15:18 Error: ownerId:
+2014-03-27 21:15:18 Error: className:SnsUsers
+2014-03-27 21:15:19 Error: ownerId:
+2014-03-27 21:15:19 Error: className:Errors
+2014-03-27 21:15:19 Error: userId:0
+2014-03-28 05:31:22 Error: ownerId:
+2014-03-28 05:31:22 Error: className:SnsUsers
+2014-03-28 05:31:23 Error: ownerId:
+2014-03-28 05:31:23 Error: className:SnsUsers
+2014-03-28 05:31:23 Error: ownerId:
+2014-03-28 05:31:23 Error: className:SnsUsers
+2014-03-28 09:02:45 Error: ownerId:1
+2014-03-28 09:02:45 Error: className:Errors
+2014-03-28 09:02:45 Error: userId:0
+2014-03-28 09:51:27 Error: ownerId:
+2014-03-28 09:51:27 Error: className:SnsUsers
+2014-03-28 09:51:28 Error: ownerId:
+2014-03-28 09:51:28 Error: className:SnsUsers
+2014-03-28 09:51:29 Error: ownerId:
+2014-03-28 09:51:29 Error: className:SnsUsers
+2014-03-28 10:30:08 Error: ownerId:1
+2014-03-28 10:30:08 Error: className:SnsUsers
+2014-03-28 10:30:08 Error: userId:17
+2014-03-28 10:30:10 Error: ownerId:1
+2014-03-28 10:30:10 Error: className:Quests
+2014-03-28 10:30:10 Error: userId:17
+2014-03-28 10:30:12 Error: ownerId:1
+2014-03-28 10:30:12 Error: className:Stages
+2014-03-28 10:30:12 Error: userId:17
+2014-03-28 10:30:13 Error: ownerId:1
+2014-03-28 10:30:13 Error: className:Stages
+2014-03-28 10:30:13 Error: userId:17
+2014-03-28 10:30:14 Error: ownerId:1
+2014-03-28 10:30:14 Error: className:Stages
+2014-03-28 10:30:14 Error: userId:17
+2014-03-28 10:30:14 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"1"}
+2014-03-28 10:31:38 Error: ownerId:
+2014-03-28 10:31:38 Error: className:Stages
+2014-03-28 10:31:40 Error: ownerId:
+2014-03-28 10:31:40 Error: className:Quests
+2014-03-28 10:31:41 Error: ownerId:
+2014-03-28 10:31:41 Error: className:Stages
+2014-03-28 10:31:44 Error: ownerId:
+2014-03-28 10:31:44 Error: className:Stages
+2014-03-28 10:31:51 Error: ownerId:
+2014-03-28 10:31:51 Error: className:SnsUsers
+2014-03-28 10:33:03 Error: ownerId:1
+2014-03-28 10:33:03 Error: className:Stages
+2014-03-28 10:33:03 Error: userId:17
+2014-03-28 10:33:03 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:03 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:03 Error: userId;:17
+2014-03-28 10:33:06 Error: ownerId:1
+2014-03-28 10:33:06 Error: className:Stages
+2014-03-28 10:33:06 Error: userId:17
+2014-03-28 10:33:06 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:06 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:06 Error: userId;:17
+2014-03-28 10:33:06 Error: ownerId:1
+2014-03-28 10:33:06 Error: className:File
+2014-03-28 10:33:06 Error: userId:17
+2014-03-28 10:33:08 Error: ownerId:1
+2014-03-28 10:33:08 Error: className:Stages
+2014-03-28 10:33:08 Error: userId:17
+2014-03-28 10:33:08 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:08 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:08 Error: userId;:17
+2014-03-28 10:33:08 Error: ownerId:1
+2014-03-28 10:33:08 Error: className:File
+2014-03-28 10:33:08 Error: userId:17
+2014-03-28 10:33:10 Error: ownerId:1
+2014-03-28 10:33:10 Error: className:Stages
+2014-03-28 10:33:10 Error: userId:17
+2014-03-28 10:33:10 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:10 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:10 Error: userId;:17
+2014-03-28 10:33:10 Error: ownerId:1
+2014-03-28 10:33:10 Error: className:File
+2014-03-28 10:33:10 Error: userId:17
+2014-03-28 10:33:14 Error: ownerId:1
+2014-03-28 10:33:14 Error: className:Stages
+2014-03-28 10:33:14 Error: userId:17
+2014-03-28 10:33:14 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:14 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:14 Error: userId;:17
+2014-03-28 10:33:14 Error: ownerId:1
+2014-03-28 10:33:14 Error: className:File
+2014-03-28 10:33:14 Error: userId:17
+2014-03-28 10:33:16 Error: ownerId:1
+2014-03-28 10:33:16 Error: className:Stages
+2014-03-28 10:33:16 Error: userId:17
+2014-03-28 10:33:16 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:33:16 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:33:16 Error: userId;:17
+2014-03-28 10:33:16 Error: ownerId:1
+2014-03-28 10:33:16 Error: className:File
+2014-03-28 10:33:16 Error: userId:17
+2014-03-28 10:34:15 Error: ownerId:
+2014-03-28 10:34:15 Error: className:File
+2014-03-28 10:34:15 Error: ownerId:
+2014-03-28 10:34:15 Error: className:Stages
+2014-03-28 10:45:50 Error: ownerId:1
+2014-03-28 10:45:50 Error: className:Stages
+2014-03-28 10:45:50 Error: userId:17
+2014-03-28 10:45:50 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:45:50 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:45:50 Error: userId;:17
+2014-03-28 10:45:51 Error: ownerId:1
+2014-03-28 10:45:51 Error: className:File
+2014-03-28 10:45:51 Error: userId:17
+2014-03-28 10:46:36 Error: ownerId:1
+2014-03-28 10:46:36 Error: className:Stages
+2014-03-28 10:46:36 Error: userId:17
+2014-03-28 10:46:36 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 10:46:39 Error: ownerId:1
+2014-03-28 10:46:39 Error: className:Stages
+2014-03-28 10:46:39 Error: userId:17
+2014-03-28 10:46:39 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:46:39 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:46:39 Error: userId;:17
+2014-03-28 10:46:39 Error: baseInt:2
+2014-03-28 10:46:39 Error: lotRange:1
+2014-03-28 10:46:39 Error: ownerId:1
+2014-03-28 10:46:39 Error: className:File
+2014-03-28 10:46:39 Error: userId:17
+2014-03-28 10:47:54 Error: ownerId:
+2014-03-28 10:47:54 Error: className:Stages
+2014-03-28 10:48:08 Error: ownerId:1
+2014-03-28 10:48:08 Error: className:Stages
+2014-03-28 10:48:08 Error: userId:17
+2014-03-28 10:48:08 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 10:48:10 Error: ownerId:1
+2014-03-28 10:48:10 Error: className:Stages
+2014-03-28 10:48:10 Error: userId:17
+2014-03-28 10:48:10 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:48:10 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:48:10 Error: userId;:17
+2014-03-28 10:48:10 Error: baseInt:2
+2014-03-28 10:48:10 Error: lotRange:1
+2014-03-28 10:48:10 Error: ownerId:1
+2014-03-28 10:48:10 Error: className:File
+2014-03-28 10:48:10 Error: userId:17
+2014-03-28 10:55:24 Error: ownerId:1
+2014-03-28 10:55:24 Error: className:Stages
+2014-03-28 10:55:24 Error: userId:17
+2014-03-28 10:55:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 10:55:27 Error: ownerId:1
+2014-03-28 10:55:27 Error: className:Stages
+2014-03-28 10:55:27 Error: userId:17
+2014-03-28 10:55:27 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:55:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:55:27 Error: userId;:17
+2014-03-28 10:55:27 Error: baseInt:2
+2014-03-28 10:55:27 Error: lotRange:1
+2014-03-28 10:55:36 Error: ownerId:1
+2014-03-28 10:55:36 Error: className:Stages
+2014-03-28 10:55:36 Error: userId:17
+2014-03-28 10:55:36 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:55:36 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:55:36 Error: userId;:17
+2014-03-28 10:55:36 Error: ownerId:1
+2014-03-28 10:55:36 Error: className:File
+2014-03-28 10:55:36 Error: userId:17
+2014-03-28 10:55:58 Error: ownerId:1
+2014-03-28 10:55:58 Error: className:Stages
+2014-03-28 10:55:58 Error: userId:17
+2014-03-28 10:55:58 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:55:58 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:55:58 Error: userId;:17
+2014-03-28 10:55:58 Error: ownerId:1
+2014-03-28 10:55:58 Error: className:File
+2014-03-28 10:55:58 Error: userId:17
+2014-03-28 10:56:14 Error: ownerId:1
+2014-03-28 10:56:14 Error: className:Stages
+2014-03-28 10:56:14 Error: userId:17
+2014-03-28 10:56:14 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 10:56:16 Error: ownerId:1
+2014-03-28 10:56:16 Error: className:Stages
+2014-03-28 10:56:16 Error: userId:17
+2014-03-28 10:56:16 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:56:16 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:56:16 Error: userId;:17
+2014-03-28 10:56:16 Error: baseInt:2
+2014-03-28 10:56:16 Error: lotRange:3
+2014-03-28 10:57:02 Error: ownerId:
+2014-03-28 10:57:02 Error: className:File
+2014-03-28 10:58:41 Error: ownerId:1
+2014-03-28 10:58:41 Error: className:Stages
+2014-03-28 10:58:41 Error: userId:17
+2014-03-28 10:58:41 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 10:58:43 Error: ownerId:1
+2014-03-28 10:58:43 Error: className:Stages
+2014-03-28 10:58:43 Error: userId:17
+2014-03-28 10:58:43 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:58:43 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:58:43 Error: userId;:17
+2014-03-28 10:58:43 Error: baseInt:2
+2014-03-28 10:58:43 Error: lotRange:2
+2014-03-28 10:58:47 Error: ownerId:1
+2014-03-28 10:58:47 Error: className:Stages
+2014-03-28 10:58:47 Error: userId:17
+2014-03-28 10:58:47 Error: aaaaaaaaaaaaaa:
+2014-03-28 10:58:47 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 10:58:47 Error: userId;:17
+2014-03-28 10:58:47 Error: ownerId:1
+2014-03-28 10:58:47 Error: className:File
+2014-03-28 10:58:47 Error: userId:17
+2014-03-28 11:02:23 Error: ownerId:
+2014-03-28 11:02:23 Error: className:SnsUsers
+2014-03-28 11:02:24 Error: ownerId:
+2014-03-28 11:02:24 Error: className:SnsUsers
+2014-03-28 11:02:25 Error: ownerId:
+2014-03-28 11:02:25 Error: className:SnsUsers
+2014-03-28 11:07:41 Error: ownerId:1
+2014-03-28 11:07:41 Error: className:Stages
+2014-03-28 11:07:41 Error: userId:17
+2014-03-28 11:07:41 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:07:44 Error: ownerId:1
+2014-03-28 11:07:44 Error: className:Stages
+2014-03-28 11:07:44 Error: userId:17
+2014-03-28 11:07:44 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:07:44 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:07:44 Error: userId;:17
+2014-03-28 11:07:44 Error: baseInt:2
+2014-03-28 11:07:44 Error: lotRange:2
+2014-03-28 11:09:30 Error: ownerId:
+2014-03-28 11:09:30 Error: className:Stages
+2014-03-28 11:15:36 Error: ownerId:1
+2014-03-28 11:15:36 Error: className:Stages
+2014-03-28 11:15:36 Error: userId:17
+2014-03-28 11:15:36 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:15:39 Error: ownerId:1
+2014-03-28 11:15:39 Error: className:Stages
+2014-03-28 11:15:39 Error: userId:17
+2014-03-28 11:15:39 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:15:39 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:15:39 Error: userId;:17
+2014-03-28 11:15:39 Error: baseInt:2
+2014-03-28 11:15:39 Error: lotRange:2
+2014-03-28 11:16:59 Error: ownerId:
+2014-03-28 11:16:59 Error: className:Stages
+2014-03-28 11:18:26 Error: ownerId:1
+2014-03-28 11:18:26 Error: className:Stages
+2014-03-28 11:18:26 Error: userId:17
+2014-03-28 11:18:26 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:18:28 Error: ownerId:1
+2014-03-28 11:18:28 Error: className:Stages
+2014-03-28 11:18:28 Error: userId:17
+2014-03-28 11:18:28 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:18:28 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:18:28 Error: userId;:17
+2014-03-28 11:18:28 Error: baseInt:2
+2014-03-28 11:18:28 Error: lotRange:2
+2014-03-28 11:18:28 Error: 
+2014-03-28 11:18:36 Error: ownerId:1
+2014-03-28 11:18:36 Error: className:Stages
+2014-03-28 11:18:36 Error: userId:17
+2014-03-28 11:18:36 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:18:38 Error: ownerId:1
+2014-03-28 11:18:38 Error: className:Stages
+2014-03-28 11:18:38 Error: userId:17
+2014-03-28 11:18:38 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:18:38 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:18:38 Error: userId;:17
+2014-03-28 11:18:38 Error: baseInt:2
+2014-03-28 11:18:38 Error: lotRange:3
+2014-03-28 11:18:38 Error: 
+2014-03-28 11:19:35 Error: ownerId:1
+2014-03-28 11:19:35 Error: className:Stages
+2014-03-28 11:19:35 Error: userId:17
+2014-03-28 11:19:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:19:36 Error: ownerId:1
+2014-03-28 11:19:36 Error: className:Stages
+2014-03-28 11:19:36 Error: userId:17
+2014-03-28 11:19:36 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:19:36 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:19:36 Error: userId;:17
+2014-03-28 11:19:36 Error: baseInt:2
+2014-03-28 11:19:36 Error: lotRange:3
+2014-03-28 11:19:36 Error: 
+2014-03-28 11:22:23 Error: ownerId:1
+2014-03-28 11:22:23 Error: className:Stages
+2014-03-28 11:22:23 Error: userId:17
+2014-03-28 11:22:23 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:22:26 Error: ownerId:1
+2014-03-28 11:22:26 Error: className:Stages
+2014-03-28 11:22:26 Error: userId:17
+2014-03-28 11:22:26 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:22:26 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:22:26 Error: userId;:17
+2014-03-28 11:22:26 Error: baseInt:2
+2014-03-28 11:22:26 Error: lotRange:1
+2014-03-28 11:22:45 Error: ownerId:1
+2014-03-28 11:22:45 Error: className:Stages
+2014-03-28 11:22:45 Error: userId:17
+2014-03-28 11:22:45 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:22:47 Error: ownerId:1
+2014-03-28 11:22:47 Error: className:Stages
+2014-03-28 11:22:47 Error: userId:17
+2014-03-28 11:22:47 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:22:47 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:22:47 Error: userId;:17
+2014-03-28 11:22:47 Error: baseInt:2
+2014-03-28 11:22:47 Error: lotRange:1
+2014-03-28 11:23:51 Error: ownerId:1
+2014-03-28 11:23:51 Error: className:Stages
+2014-03-28 11:23:51 Error: userId:17
+2014-03-28 11:23:51 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:23:55 Error: ownerId:1
+2014-03-28 11:23:55 Error: className:Stages
+2014-03-28 11:23:55 Error: userId:17
+2014-03-28 11:23:55 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:23:55 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:23:55 Error: userId;:17
+2014-03-28 11:23:55 Error: baseInt:2
+2014-03-28 11:23:55 Error: lotRange:1
+2014-03-28 11:23:56 Error: 
+2014-03-28 11:24:20 Error: ownerId:
+2014-03-28 11:24:20 Error: className:Stages
+2014-03-28 11:26:44 Error: ownerId:1
+2014-03-28 11:26:44 Error: className:Stages
+2014-03-28 11:26:44 Error: userId:17
+2014-03-28 11:26:44 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:26:47 Error: ownerId:1
+2014-03-28 11:26:47 Error: className:Stages
+2014-03-28 11:26:47 Error: userId:17
+2014-03-28 11:26:47 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:26:47 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:26:47 Error: userId;:17
+2014-03-28 11:26:47 Error: baseInt:2
+2014-03-28 11:26:47 Error: lotRange:3
+2014-03-28 11:26:47 Error: valSql:INSERT INTO user_stages (user_id,stage_id,proguress,state,created) VALUES (?,?,?,?,?)
+2014-03-28 11:26:47 Error: 
+2014-03-28 11:30:19 Error: ownerId:1
+2014-03-28 11:30:19 Error: className:Stages
+2014-03-28 11:30:19 Error: userId:17
+2014-03-28 11:30:19 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:30:23 Error: ownerId:1
+2014-03-28 11:30:23 Error: className:Stages
+2014-03-28 11:30:23 Error: userId:17
+2014-03-28 11:30:23 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:30:23 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:30:23 Error: userId;:17
+2014-03-28 11:30:23 Error: valSql:INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:30:23 Error: okok
+2014-03-28 11:30:23 Error: SELECT `User`.`user_id` FROM `eres`.`users` AS `User` LEFT JOIN `eres`.`sns_users` AS `SnsUser` ON (`User`.`sns_user_id` = `SnsUser`.`sns_user_id`)  WHERE `User`.`sns_user_id` = '1'    LIMIT 1
+2014-03-28 11:30:23 Error: SELECT `UserTutorial`.`tutorial_id`, `UserTutorial`.`end_flg` FROM `eres`.`user_tutorials` AS `UserTutorial` LEFT JOIN `eres`.`tutorials` AS `Tutorial` ON (`UserTutorial`.`tutorial_id` = `Tutorial`.`tutorial_id`)  WHERE `UserTutorial`.`delete_flg` = 0 AND `UserTutorial`.`user_id` = 17    LIMIT 1
+2014-03-28 11:30:23 Error: SELECT `UserStage`.`user_id`, `UserStage`.`stage_id`, `UserStage`.`progress`, `UserStage`.`state`, `UserStage`.`delete_flg`, `UserStage`.`created`, `UserStage`.`modified`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg` FROM `eres`.`user_stages` AS `UserStage` LEFT JOIN `eres`.`stages` AS `Stage` ON (`UserStage`.`stage_id` = `Stage`.`stage_id`)  WHERE `UserStage`.`delete_flg` = 0 AND `UserStage`.`user_id` = 17 AND `UserStage`.`stage_id` = 1    LIMIT 1
+2014-03-28 11:30:23 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 17    LIMIT 1
+2014-03-28 11:30:23 Error: SELECT `StageProb`.`stage_prob_id`, `StageProb`.`stage_id`, `StageProb`.`raid_id`, `StageProb`.`kind`, `StageProb`.`target`, `StageProb`.`num`, `StageProb`.`prob`, `StageProb`.`delete_flg`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg`, `Raid`.`raid_id`, `Raid`.`raid_name`, `Raid`.`start_time`, `Raid`.`end_time`, `Raid`.`delete_flg` FROM `eres`.`stage_probs` AS `StageProb` LEFT JOIN `eres`.`stages` AS `Stage` ON (`StageProb`.`stage_id` = `Stage`.`stage_id`) LEFT JOIN `eres`.`raids` AS `Raid` ON (`StageProb`.`raid_id` = `Raid`.`raid_id`)  WHERE `StageProb`.`delete_flg` = 0 AND `StageProb`.`stage_id` = 1
+2014-03-28 11:30:23 Error: BEGIN
+2014-03-28 11:30:23 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_atk`, `Card`.`card_def` FROM `eres`.`cards` AS `Card` LEFT JOIN `eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` = 28    LIMIT 1
+2014-03-28 11:30:23 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:30:23 Error: baseInt:2
+2014-03-28 11:30:23 Error: lotRange:2
+2014-03-28 11:30:23 Error: valSql:INSERT INTO user_stages (user_id,stage_id,proguress,state,created) VALUES (?,?,?,?,?)
+2014-03-28 11:30:23 Error: 
+2014-03-28 11:31:31 Error: ownerId:1
+2014-03-28 11:31:31 Error: className:Stages
+2014-03-28 11:31:31 Error: userId:17
+2014-03-28 11:31:31 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:31:33 Error: ownerId:1
+2014-03-28 11:31:33 Error: className:Stages
+2014-03-28 11:31:33 Error: userId:17
+2014-03-28 11:31:33 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:31:33 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:31:33 Error: userId;:17
+2014-03-28 11:31:33 Error: valSql:INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:31:33 Error: params:Array
+(
+    [0] => 17
+    [1] => 28
+    [2] => 80
+    [3] => 120
+    [4] => 2014-03-28 11:31:33
+)
+
+2014-03-28 11:31:33 Error: okok
+2014-03-28 11:31:33 Error: SELECT `User`.`user_id` FROM `eres`.`users` AS `User` LEFT JOIN `eres`.`sns_users` AS `SnsUser` ON (`User`.`sns_user_id` = `SnsUser`.`sns_user_id`)  WHERE `User`.`sns_user_id` = '1'    LIMIT 1
+2014-03-28 11:31:33 Error: SELECT `UserTutorial`.`tutorial_id`, `UserTutorial`.`end_flg` FROM `eres`.`user_tutorials` AS `UserTutorial` LEFT JOIN `eres`.`tutorials` AS `Tutorial` ON (`UserTutorial`.`tutorial_id` = `Tutorial`.`tutorial_id`)  WHERE `UserTutorial`.`delete_flg` = 0 AND `UserTutorial`.`user_id` = 17    LIMIT 1
+2014-03-28 11:31:33 Error: SELECT `UserStage`.`user_id`, `UserStage`.`stage_id`, `UserStage`.`progress`, `UserStage`.`state`, `UserStage`.`delete_flg`, `UserStage`.`created`, `UserStage`.`modified`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg` FROM `eres`.`user_stages` AS `UserStage` LEFT JOIN `eres`.`stages` AS `Stage` ON (`UserStage`.`stage_id` = `Stage`.`stage_id`)  WHERE `UserStage`.`delete_flg` = 0 AND `UserStage`.`user_id` = 17 AND `UserStage`.`stage_id` = 1    LIMIT 1
+2014-03-28 11:31:33 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 17    LIMIT 1
+2014-03-28 11:31:33 Error: SELECT `StageProb`.`stage_prob_id`, `StageProb`.`stage_id`, `StageProb`.`raid_id`, `StageProb`.`kind`, `StageProb`.`target`, `StageProb`.`num`, `StageProb`.`prob`, `StageProb`.`delete_flg`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg`, `Raid`.`raid_id`, `Raid`.`raid_name`, `Raid`.`start_time`, `Raid`.`end_time`, `Raid`.`delete_flg` FROM `eres`.`stage_probs` AS `StageProb` LEFT JOIN `eres`.`stages` AS `Stage` ON (`StageProb`.`stage_id` = `Stage`.`stage_id`) LEFT JOIN `eres`.`raids` AS `Raid` ON (`StageProb`.`raid_id` = `Raid`.`raid_id`)  WHERE `StageProb`.`delete_flg` = 0 AND `StageProb`.`stage_id` = 1
+2014-03-28 11:31:33 Error: BEGIN
+2014-03-28 11:31:33 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_atk`, `Card`.`card_def` FROM `eres`.`cards` AS `Card` LEFT JOIN `eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` = 28    LIMIT 1
+2014-03-28 11:31:33 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:31:33 Error: baseInt:2
+2014-03-28 11:31:33 Error: lotRange:1
+2014-03-28 11:31:33 Error: valSql:INSERT INTO user_stages (user_id,stage_id,proguress,state,created) VALUES (?,?,?,?,?)
+2014-03-28 11:31:33 Error: params:Array
+(
+    [0] => 17
+    [1] => 2
+    [2] => 0
+    [3] => 1
+    [4] => 2014-03-28 11:31:33
+)
+
+2014-03-28 11:31:33 Error: 
+2014-03-28 11:33:03 Error: ownerId:
+2014-03-28 11:33:03 Error: className:Stages
+2014-03-28 11:34:13 Error: ownerId:1
+2014-03-28 11:34:13 Error: className:Stages
+2014-03-28 11:34:14 Error: userId:17
+2014-03-28 11:34:14 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 11:34:15 Error: ownerId:1
+2014-03-28 11:34:15 Error: className:Stages
+2014-03-28 11:34:15 Error: userId:17
+2014-03-28 11:34:15 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:34:15 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:34:15 Error: userId;:17
+2014-03-28 11:34:15 Error: valSql:INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:34:15 Error: params:Array
+(
+    [0] => 17
+    [1] => 28
+    [2] => 80
+    [3] => 120
+    [4] => 2014-03-28 11:34:15
+)
+
+2014-03-28 11:34:15 Error: okok
+2014-03-28 11:34:15 Error: SELECT `User`.`user_id` FROM `eres`.`users` AS `User` LEFT JOIN `eres`.`sns_users` AS `SnsUser` ON (`User`.`sns_user_id` = `SnsUser`.`sns_user_id`)  WHERE `User`.`sns_user_id` = '1'    LIMIT 1
+2014-03-28 11:34:15 Error: SELECT `UserTutorial`.`tutorial_id`, `UserTutorial`.`end_flg` FROM `eres`.`user_tutorials` AS `UserTutorial` LEFT JOIN `eres`.`tutorials` AS `Tutorial` ON (`UserTutorial`.`tutorial_id` = `Tutorial`.`tutorial_id`)  WHERE `UserTutorial`.`delete_flg` = 0 AND `UserTutorial`.`user_id` = 17    LIMIT 1
+2014-03-28 11:34:15 Error: SELECT `UserStage`.`user_id`, `UserStage`.`stage_id`, `UserStage`.`progress`, `UserStage`.`state`, `UserStage`.`delete_flg`, `UserStage`.`created`, `UserStage`.`modified`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg` FROM `eres`.`user_stages` AS `UserStage` LEFT JOIN `eres`.`stages` AS `Stage` ON (`UserStage`.`stage_id` = `Stage`.`stage_id`)  WHERE `UserStage`.`delete_flg` = 0 AND `UserStage`.`user_id` = 17 AND `UserStage`.`stage_id` = 1    LIMIT 1
+2014-03-28 11:34:15 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 17    LIMIT 1
+2014-03-28 11:34:15 Error: SELECT `StageProb`.`stage_prob_id`, `StageProb`.`stage_id`, `StageProb`.`raid_id`, `StageProb`.`kind`, `StageProb`.`target`, `StageProb`.`num`, `StageProb`.`prob`, `StageProb`.`delete_flg`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg`, `Raid`.`raid_id`, `Raid`.`raid_name`, `Raid`.`start_time`, `Raid`.`end_time`, `Raid`.`delete_flg` FROM `eres`.`stage_probs` AS `StageProb` LEFT JOIN `eres`.`stages` AS `Stage` ON (`StageProb`.`stage_id` = `Stage`.`stage_id`) LEFT JOIN `eres`.`raids` AS `Raid` ON (`StageProb`.`raid_id` = `Raid`.`raid_id`)  WHERE `StageProb`.`delete_flg` = 0 AND `StageProb`.`stage_id` = 1
+2014-03-28 11:34:15 Error: BEGIN
+2014-03-28 11:34:15 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_atk`, `Card`.`card_def` FROM `eres`.`cards` AS `Card` LEFT JOIN `eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` = 28    LIMIT 1
+2014-03-28 11:34:15 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:34:15 Error: baseInt:2
+2014-03-28 11:34:15 Error: lotRange:1
+2014-03-28 11:34:16 Error: valSql:INSERT INTO user_stages (user_id,stage_id,progress,state,created) VALUES (?,?,?,?,?)
+2014-03-28 11:34:16 Error: params:Array
+(
+    [0] => 17
+    [1] => 2
+    [2] => 0
+    [3] => 1
+    [4] => 2014-03-28 11:34:16
+)
+
+2014-03-28 11:34:16 Error: okok
+2014-03-28 11:34:16 Error: SELECT `User`.`user_id` FROM `eres`.`users` AS `User` LEFT JOIN `eres`.`sns_users` AS `SnsUser` ON (`User`.`sns_user_id` = `SnsUser`.`sns_user_id`)  WHERE `User`.`sns_user_id` = '1'    LIMIT 1
+2014-03-28 11:34:16 Error: SELECT `UserTutorial`.`tutorial_id`, `UserTutorial`.`end_flg` FROM `eres`.`user_tutorials` AS `UserTutorial` LEFT JOIN `eres`.`tutorials` AS `Tutorial` ON (`UserTutorial`.`tutorial_id` = `Tutorial`.`tutorial_id`)  WHERE `UserTutorial`.`delete_flg` = 0 AND `UserTutorial`.`user_id` = 17    LIMIT 1
+2014-03-28 11:34:16 Error: SELECT `UserStage`.`user_id`, `UserStage`.`stage_id`, `UserStage`.`progress`, `UserStage`.`state`, `UserStage`.`delete_flg`, `UserStage`.`created`, `UserStage`.`modified`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg` FROM `eres`.`user_stages` AS `UserStage` LEFT JOIN `eres`.`stages` AS `Stage` ON (`UserStage`.`stage_id` = `Stage`.`stage_id`)  WHERE `UserStage`.`delete_flg` = 0 AND `UserStage`.`user_id` = 17 AND `UserStage`.`stage_id` = 1    LIMIT 1
+2014-03-28 11:34:16 Error: SELECT `UserParam`.`user_id`, `UserParam`.`money`, `UserParam`.`act`, `UserParam`.`act_max`, `UserParam`.`cost_atk`, `UserParam`.`cost_def`, `UserParam`.`level`, `UserParam`.`exp`, `UserParam`.`win`, `UserParam`.`lose`, `UserParam`.`delete_flg`, `UserParam`.`created`, `UserParam`.`modified` FROM `eres`.`user_params` AS `UserParam`   WHERE `UserParam`.`delete_flg` = 0 AND `UserParam`.`user_id` = 17    LIMIT 1
+2014-03-28 11:34:16 Error: SELECT `StageProb`.`stage_prob_id`, `StageProb`.`stage_id`, `StageProb`.`raid_id`, `StageProb`.`kind`, `StageProb`.`target`, `StageProb`.`num`, `StageProb`.`prob`, `StageProb`.`delete_flg`, `Stage`.`stage_id`, `Stage`.`quest_id`, `Stage`.`stage_title`, `Stage`.`use_act`, `Stage`.`prob_get`, `Stage`.`enemy_id`, `Stage`.`delete_flg`, `Raid`.`raid_id`, `Raid`.`raid_name`, `Raid`.`start_time`, `Raid`.`end_time`, `Raid`.`delete_flg` FROM `eres`.`stage_probs` AS `StageProb` LEFT JOIN `eres`.`stages` AS `Stage` ON (`StageProb`.`stage_id` = `Stage`.`stage_id`) LEFT JOIN `eres`.`raids` AS `Raid` ON (`StageProb`.`raid_id` = `Raid`.`raid_id`)  WHERE `StageProb`.`delete_flg` = 0 AND `StageProb`.`stage_id` = 1
+2014-03-28 11:34:16 Error: BEGIN
+2014-03-28 11:34:16 Error: SELECT `Card`.`card_id`, `Card`.`card_name`, `Card`.`card_atk`, `Card`.`card_def` FROM `eres`.`cards` AS `Card` LEFT JOIN `eres`.`skills` AS `Skill` ON (`Card`.`skill_id` = `Skill`.`skill_id`)  WHERE `Card`.`delete_flg` = 0 AND `Card`.`card_id` = 28    LIMIT 1
+2014-03-28 11:34:16 Error: INSERT INTO user_cards (user_id,card_id,atk,def,created) VALUES (?,?,?,?,?)
+2014-03-28 11:34:16 Error: SELECT COUNT(*) AS `count` FROM `eres`.`user_stages` AS `UserStage`   WHERE `UserStage`.`user_id` = 17
+2014-03-28 11:34:16 Error: SELECT COUNT(*) AS `count` FROM `eres`.`user_stages` AS `UserStage`   WHERE `UserStage`.`user_id` = 17
+2014-03-28 11:34:16 Error: SELECT COUNT(*) AS `count` FROM `eres`.`user_stages` AS `UserStage`   WHERE `UserStage`.`user_id` = 17
+2014-03-28 11:34:16 Error: UPDATE `eres`.`user_stages` SET `user_id` = 17, `stage_id` = 1, `progress` = 100, `state` = 2, `modified` = '2014-03-28 11:34:16'  WHERE `eres`.`user_stages`.`user_id` = '17'
+2014-03-28 11:34:16 Error: INSERT INTO user_stages (user_id,stage_id,progress,state,created) VALUES (?,?,?,?,?)
+2014-03-28 11:34:32 Error: ownerId:1
+2014-03-28 11:34:32 Error: className:Stages
+2014-03-28 11:34:32 Error: userId:17
+2014-03-28 11:34:32 Error: aaaaaaaaaaaaaa:
+2014-03-28 11:34:32 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 11:34:32 Error: userId;:17
+2014-03-28 11:37:57 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-28 11:37:57 Error: ownerId:
+2014-03-28 11:37:57 Error: className:CakeError
+2014-03-28 11:37:57 Error: userIdErr:0
+2014-03-28 11:37:57 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 11:37:57 Error: ownerId:
+2014-03-28 11:37:57 Error: className:Errors
+2014-03-28 11:37:57 Error: userId:0
+2014-03-28 11:37:57 Error: ownerId:
+2014-03-28 11:37:57 Error: className:SnsUsers
+2014-03-28 11:37:57 Error: ownerId:
+2014-03-28 11:37:57 Error: className:Errors
+2014-03-28 11:37:57 Error: userId:0
+2014-03-28 12:00:05 Error: ownerId:
+2014-03-28 12:00:05 Error: className:SnsUsers
+2014-03-28 12:00:06 Error: ownerId:
+2014-03-28 12:00:06 Error: className:SnsUsers
+2014-03-28 12:11:07 Error: ownerId:1
+2014-03-28 12:11:07 Error: className:Stages
+2014-03-28 12:11:07 Error: userId:17
+2014-03-28 12:11:07 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:11:07 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:11:07 Error: userId;:17
+2014-03-28 12:11:09 Error: ownerId:1
+2014-03-28 12:11:09 Error: className:Stages
+2014-03-28 12:11:09 Error: userId:17
+2014-03-28 12:11:09 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:11:09 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:11:09 Error: userId;:17
+2014-03-28 12:12:08 Error: ownerId:1
+2014-03-28 12:12:08 Error: className:Stages
+2014-03-28 12:12:08 Error: userId:17
+2014-03-28 12:12:08 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:12:08 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:12:08 Error: userId;:17
+2014-03-28 12:12:08 Error: actCheck:
+2014-03-28 12:12:08 Error: act:0
+2014-03-28 12:12:08 Error: use_act:1
+2014-03-28 12:12:08 Error: actFusoku:
+2014-03-28 12:12:08 Error: ownerId:1
+2014-03-28 12:12:08 Error: className:File
+2014-03-28 12:12:08 Error: userId:17
+2014-03-28 12:12:08 Error: File not Hold userId:17
+2014-03-28 12:14:21 Error: ownerId:1
+2014-03-28 12:14:21 Error: className:Stages
+2014-03-28 12:14:21 Error: userId:17
+2014-03-28 12:14:21 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:21 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:21 Error: userId;:17
+2014-03-28 12:14:21 Error: actCheck:
+2014-03-28 12:14:21 Error: act:0
+2014-03-28 12:14:21 Error: use_act:
+2014-03-28 12:14:21 Error: actFusoku:
+2014-03-28 12:14:23 Error: ownerId:1
+2014-03-28 12:14:23 Error: className:Stages
+2014-03-28 12:14:23 Error: userId:17
+2014-03-28 12:14:23 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:23 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:23 Error: userId;:17
+2014-03-28 12:14:23 Error: actCheck:
+2014-03-28 12:14:23 Error: act:0
+2014-03-28 12:14:23 Error: use_act:
+2014-03-28 12:14:23 Error: actFusoku:
+2014-03-28 12:14:25 Error: ownerId:1
+2014-03-28 12:14:25 Error: className:Stages
+2014-03-28 12:14:25 Error: userId:17
+2014-03-28 12:14:25 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:25 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:25 Error: userId;:17
+2014-03-28 12:14:25 Error: actCheck:
+2014-03-28 12:14:25 Error: act:0
+2014-03-28 12:14:25 Error: use_act:
+2014-03-28 12:14:25 Error: actFusoku:
+2014-03-28 12:14:27 Error: ownerId:1
+2014-03-28 12:14:27 Error: className:Stages
+2014-03-28 12:14:27 Error: userId:17
+2014-03-28 12:14:27 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:27 Error: userId;:17
+2014-03-28 12:14:27 Error: actCheck:
+2014-03-28 12:14:27 Error: act:0
+2014-03-28 12:14:27 Error: use_act:
+2014-03-28 12:14:27 Error: actFusoku:
+2014-03-28 12:14:28 Error: ownerId:1
+2014-03-28 12:14:28 Error: className:Stages
+2014-03-28 12:14:28 Error: userId:17
+2014-03-28 12:14:28 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:28 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:28 Error: userId;:17
+2014-03-28 12:14:28 Error: actCheck:
+2014-03-28 12:14:28 Error: act:0
+2014-03-28 12:14:28 Error: use_act:
+2014-03-28 12:14:28 Error: actFusoku:
+2014-03-28 12:14:29 Error: ownerId:1
+2014-03-28 12:14:29 Error: className:Stages
+2014-03-28 12:14:29 Error: userId:17
+2014-03-28 12:14:29 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:29 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:29 Error: userId;:17
+2014-03-28 12:14:29 Error: actCheck:
+2014-03-28 12:14:29 Error: act:0
+2014-03-28 12:14:29 Error: use_act:
+2014-03-28 12:14:29 Error: actFusoku:
+2014-03-28 12:14:29 Error: ownerId:1
+2014-03-28 12:14:29 Error: className:Stages
+2014-03-28 12:14:29 Error: userId:17
+2014-03-28 12:14:29 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:29 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:29 Error: userId;:17
+2014-03-28 12:14:29 Error: actCheck:
+2014-03-28 12:14:29 Error: act:0
+2014-03-28 12:14:29 Error: use_act:
+2014-03-28 12:14:29 Error: actFusoku:
+2014-03-28 12:14:30 Error: ownerId:1
+2014-03-28 12:14:30 Error: className:Stages
+2014-03-28 12:14:30 Error: userId:17
+2014-03-28 12:14:30 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:30 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:30 Error: userId;:17
+2014-03-28 12:14:30 Error: actCheck:
+2014-03-28 12:14:30 Error: act:0
+2014-03-28 12:14:30 Error: use_act:
+2014-03-28 12:14:30 Error: actFusoku:
+2014-03-28 12:14:31 Error: ownerId:1
+2014-03-28 12:14:31 Error: className:Stages
+2014-03-28 12:14:31 Error: userId:17
+2014-03-28 12:14:31 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:31 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:31 Error: userId;:17
+2014-03-28 12:14:31 Error: actCheck:
+2014-03-28 12:14:31 Error: act:0
+2014-03-28 12:14:31 Error: use_act:
+2014-03-28 12:14:31 Error: actFusoku:
+2014-03-28 12:14:58 Error: ownerId:1
+2014-03-28 12:14:58 Error: className:Stages
+2014-03-28 12:14:58 Error: userId:17
+2014-03-28 12:14:58 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:58 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:58 Error: userId;:17
+2014-03-28 12:14:58 Error: actCheck:
+2014-03-28 12:14:58 Error: act:0
+2014-03-28 12:14:58 Error: use_act:
+2014-03-28 12:14:58 Error: actFusoku:
+2014-03-28 12:14:59 Error: ownerId:1
+2014-03-28 12:14:59 Error: className:Stages
+2014-03-28 12:14:59 Error: userId:17
+2014-03-28 12:14:59 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:14:59 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:14:59 Error: userId;:17
+2014-03-28 12:14:59 Error: actCheck:
+2014-03-28 12:14:59 Error: act:0
+2014-03-28 12:14:59 Error: use_act:
+2014-03-28 12:14:59 Error: actFusoku:
+2014-03-28 12:15:03 Error: ownerId:1
+2014-03-28 12:15:03 Error: className:Stages
+2014-03-28 12:15:03 Error: userId:17
+2014-03-28 12:15:03 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:15:03 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:15:03 Error: userId;:17
+2014-03-28 12:15:03 Error: actCheck:
+2014-03-28 12:15:03 Error: act:0
+2014-03-28 12:15:03 Error: use_act:
+2014-03-28 12:15:03 Error: actFusoku:
+2014-03-28 12:17:11 Error: ownerId:1
+2014-03-28 12:17:11 Error: className:Stages
+2014-03-28 12:17:11 Error: userId:17
+2014-03-28 12:17:11 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:17:14 Error: ownerId:1
+2014-03-28 12:17:14 Error: className:Stages
+2014-03-28 12:17:14 Error: userId:17
+2014-03-28 12:17:14 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:17:14 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:17:14 Error: userId;:17
+2014-03-28 12:17:14 Error: actCheck:
+2014-03-28 12:17:14 Error: act:0
+2014-03-28 12:17:14 Error: use_act:
+2014-03-28 12:17:14 Error: actFusoku:
+2014-03-28 12:18:03 Error: ownerId:1
+2014-03-28 12:18:03 Error: className:Stages
+2014-03-28 12:18:03 Error: userId:17
+2014-03-28 12:18:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:18:05 Error: ownerId:1
+2014-03-28 12:18:05 Error: className:Stages
+2014-03-28 12:18:05 Error: userId:17
+2014-03-28 12:18:05 Error: aaaaaaaaaaaaaa:
+2014-03-28 12:18:05 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 12:18:05 Error: userId;:17
+2014-03-28 12:18:05 Error: actCheck:
+2014-03-28 12:18:05 Error: act:10
+2014-03-28 12:18:05 Error: use_act:
+2014-03-28 12:18:06 Error: ownerId:1
+2014-03-28 12:18:06 Error: className:File
+2014-03-28 12:18:06 Error: userId:17
+2014-03-28 12:18:58 Error: ownerId:
+2014-03-28 12:18:58 Error: className:Stages
+2014-03-28 12:46:57 Error: ownerId:1
+2014-03-28 12:46:57 Error: className:Stages
+2014-03-28 12:46:57 Error: userId:17
+2014-03-28 12:46:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:52:15 Error: ownerId:1
+2014-03-28 12:52:15 Error: className:Stages
+2014-03-28 12:52:15 Error: userId:17
+2014-03-28 12:52:15 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:53:45 Error: ownerId:
+2014-03-28 12:53:45 Error: className:SnsUsers
+2014-03-28 12:53:46 Error: ownerId:
+2014-03-28 12:53:46 Error: className:SnsUsers
+2014-03-28 12:53:47 Error: ownerId:
+2014-03-28 12:53:47 Error: className:SnsUsers
+2014-03-28 12:58:55 Error: ownerId:1
+2014-03-28 12:58:55 Error: className:Stages
+2014-03-28 12:58:55 Error: userId:17
+2014-03-28 12:58:55 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:59:11 Error: ownerId:1
+2014-03-28 12:59:11 Error: className:Stages
+2014-03-28 12:59:11 Error: userId:17
+2014-03-28 12:59:11 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 12:59:17 Error: ownerId:1
+2014-03-28 12:59:17 Error: className:Stages
+2014-03-28 12:59:17 Error: userId:17
+2014-03-28 12:59:17 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:00:18 Error: ownerId:
+2014-03-28 13:00:18 Error: className:Stages
+2014-03-28 13:02:00 Error: ownerId:1
+2014-03-28 13:02:00 Error: className:Stages
+2014-03-28 13:02:00 Error: userId:17
+2014-03-28 13:02:00 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:02:46 Error: ownerId:1
+2014-03-28 13:02:46 Error: className:Stages
+2014-03-28 13:02:46 Error: userId:17
+2014-03-28 13:02:46 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:04:25 Error: ownerId:1
+2014-03-28 13:04:25 Error: className:Stages
+2014-03-28 13:04:25 Error: userId:17
+2014-03-28 13:04:25 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:04:38 Error: ownerId:1
+2014-03-28 13:04:38 Error: className:Stages
+2014-03-28 13:04:38 Error: userId:17
+2014-03-28 13:04:38 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:04:49 Error: ownerId:1
+2014-03-28 13:04:50 Error: className:Stages
+2014-03-28 13:04:50 Error: userId:17
+2014-03-28 13:04:50 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:15:10 Error: ownerId:1
+2014-03-28 13:15:10 Error: className:Stages
+2014-03-28 13:15:10 Error: userId:17
+2014-03-28 13:15:10 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:15:21 Error: ownerId:1
+2014-03-28 13:15:21 Error: className:Stages
+2014-03-28 13:15:21 Error: userId:17
+2014-03-28 13:15:21 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 13:17:12 Error: ownerId:1
+2014-03-28 13:17:12 Error: className:Stages
+2014-03-28 13:17:12 Error: userId:17
+2014-03-28 13:17:12 Error: aaaaaaaaaaaaaa:
+2014-03-28 13:17:12 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 13:17:12 Error: userId;:17
+2014-03-28 13:17:12 Error: actCheck:
+2014-03-28 13:17:12 Error: act:28
+2014-03-28 13:17:12 Error: use_act:
+2014-03-28 13:17:13 Error: ownerId:1
+2014-03-28 13:17:13 Error: className:File
+2014-03-28 13:17:13 Error: userId:17
+2014-03-28 13:19:24 Error: ownerId:
+2014-03-28 13:19:24 Error: className:Stages
+2014-03-28 13:46:50 Error: ownerId:1
+2014-03-28 13:46:50 Error: className:Stages
+2014-03-28 13:46:50 Error: userId:17
+2014-03-28 13:46:50 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-28 14:06:49 Error: ownerId:
+2014-03-28 14:06:49 Error: className:SnsUsers
+2014-03-28 14:06:50 Error: ownerId:
+2014-03-28 14:06:50 Error: className:SnsUsers
+2014-03-28 14:06:51 Error: ownerId:
+2014-03-28 14:06:51 Error: className:SnsUsers
+2014-03-28 14:15:01 Error: ownerId:1
+2014-03-28 14:15:01 Error: className:Stages
+2014-03-28 14:15:01 Error: userId:17
+2014-03-28 14:15:01 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:15:03 Error: ownerId:1
+2014-03-28 14:15:03 Error: className:Stages
+2014-03-28 14:15:03 Error: userId:17
+2014-03-28 14:15:03 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:15:03 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:15:03 Error: userId;:17
+2014-03-28 14:15:03 Error: actCheck:
+2014-03-28 14:15:03 Error: act:27
+2014-03-28 14:15:03 Error: use_act:
+2014-03-28 14:15:03 Error: 
+2014-03-28 14:19:57 Error: ownerId:1
+2014-03-28 14:19:57 Error: className:Stages
+2014-03-28 14:19:57 Error: userId:17
+2014-03-28 14:19:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:20:00 Error: ownerId:1
+2014-03-28 14:20:00 Error: className:Stages
+2014-03-28 14:20:00 Error: userId:17
+2014-03-28 14:20:00 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:20:00 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:20:00 Error: userId;:17
+2014-03-28 14:20:00 Error: actCheck:
+2014-03-28 14:20:00 Error: act:27
+2014-03-28 14:20:00 Error: use_act:
+2014-03-28 14:20:00 Error: 
+2014-03-28 14:21:35 Error: ownerId:
+2014-03-28 14:21:35 Error: className:Stages
+2014-03-28 14:36:48 Error: ownerId:1
+2014-03-28 14:36:48 Error: className:Stages
+2014-03-28 14:36:48 Error: userId:17
+2014-03-28 14:36:48 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:36:51 Error: ownerId:1
+2014-03-28 14:36:51 Error: className:Stages
+2014-03-28 14:36:51 Error: userId:17
+2014-03-28 14:36:51 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:36:51 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:36:51 Error: userId;:17
+2014-03-28 14:36:51 Error: actCheck:
+2014-03-28 14:36:51 Error: act:27
+2014-03-28 14:36:51 Error: use_act:
+2014-03-28 14:36:51 Error: 
+2014-03-28 14:38:00 Error: ownerId:1
+2014-03-28 14:38:00 Error: className:Stages
+2014-03-28 14:38:00 Error: userId:17
+2014-03-28 14:38:00 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:38:02 Error: ownerId:1
+2014-03-28 14:38:02 Error: className:Stages
+2014-03-28 14:38:02 Error: userId:17
+2014-03-28 14:38:02 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:38:02 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:38:02 Error: userId;:17
+2014-03-28 14:38:02 Error: actCheck:
+2014-03-28 14:38:02 Error: act:27
+2014-03-28 14:38:02 Error: use_act:
+2014-03-28 14:38:02 Error: 
+2014-03-28 14:38:56 Error: ownerId:
+2014-03-28 14:38:56 Error: className:SnsUsers
+2014-03-28 14:38:56 Error: ownerId:
+2014-03-28 14:38:56 Error: className:SnsUsers
+2014-03-28 14:38:57 Error: ownerId:
+2014-03-28 14:38:57 Error: className:SnsUsers
+2014-03-28 14:43:22 Error: ownerId:1
+2014-03-28 14:43:22 Error: className:Stages
+2014-03-28 14:43:22 Error: userId:17
+2014-03-28 14:43:22 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:43:26 Error: ownerId:1
+2014-03-28 14:43:26 Error: className:Stages
+2014-03-28 14:43:26 Error: userId:17
+2014-03-28 14:43:26 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:43:26 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:43:26 Error: userId;:17
+2014-03-28 14:43:26 Error: actCheck:
+2014-03-28 14:43:26 Error: act:27
+2014-03-28 14:43:26 Error: use_act:
+2014-03-28 14:43:26 Error: Fatal Error (1): Call to undefined method PDOException::message() in [/var/www/asns/app/Controller/StagesController.php, line 445]
+2014-03-28 14:43:26 Error: [FatalErrorException] Call to undefined method PDOException::message()
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 445)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 445, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 445, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-28 14:43:26 Error: ownerId:1
+2014-03-28 14:43:26 Error: className:CakeError
+2014-03-28 14:43:26 Error: userIdErr:0
+2014-03-28 14:43:26 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 14:43:27 Error: ownerId:1
+2014-03-28 14:43:27 Error: className:Errors
+2014-03-28 14:43:27 Error: userId:0
+2014-03-28 14:44:48 Error: ownerId:
+2014-03-28 14:44:48 Error: className:Errors
+2014-03-28 14:44:48 Error: userId:0
+2014-03-28 14:44:53 Error: ownerId:1
+2014-03-28 14:44:53 Error: className:Stages
+2014-03-28 14:44:53 Error: userId:17
+2014-03-28 14:44:53 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:44:56 Error: ownerId:1
+2014-03-28 14:44:56 Error: className:Stages
+2014-03-28 14:44:56 Error: userId:17
+2014-03-28 14:44:56 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:44:56 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:44:56 Error: userId;:17
+2014-03-28 14:44:56 Error: actCheck:
+2014-03-28 14:44:56 Error: act:27
+2014-03-28 14:44:56 Error: use_act:
+2014-03-28 14:44:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-1' for key 'PRIMARY'
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1821): Mysql->update(Object(UserStage), Array, Array)
+#4 /var/www/asns/app/Model/UserStage.php(144): Model->save(Array)
+#5 /var/www/asns/app/Controller/StagesController.php(394): UserStage->initUserStage(Array)
+#6 [internal function]: StagesController->init()
+#7 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-03-28 14:44:56 Error: ownerId:1
+2014-03-28 14:44:56 Error: className:CakeError
+2014-03-28 14:44:56 Error: userIdErr:0
+2014-03-28 14:44:56 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 14:44:56 Error: ownerId:1
+2014-03-28 14:44:56 Error: className:Errors
+2014-03-28 14:44:56 Error: userId:0
+2014-03-28 14:45:24 Error: ownerId:1
+2014-03-28 14:45:24 Error: className:Stages
+2014-03-28 14:45:24 Error: userId:17
+2014-03-28 14:45:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:45:26 Error: ownerId:1
+2014-03-28 14:45:26 Error: className:Stages
+2014-03-28 14:45:26 Error: userId:17
+2014-03-28 14:45:26 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:45:26 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:45:26 Error: userId;:17
+2014-03-28 14:45:26 Error: actCheck:
+2014-03-28 14:45:26 Error: act:27
+2014-03-28 14:45:26 Error: use_act:
+2014-03-28 14:45:26 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-1' for key 'PRIMARY'
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1821): Mysql->update(Object(UserStage), Array, Array)
+#4 /var/www/asns/app/Model/UserStage.php(144): Model->save(Array)
+#5 /var/www/asns/app/Controller/StagesController.php(394): UserStage->initUserStage(Array)
+#6 [internal function]: StagesController->init()
+#7 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-03-28 14:45:26 Error: ownerId:1
+2014-03-28 14:45:26 Error: className:CakeError
+2014-03-28 14:45:26 Error: userIdErr:0
+2014-03-28 14:45:26 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 14:45:26 Error: ownerId:1
+2014-03-28 14:45:26 Error: className:Errors
+2014-03-28 14:45:26 Error: userId:0
+2014-03-28 14:50:35 Error: ownerId:1
+2014-03-28 14:50:35 Error: className:Stages
+2014-03-28 14:50:35 Error: userId:17
+2014-03-28 14:50:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:50:38 Error: ownerId:1
+2014-03-28 14:50:38 Error: className:Stages
+2014-03-28 14:50:38 Error: userId:17
+2014-03-28 14:50:38 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:50:38 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:50:38 Error: userId;:17
+2014-03-28 14:50:38 Error: actCheck:
+2014-03-28 14:50:38 Error: act:27
+2014-03-28 14:50:38 Error: use_act:
+2014-03-28 14:50:38 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-1' for key 'PRIMARY'
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1821): Mysql->update(Object(UserStage), Array, Array)
+#4 /var/www/asns/app/Model/UserStage.php(144): Model->save(Array)
+#5 /var/www/asns/app/Controller/StagesController.php(394): UserStage->initUserStage(Array)
+#6 [internal function]: StagesController->init()
+#7 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-03-28 14:50:38 Error: ownerId:1
+2014-03-28 14:50:38 Error: className:CakeError
+2014-03-28 14:50:38 Error: userIdErr:0
+2014-03-28 14:50:38 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 14:50:38 Error: ownerId:1
+2014-03-28 14:50:38 Error: className:Errors
+2014-03-28 14:50:38 Error: userId:0
+2014-03-28 14:50:49 Error: ownerId:1
+2014-03-28 14:50:49 Error: className:Stages
+2014-03-28 14:50:49 Error: userId:17
+2014-03-28 14:50:49 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 14:51:06 Error: ownerId:1
+2014-03-28 14:51:06 Error: className:Stages
+2014-03-28 14:51:06 Error: userId:17
+2014-03-28 14:51:06 Error: aaaaaaaaaaaaaa:
+2014-03-28 14:51:06 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 14:51:06 Error: userId;:17
+2014-03-28 14:51:06 Error: actCheck:
+2014-03-28 14:51:06 Error: act:27
+2014-03-28 14:51:06 Error: use_act:
+2014-03-28 14:51:06 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '17-1' for key 'PRIMARY'
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(1821): Mysql->update(Object(UserStage), Array, Array)
+#4 /var/www/asns/app/Model/UserStage.php(144): Model->save(Array)
+#5 /var/www/asns/app/Controller/StagesController.php(394): UserStage->initUserStage(Array)
+#6 [internal function]: StagesController->init()
+#7 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-03-28 14:51:06 Error: ownerId:1
+2014-03-28 14:51:06 Error: className:CakeError
+2014-03-28 14:51:06 Error: userIdErr:0
+2014-03-28 14:51:06 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 14:51:06 Error: ownerId:1
+2014-03-28 14:51:06 Error: className:Errors
+2014-03-28 14:51:06 Error: userId:0
+2014-03-28 14:51:15 Error: ownerId:
+2014-03-28 14:51:15 Error: className:Stages
+2014-03-28 14:51:51 Error: ownerId:
+2014-03-28 14:51:51 Error: className:Stages
+2014-03-28 15:01:12 Error: ownerId:1
+2014-03-28 15:01:12 Error: className:Stages
+2014-03-28 15:01:12 Error: userId:17
+2014-03-28 15:01:12 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 15:01:14 Error: ownerId:1
+2014-03-28 15:01:14 Error: className:Stages
+2014-03-28 15:01:14 Error: userId:17
+2014-03-28 15:01:14 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:01:14 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:01:14 Error: userId;:17
+2014-03-28 15:01:14 Error: actCheck:
+2014-03-28 15:01:14 Error: act:27
+2014-03-28 15:01:14 Error: use_act:
+2014-03-28 15:01:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('update', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('update', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(609): DboSource->fetchAll('update', Array, Array)
+#4 /var/www/asns/lib/Cake/Model/Model.php(800): DboSource->query('update', Array, Object(UserStage))
+#5 /var/www/asns/app/Controller/StagesController.php(396): Model->__call('update', Array)
+#6 /var/www/asns/app/Controller/StagesController.php(396): UserStage->update(Array, Array)
+#7 [internal function]: StagesController->init()
+#8 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#9 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-03-28 15:01:14 Error: ownerId:1
+2014-03-28 15:01:14 Error: className:CakeError
+2014-03-28 15:01:14 Error: userIdErr:0
+2014-03-28 15:01:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 15:02:47 Error: ownerId:1
+2014-03-28 15:02:47 Error: className:Stages
+2014-03-28 15:02:47 Error: userId:17
+2014-03-28 15:02:47 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 15:02:48 Error: ownerId:1
+2014-03-28 15:02:48 Error: className:Stages
+2014-03-28 15:02:48 Error: userId:17
+2014-03-28 15:02:48 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:02:48 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:02:48 Error: userId;:17
+2014-03-28 15:02:48 Error: actCheck:
+2014-03-28 15:02:48 Error: act:27
+2014-03-28 15:02:48 Error: use_act:
+2014-03-28 15:02:48 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'stage_id' in where clause is ambiguous
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(2541): Mysql->update(Object(UserStage), Array, NULL, Array)
+#4 /var/www/asns/app/Controller/StagesController.php(396): Model->updateAll(Array, Array)
+#5 [internal function]: StagesController->init()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-03-28 15:02:48 Error: ownerId:1
+2014-03-28 15:02:48 Error: className:CakeError
+2014-03-28 15:02:48 Error: userIdErr:0
+2014-03-28 15:02:48 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 15:02:49 Error: ownerId:1
+2014-03-28 15:02:49 Error: className:Errors
+2014-03-28 15:02:49 Error: userId:0
+2014-03-28 15:03:11 Error: ownerId:
+2014-03-28 15:03:11 Error: className:Errors
+2014-03-28 15:03:11 Error: userId:0
+2014-03-28 15:03:38 Error: ownerId:1
+2014-03-28 15:03:38 Error: className:Stages
+2014-03-28 15:03:38 Error: userId:17
+2014-03-28 15:03:38 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"2"}
+2014-03-28 15:03:40 Error: ownerId:1
+2014-03-28 15:03:40 Error: className:Stages
+2014-03-28 15:03:40 Error: userId:17
+2014-03-28 15:03:40 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:03:40 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:03:40 Error: userId;:17
+2014-03-28 15:03:40 Error: actCheck:
+2014-03-28 15:03:40 Error: act:27
+2014-03-28 15:03:40 Error: use_act:
+2014-03-28 15:03:41 Error: ownerId:1
+2014-03-28 15:03:41 Error: className:Stages
+2014-03-28 15:03:41 Error: userId:17
+2014-03-28 15:03:41 Error: main_params:{"stage_id":"2","quest_id":"1","progress":"0","state":"1"}
+2014-03-28 15:04:29 Error: ownerId:
+2014-03-28 15:04:29 Error: className:Stages
+2014-03-28 15:22:36 Error: ownerId:1
+2014-03-28 15:22:36 Error: className:Stages
+2014-03-28 15:22:36 Error: userId:17
+2014-03-28 15:22:36 Error: main_params:{"stage_id":"2","quest_id":"1","progress":"0","state":"1"}
+2014-03-28 15:38:31 Error: ownerId:1
+2014-03-28 15:38:31 Error: className:Stages
+2014-03-28 15:38:31 Error: userId:17
+2014-03-28 15:38:31 Error: main_params:{"stage_id":"2","quest_id":null,"progress":null,"state":null}
+2014-03-28 15:38:35 Error: ownerId:1
+2014-03-28 15:38:35 Error: className:Quests
+2014-03-28 15:38:35 Error: userId:17
+2014-03-28 15:38:38 Error: ownerId:1
+2014-03-28 15:38:38 Error: className:Stages
+2014-03-28 15:38:38 Error: userId:17
+2014-03-28 15:38:39 Error: ownerId:1
+2014-03-28 15:38:39 Error: className:Stages
+2014-03-28 15:38:39 Error: userId:17
+2014-03-28 15:38:40 Error: ownerId:1
+2014-03-28 15:38:40 Error: className:Stages
+2014-03-28 15:38:40 Error: userId:17
+2014-03-28 15:38:40 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 15:39:09 Error: ownerId:
+2014-03-28 15:39:09 Error: className:Stages
+2014-03-28 15:39:36 Error: ownerId:
+2014-03-28 15:39:36 Error: className:Quests
+2014-03-28 15:40:07 Error: ownerId:
+2014-03-28 15:40:07 Error: className:Stages
+2014-03-28 15:42:32 Error: ownerId:1
+2014-03-28 15:42:32 Error: className:Stages
+2014-03-28 15:42:32 Error: userId:17
+2014-03-28 15:42:32 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:42:32 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:42:32 Error: userId;:17
+2014-03-28 15:42:32 Error: actCheck:
+2014-03-28 15:42:32 Error: act:26
+2014-03-28 15:42:32 Error: use_act:
+2014-03-28 15:42:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '15:42:32  WHERE `user_id` = 17 AND `UserStage`.`stage_id` = 1' at line 1
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%2299%22%2C%22state%22%3A%221%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `eres`.`...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/Database/Mysql.php(400): DboSource->execute('UPDATE `eres`.`...')
+#3 /var/www/asns/lib/Cake/Model/Model.php(2541): Mysql->update(Object(UserStage), Array, NULL, Array)
+#4 /var/www/asns/app/Controller/StagesController.php(397): Model->updateAll(Array, Array)
+#5 [internal function]: StagesController->init()
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(StagesController), Array)
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-03-28 15:42:32 Error: ownerId:1
+2014-03-28 15:42:32 Error: className:CakeError
+2014-03-28 15:42:32 Error: userIdErr:0
+2014-03-28 15:42:32 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 15:42:32 Error: ownerId:1
+2014-03-28 15:42:32 Error: className:Errors
+2014-03-28 15:42:32 Error: userId:0
+2014-03-28 15:43:48 Error: ownerId:
+2014-03-28 15:43:48 Error: className:Errors
+2014-03-28 15:43:48 Error: userId:0
+2014-03-28 15:43:52 Error: ownerId:
+2014-03-28 15:43:52 Error: className:Stages
+2014-03-28 15:44:19 Error: ownerId:1
+2014-03-28 15:44:19 Error: className:Stages
+2014-03-28 15:44:19 Error: userId:17
+2014-03-28 15:44:19 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 15:44:20 Error: ownerId:1
+2014-03-28 15:44:20 Error: className:Stages
+2014-03-28 15:44:20 Error: userId:17
+2014-03-28 15:44:20 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:44:20 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:44:20 Error: userId;:17
+2014-03-28 15:44:21 Error: actCheck:
+2014-03-28 15:44:21 Error: act:26
+2014-03-28 15:44:21 Error: use_act:
+2014-03-28 15:44:21 Error: ownerId:1
+2014-03-28 15:44:21 Error: className:Stages
+2014-03-28 15:44:21 Error: userId:17
+2014-03-28 15:45:34 Error: ownerId:
+2014-03-28 15:45:34 Error: className:Stages
+2014-03-28 15:45:36 Error: ownerId:
+2014-03-28 15:45:36 Error: className:Stages
+2014-03-28 15:47:49 Error: ownerId:1
+2014-03-28 15:47:49 Error: className:Stages
+2014-03-28 15:47:49 Error: userId:17
+2014-03-28 15:48:21 Error: ownerId:1
+2014-03-28 15:48:21 Error: className:Stages
+2014-03-28 15:48:21 Error: userId:17
+2014-03-28 15:54:06 Error: ownerId:1
+2014-03-28 15:54:06 Error: className:Stages
+2014-03-28 15:54:06 Error: userId:17
+2014-03-28 15:54:06 Error: main_params:{"stage_id":null,"quest_id":null,"progress":null,"state":null}
+2014-03-28 15:54:10 Error: ownerId:1
+2014-03-28 15:54:10 Error: className:Quests
+2014-03-28 15:54:11 Error: userId:17
+2014-03-28 15:54:13 Error: ownerId:1
+2014-03-28 15:54:13 Error: className:Stages
+2014-03-28 15:54:13 Error: userId:17
+2014-03-28 15:54:15 Error: ownerId:1
+2014-03-28 15:54:15 Error: className:Stages
+2014-03-28 15:54:15 Error: userId:17
+2014-03-28 15:54:15 Error: ownerId:1
+2014-03-28 15:54:15 Error: className:Stages
+2014-03-28 15:54:15 Error: userId:17
+2014-03-28 15:54:15 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-03-28 15:55:40 Error: ownerId:
+2014-03-28 15:55:40 Error: className:Stages
+2014-03-28 15:56:12 Error: ownerId:1
+2014-03-28 15:56:12 Error: className:Stages
+2014-03-28 15:56:12 Error: userId:17
+2014-03-28 15:56:12 Error: aaaaaaaaaaaaaa:
+2014-03-28 15:56:12 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 15:56:12 Error: userId;:17
+2014-03-28 15:56:12 Error: actCheck:
+2014-03-28 15:56:12 Error: act:25
+2014-03-28 15:56:12 Error: use_act:
+2014-03-28 15:56:13 Error: ownerId:1
+2014-03-28 15:56:13 Error: className:Stages
+2014-03-28 15:56:13 Error: userId:17
+2014-03-28 15:56:56 Error: ownerId:1
+2014-03-28 15:56:56 Error: className:Stages
+2014-03-28 15:56:56 Error: userId:17
+2014-03-28 15:57:21 Error: ownerId:
+2014-03-28 15:57:21 Error: className:Stages
+2014-03-28 15:57:59 Error: ownerId:1
+2014-03-28 15:57:59 Error: className:Stages
+2014-03-28 15:57:59 Error: userId:17
+2014-03-28 16:09:03 Error: ownerId:1
+2014-03-28 16:09:03 Error: className:Stages
+2014-03-28 16:09:03 Error: userId:17
+2014-03-28 16:10:18 Error: ownerId:
+2014-03-28 16:10:18 Error: className:Stages
+2014-03-28 16:34:56 Error: ownerId:1
+2014-03-28 16:34:56 Error: className:Stages
+2014-03-28 16:34:56 Error: userId:17
+2014-03-28 16:34:57 Error: ownerId:1
+2014-03-28 16:34:57 Error: className:File
+2014-03-28 16:34:57 Error: userId:17
+2014-03-28 16:35:31 Error: ownerId:1
+2014-03-28 16:35:31 Error: className:Stages
+2014-03-28 16:35:31 Error: userId:17
+2014-03-28 16:35:32 Error: ownerId:1
+2014-03-28 16:35:32 Error: className:File
+2014-03-28 16:35:32 Error: userId:17
+2014-03-28 16:35:32 Error: ownerId:1
+2014-03-28 16:35:32 Error: className:File
+2014-03-28 16:35:32 Error: userId:17
+2014-03-28 16:35:44 Error: ownerId:1
+2014-03-28 16:35:44 Error: className:Stages
+2014-03-28 16:35:44 Error: userId:17
+2014-03-28 16:35:44 Error: ownerId:1
+2014-03-28 16:35:44 Error: className:File
+2014-03-28 16:35:44 Error: userId:17
+2014-03-28 16:35:52 Error: ownerId:
+2014-03-28 16:35:52 Error: className:Stages
+2014-03-28 16:36:26 Error: ownerId:1
+2014-03-28 16:36:26 Error: className:Stages
+2014-03-28 16:36:26 Error: userId:17
+2014-03-28 16:36:27 Error: ownerId:1
+2014-03-28 16:36:27 Error: className:File
+2014-03-28 16:36:27 Error: userId:17
+2014-03-28 16:36:52 Error: ownerId:
+2014-03-28 16:36:52 Error: className:File
+2014-03-28 17:05:13 Error: ownerId:1
+2014-03-28 17:05:13 Error: className:Stages
+2014-03-28 17:05:13 Error: userId:17
+2014-03-28 17:05:14 Error: ownerId:1
+2014-03-28 17:05:14 Error: className:File
+2014-03-28 17:05:14 Error: userId:17
+2014-03-28 17:05:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.UserStage.user_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:05:14 Error: ownerId:1
+2014-03-28 17:05:14 Error: className:CakeError
+2014-03-28 17:05:14 Error: userIdErr:0
+2014-03-28 17:05:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:05:15 Error: ownerId:1
+2014-03-28 17:05:15 Error: className:Errors
+2014-03-28 17:05:15 Error: userId:0
+2014-03-28 17:05:20 Error: ownerId:1
+2014-03-28 17:05:20 Error: className:Stages
+2014-03-28 17:05:20 Error: userId:17
+2014-03-28 17:05:21 Error: ownerId:1
+2014-03-28 17:05:21 Error: className:File
+2014-03-28 17:05:21 Error: userId:17
+2014-03-28 17:05:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.UserStage.user_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:05:21 Error: ownerId:1
+2014-03-28 17:05:21 Error: className:CakeError
+2014-03-28 17:05:21 Error: userIdErr:0
+2014-03-28 17:05:21 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:05:21 Error: ownerId:1
+2014-03-28 17:05:21 Error: className:Errors
+2014-03-28 17:05:21 Error: userId:0
+2014-03-28 17:05:45 Error: ownerId:1
+2014-03-28 17:05:45 Error: className:Stages
+2014-03-28 17:05:45 Error: userId:17
+2014-03-28 17:05:45 Error: ownerId:1
+2014-03-28 17:05:45 Error: className:File
+2014-03-28 17:05:45 Error: userId:17
+2014-03-28 17:05:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.Stage.enemy_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:05:45 Error: ownerId:1
+2014-03-28 17:05:45 Error: className:CakeError
+2014-03-28 17:05:45 Error: userIdErr:0
+2014-03-28 17:05:45 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:05:45 Error: ownerId:1
+2014-03-28 17:05:45 Error: className:Errors
+2014-03-28 17:05:45 Error: userId:0
+2014-03-28 17:05:49 Error: ownerId:1
+2014-03-28 17:05:49 Error: className:Stages
+2014-03-28 17:05:49 Error: userId:17
+2014-03-28 17:05:50 Error: ownerId:1
+2014-03-28 17:05:50 Error: className:File
+2014-03-28 17:05:50 Error: userId:17
+2014-03-28 17:05:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.Stage.enemy_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:05:50 Error: ownerId:1
+2014-03-28 17:05:50 Error: className:CakeError
+2014-03-28 17:05:50 Error: userIdErr:0
+2014-03-28 17:05:50 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:05:50 Error: ownerId:1
+2014-03-28 17:05:50 Error: className:Errors
+2014-03-28 17:05:50 Error: userId:0
+2014-03-28 17:09:29 Error: ownerId:1
+2014-03-28 17:09:29 Error: className:Stages
+2014-03-28 17:09:29 Error: userId:17
+2014-03-28 17:09:29 Error: ownerId:1
+2014-03-28 17:09:29 Error: className:File
+2014-03-28 17:09:29 Error: userId:17
+2014-03-28 17:09:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.UserStage.user_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:09:29 Error: ownerId:1
+2014-03-28 17:09:29 Error: className:CakeError
+2014-03-28 17:09:29 Error: userIdErr:0
+2014-03-28 17:09:29 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:09:29 Error: ownerId:1
+2014-03-28 17:09:29 Error: className:Errors
+2014-03-28 17:09:29 Error: userId:0
+2014-03-28 17:09:34 Error: ownerId:1
+2014-03-28 17:09:34 Error: className:Stages
+2014-03-28 17:09:34 Error: userId:17
+2014-03-28 17:09:35 Error: ownerId:1
+2014-03-28 17:09:35 Error: className:File
+2014-03-28 17:09:35 Error: userId:17
+2014-03-28 17:09:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'UserStage.UserStage.user_id' in 'where clause'
+Request URL: /index.php/File/outimage?size=bf&dir=scene&target=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `UserSta...', Array)
+#2 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(665): DboSource->execute('SELECT `UserSta...', Array, Array)
+#3 /var/www/asns/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `UserSta...', false)
+#4 /var/www/asns/lib/Cake/Model/Model.php(2902): DboSource->read(Object(UserStage), Array)
+#5 /var/www/asns/lib/Cake/Model/Model.php(2874): Model->_readDataSource('first', Array)
+#6 /var/www/asns/app/Model/AppModel.php(100): Model->find('first', Array)
+#7 /var/www/asns/app/Model/UserStage.php(138): AppModel->getAllFind(Array, Array, 'first', Array, 0, 0, 2)
+#8 /var/www/asns/app/Controller/FileController.php(48): UserStage->getUserStageByEnemyId('17', NULL)
+#9 [internal function]: FileController->outimage()
+#10 /var/www/asns/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(FileController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-03-28 17:09:35 Error: ownerId:1
+2014-03-28 17:09:35 Error: className:CakeError
+2014-03-28 17:09:35 Error: userIdErr:0
+2014-03-28 17:09:35 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-28 17:09:35 Error: ownerId:1
+2014-03-28 17:09:35 Error: className:Errors
+2014-03-28 17:09:35 Error: userId:0
+2014-03-28 17:14:09 Error: ownerId:1
+2014-03-28 17:14:09 Error: className:Stages
+2014-03-28 17:14:09 Error: userId:17
+2014-03-28 17:14:10 Error: ownerId:1
+2014-03-28 17:14:10 Error: className:File
+2014-03-28 17:14:10 Error: userId:17
+2014-03-28 17:14:51 Error: ownerId:1
+2014-03-28 17:14:51 Error: className:Stages
+2014-03-28 17:14:51 Error: userId:17
+2014-03-28 17:14:51 Error: ownerId:1
+2014-03-28 17:14:51 Error: className:File
+2014-03-28 17:14:51 Error: userId:17
+2014-03-28 17:14:51 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 17:15:09 Error: ownerId:
+2014-03-28 17:15:09 Error: className:File
+2014-03-28 17:16:13 Error: ownerId:1
+2014-03-28 17:16:13 Error: className:Stages
+2014-03-28 17:16:13 Error: userId:17
+2014-03-28 17:16:13 Error: ownerId:1
+2014-03-28 17:16:13 Error: className:File
+2014-03-28 17:16:13 Error: userId:17
+2014-03-28 17:16:13 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 17:16:13 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 17:16:13 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 17:16:23 Error: ownerId:
+2014-03-28 17:16:23 Error: className:Stages
+2014-03-28 17:16:44 Error: ownerId:1
+2014-03-28 17:16:44 Error: className:Stages
+2014-03-28 17:16:44 Error: userId:17
+2014-03-28 17:16:44 Error: ownerId:1
+2014-03-28 17:16:44 Error: className:File
+2014-03-28 17:16:44 Error: userId:17
+2014-03-28 17:16:44 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 17:16:44 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 17:16:44 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 17:17:30 Error: ownerId:1
+2014-03-28 17:17:30 Error: className:Stages
+2014-03-28 17:17:30 Error: userId:17
+2014-03-28 17:17:30 Error: ownerId:1
+2014-03-28 17:17:30 Error: className:File
+2014-03-28 17:17:30 Error: userId:17
+2014-03-28 17:17:30 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 17:17:30 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 17:17:30 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:28:57 Error: ownerId:1
+2014-03-28 18:28:57 Error: className:File
+2014-03-28 18:28:58 Error: userId:17
+2014-03-28 18:28:58 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 18:28:58 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:28:58 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:30:00 Error: ownerId:
+2014-03-28 18:30:00 Error: className:File
+2014-03-28 18:34:27 Error: ownerId:1
+2014-03-28 18:34:27 Error: className:File
+2014-03-28 18:34:27 Error: userId:17
+2014-03-28 18:34:27 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 18:34:27 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:34:27 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:20 Error: ownerId:1
+2014-03-28 18:37:20 Error: className:File
+2014-03-28 18:37:20 Error: userId:17
+2014-03-28 18:37:20 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:20 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:22 Error: ownerId:1
+2014-03-28 18:37:22 Error: className:File
+2014-03-28 18:37:22 Error: userId:17
+2014-03-28 18:37:22 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:22 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:23 Error: ownerId:1
+2014-03-28 18:37:23 Error: className:File
+2014-03-28 18:37:23 Error: userId:17
+2014-03-28 18:37:23 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:37:23 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:38:00 Error: ownerId:1
+2014-03-28 18:38:00 Error: className:File
+2014-03-28 18:38:00 Error: userId:17
+2014-03-28 18:38:00 Error: path:/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:38:00 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:39:43 Error: ownerId:1
+2014-03-28 18:39:43 Error: className:File
+2014-03-28 18:39:43 Error: userId:17
+2014-03-28 18:39:43 Error: path:/var/www/asns/app/webroot/img/card/card_l_28.jpg
+2014-03-28 18:39:43 Error: path:okok/var/www/asns/app/webroot/img/card/card_l_28.jpg
+2014-03-28 18:41:17 Error: ownerId:
+2014-03-28 18:41:17 Error: className:File
+2014-03-28 18:43:31 Error: ownerId:1
+2014-03-28 18:43:31 Error: className:File
+2014-03-28 18:43:31 Error: userId:17
+2014-03-28 18:43:31 Error: path:/var/www/asns/app/webroot/img/scene/scene_af_1.jpg
+2014-03-28 18:43:31 Error: path:okok/var/www/asns/app/webroot/img/scene/scene_af_1.jpg
+2014-03-28 18:45:14 Error: ownerId:
+2014-03-28 18:45:14 Error: className:File
+2014-03-28 18:47:28 Error: ownerId:1
+2014-03-28 18:47:28 Error: className:File
+2014-03-28 18:47:28 Error: userId:17
+2014-03-28 18:47:28 Error: name:jpeg
+2014-03-28 18:50:44 Error: ownerId:
+2014-03-28 18:50:44 Error: className:File
+2014-03-28 18:50:52 Error: ownerId:1
+2014-03-28 18:50:52 Error: className:Stages
+2014-03-28 18:50:52 Error: userId:17
+2014-03-28 18:50:53 Error: ownerId:1
+2014-03-28 18:50:53 Error: className:File
+2014-03-28 18:50:53 Error: userId:17
+2014-03-28 18:50:53 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:51:07 Error: ownerId:1
+2014-03-28 18:51:07 Error: className:Stages
+2014-03-28 18:51:07 Error: userId:17
+2014-03-28 18:51:07 Error: ownerId:1
+2014-03-28 18:51:07 Error: className:File
+2014-03-28 18:51:07 Error: userId:17
+2014-03-28 18:51:29 Error: ownerId:1
+2014-03-28 18:51:29 Error: className:Stages
+2014-03-28 18:51:29 Error: userId:17
+2014-03-28 18:51:30 Error: ownerId:1
+2014-03-28 18:51:30 Error: className:File
+2014-03-28 18:51:30 Error: userId:17
+2014-03-28 18:51:30 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:52:11 Error: ownerId:1
+2014-03-28 18:52:11 Error: className:Stages
+2014-03-28 18:52:11 Error: userId:17
+2014-03-28 18:52:12 Error: ownerId:1
+2014-03-28 18:52:12 Error: className:File
+2014-03-28 18:52:12 Error: userId:17
+2014-03-28 18:52:12 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:52:42 Error: ownerId:1
+2014-03-28 18:52:42 Error: className:Stages
+2014-03-28 18:52:42 Error: userId:17
+2014-03-28 18:52:42 Error: ownerId:1
+2014-03-28 18:52:42 Error: className:File
+2014-03-28 18:52:43 Error: userId:17
+2014-03-28 18:52:43 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:53:00 Error: ownerId:1
+2014-03-28 18:53:00 Error: className:Stages
+2014-03-28 18:53:00 Error: userId:17
+2014-03-28 18:53:00 Error: ownerId:1
+2014-03-28 18:53:00 Error: className:File
+2014-03-28 18:53:00 Error: userId:17
+2014-03-28 18:53:00 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:53:03 Error: ownerId:1
+2014-03-28 18:53:03 Error: className:Stages
+2014-03-28 18:53:03 Error: userId:17
+2014-03-28 18:53:03 Error: ownerId:1
+2014-03-28 18:53:03 Error: className:File
+2014-03-28 18:53:03 Error: userId:17
+2014-03-28 18:53:03 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:53:23 Error: ownerId:1
+2014-03-28 18:53:23 Error: className:Stages
+2014-03-28 18:53:23 Error: userId:17
+2014-03-28 18:53:23 Error: ownerId:1
+2014-03-28 18:53:23 Error: className:File
+2014-03-28 18:53:23 Error: userId:17
+2014-03-28 18:53:23 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 18:53:23 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:54:03 Error: ownerId:1
+2014-03-28 18:54:03 Error: className:Stages
+2014-03-28 18:54:03 Error: userId:17
+2014-03-28 18:54:03 Error: ownerId:1
+2014-03-28 18:54:03 Error: className:File
+2014-03-28 18:54:03 Error: userId:17
+2014-03-28 18:54:03 Error: aryData:Array
+(
+    [UserStage] => Array
+        (
+            [user_id] => 17
+            [stage_id] => 1
+            [progress] => 100
+            [state] => 2
+            [delete_flg] => 0
+            [created] => 2014-03-24 12:05:08
+            [modified] => 2014-03-28 15:56:12
+        )
+
+    [Stage] => Array
+        (
+            [stage_id] => 1
+            [quest_id] => 1
+            [stage_title] => 女教師に挨拶！
+            [use_act] => 1
+            [prob_get] => 80
+            [enemy_id] => 1
+            [delete_flg] => 0
+        )
+
+)
+
+2014-03-28 18:54:03 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:55:24 Error: ownerId:1
+2014-03-28 18:55:24 Error: className:Stages
+2014-03-28 18:55:24 Error: userId:17
+2014-03-28 18:55:25 Error: ownerId:1
+2014-03-28 18:55:25 Error: className:File
+2014-03-28 18:55:25 Error: userId:17
+2014-03-28 18:55:25 Error: aryData:
+2014-03-28 18:55:25 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:55:34 Error: ownerId:1
+2014-03-28 18:55:34 Error: className:Stages
+2014-03-28 18:55:34 Error: userId:17
+2014-03-28 18:55:34 Error: ownerId:1
+2014-03-28 18:55:34 Error: className:File
+2014-03-28 18:55:34 Error: userId:17
+2014-03-28 18:55:34 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:55:46 Error: ownerId:1
+2014-03-28 18:55:46 Error: className:Stages
+2014-03-28 18:55:46 Error: userId:17
+2014-03-28 18:55:46 Error: ownerId:1
+2014-03-28 18:55:46 Error: className:File
+2014-03-28 18:55:46 Error: userId:17
+2014-03-28 18:55:46 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:56:27 Error: ownerId:1
+2014-03-28 18:56:27 Error: className:Stages
+2014-03-28 18:56:27 Error: userId:17
+2014-03-28 18:56:28 Error: ownerId:1
+2014-03-28 18:56:28 Error: className:File
+2014-03-28 18:56:28 Error: userId:17
+2014-03-28 18:56:28 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:56:43 Error: ownerId:1
+2014-03-28 18:56:43 Error: className:Stages
+2014-03-28 18:56:43 Error: userId:17
+2014-03-28 18:56:43 Error: ownerId:1
+2014-03-28 18:56:43 Error: className:File
+2014-03-28 18:56:43 Error: userId:17
+2014-03-28 18:56:43 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:56:48 Error: ownerId:1
+2014-03-28 18:56:48 Error: className:Stages
+2014-03-28 18:56:48 Error: userId:17
+2014-03-28 18:56:49 Error: ownerId:1
+2014-03-28 18:56:49 Error: className:File
+2014-03-28 18:56:49 Error: userId:17
+2014-03-28 18:56:49 Error: File not Exists path:/var/www/asns/app/webroot/img/scene/scene_bf_.jpg: userId :17
+2014-03-28 18:57:17 Error: ownerId:1
+2014-03-28 18:57:17 Error: className:Stages
+2014-03-28 18:57:17 Error: userId:17
+2014-03-28 18:57:17 Error: ownerId:1
+2014-03-28 18:57:17 Error: className:File
+2014-03-28 18:57:17 Error: userId:17
+2014-03-28 18:57:17 Error: File not Exists path:/var/www/asns/app/webroot/img/scene/scene_bf_.jpg: userId :17
+2014-03-28 18:57:17 Error: ownerId:1
+2014-03-28 18:57:17 Error: className:File
+2014-03-28 18:57:17 Error: userId:17
+2014-03-28 18:57:17 Error: File not Exists path:/var/www/asns/app/webroot/img/scene/scene_bf_.jpg: userId :17
+2014-03-28 18:57:19 Error: ownerId:1
+2014-03-28 18:57:19 Error: className:Stages
+2014-03-28 18:57:19 Error: userId:17
+2014-03-28 18:57:20 Error: ownerId:1
+2014-03-28 18:57:20 Error: className:File
+2014-03-28 18:57:20 Error: userId:17
+2014-03-28 18:57:20 Error: File not Exists path:/var/www/asns/app/webroot/img/scene/scene_bf_.jpg: userId :17
+2014-03-28 18:57:21 Error: ownerId:1
+2014-03-28 18:57:21 Error: className:Stages
+2014-03-28 18:57:21 Error: userId:17
+2014-03-28 18:57:21 Error: ownerId:1
+2014-03-28 18:57:21 Error: className:File
+2014-03-28 18:57:21 Error: userId:17
+2014-03-28 18:57:21 Error: File not Exists path:/var/www/asns/app/webroot/img/scene/scene_bf_.jpg: userId :17
+2014-03-28 18:58:01 Error: ownerId:1
+2014-03-28 18:58:01 Error: className:Stages
+2014-03-28 18:58:01 Error: userId:17
+2014-03-28 18:58:01 Error: ownerId:1
+2014-03-28 18:58:01 Error: className:File
+2014-03-28 18:58:01 Error: userId:17
+2014-03-28 18:58:01 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 18:58:13 Error: ownerId:
+2014-03-28 18:58:13 Error: className:File
+2014-03-28 18:58:25 Error: ownerId:
+2014-03-28 18:58:25 Error: className:Stages

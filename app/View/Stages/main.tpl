@@ -12,12 +12,21 @@ $(function () {
     <div>
        <{$data['Quest']['detail_before2']}> 
     </div>
-    <div  class="btnQuestProg" id="appReq" act="Stages/init" params=<{$param}>>
-        <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-        <div class="strQuestProg" >
-            進行！
+
+    <{if empty($notAct)}> 
+        <div  class="btnQuestProg" id="appReq" act="Stages/init" params=<{$param}>>
+            <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+            <div class="strQuestProg" >
+                進行！
+            </div>
         </div>
-    </div>
+    <{else}> 
+        <div  class="btnQuestNotProg" id="appReq" act="Stages/init" params=<{$param}>>
+            <div class="strQuestProg" >
+                行動力がなくなりました‥
+            </div>
+        </div>
+    <{/if}> 
 
     <div class="progQuest">
         <div class="progQuestMainStr">

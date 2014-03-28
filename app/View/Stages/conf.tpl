@@ -1,4 +1,8 @@
 <div class="stages index">
-	<h2><?php echo __('Stages'); ?></h2>
-				<?php echo $this->Html->link(__('Index'), array('action' => 'index')); ?>
+    <div>
+        <img src="<{$smarty.const.BASE_URL}>File/outimage?size=bf&dir=scene&target=<{$data.enemy_id}>" >
+    </div>
+    <div>
+        <{$data.before_words}> 
+    </div>
 </div>

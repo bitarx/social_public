@@ -125,22 +125,41 @@ class UserStage extends AppModel {
         return $ret;
     }
 
+    public function getUserStageByEnemyId($userId, $enemyId , $recu = 2) {
+
+        $fields = array();
+        $order  = array();
+        $kind = 'first';
+        $where = array( 'conditions' => array(
+            'UserStage.user_id' => $userId
+        ,   'Stage.enemy_id' => $enemyId
+        ));
+        $option = array(
+            $where
+        );
+
+        $data = $this->find($kind, $option);
+//   $this->log('aryData:' . print_r($data, true)); 
+        return $data;
+        return 0;
+    }
+
     /**
      * ユーザクエスト進捗を更新
      *
      * @author imanishi 
      * @param int $userId
-     * @return array 対象データ
+     * @return bool
      */
     public function initUserStage($data) {
 
         $values = array(
             'user_id'  => $data['user_id']
         ,   'stage_id' => $data['stage_id']
-        ,   'quest_id' => $data['quest_id']
         ,   'progress' => $data['progress']
         ,   'state'    => $data['state']
         );
+
         $ret = $this->save($values);
         return $ret;
     }

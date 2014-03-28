@@ -13,19 +13,30 @@ console.log('routes');
 console.log(data);
 console.log(data.action);
 console.log(data.kind);
-console.log(data.id);
+console.log(data.target);
+    if (data.result == "2") {
+        $('#errMes').html( '不正なリクエストです' );
+        $('#errMes').show(); 
+    } 
+    // ステージクリア
+     else if (data.stage_clear == "1") {
 
-    switch(data.action)
-    {
-        case 'Stages_init':
-            dispProgressQuest(data.progress);
-            dispProgressQuestAct(data.act);
-            dispProgressQuestExp(data.exp);
-            dispRotResultQuest(data);
-            break;
-        default:
-            $('#errMes').html( '不正なリクエストです' );
-            $('#errMes').show(); 
+        location.href = BASE_URL + 'Stages/conf?stage_id=' + data.stage_id;    
+    } 
+     else {
+
+        switch(data.action)
+        {
+            case 'Stages_init':
+                dispProgressQuest(data.progress);
+                dispProgressQuestAct(data.act);
+                dispProgressQuestExp(data.exp);
+                dispRotResultQuest(data);
+                break;
+            default:
+                $('#errMes').html( '不正なリクエストです' );
+                $('#errMes').show(); 
+        }
     }
 }
 
@@ -71,7 +82,7 @@ function dispRotResultQuest(data)
        // カード
        case "1":
            filename = 'card_get_on.png';
-           str = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.id + '" width="160px">'; 
+           str = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.target + '" width="160px">'; 
            str += data.name + 'が仲間に加わった！';
            break;
        // 金庫

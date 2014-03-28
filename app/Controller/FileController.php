@@ -15,7 +15,7 @@ class FileController extends ApiController {
      */
 	public $components = array();
 
-    public $uses = array('UserCard');
+    public $uses = array('UserCard', 'UserStage');
 
     /**
      * 画像取得
@@ -37,12 +37,18 @@ class FileController extends ApiController {
         $dir = $this->params['dir'];
         $targetId = $this->params['target'];
 
+        // 所有チェック
         switch ($dir) {
             case 'card':
-                // 所有チェック
                 $ret = $this->UserCard->getUserCard ($this->userId , $targetId );
                 $filename = 'card_' . $size . '_' . $targetId . '.jpg'; 
                 break;
+
+            case 'scene':
+                $ret = $this->UserStage->getUserStageByEnemyId($this->userId , $targetId );
+                $filename = 'scene_' . $size . '_' . $targetId . '.jpg'; 
+                break;
+
             default:
                 return false;
         }
@@ -66,8 +72,10 @@ class FileController extends ApiController {
                 }
 
                 $path = IMG_DIR . $dir . '/' . $filename;
-
+//$this->log('path:'. $path); 
                 if (file_exists($path)) {
+//$this->log('path:okok'. $path); 
+$this->log('name:kok'. $path); 
                     header("Content-Disposition: inline; filename=test");
                     header('Content-type: image/' . $name);
                     echo readfile($path);

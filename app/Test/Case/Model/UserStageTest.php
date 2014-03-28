@@ -76,7 +76,6 @@ class UserStageTest extends CakeTestCase {
         $data = array(
             'user_id'  => 1
         ,   'stage_id' => 1
-        ,   'quest_id' => 1
         ,   'progress' => 20
         ,   'state'    => 2
         );

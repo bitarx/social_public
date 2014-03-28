@@ -161,6 +161,8 @@ class AppModel extends Model {
         if (1 == $ignoreFlg) $sql .= "IGNORE ";
 
         $sql .= "INTO {$this->useTable} ({$fields}) VALUES {$holders}";
+
+        // クエリ実行
         $ret = $this->query($sql, $params);
         if ($ret === false) {
             $this->log( $this->useTable . ' save faild : Sql faild');
