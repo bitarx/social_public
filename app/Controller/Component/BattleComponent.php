@@ -17,9 +17,13 @@ class BattleComponent extends Component {
      * @author imanishi 
      * @param array $selfCards 攻撃側のカードデータ
      * @param array $targetCards 防御側のカードデータ
+     * @param array $battleLogTurn 戦闘情報
      * @return array バトル結果
      */
-    public function doBattle($selfCards, $targetCards) {
+    public function doBattle($selfCards, $targetCards, &$battleLogTurn) {
+
+        $battleLogTurn['targetCards_bf'] = $targetCards;
+        $num = 0;
         foreach ($selfCards as $val) {
             
             $targetNum = count($targetCards) - 1;
@@ -27,8 +31,13 @@ class BattleComponent extends Component {
             $target = mt_rand(0, $targetNum);
             $targetData = $targetCards[$target]['UserCard'];
 
+            $battleLogTurn[$num]['targetData'] = $targetData;
+
             $damage = $this->calcDamage($selfData, $targetData);
+            $battleLogTurn[$num]['damage'] = $damage;
             $targetCards[$target]['UserCard']['hp'] -= $damage;
+
+            $num++;
 
             // 攻撃対象のHPがゼロになった場合
             if ($targetCards[$target]['UserCard']['hp'] <= 0) {
@@ -42,6 +51,7 @@ class BattleComponent extends Component {
                 $targetCards = $targets;
             }
         }
+        $battleLogTurn['targetCards_af'] = $damage;
         return $targetCards;
     }
 

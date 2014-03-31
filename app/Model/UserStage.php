@@ -153,14 +153,31 @@ class UserStage extends AppModel {
      */
     public function initUserStage($data) {
 
-        $values = array(
+        // 存在チェック
+        $where = array(
             'user_id'  => $data['user_id']
-        ,   'stage_id' => $data['stage_id']
-        ,   'progress' => $data['progress']
-        ,   'state'    => $data['state']
+        ,   'UserStage.stage_id' => $data['stage_id']
         );
+        $exist = $this->field('user_id', $where);
+        if (!$exist) {
+            $values = array(
+                'user_id'  => $data['user_id']
+            ,   'stage_id' => $data['stage_id']
+            ,   'progress' => $data['progress']
+            ,   'state'    => $data['state']
+            );
 
-        $ret = $this->save($values);
+            // cakeは複合プライマリキーを見ないので登録される
+            $ret = $this->save($values);
+        } else {
+
+            // レコードが存在する場合は更新
+            $values = array(
+                'progress' => $data['progress']
+            ,   'state'    => $data['state']
+            );
+            $this->updateAll($values, $where);
+        }
         return $ret;
     }
 }

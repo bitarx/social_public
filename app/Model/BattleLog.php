@@ -23,7 +23,7 @@ class BattleLog extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'target_user' => array(
+		'target' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -95,10 +95,10 @@ class BattleLog extends AppModel {
         $where = array(
             'OR' => array(
                 'user_id' => $userId
-            ,   'target_user' => $userId
+            ,   'target' => $userId
             ) 
         );
-        $fields = array('id', 'target_user', 'result', 'log');
+        $fields = array('id', 'target', 'result', 'log');
         $order = array('BattleLog.created DESC');
         $ret = $this->getAllFind($where, $fields, 'all', $order, $limit, $offset);
         return $ret;
@@ -114,7 +114,7 @@ class BattleLog extends AppModel {
     public function getBattleLogDataLatest($userId) {
 
         $where = array('user_id' => $userId);
-        $fields = array('id', 'target_user', 'result', 'log');
+        $fields = array('id', 'target', 'result', 'log');
         $order = array($this->getTableAlias() . '.created DESC'); 
         $ret = $this->getAllFind($where, $fields, 'first', $order);
         return $ret;
@@ -130,7 +130,7 @@ class BattleLog extends AppModel {
     public function getBattleLogData($id) {
 
         $where = array('id' => $id);
-        $fields = array('id', 'target_user', 'result', 'log');
+        $fields = array('id', 'target', 'result', 'log');
         $ret = $this->getAllFind($where, $fields, 'first');
         return $ret;
     }
@@ -145,6 +145,20 @@ class BattleLog extends AppModel {
     public function initBattleLogData($values) {
 
         $ret = $this->save($values);
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ登録
+     *
+     * @author imanishi
+     * @param array $values
+     * @return bool
+     */
+    public function registBattleLog($values) {
+
+        $fields = array('user_id', 'target', 'result', 'log');
+        $ret = $this->insertBulk($fields, $values);
         return $ret;
     }
 }

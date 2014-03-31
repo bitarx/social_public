@@ -184,6 +184,8 @@ $this->log('main_params:'. $params);
 
         $userCards = $userCards['UserDeckCard'];
 
+        $battleLog = array();
+
         // 攻撃側のスキル発動
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
@@ -192,6 +194,9 @@ $this->log('main_params:'. $params);
             if ($hit <= $userCard['skill_level']) {
                 // カードのスキル取得 
                 $skillData = $this->Card->getCardData($userCard['card_id']);
+
+                $battleLog['skill']['atk'][] = $skillData;
+
                 // スキル実行
                 $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
             }
@@ -206,6 +211,8 @@ $this->log('main_params:'. $params);
                 // カードのスキル取得 
                 $skillData = $this->Card->getCardData($userCard['card_id']);
 
+                $battleLog['skill']['def'][] = $skillData;
+
                 // スキル実行
                 $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
             }
@@ -213,22 +220,43 @@ $this->log('main_params:'. $params);
         
         // 1:攻撃側勝利 2:防御側勝利
         $winner = 1;
+        $turn = 0;
         while(true) {
-            $targetCards = $this->Battle->doBattle($userCards, $targetCards);
+            
+            $targetCards = $this->Battle->doBattle($userCards, $targetCards, $battleLog[$turn]);
             if (empty($targetCards)) break;
+            $turn++;
 
-            $userCards = $this->Battle->doBattle($targetCards, $userCards);
+            $userCards = $this->Battle->doBattle($targetCards, $userCards, $battleLog[$turn]);
             if (empty($userCards)) {
                 $winner = 2;
                 break;
             }
+            $turn++;
         }
+
+        $battleLog = json_encode($battleLog);
+
+
+        // バトルログ登録
+        $this->BattleLog->begin(); 
+        try {  
+
+            $values[] = array($this->userId , $targetId, $winner, $battleLog);
+            $this->registBattleLog($values);
+
+        } catch (AppException $e) { 
+            $this->BattleLog->rollback(); 
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->BattleLog->commit(); 
 
         $this->rd('Stages', 'product');
     }
 
     /**
-     * ボス戦
+     * ボス戦演出
      *
      * @author imanishi
      * @return void
@@ -237,6 +265,9 @@ $this->log('main_params:'. $params);
 
         // 共通レイアウトは使わない
         $this->layout = '';
+
+        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $this->set('data', $data);
 /*
         $fields = array('id');
         $where  = array();
@@ -256,6 +287,8 @@ $this->log('main_params:'. $params);
         // 共通レイアウトは使わない
         $this->layout = '';
 
+        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $this->set('data', $data);
 
     }
     /**
@@ -266,7 +299,7 @@ $this->log('main_params:'. $params);
      */
     public function comp() {
 
-        $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
         $this->set('data', $data);
 
     }
