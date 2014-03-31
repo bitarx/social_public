@@ -21,14 +21,28 @@ $(function () {
             </div>
         </div>
     <{else}> 
-        <div  class="btnQuestNotProg" id="appReq" act="Stages/init" params=<{$param}>>
+        <div  class="btnQuestNotProg" id="" act="Stages/init" params=<{$param}>>
             <div class="strQuestProg" >
                 行動力がなくなりました‥
             </div>
         </div>
     <{/if}> 
 
+    <{if !empty($boss)}> 
+        <a href="conf?stage_id=<{$data.stage_id}>">
+            <div  class="btnQuestBoss">
+                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                <div class="strQuestBoss">
+                    ボス出現！
+                </div>
+            </div>
+        </a>
+    <{/if}> 
+
     <div class="progQuest">
+        <div class="progQuestUseStr">
+            行動力: 経験値
+        </div>
         <div class="progQuestMainStr">
             進行度:
         </div>

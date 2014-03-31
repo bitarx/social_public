@@ -19,7 +19,7 @@ class SmartyView extends View {
 		//$this->Smarty->plugins_dir[] = VENDORS.DS.'smarty'.DS.'plugins';
 		$this->Smarty->compile_dir = TMP.'smarty'.DS.'compile'.DS;
 		$this->Smarty->cache_dir = TMP.'smarty'.DS.'cache'.DS;
-		$this->Smarty->error_reporting = 'E_ALL & ~E_NOTICE';
+		$this->Smarty->error_reporting = 'E_ALL';
 		$this->Smarty->debugging = false;
 		$this->Smarty->compile_check = true;
 		$this->viewVars['params'] = $this->params;

@@ -191,14 +191,21 @@ a:hover {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: 480px;
+    top: 485px;
     line-height: 0;
     height: 220px;
     width: 320px;
 }
+.progQuestUseStr {
+    position: absolute;
+    top: 0px;
+    height: 20px;
+    width: 250px;
+}
 .progQuestMain {
     position: absolute;
     margin: 0 auto;
+    top: 20px;
     left: 55px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
@@ -208,28 +215,11 @@ a:hover {
 }
 .progQuestMainStr {
     position: absolute;
-    top: 10px;
+    top: 30px;
     height: 20px;
     width: 50px;
 }
 .progQuestAct {
-    position: absolute;
-    margin: 0 auto;
-    top: 25px;
-    left: 55px;
-    background: url(../img/progress_base.png) top repeat-x;
-    border : 1px solid #d3d3d3;
-    line-height: 0;
-    height: 20px;
-    width: 240px;
-}
-.progQuestActStr {
-    position: absolute;
-    top: 35px;
-    height: 20px;
-    width: 50px;
-}
-.progQuestExp {
     position: absolute;
     margin: 0 auto;
     top: 50px;
@@ -240,9 +230,26 @@ a:hover {
     height: 20px;
     width: 240px;
 }
-.progQuestExpStr {
+.progQuestActStr {
     position: absolute;
     top: 60px;
+    height: 20px;
+    width: 50px;
+}
+.progQuestExp {
+    position: absolute;
+    margin: 0 auto;
+    top: 80px;
+    left: 55px;
+    background: url(../img/progress_base.png) top repeat-x;
+    border : 1px solid #d3d3d3;
+    line-height: 0;
+    height: 20px;
+    width: 240px;
+}
+.progQuestExpStr {
+    position: absolute;
+    top: 90px;
     height: 20px;
     width: 50px;
 }
@@ -255,13 +262,26 @@ a:hover {
 }
 .btnQuestNotProg {
     left: 0px;
-    top: 420px;
+    top: 390px;
     position: relative;
 }
 .strQuestProg {
     position: absolute;
     top: 12px;
     left: 190px;
+    font-size: 24px;
+}
+
+/** クエストボス */
+.btnQuestBoss {
+    left: 103px;
+    top: 450px;
+    position: relative;
+}
+.strQuestBoss {
+    position: absolute;
+    top: 12px;
+    left: 170px;
     font-size: 24px;
 }
 
@@ -276,6 +296,19 @@ a:hover {
     position: absolute;
     top: 370px;
     left: 10px;
+}
+
+/** クエストボスバトル */
+.btnQuestBossBattle {
+    left: 103px;
+    top: 100px;
+    position: relative;
+}
+.strQuestBossBattle {
+    position: absolute;
+    top: 12px;
+    left: 170px;
+    font-size: 24px;
 }
 
 

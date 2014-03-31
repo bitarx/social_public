@@ -7,7 +7,7 @@
 define("DOMAIN","asns.jp");
 define("BASE_URL","http://" . DOMAIN . "/");
 define("ROOT_DIR", '/var/www/asns/');
-define("IMG_DIR", ROOT_DIR . 'app/webroot/img/');
+define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
 
 $config = array();
 

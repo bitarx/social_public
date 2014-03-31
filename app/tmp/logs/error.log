@@ -48988,3 +48988,2702 @@ Stack Trace:
 2014-03-28 18:58:13 Error: className:File
 2014-03-28 18:58:25 Error: ownerId:
 2014-03-28 18:58:25 Error: className:Stages
+2014-03-28 20:26:40 Error: ownerId:10
+2014-03-28 20:26:40 Error: className:SnsUsers
+2014-03-28 20:26:40 Error: userId:45
+2014-03-28 20:26:42 Error: ownerId:10
+2014-03-28 20:26:42 Error: className:Quests
+2014-03-28 20:26:42 Error: userId:45
+2014-03-28 20:26:45 Error: ownerId:10
+2014-03-28 20:26:45 Error: className:Stages
+2014-03-28 20:26:45 Error: userId:45
+2014-03-28 20:26:46 Error: ownerId:10
+2014-03-28 20:26:46 Error: className:Stages
+2014-03-28 20:26:46 Error: userId:45
+2014-03-28 20:26:46 Error: ownerId:10
+2014-03-28 20:26:46 Error: className:Stages
+2014-03-28 20:26:46 Error: userId:45
+2014-03-28 20:26:46 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"89","state":"1"}
+2014-03-28 20:26:58 Error: ownerId:10
+2014-03-28 20:26:58 Error: className:Stages
+2014-03-28 20:26:58 Error: userId:45
+2014-03-28 20:26:58 Error: aaaaaaaaaaaaaa:
+2014-03-28 20:26:58 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 20:26:58 Error: userId;:45
+2014-03-28 20:26:58 Error: actCheck:
+2014-03-28 20:26:58 Error: act:74
+2014-03-28 20:26:58 Error: use_act:
+2014-03-28 20:26:58 Error: ownerId:10
+2014-03-28 20:26:58 Error: className:File
+2014-03-28 20:26:58 Error: userId:45
+2014-03-28 20:26:58 Error: name:kok/var/www/asns/app/webroot/img/card/card_m_28.jpg
+2014-03-28 20:27:00 Error: ownerId:10
+2014-03-28 20:27:00 Error: className:Stages
+2014-03-28 20:27:00 Error: userId:45
+2014-03-28 20:27:00 Error: aaaaaaaaaaaaaa:
+2014-03-28 20:27:00 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 20:27:00 Error: userId;:45
+2014-03-28 20:27:00 Error: actCheck:
+2014-03-28 20:27:00 Error: act:73
+2014-03-28 20:27:00 Error: use_act:
+2014-03-28 20:27:01 Error: ownerId:10
+2014-03-28 20:27:01 Error: className:Stages
+2014-03-28 20:27:01 Error: userId:45
+2014-03-28 20:27:01 Error: aaaaaaaaaaaaaa:
+2014-03-28 20:27:01 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 20:27:01 Error: userId;:45
+2014-03-28 20:27:01 Error: actCheck:
+2014-03-28 20:27:01 Error: act:72
+2014-03-28 20:27:01 Error: use_act:
+2014-03-28 20:27:02 Error: ownerId:10
+2014-03-28 20:27:02 Error: className:Stages
+2014-03-28 20:27:02 Error: userId:45
+2014-03-28 20:27:02 Error: aaaaaaaaaaaaaa:
+2014-03-28 20:27:02 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 20:27:02 Error: userId;:45
+2014-03-28 20:27:02 Error: actCheck:
+2014-03-28 20:27:02 Error: act:71
+2014-03-28 20:27:02 Error: use_act:
+2014-03-28 20:27:02 Error: ownerId:10
+2014-03-28 20:27:02 Error: className:File
+2014-03-28 20:27:02 Error: userId:45
+2014-03-28 20:27:02 Error: name:kok/var/www/asns/app/webroot/img/card/card_m_28.jpg
+2014-03-28 20:27:05 Error: ownerId:10
+2014-03-28 20:27:05 Error: className:Stages
+2014-03-28 20:27:05 Error: userId:45
+2014-03-28 20:27:05 Error: aaaaaaaaaaaaaa:
+2014-03-28 20:27:05 Error: bbbbbbbbbbbbbbbb:
+2014-03-28 20:27:05 Error: userId;:45
+2014-03-28 20:27:05 Error: actCheck:
+2014-03-28 20:27:05 Error: act:70
+2014-03-28 20:27:05 Error: use_act:
+2014-03-28 20:27:05 Error: ownerId:10
+2014-03-28 20:27:05 Error: className:Stages
+2014-03-28 20:27:05 Error: userId:45
+2014-03-28 20:27:05 Error: ownerId:10
+2014-03-28 20:27:05 Error: className:File
+2014-03-28 20:27:05 Error: userId:45
+2014-03-28 20:27:05 Error: name:kok/var/www/asns/app/webroot/img/scene/scene_bf_1.jpg
+2014-03-28 20:41:12 Error: ownerId:10
+2014-03-28 20:41:12 Error: className:Stages
+2014-03-28 20:41:12 Error: userId:45
+2014-03-28 20:41:13 Error: ownerId:10
+2014-03-28 20:41:13 Error: className:File
+2014-03-28 20:41:13 Error: userId:45
+2014-03-28 20:41:13 Error: File not Exists path:IMG_DIRscene/scene_bf_1.jpg: userId :45
+2014-03-28 20:43:57 Error: ownerId:10
+2014-03-28 20:43:57 Error: className:Stages
+2014-03-28 20:43:57 Error: userId:45
+2014-03-28 20:43:57 Error: ownerId:10
+2014-03-28 20:43:57 Error: className:File
+2014-03-28 20:43:57 Error: userId:45
+2014-03-28 20:43:57 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 03:09:44 Error: ownerId:
+2014-03-29 03:09:44 Error: className:SnsUsers
+2014-03-29 03:09:46 Error: ownerId:
+2014-03-29 03:09:46 Error: className:SnsUsers
+2014-03-29 03:09:48 Error: ownerId:
+2014-03-29 03:09:48 Error: className:SnsUsers
+2014-03-29 03:36:24 Error: ownerId:
+2014-03-29 03:36:24 Error: className:SnsUsers
+2014-03-29 03:36:24 Error: ownerId:
+2014-03-29 03:36:24 Error: className:SnsUsers
+2014-03-29 03:36:25 Error: ownerId:
+2014-03-29 03:36:25 Error: className:SnsUsers
+2014-03-29 04:44:47 Error: ownerId:
+2014-03-29 04:44:47 Error: className:SnsUsers
+2014-03-29 04:44:48 Error: ownerId:
+2014-03-29 04:44:48 Error: className:SnsUsers
+2014-03-29 04:44:49 Error: ownerId:
+2014-03-29 04:44:49 Error: className:SnsUsers
+2014-03-29 08:18:25 Error: ownerId:
+2014-03-29 08:18:25 Error: className:SnsUsers
+2014-03-29 08:18:26 Error: ownerId:
+2014-03-29 08:18:26 Error: className:Errors
+2014-03-29 08:18:26 Error: userId:0
+2014-03-29 12:52:37 Error: ownerId:1
+2014-03-29 12:52:37 Error: className:SnsUsers
+2014-03-29 12:52:37 Error: userId:17
+2014-03-29 12:52:41 Error: ownerId:1
+2014-03-29 12:52:41 Error: className:Quests
+2014-03-29 12:52:41 Error: userId:17
+2014-03-29 12:53:31 Error: ownerId:1
+2014-03-29 12:53:31 Error: className:Stages
+2014-03-29 12:53:31 Error: userId:17
+2014-03-29 12:53:33 Error: ownerId:1
+2014-03-29 12:53:33 Error: className:Stages
+2014-03-29 12:53:33 Error: userId:17
+2014-03-29 12:53:33 Error: ownerId:1
+2014-03-29 12:53:33 Error: className:Stages
+2014-03-29 12:53:33 Error: userId:17
+2014-03-29 12:53:33 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 12:53:36 Error: ownerId:1
+2014-03-29 12:53:36 Error: className:Stages
+2014-03-29 12:53:36 Error: userId:17
+2014-03-29 12:53:36 Error: aaaaaaaaaaaaaa:
+2014-03-29 12:53:36 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 12:53:36 Error: userId;:17
+2014-03-29 12:53:36 Error: actCheck:
+2014-03-29 12:53:36 Error: act:24
+2014-03-29 12:53:36 Error: use_act:
+2014-03-29 12:53:39 Error: ownerId:
+2014-03-29 12:53:39 Error: className:Quests
+2014-03-29 12:53:39 Error: ownerId:1
+2014-03-29 12:53:39 Error: className:Stages
+2014-03-29 12:53:39 Error: userId:17
+2014-03-29 12:53:39 Error: aaaaaaaaaaaaaa:
+2014-03-29 12:53:39 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 12:53:39 Error: userId;:17
+2014-03-29 12:53:39 Error: actCheck:
+2014-03-29 12:53:39 Error: act:23
+2014-03-29 12:53:39 Error: use_act:
+2014-03-29 12:53:40 Error: ownerId:1
+2014-03-29 12:53:40 Error: className:File
+2014-03-29 12:53:40 Error: userId:17
+2014-03-29 12:53:40 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 12:53:48 Error: ownerId:1
+2014-03-29 12:53:48 Error: className:Quests
+2014-03-29 12:53:48 Error: userId:17
+2014-03-29 12:53:50 Error: ownerId:1
+2014-03-29 12:53:50 Error: className:Stages
+2014-03-29 12:53:50 Error: userId:17
+2014-03-29 12:54:35 Error: ownerId:
+2014-03-29 12:54:35 Error: className:Stages
+2014-03-29 12:54:35 Error: ownerId:
+2014-03-29 12:54:35 Error: className:Stages
+2014-03-29 12:54:39 Error: ownerId:
+2014-03-29 12:54:39 Error: className:SnsUsers
+2014-03-29 12:54:40 Error: ownerId:
+2014-03-29 12:54:40 Error: className:Stages
+2014-03-29 12:54:40 Error: ownerId:
+2014-03-29 12:54:40 Error: className:File
+2014-03-29 12:55:31 Error: ownerId:
+2014-03-29 12:55:31 Error: className:Stages
+2014-03-29 12:58:42 Error: ownerId:1
+2014-03-29 12:58:42 Error: className:Stages
+2014-03-29 12:58:42 Error: userId:17
+2014-03-29 12:58:42 Error: ownerId:1
+2014-03-29 12:58:42 Error: className:Stages
+2014-03-29 12:58:42 Error: userId:17
+2014-03-29 12:58:42 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 12:59:45 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 12:59:45 Error: ownerId:
+2014-03-29 12:59:45 Error: className:CakeError
+2014-03-29 12:59:45 Error: userIdErr:0
+2014-03-29 12:59:45 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 12:59:45 Error: ownerId:
+2014-03-29 12:59:45 Error: className:Errors
+2014-03-29 12:59:45 Error: userId:0
+2014-03-29 13:07:58 Error: ownerId:1
+2014-03-29 13:07:58 Error: className:Stages
+2014-03-29 13:07:58 Error: userId:17
+2014-03-29 13:07:58 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:08:09 Error: ownerId:1
+2014-03-29 13:08:09 Error: className:Stages
+2014-03-29 13:08:09 Error: userId:17
+2014-03-29 13:08:09 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:08:31 Error: ownerId:1
+2014-03-29 13:08:31 Error: className:Stages
+2014-03-29 13:08:31 Error: userId:17
+2014-03-29 13:08:31 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:09:12 Error: ownerId:
+2014-03-29 13:09:12 Error: className:Stages
+2014-03-29 13:09:24 Error: ownerId:1
+2014-03-29 13:09:24 Error: className:Stages
+2014-03-29 13:09:24 Error: userId:17
+2014-03-29 13:09:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:09:35 Error: ownerId:1
+2014-03-29 13:09:35 Error: className:Stages
+2014-03-29 13:09:35 Error: userId:17
+2014-03-29 13:09:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:10:03 Error: ownerId:1
+2014-03-29 13:10:03 Error: className:Stages
+2014-03-29 13:10:03 Error: userId:17
+2014-03-29 13:10:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:10:48 Error: ownerId:1
+2014-03-29 13:10:48 Error: className:Stages
+2014-03-29 13:10:49 Error: userId:17
+2014-03-29 13:10:49 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:16:27 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 13:16:27 Error: ownerId:
+2014-03-29 13:16:27 Error: className:CakeError
+2014-03-29 13:16:27 Error: userIdErr:0
+2014-03-29 13:16:27 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 13:16:27 Error: ownerId:
+2014-03-29 13:16:27 Error: className:Errors
+2014-03-29 13:16:27 Error: userId:0
+2014-03-29 13:16:28 Error: ownerId:
+2014-03-29 13:16:28 Error: className:SnsUsers
+2014-03-29 13:16:28 Error: ownerId:
+2014-03-29 13:16:28 Error: className:Errors
+2014-03-29 13:16:28 Error: userId:0
+2014-03-29 13:19:32 Error: ownerId:1
+2014-03-29 13:19:32 Error: className:Stages
+2014-03-29 13:19:32 Error: userId:17
+2014-03-29 13:19:32 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:19:51 Error: ownerId:1
+2014-03-29 13:19:51 Error: className:Stages
+2014-03-29 13:19:51 Error: userId:17
+2014-03-29 13:19:51 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:20:11 Error: ownerId:1
+2014-03-29 13:20:11 Error: className:Stages
+2014-03-29 13:20:11 Error: userId:17
+2014-03-29 13:20:11 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:20:26 Error: ownerId:1
+2014-03-29 13:20:26 Error: className:Stages
+2014-03-29 13:20:26 Error: userId:17
+2014-03-29 13:20:26 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:20:43 Error: ownerId:
+2014-03-29 13:20:43 Error: className:Stages
+2014-03-29 13:21:39 Error: ownerId:1
+2014-03-29 13:21:39 Error: className:Stages
+2014-03-29 13:21:39 Error: userId:17
+2014-03-29 13:21:39 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:21:45 Error: ownerId:1
+2014-03-29 13:21:45 Error: className:Stages
+2014-03-29 13:21:45 Error: userId:17
+2014-03-29 13:21:45 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:22:03 Error: ownerId:1
+2014-03-29 13:22:03 Error: className:Stages
+2014-03-29 13:22:03 Error: userId:17
+2014-03-29 13:22:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:22:19 Error: ownerId:1
+2014-03-29 13:22:19 Error: className:Stages
+2014-03-29 13:22:19 Error: userId:17
+2014-03-29 13:22:19 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:22:21 Error: ownerId:
+2014-03-29 13:22:21 Error: className:SnsUsers
+2014-03-29 13:22:29 Error: ownerId:
+2014-03-29 13:22:29 Error: className:Errors
+2014-03-29 13:22:29 Error: userId:0
+2014-03-29 13:22:34 Error: ownerId:1
+2014-03-29 13:22:34 Error: className:Stages
+2014-03-29 13:22:34 Error: userId:17
+2014-03-29 13:22:34 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:23:07 Error: ownerId:1
+2014-03-29 13:23:07 Error: className:Stages
+2014-03-29 13:23:07 Error: userId:17
+2014-03-29 13:23:07 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:23:21 Error: ownerId:1
+2014-03-29 13:23:21 Error: className:Stages
+2014-03-29 13:23:21 Error: userId:17
+2014-03-29 13:23:21 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:24:27 Error: ownerId:1
+2014-03-29 13:24:27 Error: className:Stages
+2014-03-29 13:24:27 Error: userId:17
+2014-03-29 13:24:27 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:26:57 Error: ownerId:1
+2014-03-29 13:26:57 Error: className:Stages
+2014-03-29 13:26:57 Error: userId:17
+2014-03-29 13:26:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:28:13 Error: ownerId:1
+2014-03-29 13:28:13 Error: className:Stages
+2014-03-29 13:28:13 Error: userId:17
+2014-03-29 13:28:13 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:28:18 Error: ownerId:1
+2014-03-29 13:28:18 Error: className:Stages
+2014-03-29 13:28:18 Error: userId:17
+2014-03-29 13:28:18 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:18 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:18 Error: userId;:17
+2014-03-29 13:28:18 Error: actCheck:
+2014-03-29 13:28:18 Error: act:22
+2014-03-29 13:28:18 Error: use_act:
+2014-03-29 13:28:18 Error: ownerId:1
+2014-03-29 13:28:18 Error: className:File
+2014-03-29 13:28:19 Error: userId:17
+2014-03-29 13:28:19 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:Stages
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:27 Error: userId;:17
+2014-03-29 13:28:27 Error: actCheck:
+2014-03-29 13:28:27 Error: act:21
+2014-03-29 13:28:27 Error: use_act:
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:File
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:Stages
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:27 Error: userId;:17
+2014-03-29 13:28:27 Error: actCheck:
+2014-03-29 13:28:27 Error: act:20
+2014-03-29 13:28:27 Error: use_act:
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:Stages
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:27 Error: userId;:17
+2014-03-29 13:28:27 Error: actCheck:
+2014-03-29 13:28:27 Error: act:19
+2014-03-29 13:28:27 Error: use_act:
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:File
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:28:27 Error: ownerId:1
+2014-03-29 13:28:27 Error: className:Stages
+2014-03-29 13:28:27 Error: userId:17
+2014-03-29 13:28:27 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:27 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:27 Error: userId;:17
+2014-03-29 13:28:27 Error: actCheck:
+2014-03-29 13:28:27 Error: act:18
+2014-03-29 13:28:27 Error: use_act:
+2014-03-29 13:28:29 Error: ownerId:1
+2014-03-29 13:28:29 Error: className:Stages
+2014-03-29 13:28:29 Error: userId:17
+2014-03-29 13:28:29 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:29 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:29 Error: userId;:17
+2014-03-29 13:28:29 Error: actCheck:
+2014-03-29 13:28:29 Error: act:17
+2014-03-29 13:28:29 Error: use_act:
+2014-03-29 13:28:30 Error: ownerId:1
+2014-03-29 13:28:30 Error: className:Stages
+2014-03-29 13:28:30 Error: userId:17
+2014-03-29 13:28:30 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:28:30 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:28:30 Error: userId;:17
+2014-03-29 13:28:30 Error: actCheck:
+2014-03-29 13:28:30 Error: act:16
+2014-03-29 13:28:30 Error: use_act:
+2014-03-29 13:28:30 Error: ownerId:1
+2014-03-29 13:28:30 Error: className:File
+2014-03-29 13:28:30 Error: userId:17
+2014-03-29 13:28:30 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:29:12 Error: ownerId:
+2014-03-29 13:29:12 Error: className:Stages
+2014-03-29 13:49:03 Error: ownerId:1
+2014-03-29 13:49:03 Error: className:Stages
+2014-03-29 13:49:03 Error: userId:17
+2014-03-29 13:49:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:49:16 Error: ownerId:1
+2014-03-29 13:49:16 Error: className:Stages
+2014-03-29 13:49:16 Error: userId:17
+2014-03-29 13:49:16 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:49:16 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:49:16 Error: userId;:17
+2014-03-29 13:49:16 Error: actCheck:
+2014-03-29 13:49:16 Error: act:15
+2014-03-29 13:49:16 Error: use_act:
+2014-03-29 13:49:16 Error: ownerId:1
+2014-03-29 13:49:16 Error: className:File
+2014-03-29 13:49:16 Error: userId:17
+2014-03-29 13:49:16 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:49:41 Error: ownerId:1
+2014-03-29 13:49:41 Error: className:Stages
+2014-03-29 13:49:41 Error: userId:17
+2014-03-29 13:49:41 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:49:49 Error: ownerId:1
+2014-03-29 13:49:49 Error: className:Stages
+2014-03-29 13:49:49 Error: userId:17
+2014-03-29 13:49:49 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:49:53 Error: ownerId:1
+2014-03-29 13:49:53 Error: className:Stages
+2014-03-29 13:49:53 Error: userId:17
+2014-03-29 13:49:53 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:49:53 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:49:53 Error: userId;:17
+2014-03-29 13:49:53 Error: actCheck:
+2014-03-29 13:49:53 Error: act:14
+2014-03-29 13:49:53 Error: use_act:
+2014-03-29 13:49:53 Error: ownerId:1
+2014-03-29 13:49:53 Error: className:File
+2014-03-29 13:49:53 Error: userId:17
+2014-03-29 13:49:53 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:50:07 Error: ownerId:
+2014-03-29 13:50:07 Error: className:File
+2014-03-29 13:50:17 Error: ownerId:
+2014-03-29 13:50:17 Error: className:Stages
+2014-03-29 13:57:26 Error: ownerId:1
+2014-03-29 13:57:26 Error: className:Stages
+2014-03-29 13:57:26 Error: userId:17
+2014-03-29 13:57:26 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:57:32 Error: ownerId:1
+2014-03-29 13:57:32 Error: className:Stages
+2014-03-29 13:57:32 Error: userId:17
+2014-03-29 13:57:32 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:57:32 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:57:32 Error: userId;:17
+2014-03-29 13:57:32 Error: actCheck:
+2014-03-29 13:57:32 Error: act:13
+2014-03-29 13:57:32 Error: use_act:
+2014-03-29 13:57:32 Error: ownerId:1
+2014-03-29 13:57:32 Error: className:File
+2014-03-29 13:57:32 Error: userId:17
+2014-03-29 13:57:32 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:58:06 Error: ownerId:1
+2014-03-29 13:58:06 Error: className:Stages
+2014-03-29 13:58:06 Error: userId:17
+2014-03-29 13:58:06 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:58:12 Error: ownerId:1
+2014-03-29 13:58:12 Error: className:Stages
+2014-03-29 13:58:12 Error: userId:17
+2014-03-29 13:58:12 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:58:12 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:58:12 Error: userId;:17
+2014-03-29 13:58:12 Error: actCheck:
+2014-03-29 13:58:12 Error: act:12
+2014-03-29 13:58:12 Error: use_act:
+2014-03-29 13:58:15 Error: ownerId:1
+2014-03-29 13:58:15 Error: className:Stages
+2014-03-29 13:58:15 Error: userId:17
+2014-03-29 13:58:15 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:58:15 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:58:15 Error: userId;:17
+2014-03-29 13:58:15 Error: actCheck:
+2014-03-29 13:58:15 Error: act:11
+2014-03-29 13:58:15 Error: use_act:
+2014-03-29 13:58:17 Error: ownerId:1
+2014-03-29 13:58:17 Error: className:Stages
+2014-03-29 13:58:17 Error: userId:17
+2014-03-29 13:58:17 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:58:17 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:58:17 Error: userId;:17
+2014-03-29 13:58:17 Error: actCheck:
+2014-03-29 13:58:17 Error: act:10
+2014-03-29 13:58:17 Error: use_act:
+2014-03-29 13:58:18 Error: ownerId:1
+2014-03-29 13:58:18 Error: className:Stages
+2014-03-29 13:58:18 Error: userId:17
+2014-03-29 13:58:18 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:58:18 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:58:18 Error: userId;:17
+2014-03-29 13:58:18 Error: actCheck:
+2014-03-29 13:58:18 Error: act:9
+2014-03-29 13:58:18 Error: use_act:
+2014-03-29 13:58:18 Error: ownerId:1
+2014-03-29 13:58:18 Error: className:File
+2014-03-29 13:58:18 Error: userId:17
+2014-03-29 13:58:18 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 13:58:34 Error: ownerId:
+2014-03-29 13:58:34 Error: className:File
+2014-03-29 13:58:44 Error: ownerId:1
+2014-03-29 13:58:44 Error: className:Stages
+2014-03-29 13:58:44 Error: userId:17
+2014-03-29 13:58:44 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 13:58:56 Error: ownerId:1
+2014-03-29 13:58:56 Error: className:Stages
+2014-03-29 13:58:56 Error: userId:17
+2014-03-29 13:58:56 Error: aaaaaaaaaaaaaa:
+2014-03-29 13:58:56 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 13:58:56 Error: userId;:17
+2014-03-29 13:58:56 Error: actCheck:
+2014-03-29 13:58:56 Error: act:8
+2014-03-29 13:58:56 Error: use_act:
+2014-03-29 13:59:30 Error: ownerId:
+2014-03-29 13:59:30 Error: className:Stages
+2014-03-29 14:00:38 Error: ownerId:1
+2014-03-29 14:00:38 Error: className:Stages
+2014-03-29 14:00:38 Error: userId:17
+2014-03-29 14:00:38 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:00:48 Error: ownerId:1
+2014-03-29 14:00:48 Error: className:Stages
+2014-03-29 14:00:48 Error: userId:17
+2014-03-29 14:00:48 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:00:48 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:00:48 Error: userId;:17
+2014-03-29 14:00:48 Error: actCheck:
+2014-03-29 14:00:48 Error: act:7
+2014-03-29 14:00:48 Error: use_act:
+2014-03-29 14:00:49 Error: ownerId:1
+2014-03-29 14:00:49 Error: className:File
+2014-03-29 14:00:49 Error: userId:17
+2014-03-29 14:00:49 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:00:51 Error: ownerId:1
+2014-03-29 14:00:51 Error: className:Stages
+2014-03-29 14:00:51 Error: userId:17
+2014-03-29 14:00:51 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:00:51 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:00:51 Error: userId;:17
+2014-03-29 14:00:51 Error: actCheck:
+2014-03-29 14:00:51 Error: act:6
+2014-03-29 14:00:51 Error: use_act:
+2014-03-29 14:00:52 Error: ownerId:1
+2014-03-29 14:00:52 Error: className:File
+2014-03-29 14:00:52 Error: userId:17
+2014-03-29 14:00:52 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:00:53 Error: ownerId:1
+2014-03-29 14:00:53 Error: className:Stages
+2014-03-29 14:00:53 Error: userId:17
+2014-03-29 14:00:53 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:00:53 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:00:53 Error: userId;:17
+2014-03-29 14:00:53 Error: actCheck:
+2014-03-29 14:00:53 Error: act:5
+2014-03-29 14:00:53 Error: use_act:
+2014-03-29 14:00:53 Error: ownerId:1
+2014-03-29 14:00:53 Error: className:File
+2014-03-29 14:00:53 Error: userId:17
+2014-03-29 14:00:53 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:00:55 Error: ownerId:1
+2014-03-29 14:00:55 Error: className:Stages
+2014-03-29 14:00:55 Error: userId:17
+2014-03-29 14:00:55 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:00:55 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:00:55 Error: userId;:17
+2014-03-29 14:00:55 Error: actCheck:
+2014-03-29 14:00:55 Error: act:4
+2014-03-29 14:00:55 Error: use_act:
+2014-03-29 14:00:59 Error: ownerId:1
+2014-03-29 14:00:59 Error: className:Stages
+2014-03-29 14:00:59 Error: userId:17
+2014-03-29 14:00:59 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:00:59 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:00:59 Error: userId;:17
+2014-03-29 14:00:59 Error: actCheck:
+2014-03-29 14:00:59 Error: act:3
+2014-03-29 14:00:59 Error: use_act:
+2014-03-29 14:00:59 Error: ownerId:1
+2014-03-29 14:00:59 Error: className:File
+2014-03-29 14:00:59 Error: userId:17
+2014-03-29 14:00:59 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:01:22 Error: ownerId:1
+2014-03-29 14:01:22 Error: className:Stages
+2014-03-29 14:01:22 Error: userId:17
+2014-03-29 14:01:22 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:01:38 Error: ownerId:1
+2014-03-29 14:01:38 Error: className:Stages
+2014-03-29 14:01:38 Error: userId:17
+2014-03-29 14:01:38 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:02:23 Error: ownerId:1
+2014-03-29 14:02:23 Error: className:Stages
+2014-03-29 14:02:23 Error: userId:17
+2014-03-29 14:02:23 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:04:11 Error: ownerId:1
+2014-03-29 14:04:11 Error: className:Stages
+2014-03-29 14:04:11 Error: userId:17
+2014-03-29 14:04:11 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:04:51 Error: ownerId:1
+2014-03-29 14:04:51 Error: className:Stages
+2014-03-29 14:04:51 Error: userId:17
+2014-03-29 14:04:51 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:05:14 Error: ownerId:1
+2014-03-29 14:05:14 Error: className:Stages
+2014-03-29 14:05:14 Error: userId:17
+2014-03-29 14:05:14 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:08:55 Error: ownerId:1
+2014-03-29 14:08:55 Error: className:Stages
+2014-03-29 14:08:55 Error: userId:17
+2014-03-29 14:08:55 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:09:40 Error: ownerId:1
+2014-03-29 14:09:40 Error: className:Stages
+2014-03-29 14:09:40 Error: userId:17
+2014-03-29 14:09:40 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:10:32 Error: ownerId:1
+2014-03-29 14:10:32 Error: className:Stages
+2014-03-29 14:10:32 Error: userId:17
+2014-03-29 14:10:32 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:10:50 Error: ownerId:1
+2014-03-29 14:10:50 Error: className:Stages
+2014-03-29 14:10:50 Error: userId:17
+2014-03-29 14:10:50 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:11:27 Error: ownerId:1
+2014-03-29 14:11:27 Error: className:Stages
+2014-03-29 14:11:27 Error: userId:17
+2014-03-29 14:11:27 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:36:59 Error: ownerId:1
+2014-03-29 14:36:59 Error: className:Stages
+2014-03-29 14:36:59 Error: userId:17
+2014-03-29 14:36:59 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:37:11 Error: ownerId:1
+2014-03-29 14:37:11 Error: className:Stages
+2014-03-29 14:37:11 Error: userId:17
+2014-03-29 14:37:11 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:37:11 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:37:11 Error: userId;:17
+2014-03-29 14:37:11 Error: actCheck:
+2014-03-29 14:37:11 Error: act:2
+2014-03-29 14:37:11 Error: use_act:
+2014-03-29 14:37:12 Error: ownerId:1
+2014-03-29 14:37:12 Error: className:File
+2014-03-29 14:37:12 Error: userId:17
+2014-03-29 14:37:12 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:38:16 Error: ownerId:1
+2014-03-29 14:38:16 Error: className:Stages
+2014-03-29 14:38:16 Error: userId:17
+2014-03-29 14:38:16 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:38:19 Error: ownerId:1
+2014-03-29 14:38:19 Error: className:Stages
+2014-03-29 14:38:19 Error: userId:17
+2014-03-29 14:38:19 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:38:19 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:38:19 Error: userId;:17
+2014-03-29 14:38:19 Error: actCheck:
+2014-03-29 14:38:19 Error: act:1
+2014-03-29 14:38:19 Error: use_act:
+2014-03-29 14:38:19 Error: ownerId:1
+2014-03-29 14:38:19 Error: className:File
+2014-03-29 14:38:19 Error: userId:17
+2014-03-29 14:38:19 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-03-29 14:40:29 Error: ownerId:1
+2014-03-29 14:40:29 Error: className:Stages
+2014-03-29 14:40:29 Error: userId:17
+2014-03-29 14:40:29 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:40:29 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:40:29 Error: userId;:17
+2014-03-29 14:40:29 Error: actCheck:
+2014-03-29 14:40:29 Error: act:0
+2014-03-29 14:40:29 Error: use_act:
+2014-03-29 14:40:29 Error: actFusoku:
+2014-03-29 14:41:26 Error: ownerId:1
+2014-03-29 14:41:26 Error: className:Stages
+2014-03-29 14:41:26 Error: userId:17
+2014-03-29 14:41:26 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:42:35 Error: ownerId:
+2014-03-29 14:42:35 Error: className:File
+2014-03-29 14:42:43 Error: ownerId:1
+2014-03-29 14:42:43 Error: className:Stages
+2014-03-29 14:42:43 Error: userId:17
+2014-03-29 14:42:43 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:43:01 Error: ownerId:1
+2014-03-29 14:43:01 Error: className:Stages
+2014-03-29 14:43:01 Error: userId:17
+2014-03-29 14:43:01 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:43:26 Error: ownerId:1
+2014-03-29 14:43:26 Error: className:Stages
+2014-03-29 14:43:26 Error: userId:17
+2014-03-29 14:43:26 Error: aaaaaaaaaaaaaa:
+2014-03-29 14:43:26 Error: bbbbbbbbbbbbbbbb:
+2014-03-29 14:43:26 Error: userId;:17
+2014-03-29 14:43:26 Error: actCheck:
+2014-03-29 14:43:26 Error: act:0
+2014-03-29 14:43:26 Error: use_act:
+2014-03-29 14:43:26 Error: actFusoku:
+2014-03-29 14:43:39 Error: ownerId:1
+2014-03-29 14:43:39 Error: className:Stages
+2014-03-29 14:43:39 Error: userId:17
+2014-03-29 14:43:39 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:43:42 Error: ownerId:1
+2014-03-29 14:43:42 Error: className:Stages
+2014-03-29 14:43:42 Error: userId:17
+2014-03-29 14:43:45 Error: ownerId:1
+2014-03-29 14:43:45 Error: className:Stages
+2014-03-29 14:43:45 Error: userId:17
+2014-03-29 14:43:45 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:44:33 Error: ownerId:
+2014-03-29 14:44:33 Error: className:Stages
+2014-03-29 14:52:17 Error: ownerId:1
+2014-03-29 14:52:17 Error: className:Stages
+2014-03-29 14:52:17 Error: userId:17
+2014-03-29 14:52:17 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:52:26 Error: ownerId:1
+2014-03-29 14:52:26 Error: className:Stages
+2014-03-29 14:52:26 Error: userId:17
+2014-03-29 14:52:26 Error: [MissingActionException] Action StagesController::Stages() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'Stages',
+)
+Request URL: /index.php/Stages/Stages/conf?stage_id=
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 14:52:26 Error: ownerId:1
+2014-03-29 14:52:26 Error: className:CakeError
+2014-03-29 14:52:26 Error: userIdErr:0
+2014-03-29 14:52:26 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 14:52:27 Error: ownerId:1
+2014-03-29 14:52:27 Error: className:Errors
+2014-03-29 14:52:27 Error: userId:0
+2014-03-29 14:52:32 Error: ownerId:1
+2014-03-29 14:52:32 Error: className:Stages
+2014-03-29 14:52:32 Error: userId:17
+2014-03-29 14:52:32 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:53:12 Error: ownerId:
+2014-03-29 14:53:12 Error: className:Stages
+2014-03-29 14:53:13 Error: ownerId:
+2014-03-29 14:53:13 Error: className:Errors
+2014-03-29 14:53:13 Error: userId:0
+2014-03-29 14:54:37 Error: ownerId:1
+2014-03-29 14:54:37 Error: className:Stages
+2014-03-29 14:54:37 Error: userId:17
+2014-03-29 14:54:37 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:54:42 Error: ownerId:1
+2014-03-29 14:54:42 Error: className:Stages
+2014-03-29 14:54:42 Error: userId:17
+2014-03-29 14:54:42 Error: [MissingActionException] Action StagesController::Stages() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'Stages',
+)
+Request URL: /index.php/Stages/Stages/conf?stage_id=
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 14:54:42 Error: ownerId:1
+2014-03-29 14:54:42 Error: className:CakeError
+2014-03-29 14:54:42 Error: userIdErr:0
+2014-03-29 14:54:42 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 14:54:42 Error: ownerId:1
+2014-03-29 14:54:42 Error: className:Errors
+2014-03-29 14:54:42 Error: userId:0
+2014-03-29 14:58:33 Error: ownerId:1
+2014-03-29 14:58:33 Error: className:Stages
+2014-03-29 14:58:33 Error: userId:17
+2014-03-29 14:58:33 Error: [MissingActionException] Action StagesController::Stages() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'Stages',
+)
+Request URL: /index.php/Stages/Stages/conf?stage_id=
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 14:58:33 Error: ownerId:1
+2014-03-29 14:58:33 Error: className:CakeError
+2014-03-29 14:58:33 Error: userIdErr:0
+2014-03-29 14:58:33 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 14:58:33 Error: ownerId:1
+2014-03-29 14:58:33 Error: className:Errors
+2014-03-29 14:58:33 Error: userId:0
+2014-03-29 14:58:58 Error: ownerId:1
+2014-03-29 14:58:58 Error: className:Stages
+2014-03-29 14:58:58 Error: userId:17
+2014-03-29 14:58:58 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 14:59:00 Error: ownerId:1
+2014-03-29 14:59:00 Error: className:Stages
+2014-03-29 14:59:00 Error: userId:17
+2014-03-29 14:59:10 Error: ownerId:1
+2014-03-29 14:59:10 Error: className:Stages
+2014-03-29 14:59:10 Error: userId:17
+2014-03-29 14:59:11 Error: ownerId:1
+2014-03-29 14:59:11 Error: className:File
+2014-03-29 14:59:11 Error: userId:17
+2014-03-29 14:59:11 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 14:59:24 Error: ownerId:1
+2014-03-29 14:59:24 Error: className:Stages
+2014-03-29 14:59:24 Error: userId:17
+2014-03-29 14:59:24 Error: ownerId:1
+2014-03-29 14:59:24 Error: className:File
+2014-03-29 14:59:24 Error: userId:17
+2014-03-29 14:59:24 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 14:59:24 Error: ownerId:1
+2014-03-29 14:59:24 Error: className:File
+2014-03-29 14:59:24 Error: userId:17
+2014-03-29 14:59:24 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 14:59:36 Error: ownerId:1
+2014-03-29 14:59:36 Error: className:Stages
+2014-03-29 14:59:36 Error: userId:17
+2014-03-29 15:00:00 Error: ownerId:1
+2014-03-29 15:00:00 Error: className:Stages
+2014-03-29 15:00:00 Error: userId:17
+2014-03-29 15:00:00 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 15:00:29 Error: ownerId:
+2014-03-29 15:00:29 Error: className:File
+2014-03-29 15:00:32 Error: ownerId:
+2014-03-29 15:00:32 Error: className:Stages
+2014-03-29 15:00:33 Error: ownerId:1
+2014-03-29 15:00:33 Error: className:Stages
+2014-03-29 15:00:33 Error: userId:17
+2014-03-29 15:00:33 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 15:00:40 Error: ownerId:1
+2014-03-29 15:00:40 Error: className:Stages
+2014-03-29 15:00:40 Error: userId:17
+2014-03-29 15:01:01 Error: ownerId:1
+2014-03-29 15:01:01 Error: className:Stages
+2014-03-29 15:01:02 Error: userId:17
+2014-03-29 15:01:06 Error: ownerId:1
+2014-03-29 15:01:06 Error: className:Stages
+2014-03-29 15:01:06 Error: userId:17
+2014-03-29 15:01:06 Error: ownerId:1
+2014-03-29 15:01:06 Error: className:File
+2014-03-29 15:01:06 Error: userId:17
+2014-03-29 15:01:06 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:01:07 Error: ownerId:1
+2014-03-29 15:01:07 Error: className:File
+2014-03-29 15:01:07 Error: userId:17
+2014-03-29 15:01:07 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:01:09 Error: ownerId:1
+2014-03-29 15:01:09 Error: className:Stages
+2014-03-29 15:01:09 Error: userId:17
+2014-03-29 15:01:09 Error: ownerId:1
+2014-03-29 15:01:09 Error: className:File
+2014-03-29 15:01:09 Error: userId:17
+2014-03-29 15:01:09 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:01:10 Error: ownerId:1
+2014-03-29 15:01:10 Error: className:Stages
+2014-03-29 15:01:10 Error: userId:17
+2014-03-29 15:01:11 Error: ownerId:1
+2014-03-29 15:01:11 Error: className:File
+2014-03-29 15:01:11 Error: userId:17
+2014-03-29 15:01:11 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:01:12 Error: ownerId:1
+2014-03-29 15:01:12 Error: className:Stages
+2014-03-29 15:01:12 Error: userId:17
+2014-03-29 15:01:12 Error: ownerId:1
+2014-03-29 15:01:12 Error: className:File
+2014-03-29 15:01:12 Error: userId:17
+2014-03-29 15:01:12 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:01:13 Error: ownerId:1
+2014-03-29 15:01:13 Error: className:Stages
+2014-03-29 15:01:13 Error: userId:17
+2014-03-29 15:01:14 Error: ownerId:1
+2014-03-29 15:01:14 Error: className:File
+2014-03-29 15:01:14 Error: userId:17
+2014-03-29 15:01:14 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:08:24 Error: ownerId:
+2014-03-29 15:08:24 Error: className:Stages
+2014-03-29 15:15:20 Error: ownerId:1
+2014-03-29 15:15:20 Error: className:Stages
+2014-03-29 15:15:20 Error: userId:17
+2014-03-29 15:15:21 Error: ownerId:1
+2014-03-29 15:15:21 Error: className:File
+2014-03-29 15:15:21 Error: userId:17
+2014-03-29 15:15:21 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:15:55 Error: ownerId:1
+2014-03-29 15:15:55 Error: className:Stages
+2014-03-29 15:15:55 Error: userId:17
+2014-03-29 15:15:55 Error: ownerId:1
+2014-03-29 15:15:55 Error: className:File
+2014-03-29 15:15:55 Error: userId:17
+2014-03-29 15:15:55 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:15:58 Error: ownerId:1
+2014-03-29 15:15:58 Error: className:Stages
+2014-03-29 15:15:58 Error: userId:17
+2014-03-29 15:15:58 Error: ownerId:1
+2014-03-29 15:15:58 Error: className:File
+2014-03-29 15:15:58 Error: userId:17
+2014-03-29 15:15:58 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:16:04 Error: ownerId:1
+2014-03-29 15:16:04 Error: className:Stages
+2014-03-29 15:16:04 Error: userId:17
+2014-03-29 15:16:05 Error: ownerId:1
+2014-03-29 15:16:05 Error: className:File
+2014-03-29 15:16:05 Error: userId:17
+2014-03-29 15:16:05 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:16:06 Error: ownerId:1
+2014-03-29 15:16:06 Error: className:Stages
+2014-03-29 15:16:06 Error: userId:17
+2014-03-29 15:16:06 Error: ownerId:1
+2014-03-29 15:16:06 Error: className:File
+2014-03-29 15:16:06 Error: userId:17
+2014-03-29 15:16:06 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:21:56 Error: ownerId:1
+2014-03-29 15:21:56 Error: className:Stages
+2014-03-29 15:21:56 Error: userId:17
+2014-03-29 15:21:57 Error: ownerId:1
+2014-03-29 15:21:57 Error: className:File
+2014-03-29 15:21:57 Error: userId:17
+2014-03-29 15:21:57 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:23:07 Error: ownerId:1
+2014-03-29 15:23:07 Error: className:Stages
+2014-03-29 15:23:07 Error: userId:17
+2014-03-29 15:23:08 Error: ownerId:1
+2014-03-29 15:23:08 Error: className:File
+2014-03-29 15:23:08 Error: userId:17
+2014-03-29 15:23:08 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:23:10 Error: ownerId:1
+2014-03-29 15:23:10 Error: className:Stages
+2014-03-29 15:23:10 Error: userId:17
+2014-03-29 15:23:10 Error: ownerId:1
+2014-03-29 15:23:10 Error: className:File
+2014-03-29 15:23:10 Error: userId:17
+2014-03-29 15:23:10 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:24:46 Error: ownerId:1
+2014-03-29 15:24:46 Error: className:Stages
+2014-03-29 15:24:46 Error: userId:17
+2014-03-29 15:24:46 Error: ownerId:1
+2014-03-29 15:24:46 Error: className:File
+2014-03-29 15:24:46 Error: userId:17
+2014-03-29 15:24:46 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:26:48 Error: ownerId:1
+2014-03-29 15:26:48 Error: className:Stages
+2014-03-29 15:26:48 Error: userId:17
+2014-03-29 15:26:48 Error: ownerId:1
+2014-03-29 15:26:48 Error: className:File
+2014-03-29 15:26:48 Error: userId:17
+2014-03-29 15:26:48 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:34:13 Error: ownerId:1
+2014-03-29 15:34:13 Error: className:Stages
+2014-03-29 15:34:13 Error: userId:17
+2014-03-29 15:34:14 Error: ownerId:1
+2014-03-29 15:34:14 Error: className:File
+2014-03-29 15:34:14 Error: userId:17
+2014-03-29 15:34:14 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:34:16 Error: ownerId:1
+2014-03-29 15:34:16 Error: className:Stages
+2014-03-29 15:34:16 Error: userId:17
+2014-03-29 15:34:17 Error: ownerId:1
+2014-03-29 15:34:17 Error: className:File
+2014-03-29 15:34:17 Error: userId:17
+2014-03-29 15:34:17 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:34:20 Error: ownerId:1
+2014-03-29 15:34:20 Error: className:Stages
+2014-03-29 15:34:20 Error: userId:17
+2014-03-29 15:34:20 Error: ownerId:1
+2014-03-29 15:34:20 Error: className:File
+2014-03-29 15:34:20 Error: userId:17
+2014-03-29 15:34:20 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:34:24 Error: ownerId:1
+2014-03-29 15:34:24 Error: className:Stages
+2014-03-29 15:34:24 Error: userId:17
+2014-03-29 15:34:25 Error: ownerId:1
+2014-03-29 15:34:25 Error: className:File
+2014-03-29 15:34:25 Error: userId:17
+2014-03-29 15:34:25 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:35:01 Error: ownerId:1
+2014-03-29 15:35:01 Error: className:Stages
+2014-03-29 15:35:01 Error: userId:17
+2014-03-29 15:35:02 Error: ownerId:1
+2014-03-29 15:35:02 Error: className:File
+2014-03-29 15:35:02 Error: userId:17
+2014-03-29 15:35:02 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:35:03 Error: ownerId:1
+2014-03-29 15:35:03 Error: className:Stages
+2014-03-29 15:35:03 Error: userId:17
+2014-03-29 15:35:03 Error: ownerId:1
+2014-03-29 15:35:03 Error: className:File
+2014-03-29 15:35:03 Error: userId:17
+2014-03-29 15:35:03 Error: File not Exists path:/var/www/asns/app/Private/scene/scene_bf_.jpg: userId :17
+2014-03-29 15:35:07 Error: ownerId:
+2014-03-29 15:35:07 Error: className:Stages
+2014-03-29 15:35:07 Error: ownerId:
+2014-03-29 15:35:07 Error: className:File
+2014-03-29 15:35:12 Error: ownerId:1
+2014-03-29 15:35:12 Error: className:Stages
+2014-03-29 15:35:12 Error: userId:17
+2014-03-29 15:35:13 Error: ownerId:1
+2014-03-29 15:35:13 Error: className:File
+2014-03-29 15:35:13 Error: userId:17
+2014-03-29 15:35:13 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:36:31 Error: ownerId:
+2014-03-29 15:36:31 Error: className:File
+2014-03-29 15:41:43 Error: ownerId:1
+2014-03-29 15:41:43 Error: className:Stages
+2014-03-29 15:41:43 Error: userId:17
+2014-03-29 15:41:43 Error: ownerId:1
+2014-03-29 15:41:43 Error: className:File
+2014-03-29 15:41:43 Error: userId:17
+2014-03-29 15:41:43 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:41:47 Error: ownerId:1
+2014-03-29 15:41:47 Error: className:Stages
+2014-03-29 15:41:47 Error: userId:17
+2014-03-29 15:41:48 Error: ownerId:1
+2014-03-29 15:41:48 Error: className:File
+2014-03-29 15:41:48 Error: userId:17
+2014-03-29 15:41:48 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:46:28 Error: ownerId:1
+2014-03-29 15:46:28 Error: className:Stages
+2014-03-29 15:46:28 Error: userId:17
+2014-03-29 15:46:28 Error: ownerId:1
+2014-03-29 15:46:28 Error: className:File
+2014-03-29 15:46:28 Error: userId:17
+2014-03-29 15:46:28 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:46:31 Error: ownerId:1
+2014-03-29 15:46:31 Error: className:Stages
+2014-03-29 15:46:31 Error: userId:17
+2014-03-29 15:46:32 Error: ownerId:1
+2014-03-29 15:46:32 Error: className:File
+2014-03-29 15:46:32 Error: userId:17
+2014-03-29 15:46:32 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:46:44 Error: ownerId:1
+2014-03-29 15:46:44 Error: className:Stages
+2014-03-29 15:46:44 Error: userId:17
+2014-03-29 15:46:45 Error: ownerId:1
+2014-03-29 15:46:45 Error: className:File
+2014-03-29 15:46:45 Error: userId:17
+2014-03-29 15:46:45 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:48:16 Error: ownerId:
+2014-03-29 15:48:16 Error: className:File
+2014-03-29 15:51:11 Error: ownerId:1
+2014-03-29 15:51:11 Error: className:Stages
+2014-03-29 15:51:11 Error: userId:17
+2014-03-29 15:51:12 Error: ownerId:1
+2014-03-29 15:51:12 Error: className:File
+2014-03-29 15:51:12 Error: userId:17
+2014-03-29 15:51:12 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:51:23 Error: ownerId:1
+2014-03-29 15:51:23 Error: className:Stages
+2014-03-29 15:51:23 Error: userId:17
+2014-03-29 15:51:24 Error: ownerId:1
+2014-03-29 15:51:24 Error: className:File
+2014-03-29 15:51:24 Error: userId:17
+2014-03-29 15:51:24 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 15:51:50 Error: ownerId:1
+2014-03-29 15:51:50 Error: className:Stages
+2014-03-29 15:51:50 Error: userId:17
+2014-03-29 15:51:50 Error: ownerId:1
+2014-03-29 15:51:50 Error: className:Stages
+2014-03-29 15:51:50 Error: userId:17
+2014-03-29 15:51:58 Error: ownerId:1
+2014-03-29 15:51:58 Error: className:Stages
+2014-03-29 15:51:58 Error: userId:17
+2014-03-29 15:53:13 Error: ownerId:
+2014-03-29 15:53:13 Error: className:Stages
+2014-03-29 15:53:21 Error: ownerId:
+2014-03-29 15:53:21 Error: className:Stages
+2014-03-29 16:06:53 Error: ownerId:
+2014-03-29 16:06:53 Error: className:File
+2014-03-29 16:13:43 Error: ownerId:1
+2014-03-29 16:13:43 Error: className:Errors
+2014-03-29 16:13:43 Error: userId:0
+2014-03-29 16:19:32 Error: ownerId:1
+2014-03-29 16:19:32 Error: className:Stages
+2014-03-29 16:19:32 Error: userId:17
+2014-03-29 16:19:50 Error: ownerId:1
+2014-03-29 16:19:50 Error: className:Stages
+2014-03-29 16:19:50 Error: userId:17
+2014-03-29 16:19:53 Error: ownerId:1
+2014-03-29 16:19:53 Error: className:Stages
+2014-03-29 16:19:53 Error: userId:17
+2014-03-29 16:20:11 Error: ownerId:1
+2014-03-29 16:20:11 Error: className:Stages
+2014-03-29 16:20:11 Error: userId:17
+2014-03-29 16:20:13 Error: ownerId:1
+2014-03-29 16:20:13 Error: className:Stages
+2014-03-29 16:20:13 Error: userId:17
+2014-03-29 16:20:25 Error: ownerId:1
+2014-03-29 16:20:25 Error: className:Stages
+2014-03-29 16:20:25 Error: userId:17
+2014-03-29 16:20:27 Error: ownerId:1
+2014-03-29 16:20:27 Error: className:Stages
+2014-03-29 16:20:27 Error: userId:17
+2014-03-29 16:20:39 Error: ownerId:
+2014-03-29 16:20:39 Error: className:Stages
+2014-03-29 16:20:52 Error: ownerId:1
+2014-03-29 16:20:52 Error: className:Stages
+2014-03-29 16:20:52 Error: userId:17
+2014-03-29 16:21:00 Error: ownerId:1
+2014-03-29 16:21:00 Error: className:Stages
+2014-03-29 16:21:00 Error: userId:17
+2014-03-29 16:25:02 Error: ownerId:1
+2014-03-29 16:25:02 Error: className:Stages
+2014-03-29 16:25:02 Error: userId:17
+2014-03-29 17:22:57 Error: ownerId:1
+2014-03-29 17:22:57 Error: className:Errors
+2014-03-29 17:22:57 Error: userId:0
+2014-03-29 19:19:03 Error: ownerId:
+2014-03-29 19:19:03 Error: className:SnsUsers
+2014-03-29 19:19:04 Error: ownerId:
+2014-03-29 19:19:04 Error: className:SnsUsers
+2014-03-29 19:19:05 Error: ownerId:
+2014-03-29 19:19:05 Error: className:SnsUsers
+2014-03-29 20:17:58 Error: ownerId:10
+2014-03-29 20:17:58 Error: className:SnsUsers
+2014-03-29 20:17:58 Error: userId:45
+2014-03-29 20:18:00 Error: ownerId:10
+2014-03-29 20:18:00 Error: className:Quests
+2014-03-29 20:18:00 Error: userId:45
+2014-03-29 20:18:02 Error: ownerId:10
+2014-03-29 20:18:02 Error: className:Stages
+2014-03-29 20:18:02 Error: userId:45
+2014-03-29 20:18:03 Error: ownerId:10
+2014-03-29 20:18:03 Error: className:Stages
+2014-03-29 20:18:03 Error: userId:45
+2014-03-29 20:18:03 Error: ownerId:10
+2014-03-29 20:18:03 Error: className:Stages
+2014-03-29 20:18:03 Error: userId:45
+2014-03-29 20:18:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 20:18:10 Error: ownerId:10
+2014-03-29 20:18:10 Error: className:Stages
+2014-03-29 20:18:10 Error: userId:45
+2014-03-29 20:18:10 Error: ownerId:10
+2014-03-29 20:18:10 Error: className:File
+2014-03-29 20:18:10 Error: userId:45
+2014-03-29 20:18:10 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 20:18:17 Error: ownerId:10
+2014-03-29 20:18:17 Error: className:Stages
+2014-03-29 20:18:17 Error: userId:45
+2014-03-29 20:18:17 Error: ownerId:10
+2014-03-29 20:18:17 Error: className:Stages
+2014-03-29 20:18:17 Error: userId:45
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Stages
+2014-03-29 20:21:28 Error: userId:45
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Stages
+2014-03-29 20:21:28 Error: userId:45
+2014-03-29 20:21:28 Error: [MissingActionException] Action StagesController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'js',
+)
+Request URL: /index.php/Stages/js/evolution.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:CakeError
+2014-03-29 20:21:28 Error: userIdErr:0
+2014-03-29 20:21:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Stages
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Stages
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Stages
+2014-03-29 20:21:28 Error: userId:45
+2014-03-29 20:21:28 Error: userId:45
+2014-03-29 20:21:28 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/easeljs-0.7.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:CakeError
+2014-03-29 20:21:28 Error: userIdErr:0
+2014-03-29 20:21:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:21:28 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/tweenjs-0.5.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:21:28 Error: userId:45
+2014-03-29 20:21:28 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Errors
+2014-03-29 20:21:28 Error: userId:0
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:CakeError
+2014-03-29 20:21:28 Error: userIdErr:0
+2014-03-29 20:21:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:CakeError
+2014-03-29 20:21:28 Error: userIdErr:0
+2014-03-29 20:21:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Errors
+2014-03-29 20:21:28 Error: userId:0
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Errors
+2014-03-29 20:21:28 Error: userId:0
+2014-03-29 20:21:28 Error: ownerId:10
+2014-03-29 20:21:28 Error: className:Errors
+2014-03-29 20:21:28 Error: userId:0
+2014-03-29 20:28:00 Error: ownerId:10
+2014-03-29 20:28:00 Error: className:Stages
+2014-03-29 20:28:00 Error: userId:45
+2014-03-29 20:28:00 Error: ownerId:10
+2014-03-29 20:28:00 Error: className:Stages
+2014-03-29 20:28:00 Error: userId:45
+2014-03-29 20:28:00 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:00 Error: ownerId:10
+2014-03-29 20:28:00 Error: className:CakeError
+2014-03-29 20:28:00 Error: userIdErr:0
+2014-03-29 20:28:00 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:00 Error: ownerId:10
+2014-03-29 20:28:00 Error: className:Stages
+2014-03-29 20:28:00 Error: ownerId:10
+2014-03-29 20:28:00 Error: className:Stages
+2014-03-29 20:28:00 Error: userId:45
+2014-03-29 20:28:01 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/tweenjs-0.5.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:CakeError
+2014-03-29 20:28:01 Error: userIdErr:0
+2014-03-29 20:28:01 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:01 Error: userId:45
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:Stages
+2014-03-29 20:28:01 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/easeljs-0.7.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:CakeError
+2014-03-29 20:28:01 Error: userIdErr:0
+2014-03-29 20:28:01 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:01 Error: userId:45
+2014-03-29 20:28:01 Error: [MissingActionException] Action StagesController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'js',
+)
+Request URL: /index.php/Stages/js/evolution.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:CakeError
+2014-03-29 20:28:01 Error: userIdErr:0
+2014-03-29 20:28:01 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:Errors
+2014-03-29 20:28:01 Error: userId:0
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:Errors
+2014-03-29 20:28:01 Error: userId:0
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:Errors
+2014-03-29 20:28:01 Error: userId:0
+2014-03-29 20:28:01 Error: ownerId:10
+2014-03-29 20:28:01 Error: className:Errors
+2014-03-29 20:28:01 Error: userId:0
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:Stages
+2014-03-29 20:28:07 Error: userId:45
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:Stages
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:Stages
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:Stages
+2014-03-29 20:28:07 Error: userId:45
+2014-03-29 20:28:07 Error: userId:45
+2014-03-29 20:28:07 Error: userId:45
+2014-03-29 20:28:07 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:07 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/easeljs-0.7.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:CakeError
+2014-03-29 20:28:07 Error: userIdErr:0
+2014-03-29 20:28:07 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:CakeError
+2014-03-29 20:28:07 Error: userIdErr:0
+2014-03-29 20:28:07 Error: [MissingActionException] Action StagesController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'js',
+)
+Request URL: /index.php/Stages/js/evolution.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:07 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:07 Error: ownerId:10
+2014-03-29 20:28:07 Error: className:CakeError
+2014-03-29 20:28:07 Error: userIdErr:0
+2014-03-29 20:28:07 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:Errors
+2014-03-29 20:28:08 Error: userId:0
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:Errors
+2014-03-29 20:28:08 Error: userId:0
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:Stages
+2014-03-29 20:28:08 Error: userId:45
+2014-03-29 20:28:08 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/tweenjs-0.5.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:CakeError
+2014-03-29 20:28:08 Error: userIdErr:0
+2014-03-29 20:28:08 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:Errors
+2014-03-29 20:28:08 Error: userId:0
+2014-03-29 20:28:08 Error: ownerId:10
+2014-03-29 20:28:08 Error: className:Errors
+2014-03-29 20:28:08 Error: userId:0
+2014-03-29 20:29:01 Error: ownerId:10
+2014-03-29 20:29:01 Error: className:Stages
+2014-03-29 20:29:01 Error: userId:45
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Stages
+2014-03-29 20:29:14 Error: userId:45
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Stages
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Stages
+2014-03-29 20:29:14 Error: userId:45
+2014-03-29 20:29:14 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:CakeError
+2014-03-29 20:29:14 Error: userIdErr:0
+2014-03-29 20:29:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:29:14 Error: userId:45
+2014-03-29 20:29:14 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/easeljs-0.7.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:CakeError
+2014-03-29 20:29:14 Error: userIdErr:0
+2014-03-29 20:29:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Stages
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Stages
+2014-03-29 20:29:14 Error: userId:45
+2014-03-29 20:29:14 Error: userId:45
+2014-03-29 20:29:14 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/tweenjs-0.5.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:CakeError
+2014-03-29 20:29:14 Error: userIdErr:0
+2014-03-29 20:29:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:29:14 Error: [MissingActionException] Action StagesController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'js',
+)
+Request URL: /index.php/Stages/js/evolution.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:CakeError
+2014-03-29 20:29:14 Error: userIdErr:0
+2014-03-29 20:29:14 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:29:14 Error: ownerId:10
+2014-03-29 20:29:14 Error: className:Errors
+2014-03-29 20:29:14 Error: userId:0
+2014-03-29 20:29:15 Error: ownerId:10
+2014-03-29 20:29:15 Error: className:Errors
+2014-03-29 20:29:15 Error: userId:0
+2014-03-29 20:29:15 Error: ownerId:10
+2014-03-29 20:29:15 Error: className:Errors
+2014-03-29 20:29:15 Error: userId:0
+2014-03-29 20:29:15 Error: ownerId:10
+2014-03-29 20:29:15 Error: className:Errors
+2014-03-29 20:29:15 Error: userId:0
+2014-03-29 20:33:24 Error: ownerId:10
+2014-03-29 20:33:24 Error: className:Errors
+2014-03-29 20:33:24 Error: userId:0
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Stages
+2014-03-29 20:33:36 Error: userId:45
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Stages
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Stages
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Stages
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Stages
+2014-03-29 20:33:36 Error: userId:45
+2014-03-29 20:33:36 Error: userId:45
+2014-03-29 20:33:36 Error: userId:45
+2014-03-29 20:33:36 Error: [MissingActionException] Action StagesController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'js',
+)
+Request URL: /index.php/Stages/js/evolution.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:33:36 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/easeljs-0.7.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:CakeError
+2014-03-29 20:33:36 Error: userIdErr:0
+2014-03-29 20:33:36 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:CakeError
+2014-03-29 20:33:36 Error: userIdErr:0
+2014-03-29 20:33:36 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:33:36 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:CakeError
+2014-03-29 20:33:36 Error: userIdErr:0
+2014-03-29 20:33:36 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:33:36 Error: userId:45
+2014-03-29 20:33:36 Error: [MissingActionException] Action StagesController::libs() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'libs',
+)
+Request URL: /index.php/Stages/libs/tweenjs-0.5.1.min.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:CakeError
+2014-03-29 20:33:36 Error: userIdErr:0
+2014-03-29 20:33:36 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:33:36 Error: ownerId:10
+2014-03-29 20:33:36 Error: className:Errors
+2014-03-29 20:33:36 Error: userId:0
+2014-03-29 20:33:37 Error: ownerId:10
+2014-03-29 20:33:37 Error: className:Errors
+2014-03-29 20:33:37 Error: userId:0
+2014-03-29 20:33:37 Error: ownerId:10
+2014-03-29 20:33:37 Error: className:Errors
+2014-03-29 20:33:37 Error: userId:0
+2014-03-29 20:33:37 Error: ownerId:10
+2014-03-29 20:33:37 Error: className:Errors
+2014-03-29 20:33:37 Error: userId:0
+2014-03-29 20:51:18 Error: ownerId:10
+2014-03-29 20:51:18 Error: className:Stages
+2014-03-29 20:51:18 Error: userId:45
+2014-03-29 20:51:18 Error: ownerId:10
+2014-03-29 20:51:18 Error: className:Stages
+2014-03-29 20:51:18 Error: userId:45
+2014-03-29 20:51:18 Error: [MissingActionException] Action StagesController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'css',
+)
+Request URL: /index.php/Stages/css/evolution.css
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 20:51:18 Error: ownerId:10
+2014-03-29 20:51:18 Error: className:CakeError
+2014-03-29 20:51:18 Error: userIdErr:0
+2014-03-29 20:51:18 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 20:51:18 Error: ownerId:10
+2014-03-29 20:51:18 Error: className:Errors
+2014-03-29 20:51:18 Error: userId:0
+2014-03-29 20:52:26 Error: ownerId:10
+2014-03-29 20:52:26 Error: className:Stages
+2014-03-29 20:52:26 Error: userId:45
+2014-03-29 20:54:13 Error: ownerId:10
+2014-03-29 20:54:13 Error: className:Stages
+2014-03-29 20:54:13 Error: userId:45
+2014-03-29 20:58:17 Error: ownerId:
+2014-03-29 20:58:17 Error: className:SnsUsers
+2014-03-29 20:58:17 Error: ownerId:
+2014-03-29 20:58:17 Error: className:SnsUsers
+2014-03-29 20:58:18 Error: ownerId:
+2014-03-29 20:58:18 Error: className:SnsUsers
+2014-03-29 20:58:18 Error: ownerId:
+2014-03-29 20:58:18 Error: className:SnsUsers
+2014-03-29 20:58:19 Error: ownerId:
+2014-03-29 20:58:19 Error: className:SnsUsers
+2014-03-29 20:58:19 Error: ownerId:
+2014-03-29 20:58:19 Error: className:SnsUsers
+2014-03-29 21:07:56 Error: ownerId:1
+2014-03-29 21:07:56 Error: className:SnsUsers
+2014-03-29 21:07:56 Error: userId:17
+2014-03-29 21:08:00 Error: ownerId:1
+2014-03-29 21:08:00 Error: className:Quests
+2014-03-29 21:08:00 Error: userId:17
+2014-03-29 21:08:03 Error: ownerId:1
+2014-03-29 21:08:03 Error: className:Stages
+2014-03-29 21:08:03 Error: userId:17
+2014-03-29 21:08:04 Error: ownerId:1
+2014-03-29 21:08:04 Error: className:Stages
+2014-03-29 21:08:04 Error: userId:17
+2014-03-29 21:08:05 Error: ownerId:1
+2014-03-29 21:08:05 Error: className:Stages
+2014-03-29 21:08:05 Error: userId:17
+2014-03-29 21:08:05 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 21:08:14 Error: ownerId:1
+2014-03-29 21:08:14 Error: className:Stages
+2014-03-29 21:08:14 Error: userId:17
+2014-03-29 21:08:15 Error: ownerId:1
+2014-03-29 21:08:15 Error: className:File
+2014-03-29 21:08:15 Error: userId:17
+2014-03-29 21:08:15 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 21:08:17 Error: ownerId:1
+2014-03-29 21:08:17 Error: className:Stages
+2014-03-29 21:08:17 Error: userId:17
+2014-03-29 21:08:17 Error: ownerId:1
+2014-03-29 21:08:17 Error: className:Stages
+2014-03-29 21:08:17 Error: userId:17
+2014-03-29 21:09:15 Error: ownerId:
+2014-03-29 21:09:15 Error: className:SnsUsers
+2014-03-29 21:09:15 Error: ownerId:
+2014-03-29 21:09:15 Error: className:Errors
+2014-03-29 21:09:15 Error: userId:0
+2014-03-29 21:11:27 Error: ownerId:
+2014-03-29 21:11:27 Error: className:Errors
+2014-03-29 21:11:27 Error: userId:0
+2014-03-29 21:11:31 Error: ownerId:
+2014-03-29 21:11:31 Error: className:Errors
+2014-03-29 21:11:31 Error: userId:0
+2014-03-29 21:12:27 Error: [MissingControllerException] Controller class Apple-touch-icon-120x120-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-120x120-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon-120x120-precomposed.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:27 Error: ownerId:
+2014-03-29 21:12:27 Error: className:CakeError
+2014-03-29 21:12:27 Error: userIdErr:0
+2014-03-29 21:12:27 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:27 Error: ownerId:
+2014-03-29 21:12:27 Error: className:Errors
+2014-03-29 21:12:27 Error: userId:0
+2014-03-29 21:12:28 Error: [MissingControllerException] Controller class Apple-touch-icon-120x120.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-120x120.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon-120x120.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:28 Error: ownerId:
+2014-03-29 21:12:28 Error: className:CakeError
+2014-03-29 21:12:28 Error: userIdErr:0
+2014-03-29 21:12:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:28 Error: ownerId:
+2014-03-29 21:12:28 Error: className:Errors
+2014-03-29 21:12:28 Error: userId:0
+2014-03-29 21:12:28 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:28 Error: ownerId:
+2014-03-29 21:12:28 Error: className:CakeError
+2014-03-29 21:12:28 Error: userIdErr:0
+2014-03-29 21:12:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:28 Error: ownerId:
+2014-03-29 21:12:28 Error: className:Errors
+2014-03-29 21:12:28 Error: userId:0
+2014-03-29 21:12:29 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:29 Error: ownerId:
+2014-03-29 21:12:29 Error: className:CakeError
+2014-03-29 21:12:29 Error: userIdErr:0
+2014-03-29 21:12:29 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:29 Error: ownerId:
+2014-03-29 21:12:29 Error: className:Errors
+2014-03-29 21:12:29 Error: userId:0
+2014-03-29 21:12:32 Error: ownerId:
+2014-03-29 21:12:32 Error: className:Errors
+2014-03-29 21:12:32 Error: userId:0
+2014-03-29 21:12:33 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:33 Error: ownerId:
+2014-03-29 21:12:33 Error: className:CakeError
+2014-03-29 21:12:33 Error: userIdErr:0
+2014-03-29 21:12:33 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:33 Error: ownerId:
+2014-03-29 21:12:33 Error: className:Errors
+2014-03-29 21:12:33 Error: userId:0
+2014-03-29 21:12:33 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:33 Error: ownerId:
+2014-03-29 21:12:33 Error: className:CakeError
+2014-03-29 21:12:33 Error: userIdErr:0
+2014-03-29 21:12:33 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:33 Error: ownerId:
+2014-03-29 21:12:33 Error: className:Errors
+2014-03-29 21:12:33 Error: userId:0
+2014-03-29 21:12:43 Error: ownerId:1
+2014-03-29 21:12:43 Error: className:SnsUsers
+2014-03-29 21:12:43 Error: userId:17
+2014-03-29 21:12:43 Error: [MissingControllerException] Controller class Apple-touch-icon-precomposed.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon-precomposed.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon-precomposed.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:43 Error: ownerId:
+2014-03-29 21:12:43 Error: className:CakeError
+2014-03-29 21:12:43 Error: userIdErr:0
+2014-03-29 21:12:43 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:43 Error: ownerId:
+2014-03-29 21:12:43 Error: className:Errors
+2014-03-29 21:12:43 Error: userId:0
+2014-03-29 21:12:44 Error: [MissingControllerException] Controller class Apple-touch-icon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Apple-touch-icon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/apple-touch-icon.png
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-29 21:12:44 Error: ownerId:
+2014-03-29 21:12:44 Error: className:CakeError
+2014-03-29 21:12:44 Error: userIdErr:0
+2014-03-29 21:12:44 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:12:44 Error: ownerId:
+2014-03-29 21:12:44 Error: className:Errors
+2014-03-29 21:12:44 Error: userId:0
+2014-03-29 21:12:48 Error: ownerId:1
+2014-03-29 21:12:48 Error: className:Quests
+2014-03-29 21:12:48 Error: userId:17
+2014-03-29 21:12:49 Error: ownerId:1
+2014-03-29 21:12:49 Error: className:Stages
+2014-03-29 21:12:49 Error: userId:17
+2014-03-29 21:12:51 Error: ownerId:1
+2014-03-29 21:12:51 Error: className:Stages
+2014-03-29 21:12:51 Error: userId:17
+2014-03-29 21:12:52 Error: ownerId:1
+2014-03-29 21:12:52 Error: className:Stages
+2014-03-29 21:12:52 Error: userId:17
+2014-03-29 21:12:52 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-29 21:12:55 Error: ownerId:1
+2014-03-29 21:12:55 Error: className:Stages
+2014-03-29 21:12:55 Error: userId:17
+2014-03-29 21:12:55 Error: ownerId:1
+2014-03-29 21:12:55 Error: className:File
+2014-03-29 21:12:55 Error: userId:17
+2014-03-29 21:12:55 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 21:13:05 Error: ownerId:1
+2014-03-29 21:13:05 Error: className:Stages
+2014-03-29 21:13:05 Error: userId:17
+2014-03-29 21:13:05 Error: ownerId:1
+2014-03-29 21:13:05 Error: className:Stages
+2014-03-29 21:13:05 Error: userId:17
+2014-03-29 21:25:12 Error: ownerId:1
+2014-03-29 21:25:12 Error: className:Stages
+2014-03-29 21:25:12 Error: userId:17
+2014-03-29 21:25:13 Error: ownerId:1
+2014-03-29 21:25:13 Error: className:File
+2014-03-29 21:25:13 Error: userId:17
+2014-03-29 21:25:13 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-29 21:25:15 Error: ownerId:1
+2014-03-29 21:25:15 Error: className:Stages
+2014-03-29 21:25:15 Error: userId:17
+2014-03-29 21:25:15 Error: Fatal Error (1): Call to a member function getCardData() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 206]
+2014-03-29 21:25:15 Error: [FatalErrorException] Call to a member function getCardData() on a non-object
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 206)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-29 21:25:15 Error: ownerId:1
+2014-03-29 21:25:15 Error: className:CakeError
+2014-03-29 21:25:15 Error: userIdErr:0
+2014-03-29 21:25:15 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:25:15 Error: ownerId:1
+2014-03-29 21:25:15 Error: className:Errors
+2014-03-29 21:25:15 Error: userId:0
+2014-03-29 21:25:21 Error: ownerId:1
+2014-03-29 21:25:21 Error: className:Stages
+2014-03-29 21:25:21 Error: userId:17
+2014-03-29 21:25:21 Error: ownerId:1
+2014-03-29 21:25:21 Error: className:Stages
+2014-03-29 21:25:21 Error: userId:17
+2014-03-29 21:25:27 Error: ownerId:1
+2014-03-29 21:25:27 Error: className:Stages
+2014-03-29 21:25:27 Error: userId:17
+2014-03-29 21:25:27 Error: [MissingActionException] Action StagesController::Users() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'Users',
+)
+Request URL: /index.php/Stages/Users/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-29 21:25:27 Error: ownerId:1
+2014-03-29 21:25:27 Error: className:CakeError
+2014-03-29 21:25:27 Error: userIdErr:0
+2014-03-29 21:25:27 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:25:28 Error: ownerId:1
+2014-03-29 21:25:28 Error: className:Errors
+2014-03-29 21:25:28 Error: userId:0
+2014-03-29 21:26:47 Error: ownerId:1
+2014-03-29 21:26:47 Error: className:Stages
+2014-03-29 21:26:47 Error: userId:17
+2014-03-29 21:26:47 Error: Fatal Error (1): Call to a member function getCardData() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 206]
+2014-03-29 21:26:47 Error: [FatalErrorException] Call to a member function getCardData() on a non-object
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 206)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-29 21:26:47 Error: ownerId:1
+2014-03-29 21:26:47 Error: className:CakeError
+2014-03-29 21:26:47 Error: userIdErr:0
+2014-03-29 21:26:47 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:26:48 Error: ownerId:1
+2014-03-29 21:26:48 Error: className:Errors
+2014-03-29 21:26:48 Error: userId:0
+2014-03-29 21:26:53 Error: ownerId:1
+2014-03-29 21:26:53 Error: className:Stages
+2014-03-29 21:26:53 Error: userId:17
+2014-03-29 21:26:53 Error: ownerId:1
+2014-03-29 21:26:53 Error: className:Stages
+2014-03-29 21:26:53 Error: userId:17
+2014-03-29 21:26:59 Error: ownerId:1
+2014-03-29 21:26:59 Error: className:Stages
+2014-03-29 21:26:59 Error: userId:17
+2014-03-29 21:26:59 Error: Fatal Error (1): Call to a member function getBattleLogDataLatest() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 255]
+2014-03-29 21:26:59 Error: [FatalErrorException] Call to a member function getBattleLogDataLatest() on a non-object
+Request URL: /index.php/Stages/comp
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 255)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 255, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 255, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-29 21:26:59 Error: ownerId:1
+2014-03-29 21:26:59 Error: className:CakeError
+2014-03-29 21:26:59 Error: userIdErr:0
+2014-03-29 21:26:59 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:27:00 Error: ownerId:1
+2014-03-29 21:27:00 Error: className:Errors
+2014-03-29 21:27:00 Error: userId:0
+2014-03-29 21:31:00 Error: ownerId:1
+2014-03-29 21:31:00 Error: className:Stages
+2014-03-29 21:31:00 Error: userId:17
+2014-03-29 21:31:00 Error: Fatal Error (1): Call to a member function getCardData() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 206]
+2014-03-29 21:31:00 Error: [FatalErrorException] Call to a member function getCardData() on a non-object
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 206)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 206, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-29 21:31:00 Error: ownerId:1
+2014-03-29 21:31:00 Error: className:CakeError
+2014-03-29 21:31:00 Error: userIdErr:0
+2014-03-29 21:31:00 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-29 21:31:01 Error: ownerId:1
+2014-03-29 21:31:01 Error: className:Errors
+2014-03-29 21:31:01 Error: userId:0
+2014-03-29 21:31:04 Error: ownerId:1
+2014-03-29 21:31:04 Error: className:Stages
+2014-03-29 21:31:04 Error: userId:17
+2014-03-29 21:31:04 Error: ownerId:1
+2014-03-29 21:31:04 Error: className:Stages
+2014-03-29 21:31:04 Error: userId:17
+2014-03-29 21:31:11 Error: ownerId:1
+2014-03-29 21:31:11 Error: className:Stages
+2014-03-29 21:31:11 Error: userId:17
+2014-03-29 22:36:51 Error: ownerId:
+2014-03-29 22:36:51 Error: className:SnsUsers
+2014-03-29 22:36:51 Error: ownerId:
+2014-03-29 22:36:51 Error: className:SnsUsers
+2014-03-29 22:36:52 Error: ownerId:
+2014-03-29 22:36:52 Error: className:SnsUsers
+2014-03-29 23:12:40 Error: ownerId:
+2014-03-29 23:12:40 Error: className:SnsUsers
+2014-03-29 23:12:41 Error: ownerId:
+2014-03-29 23:12:41 Error: className:SnsUsers
+2014-03-29 23:12:42 Error: ownerId:
+2014-03-29 23:12:42 Error: className:SnsUsers
+2014-03-30 03:13:00 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-30 03:13:00 Error: ownerId:
+2014-03-30 03:13:00 Error: className:CakeError
+2014-03-30 03:13:00 Error: userIdErr:0
+2014-03-30 03:13:00 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-30 03:13:01 Error: ownerId:
+2014-03-30 03:13:01 Error: className:Errors
+2014-03-30 03:13:01 Error: userId:0
+2014-03-30 03:13:03 Error: ownerId:
+2014-03-30 03:13:03 Error: className:SnsUsers
+2014-03-30 03:13:05 Error: ownerId:
+2014-03-30 03:13:05 Error: className:Errors
+2014-03-30 03:13:05 Error: userId:0
+2014-03-30 07:03:50 Error: ownerId:1
+2014-03-30 07:03:50 Error: className:Errors
+2014-03-30 07:03:50 Error: userId:0
+2014-03-30 10:07:32 Error: ownerId:10
+2014-03-30 10:07:32 Error: className:Stages
+2014-03-30 10:07:32 Error: userId:45
+2014-03-30 10:07:32 Error: ownerId:10
+2014-03-30 10:07:32 Error: className:File
+2014-03-30 10:07:32 Error: userId:45
+2014-03-30 10:07:32 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:07:37 Error: ownerId:10
+2014-03-30 10:07:37 Error: className:Stages
+2014-03-30 10:07:37 Error: userId:45
+2014-03-30 10:07:38 Error: ownerId:10
+2014-03-30 10:07:38 Error: className:File
+2014-03-30 10:07:38 Error: userId:45
+2014-03-30 10:07:38 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:12:10 Error: ownerId:10
+2014-03-30 10:12:10 Error: className:Stages
+2014-03-30 10:12:10 Error: userId:45
+2014-03-30 10:12:10 Error: ownerId:10
+2014-03-30 10:12:10 Error: className:File
+2014-03-30 10:12:10 Error: userId:45
+2014-03-30 10:12:10 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:13:21 Error: ownerId:10
+2014-03-30 10:13:21 Error: className:Stages
+2014-03-30 10:13:21 Error: userId:45
+2014-03-30 10:13:21 Error: ownerId:10
+2014-03-30 10:13:21 Error: className:File
+2014-03-30 10:13:21 Error: userId:45
+2014-03-30 10:13:21 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:52:10 Error: ownerId:10
+2014-03-30 10:52:10 Error: className:Stages
+2014-03-30 10:52:10 Error: userId:45
+2014-03-30 10:52:10 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 10:52:11 Error: ownerId:10
+2014-03-30 10:52:11 Error: className:File
+2014-03-30 10:52:11 Error: userId:45
+2014-03-30 10:52:11 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:55:54 Error: ownerId:10
+2014-03-30 10:55:54 Error: className:Stages
+2014-03-30 10:55:54 Error: userId:45
+2014-03-30 10:55:55 Error: ownerId:10
+2014-03-30 10:55:55 Error: className:File
+2014-03-30 10:55:55 Error: userId:45
+2014-03-30 10:55:55 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 10:56:13 Error: ownerId:10
+2014-03-30 10:56:13 Error: className:Stages
+2014-03-30 10:56:13 Error: userId:45
+2014-03-30 10:56:13 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 10:56:14 Error: ownerId:10
+2014-03-30 10:56:14 Error: className:File
+2014-03-30 10:56:14 Error: userId:45
+2014-03-30 10:56:14 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:02:32 Error: ownerId:10
+2014-03-30 11:02:32 Error: className:Stages
+2014-03-30 11:02:32 Error: userId:45
+2014-03-30 11:02:32 Error: ownerId:10
+2014-03-30 11:02:32 Error: className:File
+2014-03-30 11:02:32 Error: userId:45
+2014-03-30 11:02:32 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:02:51 Error: ownerId:10
+2014-03-30 11:02:51 Error: className:Stages
+2014-03-30 11:02:51 Error: userId:45
+2014-03-30 11:02:51 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 11:02:53 Error: ownerId:10
+2014-03-30 11:02:53 Error: className:File
+2014-03-30 11:02:53 Error: userId:45
+2014-03-30 11:02:53 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:02:56 Error: ownerId:10
+2014-03-30 11:02:56 Error: className:Stages
+2014-03-30 11:02:56 Error: userId:45
+2014-03-30 11:02:56 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 11:02:56 Error: ownerId:10
+2014-03-30 11:02:56 Error: className:File
+2014-03-30 11:02:56 Error: userId:45
+2014-03-30 11:02:56 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:03:00 Error: ownerId:10
+2014-03-30 11:03:00 Error: className:Stages
+2014-03-30 11:03:00 Error: userId:45
+2014-03-30 11:03:00 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 11:03:00 Error: ownerId:10
+2014-03-30 11:03:00 Error: className:File
+2014-03-30 11:03:00 Error: userId:45
+2014-03-30 11:03:00 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:03:08 Error: ownerId:10
+2014-03-30 11:03:08 Error: className:Stages
+2014-03-30 11:03:08 Error: userId:45
+2014-03-30 11:03:08 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-30 11:03:08 Error: ownerId:10
+2014-03-30 11:03:08 Error: className:File
+2014-03-30 11:03:08 Error: userId:45
+2014-03-30 11:03:08 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-30 11:24:25 Error: ownerId:
+2014-03-30 11:24:25 Error: className:Stages
+2014-03-30 11:24:25 Error: ownerId:
+2014-03-30 11:24:25 Error: className:Errors
+2014-03-30 11:24:25 Error: userId:0
+2014-03-30 17:36:30 Error: ownerId:
+2014-03-30 17:36:30 Error: className:SnsUsers
+2014-03-30 17:36:32 Error: ownerId:
+2014-03-30 17:36:32 Error: className:SnsUsers
+2014-03-30 17:36:34 Error: ownerId:
+2014-03-30 17:36:34 Error: className:SnsUsers
+2014-03-30 21:28:20 Error: ownerId:
+2014-03-30 21:28:20 Error: className:SnsUsers
+2014-03-30 21:28:22 Error: ownerId:
+2014-03-30 21:28:22 Error: className:SnsUsers
+2014-03-30 21:28:24 Error: ownerId:
+2014-03-30 21:28:24 Error: className:SnsUsers
+2014-03-30 23:32:06 Error: ownerId:
+2014-03-30 23:32:06 Error: className:SnsUsers
+2014-03-30 23:32:07 Error: ownerId:
+2014-03-30 23:32:07 Error: className:SnsUsers
+2014-03-30 23:32:08 Error: ownerId:
+2014-03-30 23:32:08 Error: className:SnsUsers
+2014-03-31 01:36:09 Error: ownerId:
+2014-03-31 01:36:09 Error: className:SnsUsers
+2014-03-31 01:36:10 Error: ownerId:
+2014-03-31 01:36:10 Error: className:SnsUsers
+2014-03-31 01:36:11 Error: ownerId:
+2014-03-31 01:36:11 Error: className:SnsUsers
+2014-03-31 05:51:05 Error: ownerId:
+2014-03-31 05:51:05 Error: className:SnsUsers
+2014-03-31 05:51:06 Error: ownerId:
+2014-03-31 05:51:06 Error: className:SnsUsers
+2014-03-31 05:51:07 Error: ownerId:
+2014-03-31 05:51:07 Error: className:SnsUsers
+2014-03-31 07:17:48 Error: ownerId:
+2014-03-31 07:17:48 Error: className:SnsUsers
+2014-03-31 07:17:49 Error: ownerId:
+2014-03-31 07:17:49 Error: className:SnsUsers
+2014-03-31 07:17:50 Error: ownerId:
+2014-03-31 07:17:50 Error: className:SnsUsers
+2014-03-31 08:53:18 Error: ownerId:10
+2014-03-31 08:53:18 Error: className:SnsUsers
+2014-03-31 08:53:18 Error: userId:45
+2014-03-31 08:53:20 Error: ownerId:10
+2014-03-31 08:53:20 Error: className:Quests
+2014-03-31 08:53:20 Error: userId:45
+2014-03-31 08:53:22 Error: ownerId:10
+2014-03-31 08:53:22 Error: className:Stages
+2014-03-31 08:53:22 Error: userId:45
+2014-03-31 08:53:24 Error: ownerId:10
+2014-03-31 08:53:24 Error: className:Stages
+2014-03-31 08:53:24 Error: userId:45
+2014-03-31 08:53:24 Error: ownerId:10
+2014-03-31 08:53:24 Error: className:Stages
+2014-03-31 08:53:24 Error: userId:45
+2014-03-31 08:53:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-31 09:06:35 Error: ownerId:10
+2014-03-31 09:06:35 Error: className:Stages
+2014-03-31 09:06:35 Error: userId:45
+2014-03-31 09:06:35 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:06:35 Error: ownerId:10
+2014-03-31 09:06:35 Error: className:File
+2014-03-31 09:06:35 Error: userId:45
+2014-03-31 09:06:35 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-31 09:06:39 Error: ownerId:10
+2014-03-31 09:06:39 Error: className:Stages
+2014-03-31 09:06:39 Error: userId:45
+2014-03-31 09:06:39 Error: ownerId:10
+2014-03-31 09:06:39 Error: className:Stages
+2014-03-31 09:06:39 Error: userId:45
+2014-03-31 09:06:46 Error: ownerId:10
+2014-03-31 09:06:46 Error: className:Stages
+2014-03-31 09:06:46 Error: userId:45
+2014-03-31 09:10:31 Error: ownerId:10
+2014-03-31 09:10:31 Error: className:Stages
+2014-03-31 09:10:31 Error: userId:45
+2014-03-31 09:10:32 Error: ownerId:10
+2014-03-31 09:10:32 Error: className:Stages
+2014-03-31 09:10:32 Error: userId:45
+2014-03-31 09:10:32 Notice: Notice (8): Undefined variable: data in [/var/www/asns/app/Controller/StagesController.php, line 270]
+Trace:
+StagesController::comp() - APP/Controller/StagesController.php, line 270
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:39:36 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:39:36 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/scene
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:39:36 Error: ownerId:10
+2014-03-31 09:39:36 Error: className:CakeError
+2014-03-31 09:39:36 Error: userIdErr:0
+2014-03-31 09:39:36 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:39:36 Error: ownerId:10
+2014-03-31 09:39:36 Error: className:Errors
+2014-03-31 09:39:36 Error: userId:0
+2014-03-31 09:39:44 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:39:44 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:39:44 Error: ownerId:10
+2014-03-31 09:39:44 Error: className:CakeError
+2014-03-31 09:39:44 Error: userIdErr:0
+2014-03-31 09:39:44 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:39:44 Error: ownerId:10
+2014-03-31 09:39:44 Error: className:Errors
+2014-03-31 09:39:44 Error: userId:0
+2014-03-31 09:39:48 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:39:48 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/conf?stage_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:39:48 Error: ownerId:10
+2014-03-31 09:39:48 Error: className:CakeError
+2014-03-31 09:39:48 Error: userIdErr:0
+2014-03-31 09:39:48 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:39:48 Error: ownerId:10
+2014-03-31 09:39:48 Error: className:Errors
+2014-03-31 09:39:48 Error: userId:0
+2014-03-31 09:39:57 Error: ownerId:10
+2014-03-31 09:39:57 Error: className:Quests
+2014-03-31 09:39:57 Error: userId:45
+2014-03-31 09:40:00 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:40:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:40:00 Error: ownerId:10
+2014-03-31 09:40:00 Error: className:CakeError
+2014-03-31 09:40:00 Error: userIdErr:0
+2014-03-31 09:40:00 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:40:00 Error: ownerId:10
+2014-03-31 09:40:00 Error: className:Errors
+2014-03-31 09:40:00 Error: userId:0
+2014-03-31 09:41:02 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:41:02 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:41:02 Error: ownerId:10
+2014-03-31 09:41:02 Error: className:CakeError
+2014-03-31 09:41:02 Error: userIdErr:0
+2014-03-31 09:41:02 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:41:02 Error: ownerId:10
+2014-03-31 09:41:02 Error: className:Errors
+2014-03-31 09:41:02 Error: userId:0
+2014-03-31 09:44:52 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-31 09:44:52 Error: ownerId:
+2014-03-31 09:44:52 Error: className:CakeError
+2014-03-31 09:44:52 Error: userIdErr:0
+2014-03-31 09:44:52 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:44:52 Error: ownerId:
+2014-03-31 09:44:52 Error: className:Errors
+2014-03-31 09:44:52 Error: userId:0
+2014-03-31 09:45:21 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:45:21 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:45:21 Error: ownerId:10
+2014-03-31 09:45:21 Error: className:CakeError
+2014-03-31 09:45:21 Error: userIdErr:0
+2014-03-31 09:45:21 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:45:21 Error: ownerId:10
+2014-03-31 09:45:21 Error: className:Errors
+2014-03-31 09:45:21 Error: userId:0
+2014-03-31 09:49:47 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 300]
+2014-03-31 09:49:47 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 300)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 300, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:49:47 Error: ownerId:10
+2014-03-31 09:49:47 Error: className:CakeError
+2014-03-31 09:49:47 Error: userIdErr:0
+2014-03-31 09:49:47 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:49:47 Error: ownerId:10
+2014-03-31 09:49:47 Error: className:Errors
+2014-03-31 09:49:47 Error: userId:0
+2014-03-31 09:50:10 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 302]
+2014-03-31 09:50:10 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 302)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:50:10 Error: ownerId:10
+2014-03-31 09:50:10 Error: className:CakeError
+2014-03-31 09:50:10 Error: userIdErr:0
+2014-03-31 09:50:10 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:50:10 Error: ownerId:10
+2014-03-31 09:50:10 Error: className:Errors
+2014-03-31 09:50:10 Error: userId:0
+2014-03-31 09:52:40 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 302]
+2014-03-31 09:52:40 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 302)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:52:40 Error: ownerId:10
+2014-03-31 09:52:40 Error: className:CakeError
+2014-03-31 09:52:40 Error: userIdErr:0
+2014-03-31 09:52:40 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:52:40 Error: ownerId:10
+2014-03-31 09:52:40 Error: className:Errors
+2014-03-31 09:52:40 Error: userId:0
+2014-03-31 09:52:51 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-31 09:52:51 Error: ownerId:
+2014-03-31 09:52:51 Error: className:CakeError
+2014-03-31 09:52:51 Error: userIdErr:0
+2014-03-31 09:52:51 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:54:44 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 302]
+2014-03-31 09:54:44 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 302)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 302, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:54:44 Error: ownerId:10
+2014-03-31 09:54:44 Error: className:CakeError
+2014-03-31 09:54:44 Error: userIdErr:0
+2014-03-31 09:54:44 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:54:44 Error: ownerId:10
+2014-03-31 09:54:44 Error: className:Errors
+2014-03-31 09:54:44 Error: userId:0
+2014-03-31 09:55:35 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 309]
+2014-03-31 09:55:35 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 309)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 309, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 309, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:55:35 Error: ownerId:10
+2014-03-31 09:55:35 Error: className:CakeError
+2014-03-31 09:55:35 Error: userIdErr:0
+2014-03-31 09:55:35 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:55:35 Error: ownerId:10
+2014-03-31 09:55:35 Error: className:Errors
+2014-03-31 09:55:35 Error: userId:0
+2014-03-31 09:55:43 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/var/www/asns/app/Controller/StagesController.php, line 309]
+2014-03-31 09:55:43 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/index?quest_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/asns/a...', 309)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/asns/a...', 309, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/asns/a...', 309, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-03-31 09:55:43 Error: ownerId:10
+2014-03-31 09:55:43 Error: className:CakeError
+2014-03-31 09:55:43 Error: userIdErr:0
+2014-03-31 09:55:43 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 09:55:43 Error: ownerId:10
+2014-03-31 09:55:43 Error: className:Errors
+2014-03-31 09:55:43 Error: userId:0
+2014-03-31 09:56:08 Error: ownerId:10
+2014-03-31 09:56:08 Error: className:Stages
+2014-03-31 09:56:08 Error: userId:45
+2014-03-31 09:56:10 Error: ownerId:10
+2014-03-31 09:56:10 Error: className:Stages
+2014-03-31 09:56:10 Error: userId:45
+2014-03-31 09:56:10 Error: ownerId:10
+2014-03-31 09:56:10 Error: className:Stages
+2014-03-31 09:56:10 Error: userId:45
+2014-03-31 09:56:10 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-03-31 09:56:13 Error: ownerId:10
+2014-03-31 09:56:13 Error: className:Stages
+2014-03-31 09:56:13 Error: userId:45
+2014-03-31 09:56:13 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:13 Error: ownerId:10
+2014-03-31 09:56:13 Error: className:File
+2014-03-31 09:56:13 Error: userId:45
+2014-03-31 09:56:13 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-03-31 09:56:16 Error: ownerId:10
+2014-03-31 09:56:16 Error: className:Stages
+2014-03-31 09:56:16 Error: userId:45
+2014-03-31 09:56:17 Error: ownerId:10
+2014-03-31 09:56:17 Error: className:Stages
+2014-03-31 09:56:17 Error: userId:45
+2014-03-31 09:56:23 Error: ownerId:10
+2014-03-31 09:56:23 Error: className:Stages
+2014-03-31 09:56:23 Error: userId:45
+2014-03-31 09:56:31 Error: ownerId:10
+2014-03-31 09:56:31 Error: className:Stages
+2014-03-31 09:56:31 Error: userId:45
+2014-03-31 09:56:31 Error: ownerId:10
+2014-03-31 09:56:31 Error: className:Stages
+2014-03-31 09:56:31 Error: userId:45
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: stage_id in [/var/www/asns/app/Controller/StagesController.php, line 117]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 117
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: quest_id in [/var/www/asns/app/Controller/StagesController.php, line 124]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 125]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 126]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 126
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: use_act in [/var/www/asns/app/Controller/StagesController.php, line 133]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 133
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 139]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 139
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:56:31 Error: main_params:{"stage_id":null,"quest_id":null,"progress":null,"state":null}
+2014-03-31 09:56:31 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 144]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 144
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Error: ownerId:10
+2014-03-31 09:57:16 Error: className:Stages
+2014-03-31 09:57:16 Error: userId:45
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: stage_id in [/var/www/asns/app/Controller/StagesController.php, line 117]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 117
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: quest_id in [/var/www/asns/app/Controller/StagesController.php, line 124]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 125]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 126]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 126
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: use_act in [/var/www/asns/app/Controller/StagesController.php, line 133]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 133
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 139]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 139
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:16 Error: main_params:{"stage_id":null,"quest_id":null,"progress":null,"state":null}
+2014-03-31 09:57:16 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 144]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 144
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Error: ownerId:10
+2014-03-31 09:57:24 Error: className:Stages
+2014-03-31 09:57:24 Error: userId:45
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: stage_id in [/var/www/asns/app/Controller/StagesController.php, line 117]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 117
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: quest_id in [/var/www/asns/app/Controller/StagesController.php, line 124]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 125]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 126]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 126
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: use_act in [/var/www/asns/app/Controller/StagesController.php, line 133]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 133
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: state in [/var/www/asns/app/Controller/StagesController.php, line 139]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 139
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:57:24 Error: main_params:{"stage_id":null,"quest_id":null,"progress":null,"state":null}
+2014-03-31 09:57:24 Notice: Notice (8): Undefined index: progress in [/var/www/asns/app/Controller/StagesController.php, line 144]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 144
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-03-31 09:58:48 Error: ownerId:10
+2014-03-31 09:58:48 Error: className:Stages
+2014-03-31 09:58:48 Error: userId:45
+2014-03-31 09:58:48 Error: main_params:{"stage_id":"2","quest_id":"1","progress":"0","state":"1"}
+2014-03-31 09:58:55 Error: ownerId:10
+2014-03-31 09:58:55 Error: className:Stages
+2014-03-31 09:58:55 Error: userId:45
+2014-03-31 09:58:55 Error: main_params:{"stage_id":"2","quest_id":"1","progress":"0","state":"1"}
+2014-03-31 09:59:37 Error: ownerId:
+2014-03-31 09:59:37 Error: className:Errors
+2014-03-31 09:59:37 Error: userId:0

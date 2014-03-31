@@ -71,7 +71,7 @@ class FileController extends ApiController {
                     $name = 'jpeg';
                 }
 
-                $path = IMG_DIR . $dir . '/' . $filename;
+                $path = PRIVATE_DIR . $dir . '/' . $filename;
 //$this->log('path:'. $path); 
                 if (file_exists($path)) {
 //$this->log('path:okok'. $path); 

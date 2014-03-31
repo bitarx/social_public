@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog');
 
     /**
      *　定数
@@ -133,6 +133,10 @@ class StagesController extends ApiController {
         if ($userParam['act'] < $data['use_act']) {
             $notAct = 1;
         }
+
+        // ボスフラグ
+        $boss = 0;
+        if (2 == $data['state']) $boss = 1;
 $this->log('main_params:'. $params); 
         $this->set('data', $data);
         $this->set('userParam', $userParam);
@@ -141,6 +145,7 @@ $this->log('main_params:'. $params);
         $this->set('act', $userParam['act']);
         $this->set('exp', $userParam['exp']);
         $this->set('notAct', $notAct);
+        $this->set('boss', $boss);
     }
 
     /**
@@ -156,6 +161,7 @@ $this->log('main_params:'. $params);
         $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
         $enemyData = $this->Enemy->getEnemyData($userStageData['enemy_id']);
         $this->set('data', $enemyData);
+        $this->set('hoge', $hoge);
 
     }
 
@@ -228,6 +234,9 @@ $this->log('main_params:'. $params);
      * @return void
      */
     public function product() {
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
 /*
         $fields = array('id');
         $where  = array();
@@ -236,6 +245,19 @@ $this->log('main_params:'. $params);
 */
     }
 
+    /**
+     * ボス戦後Hシーン
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function scene() {
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
+
+
+    }
     /**
      * ボス戦後
      *
@@ -261,6 +283,35 @@ $this->log('main_params:'. $params);
         $where  = array();
         $this->User->getAllFind($where, $fields);
         $this->set('users', $this->Paginator->paginate());
+    }
+
+    /**
+     * 次のステージへ
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function next() {
+
+        // 現在到達最大ステージ
+        $stageId = $this->UserStage->getUserMaxStageId($this->userId);
+        $nextStageId = $stageId + 1;
+
+        $this->UserStage->begin(); 
+        try {  
+
+            // 次のステージへ
+            $fields = array('user_id', 'stage_id', 'progress', 'state');
+            $values[] = array($this->userId, $nextStageId, 0, 1);
+            $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+        
+        } catch (AppException $e) { 
+            $this->UserStage->rollback(); 
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->UserStage->commit(); 
+        $this->rd('Stages', 'main', array('stage_id' => $nextStageId)); 
     }
 
     /**
