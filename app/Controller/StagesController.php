@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card');
 
     /**
      *　定数
@@ -223,11 +223,11 @@ $this->log('main_params:'. $params);
         $turn = 0;
         while(true) {
             
-            $targetCards = $this->Battle->doBattle($userCards, $targetCards, $battleLog[$turn]);
+            $targetCards = $this->Battle->doBattleEnemy($userCards, $targetCards, $kind = 1, $battleLog[$turn]);
             if (empty($targetCards)) break;
             $turn++;
 
-            $userCards = $this->Battle->doBattle($targetCards, $userCards, $battleLog[$turn]);
+            $userCards = $this->Battle->doBattleEnemy($targetCards, $userCards, $kind = 2, $battleLog[$turn]);
             if (empty($userCards)) {
                 $winner = 2;
                 break;
@@ -243,7 +243,7 @@ $this->log('main_params:'. $params);
         try {  
 
             $values[] = array($this->userId , $targetId, $winner, $battleLog);
-            $this->registBattleLog($values);
+            $this->BattleLog->registBattleLog($values);
 
         } catch (AppException $e) { 
             $this->BattleLog->rollback(); 
@@ -300,6 +300,7 @@ $this->log('main_params:'. $params);
     public function comp() {
 
         $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+ $this->log('aryData:' . print_r($data, true)); 
         $this->set('data', $data);
 
     }
@@ -500,6 +501,12 @@ $this->log('userId;:'. $userId);
                 $userParam['act'] -= $userStageData['use_act'];
                 if ($userParam['act'] < 0) $userParam['act'] = 0;
                 if ($userParam['act'] < $userStageData['use_act']) $notAct = 1;
+
+                // 行動時間を記録
+                $values = array(
+                    'user_id' => $this->userId 
+                );
+                $this->UserLastActTime->save($values);
 
                 // 経験値アップ
                 $levelUp = 0;

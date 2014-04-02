@@ -121,10 +121,11 @@ class UserCardTest extends CakeTestCase {
 
         $targetId = 1;
         $userId = 1;
+        $row = array();
 
         // カード
         $num = 2;
-        $ret = $this->UserCard->registCard($userId, $targetId, $num);
+        $ret = $this->UserCard->registCard($userId, $targetId, $num, $row);
         $this->assertTrue($ret);
     }
 

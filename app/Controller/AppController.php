@@ -42,7 +42,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam');
 
     public $components = array('Cookie', 'Common');
 
@@ -50,6 +50,7 @@ class AppController extends Controller {
     public $viewerId = "";
     public $userId   = 0;
     public $params   = array();
+    public $userParam  = array();
 
     public static $ctlRegist = array('Tutorials');
 
@@ -166,7 +167,14 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         if (empty($row['end_flg'])) {
             $this->set('tutoEnd', 0); 
         } else {
+            // チュートリアルを終えている
             $this->set('tutoEnd', 1); 
+
+            // ユーザーステータス取得
+            $this->userParam = $this->userParam->getUserParams($this->userId);
+
+            // 行動力回復
+            $this->UserParam->recoverAct($this->userParam);
         }
 
 $this->log('userId:'. $this->userId); 

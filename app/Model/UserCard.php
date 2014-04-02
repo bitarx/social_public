@@ -178,11 +178,11 @@ class UserCard extends AppModel {
 
     /**
      * 取得カードを登録
-     *stCard
+     *
      * @author imanishi 
      * @param int $userId
      * @param int $cardId
-     * @param int $num
+     * @param int $num 登録枚数
      * @param array $row 対象カード情報(参照用)
      e @return bool 
      */

@@ -1,10 +1,17 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('UserLastActTime', 'Model');
 /**
  * UserParam Model
  *
  */
 class UserParam extends AppModel {
+
+    // 行動力回復間隔（分）
+    const ACT_RECOVER_INTERVAL = 3;
+
+    // 行動力回復数
+    const ACT_RECOVER_NUM = 1;
 
 /**
  * Primary key field
@@ -171,4 +178,49 @@ class UserParam extends AppModel {
         $ret = $this->getAllFind($where, array(), 'all'); 
         return $ret;
     } 
+
+    /**
+     * 行動力自動回復
+     *
+     * @author imanishi 
+     * @param array $userParam ユーザーステータス
+     * @return array $userParam 回復後のステータス
+     */
+    public function recoverAct($userParam) {
+
+        // 回復の余地があれば処理
+        if ($userParam['act'] < 100) {
+            // 最後に行動した時間
+            $userLastActTime = new UserLastActTime();
+            $where = array('user_id' => $userParam['user_id']);
+            $lastActTime = $userLastActTime->field('modified', $where);
+            $lastActTimeSp = strtotime($lastActTime);
+            $timeSp = time();
+
+            // 経過時間(秒)
+            $passTimeSp = $timeSp - $lastActTimeSp;
+
+            // 必要経過時間(秒)
+            $needTimeSp = self::ACT_RECOVER_INTERVAL * 60;
+
+            // 回復に必要な時間が経過していれば回復
+            if ($needTimeSp < $passTimeSp) {
+
+                $num = floor($passTimeSp / $needTimeSp);
+                $recoverAct = self::ACT_RECOVER_NUM * $num;
+
+                $userParam += $recoverAct;
+                if (100 < $userParam['act']) $userParam['act'] = 100;
+
+                // ステータス更新
+                $value = array(
+                    'act' => $userParam['act'] 
+                );
+                $where = array('user_id' => $userParam['user_id']); 
+                $this->updateAll($value, $where);
+            }
+        }
+
+        return $userParam;
+    }
 }

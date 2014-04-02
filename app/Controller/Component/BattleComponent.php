@@ -12,6 +12,83 @@ class BattleComponent extends Component {
     public $dayChangeH = 8;
 
     /**
+     * 敵とのバトルを実行する
+     *
+     * @author imanishi 
+     * @param array $selfCards 攻撃側のカードデータ
+     * @param array $targetCards 防御側のカードデータ
+     * @param int   $kind  1:プレイヤー攻撃 2:敵攻撃
+     * @param array $battleLogTurn 戦闘情報
+     * @return array バトル結果
+     */
+    public function doBattleEnemy($selfCards, $targetCards, $kind, &$battleLogTurn) {
+
+        $battleLogTurn['targetCards_bf'] = $targetCards;
+        $num = 0;
+        foreach ($selfCards as $val) {
+            
+            $targetNum = count($targetCards) - 1;
+            $selfData = $val['UserCard'];
+
+            // 敵攻撃
+            if ($kind == 2) {
+
+                // プレイヤーカードを全体攻撃
+                foreach ($targetCards as $target => $val) {
+
+                    $targetData = $targetCards[$target]['UserCard'];
+$this->log('aryDataEnemy:' . print_r($targetData, true)); 
+                    $battleLogTurn[$num]['targetData'] = array(
+                        'card_id' => $targetData['card_id']
+                    ,   'hp'      => $targetData['hp']
+                    );
+
+                    $damage = $this->calcDamage($selfData, $targetData);
+                    $battleLogTurn[$num]['damage'] = $damage;
+                    $targetCards[$target]['UserCard']['hp'] -= $damage;
+
+                    $num++;
+                }
+
+            // プレイヤー攻撃
+            } else if ($kind = 1) {
+                $target = mt_rand(0, $targetNum);
+                $targetData = $targetCards[$target]['UserCard'];
+$this->log('aryDataPlayer:' . print_r($targetData, true)); 
+
+                $battleLogTurn[$num]['targetData'] = array(
+                    'enemy_id' => $targetData['enemy_id']
+                ,   'hp'       => $targetData['hp']
+                );
+
+                $damage = $this->calcDamage($selfData, $targetData);
+                $battleLogTurn[$num]['damage'] = $damage;
+                $targetCards[$target]['UserCard']['hp'] -= $damage;
+
+                $num++;
+
+            } else {
+                break;
+            }
+
+
+            // 攻撃対象のHPがゼロになった場合
+            if ($targetCards[$target]['UserCard']['hp'] <= 0) {
+                unset($targetCards[$target]);
+                $cnt = count($targetCards);
+                if ($cnt <= 0) break;
+               
+                foreach ($targetCards as $v) {
+                    $targets[] = $v; 
+                }
+                $targetCards = $targets;
+            }
+        }
+        $battleLogTurn['targetCards_af'] = $damage;
+        return $targetCards;
+    }
+
+    /**
      * 5vs5のバトルを実行する
      *
      * @author imanishi 

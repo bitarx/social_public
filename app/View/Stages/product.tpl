@@ -18,7 +18,11 @@
 
         }
         var contentsComplete = function() {
-            location.href = "scene";
+            <{if $data.result == 2}>
+                location.href = "comp";
+            <{else}>
+                location.href = "scene";
+            <{/if}>
         }
         evolution.init(
           "mainCanvas",

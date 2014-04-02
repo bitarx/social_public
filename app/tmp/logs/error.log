@@ -52045,3 +52045,561 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
 [main] - APP/webroot/index.php, line 108
 
+2014-03-31 21:11:29 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-31 21:11:29 Error: ownerId:
+2014-03-31 21:11:29 Error: className:CakeError
+2014-03-31 21:11:29 Error: userIdErr:0
+2014-03-31 21:11:29 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 21:11:29 Error: ownerId:
+2014-03-31 21:11:29 Error: className:Errors
+2014-03-31 21:11:29 Error: userId:0
+2014-03-31 21:20:07 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/13
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-31 21:20:07 Error: ownerId:
+2014-03-31 21:20:07 Error: className:CakeError
+2014-03-31 21:20:07 Error: userIdErr:0
+2014-03-31 21:20:07 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-03-31 21:21:32 Error: ownerId:
+2014-03-31 21:21:32 Error: className:Errors
+2014-03-31 21:21:32 Error: userId:0
+2014-03-31 22:09:32 Error: ownerId:
+2014-03-31 22:09:32 Error: className:SnsUsers
+2014-03-31 22:09:33 Error: ownerId:
+2014-03-31 22:09:33 Error: className:SnsUsers
+2014-04-01 02:05:05 Error: ownerId:
+2014-04-01 02:05:05 Error: className:SnsUsers
+2014-04-01 02:05:07 Error: ownerId:
+2014-04-01 02:05:07 Error: className:SnsUsers
+2014-04-01 02:05:08 Error: ownerId:
+2014-04-01 02:05:08 Error: className:SnsUsers
+2014-04-01 06:53:27 Error: ownerId:1
+2014-04-01 06:53:27 Error: className:Errors
+2014-04-01 06:53:27 Error: userId:0
+2014-04-01 08:55:12 Error: ownerId:
+2014-04-01 08:55:12 Error: className:SnsUsers
+2014-04-01 08:55:14 Error: ownerId:
+2014-04-01 08:55:14 Error: className:SnsUsers
+2014-04-01 08:55:15 Error: ownerId:
+2014-04-01 08:55:15 Error: className:SnsUsers
+2014-04-01 10:06:09 Error: ownerId:
+2014-04-01 10:06:09 Error: className:SnsUsers
+2014-04-01 10:06:10 Error: ownerId:
+2014-04-01 10:06:10 Error: className:SnsUsers
+2014-04-01 10:06:11 Error: ownerId:
+2014-04-01 10:06:11 Error: className:SnsUsers
+2014-04-01 11:41:06 Error: ownerId:1
+2014-04-01 11:41:06 Error: className:SnsUsers
+2014-04-01 11:41:06 Error: userId:17
+2014-04-01 11:41:08 Error: ownerId:1
+2014-04-01 11:41:08 Error: className:Quests
+2014-04-01 11:41:08 Error: userId:17
+2014-04-01 11:41:11 Error: ownerId:1
+2014-04-01 11:41:11 Error: className:Stages
+2014-04-01 11:41:11 Error: userId:17
+2014-04-01 11:41:12 Error: ownerId:1
+2014-04-01 11:41:12 Error: className:Stages
+2014-04-01 11:41:13 Error: userId:17
+2014-04-01 11:41:13 Error: ownerId:1
+2014-04-01 11:41:13 Error: className:Stages
+2014-04-01 11:41:13 Error: userId:17
+2014-04-01 11:41:13 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-01 11:41:18 Error: ownerId:1
+2014-04-01 11:41:18 Error: className:Stages
+2014-04-01 11:41:18 Error: userId:17
+2014-04-01 11:41:18 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 11:41:19 Error: ownerId:1
+2014-04-01 11:41:19 Error: className:File
+2014-04-01 11:41:19 Error: userId:17
+2014-04-01 11:41:19 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-04-01 11:41:27 Error: ownerId:1
+2014-04-01 11:41:27 Error: className:Stages
+2014-04-01 11:41:27 Error: userId:17
+2014-04-01 11:41:27 Error: Fatal Error (1): Call to undefined method StagesController::registBattleLog() in [/var/www/asns/app/Controller/StagesController.php, line 246]
+2014-04-01 11:41:27 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/asns/a...', 246)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/asns/a...', 246, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/asns/a...', 246, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-01 11:41:27 Error: ownerId:1
+2014-04-01 11:41:27 Error: className:CakeError
+2014-04-01 11:41:27 Error: userIdErr:0
+2014-04-01 11:41:27 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 11:41:27 Error: ownerId:1
+2014-04-01 11:41:27 Error: className:Errors
+2014-04-01 11:41:27 Error: userId:0
+2014-04-01 11:42:17 Error: ownerId:
+2014-04-01 11:42:17 Error: className:File
+2014-04-01 11:42:42 Error: ownerId:
+2014-04-01 11:42:42 Error: className:Stages
+2014-04-01 11:42:44 Error: ownerId:
+2014-04-01 11:42:44 Error: className:SnsUsers
+2014-04-01 11:42:45 Error: ownerId:
+2014-04-01 11:42:45 Error: className:Stages
+2014-04-01 11:42:46 Error: ownerId:
+2014-04-01 11:42:46 Error: className:Quests
+2014-04-01 11:42:46 Error: ownerId:
+2014-04-01 11:42:46 Error: className:Stages
+2014-04-01 11:42:47 Error: ownerId:
+2014-04-01 11:42:47 Error: className:Stages
+2014-04-01 11:42:59 Error: ownerId:
+2014-04-01 11:42:59 Error: className:Errors
+2014-04-01 11:42:59 Error: userId:0
+2014-04-01 11:43:10 Error: ownerId:
+2014-04-01 11:43:10 Error: className:Stages
+2014-04-01 12:25:00 Error: ownerId:1
+2014-04-01 12:25:00 Error: className:Stages
+2014-04-01 12:25:00 Error: userId:17
+2014-04-01 12:25:01 Error: ownerId:1
+2014-04-01 12:25:01 Error: className:Stages
+2014-04-01 12:25:01 Error: userId:17
+2014-04-01 12:25:08 Error: ownerId:1
+2014-04-01 12:25:08 Error: className:Stages
+2014-04-01 12:25:08 Error: userId:17
+2014-04-01 12:26:19 Error: ownerId:
+2014-04-01 12:26:19 Error: className:Stages
+2014-04-01 12:27:41 Error: ownerId:
+2014-04-01 12:27:41 Error: className:Stages
+2014-04-01 12:27:43 Error: ownerId:
+2014-04-01 12:27:43 Error: className:Stages
+2014-04-01 12:33:52 Error: ownerId:1
+2014-04-01 12:33:52 Error: className:Stages
+2014-04-01 12:33:52 Error: userId:17
+2014-04-01 12:33:53 Error: ownerId:1
+2014-04-01 12:33:53 Error: className:Stages
+2014-04-01 12:33:53 Error: userId:17
+2014-04-01 12:34:00 Error: ownerId:1
+2014-04-01 12:34:00 Error: className:Stages
+2014-04-01 12:34:00 Error: userId:17
+2014-04-01 12:35:09 Error: ownerId:1
+2014-04-01 12:35:09 Error: className:Stages
+2014-04-01 12:35:09 Error: userId:17
+2014-04-01 12:35:16 Error: ownerId:
+2014-04-01 12:35:16 Error: className:Stages
+2014-04-01 12:35:18 Error: ownerId:1
+2014-04-01 12:35:18 Error: className:Stages
+2014-04-01 12:35:18 Error: userId:17
+2014-04-01 12:35:23 Error: ownerId:
+2014-04-01 12:35:23 Error: className:Stages
+2014-04-01 12:39:18 Error: ownerId:1
+2014-04-01 12:39:18 Error: className:Stages
+2014-04-01 12:39:18 Error: userId:17
+2014-04-01 12:39:37 Error: ownerId:1
+2014-04-01 12:39:37 Error: className:Stages
+2014-04-01 12:39:37 Error: userId:17
+2014-04-01 12:39:37 Error: aryData:Array
+(
+    [id] => 2
+    [target] => 1
+    [result] => 2
+    [log] => [{"targetCards_bf":[{"UserCard":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":"1000","atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"}}],"0":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":"1000","atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":150},"1":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":850,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":197},"targetCards_af":197},{"targetCards_bf":[{"user_deck_id":"20","user_card_id":"76","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"76","user_id":"17","card_id":"13","hp":"0","hp_max":"0","atk":"100","def":"150","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}},{"user_deck_id":"20","user_card_id":"77","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}}],"0":{"targetData":{"user_card_id":"76","user_id":"17","card_id":"13","hp":"0","hp_max":"0","atk":"100","def":"150","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"},"damage":0},"targetCards_af":0},{"targetCards_bf":[{"UserCard":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":653,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"}}],"0":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":653,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":197},"targetCards_af":197},{"targetCards_bf":[{"user_deck_id":"20","user_card_id":"77","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}}],"0":{"targetData":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"},"damage":18},"targetCards_af":18}]
+)
+
+2014-04-01 12:39:49 Error: ownerId:1
+2014-04-01 12:39:49 Error: className:Stages
+2014-04-01 12:39:49 Error: userId:17
+2014-04-01 12:39:49 Error: aryData:Array
+(
+    [id] => 2
+    [target] => 1
+    [result] => 2
+    [log] => [{"targetCards_bf":[{"UserCard":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":"1000","atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"}}],"0":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":"1000","atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":150},"1":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":850,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":197},"targetCards_af":197},{"targetCards_bf":[{"user_deck_id":"20","user_card_id":"76","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"76","user_id":"17","card_id":"13","hp":"0","hp_max":"0","atk":"100","def":"150","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}},{"user_deck_id":"20","user_card_id":"77","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}}],"0":{"targetData":{"user_card_id":"76","user_id":"17","card_id":"13","hp":"0","hp_max":"0","atk":"100","def":"150","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"},"damage":0},"targetCards_af":0},{"targetCards_bf":[{"UserCard":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":653,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"}}],"0":{"targetData":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":653,"atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"},"damage":197},"targetCards_af":197},{"targetCards_bf":[{"user_deck_id":"20","user_card_id":"77","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00","UserDeck":{"user_deck_id":"20","user_id":"17","kind":"1","user_deck_name":"","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"2014-03-14 17:57:52"},"UserCard":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"}}],"0":{"targetData":{"user_card_id":"77","user_id":"17","card_id":"43","hp":"0","hp_max":"0","atk":"120","def":"80","level":"1","exp":"0","skill_level":"1","skill_exp":"0","delete_flg":"0","created":"2014-03-14 17:57:52","modified":"0000-00-00 00:00:00"},"damage":18},"targetCards_af":18}]
+)
+
+2014-04-01 12:40:50 Error: ownerId:
+2014-04-01 12:40:50 Error: className:Stages
+2014-04-01 12:45:39 Error: ownerId:1
+2014-04-01 12:45:39 Error: className:Quests
+2014-04-01 12:45:39 Error: userId:17
+2014-04-01 12:45:41 Error: ownerId:1
+2014-04-01 12:45:41 Error: className:Stages
+2014-04-01 12:45:41 Error: userId:17
+2014-04-01 12:46:53 Error: ownerId:
+2014-04-01 12:46:53 Error: className:Quests
+2014-04-01 12:47:46 Error: ownerId:
+2014-04-01 12:47:46 Error: className:Stages
+2014-04-01 12:49:24 Error: ownerId:1
+2014-04-01 12:49:24 Error: className:Stages
+2014-04-01 12:49:24 Error: userId:17
+2014-04-01 12:49:24 Error: ownerId:1
+2014-04-01 12:49:24 Error: className:Stages
+2014-04-01 12:49:24 Error: userId:17
+2014-04-01 12:49:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-01 12:49:26 Error: ownerId:1
+2014-04-01 12:49:26 Error: className:Stages
+2014-04-01 12:49:26 Error: userId:17
+2014-04-01 12:49:26 Notice: Notice (8): Undefined variable: hoge in [/var/www/asns/app/Controller/StagesController.php, line 164]
+Trace:
+StagesController::conf() - APP/Controller/StagesController.php, line 164
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 12:49:27 Error: ownerId:1
+2014-04-01 12:49:27 Error: className:File
+2014-04-01 12:49:27 Error: userId:17
+2014-04-01 12:49:27 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-04-01 12:50:47 Error: ownerId:
+2014-04-01 12:50:47 Error: className:File
+2014-04-01 12:51:56 Error: ownerId:
+2014-04-01 12:51:56 Error: className:Stages
+2014-04-01 12:51:59 Error: ownerId:
+2014-04-01 12:51:59 Error: className:Stages
+2014-04-01 13:12:56 Error: ownerId:
+2014-04-01 13:12:56 Error: className:Stages
+2014-04-01 15:09:33 Error: ownerId:1
+2014-04-01 15:09:33 Error: className:Stages
+2014-04-01 15:09:33 Error: userId:17
+2014-04-01 15:09:33 Notice: Notice (8): Undefined offset: 0 in [/var/www/asns/app/Controller/StagesController.php, line 226]
+Trace:
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 15:09:33 Warning: Warning (2): Missing argument 4 for BattleComponent::doBattleEnemy(), called in /var/www/asns/app/Controller/StagesController.php on line 226 and defined in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 24]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 24
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 15:09:33 Notice: Notice (8): Undefined index: card_id in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 55]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 55
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 15:09:33 Error: ownerId:1
+2014-04-01 15:09:33 Error: className:Stages
+2014-04-01 15:09:33 Error: userId:17
+2014-04-01 15:09:39 Error: ownerId:1
+2014-04-01 15:09:39 Error: className:Stages
+2014-04-01 15:09:39 Error: userId:17
+2014-04-01 15:10:45 Error: ownerId:
+2014-04-01 15:10:45 Error: className:Stages
+2014-04-01 15:10:47 Error: ownerId:
+2014-04-01 15:10:47 Error: className:Stages
+2014-04-01 15:50:18 Error: ownerId:
+2014-04-01 15:50:18 Error: className:SnsUsers
+2014-04-01 15:50:18 Error: ownerId:
+2014-04-01 15:50:18 Error: className:SnsUsers
+2014-04-01 15:50:19 Error: ownerId:
+2014-04-01 15:50:19 Error: className:SnsUsers
+2014-04-01 15:50:19 Error: ownerId:
+2014-04-01 15:50:19 Error: className:SnsUsers
+2014-04-01 15:50:19 Error: ownerId:
+2014-04-01 15:50:19 Error: className:SnsUsers
+2014-04-01 15:50:20 Error: ownerId:
+2014-04-01 15:50:20 Error: className:SnsUsers
+2014-04-01 15:50:27 Error: ownerId:1
+2014-04-01 15:50:27 Error: className:Stages
+2014-04-01 15:50:27 Error: userId:17
+2014-04-01 15:50:27 Notice: Notice (8): Undefined index: card_id in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 55]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 55
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 15:50:28 Error: ownerId:1
+2014-04-01 15:50:28 Error: className:Stages
+2014-04-01 15:50:28 Error: userId:17
+2014-04-01 15:50:34 Error: ownerId:1
+2014-04-01 15:50:34 Error: className:Stages
+2014-04-01 15:50:34 Error: userId:17
+2014-04-01 15:51:29 Error: ownerId:
+2014-04-01 15:51:29 Error: className:Stages
+2014-04-01 15:52:16 Error: ownerId:
+2014-04-01 15:52:16 Error: className:Stages
+2014-04-01 15:52:41 Error: ownerId:
+2014-04-01 15:52:41 Error: className:Stages
+2014-04-01 15:57:29 Error: ownerId:1
+2014-04-01 15:57:29 Error: className:Stages
+2014-04-01 15:57:29 Error: userId:17
+2014-04-01 15:57:29 Error: aryDataPlayer:Array
+(
+    [enemy_id] => 1
+    [card_name] => 一ヶ谷 かほり
+    [hp] => 50
+    [atk] => 50
+    [def] => 50
+    [skill_id] => 1
+    [skill_level] => 20
+    [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+    [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+    [after_lose_words] => 
+    [delete_flg] => 0
+    [skill_name] => アフタースクール
+    [effect] => 1
+    [updown] => 1
+    [target] => 3
+    [percent] => 35
+    [skill_words] => 味方の防御力を大アップ
+)
+
+2014-04-01 15:57:29 Notice: Notice (8): Undefined index: card_id in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 56]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 56
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-01 15:57:30 Error: ownerId:1
+2014-04-01 15:57:30 Error: className:Stages
+2014-04-01 15:57:30 Error: userId:17
+2014-04-01 15:57:36 Error: ownerId:1
+2014-04-01 15:57:36 Error: className:Stages
+2014-04-01 15:57:36 Error: userId:17
+2014-04-01 15:58:43 Error: ownerId:
+2014-04-01 15:58:43 Error: className:Stages
+2014-04-01 15:58:45 Error: ownerId:
+2014-04-01 15:58:45 Error: className:Stages
+2014-04-01 16:06:15 Error: ownerId:1
+2014-04-01 16:06:15 Error: className:Stages
+2014-04-01 16:06:15 Error: userId:17
+2014-04-01 16:06:15 Error: Fatal Error (1): Call to a member function getCardData() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 212]
+2014-04-01 16:06:15 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/act?target_id=1
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 212)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 212, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 212, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-01 16:06:15 Error: ownerId:1
+2014-04-01 16:06:15 Error: className:CakeError
+2014-04-01 16:06:15 Error: userIdErr:0
+2014-04-01 16:06:15 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 16:06:15 Error: ownerId:1
+2014-04-01 16:06:15 Error: className:Errors
+2014-04-01 16:06:15 Error: userId:0
+2014-04-01 16:07:14 Error: ownerId:1
+2014-04-01 16:07:14 Error: className:Stages
+2014-04-01 16:07:14 Error: userId:17
+2014-04-01 16:07:14 Error: aryDataPlayer:Array
+(
+    [enemy_id] => 1
+    [card_name] => 一ヶ谷 かほり
+    [hp] => 50
+    [atk] => 50
+    [def] => 50
+    [skill_id] => 1
+    [skill_level] => 20
+    [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+    [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+    [after_lose_words] => 
+    [delete_flg] => 0
+    [skill_name] => アフタースクール
+    [effect] => 1
+    [updown] => 1
+    [target] => 3
+    [percent] => 35
+    [skill_words] => 味方の防御力を大アップ
+)
+
+2014-04-01 16:07:14 Error: ownerId:1
+2014-04-01 16:07:14 Error: className:Stages
+2014-04-01 16:07:14 Error: userId:17
+2014-04-01 16:07:21 Error: ownerId:1
+2014-04-01 16:07:21 Error: className:Stages
+2014-04-01 16:07:21 Error: userId:17
+2014-04-01 16:07:38 Error: ownerId:
+2014-04-01 16:07:38 Error: className:Errors
+2014-04-01 16:07:38 Error: userId:0
+2014-04-01 16:22:57 Error: [NotFoundException] Debug setting does not allow access to this url.
+Stack Trace:
+#0 {main}
+2014-04-01 16:22:57 Error: ownerId:1
+2014-04-01 16:22:57 Error: className:CakeError
+2014-04-01 16:22:57 Error: userIdErr:0
+2014-04-01 16:22:57 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 16:22:57 Error: ownerId:1
+2014-04-01 16:22:57 Error: className:Errors
+2014-04-01 16:22:57 Error: userId:0
+2014-04-01 16:23:59 Error: [NotFoundException] Debug setting does not allow access to this url.
+Stack Trace:
+#0 {main}
+2014-04-01 16:23:59 Error: ownerId:
+2014-04-01 16:23:59 Error: className:CakeError
+2014-04-01 16:23:59 Error: userIdErr:0
+2014-04-01 16:23:59 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 16:25:03 Error: ownerId:
+2014-04-01 16:25:03 Error: className:Errors
+2014-04-01 16:25:03 Error: userId:0
+2014-04-01 16:40:55 Error: [NotFoundException] Debug setting does not allow access to this url.
+Stack Trace:
+#0 {main}
+2014-04-01 16:40:55 Error: ownerId:1
+2014-04-01 16:40:55 Error: className:CakeError
+2014-04-01 16:40:55 Error: userIdErr:0
+2014-04-01 16:40:55 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 16:40:55 Error: ownerId:1
+2014-04-01 16:40:55 Error: className:Errors
+2014-04-01 16:40:55 Error: userId:0
+2014-04-01 16:42:18 Error: ownerId:
+2014-04-01 16:42:18 Error: className:Errors
+2014-04-01 16:42:18 Error: userId:0
+2014-04-01 16:42:29 Error: [NotFoundException] Debug setting does not allow access to this url.
+Stack Trace:
+#0 {main}
+2014-04-01 16:42:29 Error: ownerId:
+2014-04-01 16:42:29 Error: className:CakeError
+2014-04-01 16:42:29 Error: userIdErr:0
+2014-04-01 16:42:29 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 18:03:39 Error: ownerId:
+2014-04-01 18:03:39 Error: className:SnsUsers
+2014-04-01 18:03:40 Error: ownerId:
+2014-04-01 18:03:40 Error: className:SnsUsers
+2014-04-01 18:03:41 Error: ownerId:
+2014-04-01 18:03:41 Error: className:SnsUsers
+2014-04-01 18:44:07 Error: ownerId:
+2014-04-01 18:44:07 Error: className:SnsUsers
+2014-04-01 18:44:08 Error: ownerId:
+2014-04-01 18:44:08 Error: className:SnsUsers
+2014-04-01 18:44:18 Error: ownerId:
+2014-04-01 18:44:18 Error: className:SnsUsers
+2014-04-01 19:03:03 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-01 19:03:03 Error: ownerId:
+2014-04-01 19:03:03 Error: className:CakeError
+2014-04-01 19:03:03 Error: userIdErr:0
+2014-04-01 19:03:03 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 19:03:03 Error: ownerId:
+2014-04-01 19:03:03 Error: className:Errors
+2014-04-01 19:03:03 Error: userId:0
+2014-04-01 19:25:42 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/3
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-01 19:25:42 Error: ownerId:
+2014-04-01 19:25:42 Error: className:CakeError
+2014-04-01 19:25:42 Error: userIdErr:0
+2014-04-01 19:25:42 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 19:59:37 Error: ownerId:
+2014-04-01 19:59:37 Error: className:Errors
+2014-04-01 19:59:37 Error: userId:0
+2014-04-01 23:48:41 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-01 23:48:41 Error: ownerId:
+2014-04-01 23:48:41 Error: className:CakeError
+2014-04-01 23:48:41 Error: userIdErr:0
+2014-04-01 23:48:41 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-01 23:48:41 Error: ownerId:
+2014-04-01 23:48:41 Error: className:Errors
+2014-04-01 23:48:41 Error: userId:0
+2014-04-01 23:48:42 Error: ownerId:
+2014-04-01 23:48:42 Error: className:SnsUsers
+2014-04-01 23:48:46 Error: ownerId:
+2014-04-01 23:48:46 Error: className:Errors
+2014-04-01 23:48:46 Error: userId:0
+2014-04-02 04:40:52 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-02 04:40:52 Error: ownerId:
+2014-04-02 04:40:52 Error: className:CakeError
+2014-04-02 04:40:52 Error: userIdErr:0
+2014-04-02 04:40:52 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 04:40:53 Error: ownerId:
+2014-04-02 04:40:53 Error: className:Errors
+2014-04-02 04:40:53 Error: userId:0
+2014-04-02 04:40:55 Error: ownerId:
+2014-04-02 04:40:55 Error: className:SnsUsers
+2014-04-02 04:40:57 Error: ownerId:
+2014-04-02 04:40:57 Error: className:Errors
+2014-04-02 04:40:57 Error: userId:0
+2014-04-02 08:18:04 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-02 08:18:04 Error: ownerId:
+2014-04-02 08:18:04 Error: className:CakeError
+2014-04-02 08:18:04 Error: userIdErr:0
+2014-04-02 08:18:04 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 08:18:11 Error: ownerId:
+2014-04-02 08:18:11 Error: className:Errors
+2014-04-02 08:18:11 Error: userId:0
+2014-04-02 08:18:31 Error: ownerId:
+2014-04-02 08:18:31 Error: className:Errors
+2014-04-02 08:18:31 Error: userIdErr:0
+2014-04-02 08:18:31 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 08:18:53 Error: ownerId:
+2014-04-02 08:18:53 Error: className:Errors
+2014-04-02 08:18:53 Error: userId:0
+2014-04-02 08:19:13 Error: ownerId:
+2014-04-02 08:19:13 Error: className:Errors
+2014-04-02 08:19:13 Error: userId:0

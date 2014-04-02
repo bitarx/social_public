@@ -95,4 +95,20 @@ class UserParamTest extends CakeTestCase {
        $ret = $this->UserParam->setUserParams($userId, $data);
        $this->assertNotEmpty($ret['UserParam']);
    }
+
+   /**
+    * 行動力回復メソッドをテスト
+    *
+    * @author imanishi 
+    */
+   public function testRecoverAct () { 
+
+       $userParam = array(
+           'user_id' => 1
+       ,   'act' => 90
+       );
+       $userParam = $this->UserParam->recoverAct($userParam);
+
+       $this->assertEquals($userParam['act'], 100);
+   }
 }
