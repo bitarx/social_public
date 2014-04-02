@@ -209,7 +209,7 @@ class UserParam extends AppModel {
                 $num = floor($passTimeSp / $needTimeSp);
                 $recoverAct = self::ACT_RECOVER_NUM * $num;
 
-                $userParam += $recoverAct;
+                $userParam['act'] += $recoverAct;
                 if (100 < $userParam['act']) $userParam['act'] = 100;
 
                 // ステータス更新

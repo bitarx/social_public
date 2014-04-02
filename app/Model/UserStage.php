@@ -118,7 +118,7 @@ class UserStage extends AppModel {
             // 対象のステージのみ取得
             $kind = 'first';
         } else {
-            $order = array('quest_id DESC', 'Stage.stage_id DESC');
+            $order = array('Stage.quest_id DESC', 'Stage.stage_id DESC');
         }
 
         $ret = $this->getAllFind($where, $fields, $kind, $order, 0, 0, $recu);
@@ -149,7 +149,7 @@ class UserStage extends AppModel {
      *
      * @author imanishi 
      * @param int $userId
-     * @return bool
+     * @return array
      */
     public function initUserStage($data) {
 
@@ -176,7 +176,7 @@ class UserStage extends AppModel {
                 'progress' => $data['progress']
             ,   'state'    => $data['state']
             );
-            $this->updateAll($values, $where);
+            $ret = $this->updateAll($values, $where);
         }
         return $ret;
     }

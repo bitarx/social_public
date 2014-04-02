@@ -52,11 +52,11 @@ class BattleLogTest extends CakeTestCase {
 
         $expected[] = array(
             'id' => '2',
-            'target_user' => '2',
+            'target' => '2',
         );
 
          $this->assertEquals($list[0]['id'], $expected[0]['id']);
-         $this->assertEquals($list[0]['target_user'], $expected[0]['target_user']);
+         $this->assertEquals($list[0]['target'], $expected[0]['target']);
     }
 
     /**
@@ -71,11 +71,11 @@ class BattleLogTest extends CakeTestCase {
 
         $expected = array(
             'id' => '1',
-            'target_user' => '1'
+            'target' => '1'
         );
 
          $this->assertEquals($data['id'], $expected['id']);
-         $this->assertEquals($data['target_user'], $expected['target_user']);
+         $this->assertEquals($data['target'], $expected['target']);
     }
 
     /**
@@ -90,11 +90,11 @@ class BattleLogTest extends CakeTestCase {
 
         $expected = array(
             'id' => '2',
-            'target_user' => '2'
+            'target' => '2'
         );
 
          $this->assertEquals($data['id'], $expected['id']);
-         $this->assertEquals($data['target_user'], $expected['target_user']);
+         $this->assertEquals($data['target'], $expected['target']);
     }
 
     /**

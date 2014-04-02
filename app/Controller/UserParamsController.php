@@ -99,15 +99,19 @@ class UserParamsController extends ApiController {
 
         // 1:攻撃側勝利 2:防御側勝利
         $winner = 1;
+        $turn = 0;
+        $battleLog = array();
         while(true) {
-            $targetCards = $this->Battle->doBattle($userCards, $targetCards);
+            $targetCards = $this->Battle->doBattle($userCards, $targetCards, $battleLog[$turn]);
             if (empty($targetCards)) break;
+            $turn++;
 
-            $userCards = $this->Battle->doBattle($targetCards, $userCards);
+            $userCards = $this->Battle->doBattle($targetCards, $userCards, $battleLog[$turn]);
             if (empty($userCards)) {
                 $winner = 2;
                 break;
             }
+            $turn++;
         }
 
         $this->rd('user_params', 'product');

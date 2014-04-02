@@ -161,7 +161,6 @@ $this->log('main_params:'. $params);
         $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
         $enemyData = $this->Enemy->getEnemyData($userStageData['enemy_id']);
         $this->set('data', $enemyData);
-        $this->set('hoge', $hoge);
 
     }
 

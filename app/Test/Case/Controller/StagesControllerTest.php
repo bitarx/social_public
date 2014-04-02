@@ -61,7 +61,7 @@ class StagesControllerTest extends ControllerTestCase {
  */
 	public function testIndex() {
 
-        $ret = $this->testAction('/stages/index/');
+        $ret = $this->testAction('/stages/index/?quest_id=1');
         debug($ret);
 	}
 
