@@ -171,7 +171,7 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
             $this->set('tutoEnd', 1); 
 
             // ユーザーステータス取得
-            $this->userParam = $this->userParam->getUserParams($this->userId);
+            $this->userParam = $this->UserParam->getUserParams($this->userId);
 
             // 行動力回復
             $this->UserParam->recoverAct($this->userParam);
@@ -202,8 +202,6 @@ $this->log('userId:'. $this->userId);
         $this->set('linkGacha', BASE_URL . 'Gachas/index'); 
         // トップ
         $this->set('linkSnsUser', BASE_URL . 'SnsUsers/index'); 
-        // 合成
-        $this->set('linkUserCard', BASE_URL . 'UserCard/index'); 
         // デッキ
         $this->set('linkDeck', BASE_URL . 'Deck/index'); 
         // プレゼントボックス

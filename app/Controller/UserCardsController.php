@@ -26,11 +26,10 @@ class UserCardsController extends ApiController {
 	public function index() {
 
         $list = $this->UserCard->getUserCard($this->userId);
-        $this->set('list', $this->Paginator->paginate());
+        $this->set('list', $list);
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
         $this->set('data', $userBaseCard);
-
 	}
 
     /**

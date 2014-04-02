@@ -1111,3 +1111,439 @@
 2014-04-02 18:04:22 Error: ownerId:1
 2014-04-02 18:04:22 Error: className:Users
 2014-04-02 18:04:22 Error: userId:1
+2014-04-02 18:35:33 Error: ownerId:1
+2014-04-02 18:35:33 Error: className:SnsUsers
+2014-04-02 18:35:33 Error: Fatal Error (1): Call to a member function getUserParams() on a non-object in [/var/www/asns/app/Controller/AppController.php, line 174]
+2014-04-02 18:35:33 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 174)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 174, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 174, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-02 18:35:33 Error: ownerId:1
+2014-04-02 18:35:33 Error: className:CakeError
+2014-04-02 18:35:33 Error: userIdErr:0
+2014-04-02 18:35:33 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 18:35:33 Error: ownerId:1
+2014-04-02 18:35:33 Error: className:Errors
+2014-04-02 18:35:33 Error: userId:0
+2014-04-02 18:36:15 Error: ownerId:
+2014-04-02 18:36:15 Error: className:Errors
+2014-04-02 18:36:15 Error: userId:0
+2014-04-02 18:36:21 Error: ownerId:
+2014-04-02 18:36:21 Error: className:SnsUsers
+2014-04-02 18:57:13 Error: ownerId:1
+2014-04-02 18:57:13 Error: className:SnsUsers
+2014-04-02 18:57:13 Error: userId:17
+2014-04-02 18:57:16 Error: ownerId:1
+2014-04-02 18:57:16 Error: className:Quests
+2014-04-02 18:57:16 Error: userId:17
+2014-04-02 18:57:18 Error: ownerId:1
+2014-04-02 18:57:18 Error: className:Stages
+2014-04-02 18:57:18 Error: userId:17
+2014-04-02 18:57:19 Error: ownerId:1
+2014-04-02 18:57:19 Error: className:Stages
+2014-04-02 18:57:20 Error: userId:17
+2014-04-02 18:57:20 Error: ownerId:1
+2014-04-02 18:57:20 Error: className:Stages
+2014-04-02 18:57:20 Error: userId:17
+2014-04-02 18:57:20 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-02 18:57:23 Error: ownerId:1
+2014-04-02 18:57:23 Error: className:Stages
+2014-04-02 18:57:23 Error: userId:17
+2014-04-02 18:57:23 Error: aaaaaaaaaaaaaa:
+2014-04-02 18:57:23 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 18:57:23 Error: userId;:17
+2014-04-02 18:57:23 Error: actCheck:
+2014-04-02 18:57:23 Error: act:100
+2014-04-02 18:57:23 Error: use_act:
+2014-04-02 18:57:23 Error: Fatal Error (1): Call to a member function save() on a non-object in [/var/www/asns/app/Controller/StagesController.php, line 508]
+2014-04-02 18:57:23 Error: [InternalErrorException] Internal Server Error
+Request URL: /index.php/Stages/init?params=%7B%22stage_id%22%3A%221%22%2C%22quest_id%22%3A%221%22%2C%22progress%22%3A%22100%22%2C%22state%22%3A%222%22%7D
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/asns/a...', 508)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/asns/a...', 508, Array)
+#2 /var/www/asns/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/asns/a...', 508, Array)
+#3 /var/www/asns/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-02 18:57:23 Error: ownerId:1
+2014-04-02 18:57:23 Error: className:CakeError
+2014-04-02 18:57:23 Error: userIdErr:0
+2014-04-02 18:57:23 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 18:57:23 Error: ownerId:1
+2014-04-02 18:57:23 Error: className:Errors
+2014-04-02 18:57:23 Error: userId:0
+2014-04-02 18:58:45 Error: ownerId:
+2014-04-02 18:58:45 Error: className:SnsUsers
+2014-04-02 18:58:47 Error: ownerId:
+2014-04-02 18:58:47 Error: className:Stages
+2014-04-02 18:58:51 Error: ownerId:
+2014-04-02 18:58:51 Error: className:Stages
+2014-04-02 18:58:53 Error: ownerId:
+2014-04-02 18:58:53 Error: className:Stages
+2014-04-02 18:58:55 Error: ownerId:1
+2014-04-02 18:58:55 Error: className:Quests
+2014-04-02 18:58:55 Error: userId:17
+2014-04-02 18:58:56 Error: ownerId:
+2014-04-02 18:58:56 Error: className:Quests
+2014-04-02 18:58:57 Error: ownerId:1
+2014-04-02 18:58:57 Error: className:Stages
+2014-04-02 18:58:57 Error: userId:17
+2014-04-02 18:58:58 Error: ownerId:1
+2014-04-02 18:58:58 Error: className:Stages
+2014-04-02 18:58:58 Error: userId:17
+2014-04-02 18:58:58 Error: ownerId:1
+2014-04-02 18:58:58 Error: className:Stages
+2014-04-02 18:58:58 Error: userId:17
+2014-04-02 18:58:58 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-02 18:59:00 Error: ownerId:1
+2014-04-02 18:59:00 Error: className:Stages
+2014-04-02 18:59:00 Error: userId:17
+2014-04-02 18:59:00 Error: aaaaaaaaaaaaaa:
+2014-04-02 18:59:00 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 18:59:00 Error: userId;:17
+2014-04-02 18:59:00 Error: actCheck:
+2014-04-02 18:59:00 Error: act:100
+2014-04-02 18:59:00 Error: use_act:
+2014-04-02 18:59:00 Error: ownerId:1
+2014-04-02 18:59:00 Error: className:File
+2014-04-02 18:59:00 Error: userId:17
+2014-04-02 18:59:00 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-02 18:59:57 Error: ownerId:
+2014-04-02 18:59:57 Error: className:Stages
+2014-04-02 18:59:58 Error: ownerId:
+2014-04-02 18:59:58 Error: className:Errors
+2014-04-02 18:59:58 Error: userId:0
+2014-04-02 19:00:24 Error: ownerId:
+2014-04-02 19:00:24 Error: className:File
+2014-04-02 19:00:32 Error: ownerId:
+2014-04-02 19:00:32 Error: className:Quests
+2014-04-02 19:01:44 Error: ownerId:1
+2014-04-02 19:01:44 Error: className:Stages
+2014-04-02 19:01:44 Error: userId:17
+2014-04-02 19:01:44 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:01:44 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:01:44 Error: userId;:17
+2014-04-02 19:01:44 Error: actCheck:
+2014-04-02 19:01:44 Error: act:99
+2014-04-02 19:01:44 Error: use_act:
+2014-04-02 19:01:46 Error: ownerId:1
+2014-04-02 19:01:46 Error: className:Stages
+2014-04-02 19:01:46 Error: userId:17
+2014-04-02 19:01:46 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:01:46 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:01:46 Error: userId;:17
+2014-04-02 19:01:46 Error: actCheck:
+2014-04-02 19:01:46 Error: act:98
+2014-04-02 19:01:46 Error: use_act:
+2014-04-02 19:01:47 Error: ownerId:1
+2014-04-02 19:01:47 Error: className:File
+2014-04-02 19:01:47 Error: userId:17
+2014-04-02 19:01:47 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-02 19:01:47 Error: ownerId:1
+2014-04-02 19:01:47 Error: className:Stages
+2014-04-02 19:01:48 Error: userId:17
+2014-04-02 19:01:48 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:01:48 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:01:48 Error: userId;:17
+2014-04-02 19:01:48 Error: actCheck:
+2014-04-02 19:01:48 Error: act:97
+2014-04-02 19:01:48 Error: use_act:
+2014-04-02 19:01:48 Error: ownerId:1
+2014-04-02 19:01:48 Error: className:File
+2014-04-02 19:01:48 Error: userId:17
+2014-04-02 19:01:48 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-02 19:01:48 Error: ownerId:1
+2014-04-02 19:01:48 Error: className:Stages
+2014-04-02 19:01:48 Error: userId:17
+2014-04-02 19:01:48 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:01:48 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:01:48 Error: userId;:17
+2014-04-02 19:01:48 Error: actCheck:
+2014-04-02 19:01:48 Error: act:96
+2014-04-02 19:01:48 Error: use_act:
+2014-04-02 19:01:48 Error: ownerId:1
+2014-04-02 19:01:48 Error: className:File
+2014-04-02 19:01:48 Error: userId:17
+2014-04-02 19:01:49 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-02 19:01:49 Error: ownerId:1
+2014-04-02 19:01:49 Error: className:Stages
+2014-04-02 19:01:49 Error: userId:17
+2014-04-02 19:01:49 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:01:49 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:01:49 Error: userId;:17
+2014-04-02 19:01:49 Error: actCheck:
+2014-04-02 19:01:49 Error: act:95
+2014-04-02 19:01:49 Error: use_act:
+2014-04-02 19:01:50 Error: ownerId:1
+2014-04-02 19:01:50 Error: className:File
+2014-04-02 19:01:50 Error: userId:17
+2014-04-02 19:01:50 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-02 19:02:22 Error: ownerId:1
+2014-04-02 19:02:22 Error: className:Stages
+2014-04-02 19:02:22 Error: userId:17
+2014-04-02 19:02:23 Error: ownerId:1
+2014-04-02 19:02:23 Error: className:File
+2014-04-02 19:02:23 Error: userId:17
+2014-04-02 19:02:23 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-04-02 19:02:25 Error: ownerId:1
+2014-04-02 19:02:25 Error: className:Stages
+2014-04-02 19:02:25 Error: userId:17
+2014-04-02 19:02:25 Error: aryDataPlayer:Array
+(
+    [enemy_id] => 1
+    [card_name] => 一ヶ谷 かほり
+    [hp] => 50
+    [atk] => 50
+    [def] => 50
+    [skill_id] => 1
+    [skill_level] => 20
+    [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+    [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+    [after_lose_words] => 
+    [delete_flg] => 0
+    [skill_name] => アフタースクール
+    [effect] => 1
+    [updown] => 1
+    [target] => 3
+    [percent] => 35
+    [skill_words] => 味方の防御力を大アップ
+)
+
+2014-04-02 19:02:25 Error: ownerId:1
+2014-04-02 19:02:25 Error: className:Stages
+2014-04-02 19:02:25 Error: userId:17
+2014-04-02 19:02:34 Error: ownerId:1
+2014-04-02 19:02:34 Error: className:Stages
+2014-04-02 19:02:34 Error: userId:17
+2014-04-02 19:02:37 Error: ownerId:1
+2014-04-02 19:02:37 Error: className:Stages
+2014-04-02 19:02:37 Error: userId:17
+2014-04-02 19:02:37 Error: ownerId:1
+2014-04-02 19:02:37 Error: className:Stages
+2014-04-02 19:02:38 Error: userId:17
+2014-04-02 19:02:38 Error: main_params:{"stage_id":"2","quest_id":"1","progress":"0","state":"1"}
+2014-04-02 19:02:55 Error: ownerId:1
+2014-04-02 19:02:55 Error: className:Stages
+2014-04-02 19:02:55 Error: userId:17
+2014-04-02 19:02:55 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:02:55 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:02:55 Error: userId;:17
+2014-04-02 19:02:55 Error: actCheck:
+2014-04-02 19:02:55 Error: act:94
+2014-04-02 19:02:55 Error: use_act:
+2014-04-02 19:02:56 Error: ownerId:1
+2014-04-02 19:02:56 Error: className:Stages
+2014-04-02 19:02:56 Error: userId:17
+2014-04-02 19:02:56 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:02:56 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:02:56 Error: userId;:17
+2014-04-02 19:02:56 Error: actCheck:
+2014-04-02 19:02:56 Error: act:93
+2014-04-02 19:02:56 Error: use_act:
+2014-04-02 19:02:57 Error: ownerId:1
+2014-04-02 19:02:57 Error: className:Stages
+2014-04-02 19:02:57 Error: userId:17
+2014-04-02 19:02:57 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:02:57 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:02:57 Error: userId;:17
+2014-04-02 19:02:57 Error: actCheck:
+2014-04-02 19:02:57 Error: act:92
+2014-04-02 19:02:57 Error: use_act:
+2014-04-02 19:02:57 Error: ownerId:1
+2014-04-02 19:02:57 Error: className:Stages
+2014-04-02 19:02:57 Error: userId:17
+2014-04-02 19:02:57 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:02:57 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:02:57 Error: userId;:17
+2014-04-02 19:02:57 Error: actCheck:
+2014-04-02 19:02:57 Error: act:91
+2014-04-02 19:02:57 Error: use_act:
+2014-04-02 19:02:58 Error: ownerId:1
+2014-04-02 19:02:58 Error: className:Stages
+2014-04-02 19:02:58 Error: userId:17
+2014-04-02 19:02:58 Error: aaaaaaaaaaaaaa:
+2014-04-02 19:02:58 Error: bbbbbbbbbbbbbbbb:
+2014-04-02 19:02:58 Error: userId;:17
+2014-04-02 19:02:58 Error: actCheck:
+2014-04-02 19:02:58 Error: act:90
+2014-04-02 19:02:58 Error: use_act:
+2014-04-02 19:03:13 Error: ownerId:
+2014-04-02 19:03:13 Error: className:Stages
+2014-04-02 19:03:21 Error: ownerId:
+2014-04-02 19:03:21 Error: className:Stages
+2014-04-02 19:03:28 Error: ownerId:
+2014-04-02 19:03:28 Error: className:Stages
+2014-04-02 19:03:34 Error: ownerId:1
+2014-04-02 19:03:34 Error: className:Quests
+2014-04-02 19:03:34 Error: userId:17
+2014-04-02 19:03:36 Error: ownerId:1
+2014-04-02 19:03:36 Error: className:Stages
+2014-04-02 19:03:36 Error: userId:17
+2014-04-02 19:03:42 Error: ownerId:
+2014-04-02 19:03:42 Error: className:File
+2014-04-02 19:04:10 Error: [MissingControllerException] Controller class UserCardController could not be found.
+Exception Attributes: array (
+  'class' => 'UserCardController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/UserCard/index
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-02 19:04:10 Error: ownerId:1
+2014-04-02 19:04:10 Error: className:CakeError
+2014-04-02 19:04:10 Error: userIdErr:0
+2014-04-02 19:04:10 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 19:04:10 Error: ownerId:1
+2014-04-02 19:04:10 Error: className:Errors
+2014-04-02 19:04:10 Error: userId:0
+2014-04-02 19:04:13 Error: ownerId:
+2014-04-02 19:04:13 Error: className:Stages
+2014-04-02 19:04:13 Error: ownerId:
+2014-04-02 19:04:13 Error: className:Stages
+2014-04-02 19:04:52 Error: ownerId:
+2014-04-02 19:04:52 Error: className:Stages
+2014-04-02 19:04:53 Error: ownerId:
+2014-04-02 19:04:53 Error: className:Stages
+2014-04-02 19:07:11 Error: ownerId:1
+2014-04-02 19:07:11 Error: className:Stages
+2014-04-02 19:07:11 Error: userId:17
+2014-04-02 19:08:06 Error: ownerId:1
+2014-04-02 19:08:06 Error: className:Stages
+2014-04-02 19:08:06 Error: userId:17
+2014-04-02 19:08:35 Error: ownerId:1
+2014-04-02 19:08:35 Error: className:Stages
+2014-04-02 19:08:35 Error: userId:17
+2014-04-02 19:09:08 Error: ownerId:1
+2014-04-02 19:09:08 Error: className:Stages
+2014-04-02 19:09:08 Error: userId:17
+2014-04-02 19:09:13 Error: ownerId:1
+2014-04-02 19:09:13 Error: className:UserCards
+2014-04-02 19:09:13 Error: userId:17
+2014-04-02 19:09:13 Error: [MissingHelperException] Helper class SmartyHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SmartyHelper',
+  'plugin' => false,
+)
+Request URL: /index.php/UserCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Smarty')
+#1 /var/www/asns/lib/Cake/View/View.php(824): HelperCollection->__isset('Smarty')
+#2 /var/www/asns/app/View/SmartyView.php(63): View->__get('Smarty')
+#3 /var/www/asns/lib/Cake/View/View.php(347): SmartyView->loadHelpers()
+#4 /var/www/asns/app/View/SmartyView.php(4): View->__construct(Object(UserCardsController))
+#5 /var/www/asns/lib/Cake/Controller/Controller.php(1240): SmartyView->__construct(Object(UserCardsController))
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(938): Controller->_getViewObject()
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-04-02 19:09:13 Error: ownerId:1
+2014-04-02 19:09:13 Error: className:CakeError
+2014-04-02 19:09:13 Error: userIdErr:0
+2014-04-02 19:09:13 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 19:09:13 Error: ownerId:1
+2014-04-02 19:09:13 Error: className:Errors
+2014-04-02 19:09:13 Error: userId:0
+2014-04-02 19:09:48 Error: ownerId:1
+2014-04-02 19:09:48 Error: className:UserCards
+2014-04-02 19:09:48 Error: userId:17
+2014-04-02 19:09:48 Error: [MissingHelperException] Helper class SmartyHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SmartyHelper',
+  'plugin' => false,
+)
+Request URL: /index.php/UserCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Smarty')
+#1 /var/www/asns/lib/Cake/View/View.php(824): HelperCollection->__isset('Smarty')
+#2 /var/www/asns/app/View/SmartyView.php(63): View->__get('Smarty')
+#3 /var/www/asns/lib/Cake/View/View.php(347): SmartyView->loadHelpers()
+#4 /var/www/asns/app/View/SmartyView.php(4): View->__construct(Object(UserCardsController))
+#5 /var/www/asns/lib/Cake/Controller/Controller.php(1240): SmartyView->__construct(Object(UserCardsController))
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(938): Controller->_getViewObject()
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-04-02 19:09:48 Error: ownerId:1
+2014-04-02 19:09:48 Error: className:CakeError
+2014-04-02 19:09:48 Error: userIdErr:0
+2014-04-02 19:09:48 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 19:09:48 Error: ownerId:1
+2014-04-02 19:09:48 Error: className:Errors
+2014-04-02 19:09:48 Error: userId:0
+2014-04-02 19:09:54 Error: ownerId:1
+2014-04-02 19:09:54 Error: className:UserCards
+2014-04-02 19:09:54 Error: userId:17
+2014-04-02 19:09:54 Error: [MissingHelperException] Helper class SmartyHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SmartyHelper',
+  'plugin' => false,
+)
+Request URL: /index.php/UserCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Smarty')
+#1 /var/www/asns/lib/Cake/View/View.php(824): HelperCollection->__isset('Smarty')
+#2 /var/www/asns/app/View/SmartyView.php(63): View->__get('Smarty')
+#3 /var/www/asns/lib/Cake/View/View.php(347): SmartyView->loadHelpers()
+#4 /var/www/asns/app/View/SmartyView.php(4): View->__construct(Object(UserCardsController))
+#5 /var/www/asns/lib/Cake/Controller/Controller.php(1240): SmartyView->__construct(Object(UserCardsController))
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(938): Controller->_getViewObject()
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-04-02 19:09:54 Error: ownerId:1
+2014-04-02 19:09:54 Error: className:CakeError
+2014-04-02 19:09:54 Error: userIdErr:0
+2014-04-02 19:09:54 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 19:09:54 Error: ownerId:1
+2014-04-02 19:09:54 Error: className:Errors
+2014-04-02 19:09:54 Error: userId:0
+2014-04-02 19:10:26 Error: ownerId:1
+2014-04-02 19:10:26 Error: className:Users
+2014-04-02 19:10:26 Error: userId:17
+2014-04-02 19:10:28 Error: ownerId:1
+2014-04-02 19:10:28 Error: className:UserCards
+2014-04-02 19:10:28 Error: userId:17
+2014-04-02 19:10:28 Error: [MissingHelperException] Helper class SmartyHelper could not be found.
+Exception Attributes: array (
+  'class' => 'SmartyHelper',
+  'plugin' => false,
+)
+Request URL: /index.php/UserCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Smarty')
+#1 /var/www/asns/lib/Cake/View/View.php(824): HelperCollection->__isset('Smarty')
+#2 /var/www/asns/app/View/SmartyView.php(63): View->__get('Smarty')
+#3 /var/www/asns/lib/Cake/View/View.php(347): SmartyView->loadHelpers()
+#4 /var/www/asns/app/View/SmartyView.php(4): View->__construct(Object(UserCardsController))
+#5 /var/www/asns/lib/Cake/Controller/Controller.php(1240): SmartyView->__construct(Object(UserCardsController))
+#6 /var/www/asns/lib/Cake/Controller/Controller.php(938): Controller->_getViewObject()
+#7 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#8 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-04-02 19:10:28 Error: ownerId:1
+2014-04-02 19:10:28 Error: className:CakeError
+2014-04-02 19:10:28 Error: userIdErr:0
+2014-04-02 19:10:28 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-02 19:10:28 Error: ownerId:1
+2014-04-02 19:10:28 Error: className:Errors
+2014-04-02 19:10:28 Error: userId:0
+2014-04-02 19:10:51 Error: ownerId:
+2014-04-02 19:10:51 Error: className:UserCards
+2014-04-02 19:11:10 Error: ownerId:1
+2014-04-02 19:11:10 Error: className:UserCards
+2014-04-02 19:11:10 Error: userId:17
+2014-04-02 19:11:36 Error: ownerId:1
+2014-04-02 19:11:36 Error: className:UserCards
+2014-04-02 19:11:36 Error: userId:17
+2014-04-02 19:11:52 Error: ownerId:
+2014-04-02 19:11:52 Error: className:Users
