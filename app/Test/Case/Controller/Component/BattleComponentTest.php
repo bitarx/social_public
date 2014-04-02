@@ -33,7 +33,8 @@ class BattleComponentTest extends CakeTestCase {
             ,   'atk' => 5
             ,   'def' => 5
         );
-        $targetCards = $this->battleComponent->doBattle($selfCards, $targetCards);
+        $log = array();
+        $targetCards = $this->battleComponent->doBattle($selfCards, $targetCards, $log);
         $this->assertEmpty($targetCards);
     }
 
