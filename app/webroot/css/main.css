@@ -269,6 +269,21 @@ a:hover {
     width: 240px;
 }
 
+
+/** ベースカード変更 */
+.changeBase {
+    top: 220px;
+    left: 110px;
+    position: relative;
+}
+.strChangeBase {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    font-size: 25px;
+}
+
+
 /** クエストのプログレスバー */
 .progQuest {
     position: relative;

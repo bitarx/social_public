@@ -10921,3 +10921,1713 @@ Stack Trace:
 2014-04-03 21:00:40 Error: className:File
 2014-04-03 21:00:40 Error: userId:17
 2014-04-03 21:00:40 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-03 22:05:50 Error: ownerId:10
+2014-04-03 22:05:50 Error: className:SnsUsers
+2014-04-03 22:05:50 Error: userId:45
+2014-04-03 22:05:55 Error: ownerId:10
+2014-04-03 22:05:55 Error: className:UserCards
+2014-04-03 22:05:55 Error: userId:45
+2014-04-03 22:05:55 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:05:55 Error: ownerId:10
+2014-04-03 22:05:55 Error: className:File
+2014-04-03 22:05:55 Error: userId:45
+2014-04-03 22:05:55 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:14:36 Error: ownerId:10
+2014-04-03 22:14:36 Error: className:UserCards
+2014-04-03 22:14:36 Error: userId:45
+2014-04-03 22:14:36 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:14:36 Error: ownerId:10
+2014-04-03 22:14:36 Error: className:File
+2014-04-03 22:14:36 Error: userId:45
+2014-04-03 22:14:36 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:15:19 Error: ownerId:10
+2014-04-03 22:15:19 Error: className:UserCards
+2014-04-03 22:15:19 Error: userId:45
+2014-04-03 22:15:19 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:15:20 Error: ownerId:10
+2014-04-03 22:15:20 Error: className:File
+2014-04-03 22:15:20 Error: userId:45
+2014-04-03 22:15:20 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:16:05 Error: ownerId:10
+2014-04-03 22:16:05 Error: className:UserCards
+2014-04-03 22:16:05 Error: userId:45
+2014-04-03 22:16:05 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:16:06 Error: ownerId:10
+2014-04-03 22:16:06 Error: className:File
+2014-04-03 22:16:06 Error: userId:45
+2014-04-03 22:16:06 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:16:31 Error: ownerId:10
+2014-04-03 22:16:31 Error: className:UserCards
+2014-04-03 22:16:31 Error: userId:45
+2014-04-03 22:16:31 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:16:32 Error: ownerId:10
+2014-04-03 22:16:32 Error: className:File
+2014-04-03 22:16:32 Error: userId:45
+2014-04-03 22:16:32 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:17:01 Error: ownerId:10
+2014-04-03 22:17:01 Error: className:UserCards
+2014-04-03 22:17:01 Error: userId:45
+2014-04-03 22:17:01 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:17:01 Error: ownerId:10
+2014-04-03 22:17:01 Error: className:File
+2014-04-03 22:17:01 Error: userId:45
+2014-04-03 22:17:01 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:17:22 Error: ownerId:10
+2014-04-03 22:17:22 Error: className:UserCards
+2014-04-03 22:17:22 Error: userId:45
+2014-04-03 22:17:22 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:17:22 Error: ownerId:10
+2014-04-03 22:17:22 Error: className:File
+2014-04-03 22:17:22 Error: userId:45
+2014-04-03 22:17:22 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:17:40 Error: ownerId:10
+2014-04-03 22:17:40 Error: className:UserCards
+2014-04-03 22:17:40 Error: userId:45
+2014-04-03 22:17:40 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:17:40 Error: ownerId:10
+2014-04-03 22:17:40 Error: className:File
+2014-04-03 22:17:40 Error: userId:45
+2014-04-03 22:17:40 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:18:05 Error: ownerId:10
+2014-04-03 22:18:05 Error: className:UserCards
+2014-04-03 22:18:05 Error: userId:45
+2014-04-03 22:18:05 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:18:06 Error: ownerId:10
+2014-04-03 22:18:06 Error: className:File
+2014-04-03 22:18:06 Error: userId:45
+2014-04-03 22:18:06 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:18:31 Error: ownerId:10
+2014-04-03 22:18:31 Error: className:UserCards
+2014-04-03 22:18:31 Error: userId:45
+2014-04-03 22:18:31 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:18:31 Error: ownerId:10
+2014-04-03 22:18:31 Error: className:File
+2014-04-03 22:18:31 Error: userId:45
+2014-04-03 22:18:31 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:18:52 Error: ownerId:10
+2014-04-03 22:18:52 Error: className:UserCards
+2014-04-03 22:18:52 Error: userId:45
+2014-04-03 22:18:52 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:18:53 Error: ownerId:10
+2014-04-03 22:18:53 Error: className:File
+2014-04-03 22:18:53 Error: userId:45
+2014-04-03 22:18:53 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:19:06 Error: ownerId:10
+2014-04-03 22:19:06 Error: className:UserCards
+2014-04-03 22:19:06 Error: userId:45
+2014-04-03 22:19:06 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:19:07 Error: ownerId:10
+2014-04-03 22:19:07 Error: className:File
+2014-04-03 22:19:07 Error: userId:45
+2014-04-03 22:19:07 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:19:20 Error: ownerId:10
+2014-04-03 22:19:20 Error: className:UserCards
+2014-04-03 22:19:20 Error: userId:45
+2014-04-03 22:19:20 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:19:20 Error: ownerId:10
+2014-04-03 22:19:20 Error: className:File
+2014-04-03 22:19:20 Error: userId:45
+2014-04-03 22:19:20 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:34:00 Error: ownerId:1
+2014-04-03 22:34:00 Error: className:UserBaseCards
+2014-04-03 22:34:00 Error: userId:1
+2014-04-03 22:34:00 Error: aryData:Array
+(
+    [user_id] => 1
+    [user_card_id] => 1
+    [delete_flg] => 0
+    [created] => 2014-02-17 21:30:43
+    [modified] => 2014-02-17 21:30:43
+    [user_name] => Lorem ipsum dolor sit amet
+    [sns_user_id] => 1
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 1
+            [viewer] => 1
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-02-05 19:51:44
+            [modified] => 2014-02-05 19:51:44
+        )
+
+    [card_id] => 1
+    [hp] => 1
+    [hp_max] => 1
+    [atk] => 1
+    [def] => 1
+    [level] => 1
+    [exp] => 1
+    [skill_level] => 1
+    [skill_exp] => 1
+    [User] => Array
+        (
+            [user_id] => 1
+            [user_name] => Lorem ipsum dolor sit amet
+            [sns_user_id] => 1
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-02-17 21:30:49
+            [modified] => 2014-02-17 21:30:49
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 1
+                    [viewer] => 1
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-02-05 19:51:44
+                    [modified] => 2014-02-05 19:51:44
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 1
+            [card_name] => あいり
+            [card_title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 200
+            [card_def] => 250
+            [skill_id] => 1
+            [card_words] => test
+            [card_detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 1
+                    [skill_name] => アフタースクール
+                    [effect] => 1
+                    [updown] => 1
+                    [target] => 3
+                    [percent] => 35
+                    [skill_words] => 味方の防御力を大アップ
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:34:15 Error: ownerId:10
+2014-04-03 22:34:15 Error: className:UserCards
+2014-04-03 22:34:15 Error: userId:45
+2014-04-03 22:34:15 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:34:15 Error: ownerId:10
+2014-04-03 22:34:15 Error: className:File
+2014-04-03 22:34:15 Error: userId:45
+2014-04-03 22:34:15 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:34:17 Error: ownerId:10
+2014-04-03 22:34:17 Error: className:UserCards
+2014-04-03 22:34:17 Error: userId:45
+2014-04-03 22:34:17 Error: [MissingActionException] Action UserCardsController::UserBaseCards() could not be found.
+Exception Attributes: array (
+  'controller' => 'UserCardsController',
+  'action' => 'UserBaseCards',
+)
+Request URL: /index.php/UserCards/UserBaseCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-03 22:34:17 Error: ownerId:10
+2014-04-03 22:34:17 Error: className:CakeError
+2014-04-03 22:34:17 Error: userIdErr:0
+2014-04-03 22:34:17 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-03 22:34:17 Error: ownerId:10
+2014-04-03 22:34:17 Error: className:Errors
+2014-04-03 22:34:17 Error: userId:0
+2014-04-03 22:35:48 Error: ownerId:10
+2014-04-03 22:35:48 Error: className:UserCards
+2014-04-03 22:35:48 Error: userId:45
+2014-04-03 22:35:48 Error: [MissingActionException] Action UserCardsController::UserBaseCards() could not be found.
+Exception Attributes: array (
+  'controller' => 'UserCardsController',
+  'action' => 'UserBaseCards',
+)
+Request URL: /index.php/UserCards/UserBaseCards/index
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserCardsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-03 22:35:48 Error: ownerId:10
+2014-04-03 22:35:48 Error: className:CakeError
+2014-04-03 22:35:48 Error: userIdErr:0
+2014-04-03 22:35:48 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-03 22:35:48 Error: ownerId:10
+2014-04-03 22:35:48 Error: className:Errors
+2014-04-03 22:35:48 Error: userId:0
+2014-04-03 22:37:56 Error: ownerId:10
+2014-04-03 22:37:56 Error: className:UserCards
+2014-04-03 22:37:56 Error: userId:45
+2014-04-03 22:37:56 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:37:57 Error: ownerId:10
+2014-04-03 22:37:57 Error: className:File
+2014-04-03 22:37:57 Error: userId:45
+2014-04-03 22:37:57 Error: name:kok/var/www/asns/app/Private/card/card_m_43.jpg
+2014-04-03 22:37:59 Error: ownerId:10
+2014-04-03 22:37:59 Error: className:UserBaseCards
+2014-04-03 22:37:59 Error: userId:45
+2014-04-03 22:37:59 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 22:38:03 Error: ownerId:10
+2014-04-03 22:38:03 Error: className:UserBaseCards
+2014-04-03 22:38:03 Error: userId:45
+2014-04-03 22:38:03 Error: aryData:Array
+(
+    [user_id] => 45
+    [user_card_id] => 85
+    [delete_flg] => 0
+    [created] => 2014-03-23 15:52:49
+    [modified] => 0000-00-00 00:00:00
+    [user_name] => test
+    [sns_user_id] => 10
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 10
+            [viewer] => 10
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+        )
+
+    [card_id] => 43
+    [hp] => 0
+    [hp_max] => 0
+    [atk] => 120
+    [def] => 80
+    [level] => 1
+    [exp] => 0
+    [skill_level] => 1
+    [skill_exp] => 0
+    [User] => Array
+        (
+            [user_id] => 45
+            [user_name] => test
+            [sns_user_id] => 10
+            [carrer] => 1
+            [delete_flg] => 0
+            [created] => 2014-03-23 15:52:22
+            [modified] => 2014-03-23 15:52:22
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 10
+                    [viewer] => 10
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-03-23 15:52:22
+                    [modified] => 2014-03-23 15:52:22
+                )
+
+        )
+
+    [Card] => Array
+        (
+            [card_id] => 43
+            [card_name] => 沙希
+            [card_title] => [看護しちゃうぞ]
+            [height] => 158
+            [weight] => 52
+            [size] => B85 W57 B86 Eカップ
+            [blood] => B型
+            [rare_level] => 1
+            [attr] => 2
+            [card_hp] => 500
+            [card_atk] => 120
+            [card_def] => 80
+            [skill_id] => 15
+            [card_words] => 未だにナース、なんて昔の言葉使ってる人がいるのね…ま、私も細かい事は気にしないけど。で、どこか悪いの？
+            [card_detail] => フランクなノリで患者にも人気の高い看護師。可愛い見た目にも関わらず、芯の太さと肝の大きさはかなりの物。
+            [delete_flg] => 0
+            [Skill] => Array
+                (
+                    [skill_id] => 15
+                    [skill_name] => 強制尿検査
+                    [effect] => 2
+                    [updown] => 2
+                    [target] => 2
+                    [percent] => 10
+                    [skill_words] => 相手の攻撃力を小ダウン
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-03 23:12:29 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-03 23:12:29 Error: ownerId:
+2014-04-03 23:12:29 Error: className:CakeError
+2014-04-03 23:12:29 Error: userIdErr:0
+2014-04-03 23:12:29 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-03 23:12:30 Error: ownerId:
+2014-04-03 23:12:30 Error: className:Errors
+2014-04-03 23:12:30 Error: userId:0
+2014-04-03 23:12:30 Error: ownerId:
+2014-04-03 23:12:30 Error: className:SnsUsers
+2014-04-03 23:12:37 Error: ownerId:
+2014-04-03 23:12:37 Error: className:Errors
+2014-04-03 23:12:37 Error: userId:0
+2014-04-04 00:29:49 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-04 00:29:49 Error: ownerId:
+2014-04-04 00:29:49 Error: className:CakeError
+2014-04-04 00:29:49 Error: userIdErr:0
+2014-04-04 00:29:49 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-04 00:29:49 Error: ownerId:
+2014-04-04 00:29:49 Error: className:Errors
+2014-04-04 00:29:49 Error: userId:0
+2014-04-04 01:10:30 Error: ownerId:
+2014-04-04 01:10:30 Error: className:SnsUsers
