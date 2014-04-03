@@ -187,6 +187,88 @@ a:hover {
     left: 194px;
 }
 
+/** タイトルバナーと文字 */
+.bannerTitle {
+    margin: 0 auto;
+    position: relative;
+}
+.strTitle {
+    position: absolute;
+    top: 14px;
+    left: 260px;
+    font-size: 30px;
+}
+
+/** カード */
+.card {
+    top: 4px;
+    left: 10px;
+    font-size: 25px;
+    color: #FFA500;
+    position: relative;
+}
+.cardImg {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+.cardLv {
+    top: 0px;
+    left: 180px;
+    position: absolute;
+}
+.cardCost {
+    top: 4px;
+    left: 10px;
+    position: absolute;
+}
+.cardAtk {
+    top: 35px;
+    left: 180px;
+    position: absolute;
+}
+.cardDef {
+    top: 35px;
+    left: 350px;
+    position: absolute;
+}
+.cardExp {
+    top: 70px;
+    left: 180px;
+    position: absolute;
+}
+.cardExpInt {
+    top: 71px;
+    left: 350px;
+    font-size: 20px;
+    position: absolute;
+}
+.cardSkillLv {
+    top: 105px;
+    left: 180px;
+    position: absolute;
+}
+.cardSkillName {
+    top: 105px;
+    left: 340px;
+    position: absolute;
+}
+.cardSkillEft {
+    top: 140px;
+    left: 180px;
+    position: absolute;
+}
+.progCardExp {
+    position: absolute;
+    top: 75px;
+    left: 270px;
+    background: url(../img/progress_base.png) top repeat-x;
+    border : 1px solid #d3d3d3;
+    line-height: 0;
+    height: 20px;
+    width: 240px;
+}
+
 /** クエストのプログレスバー */
 .progQuest {
     position: relative;

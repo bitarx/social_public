@@ -61,6 +61,7 @@ console.log(act);
 
 function dispProgressQuestExp(exp)
 {
+console.log('exp' + exp); 
     $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
     $('#progQuestExp').show(); 
      

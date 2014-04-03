@@ -29,6 +29,8 @@ class UserCardsController extends ApiController {
         $this->set('list', $list);
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+
+   $this->log('aryData:' . print_r($userBaseCard, true)); 
         $this->set('data', $userBaseCard);
 	}
 

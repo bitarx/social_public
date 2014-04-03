@@ -53,7 +53,8 @@ class UserBaseCard extends AppModel {
 
         $where = array('user_id' => $userId);
         $field = array();
-        $data = $this->getAllFind($where, $field, 'first');
+        $recurcive = 3;
+        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recurcive);
         return $data;
     }
 }
