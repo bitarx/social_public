@@ -177,6 +177,9 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
             $this->UserParam->recoverAct($this->userParam);
         }
 
+        // コントローラとアクション
+        $this->set('curAct', $this->name . '/' . $this->action); 
+
 $this->log('userId:'. $this->userId); 
         // URLアサイン
         $this->_setUrl();

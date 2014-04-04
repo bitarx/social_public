@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-03 21:00:35
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-04 16:35:06
          compiled from "/var/www/asns/app/View/Elements/card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:267981235533d4d63c608b0-04370712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7f0f9328024cf42696ae42d6990d81f388fa66d' => 
     array (
       0 => '/var/www/asns/app/View/Elements/card.tpl',
-      1 => 1396526382,
+      1 => 1396596617,
       2 => 'file',
     ),
   ),
@@ -15,23 +15,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.16',
+  'unifunc' => 'content_533d4d63c81906_72646970',
   'variables' => 
   array (
     'data' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.16',
-  'unifunc' => 'content_533d4d63c81906_72646970',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_533d4d63c81906_72646970')) {function content_533d4d63c81906_72646970($_smarty_tpl) {?><div class="card">
+<?php if ($_valid && !is_callable('content_533d4d63c81906_72646970')) {function content_533d4d63c81906_72646970($_smarty_tpl) {?><script type="text/javascript">
+$(function () {
+    dispProgressQuestExp(<?php echo $_smarty_tpl->tpl_vars['data']->value['exp'];?>
+);
+});
+</script>
+<div class="card">
     <div class="cardImg">
         <img src="<?php echo @constant('FILEOUT_URL');?>
 ?size=m&dir=card&target=<?php echo $_smarty_tpl->tpl_vars['data']->value['card_id'];?>
 " width="160px">
     </div>
-    <div class="cardLv">
-        Lv.<span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['level'];?>
-</span>
+    <div class="cardName">
+        <?php echo $_smarty_tpl->tpl_vars['data']->value['Card']['card_title'];?>
+<span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['Card']['card_name'];?>
+</span> 
     </div>
     <div class="cardAtk">
         攻撃:<span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['atk'];?>
@@ -48,6 +55,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div class="cardExpInt">
        <span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['exp'];?>
  / 100</span>
+    </div>
+    <div class="cardLv">
+        Lv.<span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['level'];?>
+</span>
     </div>
     <div class="cardSkillLv">
         スキルLv:<span style="color:#ffffff"><?php echo $_smarty_tpl->tpl_vars['data']->value['skill_level'];?>

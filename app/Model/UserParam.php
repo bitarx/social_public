@@ -189,7 +189,7 @@ class UserParam extends AppModel {
     public function recoverAct($userParam) {
 
         // 回復の余地があれば処理
-        if ($userParam['act'] < 100) {
+        if (isset($userParam['act']) && $userParam['act'] < 100) {
             // 最後に行動した時間
             $userLastActTime = new UserLastActTime();
             $where = array('user_id' => $userParam['user_id']);

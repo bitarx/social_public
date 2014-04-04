@@ -20,13 +20,8 @@ class UserBaseCardsController extends ApiController {
     public function index() {
 
         $list = $this->UserCard->getUserCard($this->userId);
+   $this->log('aryData:' . print_r($list, true));
         $this->set('list', $list);
-
-        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this
-->userId);
-
-   $this->log('aryData:' . print_r($userBaseCard, true));
-        $this->set('data', $userBaseCard);
     }
 
 }

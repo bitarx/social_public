@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-03 22:05:50
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-04 18:41:49
          compiled from "/var/www/asns/app/View/Layouts/default.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9769298505324f0444e5e42-67060483%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0b960c17ee805065fbd9c48ca4a6457f8f921f37' => 
     array (
       0 => '/var/www/asns/app/View/Layouts/default.tpl',
-      1 => 1396526566,
+      1 => 1396599493,
       2 => 'file',
     ),
   ),
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5324f0444ec551_24798438')) {function content_5324f0444ec551_24798438($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=640px;initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" >
+<meta name="viewport" content="width=device-width, initial-scale=0.5,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?php echo @constant('BASE_URL');?>
 css/main.css" />
@@ -46,7 +46,8 @@ js/main.js"></script>
 </head>
 <body>
 
-    <div id="container">
+        <?php echo $_smarty_tpl->getSubTemplate ("../Elements/header_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+   
         <div class="header">
             <img src="<?php echo @constant('BASE_URL');?>
 img/header_base.png">
@@ -71,9 +72,6 @@ img/header_base.png">
 
         <?php echo $_smarty_tpl->tpl_vars['content_for_layout']->value;?>
 
-    </div>
-        <?php echo $_smarty_tpl->getSubTemplate ("../Elements/header_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-   
 <div id="errMes"></div>
 </body>
 </html>
