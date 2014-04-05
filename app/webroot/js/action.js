@@ -6,14 +6,8 @@
  * @param object data Appサーバより返された結果
  * @return void
  */
-console.log('action.js');
 function routes(data)
 {
-console.log('routes');
-console.log(data);
-console.log(data.action);
-console.log(data.kind);
-console.log(data.target);
     if (data.result == "2") {
         $('#errMes').html( '不正なリクエストです' );
         $('#errMes').show(); 
@@ -43,8 +37,6 @@ console.log(data.target);
 
 function dispProgressQuest(prog)
 {
-console.log('proggggggggggggggggggggg');
-console.log(prog);
     $('#progQuestMain').html( '<img src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
     $('#progQuest').show(); 
      
@@ -52,8 +44,6 @@ console.log(prog);
 
 function dispProgressQuestAct(act)
 {
-console.log('acttttttttttttttt');
-console.log(act);
     $('#progQuestAct').html( '<img src="' + BASE_URL + 'img/progress_yellow.png" width="' + act + '%" height="20px">' );
     $('#progQuestAct').show(); 
      
@@ -61,9 +51,23 @@ console.log(act);
 
 function dispProgressQuestExp(exp)
 {
-console.log('exp' + exp); 
     $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
     $('#progQuestExp').show(); 
+     
+}
+
+/**
+ * カードの経験値を表示
+ *
+ * @author imanishi 
+ * @param int 経験値
+ * @param int リスト表示時の連番
+ * @return void 
+ */
+function dispProgressCardExp(exp, num = 0)
+{
+    $('#progCardExp' + num).html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
+    $('#progCardExp' + num).show(); 
      
 }
 

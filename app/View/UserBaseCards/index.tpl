@@ -1,28 +1,15 @@
 <div class="userBaseCards index">
     <{include file="../Elements/title.tpl"}>
-    <{foreach from=$list item=data}>
-        <div class="cardListImg">
-           <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
-        </div>
-        <div class="cardList">
-            <div class="cardListName">
-                <{$data.card_title}><{$data.card_name}> 
+    <{foreach from=$list item=data key=key}>
+        <{include file="../Elements/card.tpl"}>
+        <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
+            <div class="btnSelectCard">
+                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="strSelectCard">
+                    ベースに選択
+                </div>
             </div>
-            <div class="cardListAtk">
-                攻撃:<{$data.atk}>
-            </div>
-            <div class="cardListDef">
-                防御:<{$data.def}>
-            </div>
-            <div class="cardListExp">
-                経験値:
-            </div>
-            <div class="cardListExpInt">
-                <{$data.exp}> / 100
-            </div>
-        </div>
-        <div style="clear:both;">
-            <img src="<{$smarty.const.IMG_URL}>line.png"> 
-        </div>
+        </a>
+        <{include file="../Elements/line.tpl"}>
     <{/foreach}>
 </div>

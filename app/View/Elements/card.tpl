@@ -1,38 +1,57 @@
-<script type="text/javascript">
-$(function () {
-    dispProgressQuestExp(<{$data.exp}>);
-});
-</script>
-<div class="card">
-    <div class="cardImg">
-        <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
+<div class="cardListImg">
+   <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
+</div>
+<div class="cardList">
+    <div class="cardListName">
+        <{if !empty($data.Card.card_title)}>
+            <{$data.Card.card_title}><{$data.Card.card_name}>
+        <{else}> 
+            <{$data.card_title}><{$data.card_name}>
+        <{/if}> 
     </div>
-    <div class="cardName">
-        <{$data.Card.card_title}><span style="color:#ffffff"><{$data.Card.card_name}></span> 
+    <div class="cardListAtk">
+        攻撃:<{$data.atk}>
     </div>
-    <div class="cardAtk">
-        攻撃:<span style="color:#ffffff"><{$data.atk}></span>
+    <div class="cardListDef">
+        防御:<{$data.def}>
     </div>
-    <div class="cardDef">
-        防御:<span style="color:#ffffff"><{$data.def}></span>
-    </div>
-    <div class="cardExp">
+    <div class="cardListExp">
         経験値:
     </div>
-    <div id="progQuestExp" class="progCardExp"></div>
-    <div class="cardExpInt">
-       <span style="color:#ffffff"><{$data.exp}> / 100</span>
+    <div class="progCardListExp">
     </div>
-    <div class="cardLv">
+    <div id="progCardExp<{$key}>" class="progCardListExpBar">
+    </div>
+    <div class="cardListExpInt">
+        <{$data.exp}> / 100
+    </div>
+
+    <script type="text/javascript">
+        dispProgressCardExp(<{$data.exp}>, <{$key}> );
+    </script>
+
+    <div class="cardListLv">
         Lv.<span style="color:#ffffff"><{$data.level}></span>
     </div>
-    <div class="cardSkillLv">
+    <div class="cardListSkillLv">
         スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
     </div>
-    <div class="cardSkillName">
-        スキル:<span style="color:#ffffff"><{$data.Card.Skill.skill_name}></span>
+    <div class="cardListSkillName">
+        スキル:<span style="color:#ffffff">
+        <{if $data.Card.Skill.skill_name}> 
+            <{$data.Card.Skill.skill_name}>
+        <{else}> 
+            <{$data.Skill.skill_name}>
+        <{/if}> 
+        </span>
     </div>
-    <div class="cardSkillEft">
-        効果:<span style="color:#ffffff"><{$data.Card.Skill.skill_words}></span>
+    <div class="cardListSkillEft">
+        効果:<span style="color:#ffffff">
+        <{if $data.Card.Skill.skill_name}> 
+            <{$data.Card.Skill.skill_words}>
+        <{else}> 
+            <{$data.Skill.skill_words}>
+        <{/if}> 
+        </span>
     </div>
 </div>

@@ -172,7 +172,7 @@ class UserCard extends AppModel {
         if (!empty($cardId)) { 
             $where['card_id'] = $cardId;
         } 
-        $list = $this->getAllFind($where);
+        $list = $this->getAllFind($where, $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 3);
         return $list;
     }
 
@@ -217,7 +217,7 @@ class UserCard extends AppModel {
             $where['user_id'] = $userId;
         } 
         $field = array();
-        $data = $this->getAllFind($where, $field, 'first');
+        $data = $this->getAllFind($where, $field, 'first', $order = array(), $limit = 0, $offset = 0, $recursive = 3);
         return $data;
     }
 

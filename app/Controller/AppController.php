@@ -159,7 +159,14 @@ $this->log('className:'. $this->name);
             if ( !isset($this->params['error']) ) {
 $this->log('userIdErr:'. $this->userId); 
 $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:'); 
-                $this->rd('Errors', 'index', array('error' => 1 ));
+                if ($this->name == 'CakeError') { 
+                    // システムエラー
+                    $err = 2;
+                } else {
+                    // 不正な操作
+                    $err = 1;
+                }
+                $this->rd('Errors', 'index', array('error' => $err ));
             }
         }
         $this->set('gameTitle', $this->gameTitle); 

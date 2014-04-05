@@ -4,6 +4,10 @@
         <div class="strTitleSynth" >
             強化進化
         </div>
+    <{elseif 'UserCards/conf' == $curAct}> 
+        <div class="strTitleBaseCardConf" >
+            合成確認
+        </div>
     <{elseif 'UserBaseCards/index' == $curAct}> 
         <div class="strTitleBaseCard" >
             ベースカード変更

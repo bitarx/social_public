@@ -47,8 +47,10 @@ class UserCardsController extends ApiController {
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
         $this->set('data', $userBaseCard);
 
+        // 素材
         $targetData = $this->UserCard->getUserCardById($userCardId);
-        $this->set('target', $targetData);
+        $list = array($targetData);
+        $this->set('list', $list);
 	}
 
     /**
@@ -92,7 +94,7 @@ class UserCardsController extends ApiController {
 
         } else {
             // 進化できる組み合わせではない
-            return $this->rd('UserCards', 'conf', array('error'=> 1)); 
+            $this->rd('UserCards', 'conf', array('error'=> 1)); 
         }
 
 
@@ -102,7 +104,7 @@ class UserCardsController extends ApiController {
         ,   'after_card' => $afterCardId
         );
 
-        $this->rd('UserCards', 'product', $params);
+        $this->rd('UserCards', 'productEvol', $params);
 	}
 
     /**
@@ -112,7 +114,7 @@ class UserCardsController extends ApiController {
      * @return void
      */
 	public function actUp() {
-
+/*
         $targetCards = array();
         for ($i = 1;$i <= 9; $i++) {
             if (isset($this->params['user_card_id_'. $i])) {
@@ -166,9 +168,28 @@ class UserCardsController extends ApiController {
         ,   'target_8' => $targetData['card_id_8']
         ,   'target_9' => $targetData['card_id_9']
         );
-
-        $this->rd('UserCards', 'product', $params);
+*/
+        $this->rd('UserCards', 'productUp', $params);
 	}
+
+
+    /**
+     * 進化合成演出
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function productEvol() {
+    }
+
+    /**
+     * 強化合成演出
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function productUp() {
+    }
 
     /**
      * 条件検索(変更禁止)

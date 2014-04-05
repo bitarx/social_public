@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-04 17:10:43
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-05 16:30:03
          compiled from "/var/www/asns/app/View/Elements/title.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135247226533e309e3a1af1-37746390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '708c5cc22bf807bbf58116614e4a8d1573b7dc66' => 
     array (
       0 => '/var/www/asns/app/View/Elements/title.tpl',
-      1 => 1396598829,
+      1 => 1396683002,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,10 @@ banner_title.png">
     <?php if ('UserCards/index'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
         <div class="strTitleSynth" >
             強化進化
+        </div>
+    <?php } elseif ('UserCards/conf'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
+        <div class="strTitleBaseCardConf" >
+            合成確認
         </div>
     <?php } elseif ('UserBaseCards/index'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
         <div class="strTitleBaseCard" >
