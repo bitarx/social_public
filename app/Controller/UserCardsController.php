@@ -169,6 +169,7 @@ class UserCardsController extends ApiController {
         ,   'target_9' => $targetData['card_id_9']
         );
 */
+        $params = array();
         $this->rd('UserCards', 'productUp', $params);
 	}
 
