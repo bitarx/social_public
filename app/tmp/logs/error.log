@@ -108250,3 +108250,48 @@ Stack Trace:
 2014-04-06 07:08:33 Error: className:SnsUsers
 2014-04-06 07:08:34 Error: ownerId:
 2014-04-06 07:08:34 Error: className:SnsUsers
+2014-04-06 10:07:48 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-06 10:07:48 Error: ownerId:
+2014-04-06 10:07:48 Error: className:CakeError
+2014-04-06 10:07:48 Error: userIdErr:0
+2014-04-06 10:07:48 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-06 10:07:48 Error: ownerId:
+2014-04-06 10:07:48 Error: className:Errors
+2014-04-06 10:07:48 Error: userId:0
+2014-04-06 10:08:05 Error: ownerId:
+2014-04-06 10:08:05 Error: className:SnsUsers
+2014-04-06 18:31:25 Error: ownerId:
+2014-04-06 18:31:25 Error: className:SnsUsers
+2014-04-06 18:31:29 Error: ownerId:
+2014-04-06 18:31:29 Error: className:SnsUsers
+2014-04-06 18:31:29 Error: ownerId:
+2014-04-06 18:31:29 Error: className:SnsUsers
+2014-04-06 21:01:34 Error: ownerId:1
+2014-04-06 21:01:34 Error: className:Errors
+2014-04-06 21:01:34 Error: userId:0
+2014-04-06 21:35:37 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-06 21:35:37 Error: ownerId:
+2014-04-06 21:35:37 Error: className:CakeError
+2014-04-06 21:35:37 Error: userIdErr:0
+2014-04-06 21:35:37 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-06 21:35:37 Error: ownerId:
+2014-04-06 21:35:37 Error: className:Errors
+2014-04-06 21:35:37 Error: userId:0
+2014-04-06 21:37:22 Error: ownerId:
+2014-04-06 21:37:22 Error: className:SnsUsers

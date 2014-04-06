@@ -100,6 +100,27 @@ class UserCardsControllerTest extends ControllerTestCase {
 	}
 
 /**
+ * testProductUp method
+ *
+ * @return void
+ */
+	public function testProductUp() {
+
+        $ret = $this->testAction('/user_cards/productUp/');
+        debug($ret);
+	}
+
+/**
+ * testProductEvol method
+ *
+ * @return void
+ */
+	public function testProductEvol() {
+
+        $ret = $this->testAction('/user_cards/productEvol/');
+        debug($ret);
+	}
+/**
  * testFind method
  *
  * @return void
