@@ -189,7 +189,7 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
 $this->log('aryDataServer:' . print_r($_SERVER, true)); 
         // キャリア（1:Android 2:iPhone）
         $carrer = 1;
-        if (false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
+        if (isset($_SERVER['HTTP_USER_AGENT'] && false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
         $this->set('carrer', $carrer); 
 
 $this->log('userId:'. $this->userId); 
