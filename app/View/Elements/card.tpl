@@ -1,42 +1,40 @@
-<div class="cardListImg">
-   <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
-</div>
-<div class="cardList">
-    <div class="cardListName">
+<div class="card">
+    <div class="cardImg">
+       <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
+    </div>
+    <div class="cardName">
         <{if !empty($data.Card.card_title)}>
-            <{$data.Card.card_title}><{$data.Card.card_name}>
+            <{$data.Card.card_title}><span style="color:#ffffff"><{$data.Card.card_name}></span>
         <{else}> 
-            <{$data.card_title}><{$data.card_name}>
+            <{$data.card_title}><span style="color:#ffffff"><{$data.card_name}></span>
         <{/if}> 
     </div>
-    <div class="cardListAtk">
-        攻撃:<{$data.atk}>
+    <div class="cardAtk">
+        攻撃:<span style="color:#ffffff"><{$data.atk}></span>
     </div>
-    <div class="cardListDef">
-        防御:<{$data.def}>
+    <div class="cardDef">
+        防御:<span style="color:#ffffff"><{$data.def}></span>
     </div>
-    <div class="cardListExp">
+    <div class="cardExp">
         経験値:
     </div>
-    <div class="progCardListExp">
+    <div id="progCardExp<{$key}>" class="progCardExp">
     </div>
-    <div id="progCardExp<{$key}>" class="progCardListExpBar">
-    </div>
-    <div class="cardListExpInt">
-        <{$data.exp}> / 100
+    <div class="cardExpInt">
+        <span style="color:#ffffff"><{$data.exp}> / 100</span>
     </div>
 
     <script type="text/javascript">
         dispProgressCardExp(<{$data.exp}>, <{$key}> );
     </script>
 
-    <div class="cardListLv">
+    <div class="cardLv">
         Lv.<span style="color:#ffffff"><{$data.level}></span>
     </div>
-    <div class="cardListSkillLv">
+    <div class="cardSkillLv">
         スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
     </div>
-    <div class="cardListSkillName">
+    <div class="cardSkillName">
         スキル:<span style="color:#ffffff">
         <{if $data.Card.Skill.skill_name}> 
             <{$data.Card.Skill.skill_name}>
@@ -45,7 +43,7 @@
         <{/if}> 
         </span>
     </div>
-    <div class="cardListSkillEft">
+    <div class="cardSkillEft">
         効果:<span style="color:#ffffff">
         <{if $data.Card.Skill.skill_name}> 
             <{$data.Card.Skill.skill_words}>
@@ -54,4 +52,15 @@
         <{/if}> 
         </span>
     </div>
+
+    <{if isset($key)}> 
+        <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
+            <div class="btnSelectCard">
+                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="strSelectCardSozai">
+                    素材に選択
+                </div>
+            </div>
+        </a>
+    <{/if}> 
 </div>

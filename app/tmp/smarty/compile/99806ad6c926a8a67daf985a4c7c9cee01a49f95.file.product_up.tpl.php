@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-05 19:02:49
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 08:01:21
          compiled from "/var/www/asns/app/View/UserCards/product_up.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1312487291533fd4c96152a7-84218658%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '99806ad6c926a8a67daf985a4c7c9cee01a49f95' => 
     array (
       0 => '/var/www/asns/app/View/UserCards/product_up.tpl',
-      1 => 1396692138,
+      1 => 1396825278,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.16',
   'unifunc' => 'content_533fd4c96af632_90125925',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_533fd4c96af632_90125925')) {function content_533fd4c96af632_90125925($_smarty_tpl) {?><!DOCTYPE HTML>
 <html lang="ja">
@@ -43,7 +43,7 @@ js/reinforce.js"></script>
 
         }
         var contentsComplete = function() {
-            location.href = "index";
+            //location.href = "index";
         }
         reinforce.init(
           "mainCanvas",

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-04 18:41:49
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 17:27:44
          compiled from "/var/www/asns/app/View/Layouts/default.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9769298505324f0444e5e42-67060483%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0b960c17ee805065fbd9c48ca4a6457f8f921f37' => 
     array (
       0 => '/var/www/asns/app/View/Layouts/default.tpl',
-      1 => 1396599493,
+      1 => 1396859253,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5324f0444ec551_24798438',
   'variables' => 
   array (
+    'carrer' => 0,
     'gameTitle' => 0,
     'content_for_layout' => 0,
   ),
@@ -29,8 +30,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=0.5,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?php echo @constant('BASE_URL');?>
+    <?php if ($_smarty_tpl->tpl_vars['carrer']->value==2) {?>
+        <link rel="stylesheet" href="<?php echo @constant('BASE_URL');?>
 css/main.css" />
+    <?php } else { ?>
+        <link rel="stylesheet" href="<?php echo @constant('BASE_URL');?>
+css/main_android.css" />
+    <?php }?>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<?php echo @constant('BASE_URL');?>
 js/jquery.leanModal.min.js"></script>
@@ -45,6 +51,7 @@ js/main.js"></script>
 </title>
 </head>
 <body>
+    <div id="contents">
 
         <?php echo $_smarty_tpl->getSubTemplate ("../Elements/header_menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
    
@@ -72,6 +79,7 @@ img/header_base.png">
 
         <?php echo $_smarty_tpl->tpl_vars['content_for_layout']->value;?>
 
+    </div>
 <div id="errMes"></div>
 </body>
 </html>

@@ -181,6 +181,9 @@ class UserCardsController extends ApiController {
      * @return void
      */
     public function productEvol() {
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
     }
 
     /**
@@ -190,6 +193,8 @@ class UserCardsController extends ApiController {
      * @return void
      */
     public function productUp() {
+        // 共通レイアウトは使わない
+        $this->layout = '';
     }
 
     /**

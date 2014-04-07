@@ -3,7 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=0.5,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
+    <{if $carrer == 2}>
+        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
+    <{else}>
+        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main_android.css" />
+    <{/if}>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/config.js"></script>
@@ -13,6 +17,7 @@
 <title><{$gameTitle}></title>
 </head>
 <body>
+    <div id="contents">
 <{*
     <div id="loading" class="loading">
         <img src="<{$smarty.const.BASE_URL}>img/loading.gif" width="45px">
@@ -39,6 +44,7 @@
         </script>
 
         <{$content_for_layout}>
+    </div>
 <div id="errMes"></div>
 </body>
 </html>

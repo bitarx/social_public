@@ -11,18 +11,10 @@
     </div>
 
     <{include file="../Elements/line.tpl"}>
-
     <{foreach from=$list item=data key=key}>
+      <div class="listBlock">
         <{include file="../Elements/card.tpl"}>
-        <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
-            <div class="btnSelectCard">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                <div class="strSelectCardSozai">
-                    素材に選択
-                </div>
-            </div>
-        </a>
+      </div>
         <{include file="../Elements/line.tpl"}>
     <{/foreach}>
-
 </div>

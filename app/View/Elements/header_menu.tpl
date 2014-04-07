@@ -13,7 +13,6 @@
     <div class="btn_menu">
         <a rel="leanModal" href="#div_menu"><img src="<{$smarty.const.BASE_URL}>img/btn_menu_on.png"></a>
     </div>
-
 <{else}> 
 
     <div class="btn_my_off">

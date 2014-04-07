@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-05 15:23:47
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 14:44:52
          compiled from "/var/www/asns/app/View/UserBaseCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:379006893533d643738bd99-04630235%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8b34c8b4e5bb32a1b1c335ec6076f54af801ec65' => 
     array (
       0 => '/var/www/asns/app/View/UserBaseCards/index.tpl',
-      1 => 1396679020,
+      1 => 1396681342,
       2 => 'file',
     ),
   ),
@@ -46,10 +46,8 @@ btn_cm_m.png">
                 </div>
             </div>
         </a>
-        <div class="line">
-            <img src="<?php echo @constant('IMG_URL');?>
-line.png">
-        </div>
+        <?php echo $_smarty_tpl->getSubTemplate ("../Elements/line.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     <?php } ?>
 </div>
 <?php }} ?>

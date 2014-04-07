@@ -18,7 +18,7 @@
 
         }
         var contentsComplete = function() {
-            location.href = "index";
+            //location.href = "index";
         }
         reinforce.init(
           "mainCanvas",

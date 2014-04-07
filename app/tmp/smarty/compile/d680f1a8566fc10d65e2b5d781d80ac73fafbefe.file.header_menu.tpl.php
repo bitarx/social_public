@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-02 19:09:48
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 10:38:08
          compiled from "/var/www/asns/app/View/Elements/header_menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2091715004532df2cfab27b2-07683567%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd680f1a8566fc10d65e2b5d781d80ac73fafbefe' => 
     array (
       0 => '/var/www/asns/app/View/Elements/header_menu.tpl',
-      1 => 1396433370,
+      1 => 1396834651,
       2 => 'file',
     ),
   ),
@@ -51,7 +51,6 @@ img/btn_gacha_on.png"></a>
         <a rel="leanModal" href="#div_menu"><img src="<?php echo @constant('BASE_URL');?>
 img/btn_menu_on.png"></a>
     </div>
-
 <?php } else { ?> 
 
     <div class="btn_my_off">
