@@ -15,7 +15,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam');
 
     /**
      * カード一覧
@@ -44,13 +44,30 @@ class UserCardsController extends ApiController {
 
         $userCardId = $this->params['user_card_id'];
 
+        // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
-        $this->set('data', $userBaseCard);
-
+$this->log('userBaseCard:' . print_r($userBaseCard, true)); 
         // 素材
         $targetData = $this->UserCard->getUserCardById($userCardId);
+$this->log('targetData:' . print_r($targetData, true)); 
+
+        // 進化できるか判定
+        $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
         $list = array($targetData);
+
+        // 消費ゴールド
+        $useMoney = $this->Synth->useMoneyEvol($userBaseCard);
+        $money = true;
+        if ($this->userParam['money'] < $useMoney) {
+            $money = false;
+        }
+
+        $this->set('useMoney', $useMoney);
+        $this->set('money', $money);
+        $this->set('data', $userBaseCard);
         $this->set('list', $list);
+        $this->set('userParam', $this->userParam);
+        $this->set('judgeEvol', $judgeEvol);
 	}
 
     /**
@@ -67,6 +84,20 @@ class UserCardsController extends ApiController {
 
         $targetData = $this->UserCard->getUserCardById($userCardId);
 
+        // 進化できるか判定
+        $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
+        if (!$judgeEvol) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
+
+        // 消費ゴールド
+        $useMoney = $this->Synth->useMoneyEvol($userBaseCard);
+        if ($this->userParam['money'] < $useMoney) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
+
         $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['card_id']);
 
         if (!empty($afterCardId)) {
@@ -76,16 +107,36 @@ class UserCardsController extends ApiController {
             $this->UserCard->begin(); 
             try {  
                 $values = array(
-                    'user_card_id' => $userBaseCard['card_id'] 
+                    'user_id' => $this->userId 
                 ,   'card_id' => $cardData['card_id'] 
                 ,   'hp' => $cardData['card_hp'] 
                 ,   'hp_max' => $cardData['card_hp'] 
                 ,   'atk' => $cardData['card_atk'] 
                 ,   'def' => $cardData['card_def'] 
                 );
-                $this->UserCard->save($values);
+                $ret = $this->UserCard->save($values);
+
+                // ベースカード更新
+                $values = array(
+                    'user_id'      => $this->userId  
+                ,   'user_card_id' => $ret['UserCard']['user_card_id']
+                );
+                $this->UserBaseCard->save($values);
+
+                // 元カードと素材を削除
+                $where = array('user_card_id' => $userBaseCard['user_card_id']);
+                $this->UserDeckCard->delete($where);
+                $this->UserCard->delete($where);
+                $where = array('user_card_id' => $targetData['user_card_id']);
+                $this->UserDeckCard->delete($where);
+                $this->UserCard->delete($where);
+
+                // 消費ゴールド減算
+                $this->userParam['money'] -= $useMoney;
+                $this->UserParam->save($this->userParam);
+
             
-            } catch (Exception $e) { 
+            } catch (AppException $e) { 
                 $this->UserCard->rollback(); 
                 $this->log($e->errmes);
                 return $this->rd('Errors', 'index', array('error'=> 2)); 

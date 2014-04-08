@@ -28,3 +28,9 @@ define("KIND_ENEMY","4");
 define("KIND_PROG_HIGHT","5");
 //  他のプレイヤーとの出会い
 define("KIND_NEW_FRIEND","6");
+
+
+/**
+ * 文言
+ */
+define("MONEY_NAME","ゴールド");

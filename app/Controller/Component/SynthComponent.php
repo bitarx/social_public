@@ -19,10 +19,7 @@ class SynthComponent extends Component {
         $cardGroup = ClassRegistry::init('CardGroup');
         $cardGroupData = $cardGroup->getCardGroup ($baseCardId);
 
-        $ret = 0;
-        if ($cardGroupData['card_id'] == $targetCardId) {
-            $ret = $cardGroupData['next']; 
-        }
+        $ret = $cardGroupData['next']; 
 
         return $ret;
     }
@@ -47,5 +44,38 @@ class SynthComponent extends Component {
         return $baseCard;
     }
 
+    /**
+     * 進化合成に必要なゴールドを返却
+     *
+     * @author imanishi 
+     * @param array $baseCard ベースカードのデータ
+     * @return int 金額
+     */
+    public function useMoneyEvol($baseCard) { 
+        $useMoney = $baseCard['Card']['rare_level'] * 800;
+        return $useMoney;
+    } 
 
+    /**
+     * 進化できるか判定
+     *
+     * @author imanishi 
+     * @param array $baseCard ベースカードのデータ
+     * @param array $targetCard 素材カードのデータ
+     * @return bool true:進化可能 false:不可
+     */
+    public function judgeEvol($baseCard, $targetCard) { 
+
+        // 最大レベルの半分
+        $halfLevel = $baseCard['Card']['card_level'] / 2;
+
+        // 半分に達していないときは不可
+        if ($baseCard['level'] < $halfLevel) return false;
+
+        // 素材が同じグループのカードであるか
+        $cardGroup = ClassRegistry::init('CardGroup');
+        $judge = $cardGroup->judgeSameCardGroup($baseCard['Card']['card_id'],$targetCard['card_id']);
+
+        return $judge;
+    } 
 }

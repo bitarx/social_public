@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 17:37:01
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-08 10:17:25
          compiled from "/var/www/asns/app/View/Elements/title.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135247226533e309e3a1af1-37746390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '708c5cc22bf807bbf58116614e4a8d1573b7dc66' => 
     array (
       0 => '/var/www/asns/app/View/Elements/title.tpl',
-      1 => 1396859448,
+      1 => 1396919754,
       2 => 'file',
     ),
   ),
@@ -19,22 +19,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_533e309e3a9874_12132868',
   'variables' => 
   array (
-    'curAct' => 0,
+    'ctl' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_533e309e3a9874_12132868')) {function content_533e309e3a9874_12132868($_smarty_tpl) {?><div class="bannerTitle">
     <img src="<?php echo @constant('IMG_URL');?>
 banner_title.png">
-    <?php if ('UserCards/index'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
+    <?php if ('UserCards'==$_smarty_tpl->tpl_vars['ctl']->value) {?> 
         <div class="strTitleSynth" >
             強化進化
         </div>
-    <?php } elseif ('UserCards/conf'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
-        <div class="strTitleBaseCardConf" >
-            合成確認
-        </div>
-    <?php } elseif ('UserBaseCards/index'==$_smarty_tpl->tpl_vars['curAct']->value) {?> 
+    <?php } elseif ('UserBaseCards'==$_smarty_tpl->tpl_vars['ctl']->value) {?> 
         <div class="strTitleBaseCard" >
             ベースカード変更
         </div>

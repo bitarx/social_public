@@ -104,4 +104,26 @@ class CardGroup extends AppModel {
         $data = $this->getAllFind($where, $field, 'first');
         return $data;
     }
+
+    /**
+     * 同じカードグループにあるか判定
+     *
+     * @author imanishi
+     * @param int $baseCardId  
+     * @param int $targetCardId 
+     * @return bool 
+     */
+    public function judgeSameCardGroup ($baseCardId, $targetCardId) {
+
+        $baseData   = $this->getCardGroup($baseCardId);
+        $targetData = $this->getCardGroup($targetCardId);
+
+        if (!$baseData || !$targetData) return false;
+
+        $ret = false;
+        if ($baseData['evol_group'] == $targetData['evol_group']) { 
+            $ret = true; 
+        } 
+        return $ret;
+    }
 }

@@ -32,12 +32,6 @@ class SynthComponentTest extends CakeTestCase {
         $afterId = $this->synthComponent->doSynthEvol($baseId, $targetId);
 
         $this->assertEquals($afterId, 2);
-
-        // 異常系
-        $targetId = 2;
-        $afterId = $this->synthComponent->doSynthEvol($baseId, $targetId);
-
-        $this->assertEquals($afterId, 0);
     }
 
     /**
@@ -83,5 +77,71 @@ class SynthComponentTest extends CakeTestCase {
         ,   'def'     => 115
         );
         $this->assertEquals($cardData, $expected);
+    }
+
+    /**
+     * 進化合成消費ゴールド計算メソッド確認
+     *
+     * @author imanishi
+     */
+    public function testUseMoneyEvol(){
+
+        // ベースカードデータ
+        $data['Card'] = array(
+            'card_id' => 1 
+        ,   'rare_level' => 5 
+        );
+        // レア度×800
+        $useMoneyEvol = $this->synthComponent->useMoneyEvol($data);
+
+        $this->assertEquals($useMoneyEvol, 4000);
+
+    }
+
+    /**
+     * 進化合成可能判定メソッド確認
+     *
+     * @author imanishi
+     */
+    public function testJudgeEvol(){
+
+        // ベースカードデータ
+        $baseCard['Card'] = array(
+            'card_id' => 1 
+        ,   'card_level' => 20
+        );
+        $baseCard['level'] = 10;
+
+        // 素材カードデータ
+        $targetCard = array(
+            'card_id' => 1 
+        ,   'level' => 1 
+        );
+        // 可能
+        $bool = $this->synthComponent->judgeEvol($baseCard, $targetCard);
+
+        $this->assertTrue($bool);
+
+
+        // 素材が違うので不可 
+        $targetCard = array(
+            'card_id' => 5 
+        ,   'level' => 1 
+        );
+        $bool = $this->synthComponent->judgeEvol($baseCard, $targetCard);
+
+        $this->assertFalse($bool);
+
+
+        // レベル不足で不可 
+        $baseCard['level'] = 9;
+        $targetCard = array(
+            'card_id' => 1 
+        ,   'level' => 1 
+        );
+        $bool = $this->synthComponent->judgeEvol($baseCard, $targetCard);
+
+        $this->assertFalse($bool);
+
     }
 }

@@ -185,14 +185,13 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         }
 
         // コントローラとアクション
-        $this->set('curAct', $this->name . '/' . $this->action); 
-$this->log('aryDataServer:' . print_r($_SERVER, true)); 
+        $this->set('ctl', $this->name ); 
+        $this->set('action',  $this->action); 
         // キャリア（1:Android 2:iPhone）
         $carrer = 1;
         if (isset($_SERVER['HTTP_USER_AGENT']) && false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
         $this->set('carrer', $carrer); 
 
-$this->log('userId:'. $this->userId); 
         // URLアサイン
         $this->_setUrl();
     } 

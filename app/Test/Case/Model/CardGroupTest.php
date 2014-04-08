@@ -56,4 +56,23 @@ class CardGroupTest extends CakeTestCase {
          $this->assertEquals($data['prev'], $expected['prev']);
          $this->assertEquals($data['next'], $expected['next']);
     }
+
+    /**
+     * 同じカードグループにあるか判定するメソッドを確認
+     *
+     * @author imanishi
+     */
+    public function testJudgeSameCardGroup() {
+
+         $baseCardId = 1;
+         $targetCardId = 3;
+         $ret = $this->CardGroup->judgeSameCardGroup($baseCardId, $targetCardId);
+         $this->assertTrue($ret);
+
+         $baseCardId = 1;
+         $targetCardId = 8;
+         $ret = $this->CardGroup->judgeSameCardGroup($baseCardId, $targetCardId);
+         $this->assertFalse($ret);
+
+    }
 }
