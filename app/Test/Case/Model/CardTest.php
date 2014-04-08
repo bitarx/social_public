@@ -61,6 +61,7 @@ class CardTest extends CakeTestCase {
              'card_hp' => '2000',
              'card_atk' => '200',
              'card_def' => '250',
+             'card_level' => '20',
              'skill_id' => '1',
              'card_words' => 'test',
              'card_detail' => '名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。',
