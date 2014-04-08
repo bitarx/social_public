@@ -34,7 +34,7 @@ class UserTutorialFixture extends CakeTestFixture {
 			'user_id' => 1,
 			'tutorial_id' => 1,
 			'end_flg' => 1,
-			'delete_flg' => 1,
+			'delete_flg' => 0,
 			'created' => '2014-02-17 21:30:48',
 			'modified' => '2014-02-17 21:30:48'
 		),

@@ -46,10 +46,8 @@ class UserCardsController extends ApiController {
 
         // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
-$this->log('userBaseCard:' . print_r($userBaseCard, true)); 
         // 素材
         $targetData = $this->UserCard->getUserCardById($userCardId);
-$this->log('targetData:' . print_r($targetData, true)); 
 
         // 進化できるか判定
         $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
