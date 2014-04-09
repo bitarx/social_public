@@ -84,4 +84,23 @@ class CommonComponent extends Component {
         $ret = mt_rand($min, $max);
         return $ret;
     }
+
+    /**
+     * キーの特定文字列を除去して残りを配列に格納
+     *
+     * @author imanishi 
+     * @param array $params 元の配列
+     * @param str $str 特定文字列
+     * @return array 除去後のキーを格納した配列
+     */
+    public function getParamsInKey($params, $str) {
+
+        $keys = array();
+        foreach ($params as $key => $val) {
+            if (false !== strpos($key, $str)) {
+                $keys[] = str_replace($str, '', $key);
+            }
+        }
+        return $keys;
+    }
 }

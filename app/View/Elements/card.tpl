@@ -53,12 +53,32 @@
         </span>
     </div>
 
-    <{if isset($key)}> 
-        <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
+    <{* 強化合成素材カード選択 *}> 
+    <{if 'UserCards' == $ctl && 'index' == $action}> 
+        <{if isset($key)}> 
+            <{if $kind == 2}> 
+                <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
+                    <div class="btnSelectCard">
+                        <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                        <div class="strSelectCardSozai">
+                            素材に選択
+                        </div>
+                    </div>
+                </a>
+            <{else}> 
+                <div class="strSelectCardCheckBox">
+                    選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>">
+                </div>
+            <{/if}> 
+        <{/if}>
+
+    <{* ベースカード選択 *}> 
+    <{elseif 'UserBaseCards' == $ctl && 'index' == $action}> 
+        <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
             <div class="btnSelectCard">
                 <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                <div class="strSelectCardSozai">
-                    素材に選択
+                <div class="strSelectCard">
+                    ベース選択
                 </div>
             </div>
         </a>

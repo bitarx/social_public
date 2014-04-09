@@ -25,17 +25,23 @@ class UserCardsController extends ApiController {
      */
 	public function index() {
 
-        $list = $this->UserCard->getUserCard($this->userId);
-        $this->set('list', $list);
+        // 1:強化 2:進化
+        $kind = isset($this->params['kind']) ? $this->params['kind']:1;
 
+        // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
 
-   $this->log('aryData:' . print_r($userBaseCard, true)); 
+        // 所有カード
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id']);
+
+   $this->log('aryData:' . print_r($list, true)); 
+        $this->set('list', $list);
         $this->set('data', $userBaseCard);
+        $this->set('kind', $kind);
 	}
 
     /**
-     * 合成確認
+     * 進化合成確認
      *
      * @author imanishi 
      * @return json
@@ -66,6 +72,42 @@ class UserCardsController extends ApiController {
         $this->set('list', $list);
         $this->set('userParam', $this->userParam);
         $this->set('judgeEvol', $judgeEvol);
+	}
+
+    /**
+     * 強化合成確認
+     *
+     * @author imanishi 
+     * @return json
+     */
+	public function confUp() {
+
+        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        if (!$userCardIds) {
+            $this->rd('UserCards', 'index', array('error' => 1)); 
+        }
+
+        // ベースカード
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+        // 素材
+        $targetList = array();
+        foreach ($userCardIds as $userCardId) {
+            $targetList[] = $this->UserCard->getUserCardById($userCardId);
+        }
+
+
+        // 消費ゴールド
+        $useMoney = $this->Synth->useMoneyUp($targetList);
+        $money = true;
+        if ($this->userParam['money'] < $useMoney) {
+            $money = false;
+        }
+
+        $this->set('useMoney', $useMoney);
+        $this->set('money', $money);
+        $this->set('data', $userBaseCard);
+        $this->set('list', $targetList);
+        $this->set('userParam', $this->userParam);
 	}
 
     /**
@@ -163,24 +205,27 @@ class UserCardsController extends ApiController {
      * @return void
      */
 	public function actUp() {
-/*
-        $targetCards = array();
-        for ($i = 1;$i <= 9; $i++) {
-            if (isset($this->params['user_card_id_'. $i])) {
-                $targetCards['target_card_'. $i] = $this->params['user_card_id_'. $i];
-            }
+
+        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        if (!$userCardIds) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
         }
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
 
         $targetList = array(); 
-        foreach ($targetCards as $key => $userCardId) {
+        $targetData = array();
+        foreach ($userCardIds as $key => $userCardId) {
             $targetList[$key] = $this->UserCard->getUserCardById($userCardId);
+            $i = $key + 1;
+            $targetData['target_' . $i] = $targetList[$key]['card_id'];
         }
 
         if (empty($targetList)) {
             // 素材がない
-            return $this->rd('UserCards', 'conf', array('error'=> 2)); 
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 2)); 
         }
 
         $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList);
@@ -188,37 +233,36 @@ class UserCardsController extends ApiController {
         $this->UserCard->begin(); 
         try {  
             $values = array(
-                'user_card_id' => $userBaseCard['card_id'] 
+                'user_card_id' => $userBaseCard['user_card_id'] 
             ,   'card_id' => $cardData['card_id'] 
-            ,   'hp' => $cardData['card_hp'] 
-            ,   'hp_max' => $cardData['card_hp'] 
-            ,   'atk' => $cardData['card_atk'] 
-            ,   'def' => $cardData['card_def'] 
+            ,   'hp' => $cardData['Card']['card_hp'] 
+            ,   'hp_max' => $cardData['Card']['card_hp'] 
+            ,   'atk' => $cardData['Card']['card_atk'] 
+            ,   'def' => $cardData['Card']['card_def'] 
+            ,   'level' => $cardData['level'] 
+            ,   'exp' => $cardData['exp'] 
             );
             $this->UserCard->save($values);
+
+            // 素材削除
+            foreach ($userCardIds as $id) {
+                $where = array('user_card_id' => $id); 
+                $this->UserCard->delete($where);
+            }
         
-        } catch (Exception $e) { 
+        } catch (AppException $e) { 
             $this->UserCard->rollback(); 
             $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> 2)); 
         } 
         $this->UserCard->commit(); 
 
 
-        $params = array(
+        $data = array(
             'base_card' => $userBaseCard['card_id']
-        ,   'target_1' => $targetData['card_id_1']
-        ,   'target_2' => $targetData['card_id_2']
-        ,   'target_3' => $targetData['card_id_3']
-        ,   'target_4' => $targetData['card_id_4']
-        ,   'target_5' => $targetData['card_id_5']
-        ,   'target_6' => $targetData['card_id_6']
-        ,   'target_7' => $targetData['card_id_7']
-        ,   'target_8' => $targetData['card_id_8']
-        ,   'target_9' => $targetData['card_id_9']
         );
-*/
-        $params = array();
+        $params = array_merge($data, $targetData);
+
         $this->rd('UserCards', 'productUp', $params);
 	}
 

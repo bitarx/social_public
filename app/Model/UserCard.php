@@ -163,14 +163,18 @@ class UserCard extends AppModel {
      * @author imanishi
      * @param int $userId
      * @param int $cardId
+     * @param int $userCardId このカードを除く
      * @param array $data 所持カードデータ
      * @return array $list
      */
-    public function getUserCard ($userId, $cardId = 0) {
+    public function getUserCard ($userId, $cardId = 0, $userCardId = 0) {
 
         $where = array('user_id' => $userId);
         if (!empty($cardId)) { 
             $where['card_id'] = $cardId;
+        } 
+        if (!empty($userCardId)) { 
+            $where['NOT'] =  array('user_card_id' => $userCardId); 
         } 
         $list = $this->getAllFind($where, $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 3);
         return $list;

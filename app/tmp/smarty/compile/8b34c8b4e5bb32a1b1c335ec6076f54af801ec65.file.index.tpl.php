@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 14:44:52
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-09 11:01:40
          compiled from "/var/www/asns/app/View/UserBaseCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:379006893533d643738bd99-04630235%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8b34c8b4e5bb32a1b1c335ec6076f54af801ec65' => 
     array (
       0 => '/var/www/asns/app/View/UserBaseCards/index.tpl',
-      1 => 1396681342,
+      1 => 1397008344,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'list' => 0,
-    'data' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -36,16 +35,6 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 ?>
         <?php echo $_smarty_tpl->getSubTemplate ("../Elements/card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-        <a href="initBaseCard?user_card_id=<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
-">
-            <div class="btnSelectCard">
-                <img src="<?php echo @constant('IMG_URL');?>
-btn_cm_m.png">
-                <div class="strSelectCard">
-                    ベースに選択
-                </div>
-            </div>
-        </a>
         <?php echo $_smarty_tpl->getSubTemplate ("../Elements/line.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     <?php } ?>

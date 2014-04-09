@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-08 12:34:39
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-09 14:17:43
          compiled from "/var/www/asns/app/View/Elements/card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:267981235533d4d63c608b0-04370712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7f0f9328024cf42696ae42d6990d81f388fa66d' => 
     array (
       0 => '/var/www/asns/app/View/Elements/card.tpl',
-      1 => 1396927386,
+      1 => 1397020225,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'data' => 0,
     'key' => 0,
+    'ctl' => 0,
+    'action' => 0,
+    'kind' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -97,15 +100,38 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </span>
     </div>
 
-    <?php if (isset($_smarty_tpl->tpl_vars['key']->value)) {?> 
-        <a href="<?php echo @constant('BASE_URL');?>
+     
+    <?php if ('UserCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'index'==$_smarty_tpl->tpl_vars['action']->value) {?> 
+        <?php if (isset($_smarty_tpl->tpl_vars['key']->value)) {?> 
+            <?php if ($_smarty_tpl->tpl_vars['kind']->value==2) {?> 
+                <a href="<?php echo @constant('BASE_URL');?>
 UserCards/conf?user_card_id=<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
+">
+                    <div class="btnSelectCard">
+                        <img src="<?php echo @constant('IMG_URL');?>
+btn_cm_m.png">
+                        <div class="strSelectCardSozai">
+                            素材に選択
+                        </div>
+                    </div>
+                </a>
+            <?php } else { ?> 
+                <div class="strSelectCardCheckBox">
+                    選択=><input type="checkbox" name="user_card_id_<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
+">
+                </div>
+            <?php }?> 
+        <?php }?>
+
+     
+    <?php } elseif ('UserBaseCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'index'==$_smarty_tpl->tpl_vars['action']->value) {?> 
+        <a href="initBaseCard?user_card_id=<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
 ">
             <div class="btnSelectCard">
                 <img src="<?php echo @constant('IMG_URL');?>
 btn_cm_m.png">
-                <div class="strSelectCardSozai">
-                    素材に選択
+                <div class="strSelectCard">
+                    ベース選択
                 </div>
             </div>
         </a>

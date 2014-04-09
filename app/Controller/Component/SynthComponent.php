@@ -57,6 +57,21 @@ class SynthComponent extends Component {
     } 
 
     /**
+     * 強化合成に必要なゴールドを返却
+     *
+     * @author imanishi 
+     * @param array $list 素材カードリスト
+     * @return int 金額
+     */
+    public function useMoneyUp($list) { 
+        $useMoney = 0;
+        foreach ($list as $val) {
+            $useMoney += ($val['rare_level'] * $val['level']) * 50;
+        }
+        return $useMoney;
+    } 
+
+    /**
      * 進化できるか判定
      *
      * @author imanishi 
