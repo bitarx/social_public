@@ -56,6 +56,33 @@ class AppController extends Controller {
 
     public static $ctlError = array('CakeError', 'Errors');
 
+    // ページング
+    public $page = 1;
+    public $offset = 0;
+
+    // ソート項目
+    public $rareLevel = array(
+                            0 => '全て'
+                        ,   1 => 'N以下'
+                        ,   2 => 'HN以下'
+                        ,   3 => 'R以下'
+                        ,   4 => 'HR以下'
+                        ,   5 => 'SR以下'
+                        );
+
+    public $sortItem = array(
+                            0 => '追加された順'
+                        ,   1 => '古い順'
+                        ,   2 => 'レアリティ高い順'
+                        ,   3 => 'レアリティ低い順'
+                        ,   4 => 'Lv高い順'
+                        ,   5 => 'Lv低い順'
+                        ,   6 => '攻撃力高い順'
+                        ,   7 => '攻撃力低い順'
+                        ,   8 => '防御力高い順'
+                        ,   9 => '防御力低い順'
+                        );
+
     public final function beforeFilter() { 
         
         $this->params =  $this->request->query;
@@ -184,9 +211,19 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
             $this->UserParam->recoverAct($this->userParam);
         }
 
+        // ページング
+        $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
+        $this->offset = $this->page - 1;
+
+        $this->set('prev', $this->page - 1 ); 
+        $this->set('page', $this->page ); 
+        $this->set('next', $this->page + 1 ); 
+
         // コントローラとアクション
         $this->set('ctl', $this->name ); 
         $this->set('action',  $this->action); 
+        $this->set('ctlAction',  $this->name . '/' . $this->action); 
+
         // キャリア（1:Android 2:iPhone）
         $carrer = 1;
         if (isset($_SERVER['HTTP_USER_AGENT']) && false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
@@ -230,6 +267,30 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         $this->set('linkUserStages', BASE_URL . 'UserStages/index'); 
         // ヘルプ
         $this->set('linkStaticPage', BASE_URL . 'StaticPages/index'); 
+    }
+
+    /**
+     * ソート項目をセット
+     *
+     * @author imanishi 
+     * @return void 
+     */
+    public function setSort() {
+         
+        
+        // レア度
+        $rareLevelSelect = isset($this->params['rareLevel']) ? $this->params['rareLevel'] : 0;
+
+  $this->log('rareLevel:' . print_r($this->rareLevel, true)); 
+        $this->set('rareLevel', $this->rareLevel); 
+        $this->set('rareLevelSelect', $rareLevelSelect); 
+
+        // 項目
+        $sortItemSelect = isset($this->params['sortItem']) ? $this->params['sortItem'] : 0;
+
+  $this->log('sortItem:' . print_r($this->sortItem, true)); 
+        $this->set('sortItem', $this->sortItem); 
+        $this->set('sortItemSelect', $sortItemSelect); 
     }
 
     /**

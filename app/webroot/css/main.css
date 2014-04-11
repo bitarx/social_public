@@ -465,6 +465,42 @@ input.btn_submit {
     width: 50px;
 }
 
+/**
+ * ページング
+ */
+.paging {
+    position:relative;
+    text-align:center;
+    font-size: 24px;
+    height:35px;
+    top:10px;
+}
+
+/**
+ * ソート
+ */
+.sort {
+    position:relative;
+    text-align:center;
+    font-size: 24px;
+    height:35px;
+    left:-80px;
+    top:80px;
+}
+.btnSortUpdate {
+    position: relative;
+    top: 30px;
+    left: 410px;
+    height:80px;
+}
+.strSortUpdate {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 24px;
+
+}
+
 /** クエストの進行ボタン */
 .btnQuestProg {
     left: 103px;
@@ -530,6 +566,7 @@ input.btn_submit {
     position: relative;
     top: 40px;
     left: 290px;
+    height:80px;
 }
 .strUpConf {
     position: absolute;

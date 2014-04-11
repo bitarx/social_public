@@ -31,6 +31,15 @@ define("KIND_NEW_FRIEND","6");
 
 
 /**
+ * ページング
+ */
+// 1ページの表示数
+define("PAGE_LIMIT",3);
+// キーの名前
+define("KEY_PAGING", 'p');
+
+
+/**
  * 文言
  */
 define("MONEY_NAME","ゴールド");

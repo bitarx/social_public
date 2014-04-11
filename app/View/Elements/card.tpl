@@ -39,16 +39,16 @@
         <{if $data.Card.Skill.skill_name}> 
             <{$data.Card.Skill.skill_name}>
         <{else}> 
-            <{$data.Skill.skill_name}>
+            <{$data.skill_name}>
         <{/if}> 
         </span>
     </div>
     <div class="cardSkillEft">
         効果:<span style="color:#ffffff">
-        <{if $data.Card.Skill.skill_name}> 
+        <{if $data.Card.Skill.skill_words}> 
             <{$data.Card.Skill.skill_words}>
         <{else}> 
-            <{$data.Skill.skill_words}>
+            <{$data.skill_words}>
         <{/if}> 
         </span>
     </div>

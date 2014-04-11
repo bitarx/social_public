@@ -164,10 +164,19 @@ class UserCard extends AppModel {
      * @param int $userId
      * @param int $cardId
      * @param int $userCardId このカードを除く
+     * @param int $limit
+     * @param int $offset
+     * @param int $evolGroup 進化グループ
+     * @param int $pageAll ページ数
      * @param array $data 所持カードデータ
      * @return array $list
      */
-    public function getUserCard ($userId, $cardId = 0, $userCardId = 0) {
+    public function getUserCard ($userId, $cardId = 0, $userCardId = 0, $limit = PAGE_LIMIT, $offset = 0, $rareLevel = 0, $sortItem = 0, $evolGroup = 0, &$pageAll = 0) {
+
+        $joins = array();
+
+        $offset *= $limit;
+        if ($offset < 0) $offset = 0;
 
         $where = array('user_id' => $userId);
         if (!empty($cardId)) { 
@@ -176,8 +185,110 @@ class UserCard extends AppModel {
         if (!empty($userCardId)) { 
             $where['NOT'] =  array('user_card_id' => $userCardId); 
         } 
-        $list = $this->getAllFind($where, $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 3);
+
+        // 進化グループ
+        if (!empty($evolGroup)) {
+            $joins = array(
+                array('table' => 'cards',
+                    'alias' => 'Card',
+                    'type' => 'inner',
+                    'conditions' => array(
+                        'UserCard.card_id = Card.card_id',
+                    ),
+                ),
+                array('table' => 'skills',
+                    'alias' => 'Skill',
+                    'type' => 'inner',
+                    'conditions' => array(
+                        'Card.skill_id = Skill.skill_id',
+                    ),
+                ),
+                array('table' => 'card_groups',
+                    'alias' => 'CardGroup',
+                    'type' => 'inner',
+                    'conditions' => array(
+                        'Card.card_id = CardGroup.card_id',
+                    )
+                )
+            );
+            $where['CardGroup.evol_group'] = $evolGroup; 
+            $recursive = -1;
+        } else {
+            $recursive = 2;
+        }
+
+        // レア度絞り込み
+        if (!empty($rareLevel)) {
+            $where['Card.rare_level <='] = $rareLevel;
+        }
+
+        // ソート
+        $order = $this->makeSort($sortItem);
+
+        $list = $this->getAllFind($where, $fields = array('*'), $kind = 'all', $order, $limit, $offset, $recursive , $joins);
+$this->log('aryData:' . print_r($list, true)); 
+        // ページング用に全ページ数カウント
+        $all = $this->getAllFind($where, $fields = array('user_card_id'), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = -1, $joins);
+
+        $allCnt = count($all);
+        $pageCnt = $allCnt / PAGE_LIMIT;
+        $pageAll = ceil($pageCnt);
+
         return $list;
+    }
+
+    /**
+     * ソートのorder区を生成
+     *
+     * return array ORDERBY区
+     */
+    public function makeSort($sortItem) {
+
+        $order = array(); 
+
+        switch ($sortItem) {
+            // 追加された順
+            case 0:
+                $order = array('user_card_id DESC');
+                break;
+            // 古い順
+            case 1:
+                $order = array('user_card_id ASC');
+                break;
+            // レアリティ高い順
+            case 2:
+                $order = array('Card.rare_level DESC');
+                break;
+            // レアリティ低い順
+            case 3:
+                $order = array('Card.rare_level ASC');
+                break;
+            // Lv高い順 
+            case 4:
+                $order = array('level DESC');
+                break;
+            // Lv低い順 
+            case 5:
+                $order = array('level ASC');
+                break;
+            // 攻撃力高い順 
+            case 6:
+                $order = array('atk DESC');
+                break;
+            // 攻撃力低い順 
+            case 7:
+                $order = array('def ASC');
+                break;
+            // 防御力高い順 
+            case 8:
+                $order = array('def DESC');
+                break;
+            // 防御力低い順 
+            case 9:
+                $order = array('def ASC');
+                break;
+        }
+        return $order;
     }
 
     /**

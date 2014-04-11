@@ -25,19 +25,35 @@ class UserCardsController extends ApiController {
      */
 	public function index() {
 
+$this->log('aryData:' . print_r($this->params, true)); 
+        // 並べ替え小目セット
+        $this->setSort();
+
+        // レア度ソート
+        $rareLevel = isset($this->params['rareLevel']) ? $this->params['rareLevel'] : 0;
+        // 項目ソート
+        $sortItem = isset($this->params['sortItem']) ? $this->params['sortItem'] : 0;
+
         // 1:強化 2:進化
         $kind = isset($this->params['kind']) ? $this->params['kind']:1;
 
         // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+        // 進化グループ
+        $evolGroup = 0;
+        if (2 == $kind) {
+            $evolGroup = $userBaseCard['Card']['CardGroup']['evol_group'];
+        }
 
         // 所有カード
-        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id']);
+        $pageAll = 0;
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll);
 
-   $this->log('aryData:' . print_r($list, true)); 
+$this->log('list:' . print_r($list, true)); 
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
+        $this->set('pageAll', $pageAll);
 	}
 
     /**

@@ -49,7 +49,7 @@ class AppModel extends Model {
      * @param int $offset
      * @return array 検索結果
      */
-    public function getAllFind( $where = array(), $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 0 ) {
+    public function getAllFind( $where = array(), $fields = array(), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = 0, $joins = array() ) {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
@@ -66,7 +66,14 @@ class AppModel extends Model {
                         $conditions[$field][$fname] = $v; 
                     }
                 } else {
-                    $conditions[$tableAlias. '.'. $field] = $val; 
+                    if (false === strpos($field, '.')) {
+                        $conditions[$tableAlias. '.'. $field] = $val; 
+                    } elseif (false !== strpos($field, 'Not.')) {
+                        $field = str_replace('Not.', '', $field);
+                        $conditions[$field] = $val; 
+                    } else {
+                        $conditions[$field] = $val; 
+                    }
                 }
             }
         }
@@ -88,14 +95,19 @@ class AppModel extends Model {
 
         // オフセット
         if (!empty($offset)) { 
-            $options['offset'] = $order;
+            $options['offset'] = $offset;
         } 
+
+        // ジョイン
+        if (!empty($joins)) {
+            $options['joins'] = $joins; 
+        }
 
         // 結合レベル
-        if (0 < $recursive) { 
+        if (0 != $recursive) { 
             $options['recursive'] = $recursive;
         } 
-
+$this->log('options:' . print_r($options, true)); 
         // SELECT実行
         $ret = $this->find($kind, $options);
 
@@ -214,6 +226,7 @@ class AppModel extends Model {
     public function qlog() {
 
          $log = $this->getDataSource()->getLog(false, false);
+$this->log('Log:' . print_r($log, true)); 
          $num = $log['count'];
          for ($i = 0; $i < $num; $i++) {
              $querylog = $log['log'][$i ]['query'];

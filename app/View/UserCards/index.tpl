@@ -15,15 +15,21 @@
             <a href="?kind=1">強化</a> 
             <a href="?kind=2">進化</a> 
         </div> 
+
+    <{include file="../Elements/sort.tpl"}>
+    
     <{if $kind == 1}> 
-        <form method=="POST" action="confUp">
+        <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
             <div class="btnUpConf">
-            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-            <div class="strUpConf">
-                強化確認
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
+                <div class="strUpConf">
+                    強化確認
+                </div>
             </div>
-        </div>
     <{/if}>
+
+    <{include file="../Elements/paging.tpl"}>
+
     <{foreach from=$list item=data key=key}>
       <div class="listBlock">
         <{include file="../Elements/card.tpl"}>
@@ -31,7 +37,12 @@
         <{include file="../Elements/line.tpl"}>
     <{/foreach}>
     <{if $kind == 1}> 
-            <input type="submit" name="btn_submit" value="強化確認" class="btn_submit" />
+            <div class="btnUpConf">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
+                <div class="strUpConf">
+                    強化確認
+                </div>
+            </div>
         </form>
     <{/if}>
 </div>
