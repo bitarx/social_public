@@ -39,7 +39,7 @@
         <{if $data.Card.Skill.skill_name}> 
             <{$data.Card.Skill.skill_name}>
         <{else}> 
-            <{$data.skill_name}>
+            <{$data.Skill.skill_name}>
         <{/if}> 
         </span>
     </div>
@@ -48,7 +48,7 @@
         <{if $data.Card.Skill.skill_words}> 
             <{$data.Card.Skill.skill_words}>
         <{else}> 
-            <{$data.skill_words}>
+            <{$data.Skill.skill_words}>
         <{/if}> 
         </span>
     </div>

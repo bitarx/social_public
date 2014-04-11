@@ -47,6 +47,9 @@ var reinforce = (function() {
 
   var _exp;
 
+  // 開始経験値
+  var _startExp;
+
   //Matrix
   var _card1Matrix;
   var _card2Matrix;
@@ -58,10 +61,10 @@ var reinforce = (function() {
   /**
   * 初期化
   */
-  function init(canvasID, fileName, exp, loadCompleteCallback, contentsCompleteCallback ) {
+  function init(canvasID, fileName, startExp, exp, loadCompleteCallback, contentsCompleteCallback ) {
 
     _canvas = document.getElementById(canvasID);
-    _canvas.style.width = window.innerWidth + 'px';
+    _canvas.style.width = '400px';//window.innerWidth + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);
@@ -105,6 +108,7 @@ var reinforce = (function() {
     bg.src = _fileName.bg;
 
     _exp = exp;
+    _startExp = startExp;
 
   }
 
@@ -364,12 +368,18 @@ var reinforce = (function() {
       var scale1 = ( _stage.canvas.width - 120 ) / 700;//scale;
       var scale2 = ( _stage.canvas.width - 200 ) / 700;//scale;
 
-      _bm.synthProgRed.scaleX = 0;
+      _bm.synthProgRed.scaleX = _startExp;
       if( levelUPLen == levelUPCount ) {
+        if (0 < levelUPLen) {
+            _bm.synthProgRed.scaleX = 0;
+        }
         createjs.Tween.get( _bm.synthProgRed ).to({scaleX: ( 97.8 / 100 ) * expNum }, 1500, createjs.Ease.sineInOut);
 
         callback();
       } else if( levelUPLen > levelUPCount ) {
+        if (0 < levelUPCount) {
+            _bm.synthProgRed.scaleX = 0;
+        }
         createjs.Tween.get( _bm.synthProgRed ).to({scaleX:97.8}, 500, createjs.Ease.liner)
         .call( start );
 
@@ -411,7 +421,7 @@ var reinforce = (function() {
       var h = _bm.synthProgRed.image.height;
       _bm.synthProgRed.regY = h / 2;//reg
       _bm.synthProgRed.x = -195; _bm.synthProgRed.y = 300;
-      _bm.synthProgRed.scaleX = 0;
+      _bm.synthProgRed.scaleX = _startExp;
       _bm.synthProgRed.visible = false;
       _stage.addChild( _bm.synthProgRed );
       levelup.src = _fileName.levelup;

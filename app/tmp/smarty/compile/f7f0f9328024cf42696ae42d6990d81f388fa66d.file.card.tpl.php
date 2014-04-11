@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 09:05:54
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 11:14:23
          compiled from "/var/www/asns/app/View/Elements/card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:267981235533d4d63c608b0-04370712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7f0f9328024cf42696ae42d6990d81f388fa66d' => 
     array (
       0 => '/var/www/asns/app/View/Elements/card.tpl',
-      1 => 1397174749,
+      1 => 1397182459,
       2 => 'file',
     ),
   ),
@@ -83,7 +83,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <?php echo $_smarty_tpl->tpl_vars['data']->value['Card']['Skill']['skill_name'];?>
 
         <?php } else { ?> 
-            <?php echo $_smarty_tpl->tpl_vars['data']->value['skill_name'];?>
+            <?php echo $_smarty_tpl->tpl_vars['data']->value['Skill']['skill_name'];?>
 
         <?php }?> 
         </span>
@@ -94,7 +94,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <?php echo $_smarty_tpl->tpl_vars['data']->value['Card']['Skill']['skill_words'];?>
 
         <?php } else { ?> 
-            <?php echo $_smarty_tpl->tpl_vars['data']->value['skill_words'];?>
+            <?php echo $_smarty_tpl->tpl_vars['data']->value['Skill']['skill_words'];?>
 
         <?php }?> 
         </span>

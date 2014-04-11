@@ -192,13 +192,6 @@ class Card extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'CardGroup' => array(
-			'className' => 'CardGroup',
-			'foreignKey' => 'card_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
 	);
 
 

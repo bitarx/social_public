@@ -226,7 +226,7 @@ class UserCard extends AppModel {
         $order = $this->makeSort($sortItem);
 
         $list = $this->getAllFind($where, $fields = array('*'), $kind = 'all', $order, $limit, $offset, $recursive , $joins);
-$this->log('aryData:' . print_r($list, true)); 
+
         // ページング用に全ページ数カウント
         $all = $this->getAllFind($where, $fields = array('user_card_id'), $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = -1, $joins);
 

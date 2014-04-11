@@ -25,7 +25,6 @@ class UserCardsController extends ApiController {
      */
 	public function index() {
 
-$this->log('aryData:' . print_r($this->params, true)); 
         // 並べ替え小目セット
         $this->setSort();
 
@@ -49,7 +48,6 @@ $this->log('aryData:' . print_r($this->params, true));
         $pageAll = 0;
         $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll);
 
-$this->log('list:' . print_r($list, true)); 
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
@@ -244,7 +242,9 @@ $this->log('list:' . print_r($list, true));
             $this->rd('errors', 'index', array('error' => 2)); 
         }
 
-        $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList);
+        $upExp = 0;
+        $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList, $upExp);
+
 
         $this->UserCard->begin(); 
         try {  
@@ -273,9 +273,12 @@ $this->log('list:' . print_r($list, true));
         } 
         $this->UserCard->commit(); 
 
+        $startExp = $userBaseCard['exp'] % 100;
 
         $data = array(
             'base_card' => $userBaseCard['card_id']
+        ,   'up_exp'    => $upExp
+        ,   'start_exp' => $startExp
         );
         $params = array_merge($data, $targetData);
 
@@ -293,6 +296,18 @@ $this->log('list:' . print_r($list, true));
 
         // 共通レイアウトは使わない
         $this->layout = '';
+
+        // パラメータ取得
+        $baseCard = isset($this->params['base_card']) ? $this->params['base_card'] : 0;
+        $target = isset($this->params['target']) ? $this->params['target'] : 0;
+        $afterCard = isset($this->params['after_card']) ? $this->params['after_card'] : 0;
+        if (empty($baseCard) || empty($target) || empty($afterCard)) {
+            $this->rd('UserCards', 'index', array('error' => 1));
+        }
+
+        $this->set('baseCard', $baseCard);
+        $this->set('target', $target);
+        $this->set('afterCard', $afterCard);
     }
 
     /**
@@ -304,6 +319,32 @@ $this->log('list:' . print_r($list, true));
     public function productUp() {
         // 共通レイアウトは使わない
         $this->layout = '';
+
+        // パラメータ取得
+        $baseCard = isset($this->params['base_card']) ? $this->params['base_card'] : 0;
+        $upExp = isset($this->params['up_exp']) ? $this->params['up_exp'] : 0;
+        $startExp = isset($this->params['start_exp']) ? $this->params['start_exp'] : 0;
+
+        $list = array();
+        for ($i = 1; $i <= 10; $i++) {
+            if (!empty($this->params['target_' . $i])) {
+                $list[] = FILEOUT_URL . '?size=m&dir=card&target=' . $this->params['target_' . $i];
+            }
+        }
+
+        if (empty($baseCard) || empty($list) || empty($upExp)) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('UserCards', 'index', array('error' => 1));
+        }
+
+        $sacrificeList = json_encode($list);
+        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
+        $endExp = $upExp + $startExp;
+
+        $this->set('baseCard', $baseCard);
+        $this->set('sacrificeList', $sacrificeList);
+        $this->set('startExp', $startExp);
+        $this->set('endExp', $endExp);
     }
 
     /**

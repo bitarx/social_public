@@ -48,6 +48,8 @@ class SynthComponentTest extends CakeTestCase {
         ,   'hp_max'  => 100
         ,   'atk'     => 100
         ,   'def'     => 100
+        ,   'exp'     => 40
+        ,   'level'   => 4
         );
         $targetList = array(
             array(
@@ -57,6 +59,8 @@ class SynthComponentTest extends CakeTestCase {
             ,   'hp_max'  => 100
             ,   'atk'     => 100
             ,   'def'     => 100
+            ,   'level'   => 2
+            ,   'Card' => array('rare_level' => 3)
             ),
             array(
                 'user_card_id' => 3
@@ -65,18 +69,34 @@ class SynthComponentTest extends CakeTestCase {
             ,   'hp_max'  => 50
             ,   'atk'     => 50
             ,   'def'     => 50
+            ,   'level'   => 3
+            ,   'Card' => array('rare_level' => 4)
+            ),
+            array(
+                'user_card_id' => 3
+            ,   'card_id' => 3
+            ,   'hp'      => 50
+            ,   'hp_max'  => 50
+            ,   'atk'     => 50
+            ,   'def'     => 50
+            ,   'level'   => 10
+            ,   'Card' => array('rare_level' => 5)
             ),
         );
-        $cardData = $this->synthComponent->doSynthUp($userBaseCard, $targetList);
+        $upExp = 0;
+        $cardData = $this->synthComponent->doSynthUp($userBaseCard, $targetList, $upExp);
         $expected = array(
             'user_card_id' => 1
         ,   'card_id' => 1
-        ,   'hp'      => 115
-        ,   'hp_max'  => 115
-        ,   'atk'     => 115
-        ,   'def'     => 115
+        ,   'hp'      => 121 
+        ,   'hp_max'  => 121
+        ,   'atk'     => 121
+        ,   'def'     => 121
+        ,   'exp'     => 20
+        ,   'level'   => 6
         );
         $this->assertEquals($cardData, $expected);
+        $this->assertEquals($upExp, 180);
     }
 
     /**

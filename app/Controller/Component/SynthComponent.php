@@ -30,19 +30,50 @@ class SynthComponent extends Component {
      * @author imanishi 
      * @param array $baseCard ベースカードのデータ
      * @param array $targetList 素材カードリスト
+     * @param int   $upExp 加算される経験値
      * @return array 強化後のカードデータ
      */
-    public function doSynthUp($baseCard, $targetList) {
+    public function doSynthUp($baseCard, $targetList, &$upExp) {
         
         foreach ($targetList as $key => $val) {
-            $baseCard['hp'] = $baseCard['hp'] + floor($val['hp_max'] / 10);
-            $baseCard['hp_max'] = $baseCard['hp_max'] + floor($val['hp_max'] / 10);
-            $baseCard['atk'] = $baseCard['atk'] + floor($val['atk'] / 10);
-            $baseCard['def'] = $baseCard['def'] + floor($val['def'] / 10);
+            $upExp += ($val['level'] * 8) + ($val['rare_level'] * 5);
         }
+
+        // レベルアップ回数
+        $levelUpCnt = $this->getLevelUpNum($upExp, $baseCard['exp']);
+
+        // レベルアップ
+        for ($i = 1; $i <= $levelUpCnt; $i++) {
+            $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.1);
+            $baseCard['hp_max'] = (int)floor($baseCard['hp_max'] * 1.1);
+            $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.1);
+            $baseCard['def']    = (int)floor($baseCard['def'] * 1.1);
+            $baseCard['level']++;
+        }
+
+        // 経験値更新
+        $baseCard['exp'] = ($baseCard['exp'] + $upExp) % 100;
          
         return $baseCard;
     }
+
+    /**
+     * レベルアップ回数を算出
+     *
+     * @author imanishi 
+     * @param int $upExp 加算経験値
+     * @param int $exp 加算前経験値
+     * @return int レベルアップ回数 
+     */
+    public function getLevelUpNum($upExp, $exp) { 
+        $levelUpCnt = 0;
+
+        $exp = $exp % 100;
+
+        $levelUpCnt = floor(($upExp + $exp) / 100);
+
+        return $levelUpCnt;
+    } 
 
     /**
      * 進化合成に必要なゴールドを返却
