@@ -18,6 +18,7 @@ class UserBaseCardTest extends CakeTestCase {
 		'app.sns_user',
 		'app.user_card',
 		'app.card',
+		'app.card_group',
 		'app.skill'
 	);
 
