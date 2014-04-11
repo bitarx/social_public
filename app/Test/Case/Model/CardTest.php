@@ -14,6 +14,7 @@ class CardTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.card',
+		'app.card_group',
 		'app.skill'
 	);
 
