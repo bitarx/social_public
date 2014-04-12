@@ -60,7 +60,7 @@ class SynthComponentTest extends CakeTestCase {
             ,   'atk'     => 100
             ,   'def'     => 100
             ,   'level'   => 2
-            ,   'Card' => array('rare_level' => 3)
+            ,   'rare_level' => 3
             ),
             array(
                 'user_card_id' => 3
@@ -70,7 +70,7 @@ class SynthComponentTest extends CakeTestCase {
             ,   'atk'     => 50
             ,   'def'     => 50
             ,   'level'   => 3
-            ,   'Card' => array('rare_level' => 4)
+            ,   'rare_level' => 4
             ),
             array(
                 'user_card_id' => 3
@@ -80,7 +80,7 @@ class SynthComponentTest extends CakeTestCase {
             ,   'atk'     => 50
             ,   'def'     => 50
             ,   'level'   => 10
-            ,   'Card' => array('rare_level' => 5)
+            ,   'rare_level' => 5
             ),
         );
         $upExp = 0;

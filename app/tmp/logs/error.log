@@ -24272,3 +24272,53 @@ Stack Trace:
 
 )
 
+2014-04-12 09:35:08 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [CardGroup.delete_flg] => 0
+            [CardGroup.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:35:08 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [CardGroup.delete_flg] => 0
+            [CardGroup.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:35:08 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [CardGroup.delete_flg] => 0
+            [CardGroup.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:35:08 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [CardGroup.delete_flg] => 0
+            [CardGroup.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:35:08 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [CardGroup.delete_flg] => 0
+            [CardGroup.card_id] => 5
+        )
+
+)
+
