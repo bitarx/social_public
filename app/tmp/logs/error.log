@@ -24157,3 +24157,118 @@ Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
 )
 
 2014-04-11 20:01:54 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-11 21:00:13 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-11 21:00:13 Error: ownerId:
+2014-04-11 21:00:13 Error: className:CakeError
+2014-04-11 21:00:13 Error: userIdErr:0
+2014-04-11 21:00:13 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-11 21:00:13 Error: ownerId:
+2014-04-11 21:00:13 Error: className:Errors
+2014-04-11 21:00:13 Error: ownerId:
+2014-04-11 21:00:13 Error: className:SnsUsers
+2014-04-11 21:00:19 Error: ownerId:
+2014-04-11 21:00:19 Error: className:Errors
+2014-04-12 02:07:43 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-12 02:07:43 Error: ownerId:
+2014-04-12 02:07:43 Error: className:CakeError
+2014-04-12 02:07:43 Error: userIdErr:0
+2014-04-12 02:07:43 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-12 02:07:43 Error: ownerId:
+2014-04-12 02:07:43 Error: className:Errors
+2014-04-12 02:07:45 Error: ownerId:
+2014-04-12 02:07:45 Error: className:SnsUsers
+2014-04-12 02:07:47 Error: ownerId:
+2014-04-12 02:07:47 Error: className:Errors
+2014-04-12 02:11:11 Error: ownerId:
+2014-04-12 02:11:11 Error: className:SnsUsers
+2014-04-12 02:11:12 Error: ownerId:
+2014-04-12 02:11:12 Error: className:Errors
+2014-04-12 03:08:32 Error: ownerId:
+2014-04-12 03:08:32 Error: className:SnsUsers
+2014-04-12 03:08:33 Error: ownerId:
+2014-04-12 03:08:33 Error: className:SnsUsers
+2014-04-12 03:08:34 Error: ownerId:
+2014-04-12 03:08:34 Error: className:SnsUsers
+2014-04-12 08:42:09 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-12 08:42:09 Error: ownerId:
+2014-04-12 08:42:09 Error: className:CakeError
+2014-04-12 08:42:09 Error: userIdErr:0
+2014-04-12 08:42:09 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-12 08:42:09 Error: ownerId:
+2014-04-12 08:42:09 Error: className:Errors
+2014-04-12 08:44:09 Error: ownerId:
+2014-04-12 08:44:09 Error: className:SnsUsers
+2014-04-12 09:26:22 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [Card.delete_flg] => 0
+            [Card.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:26:22 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [Card.delete_flg] => 0
+            [Card.card_id] => Array
+                (
+                    [0] => 13
+                    [1] => 43
+                )
+
+        )
+
+)
+
+2014-04-12 09:26:42 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [Card.delete_flg] => 0
+            [Card.card_id] => 1
+        )
+
+)
+
+2014-04-12 09:26:42 Error: options:Array
+(
+    [conditions] => Array
+        (
+            [Card.delete_flg] => 0
+            [Card.card_id] => Array
+                (
+                    [0] => 13
+                    [1] => 43
+                )
+
+        )
+
+)
+

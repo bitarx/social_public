@@ -74,10 +74,6 @@ class CardTest extends CakeTestCase {
             'target' => '3',
             'percent' => '35',
             'skill_words' => '味方の防御力を大アップ',
-            'card_group_id' => '1',
-            'evol_group' => '1',
-            'prev' => '0',
-            'next' => '2',
          );
 
          $this->assertEquals($data, $expected);
