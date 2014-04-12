@@ -51,10 +51,42 @@ class UserBaseCard extends AppModel {
      */
     public function getUserBaseCardData ($userId) {
 
-        $where = array('user_id' => $userId);
+        $where = array('UserBaseCard.user_id' => $userId);
         $field = array();
-        $recurcive = 3;
-        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recurcive);
+        $recurcive = -1;
+
+        $joins = array(
+            array('table' => 'user_cards',
+                'alias' => 'UserCard',
+                'type' => 'inner',
+                'conditions' => array(
+                    'UserBaseCard.user_card_id = UserCard.user_card_id',
+                ),
+            ),
+            array('table' => 'cards',
+                'alias' => 'Card',
+                'type' => 'inner',
+                'conditions' => array(
+                    'UserCard.card_id = Card.card_id',
+                ),
+            ),
+            array('table' => 'skills',
+                'alias' => 'Skill',
+                'type' => 'LEFT',
+                'conditions' => array(
+                    'Card.skill_id = Skill.skill_id',
+                ),
+            ),
+            array('table' => 'card_groups',
+                'alias' => 'CardGroup',
+                'type' => 'inner',
+                'conditions' => array(
+                    'Card.card_id = CardGroup.card_id',
+                )
+            )
+        );
+        $field = array('*');
+        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recurcive, $joins);
         return $data;
     }
 }

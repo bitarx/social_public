@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 09:05:54
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 18:48:46
          compiled from "/var/www/asns/app/View/UserCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1370383112533be23e65e7c2-65739843%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '205e299528d049916f1d0db52d1bb2e343ef162a' => 
     array (
       0 => '/var/www/asns/app/View/UserCards/index.tpl',
-      1 => 1397174564,
+      1 => 1397296123,
       2 => 'file',
     ),
   ),
@@ -89,5 +89,8 @@ btn_st_s.png" alt="強化確認" name="submit">
             </div>
         </form>
     <?php }?>
+    
+        <?php echo $_smarty_tpl->getSubTemplate ("../Elements/pagingNum.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 </div>
 <?php }} ?>

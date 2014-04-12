@@ -78,7 +78,7 @@ var reinforce = (function() {
       _bm.bg.regX = _bm.bg.image.width / 2; _bm.bg.regY = _bm.bg.image.height / 2;
       _bm.bg.x = 0;
       _bm.bg.y = 0;
-      _stage.addChild( _bm.bg );
+//      _stage.addChild( _bm.bg );
       _stage.update();
       bg.onload = null;
       bg = null;

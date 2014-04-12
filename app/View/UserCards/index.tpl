@@ -45,4 +45,6 @@
             </div>
         </form>
     <{/if}>
+    
+        <{include file="../Elements/pagingNum.tpl"}>
 </div>

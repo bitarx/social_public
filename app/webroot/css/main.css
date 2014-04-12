@@ -475,6 +475,13 @@ input.btn_submit {
     height:35px;
     top:10px;
 }
+.pagingNum {
+    position:relative;
+    text-align:center;
+    font-size: 24px;
+    height:80px;
+    top:35px;
+}
 
 /**
  * ソート

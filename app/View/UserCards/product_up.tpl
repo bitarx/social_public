@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>強化合成</title>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce.css">
     </head>
     <body>
         <canvas id="mainCanvas" height="832" width="640"></canvas>
@@ -15,8 +15,7 @@
     <script type="text/javascript">
       function back()
       {
-console.log('back'); 
-           location.href = "index";
+           location.href = "delete";
       }
 
       window.onload = function() {
@@ -24,9 +23,7 @@ console.log('back');
 
         }
         var contentsComplete = function() {
- console.log('contentsComplete'); 
             document.body.onclick  = back;
-            //location.href = "index";
         }
         reinforce.init(
           "mainCanvas",

@@ -29,19 +29,20 @@ class UserCardsController extends ApiController {
         $this->setSort();
 
         // レア度ソート
-        $rareLevel = isset($this->params['rareLevel']) ? $this->params['rareLevel'] : 0;
+        $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
         // 項目ソート
-        $sortItem = isset($this->params['sortItem']) ? $this->params['sortItem'] : 0;
+        $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
 
         // 1:強化 2:進化
         $kind = isset($this->params['kind']) ? $this->params['kind']:1;
 
         // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+  $this->log('userBaseCard:' . print_r($userBaseCard, true)); 
         // 進化グループ
         $evolGroup = 0;
         if (2 == $kind) {
-            $evolGroup = $userBaseCard['Card']['CardGroup']['evol_group'];
+            $evolGroup = $userBaseCard['evol_group'];
         }
 
         // 所有カード
@@ -137,6 +138,11 @@ class UserCardsController extends ApiController {
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
 
         $targetData = $this->UserCard->getUserCardById($userCardId);
+        // 素材が存在しなければ不正
+        if (!$targetData) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
 
         // 進化できるか判定
         $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
@@ -178,12 +184,26 @@ class UserCardsController extends ApiController {
                 $this->UserBaseCard->save($values);
 
                 // 元カードと素材を削除
-                $where = array('user_card_id' => $userBaseCard['user_card_id']);
-                $this->UserDeckCard->delete($where);
-                $this->UserCard->delete($where);
-                $where = array('user_card_id' => $targetData['user_card_id']);
-                $this->UserDeckCard->delete($where);
-                $this->UserCard->delete($where);
+                $where = array('UserDeckCard.user_card_id' => $userBaseCard['user_card_id']);
+                $this->UserDeckCard->deleteAll($where);
+
+                // 演出に表示必要なのでカードは論理削除
+                $value = array(
+                    'user_card_id' => $userBaseCard['user_card_id']
+                ,   'delete_flg' => 1
+                );
+                $this->UserCard->save($value);
+
+
+                $where = array('UserDeckCard.user_card_id' => $targetData['user_card_id']);
+                $this->UserDeckCard->deleteAll($where);
+
+                // 演出に表示必要なのでカードは論理削除
+                $value = array(
+                    'user_card_id' => $targetData['user_card_id']
+                ,   'delete_flg' => 1
+                );
+                $this->UserCard->save($value);
 
                 // 消費ゴールド減算
                 $this->userParam['money'] -= $useMoney;
@@ -231,15 +251,27 @@ class UserCardsController extends ApiController {
         $targetList = array(); 
         $targetData = array();
         foreach ($userCardIds as $key => $userCardId) {
-            $targetList[$key] = $this->UserCard->getUserCardById($userCardId);
-            $i = $key + 1;
-            $targetData['target_' . $i] = $targetList[$key]['card_id'];
+            $tmp = $this->UserCard->getUserCardById($userCardId);
+            if (!empty($tmp)) {
+                $targetList[$key] = $tmp;
+                $i = $key + 1;
+                $targetData['target_' . $i] = $targetList[$key]['card_id'];
+            }
         }
 
         if (empty($targetList)) {
             // 素材がない
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 2)); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
+
+        // 消費ゴールド
+        $useMoney = $this->Synth->useMoneyUp($targetList);
+        $money = true;
+        if ($this->userParam['money'] < $useMoney) {
+            // お金がない
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
         }
 
         $upExp = 0;
@@ -251,20 +283,27 @@ class UserCardsController extends ApiController {
             $values = array(
                 'user_card_id' => $userBaseCard['user_card_id'] 
             ,   'card_id' => $cardData['card_id'] 
-            ,   'hp' => $cardData['Card']['card_hp'] 
-            ,   'hp_max' => $cardData['Card']['card_hp'] 
-            ,   'atk' => $cardData['Card']['card_atk'] 
-            ,   'def' => $cardData['Card']['card_def'] 
+            ,   'hp' => $cardData['hp'] 
+            ,   'hp_max' => $cardData['hp_max'] 
+            ,   'atk' => $cardData['atk'] 
+            ,   'def' => $cardData['def'] 
             ,   'level' => $cardData['level'] 
             ,   'exp' => $cardData['exp'] 
             );
             $this->UserCard->save($values);
 
-            // 素材削除
+            // 素材論理削除
             foreach ($userCardIds as $id) {
-                $where = array('user_card_id' => $id); 
-                $this->UserCard->delete($where);
+                $where = array(
+                    'user_card_id' => $id
+                ,   'delete_flg' => 1
+                ); 
+                $this->UserCard->save($where);
             }
+
+            // 消費ゴールド減算
+            $this->userParam['money'] -= $useMoney;
+            $this->UserParam->save($this->userParam);
         
         } catch (AppException $e) { 
             $this->UserCard->rollback(); 
@@ -305,6 +344,15 @@ class UserCardsController extends ApiController {
             $this->rd('UserCards', 'index', array('error' => 1));
         }
 
+        // ベースカード
+        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
+
+        // 素材カード
+        $target = FILEOUT_URL . '?size=m&dir=card&target=' . $target;
+
+        // 合成後カード
+        $afterCard = FILEOUT_URL . '?size=l&dir=card&target=' . $afterCard;
+
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
@@ -341,11 +389,41 @@ class UserCardsController extends ApiController {
         $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
         $endExp = $upExp + $startExp;
 
+// 仮
+$baseCard = IMG_URL . 'miku_v02.jpg';
+
         $this->set('baseCard', $baseCard);
         $this->set('sacrificeList', $sacrificeList);
         $this->set('startExp', $startExp);
         $this->set('endExp', $endExp);
     }
+
+    /**
+     * カードを物理削除
+     *
+     * @author imanishi 
+     */
+    public function delete() { 
+
+        $where = array(
+            'UserCard.user_id' => $this->userId 
+        ,   'UserCard.delete_flg' => 1
+        );
+        $this->UserCard->begin(); 
+        try {  
+$this->log('deleteStartttttttttttttttttttttttt:'); 
+$this->log('aryData:' . print_r($where, true)); 
+            $this->UserCard->deleteAll($where);
+        } catch (AppException $e) { 
+            $this->UserCard->rollback(); 
+            $this->log($e->errmes); 
+            $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->UserCard->commit(); 
+$this->log('deleteEndddddddd:'); 
+
+        $this->rd('UserCards', 'index', array('end' => 1));  
+    } 
 
     /**
      * 条件検索(変更禁止)

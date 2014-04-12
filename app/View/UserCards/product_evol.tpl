@@ -13,20 +13,25 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/evolution.js"></script>
 
     <script type="text/javascript">
+      function back()
+      {
+           location.href = "delete";
+      }
+
       window.onload = function() {
         var imageLoadComplete = function() {
 
         }
         var contentsComplete = function() {
-            location.href = "index";
+            document.body.onclick  = back;
         }
         evolution.init(
           "mainCanvas",
           {
             bg: "<{$smarty.const.BASE_URL}>img/bg.jpg", //背景
-            card1: "<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$baseCard}>", //合成元カード
-            card2: "<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$target}>",　//合成カード
-            cardResult: "<{$smarty.const.FILEOUT_URL}>?size=l&dir=card&target=<{$afterCard}>",　//合成後カード
+            card1: "<{$baseCard}>", //合成元カード
+            card2: "<{$target}>",　//合成カード
+            cardResult: "<{$afterCard}>",　//合成後カード
             cardGrow: "<{$smarty.const.BASE_URL}>img/cardGlow.png",
             particle001: "<{$smarty.const.BASE_URL}>img/particle001.png",
             particle002: "<{$smarty.const.BASE_URL}>img/particle002.png",

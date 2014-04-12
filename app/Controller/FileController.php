@@ -40,7 +40,7 @@ class FileController extends ApiController {
         // 所有チェック
         switch ($dir) {
             case 'card':
-                $ret = $this->UserCard->getUserCard ($this->userId , $targetId );
+                $ret = $this->UserCard->getUserCardWithDeleteFlg ($this->userId , $targetId );
                 $filename = 'card_' . $size . '_' . $targetId . '.jpg'; 
                 break;
 

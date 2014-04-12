@@ -4,13 +4,13 @@
             <{if $page <= 1}> 
                  prev 
             <{else}>
-                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>">prev</a> 
+                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">prev</a> 
              <{/if}> 
          <{$page}>  /  <{$pageAll}>
             <{if $pageAll <= $page}> 
                 next
             <{else}>
-                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>">next</a>
+                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">next</a>
              <{/if}> 
         </div>
     </div>

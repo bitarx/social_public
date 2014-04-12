@@ -36,19 +36,19 @@
     </div>
     <div class="cardSkillName">
         スキル:<span style="color:#ffffff">
-        <{if $data.Card.Skill.skill_name}> 
-            <{$data.Card.Skill.skill_name}>
-        <{else}> 
+        <{if $data.Skill.skill_name}> 
             <{$data.Skill.skill_name}>
+        <{else}> 
+            <{$data.skill_name}>
         <{/if}> 
         </span>
     </div>
     <div class="cardSkillEft">
         効果:<span style="color:#ffffff">
-        <{if $data.Card.Skill.skill_words}> 
-            <{$data.Card.Skill.skill_words}>
-        <{else}> 
+        <{if $data.Skill.skill_words}> 
             <{$data.Skill.skill_words}>
+        <{else}> 
+            <{$data.skill_words}>
         <{/if}> 
         </span>
     </div>

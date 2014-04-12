@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-10 13:32:41
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 18:48:00
          compiled from "/var/www/asns/app/View/Elements/paging.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8611509325345ea04c33e50-92009137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31076e1afbdf14aa2a06ddd8b117592afd685b2b' => 
     array (
       0 => '/var/www/asns/app/View/Elements/paging.tpl',
-      1 => 1397102191,
+      1 => 1397295995,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
     'ctlAction' => 0,
     'prev' => 0,
+    'kind' => 0,
+    'rareLevelSelect' => 0,
+    'sortItemSelect' => 0,
     'pageAll' => 0,
     'next' => 0,
   ),
@@ -38,6 +41,9 @@ line.png">
 <?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
 ?<?php echo @constant('KEY_PAGING');?>
 =<?php echo $_smarty_tpl->tpl_vars['prev']->value;?>
+&kind=<?php echo $_smarty_tpl->tpl_vars['kind']->value;?>
+&rare_level=<?php echo $_smarty_tpl->tpl_vars['rareLevelSelect']->value;?>
+&sort_item=<?php echo $_smarty_tpl->tpl_vars['sortItemSelect']->value;?>
 ">prev</a> 
              <?php }?> 
          <?php echo $_smarty_tpl->tpl_vars['page']->value;?>
@@ -50,6 +56,9 @@ line.png">
 <?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
 ?<?php echo @constant('KEY_PAGING');?>
 =<?php echo $_smarty_tpl->tpl_vars['next']->value;?>
+&kind=<?php echo $_smarty_tpl->tpl_vars['kind']->value;?>
+&rare_level=<?php echo $_smarty_tpl->tpl_vars['rareLevelSelect']->value;?>
+&sort_item=<?php echo $_smarty_tpl->tpl_vars['sortItemSelect']->value;?>
 ">next</a>
              <?php }?> 
         </div>

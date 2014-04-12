@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 20:01:45
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 15:38:57
          compiled from "/var/www/asns/app/View/UserCards/product_up.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1312487291533fd4c96152a7-84218658%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '99806ad6c926a8a67daf985a4c7c9cee01a49f95' => 
     array (
       0 => '/var/www/asns/app/View/UserCards/product_up.tpl',
-      1 => 1397214094,
+      1 => 1397279648,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <meta charset="UTF-8">
         <title>強化合成</title>
         <link rel=stylesheet type="text/css" href="<?php echo @constant('BASE_URL');?>
-css/evolution.css">
+css/reinforce.css">
     </head>
     <body>
         <canvas id="mainCanvas" height="832" width="640"></canvas>
@@ -47,8 +47,7 @@ js/reinforce.js"></script>
     <script type="text/javascript">
       function back()
       {
-console.log('back'); 
-           location.href = "index";
+           location.href = "delete";
       }
 
       window.onload = function() {
@@ -56,9 +55,7 @@ console.log('back');
 
         }
         var contentsComplete = function() {
- console.log('contentsComplete'); 
             document.body.onclick  = back;
-            //location.href = "index";
         }
         reinforce.init(
           "mainCanvas",

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 11:40:04
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 14:14:20
          compiled from "/var/www/asns/app/View/UserCards/product_evol.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11681466385343a917783fd2-72389826%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b56b2e15bfed6ae24ca3aa8fb08cb06ba009de4b' => 
     array (
       0 => '/var/www/asns/app/View/UserCards/product_evol.tpl',
-      1 => 1397183864,
+      1 => 1397279657,
       2 => 'file',
     ),
   ),
@@ -44,26 +44,28 @@ libs/tweenjs-0.5.1.min.js"></script>
 js/evolution.js"></script>
 
     <script type="text/javascript">
+      function back()
+      {
+           location.href = "delete";
+      }
+
       window.onload = function() {
         var imageLoadComplete = function() {
 
         }
         var contentsComplete = function() {
-            location.href = "index";
+            document.body.onclick  = back;
         }
         evolution.init(
           "mainCanvas",
           {
             bg: "<?php echo @constant('BASE_URL');?>
 img/bg.jpg", //背景
-            card1: "<?php echo @constant('FILEOUT_URL');?>
-?size=m&dir=card&target=<?php echo $_smarty_tpl->tpl_vars['baseCard']->value;?>
+            card1: "<?php echo $_smarty_tpl->tpl_vars['baseCard']->value;?>
 ", //合成元カード
-            card2: "<?php echo @constant('FILEOUT_URL');?>
-?size=m&dir=card&target=<?php echo $_smarty_tpl->tpl_vars['target']->value;?>
+            card2: "<?php echo $_smarty_tpl->tpl_vars['target']->value;?>
 ",　//合成カード
-            cardResult: "<?php echo @constant('FILEOUT_URL');?>
-?size=m&dir=card&target=<?php echo $_smarty_tpl->tpl_vars['afterCard']->value;?>
+            cardResult: "<?php echo $_smarty_tpl->tpl_vars['afterCard']->value;?>
 ",　//合成後カード
             cardGrow: "<?php echo @constant('BASE_URL');?>
 img/cardGlow.png",

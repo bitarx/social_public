@@ -292,6 +292,24 @@ class UserCard extends AppModel {
     }
 
     /**
+     * 論理削除含む所有カードを取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @param int $cardId
+     * @return array データ 
+     */
+    public function getUserCardWithDeleteFlg($userId, $cardId) { 
+        $where = array(
+            'user_id'    => $userId
+        ,   'card_id'    => $cardId
+        ,   $this->_filDelFlg => array(0, 1)
+        );
+        $data = $this->getAllFind($where, $field = array(), 'first'); 
+        return $data;
+    } 
+
+    /**
      * 取得カードを登録
      *
      * @author imanishi 
@@ -299,7 +317,7 @@ class UserCard extends AppModel {
      * @param int $cardId
      * @param int $num 登録枚数
      * @param array $row 対象カード情報(参照用)
-     e @return bool 
+     * @return bool 
      */
     public function registCard($userId, $cardId, $num, &$row) {
 

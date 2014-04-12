@@ -112,11 +112,11 @@ class SynthComponent extends Component {
      */
     public function judgeEvol($baseCard, $targetCard) { 
 
-        // 最大レベルの半分
-        $halfLevel = $baseCard['Card']['card_level'] / 2;
+        // 進化に必要なレベルは最大レベル
+        $needLevel = $baseCard['Card']['card_level'];
 
-        // 半分に達していないときは不可
-        if ($baseCard['level'] < $halfLevel) return false;
+        // 必要レベルに達していないときは不可
+        if ($baseCard['level'] < $needLevel) return false;
 
         // 素材が同じグループのカードであるか
         $cardGroup = ClassRegistry::init('CardGroup');

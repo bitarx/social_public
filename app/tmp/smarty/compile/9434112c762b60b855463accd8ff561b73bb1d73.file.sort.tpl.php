@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-11 08:25:28
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 17:15:53
          compiled from "/var/www/asns/app/View/Elements/sort.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:141980880653461ee9947d98-56522148%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9434112c762b60b855463accd8ff561b73bb1d73' => 
     array (
       0 => '/var/www/asns/app/View/Elements/sort.tpl',
-      1 => 1397133114,
+      1 => 1397290257,
       2 => 'file',
     ),
   ),
@@ -24,6 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'rareLevelSelect' => 0,
     'sortItem' => 0,
     'sortItemSelect' => 0,
+    'kind' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -32,11 +33,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
 ">    
     <div class="sort">
-        <?php echo smarty_function_html_options(array('name'=>'rareLevel','options'=>$_smarty_tpl->tpl_vars['rareLevel']->value,'selected'=>$_smarty_tpl->tpl_vars['rareLevelSelect']->value),$_smarty_tpl);?>
+        <?php echo smarty_function_html_options(array('name'=>'rare_level','options'=>$_smarty_tpl->tpl_vars['rareLevel']->value,'selected'=>$_smarty_tpl->tpl_vars['rareLevelSelect']->value),$_smarty_tpl);?>
 
-        <?php echo smarty_function_html_options(array('name'=>'sortItem','options'=>$_smarty_tpl->tpl_vars['sortItem']->value,'selected'=>$_smarty_tpl->tpl_vars['sortItemSelect']->value),$_smarty_tpl);?>
+        <?php echo smarty_function_html_options(array('name'=>'sort_item','options'=>$_smarty_tpl->tpl_vars['sortItem']->value,'selected'=>$_smarty_tpl->tpl_vars['sortItemSelect']->value),$_smarty_tpl);?>
 
     </div>
+
+    <input type="hidden" name="kind" value="<?php echo $_smarty_tpl->tpl_vars['kind']->value;?>
+">
 
     <div class="btnSortUpdate">
         <input type="image" src="<?php echo @constant('IMG_URL');?>

@@ -279,14 +279,14 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
          
         
         // レア度
-        $rareLevelSelect = isset($this->params['rareLevel']) ? $this->params['rareLevel'] : 0;
+        $rareLevelSelect = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
 
   $this->log('rareLevel:' . print_r($this->rareLevel, true)); 
         $this->set('rareLevel', $this->rareLevel); 
         $this->set('rareLevelSelect', $rareLevelSelect); 
 
         // 項目
-        $sortItemSelect = isset($this->params['sortItem']) ? $this->params['sortItem'] : 0;
+        $sortItemSelect = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
 
   $this->log('sortItem:' . print_r($this->sortItem, true)); 
         $this->set('sortItem', $this->sortItem); 

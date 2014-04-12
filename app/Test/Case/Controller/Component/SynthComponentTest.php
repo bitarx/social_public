@@ -130,7 +130,7 @@ class SynthComponentTest extends CakeTestCase {
             'card_id' => 1 
         ,   'card_level' => 20
         );
-        $baseCard['level'] = 10;
+        $baseCard['level'] = 20;
 
         // 素材カードデータ
         $targetCard = array(
@@ -153,8 +153,8 @@ class SynthComponentTest extends CakeTestCase {
         $this->assertFalse($bool);
 
 
-        // レベル不足で不可 
-        $baseCard['level'] = 9;
+        // レベル不足で不可(最大レベルが必要) 
+        $baseCard['level'] = 19;
         $targetCard = array(
             'card_id' => 1 
         ,   'level' => 1 

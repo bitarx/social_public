@@ -53,7 +53,9 @@ class AppModel extends Model {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
-        $conditions = array($tableAlias. '.'. $this->_filDelFlg => 0);
+        if (!isset($where['delete_flg'])) {
+            $conditions = array($tableAlias. '.'. $this->_filDelFlg => 0);
+        }
 
         if (0 < count($where)) {
             foreach ($where as $field => $val) {
@@ -107,7 +109,6 @@ class AppModel extends Model {
         if (0 != $recursive) { 
             $options['recursive'] = $recursive;
         } 
-$this->log('options:' . print_r($options, true)); 
         // SELECT実行
         $ret = $this->find($kind, $options);
 
@@ -226,7 +227,6 @@ $this->log('options:' . print_r($options, true));
     public function qlog() {
 
          $log = $this->getDataSource()->getLog(false, false);
-$this->log('Log:' . print_r($log, true)); 
          $num = $log['count'];
          for ($i = 0; $i < $num; $i++) {
              $querylog = $log['log'][$i ]['query'];
