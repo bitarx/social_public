@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 18:48:46
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-14 10:18:06
          compiled from "/var/www/asns/app/View/UserCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1370383112533be23e65e7c2-65739843%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '205e299528d049916f1d0db52d1bb2e343ef162a' => 
     array (
       0 => '/var/www/asns/app/View/UserCards/index.tpl',
-      1 => 1397296123,
+      1 => 1397438284,
       2 => 'file',
     ),
   ),
@@ -42,9 +42,27 @@ UserBaseCards/index">
 
     <?php echo $_smarty_tpl->getSubTemplate ("../Elements/line.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-        <div id="" class="selectSynthKind">
-            <a href="?kind=1">強化</a> 
-            <a href="?kind=2">進化</a> 
+        <div class="selectSynthKind">
+          <ul class="tabs">
+            <li>
+                <a href="?kind=1">
+                <?php if (1==$_smarty_tpl->tpl_vars['kind']->value) {?> 
+                    <label class="labelOn">強化</label>
+                <?php } else { ?> 
+                    <label class="labelOff">強化</label>
+                <?php }?> 
+                </a>
+            </li>
+            <li>
+                <a href="?kind=2">
+                <?php if (2==$_smarty_tpl->tpl_vars['kind']->value) {?> 
+                    <label class="labelOn">進化</div>
+                <?php } else { ?> 
+                    <label class="labelOff">進化</label>
+                <?php }?> 
+                </a>
+            </li> 
+          </ul>
         </div> 
 
     <?php echo $_smarty_tpl->getSubTemplate ("../Elements/sort.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

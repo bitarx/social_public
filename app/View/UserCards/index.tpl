@@ -11,9 +11,27 @@
     </div>
 
     <{include file="../Elements/line.tpl"}>
-        <div id="" class="selectSynthKind">
-            <a href="?kind=1">強化</a> 
-            <a href="?kind=2">進化</a> 
+        <div class="selectSynthKind">
+          <ul class="tabs">
+            <li>
+                <a href="?kind=1">
+                <{if 1 == $kind}> 
+                    <label class="labelOn">強化</label>
+                <{else}> 
+                    <label class="labelOff">強化</label>
+                <{/if}> 
+                </a>
+            </li>
+            <li>
+                <a href="?kind=2">
+                <{if 2 == $kind}> 
+                    <label class="labelOn">進化</div>
+                <{else}> 
+                    <label class="labelOff">進化</label>
+                <{/if}> 
+                </a>
+            </li> 
+          </ul>
         </div> 
 
     <{include file="../Elements/sort.tpl"}>

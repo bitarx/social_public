@@ -2,16 +2,34 @@
         <img src="<{$smarty.const.IMG_URL}>line.png">
         <div class="paging">
             <{if $page <= 1}> 
-                 prev 
+               <div class="btnPagingPrev">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" height="30px" width="50px">
+                 <div class="strPagingPrev">
+                   前 
             <{else}>
-                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">prev</a> 
+               <div class="btnPagingPrev">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" height="30px" width="50px">
+                 <div class="strPagingPrev">
+                   <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">前</a> 
              <{/if}> 
-         <{$page}>  /  <{$pageAll}>
+               </div>
+             </div>
+             <div class="strPaging">
+                 <{$page}>  /  <{$pageAll}>
+             </div> 
             <{if $pageAll <= $page}> 
-                next
+               <div class="btnPagingNext">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" height="30px" width="50px">
+                 <div class="strPagingNext">
+                    次
             <{else}>
-                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">next</a>
+               <div class="btnPagingNext">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" height="30px" width="50px">
+                 <div class="strPagingNext">
+                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">次</a>
              <{/if}> 
+             </div>
+           </div>
         </div>
     </div>
     <div class="line">

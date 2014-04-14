@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-07 17:37:01
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-13 14:15:49
          compiled from "/var/www/asns/app/View/Layouts/default.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9769298505324f0444e5e42-67060483%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0b960c17ee805065fbd9c48ca4a6457f8f921f37' => 
     array (
       0 => '/var/www/asns/app/View/Layouts/default.tpl',
-      1 => 1396859450,
+      1 => 1397365860,
       2 => 'file',
     ),
   ),
@@ -40,6 +40,8 @@ css/main_android.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<?php echo @constant('BASE_URL');?>
 js/jquery.leanModal.min.js"></script>
+    <script src='<?php echo @constant('BASE_URL');?>
+js/jquery.tabs.js'></script>
     <script type="text/javascript" src="<?php echo @constant('BASE_URL');?>
 js/config.js"></script>
     <script type="text/javascript" src="<?php echo @constant('BASE_URL');?>

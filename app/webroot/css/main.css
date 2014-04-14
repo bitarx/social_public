@@ -475,12 +475,52 @@ input.btn_submit {
     height:35px;
     top:10px;
 }
+.btnPagingPrev {
+    position:relative;
+    float:left;
+    top:0px;
+    left:50px;
+}
+.strPagingPrev {
+    position:absolute;
+    top:2px;
+    left:10px;
+}
+.strPaging {
+    position:relative;
+    float:left;
+    top:0px;
+    left:200px;
+    width:100px;
+}
+.btnPagingNext {
+    position:relative;
+    float:right;
+    top:0px;
+    right:90px;
+}
+.strPagingNext {
+    position:absolute;
+    top:2px;
+    left:10px;
+}
 .pagingNum {
     position:relative;
     text-align:center;
     font-size: 24px;
     height:80px;
     top:35px;
+    left:150px;
+}
+.btnPagingNum {
+    position:relative;
+    float:left;
+    width:80px;
+}
+.strPagingNum {
+    position:absolute;
+    top:2px;
+    left:35px;
 }
 
 /**
@@ -492,11 +532,11 @@ input.btn_submit {
     font-size: 24px;
     height:35px;
     left:-80px;
-    top:80px;
+    top:60px;
 }
 .btnSortUpdate {
     position: relative;
-    top: 30px;
+    top: 20px;
     left: 410px;
     height:80px;
 }
@@ -572,7 +612,7 @@ input.btn_submit {
 .btnUpConf {
     position: relative;
     top: 40px;
-    left: 290px;
+    left: 180px;
     height:80px;
 }
 .strUpConf {
@@ -598,11 +638,103 @@ input.btn_submit {
 
 /** 強化進化選択 */
 .selectSynthKind {
-    text-align:center;
-    top: 28px;
-    height: 40px;
+    top: -20px;
+    height: 30px;
     position: relative;
 }
+
+
+/*　タブ　*/
+
+.tabs input[type=radio] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.tabs {
+    max-width: 650px;
+    height: 400px;
+    float: none;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin: 75px auto;
+}
+
+.tabs li { 
+    text-align:center;
+    float: left; 
+    width:320px;    
+}
+
+.tabs label.labelOff {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 2px 2px 0 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: ‘Lily Script One’, helveti;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs label:hover {
+    background: rgba(255,255,255,0.5);
+    top: 0;
+}
+
+.tabs label.labelOn {
+    display: block;
+    padding: 10px 20px;
+    border-radius: 2px 2px 0 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: ‘Lily Script One’, helveti;
+    background: rgba(158, 40, 163, 1);
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+[id^=tab]:checked ~ [id^=tab-content] {
+display: block;
+}
+
+.tab-content {
+    z-index: 2;
+    display: none;
+    text-align: left;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 20px;
+    line-height: 140%;
+    padding-top: 10px;
+    background: #08C;
+    padding: 15px;
+    color: white;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
 
 /** 合成確認 */
 .synthConfMsg {
