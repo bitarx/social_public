@@ -107,7 +107,7 @@ class SynthComponentTest extends CakeTestCase {
     public function testUseMoneyEvol(){
 
         // ベースカードデータ
-        $data['Card'] = array(
+        $data = array(
             'card_id' => 1 
         ,   'rare_level' => 5 
         );
@@ -126,7 +126,7 @@ class SynthComponentTest extends CakeTestCase {
     public function testJudgeEvol(){
 
         // ベースカードデータ
-        $baseCard['Card'] = array(
+        $baseCard = array(
             'card_id' => 1 
         ,   'card_level' => 20
         );

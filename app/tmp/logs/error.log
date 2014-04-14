@@ -79331,3 +79331,361 @@ Stack Trace:
 2014-04-15 08:36:32 Error: className:UserParams
 2014-04-15 08:36:43 Error: ownerId:1
 2014-04-15 08:36:43 Error: className:Users
+2014-04-15 08:45:46 Error: ownerId:1
+2014-04-15 08:45:46 Error: className:Gachas
+2014-04-15 08:45:46 Error: ownerId:1
+2014-04-15 08:45:46 Error: className:Gachas
+2014-04-15 08:46:01 Error: ownerId:1
+2014-04-15 08:46:01 Error: className:Quests
+2014-04-15 08:46:12 Error: ownerId:1
+2014-04-15 08:46:12 Error: className:Stages
+2014-04-15 08:46:13 Error: ownerId:1
+2014-04-15 08:46:13 Error: className:Stages
+2014-04-15 08:46:13 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"1","state":"1"}
+2014-04-15 08:46:13 Error: ownerId:1
+2014-04-15 08:46:13 Error: className:Stages
+2014-04-15 08:46:14 Error: ownerId:1
+2014-04-15 08:46:14 Error: className:Stages
+2014-04-15 08:46:14 Error: aryDataPlayer:Array
+(
+    [enemy_id] => 1
+    [card_name] => Lorem ipsum dolor sit amet
+    [hp] => 1
+    [atk] => 1
+    [def] => 1
+    [skill_id] => 1
+    [skill_level] => 1
+    [before_words] => Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.
+    [after_win_words] => Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.
+    [after_lose_words] => Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.
+    [delete_flg] => 0
+    [skill_name] => アフタースクール
+    [effect] => 1
+    [updown] => 1
+    [target] => 3
+    [percent] => 35
+    [skill_words] => 味方の防御力を大アップ
+)
+
+2014-04-15 08:46:17 Error: ownerId:1
+2014-04-15 08:46:17 Error: className:Tutorials
+2014-04-15 08:46:17 Error: ownerId:1
+2014-04-15 08:46:17 Error: className:Tutorials
+2014-04-15 08:46:17 Error: ownerId:1
+2014-04-15 08:46:17 Error: className:Tutorials
+2014-04-15 08:46:18 Error: ownerId:1
+2014-04-15 08:46:18 Error: className:Tutorials
+2014-04-15 08:46:19 Error: ownerId:1
+2014-04-15 08:46:19 Error: className:Tutorials
+2014-04-15 08:46:19 Error: ownerId:1
+2014-04-15 08:46:19 Error: className:Tutorials
+2014-04-15 08:46:20 Error: ownerId:1
+2014-04-15 08:46:20 Error: className:Tutorials
+2014-04-15 08:46:20 Error: ownerId:1
+2014-04-15 08:46:20 Error: className:Tutorials
+2014-04-15 08:46:21 Error: ownerId:1
+2014-04-15 08:46:21 Error: className:Tutorials
+2014-04-15 08:46:21 Error: ownerId:1
+2014-04-15 08:46:21 Error: className:Tutorials
+2014-04-15 08:46:22 Error: ownerId:1
+2014-04-15 08:46:22 Error: className:Tutorials
+2014-04-15 08:46:22 Error: ownerId:1
+2014-04-15 08:46:22 Error: className:Tutorials
+2014-04-15 08:46:23 Error: ownerId:1
+2014-04-15 08:46:23 Error: className:Tutorials
+2014-04-15 08:46:23 Error: ownerId:1
+2014-04-15 08:46:23 Error: className:Tutorials
+2014-04-15 08:46:25 Error: ownerId:1
+2014-04-15 08:46:25 Error: className:UserBaseCards
+2014-04-15 08:46:25 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_card_id] => 1
+            [user_id] => 1
+            [card_id] => 1
+            [hp] => 1
+            [hp_max] => 1
+            [atk] => 1
+            [def] => 1
+            [level] => 1
+            [exp] => 1
+            [skill_level] => 1
+            [skill_exp] => 1
+            [delete_flg] => 0
+            [created] => 2014-02-17 21:30:49
+            [modified] => 2014-02-17 21:30:49
+            [user_name] => Lorem ipsum dolor sit amet
+            [sns_user_id] => 1
+            [carrer] => 1
+            [SnsUser] => Array
+                (
+                    [sns_user_id] => 1
+                    [viewer] => 1
+                    [sns_name] => test
+                    [delete_flg] => 0
+                    [created] => 2014-02-05 19:51:44
+                    [modified] => 2014-02-05 19:51:44
+                )
+
+            [card_name] => あいり
+            [card_title] => [国民的JK]
+            [height] => 154
+            [weight] => 46
+            [size] => B84 W56 H83 Cカップ
+            [blood] => O型
+            [rare_level] => 3
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 200
+            [card_def] => 250
+            [card_level] => 20
+            [skill_id] => 1
+            [card_words] => test
+            [card_detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+            [Skill] => Array
+                (
+                    [skill_id] => 1
+                    [skill_name] => アフタースクール
+                    [effect] => 1
+                    [updown] => 1
+                    [target] => 3
+                    [percent] => 35
+                    [skill_words] => 味方の防御力を大アップ
+                    [delete_flg] => 0
+                )
+
+        )
+
+)
+
+2014-04-15 08:46:26 Error: ownerId:1
+2014-04-15 08:46:26 Error: className:UserCards
+2014-04-15 08:46:26 Error: rareLevel:Array
+(
+    [0] => 全て
+    [1] => N以下
+    [2] => HN以下
+    [3] => R以下
+    [4] => HR以下
+    [5] => SR以下
+)
+
+2014-04-15 08:46:26 Error: sortItem:Array
+(
+    [0] => 追加された順
+    [1] => 古い順
+    [2] => レアリティ高い順
+    [3] => レアリティ低い順
+    [4] => Lv高い順
+    [5] => Lv低い順
+    [6] => 攻撃力高い順
+    [7] => 攻撃力低い順
+    [8] => 防御力高い順
+    [9] => 防御力低い順
+)
+
+2014-04-15 08:46:26 Error: userBaseCard:Array
+(
+    [user_id] => 1
+    [user_card_id] => 1
+    [delete_flg] => 0
+    [created] => 2014-02-17 21:30:43
+    [modified] => 2014-02-17 21:30:43
+    [card_id] => 1
+    [hp] => 1
+    [hp_max] => 1
+    [atk] => 1
+    [def] => 1
+    [level] => 1
+    [exp] => 1
+    [skill_level] => 1
+    [skill_exp] => 1
+    [card_name] => あいり
+    [card_title] => [国民的JK]
+    [height] => 154
+    [weight] => 46
+    [size] => B84 W56 H83 Cカップ
+    [blood] => O型
+    [rare_level] => 3
+    [attr] => 1
+    [card_hp] => 2000
+    [card_atk] => 200
+    [card_def] => 250
+    [card_level] => 20
+    [skill_id] => 1
+    [card_words] => test
+    [card_detail] => 名門学園に通う清楚で真面目な学生。とはいっても人並みにそっち方面への興味もしっかり持っている。
+    [skill_name] => アフタースクール
+    [effect] => 1
+    [updown] => 1
+    [target] => 3
+    [percent] => 35
+    [skill_words] => 味方の防御力を大アップ
+    [card_group_id] => 1
+    [evol_group] => 1
+    [prev] => 0
+    [next] => 2
+)
+
+2014-04-15 08:46:26 Error: ownerId:1
+2014-04-15 08:46:26 Error: className:UserCards
+2014-04-15 08:46:26 Error: ownerId:1
+2014-04-15 08:46:26 Error: className:UserCards
+2014-04-15 08:46:27 Error: /var/www/asns/app/Controller/UserCardsController.php:150:userId:1
+2014-04-15 08:46:27 Error: /var/www/asns/app/Controller/UserCardsController.php:157:userId:1
+2014-04-15 08:46:27 Error: ownerId:1
+2014-04-15 08:46:27 Error: className:UserCards
+2014-04-15 08:46:27 Error: /var/www/asns/app/Controller/UserCardsController.php:245:userId:1
+2014-04-15 08:46:27 Error: /var/www/asns/app/Controller/UserCardsController.php:264:userId:1
+2014-04-15 08:46:28 Error: ownerId:1
+2014-04-15 08:46:28 Error: className:UserCards
+2014-04-15 08:46:28 Error: /var/www/asns/app/Controller/UserCardsController.php:384:userId:1
+2014-04-15 08:46:28 Error: ownerId:1
+2014-04-15 08:46:28 Error: className:UserCards
+2014-04-15 08:46:35 Error: ownerId:1
+2014-04-15 08:46:35 Error: className:UserDecks
+2014-04-15 08:46:35 Error: deckList:Array
+(
+    [user_deck_id] => 1
+    [user_id] => 1
+    [kind] => 1
+    [user_deck_name] => Lorem ipsum dolor sit amet
+    [delete_flg] => 0
+    [created] => 2014-02-17 21:30:49
+    [modified] => 2014-02-17 21:30:49
+    [user_name] => Lorem ipsum dolor sit amet
+    [sns_user_id] => 1
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 1
+            [viewer] => 1
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-02-05 19:51:44
+            [modified] => 2014-02-05 19:51:44
+        )
+
+    [UserDeckCard] => Array
+        (
+            [0] => Array
+                (
+                    [user_deck_id] => 1
+                    [user_card_id] => 1
+                    [delete_flg] => 0
+                    [created] => 2014-02-23 07:26:24
+                    [modified] => 2014-02-23 07:26:24
+                    [UserDeck] => Array
+                        (
+                            [user_deck_id] => 1
+                            [user_id] => 1
+                            [kind] => 1
+                            [user_deck_name] => Lorem ipsum dolor sit amet
+                            [delete_flg] => 0
+                            [created] => 2014-02-23 07:24:27
+                            [modified] => 2014-02-23 07:24:27
+                        )
+
+                    [UserCard] => Array
+                        (
+                            [user_card_id] => 1
+                            [user_id] => 1
+                            [card_id] => 1
+                            [hp] => 1
+                            [hp_max] => 1
+                            [atk] => 1
+                            [def] => 1
+                            [level] => 1
+                            [exp] => 1
+                            [skill_level] => 1
+                            [skill_exp] => 1
+                            [delete_flg] => 0
+                            [created] => 2014-02-17 21:30:43
+                            [modified] => 2014-02-17 21:30:43
+                        )
+
+                )
+
+        )
+
+)
+
+2014-04-15 08:46:35 Error: ownerId:1
+2014-04-15 08:46:35 Error: className:UserDecks
+2014-04-15 08:46:35 Error: deckList:Array
+(
+    [user_deck_id] => 1
+    [user_id] => 1
+    [kind] => 1
+    [user_deck_name] => Lorem ipsum dolor sit amet
+    [delete_flg] => 0
+    [created] => 2014-02-17 21:30:49
+    [modified] => 2014-02-17 21:30:49
+    [user_name] => Lorem ipsum dolor sit amet
+    [sns_user_id] => 1
+    [carrer] => 1
+    [SnsUser] => Array
+        (
+            [sns_user_id] => 1
+            [viewer] => 1
+            [sns_name] => test
+            [delete_flg] => 0
+            [created] => 2014-02-05 19:51:44
+            [modified] => 2014-02-05 19:51:44
+        )
+
+    [UserDeckCard] => Array
+        (
+            [0] => Array
+                (
+                    [user_deck_id] => 1
+                    [user_card_id] => 1
+                    [delete_flg] => 0
+                    [created] => 2014-02-23 07:26:24
+                    [modified] => 2014-02-23 07:26:24
+                    [UserDeck] => Array
+                        (
+                            [user_deck_id] => 1
+                            [user_id] => 1
+                            [kind] => 1
+                            [user_deck_name] => Lorem ipsum dolor sit amet
+                            [delete_flg] => 0
+                            [created] => 2014-02-23 07:24:27
+                            [modified] => 2014-02-23 07:24:27
+                        )
+
+                    [UserCard] => Array
+                        (
+                            [user_card_id] => 1
+                            [user_id] => 1
+                            [card_id] => 1
+                            [hp] => 1
+                            [hp_max] => 1
+                            [atk] => 1
+                            [def] => 1
+                            [level] => 1
+                            [exp] => 1
+                            [skill_level] => 1
+                            [skill_exp] => 1
+                            [delete_flg] => 0
+                            [created] => 2014-02-17 21:30:43
+                            [modified] => 2014-02-17 21:30:43
+                        )
+
+                )
+
+        )
+
+)
+
+2014-04-15 08:46:45 Error: ownerId:1
+2014-04-15 08:46:45 Error: className:UserParams
+2014-04-15 08:46:46 Error: ownerId:1
+2014-04-15 08:46:46 Error: className:UserParams
+2014-04-15 08:46:47 Error: ownerId:1
+2014-04-15 08:46:47 Error: className:UserParams
+2014-04-15 08:46:47 Error: ownerId:1
+2014-04-15 08:46:47 Error: className:UserParams
+2014-04-15 08:46:56 Error: ownerId:1
+2014-04-15 08:46:56 Error: className:Users
