@@ -106,7 +106,7 @@ class AppModel extends Model {
         }
 
         // 結合レベル
-        if (0 != $recursive) { 
+        if (-1 <= $recursive) { 
             $options['recursive'] = $recursive;
         } 
         // SELECT実行

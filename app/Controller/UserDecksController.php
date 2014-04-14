@@ -23,17 +23,10 @@ class UserDecksController extends ApiController {
      */
 	public function index() {
 
-       $kind = $this->params['kind'];
-       if ($kind == 2) {
-           // 防御デッキ
-           $kind = 1;
-        } else {
-           // 攻撃デッキ
-           $kind = 2;
-        }
 
-        $list = $this->UserDeck->getUserDeckData($this->userId, $kind);
-        $this->set('list', $this->Paginator->paginate());
+        $list = $this->UserDeck->getUserDeckData($this->userId);
+ $this->log('deckList:' . print_r($list, true)); 
+        $this->set('list', $list);
 
 	}
 

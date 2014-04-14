@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-03-25 10:40:53
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-14 14:09:33
          compiled from "/var/www/asns/app/View/Elements/menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1351165049532595aa144a53-12900819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7bb084760daefd2bdeb476680418a23ef7c2289f' => 
     array (
       0 => '/var/www/asns/app/View/Elements/menu.tpl',
-      1 => 1395711643,
+      1 => 1397452013,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'linkUser' => 0,
     'linkQuest' => 0,
     'linkUserCard' => 0,
-    'linkUserDeck' => 0,
+    'linkDeck' => 0,
     'linkGacha' => 0,
     'linkPbox' => 0,
     'linkUserItem' => 0,
@@ -69,7 +69,7 @@ img/icon_quest.png" ></a>
 img/icon_synth.png" ></a> 
         </div>
         <div class="icon_deck">
-            <a href="<?php echo $_smarty_tpl->tpl_vars['linkUserDeck']->value;?>
+            <a href="<?php echo $_smarty_tpl->tpl_vars['linkDeck']->value;?>
  "><img src="<?php echo @constant('BASE_URL');?>
 img/icon_deck.png" ></a>
         </div>

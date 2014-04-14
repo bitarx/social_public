@@ -5,7 +5,7 @@ App::uses('UserCardsController', 'Controller');
  * UserCardsController Test Case
  *
  */
-class UserCardsControllerTest extends ControllerTestCase {
+class UserBaseCardsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures

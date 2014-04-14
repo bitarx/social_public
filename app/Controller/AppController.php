@@ -254,7 +254,7 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         // トップ
         $this->set('linkSnsUser', BASE_URL . 'SnsUsers/index'); 
         // デッキ
-        $this->set('linkDeck', BASE_URL . 'Deck/index'); 
+        $this->set('linkDeck', BASE_URL . 'UserDeckCards/index'); 
         // プレゼントボックス
         $this->set('linkPbox', BASE_URL . 'PresentBoxes/index'); 
         // アイテム

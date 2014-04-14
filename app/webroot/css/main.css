@@ -744,3 +744,11 @@ display: block;
     height: 100px;
     position: relative;
 }
+
+/** デッキ */
+.strChangeBase {
+    position: absolute;
+    top: 15px;
+    left: 125px;
+    font-size: 25px;
+}

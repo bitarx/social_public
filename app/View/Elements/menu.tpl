@@ -23,7 +23,7 @@
             <a href="<{$linkUserCard}> "><img src="<{$smarty.const.BASE_URL}>img/icon_synth.png" ></a> 
         </div>
         <div class="icon_deck">
-            <a href="<{$linkUserDeck}> "><img src="<{$smarty.const.BASE_URL}>img/icon_deck.png" ></a>
+            <a href="<{$linkDeck}> "><img src="<{$smarty.const.BASE_URL}>img/icon_deck.png" ></a>
         </div>
         <div class="icon_gacha">
             <a href="<{$linkGacha}> "><img src="<{$smarty.const.BASE_URL}>img/icon_gacha.png" ></a>

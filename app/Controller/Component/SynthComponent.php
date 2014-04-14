@@ -83,7 +83,7 @@ class SynthComponent extends Component {
      * @return int 金額
      */
     public function useMoneyEvol($baseCard) { 
-        $useMoney = $baseCard['Card']['rare_level'] * 800;
+        $useMoney = $baseCard['rare_level'] * 800;
         return $useMoney;
     } 
 
@@ -113,14 +113,14 @@ class SynthComponent extends Component {
     public function judgeEvol($baseCard, $targetCard) { 
 
         // 進化に必要なレベルは最大レベル
-        $needLevel = $baseCard['Card']['card_level'];
+        $needLevel = $baseCard['card_level'];
 
         // 必要レベルに達していないときは不可
         if ($baseCard['level'] < $needLevel) return false;
 
         // 素材が同じグループのカードであるか
         $cardGroup = ClassRegistry::init('CardGroup');
-        $judge = $cardGroup->judgeSameCardGroup($baseCard['Card']['card_id'],$targetCard['card_id']);
+        $judge = $cardGroup->judgeSameCardGroup($baseCard['card_id'],$targetCard['card_id']);
 
         return $judge;
     } 

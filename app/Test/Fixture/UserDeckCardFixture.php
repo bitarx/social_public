@@ -12,6 +12,7 @@ class UserDeckCardFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'user_deck_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 10, 'key' => 'primary'),
+		'deck_number' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 10),
 		'user_card_id' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 10, 'key' => 'primary'),
 		'delete_flg' => array('type' => 'integer', 'null' => false, 'default' => '0', 'length' => 3),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),

@@ -19,9 +19,23 @@ class UserDeckCardsController extends ApiController {
      * index method
      *
      * @author imanishi 
-     * @return json
+     * @return void
      */
 	public function index() {
+
+        $list = $this->UserDeckCard->getUserDeckData($this->userId );
+   $this->log('UserCardList:' . print_r($list, true)); 
+        $this->set('list', $list);
+    }
+
+
+    /**
+     * init method
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function init() {
 
         $fields = array('id');
         $where  = array();
@@ -69,29 +83,6 @@ class UserDeckCardsController extends ApiController {
         }
     }
 
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->UserDeckCard->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
-
-        $this->setJson($ary);
-	}
 
 
 }
