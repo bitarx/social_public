@@ -15,6 +15,8 @@ class UserDeckCardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard');
+
     /**
      * index method
      *
@@ -25,9 +27,111 @@ class UserDeckCardsController extends ApiController {
 
         $list = $this->UserDeckCard->getUserDeckData($this->userId );
    $this->log('UserCardList:' . print_r($list, true)); 
+        if (!empty($list)) {
+            foreach ($list as &$val) {
+                $tmp = array(
+                    'user_deck_id' => $val['user_deck_id'] 
+                ,   'deck_number' => $val['deck_number']
+                );
+                $val['params'] = json_encode($tmp); 
+            }
+        }
         $this->set('list', $list);
     }
 
+    /**
+     * delete method
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function delete() {
+        $userDeckId = isset($this->params['user_deck_id']) ? $this->params['user_deck_id'] : 0;
+        $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
+
+       if (empty($userDeckId) || empty($deckNumber)) {
+           $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+           $this->rd('errors', 'index', array('error' => 1)); 
+       }
+
+       $this->UserDeckCard->begin(); 
+       try {  
+           $where = array(
+               'UserDeckCard.user_deck_id' => $userDeckId
+           ,   'UserDeckCard.deck_number' => $deckNumber
+           );
+           $values = array(
+               'user_card_id' => 0
+           ,   'modified' => "'" . date("Y-m-d H:i:s") . "'"
+           );
+           $this->UserDeckCard->updateAll($values, $where);
+       } catch (AppException $e) { 
+           $this->UserDeckCard->rollback(); 
+           $this->log($e->errmes); 
+           $this->rd('Errors', 'index', array('error'=> 2)); 
+       } 
+       $this->UserDeckCard->commit(); 
+
+       $this->rd('UserDeckCards', 'index', array('del_end' => 1)); 
+    }
+
+    /**
+     * initList method
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function initList() { 
+    
+        // 並べ替え項目セット
+        $this->setSort();
+
+        // ユーザデッキID
+        $userDeckId = isset($this->params['user_deck_id']) ? $this->params['user_deck_id'] : 0;
+        // デッキナンバー
+        $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
+
+        // レア度ソート
+        $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        // 項目ソート
+        $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
+
+        $kind = 1;
+
+
+        $deckList = $this->UserDeckCard->getUserDeckData($this->userId );
+        foreach ($deckList as $val) {
+            if (!empty($val['user_card_id'])) {
+                $userCardIds[] = $val['user_card_id'];
+            }
+            // 選択デッキカード
+            if ($userDeckId == $val['user_deck_id'] && $deckNumber == $val['deck_number']) {
+                $selectDeckCard = $val;
+            }
+        }
+        
+        // 進化グループ
+        $evolGroup = 0;
+
+        // NOT IN
+        $notIn = array('user_card_id' => $userCardIds);
+
+        // 所有カード
+        $pageAll = 0;
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, 0, $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
+
+        // 引き回しパラメータ
+        $addParam = '&user_deck_id=' . $userDeckId . '&deck_number=' . $deckNumber;
+
+        // アサイン
+        $this->set('list', $list);
+        $this->set('data', $selectDeckCard);
+        $this->set('kind', $kind);
+        $this->set('pageAll', $pageAll);
+        $this->set('user_card_id', $userDeckId);
+        $this->set('deck_number', $deckNumber);
+        $this->set('addParam', $addParam);
+    } 
 
     /**
      * init method
@@ -37,20 +141,31 @@ class UserDeckCardsController extends ApiController {
      */
 	public function init() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->UserDeckCard->getAllFind($where, $fields);
-        $this->set('userDeckCards', $this->Paginator->paginate());
+        // ユーザデッキID
+        $userDeckId = isset($this->params['user_deck_id']) ? $this->params['user_deck_id'] : 0;
+        // デッキナンバー
+        $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
+        // カードID
+        $userCardId = isset($this->params['user_card_id']) ? $this->params['user_card_id'] : 0;
+
+       if (empty($userDeckId) || empty($deckNumber) || empty($userCardId)) {
+           // パラメータ異常
+           $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+           $this->rd('errors', 'index', array('error' => 1)); 
+       }
+
 
         $this->UserDeckCard->begin();
         try {
-            $values = array(
-                'user_id'     => $userId
+            $where = array(
+                'UserDeckCard.user_deck_id' => $userDeckId 
+            ,   'UserDeckCard.deck_number'  => $deckNumber 
             );
-            $ret = $this->UserDeckCard->save($values);
-            if (!$ret) {
-                throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
-            }
+            $values = array(
+                'user_card_id'     => $userCardId
+            ,   'modified' => "'" . date("Y-m-d H:i:s") . "'"
+            );
+            $this->UserDeckCard->updateAll($values, $where);
 
         } catch (AppException $e) {
 
@@ -63,26 +178,8 @@ class UserDeckCardsController extends ApiController {
                    ));
         }
         $this->UserDeckCard->commit();
+
+        $this->rd('UserDeckCards', 'index', array('init_end' => 1)); 
 	}
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->UserDeckCard->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-
 
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-14 11:12:13
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 15:36:01
          compiled from "/var/www/asns/app/View/Elements/sort.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:141980880653461ee9947d98-56522148%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9434112c762b60b855463accd8ff561b73bb1d73' => 
     array (
       0 => '/var/www/asns/app/View/Elements/sort.tpl',
-      1 => 1397439548,
+      1 => 1397543447,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'sortItem' => 0,
     'sortItemSelect' => 0,
     'kind' => 0,
+    'ctl' => 0,
+    'user_card_id' => 0,
+    'deck_number' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -41,6 +44,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <input type="hidden" name="kind" value="<?php echo $_smarty_tpl->tpl_vars['kind']->value;?>
 ">
+
+    <?php if ($_smarty_tpl->tpl_vars['ctl']->value=='UserDeckCards') {?> 
+        <input type="hidden" name="user_card_id" value="<?php echo $_smarty_tpl->tpl_vars['user_card_id']->value;?>
+">
+        <input type="hidden" name="deck_number" value="<?php echo $_smarty_tpl->tpl_vars['deck_number']->value;?>
+">
+    <?php }?> 
 
     <div class="btnSortUpdate">
         <input type="image" src="<?php echo @constant('IMG_URL');?>

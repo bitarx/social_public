@@ -8,5 +8,9 @@
         <div class="strTitleBaseCard" >
             ベースカード変更
         </div>
+    <{elseif 'UserDeckCards' == $ctl}> 
+        <div class="strTitleDeckCard" >
+            デッキ編成
+        </div>
     <{/if}>
 </div>

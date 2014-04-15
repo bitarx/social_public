@@ -97,6 +97,57 @@ class UserDeckCard extends AppModel {
 		)
 	);
 
+    /**
+     * ユーザデッキ情報取得(1レコード)
+     *
+     * @author imanishi
+     * @param int $userId
+     */
+    public function getUserDeckDataByNumber ($userId, $userDeckId , $deckNumber) {
+
+        $joins = array(
+            array('table' => 'user_decks',
+                'alias' => 'UserDeck',
+                'type' => 'inner',
+                'conditions' => array(
+                    'UserDeck.user_deck_id = UserDeckCard.user_deck_id',
+                ),
+            ),
+            array('table' => 'user_cards',
+                'alias' => 'UserCard',
+                'type' => 'left',
+                'conditions' => array(
+                    'UserDeckCard.user_card_id = UserCard.user_card_id',
+                ),
+            ),
+            array('table' => 'cards',
+                'alias' => 'Card',
+                'type' => 'left',
+                'conditions' => array(
+                    'UserCard.card_id = Card.card_id',
+                ),
+            ),
+            array('table' => 'skills',
+                'alias' => 'Skill',
+                'type' => 'left',
+                'conditions' => array(
+                    'Card.skill_id = Skill.skill_id',
+                ),
+            ),
+        );
+        $where = array(
+           'UserDeck.user_id' => $userId
+        ,  'UserDeckCard.user_deck_id' => $userDeckId
+        ,  'UserDeckCard.deck_number' => $deckNumber
+        );
+        $order = array();
+        $field = array('*');
+        
+        $data = $this->getAllFind($where, $field, 'first', $order, 0, 0, $recu = -1, $joins);
+
+        return $data;
+    }
+
 
     /**
      * ユーザデッキ情報取得
@@ -116,41 +167,25 @@ class UserDeckCard extends AppModel {
             ),
             array('table' => 'user_cards',
                 'alias' => 'UserCard',
-                'type' => 'inner',
+                'type' => 'left',
                 'conditions' => array(
                     'UserDeckCard.user_card_id = UserCard.user_card_id',
                 ),
             ),
             array('table' => 'cards',
                 'alias' => 'Card',
-                'type' => 'inner',
+                'type' => 'left',
                 'conditions' => array(
                     'UserCard.card_id = Card.card_id',
                 ),
             ),
             array('table' => 'skills',
                 'alias' => 'Skill',
-                'type' => 'inner',
+                'type' => 'left',
                 'conditions' => array(
                     'Card.skill_id = Skill.skill_id',
                 ),
             ),
-            /*
-            array('table' => 'skills',
-                'alias' => 'Skill',
-                'type' => 'inner',
-                'conditions' => array(
-                    'Card.skill_id = Skill.skill_id',
-                ),
-            ),
-            array('table' => 'card_groups',
-                'alias' => 'CardGroup',
-                'type' => 'inner',
-                'conditions' => array(
-                    'Card.card_id = CardGroup.card_id',
-                )
-            )
-            */
         );
         $where = array(
            'UserDeck.user_id' => $userId

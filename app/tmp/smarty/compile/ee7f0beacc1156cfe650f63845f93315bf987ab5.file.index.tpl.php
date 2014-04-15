@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-14 15:22:25
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 16:21:38
          compiled from "/var/www/asns/app/View/UserDeckCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1133188226534b7ea13601f8-13750151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ee7f0beacc1156cfe650f63845f93315bf987ab5' => 
     array (
       0 => '/var/www/asns/app/View/UserDeckCards/index.tpl',
-      1 => 1397455467,
+      1 => 1397546324,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.16',
+  'unifunc' => 'content_534b7ea13b08a9_19796876',
   'variables' => 
   array (
     'list' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.16',
-  'unifunc' => 'content_534b7ea13b08a9_19796876',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_534b7ea13b08a9_19796876')) {function content_534b7ea13b08a9_19796876($_smarty_tpl) {?><div>
     <div class="changeBase">
@@ -30,7 +30,7 @@ btn_st_l.png">
         <a href="<?php echo @constant('BASE_URL');?>
 UserBaseCards/index">
         <div class="strChangeBase" >
-           デッキ自動編成 
+           攻撃強い順で編成 
         </div>
         </a>
     </div>

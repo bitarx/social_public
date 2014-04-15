@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-12 21:46:12
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 19:32:11
          compiled from "/var/www/asns/app/View/Elements/card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:267981235533d4d63c608b0-04370712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7f0f9328024cf42696ae42d6990d81f388fa66d' => 
     array (
       0 => '/var/www/asns/app/View/Elements/card.tpl',
-      1 => 1397306742,
+      1 => 1397552874,
       2 => 'file',
     ),
   ),
@@ -24,10 +24,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ctl' => 0,
     'action' => 0,
     'kind' => 0,
+    'addParam' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_533d4d63c81906_72646970')) {function content_533d4d63c81906_72646970($_smarty_tpl) {?><div class="card">
+    <?php if (empty($_smarty_tpl->tpl_vars['data']->value['user_card_id'])) {?> 
+        <div style="position:absolute;left:50px;">
+        設定なし
+        </div>
+    <?php } else { ?> 
     <div class="cardImg">
        <img src="<?php echo @constant('FILEOUT_URL');?>
 ?size=m&dir=card&target=<?php echo $_smarty_tpl->tpl_vars['data']->value['card_id'];?>
@@ -99,6 +105,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <?php }?> 
         </span>
     </div>
+    <?php }?> 
 
      
     <?php if ('UserCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'index'==$_smarty_tpl->tpl_vars['action']->value) {?> 
@@ -132,6 +139,53 @@ btn_cm_m.png">
 btn_cm_m.png">
                 <div class="strSelectCard">
                     ベース選択
+                </div>
+            </div>
+        </a>
+
+     
+    <?php } elseif ('UserDeckCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'index'==$_smarty_tpl->tpl_vars['action']->value) {?> 
+        <?php if (!empty($_smarty_tpl->tpl_vars['data']->value['user_card_id'])) {?> 
+            <form method="get" action="<?php echo @constant('BASE_URL');?>
+UserDeckCards/delete">
+                <div class="btnSelectCardInUserDeckLeft">
+                    <input type="hidden" name="user_deck_id" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['user_deck_id'];?>
+">
+                    <input type="hidden" name="deck_number" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['deck_number'];?>
+">
+                    <input type="image" src="<?php echo @constant('IMG_URL');?>
+btn_cm_s.png">
+                    <div class="strSelectCardInUserDeck">
+                        外す
+                    </div>
+                </div>
+            </form>
+        <?php }?> 
+        <form method="get" action="<?php echo @constant('BASE_URL');?>
+UserDeckCards/initList">
+            <div class="btnSelectCardInUserDeckRight">
+                <input type="hidden" name="user_deck_id" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['user_deck_id'];?>
+">
+                <input type="hidden" name="deck_number" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['deck_number'];?>
+">
+                <input type="image" src="<?php echo @constant('IMG_URL');?>
+btn_cm_s.png">
+                <div class="strSelectCardInUserDeck">
+                    <?php if (!empty($_smarty_tpl->tpl_vars['data']->value['user_card_id'])) {?>変更<?php } else { ?>設定<?php }?>  
+                </div>
+            </div>
+        </form>
+
+     
+    <?php } elseif ('UserDeckCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'initList'==$_smarty_tpl->tpl_vars['action']->value) {?> 
+        <a href="init?user_card_id=<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
+<?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
+">
+            <div class="btnSelectCard">
+                <img src="<?php echo @constant('IMG_URL');?>
+btn_cm_m.png">
+                <div class="strSelectCard">
+                   デッキ設定 
                 </div>
             </div>
         </a>

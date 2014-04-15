@@ -6,6 +6,11 @@
 
     <input type="hidden" name="kind" value="<{$kind}>">
 
+    <{if $ctl == 'UserDeckCards'}> 
+        <input type="hidden" name="user_card_id" value="<{$user_card_id}>">
+        <input type="hidden" name="deck_number" value="<{$deck_number}>">
+    <{/if}> 
+
     <div class="btnSortUpdate">
         <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" alt="更新>
 確認" name="submit">

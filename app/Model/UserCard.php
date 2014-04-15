@@ -168,10 +168,11 @@ class UserCard extends AppModel {
      * @param int $offset
      * @param int $evolGroup 進化グループ
      * @param int $pageAll ページ数
+     * @param int $notIn NOT IN
      * @param array $data 所持カードデータ
      * @return array $list
      */
-    public function getUserCard ($userId, $cardId = 0, $userCardId = 0, $limit = PAGE_LIMIT, $offset = 0, $rareLevel = 0, $sortItem = 0, $evolGroup = 0, &$pageAll = 0) {
+    public function getUserCard ($userId, $cardId = 0, $userCardId = 0, $limit = PAGE_LIMIT, $offset = 0, $rareLevel = 0, $sortItem = 0, $evolGroup = 0, &$pageAll = 0, $notIn = array()) {
 
         $joins = array();
 
@@ -215,6 +216,11 @@ class UserCard extends AppModel {
             $recursive = -1;
         } else {
             $recursive = 2;
+        }
+
+        // NOT IN
+        if (!empty($notIn)) {
+            $where['NOT'] = $notIn;
         }
 
         // レア度絞り込み

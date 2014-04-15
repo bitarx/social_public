@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-08 10:17:25
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 15:36:01
          compiled from "/var/www/asns/app/View/Elements/title.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:135247226533e309e3a1af1-37746390%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '708c5cc22bf807bbf58116614e4a8d1573b7dc66' => 
     array (
       0 => '/var/www/asns/app/View/Elements/title.tpl',
-      1 => 1396919754,
+      1 => 1397542702,
       2 => 'file',
     ),
   ),
@@ -33,6 +33,10 @@ banner_title.png">
     <?php } elseif ('UserBaseCards'==$_smarty_tpl->tpl_vars['ctl']->value) {?> 
         <div class="strTitleBaseCard" >
             ベースカード変更
+        </div>
+    <?php } elseif ('UserDeckCards'==$_smarty_tpl->tpl_vars['ctl']->value) {?> 
+        <div class="strTitleDeckCard" >
+            デッキ編成
         </div>
     <?php }?>
 </div>

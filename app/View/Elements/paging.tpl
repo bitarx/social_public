@@ -10,7 +10,7 @@
                <div class="btnPagingPrev">
                  <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" height="30px" width="50px">
                  <div class="strPagingPrev">
-                   <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">前</a> 
+                   <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>">前</a> 
              <{/if}> 
                </div>
              </div>
@@ -26,7 +26,7 @@
                <div class="btnPagingNext">
                  <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" height="30px" width="50px">
                  <div class="strPagingNext">
-                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}>">次</a>
+                 <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>">次</a>
              <{/if}> 
              </div>
            </div>

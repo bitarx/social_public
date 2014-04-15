@@ -3,7 +3,7 @@
         <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
         <a href="<{$smarty.const.BASE_URL}>UserBaseCards/index">
         <div class="strChangeBase" >
-           デッキ自動編成 
+           攻撃強い順で編成 
         </div>
         </a>
     </div>

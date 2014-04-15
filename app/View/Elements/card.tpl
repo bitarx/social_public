@@ -1,4 +1,9 @@
 <div class="card">
+    <{if empty($data.user_card_id)}> 
+        <div style="position:absolute;left:50px;">
+        設定なし
+        </div>
+    <{else}> 
     <div class="cardImg">
        <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
     </div>
@@ -52,6 +57,7 @@
         <{/if}> 
         </span>
     </div>
+    <{/if}> 
 
     <{* 強化合成素材カード選択 *}> 
     <{if 'UserCards' == $ctl && 'index' == $action}> 
@@ -79,6 +85,42 @@
                 <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="strSelectCard">
                     ベース選択
+                </div>
+            </div>
+        </a>
+
+    <{* デッキ編成 *}> 
+    <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 
+        <{if !empty($data.user_card_id)}> 
+            <form method="get" action="<{$smarty.const.BASE_URL}>UserDeckCards/delete">
+                <div class="btnSelectCardInUserDeckLeft">
+                    <input type="hidden" name="user_deck_id" value="<{$data.user_deck_id}>">
+                    <input type="hidden" name="deck_number" value="<{$data.deck_number}>">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+                    <div class="strSelectCardInUserDeck">
+                        外す
+                    </div>
+                </div>
+            </form>
+        <{/if}> 
+        <form method="get" action="<{$smarty.const.BASE_URL}>UserDeckCards/initList">
+            <div class="btnSelectCardInUserDeckRight">
+                <input type="hidden" name="user_deck_id" value="<{$data.user_deck_id}>">
+                <input type="hidden" name="deck_number" value="<{$data.deck_number}>">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+                <div class="strSelectCardInUserDeck">
+                    <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
+                </div>
+            </div>
+        </form>
+
+    <{* デッキに設定 *}> 
+    <{elseif 'UserDeckCards' == $ctl && 'initList' == $action}> 
+        <a href="init?user_card_id=<{$data.user_card_id}><{$addParam}>">
+            <div class="btnSelectCard">
+                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="strSelectCard">
+                   デッキ設定 
                 </div>
             </div>
         </a>

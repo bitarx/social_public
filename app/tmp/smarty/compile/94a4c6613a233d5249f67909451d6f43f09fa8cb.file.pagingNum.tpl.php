@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-14 11:22:36
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 17:18:16
          compiled from "/var/www/asns/app/View/Elements/pagingNum.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8207731653490bd069c293-35789546%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94a4c6613a233d5249f67909451d6f43f09fa8cb' => 
     array (
       0 => '/var/www/asns/app/View/Elements/pagingNum.tpl',
-      1 => 1397442056,
+      1 => 1397549832,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'kind' => 0,
     'rareLevelSelect' => 0,
     'sortItemSelect' => 0,
+    'addParam' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -77,7 +78,8 @@ btn_cm_ss_on.png" height="30px">
 &kind=<?php echo $_smarty_tpl->tpl_vars['kind']->value;?>
 &rare_level=<?php echo $_smarty_tpl->tpl_vars['rareLevelSelect']->value;?>
 &sort_item=<?php echo $_smarty_tpl->tpl_vars['sortItemSelect']->value;?>
-"><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pageNum']['index'];?>
+<?php if (isset($_smarty_tpl->tpl_vars['addParam']->value)) {?><?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
+<?php }?>"><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pageNum']['index'];?>
 </a>&nbsp;
           <?php }?>
           </div>
