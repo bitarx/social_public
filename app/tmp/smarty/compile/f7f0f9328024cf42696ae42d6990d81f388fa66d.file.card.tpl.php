@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 19:32:11
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-16 04:58:05
          compiled from "/var/www/asns/app/View/Elements/card.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:267981235533d4d63c608b0-04370712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7f0f9328024cf42696ae42d6990d81f388fa66d' => 
     array (
       0 => '/var/www/asns/app/View/Elements/card.tpl',
-      1 => 1397552874,
+      1 => 1397591882,
       2 => 'file',
     ),
   ),
@@ -177,7 +177,7 @@ btn_cm_s.png">
         </form>
 
      
-    <?php } elseif ('UserDeckCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'initList'==$_smarty_tpl->tpl_vars['action']->value) {?> 
+    <?php } elseif ('UserDeckCards'==$_smarty_tpl->tpl_vars['ctl']->value&&'initList'==$_smarty_tpl->tpl_vars['action']->value&&isset($_smarty_tpl->tpl_vars['key']->value)) {?> 
         <a href="init?user_card_id=<?php echo $_smarty_tpl->tpl_vars['data']->value['user_card_id'];?>
 <?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
 ">

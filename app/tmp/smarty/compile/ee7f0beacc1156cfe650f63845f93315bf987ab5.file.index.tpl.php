@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 16:21:38
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-16 04:47:42
          compiled from "/var/www/asns/app/View/UserDeckCards/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1133188226534b7ea13601f8-13750151%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ee7f0beacc1156cfe650f63845f93315bf987ab5' => 
     array (
       0 => '/var/www/asns/app/View/UserDeckCards/index.tpl',
-      1 => 1397546324,
+      1 => 1397587823,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <img src="<?php echo @constant('IMG_URL');?>
 btn_st_l.png">
         <a href="<?php echo @constant('BASE_URL');?>
-UserBaseCards/index">
+UserDeckCards/sortAtk">
         <div class="strChangeBase" >
            攻撃強い順で編成 
         </div>

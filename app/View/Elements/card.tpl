@@ -115,7 +115,7 @@
         </form>
 
     <{* デッキに設定 *}> 
-    <{elseif 'UserDeckCards' == $ctl && 'initList' == $action}> 
+    <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 
         <a href="init?user_card_id=<{$data.user_card_id}><{$addParam}>">
             <div class="btnSelectCard">
                 <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">

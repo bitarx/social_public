@@ -15,7 +15,7 @@ class UserDeckCardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard');
+    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard', 'UserDeck');
 
     /**
      * index method
@@ -182,4 +182,48 @@ class UserDeckCardsController extends ApiController {
         $this->rd('UserDeckCards', 'index', array('init_end' => 1)); 
 	}
 
+    /**
+     * sortAtk method
+     *
+     * @author imanishi 
+     * @return void
+     */
+	public function sortAtk() {
+
+        // 攻撃力高い順で５レコード取得
+        $list = $this->UserCard->getUserCard ($this->userId, $cardId = 0, $userCardId = 0, $limit = 5, $offset = 0, $rareLevel = 0, $sortItem = 6);
+
+        // デッキID取得
+        $userDeckData = $this->UserDeck->getUserDeckData($this->userId);
+        $userDeckId   = $userDeckData['user_deck_id'];
+
+        $this->UserDeckCard->begin(); 
+        try {  
+            for ($i = 1; $i <= 5; $i++) {
+                $key = $i - 1;
+                if (!empty($list[$key]['user_card_id'])) {
+                    $userCardId = $list[$key]['user_card_id'];
+                } else {
+                    $userCardId = 0;
+                }
+                $value = array(
+                    'user_card_id' => $userCardId
+                ,   'modified' => "'" . date("Y-m-d H:i:s") . "'"
+                );
+                $where = array(
+                    'UserDeckCard.user_deck_id' => $userDeckId
+                ,   'UserDeckCard.deck_number'  => $i
+                );
+                $this->UserDeckCard->updateAll($value, $where);
+            }
+        
+        } catch (AppException $e) { 
+            $this->UserDeckCard->rollback(); 
+            $this->log($e->errmes); 
+            $this->rd('Errors', 'index', array('error'=> 2)); 
+        } 
+        $this->UserDeckCard->commit(); 
+         
+        $this->rd('UserDeckCards', 'index', array('sotr_act' => 1));  
+    }
 }

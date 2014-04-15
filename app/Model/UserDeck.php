@@ -131,7 +131,7 @@ class UserDeck extends AppModel {
        ,    'kind' => $kind     
         );
         $field = array();
-        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recu = 2);
+        $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recu = -1);
         return $data;
     }
 }

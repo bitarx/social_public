@@ -1,7 +1,7 @@
 <div>
     <div class="changeBase">
         <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
-        <a href="<{$smarty.const.BASE_URL}>UserBaseCards/index">
+        <a href="<{$smarty.const.BASE_URL}>UserDeckCards/sortAtk">
         <div class="strChangeBase" >
            攻撃強い順で編成 
         </div>
