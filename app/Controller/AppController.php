@@ -256,7 +256,7 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         // デッキ
         $this->set('linkDeck', BASE_URL . 'UserDeckCards/index'); 
         // プレゼントボックス
-        $this->set('linkPbox', BASE_URL . 'PresentBoxes/index'); 
+        $this->set('linkPbox', BASE_URL . 'UserPresentBoxes/index'); 
         // アイテム
         $this->set('linkUserItem', BASE_URL . 'UserItems/index'); 
         // ショップ

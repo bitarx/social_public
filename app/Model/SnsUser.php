@@ -50,4 +50,20 @@ class SnsUser extends AppModel {
 			),
 		),
 	);
+
+    /**
+     * 名前を取得
+     *
+     * @author imanishi 
+     * @param int ownerId
+     * @return str ユーザ名 
+     */
+    public function getUserName($ownerId) { 
+        $where = array(
+            'sns_user_id' => $ownerId
+        ,   'delete_flg'  => 0 
+        );
+        $name = $this->field('sns_name', $where);
+        return $name;
+    } 
 }

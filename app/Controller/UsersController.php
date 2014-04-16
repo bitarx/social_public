@@ -15,7 +15,7 @@ class UsersController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserCard', 'UserParam', 'BattleLog');
+    public $uses = array('UserCard', 'UserParam', 'UserDeckCard', 'SnsUser');
 
     /**
      * マイページ
@@ -25,43 +25,20 @@ class UsersController extends ApiController {
      */
 	public function index() {
 
-        // カーソリスト
-        $userCardList = $this->UserCard->getUserCard ($this->userId);
+        // デッキリスト
+        $userDeckList = $this->UserDeckCard->getUserDeckData($this->userId);
 
-        // ステータス
-        $userParamData = $this->UserParam->getUserParams ($this->userId);
+        // ユーザ名
+        $snsUserName  = $this->SnsUser->getUserName($this->ownerId);
 
-        // バトルログ
-        $battleLogList = $this->BattleLog->getBattleLogList ($this->userId);
-
+        // カード所持枚数
+        $this->userParam['card_cnt'] = $this->UserCard->getUserCardCnt($this->userId );
+$this->log('this->userParam:' . print_r($this->userParam, true)); 
 
         // アサイン
-        $this->set('userCardList', $userCardList);
-        $this->set('userParamData', $userParamData);
-        $this->set('battleLogList', $battleLogList);
-/*
-        $this->User->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->User->save($values);
-            if (!$ret) {
-                throw new AppException('User save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->User->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->User->commit();
-*/
+        $this->set('list', $userDeckList);
+        $this->set('data', $this->userParam);
+        $this->set('name', $snsUserName);
 	}
 
 

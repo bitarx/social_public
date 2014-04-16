@@ -83,7 +83,6 @@ class SynthComponent extends Component {
      * @return int 金額
      */
     public function useMoneyEvol($baseCard) { 
-  var_dump($baseCard);
         $useMoney = $baseCard['rare_level'] * 800;
         return $useMoney;
     } 

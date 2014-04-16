@@ -316,6 +316,26 @@ class UserCard extends AppModel {
     } 
 
     /**
+     * 所有カード枚数取得
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @param int $cardId
+     * @return array データ 
+     */
+    public function getUserCardCnt($userId) { 
+
+        $where = array('user_id' => $userId); 
+        $fields = array('user_card_id'); 
+
+        $list = $this->getAllFind( $where, $fields, $kind = 'all', $order = array(), $limit = 0, $offset = 0, $recursive = -1);
+
+        $cnt = count($list);
+
+        return $cnt;
+    } 
+
+    /**
      * 取得カードを登録
      *
      * @author imanishi 

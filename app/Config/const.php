@@ -11,6 +11,9 @@ define("FILEOUT_URL", BASE_URL . "File/outimage");
 define("ROOT_DIR", '/var/www/asns/');
 define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
 
+// カード最大所有枚数
+define("CARD_MAX_NUM", 100);
+
 $config = array();
 
 /**

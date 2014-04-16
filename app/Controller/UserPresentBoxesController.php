@@ -23,32 +23,11 @@ class UserPresentBoxesController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->UserPresentBox->getAllFind($where, $fields);
-        $this->set('userPresentBoxes', $this->Paginator->paginate());
-
-        $this->UserPresentBox->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->UserPresentBox->save($values);
-            if (!$ret) {
-                throw new AppException('UserPresentBox save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->UserPresentBox->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->UserPresentBox->commit();
+        $fields = array();
+        $where  = array('user_id' => $this->userId );
+        $list = $this->UserPresentBox->getAllFind($where, $fields);
+    $this->log('PboxList:' . print_r($list, true)); 
+        $this->set('list', $list);
 	}
 
     /**

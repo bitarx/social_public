@@ -42,6 +42,13 @@ function dispProgressQuest(prog)
      
 }
 
+/**
+ * クエストの行動力を表示
+ *
+ * @author imanishi 
+ * @param int 行動力値
+ * @return void 
+ */
 function dispProgressQuestAct(act)
 {
     $('#progQuestAct').html( '<img src="' + BASE_URL + 'img/progress_yellow.png" width="' + act + '%" height="20px">' );
