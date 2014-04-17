@@ -26,6 +26,7 @@ body {
     background-image: url('../img/bg.png');
 	color: #fff;
     width:500px;
+    height:960px;
 }
 
 
@@ -873,4 +874,9 @@ display: block;
     left: 20px;
     font-size: 24px;
     position: absolute;
+}
+
+/** プレゼント受取 */
+.userPresentBoxesIndex {
+
 }

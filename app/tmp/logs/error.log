@@ -99435,3 +99435,1119 @@ Stack Trace:
 
 2014-04-16 13:48:02 Error: ownerId:
 2014-04-16 13:48:02 Error: className:UserPresentBoxes
+2014-04-16 13:49:41 Error: ownerId:5
+2014-04-16 13:49:41 Error: className:UserPresentBoxes
+2014-04-16 13:49:41 Error: PboxList:Array
+(
+)
+
+2014-04-16 13:49:45 Error: ownerId:5
+2014-04-16 13:49:45 Error: className:Users
+2014-04-16 13:49:45 Error: this->userParam:Array
+(
+    [user_id] => 44
+    [money] => 987499
+    [act] => 100
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 0
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 0000-00-00 00:00:00
+    [card_cnt] => 11
+)
+
+2014-04-16 13:49:46 Error: ownerId:5
+2014-04-16 13:49:46 Error: className:File
+2014-04-16 13:49:46 Error: name:kok/var/www/asns/app/Private/card/card_s_15.jpg
+2014-04-16 13:49:46 Error: ownerId:5
+2014-04-16 13:49:46 Error: className:File
+2014-04-16 13:49:46 Error: name:kok/var/www/asns/app/Private/card/card_s_13.jpg
+2014-04-16 16:15:25 Error: ownerId:5
+2014-04-16 16:15:25 Error: className:SnsUsers
+2014-04-16 16:15:30 Error: ownerId:5
+2014-04-16 16:15:30 Error: className:UserPresentBoxes
+2014-04-16 16:15:30 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:19:18 Error: ownerId:5
+2014-04-16 16:19:18 Error: className:UserPresentBoxes
+2014-04-16 16:19:18 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:34:24 Error: ownerId:5
+2014-04-16 16:34:24 Error: className:UserPresentBoxes
+2014-04-16 16:34:24 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:34:24 Error: [SmartyCompilerException] Syntax error in template "/var/www/asns/app/View/UserPresentBoxes/index.tpl"  on line 3 "<a href="<{$ctlAction}?kind=1">カード</a>"  - Unexpected "}", expected one of: "}>"
+Request URL: /index.php/UserPresentBoxes/index
+Stack Trace:
+#0 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3135): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3199): Smarty_Internal_Templateparser->yy_syntax_error(11, '}')
+#2 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(111): Smarty_Internal_Templateparser->doParse(11, '}')
+#3 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatecompilerbase.php(273): Smarty_Internal_SmartyTemplateCompiler->doCompile('<div class="use...')
+#4 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_template.php(186): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(163): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(377): Smarty_Internal_TemplateBase->fetch('/var/www/asns/a...', NULL, NULL, NULL, true)
+#7 /var/www/asns/app/View/SmartyView.php(54): Smarty_Internal_TemplateBase->display('/var/www/asns/a...')
+#8 /var/www/asns/lib/Cake/View/View.php(466): SmartyView->_render('/var/www/asns/a...')
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserPresentBoxesController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-04-16 16:34:24 Error: ownerId:5
+2014-04-16 16:34:24 Error: className:CakeError
+2014-04-16 16:34:24 Error: userIdErr:0
+2014-04-16 16:34:24 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-16 16:34:27 Error: ownerId:5
+2014-04-16 16:34:27 Error: className:Errors
+2014-04-16 16:35:12 Error: ownerId:5
+2014-04-16 16:35:12 Error: className:Errors
+2014-04-16 16:35:25 Error: ownerId:5
+2014-04-16 16:35:25 Error: className:Errors
+2014-04-16 16:35:38 Error: ownerId:5
+2014-04-16 16:35:38 Error: className:UserPresentBoxes
+2014-04-16 16:35:38 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:35:38 Error: [SmartyCompilerException] Syntax error in template "/var/www/asns/app/View/UserPresentBoxes/index.tpl"  on line 3 "<a href="<{$ctlAction}?kind=1">カード</a>"  - Unexpected "}", expected one of: "}>"
+Request URL: /index.php/UserPresentBoxes/index
+Stack Trace:
+#0 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3135): Smarty_Internal_TemplateCompilerBase->trigger_template_error()
+#1 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3199): Smarty_Internal_Templateparser->yy_syntax_error(11, '}')
+#2 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(111): Smarty_Internal_Templateparser->doParse(11, '}')
+#3 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatecompilerbase.php(273): Smarty_Internal_SmartyTemplateCompiler->doCompile('<div class="use...')
+#4 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_template.php(186): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#5 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(163): Smarty_Internal_Template->compileTemplateSource()
+#6 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(377): Smarty_Internal_TemplateBase->fetch('/var/www/asns/a...', NULL, NULL, NULL, true)
+#7 /var/www/asns/app/View/SmartyView.php(54): Smarty_Internal_TemplateBase->display('/var/www/asns/a...')
+#8 /var/www/asns/lib/Cake/View/View.php(466): SmartyView->_render('/var/www/asns/a...')
+#9 /var/www/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#10 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#11 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserPresentBoxesController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-04-16 16:35:38 Error: ownerId:5
+2014-04-16 16:35:38 Error: className:CakeError
+2014-04-16 16:35:38 Error: userIdErr:0
+2014-04-16 16:35:38 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-16 16:35:38 Error: ownerId:5
+2014-04-16 16:35:38 Error: className:Errors
+2014-04-16 16:37:08 Error: ownerId:5
+2014-04-16 16:37:08 Error: className:UserPresentBoxes
+2014-04-16 16:37:08 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:43:52 Error: ownerId:5
+2014-04-16 16:43:52 Error: className:UserPresentBoxes
+2014-04-16 16:43:52 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:43:58 Error: ownerId:5
+2014-04-16 16:43:58 Error: className:UserPresentBoxes
+2014-04-16 16:43:58 Error: [MissingActionException] Action UserPresentBoxesController::UserPresentBoxes() could not be found.
+Exception Attributes: array (
+  'controller' => 'UserPresentBoxesController',
+  'action' => 'UserPresentBoxes',
+)
+Request URL: /index.php/UserPresentBoxes/UserPresentBoxes/index?kind=2
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserPresentBoxesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-16 16:43:58 Error: ownerId:5
+2014-04-16 16:43:58 Error: className:CakeError
+2014-04-16 16:43:58 Error: userIdErr:0
+2014-04-16 16:43:58 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-16 16:43:58 Error: ownerId:5
+2014-04-16 16:43:58 Error: className:Errors
+2014-04-16 16:45:52 Error: ownerId:5
+2014-04-16 16:45:52 Error: className:UserPresentBoxes
+2014-04-16 16:45:52 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:46:00 Error: ownerId:5
+2014-04-16 16:46:00 Error: className:UserPresentBoxes
+2014-04-16 16:46:00 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:46:04 Error: ownerId:5
+2014-04-16 16:46:04 Error: className:UserPresentBoxes
+2014-04-16 16:46:04 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:46:07 Error: ownerId:5
+2014-04-16 16:46:07 Error: className:UserPresentBoxes
+2014-04-16 16:46:07 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 16:53:12 Error: ownerId:5
+2014-04-16 16:53:12 Error: className:UserPresentBoxes
+2014-04-16 16:53:12 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-16 18:18:55 Error: ownerId:
+2014-04-16 18:18:55 Error: className:SnsUsers
+2014-04-16 18:18:57 Error: ownerId:
+2014-04-16 18:18:57 Error: className:SnsUsers
+2014-04-16 18:19:03 Error: ownerId:
+2014-04-16 18:19:03 Error: className:SnsUsers
+2014-04-16 19:48:11 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-16 19:48:11 Error: ownerId:
+2014-04-16 19:48:11 Error: className:CakeError
+2014-04-16 19:48:11 Error: userIdErr:0
+2014-04-16 19:48:11 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-16 19:48:11 Error: ownerId:
+2014-04-16 19:48:11 Error: className:Errors
+2014-04-16 19:54:08 Error: ownerId:
+2014-04-16 19:54:08 Error: className:SnsUsers
+2014-04-16 23:00:13 Error: ownerId:
+2014-04-16 23:00:13 Error: className:SnsUsers
+2014-04-17 06:08:09 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-17 06:08:09 Error: ownerId:
+2014-04-17 06:08:09 Error: className:CakeError
+2014-04-17 06:08:09 Error: userIdErr:0
+2014-04-17 06:08:09 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-17 06:08:09 Error: ownerId:
+2014-04-17 06:08:09 Error: className:Errors
+2014-04-17 06:09:11 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/11
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-17 06:09:11 Error: ownerId:
+2014-04-17 06:09:11 Error: className:CakeError
+2014-04-17 06:09:11 Error: userIdErr:0
+2014-04-17 06:09:11 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-17 06:11:32 Error: ownerId:
+2014-04-17 06:11:32 Error: className:Errors
+2014-04-17 06:38:06 Error: ownerId:
+2014-04-17 06:38:06 Error: className:SnsUsers
+2014-04-17 07:48:47 Error: ownerId:
+2014-04-17 07:48:47 Error: className:UserCards
+2014-04-17 07:55:22 Error: [MissingControllerException] Controller class UserCardController could not be found.
+Exception Attributes: array (
+  'class' => 'UserCardController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/UserCard/index
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-17 07:55:22 Error: ownerId:
+2014-04-17 07:55:22 Error: className:CakeError
+2014-04-17 07:55:22 Error: userIdErr:0
+2014-04-17 07:55:22 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-17 08:31:58 Error: ownerId:5
+2014-04-17 08:31:58 Error: className:SnsUsers
+2014-04-17 08:32:01 Error: ownerId:5
+2014-04-17 08:32:01 Error: className:UserCards
+2014-04-17 08:32:01 Error: rareLevel:Array
+(
+    [0] => 全て
+    [1] => N以下
+    [2] => HN以下
+    [3] => R以下
+    [4] => HR以下
+    [5] => SR以下
+)
+
+2014-04-17 08:32:01 Error: sortItem:Array
+(
+    [0] => 追加された順
+    [1] => 古い順
+    [2] => レアリティ高い順
+    [3] => レアリティ低い順
+    [4] => Lv高い順
+    [5] => Lv低い順
+    [6] => 攻撃力高い順
+    [7] => 攻撃力低い順
+    [8] => 防御力高い順
+    [9] => 防御力低い順
+)
+
+2014-04-17 08:32:01 Error: userBaseCard:Array
+(
+    [user_id] => 44
+    [user_card_id] => 288
+    [delete_flg] => 0
+    [created] => 2014-04-12 16:44:50
+    [modified] => 2014-04-12 17:44:56
+    [card_id] => 15
+    [hp] => 2000
+    [hp_max] => 2000
+    [atk] => 150
+    [def] => 200
+    [level] => 1
+    [exp] => 36
+    [skill_level] => 1
+    [skill_exp] => 0
+    [card_name] => つぼみ
+    [card_title] => [絶対美少女]
+    [height] => 163
+    [weight] => 47
+    [size] => B76 W53 H75 Bカップ
+    [blood] => A型
+    [rare_level] => 4
+    [attr] => 1
+    [card_hp] => 2000
+    [card_atk] => 150
+    [card_def] => 200
+    [card_level] => 20
+    [skill_id] => 5
+    [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+    [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+    [skill_name] => アイドルマスタリー
+    [effect] => 2
+    [updown] => 1
+    [target] => 1
+    [percent] => 30
+    [skill_words] => 自分の攻撃力を中アップ
+    [card_group_id] => 15
+    [evol_group] => 5
+    [prev] => 14
+    [next] => 0
+)
+
+2014-04-17 08:32:01 Error: ownerId:5
+2014-04-17 08:32:01 Error: className:File
+2014-04-17 08:32:01 Error: ownerId:5
+2014-04-17 08:32:01 Error: className:File
+2014-04-17 08:32:01 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-17 08:32:01 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-17 09:19:36 Error: ownerId:5
+2014-04-17 09:19:36 Error: className:SnsUsers
+2014-04-17 09:19:43 Error: ownerId:5
+2014-04-17 09:19:43 Error: className:UserCards
+2014-04-17 09:19:43 Error: rareLevel:Array
+(
+    [0] => 全て
+    [1] => N以下
+    [2] => HN以下
+    [3] => R以下
+    [4] => HR以下
+    [5] => SR以下
+)
+
+2014-04-17 09:19:43 Error: sortItem:Array
+(
+    [0] => 追加された順
+    [1] => 古い順
+    [2] => レアリティ高い順
+    [3] => レアリティ低い順
+    [4] => Lv高い順
+    [5] => Lv低い順
+    [6] => 攻撃力高い順
+    [7] => 攻撃力低い順
+    [8] => 防御力高い順
+    [9] => 防御力低い順
+)
+
+2014-04-17 09:19:43 Error: userBaseCard:Array
+(
+    [user_id] => 44
+    [user_card_id] => 288
+    [delete_flg] => 0
+    [created] => 2014-04-12 16:44:50
+    [modified] => 2014-04-12 17:44:56
+    [card_id] => 15
+    [hp] => 2000
+    [hp_max] => 2000
+    [atk] => 150
+    [def] => 200
+    [level] => 1
+    [exp] => 36
+    [skill_level] => 1
+    [skill_exp] => 0
+    [card_name] => つぼみ
+    [card_title] => [絶対美少女]
+    [height] => 163
+    [weight] => 47
+    [size] => B76 W53 H75 Bカップ
+    [blood] => A型
+    [rare_level] => 4
+    [attr] => 1
+    [card_hp] => 2000
+    [card_atk] => 150
+    [card_def] => 200
+    [card_level] => 20
+    [skill_id] => 5
+    [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+    [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+    [skill_name] => アイドルマスタリー
+    [effect] => 2
+    [updown] => 1
+    [target] => 1
+    [percent] => 30
+    [skill_words] => 自分の攻撃力を中アップ
+    [card_group_id] => 15
+    [evol_group] => 5
+    [prev] => 14
+    [next] => 0
+)
+
+2014-04-17 09:19:43 Error: ownerId:5
+2014-04-17 09:19:43 Error: className:File
+2014-04-17 09:19:43 Error: ownerId:5
+2014-04-17 09:19:43 Error: className:File
+2014-04-17 09:19:43 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-17 09:19:43 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-17 09:19:57 Error: ownerId:5
+2014-04-17 09:19:57 Error: className:UserPresentBoxes
+2014-04-17 09:19:57 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-17 09:21:01 Error: ownerId:5
+2014-04-17 09:21:01 Error: className:UserPresentBoxes
+2014-04-17 09:21:01 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-17 09:30:11 Error: ownerId:5
+2014-04-17 09:30:11 Error: className:UserPresentBoxes
+2014-04-17 09:30:11 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-17 09:30:11 Error: [SmartyCompilerException] Syntax error in template "/var/www/asns/app/View/Elements/title.tpl"  on line 20 "<{/if}>" unexpected closing tag
+Request URL: /index.php/UserPresentBoxes/index
+Stack Trace:
+#0 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_compilebase.php(171): Smarty_Internal_TemplateCompilerBase->trigger_template_error('unexpected clos...', 20)
+#1 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_compile_if.php(201): Smarty_Internal_CompileBase->closeTag(Object(Smarty_Internal_SmartyTemplateCompiler), Array)
+#2 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatecompilerbase.php(556): Smarty_Internal_Compile_Ifclose->compile(Array, Object(Smarty_Internal_SmartyTemplateCompiler), Array, NULL, NULL)
+#3 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatecompilerbase.php(337): Smarty_Internal_TemplateCompilerBase->callTagCompiler('ifclose', Array, Array)
+#4 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(2485): Smarty_Internal_TemplateCompilerBase->compileTag('ifclose', Array)
+#5 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3093): Smarty_Internal_Templateparser->yy_r59()
+#6 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templateparser.php(3191): Smarty_Internal_Templateparser->yy_reduce(59)
+#7 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_smartytemplatecompiler.php(111): Smarty_Internal_Templateparser->doParse(3, '}>')
+#8 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatecompilerbase.php(273): Smarty_Internal_SmartyTemplateCompiler->doCompile('<div class="ban...')
+#9 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_template.php(186): Smarty_Internal_TemplateCompilerBase->compileTemplate(Object(Smarty_Internal_Template))
+#10 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(163): Smarty_Internal_Template->compileTemplateSource()
+#11 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_template.php(284): Smarty_Internal_TemplateBase->fetch(NULL, NULL, NULL, NULL, false, false, true)
+#12 /var/www/asns/app/tmp/smarty/compile/0a99b8c6b01effe2cd5a3776011242a608407f40.file.index.tpl.php(23): Smarty_Internal_Template->getSubTemplate('../Elements/tit...', NULL, NULL, 0, NULL, Array, 0)
+#13 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(182): content_534e2ef64b3bf2_52133947(Object(Smarty_Internal_Template))
+#14 /var/www/asns/app/Vendor/smarty/sysplugins/smarty_internal_templatebase.php(377): Smarty_Internal_TemplateBase->fetch('/var/www/asns/a...', NULL, NULL, NULL, true)
+#15 /var/www/asns/app/View/SmartyView.php(54): Smarty_Internal_TemplateBase->display('/var/www/asns/a...')
+#16 /var/www/asns/lib/Cake/View/View.php(466): SmartyView->_render('/var/www/asns/a...')
+#17 /var/www/asns/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#18 /var/www/asns/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#19 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UserPresentBoxesController), Object(CakeRequest), Object(CakeResponse))
+#20 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2014-04-17 09:30:11 Error: ownerId:5
+2014-04-17 09:30:11 Error: className:CakeError
+2014-04-17 09:30:11 Error: userIdErr:0
+2014-04-17 09:30:11 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-17 09:30:11 Error: ownerId:5
+2014-04-17 09:30:11 Error: className:Errors
+2014-04-17 09:30:23 Error: ownerId:5
+2014-04-17 09:30:23 Error: className:UserPresentBoxes
+2014-04-17 09:30:23 Error: PboxList:Array
+(
+    [0] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 1
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [1] => Array
+        (
+            [user_id] => 44
+            [kind] => 1
+            [target] => 8
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [2] => Array
+        (
+            [user_id] => 44
+            [kind] => 2
+            [target] => 2
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+    [3] => Array
+        (
+            [user_id] => 44
+            [kind] => 3
+            [target] => 500
+            [message] => 
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+        )
+
+)
+
+2014-04-17 10:54:38 Error: ownerId:
+2014-04-17 10:54:38 Error: className:SnsUsers
+2014-04-17 10:54:39 Error: ownerId:
+2014-04-17 10:54:39 Error: className:SnsUsers
+2014-04-17 10:54:40 Error: ownerId:
+2014-04-17 10:54:40 Error: className:SnsUsers

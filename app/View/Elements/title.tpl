@@ -12,5 +12,9 @@
         <div class="strTitleDeckCard" >
             デッキ編成
         </div>
+    <{elseif 'UserPresentBoxes' == $ctl}> 
+        <div class="strTitleDeckCard" >
+           受取BOX 
+        </div>
     <{/if}>
 </div>

@@ -23,6 +23,8 @@ class UserPresentBoxesController extends ApiController {
      */
 	public function index() {
 
+        // 1:カード 2:アイテム 3:ゴールド
+        $kind = !empty($this->params['kind']) ? $this->params['kind'] : 1; 
         $fields = array();
         $where  = array('user_id' => $this->userId );
         $list = $this->UserPresentBox->getAllFind($where, $fields);
