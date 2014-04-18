@@ -2,7 +2,7 @@
 /** 全体定数設定 */
 
 /**
- * 基本情報
+ * サービス基本情報
  */
 define("DOMAIN","asns.jp");
 define("BASE_URL","http://" . DOMAIN . "/");
@@ -46,3 +46,10 @@ define("KEY_PAGING", 'p');
  * 文言
  */
 define("MONEY_NAME","ゴールド");
+
+/**
+ * 基本的な情報
+ */
+define("NOW_DATE",  date("Y-m-d H:i:s") );
+define("NOW_DATE_DB", "'" . NOW_DATE . "'");
+

@@ -23,56 +23,64 @@ class UserPresentBoxesController extends ApiController {
      */
 	public function index() {
 
-        // 1:カード 2:アイテム 3:ゴールド
-        $kind = !empty($this->params['kind']) ? $this->params['kind'] : 1; 
-        $fields = array();
-        $where  = array('user_id' => $this->userId );
-        $list = $this->UserPresentBox->getAllFind($where, $fields);
+        $pageAll = 0;
+        $list = $this->UserPresentBox->getList($this->userId , $add = 1, $this->offset, $pageAll);
     $this->log('PboxList:' . print_r($list, true)); 
         $this->set('list', $list);
+
+        $this->set('pageAll', $pageAll);
 	}
 
     /**
-     * 条件検索(変更禁止)
+     * プレゼント一括受取
      *
      * @author imanishi 
-     * @return json 検索結果一覧
      */
-    public function find() {
+    public function initAll() { 
 
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->UserPresentBox->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
+        $list = $this->UserPresentBox->getList($this->userId );
+$this->log('initAllList:' . print_r($list, true)); 
+        if (!empty($list)) {
+            $this->UserPresentBox->begin(); 
+            try {  
+                foreach ($list as $val) {
+                    $this->UserPresentBox->getPresent($this->userId, $val, $this->userParam);
+                }
+            } catch (AppException $e) { 
+                $this->UserPresentBox->rollback(); 
+                $this->log($e->errmes); 
+                $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+            $this->UserPresentBox->commit(); 
         }
-    }
+        
+        $this->rd('UserPresentBoxes', 'index', array('all_end' => 1));  
+    } 
 
     /**
-     * 登録更新(変更禁止)
+     * プレゼント個別受取
      *
      * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
      */
-	public function init() {
+    public function init() { 
 
-        if ($this->request->is(array('ajax'))) {
+        $userPresentBoxId = $this->params['user_present_box_id'];
 
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->UserPresentBox->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
+        $data = $this->UserPresentBox->getDataById($this->userId , $userPresentBoxId);
+$this->log('initAllList:' . print_r($data, true)); 
+        if (!empty($data)) {
+            $this->UserPresentBox->begin(); 
+            try {  
+                $this->UserPresentBox->getPresent($this->userId, $data, $this->userParam);
+            } catch (AppException $e) { 
+                $this->UserPresentBox->rollback(); 
+                $this->log($e->errmes); 
+                $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+            $this->UserPresentBox->commit(); 
         }
-
-        $this->setJson($ary);
-	}
-
+        
+        $this->rd('UserPresentBoxes', 'index', array('init_end' => 1));  
+    } 
 
 }

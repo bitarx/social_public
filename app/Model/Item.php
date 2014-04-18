@@ -118,4 +118,19 @@ class Item extends AppModel {
 			'order' => ''
 		)
 	);
+
+
+    /**
+     * アイテムデータ取得
+     *
+     * @author imanishi
+     * @param int アイテムID
+     * @return array 指定レコード
+     */
+     public function getData($id) {
+
+         $where = array('item_id' => $id);
+         $row = $this->getAllFind($where, array(), 'first');
+         return $row;
+     }
 }

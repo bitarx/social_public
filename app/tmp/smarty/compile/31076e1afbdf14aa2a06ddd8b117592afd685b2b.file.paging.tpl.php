@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 17:10:45
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-18 16:19:31
          compiled from "/var/www/asns/app/View/Elements/paging.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8611509325345ea04c33e50-92009137%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31076e1afbdf14aa2a06ddd8b117592afd685b2b' => 
     array (
       0 => '/var/www/asns/app/View/Elements/paging.tpl',
-      1 => 1397549416,
+      1 => 1397805549,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'page' => 0,
+    'ctl' => 0,
     'ctlAction' => 0,
     'prev' => 0,
     'kind' => 0,
@@ -46,7 +47,8 @@ btn_cm_ss_off.png" height="30px" width="50px">
                  <img src="<?php echo @constant('IMG_URL');?>
 btn_cm_ss_on.png" height="30px" width="50px">
                  <div class="strPagingPrev">
-                   <a href="<?php echo @constant('BASE_URL');?>
+                   <?php if ($_smarty_tpl->tpl_vars['ctl']->value=='UserCards') {?>
+                     <a href="<?php echo @constant('BASE_URL');?>
 <?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
 ?<?php echo @constant('KEY_PAGING');?>
 =<?php echo $_smarty_tpl->tpl_vars['prev']->value;?>
@@ -55,6 +57,16 @@ btn_cm_ss_on.png" height="30px" width="50px">
 &sort_item=<?php echo $_smarty_tpl->tpl_vars['sortItemSelect']->value;?>
 <?php if (isset($_smarty_tpl->tpl_vars['addParam']->value)) {?><?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
 <?php }?>">前</a> 
+
+                   <?php } else { ?>
+                     <a href="<?php echo @constant('BASE_URL');?>
+<?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
+?<?php echo @constant('KEY_PAGING');?>
+=<?php echo $_smarty_tpl->tpl_vars['prev']->value;?>
+<?php if (isset($_smarty_tpl->tpl_vars['addParam']->value)) {?><?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
+<?php }?>">前</a> 
+
+                   <?php }?>
              <?php }?> 
                </div>
              </div>
@@ -74,7 +86,8 @@ btn_cm_ss_off.png" height="30px" width="50px">
                  <img src="<?php echo @constant('IMG_URL');?>
 btn_cm_ss_on.png" height="30px" width="50px">
                  <div class="strPagingNext">
-                 <a href="<?php echo @constant('BASE_URL');?>
+                   <?php if ($_smarty_tpl->tpl_vars['ctl']->value=='UserCards') {?>
+                     <a href="<?php echo @constant('BASE_URL');?>
 <?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
 ?<?php echo @constant('KEY_PAGING');?>
 =<?php echo $_smarty_tpl->tpl_vars['next']->value;?>
@@ -83,6 +96,14 @@ btn_cm_ss_on.png" height="30px" width="50px">
 &sort_item=<?php echo $_smarty_tpl->tpl_vars['sortItemSelect']->value;?>
 <?php if (isset($_smarty_tpl->tpl_vars['addParam']->value)) {?><?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
 <?php }?>">次</a>
+                   <?php } else { ?>
+                     <a href="<?php echo @constant('BASE_URL');?>
+<?php echo $_smarty_tpl->tpl_vars['ctlAction']->value;?>
+?<?php echo @constant('KEY_PAGING');?>
+=<?php echo $_smarty_tpl->tpl_vars['next']->value;?>
+<?php if (isset($_smarty_tpl->tpl_vars['addParam']->value)) {?><?php echo $_smarty_tpl->tpl_vars['addParam']->value;?>
+<?php }?>">次</a>
+                   <?php }?>
              <?php }?> 
              </div>
            </div>

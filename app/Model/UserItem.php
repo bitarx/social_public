@@ -105,6 +105,7 @@ class UserItem extends AppModel {
 
     /**
      * 取得アイテムを登録
+     *
      * @author imanishi 
      * @param int $userId
      * @param int $itemId
@@ -113,12 +114,16 @@ class UserItem extends AppModel {
      */
     public function registItem($userId, $itemId, $num) {
 
-        $values = array(
+        $where = array(
             'user_id' => $userId
         ,   'item_id' => $itemId
-        ,   'num' => $num
         );
-        $ret = $this->save($values);
+        $fields = array('id', 'item_id', 'num'); 
+        $data = $this->getAllFind($where, $fields, 'first');
+
+        $data['num'] += $num;
+
+        $ret = $this->save($data);
         return $ret;
     }
 }

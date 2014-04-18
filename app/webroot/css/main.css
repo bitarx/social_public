@@ -878,5 +878,55 @@ display: block;
 
 /** プレゼント受取 */
 .userPresentBoxesIndex {
-
+    font-size: 24px;
+}
+.btnGetPresentAll {
+    position: relative;
+    top:20px;
+    left:90px;
+    height:90px;
+}
+.strGetPresentAll {
+    position: absolute;
+    top:15px;
+    left:130px;
+}
+.present {
+    position:relative;
+    font-size: 24px;
+    color: #FFA500;
+    top:10px;
+    left:20px;
+}
+.presentImg {
+    left:5px;
+    top:0px;
+    position: relative;
+}
+.presentName {
+    left: 180px;
+    top:2px;
+    position: absolute;
+}
+.presentMes {
+    left: 180px;
+    top:40px;
+    position: absolute;
+}
+.presentDate {
+    left: 180px;
+    top:75px;
+    position: absolute;
+}
+.btnSelectPresent {
+    top: 10px;
+    left: 185px;
+    height:90px;
+    position: relative;
+}
+.strSelectPresent {
+    position: relative;
+    top: -45px;
+    left: 80px;
+    font-size: 25px;
 }

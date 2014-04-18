@@ -20,6 +20,7 @@
  */
 
 App::uses('Model', 'Model');
+App::import('Component', 'Common');
 
 /**
  * Application model for Cake.
@@ -37,6 +38,18 @@ class AppModel extends Model {
 
     protected $_pageLimit = 10;
 
+
+
+    public function __construct($id = false, $table = null, $ds = null) {
+        $appEnv = env('APP_ENV');
+        /*
+        if (!empty($appEnv)) {
+            $this->useDbConfig = $appEnv;
+        }   
+        */
+        parent::__construct( $id, $table, $ds );
+    }
+
     /**
      * 条件検索
      *
@@ -53,7 +66,7 @@ class AppModel extends Model {
 
         $tableAlias = $this->getTableAlias();
         $options = array();
-        if (!isset($where['delete_flg'])) {
+        if (!isset($where[$this->_filDelFlg])) {
             $conditions = array($tableAlias. '.'. $this->_filDelFlg => 0);
         }
 

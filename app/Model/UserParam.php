@@ -154,6 +154,8 @@ class UserParam extends AppModel {
         foreach ($data as $key => $val) {
             $values[$key] = $val;
         }
+        $values['modified'] = NOW_DATE;
+  $this->log('aryData:' . print_r($values, true)); 
         return $this->save($values);
     } 
 

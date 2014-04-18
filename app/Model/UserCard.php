@@ -176,7 +176,6 @@ class UserCard extends AppModel {
 
         $joins = array();
 
-        $offset *= $limit;
         if ($offset < 0) $offset = 0;
 
         $where = array('user_id' => $userId);
@@ -345,7 +344,7 @@ class UserCard extends AppModel {
      * @param array $row 対象カード情報(参照用)
      * @return bool 
      */
-    public function registCard($userId, $cardId, $num, &$row) {
+    public function registCard($userId, $cardId, $num = 1, &$row) {
 
         $card = new Card();
         $where = array('card_id' => $cardId);

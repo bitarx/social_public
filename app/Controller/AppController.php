@@ -213,7 +213,7 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
 
         // ページング
         $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
-        $this->offset = $this->page - 1;
+        $this->offset = ($this->page - 1) * PAGE_LIMIT;
 
         $this->set('prev', $this->page - 1 ); 
         $this->set('page', $this->page ); 
