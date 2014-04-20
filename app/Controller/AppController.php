@@ -93,7 +93,6 @@ class AppController extends Controller {
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
-//$this->log('setcookie :' . $ownerId);      
             // 初回アクセスが正常に行われている場合はIDをCookieにセット
             $this->Cookie->write('owner_id', $ownerId, true, '+20 years');
             $this->Cookie->write('viewer_id', $viewerId, true, '+20 years');
@@ -108,8 +107,6 @@ class AppController extends Controller {
             $this->viewerId = $this->Cookie->read('viewer_id');
         }
 
-$this->log('ownerId:'. $this->ownerId); 
-$this->log('className:'. $this->name); 
         if ( !in_array($this->name, self::$ctlError) ) {
             if ( (empty($this->ownerId) || empty($this->viewerId) ) ) {
 
@@ -184,8 +181,6 @@ $this->log('className:'. $this->name);
         } else {
 
             if ( !isset($this->params['error']) ) {
-$this->log('userIdErr:'. $this->userId); 
-$this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:'); 
                 if ($this->name == 'CakeError') { 
                     // システムエラー
                     $err = 2;
@@ -281,14 +276,12 @@ $this->log('Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:');
         // レア度
         $rareLevelSelect = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
 
-  $this->log('rareLevel:' . print_r($this->rareLevel, true)); 
         $this->set('rareLevel', $this->rareLevel); 
         $this->set('rareLevelSelect', $rareLevelSelect); 
 
         // 項目
         $sortItemSelect = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
 
-  $this->log('sortItem:' . print_r($this->sortItem, true)); 
         $this->set('sortItem', $this->sortItem); 
         $this->set('sortItemSelect', $sortItemSelect); 
     }

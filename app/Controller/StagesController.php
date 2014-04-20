@@ -117,6 +117,7 @@ class StagesController extends ApiController {
         $stageId = $this->params['stage_id'];
 
         $data = $this->UserStage->getUserStage($this->userId, $stageId, $recu = 2);
+
         $userParam = $this->UserParam->getUserParams($this->userId);
 
         $params = array(
@@ -137,7 +138,7 @@ class StagesController extends ApiController {
         // ボスフラグ
         $boss = 0;
         if (2 == $data['state']) $boss = 1;
-$this->log('main_params:'. $params); 
+
         $this->set('data', $data);
         $this->set('userParam', $userParam);
         $this->set('param', $params);
@@ -299,7 +300,6 @@ $this->log('main_params:'. $params);
     public function comp() {
 
         $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
- $this->log('aryData:' . print_r($data, true)); 
         $this->set('data', $data);
 
     }
@@ -372,10 +372,8 @@ $this->log('main_params:'. $params);
      * @return json 0:失敗 1:成功 2:put以外のリクエスト
      */
 	public function init() {
-$this->log('aaaaaaaaaaaaaa:');
 
         if ($this->request->is(array('ajax'))) {
-$this->log('bbbbbbbbbbbbbbbb:');
             $userId = $this->userId;
 
             // 進行度の基本
@@ -386,7 +384,6 @@ $this->log('bbbbbbbbbbbbbbbb:');
                 'name' => "" 
             ,   'id'   => 0
             );
-$this->log('userId;:'. $userId);
             $data = $this->params['params'];
             $data = (array)json_decode($data);
             $data['user_id'] = $userId;
@@ -399,11 +396,7 @@ $this->log('userId;:'. $userId);
             $userParam = $this->UserParam->getUserParams($userId);
 
             // 行動力チェック
- $this->log('actCheck:'); 
- $this->log('act:'. $userParam['act']); 
- $this->log('use_act:'); 
             if ($userParam['act'] < $userStageData['use_act']) {
- $this->log('actFusoku:'); 
 
                 // 不足の場合は不正
                 $ary = array('result' => 2);

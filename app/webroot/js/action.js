@@ -88,14 +88,15 @@ function dispRotResultQuest(data)
     }
 
     var str = "";
+    var image = "";
     var filename = 'card_prog_on.png';
     switch(kind)
     {
        // カード
        case "1":
            filename = 'card_get_on.png';
-           str = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.target + '" width="160px">'; 
-           str += data.name + 'が仲間に加わった！';
+           image = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.target + '" width="160px">'; 
+           str = data.name + 'が仲間に加わった！';
            break;
        // 金庫
        case "2":
@@ -128,7 +129,11 @@ function dispRotResultQuest(data)
     $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
     $('#lotResultQuest').show(); 
 
-    // 文言等
-    $('#lotResultDataQuest').html(str);
+    // 結果イメージ等
+    $('#lotResultDataQuest').html(image);
     $('#lotResultDataQuest').show(); 
+
+    // 文言等
+    $('#strLotResultDataQuest').html(str);
+    $('#strLotResultDataQuest').show(); 
 }

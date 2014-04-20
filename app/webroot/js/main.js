@@ -30,12 +30,9 @@ $(function(){
  * @return void
  */
 function appRequest(e){
-console.log('appRequest');
     var act = $(this).attr("act");
     var params = $(this).attr("params");
     var method = $(this).attr("method");
-console.log(act);
-console.log(params);
 //    $("#loading").show();
 
     var url =  BASE_URL + act;

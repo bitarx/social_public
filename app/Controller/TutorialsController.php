@@ -111,7 +111,6 @@ class TutorialsController extends ApiController {
             }
 
         } catch (AppException $e) {
-$this->log('###############################:'); 
             $this->User->rollback();
 
             $this->log($e->errmes);

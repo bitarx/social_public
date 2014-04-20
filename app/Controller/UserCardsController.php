@@ -38,7 +38,6 @@ class UserCardsController extends ApiController {
 
         // ベースカード
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
-  $this->log('userBaseCard:' . print_r($userBaseCard, true)); 
         // 進化グループ
         $evolGroup = 0;
         if (2 == $kind) {

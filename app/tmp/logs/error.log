@@ -112784,3 +112784,4343 @@ Stack Trace:
 2014-04-18 16:36:45 Error: className:UserCards
 2014-04-18 16:36:47 Error: ownerId:
 2014-04-18 16:36:47 Error: className:File
+2014-04-18 17:14:46 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-18 17:14:46 Error: ownerId:
+2014-04-18 17:14:46 Error: className:CakeError
+2014-04-18 17:14:46 Error: userIdErr:0
+2014-04-18 17:14:46 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-18 17:14:46 Error: ownerId:
+2014-04-18 17:14:46 Error: className:Errors
+2014-04-18 17:21:05 Error: ownerId:
+2014-04-18 17:21:05 Error: className:SnsUsers
+2014-04-18 23:09:13 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/3
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-18 23:09:13 Error: ownerId:
+2014-04-18 23:09:13 Error: className:CakeError
+2014-04-18 23:09:13 Error: userIdErr:0
+2014-04-18 23:09:13 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-18 23:14:06 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-18 23:14:06 Error: ownerId:
+2014-04-18 23:14:06 Error: className:CakeError
+2014-04-18 23:14:06 Error: userIdErr:0
+2014-04-18 23:14:06 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-18 23:14:06 Error: ownerId:
+2014-04-18 23:14:06 Error: className:Errors
+2014-04-18 23:14:06 Error: [MissingControllerException] Controller class Virrajzhq.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Virrajzhq.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/virrajzhq.html
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-18 23:14:06 Error: ownerId:
+2014-04-18 23:14:06 Error: className:CakeError
+2014-04-18 23:14:06 Error: userIdErr:0
+2014-04-18 23:14:06 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-18 23:14:07 Error: ownerId:
+2014-04-18 23:14:07 Error: className:Errors
+2014-04-18 23:17:56 Error: ownerId:
+2014-04-18 23:17:56 Error: className:UserDeckCards
+2014-04-18 23:17:57 Error: ownerId:
+2014-04-18 23:17:57 Error: className:UserPresentBoxes
+2014-04-18 23:17:58 Error: ownerId:
+2014-04-18 23:17:58 Error: className:Errors
+2014-04-18 23:18:33 Error: ownerId:
+2014-04-18 23:18:33 Error: className:Errors
+2014-04-19 06:54:14 Error: ownerId:5
+2014-04-19 06:54:14 Error: className:SnsUsers
+2014-04-19 08:16:51 Error: ownerId:5
+2014-04-19 08:16:51 Error: className:SnsUsers
+2014-04-19 08:16:53 Error: ownerId:5
+2014-04-19 08:16:53 Error: className:Quests
+2014-04-19 08:16:56 Error: ownerId:5
+2014-04-19 08:16:56 Error: className:Stages
+2014-04-19 08:16:57 Error: ownerId:5
+2014-04-19 08:16:57 Error: className:Stages
+2014-04-19 08:16:57 Error: ownerId:5
+2014-04-19 08:16:57 Error: className:Stages
+2014-04-19 08:16:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:20:35 Error: ownerId:5
+2014-04-19 08:20:35 Error: className:Stages
+2014-04-19 08:20:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:21:08 Error: ownerId:
+2014-04-19 08:21:08 Error: className:Stages
+2014-04-19 08:21:15 Error: ownerId:5
+2014-04-19 08:21:15 Error: className:Stages
+2014-04-19 08:21:15 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:25:42 Error: ownerId:5
+2014-04-19 08:25:42 Error: className:Stages
+2014-04-19 08:25:42 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:25:55 Error: ownerId:5
+2014-04-19 08:25:55 Error: className:Stages
+2014-04-19 08:25:55 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:26:43 Error: ownerId:
+2014-04-19 08:26:43 Error: className:Stages
+2014-04-19 08:42:22 Error: ownerId:5
+2014-04-19 08:42:22 Error: className:Stages
+2014-04-19 08:42:22 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:42:47 Error: ownerId:5
+2014-04-19 08:42:47 Error: className:Stages
+2014-04-19 08:42:48 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:49:28 Error: ownerId:5
+2014-04-19 08:49:28 Error: className:Stages
+2014-04-19 08:49:28 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:49:57 Error: ownerId:5
+2014-04-19 08:49:57 Error: className:Stages
+2014-04-19 08:49:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"0","state":"1"}
+2014-04-19 08:50:06 Error: ownerId:5
+2014-04-19 08:50:06 Error: className:Stages
+2014-04-19 08:50:06 Error: aaaaaaaaaaaaaa:
+2014-04-19 08:50:06 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 08:50:06 Error: userId;:44
+2014-04-19 08:50:06 Error: actCheck:
+2014-04-19 08:50:06 Error: act:100
+2014-04-19 08:50:06 Error: use_act:
+2014-04-19 08:50:06 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 1
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 08:50:06
+)
+
+2014-04-19 08:50:07 Error: ownerId:5
+2014-04-19 08:50:07 Error: className:File
+2014-04-19 08:50:07 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 08:50:12 Error: ownerId:5
+2014-04-19 08:50:12 Error: className:Stages
+2014-04-19 08:50:12 Error: aaaaaaaaaaaaaa:
+2014-04-19 08:50:12 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 08:50:12 Error: userId;:44
+2014-04-19 08:50:12 Error: actCheck:
+2014-04-19 08:50:12 Error: act:99
+2014-04-19 08:50:12 Error: use_act:
+2014-04-19 08:50:12 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 1
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 08:50:12
+)
+
+2014-04-19 08:50:14 Error: ownerId:5
+2014-04-19 08:50:14 Error: className:Stages
+2014-04-19 08:50:14 Error: aaaaaaaaaaaaaa:
+2014-04-19 08:50:14 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 08:50:14 Error: userId;:44
+2014-04-19 08:50:14 Error: actCheck:
+2014-04-19 08:50:14 Error: act:98
+2014-04-19 08:50:14 Error: use_act:
+2014-04-19 08:50:14 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 3
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 08:50:14
+)
+
+2014-04-19 08:51:09 Error: ownerId:
+2014-04-19 08:51:09 Error: className:File
+2014-04-19 08:51:33 Error: ownerId:
+2014-04-19 08:51:33 Error: className:Stages
+2014-04-19 08:52:31 Error: ownerId:5
+2014-04-19 08:52:31 Error: className:Stages
+2014-04-19 08:52:31 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"6","state":"1"}
+2014-04-19 08:52:58 Error: ownerId:5
+2014-04-19 08:52:58 Error: className:Stages
+2014-04-19 08:52:58 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"6","state":"1"}
+2014-04-19 08:53:05 Error: ownerId:5
+2014-04-19 08:53:05 Error: className:Stages
+2014-04-19 08:53:06 Error: aaaaaaaaaaaaaa:
+2014-04-19 08:53:06 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 08:53:06 Error: userId;:44
+2014-04-19 08:53:06 Error: actCheck:
+2014-04-19 08:53:06 Error: act:97
+2014-04-19 08:53:06 Error: use_act:
+2014-04-19 08:53:06 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 4
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 08:53:05
+)
+
+2014-04-19 08:53:06 Error: ownerId:5
+2014-04-19 08:53:06 Error: className:File
+2014-04-19 08:53:06 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 08:59:54 Error: ownerId:5
+2014-04-19 08:59:54 Error: className:Stages
+2014-04-19 08:59:54 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"7","state":"1"}
+2014-04-19 09:00:44 Error: ownerId:5
+2014-04-19 09:00:44 Error: className:Stages
+2014-04-19 09:00:44 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"7","state":"1"}
+2014-04-19 09:03:09 Error: ownerId:5
+2014-04-19 09:03:09 Error: className:Stages
+2014-04-19 09:03:09 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"7","state":"1"}
+2014-04-19 09:03:33 Error: ownerId:5
+2014-04-19 09:03:33 Error: className:Stages
+2014-04-19 09:03:33 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"7","state":"1"}
+2014-04-19 09:03:37 Error: ownerId:5
+2014-04-19 09:03:37 Error: className:Stages
+2014-04-19 09:03:37 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:37 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:37 Error: userId;:44
+2014-04-19 09:03:37 Error: actCheck:
+2014-04-19 09:03:37 Error: act:100
+2014-04-19 09:03:37 Error: use_act:
+2014-04-19 09:03:37 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 5
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:37
+)
+
+2014-04-19 09:03:38 Error: ownerId:5
+2014-04-19 09:03:38 Error: className:File
+2014-04-19 09:03:38 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 09:03:39 Error: ownerId:5
+2014-04-19 09:03:39 Error: className:Stages
+2014-04-19 09:03:39 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:39 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:39 Error: userId;:44
+2014-04-19 09:03:39 Error: actCheck:
+2014-04-19 09:03:39 Error: act:99
+2014-04-19 09:03:39 Error: use_act:
+2014-04-19 09:03:39 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 5
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:39
+)
+
+2014-04-19 09:03:40 Error: ownerId:5
+2014-04-19 09:03:40 Error: className:Stages
+2014-04-19 09:03:40 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:40 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:40 Error: userId;:44
+2014-04-19 09:03:40 Error: actCheck:
+2014-04-19 09:03:40 Error: act:98
+2014-04-19 09:03:40 Error: use_act:
+2014-04-19 09:03:40 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 6
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:40
+)
+
+2014-04-19 09:03:41 Error: ownerId:5
+2014-04-19 09:03:41 Error: className:Stages
+2014-04-19 09:03:41 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:41 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:41 Error: userId;:44
+2014-04-19 09:03:41 Error: actCheck:
+2014-04-19 09:03:41 Error: act:97
+2014-04-19 09:03:41 Error: use_act:
+2014-04-19 09:03:41 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 6
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:41
+)
+
+2014-04-19 09:03:41 Error: ownerId:5
+2014-04-19 09:03:41 Error: className:Stages
+2014-04-19 09:03:42 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:42 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:42 Error: userId;:44
+2014-04-19 09:03:42 Error: actCheck:
+2014-04-19 09:03:42 Error: act:96
+2014-04-19 09:03:42 Error: use_act:
+2014-04-19 09:03:42 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 95
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 6
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:41
+)
+
+2014-04-19 09:03:42 Error: ownerId:5
+2014-04-19 09:03:42 Error: className:Stages
+2014-04-19 09:03:42 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:42 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:42 Error: userId;:44
+2014-04-19 09:03:42 Error: actCheck:
+2014-04-19 09:03:42 Error: act:95
+2014-04-19 09:03:42 Error: use_act:
+2014-04-19 09:03:42 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 94
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 7
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:42
+)
+
+2014-04-19 09:03:43 Error: ownerId:5
+2014-04-19 09:03:43 Error: className:Stages
+2014-04-19 09:03:43 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:43 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:43 Error: userId;:44
+2014-04-19 09:03:43 Error: actCheck:
+2014-04-19 09:03:43 Error: act:94
+2014-04-19 09:03:43 Error: use_act:
+2014-04-19 09:03:43 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 93
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 8
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:43
+)
+
+2014-04-19 09:03:43 Error: ownerId:5
+2014-04-19 09:03:43 Error: className:Stages
+2014-04-19 09:03:43 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:43 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:43 Error: userId;:44
+2014-04-19 09:03:43 Error: actCheck:
+2014-04-19 09:03:43 Error: act:93
+2014-04-19 09:03:43 Error: use_act:
+2014-04-19 09:03:43 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 92
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:43
+)
+
+2014-04-19 09:03:46 Error: ownerId:5
+2014-04-19 09:03:46 Error: className:Stages
+2014-04-19 09:03:46 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:46 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:46 Error: userId;:44
+2014-04-19 09:03:46 Error: actCheck:
+2014-04-19 09:03:46 Error: act:92
+2014-04-19 09:03:46 Error: use_act:
+2014-04-19 09:03:46 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 91
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:46
+)
+
+2014-04-19 09:03:48 Error: ownerId:5
+2014-04-19 09:03:48 Error: className:Stages
+2014-04-19 09:03:48 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:48 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:48 Error: userId;:44
+2014-04-19 09:03:48 Error: actCheck:
+2014-04-19 09:03:48 Error: act:91
+2014-04-19 09:03:48 Error: use_act:
+2014-04-19 09:03:48 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 90
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:48
+)
+
+2014-04-19 09:03:49 Error: ownerId:5
+2014-04-19 09:03:49 Error: className:Stages
+2014-04-19 09:03:49 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:49 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:49 Error: userId;:44
+2014-04-19 09:03:49 Error: actCheck:
+2014-04-19 09:03:49 Error: act:90
+2014-04-19 09:03:49 Error: use_act:
+2014-04-19 09:03:49 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 89
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:49
+)
+
+2014-04-19 09:03:50 Error: ownerId:5
+2014-04-19 09:03:50 Error: className:Stages
+2014-04-19 09:03:50 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:50 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:50 Error: userId;:44
+2014-04-19 09:03:50 Error: actCheck:
+2014-04-19 09:03:50 Error: act:89
+2014-04-19 09:03:50 Error: use_act:
+2014-04-19 09:03:50 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 88
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:50
+)
+
+2014-04-19 09:03:51 Error: ownerId:5
+2014-04-19 09:03:51 Error: className:Stages
+2014-04-19 09:03:51 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:51 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:51 Error: userId;:44
+2014-04-19 09:03:51 Error: actCheck:
+2014-04-19 09:03:51 Error: act:88
+2014-04-19 09:03:51 Error: use_act:
+2014-04-19 09:03:51 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 87
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 10
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:51
+)
+
+2014-04-19 09:03:52 Error: ownerId:5
+2014-04-19 09:03:52 Error: className:Stages
+2014-04-19 09:03:52 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:03:52 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:03:52 Error: userId;:44
+2014-04-19 09:03:52 Error: actCheck:
+2014-04-19 09:03:52 Error: act:87
+2014-04-19 09:03:52 Error: use_act:
+2014-04-19 09:03:52 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 86
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 12
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:03:52
+)
+
+2014-04-19 09:04:44 Error: ownerId:
+2014-04-19 09:04:44 Error: className:File
+2014-04-19 09:05:34 Error: ownerId:
+2014-04-19 09:05:34 Error: className:Stages
+2014-04-19 09:24:36 Error: ownerId:5
+2014-04-19 09:24:36 Error: className:Stages
+2014-04-19 09:24:36 Error: aaaaaaaaaaaaaa:
+2014-04-19 09:24:36 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 09:24:36 Error: userId;:44
+2014-04-19 09:24:36 Error: actCheck:
+2014-04-19 09:24:36 Error: act:92
+2014-04-19 09:24:36 Error: use_act:
+2014-04-19 09:24:36 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 91
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 14
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 09:24:36
+)
+
+2014-04-19 09:25:19 Error: ownerId:
+2014-04-19 09:25:19 Error: className:Stages
+2014-04-19 09:27:31 Error: ownerId:5
+2014-04-19 09:27:31 Error: className:Stages
+2014-04-19 09:27:31 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:28:48 Error: ownerId:5
+2014-04-19 09:28:48 Error: className:Stages
+2014-04-19 09:28:49 Notice: Notice (8): Array to string conversion in [/var/www/asns/app/Controller/StagesController.php, line 120]
+Trace:
+StagesController::main() - APP/Controller/StagesController.php, line 120
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 09:28:49 Error: data:Array
+2014-04-19 09:28:49 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:29:26 Error: ownerId:5
+2014-04-19 09:29:26 Error: className:Stages
+2014-04-19 09:29:26 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:29:26 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:30:45 Error: ownerId:5
+2014-04-19 09:30:45 Error: className:Stages
+2014-04-19 09:30:45 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:30:45 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:34:35 Error: ownerId:5
+2014-04-19 09:34:35 Error: className:Stages
+2014-04-19 09:34:35 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:34:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:35:06 Error: ownerId:5
+2014-04-19 09:35:06 Error: className:Stages
+2014-04-19 09:35:06 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:35:06 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:35:13 Error: ownerId:
+2014-04-19 09:35:13 Error: className:Stages
+2014-04-19 09:36:03 Error: ownerId:5
+2014-04-19 09:36:03 Error: className:Stages
+2014-04-19 09:36:03 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:36:03 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:36:57 Error: ownerId:5
+2014-04-19 09:36:57 Error: className:Stages
+2014-04-19 09:36:57 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:36:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:37:16 Error: ownerId:5
+2014-04-19 09:37:16 Error: className:Stages
+2014-04-19 09:37:16 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:37:16 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 09:37:25 Error: ownerId:5
+2014-04-19 09:37:25 Error: className:Stages
+2014-04-19 09:37:25 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 09:37:25 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 10:06:49 Error: ownerId:
+2014-04-19 10:06:49 Error: className:SnsUsers
+2014-04-19 10:10:58 Error: ownerId:5
+2014-04-19 10:10:58 Error: className:Stages
+2014-04-19 10:10:58 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:10:58 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 10:11:52 Error: ownerId:5
+2014-04-19 10:11:52 Error: className:Stages
+2014-04-19 10:11:52 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:11:52 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 10:12:55 Error: ownerId:5
+2014-04-19 10:12:55 Error: className:Stages
+2014-04-19 10:12:55 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:12:55 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 10:13:14 Error: ownerId:5
+2014-04-19 10:13:14 Error: className:Stages
+2014-04-19 10:13:14 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 41
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:13:14 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"41","state":"1"}
+2014-04-19 10:15:05 Error: ownerId:5
+2014-04-19 10:15:05 Error: className:Stages
+2014-04-19 10:15:05 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:15:05 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:15:05 Error: userId;:44
+2014-04-19 10:15:05 Error: actCheck:
+2014-04-19 10:15:05 Error: act:100
+2014-04-19 10:15:05 Error: use_act:
+2014-04-19 10:15:05 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 14
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:15:05
+)
+
+2014-04-19 10:15:06 Error: ownerId:5
+2014-04-19 10:15:06 Error: className:File
+2014-04-19 10:15:06 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:17:20 Error: ownerId:
+2014-04-19 10:17:20 Error: className:Stages
+2014-04-19 10:17:22 Error: ownerId:
+2014-04-19 10:17:22 Error: className:File
+2014-04-19 10:24:50 Error: ownerId:5
+2014-04-19 10:24:50 Error: className:Stages
+2014-04-19 10:24:50 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:24:50 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:24:50 Error: userId;:44
+2014-04-19 10:24:50 Error: actCheck:
+2014-04-19 10:24:50 Error: act:100
+2014-04-19 10:24:50 Error: use_act:
+2014-04-19 10:24:50 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 14
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:24:50
+)
+
+2014-04-19 10:24:52 Error: ownerId:5
+2014-04-19 10:24:52 Error: className:Stages
+2014-04-19 10:24:52 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 45
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:24:52 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"45","state":"1"}
+2014-04-19 10:24:54 Error: ownerId:5
+2014-04-19 10:24:54 Error: className:Stages
+2014-04-19 10:24:54 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:24:54 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:24:54 Error: userId;:44
+2014-04-19 10:24:54 Error: actCheck:
+2014-04-19 10:24:54 Error: act:99
+2014-04-19 10:24:54 Error: use_act:
+2014-04-19 10:24:54 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 14
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:24:54
+)
+
+2014-04-19 10:24:55 Error: ownerId:5
+2014-04-19 10:24:55 Error: className:File
+2014-04-19 10:24:55 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:25:39 Error: ownerId:5
+2014-04-19 10:25:39 Error: className:Stages
+2014-04-19 10:25:39 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 48
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:25:39 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"48","state":"1"}
+2014-04-19 10:25:48 Error: ownerId:
+2014-04-19 10:25:48 Error: className:File
+2014-04-19 10:30:28 Error: ownerId:5
+2014-04-19 10:30:28 Error: className:Stages
+2014-04-19 10:30:28 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 48
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:30:28 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"48","state":"1"}
+2014-04-19 10:30:31 Error: ownerId:5
+2014-04-19 10:30:31 Error: className:Stages
+2014-04-19 10:30:32 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:30:32 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:30:32 Error: userId;:44
+2014-04-19 10:30:32 Error: actCheck:
+2014-04-19 10:30:32 Error: act:100
+2014-04-19 10:30:32 Error: use_act:
+2014-04-19 10:30:32 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 14
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:30:31
+)
+
+2014-04-19 10:31:23 Error: ownerId:
+2014-04-19 10:31:23 Error: className:Stages
+2014-04-19 10:32:32 Error: ownerId:5
+2014-04-19 10:32:32 Error: className:Stages
+2014-04-19 10:32:32 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:32:32 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:32:32 Error: userId;:44
+2014-04-19 10:32:32 Error: actCheck:
+2014-04-19 10:32:32 Error: act:99
+2014-04-19 10:32:32 Error: use_act:
+2014-04-19 10:32:32 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 16
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:32:32
+)
+
+2014-04-19 10:32:34 Error: ownerId:5
+2014-04-19 10:32:34 Error: className:Stages
+2014-04-19 10:32:34 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:32:34 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:32:34 Error: userId;:44
+2014-04-19 10:32:34 Error: actCheck:
+2014-04-19 10:32:34 Error: act:98
+2014-04-19 10:32:34 Error: use_act:
+2014-04-19 10:32:34 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 18
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:32:34
+)
+
+2014-04-19 10:39:09 Error: ownerId:5
+2014-04-19 10:39:09 Error: className:Stages
+2014-04-19 10:39:09 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 53
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:39:09 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"53","state":"1"}
+2014-04-19 10:39:12 Error: ownerId:5
+2014-04-19 10:39:12 Error: className:Stages
+2014-04-19 10:39:12 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:39:12 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:39:12 Error: userId;:44
+2014-04-19 10:39:12 Error: actCheck:
+2014-04-19 10:39:12 Error: act:100
+2014-04-19 10:39:12 Error: use_act:
+2014-04-19 10:39:12 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 18
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:39:12
+)
+
+2014-04-19 10:39:13 Error: ownerId:5
+2014-04-19 10:39:13 Error: className:Stages
+2014-04-19 10:39:13 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:39:13 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:39:13 Error: userId;:44
+2014-04-19 10:39:13 Error: actCheck:
+2014-04-19 10:39:13 Error: act:99
+2014-04-19 10:39:13 Error: use_act:
+2014-04-19 10:39:13 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 19
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:39:13
+)
+
+2014-04-19 10:39:24 Error: ownerId:5
+2014-04-19 10:39:24 Error: className:Stages
+2014-04-19 10:39:24 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 57
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:39:24 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"57","state":"1"}
+2014-04-19 10:39:26 Error: ownerId:5
+2014-04-19 10:39:26 Error: className:Stages
+2014-04-19 10:39:26 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:39:26 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:39:26 Error: userId;:44
+2014-04-19 10:39:26 Error: actCheck:
+2014-04-19 10:39:26 Error: act:98
+2014-04-19 10:39:26 Error: use_act:
+2014-04-19 10:39:26 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 19
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:39:26
+)
+
+2014-04-19 10:39:27 Error: ownerId:5
+2014-04-19 10:39:27 Error: className:Stages
+2014-04-19 10:39:27 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:39:27 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:39:27 Error: userId;:44
+2014-04-19 10:39:27 Error: actCheck:
+2014-04-19 10:39:27 Error: act:97
+2014-04-19 10:39:27 Error: use_act:
+2014-04-19 10:39:27 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 19
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:39:27
+)
+
+2014-04-19 10:40:39 Error: ownerId:5
+2014-04-19 10:40:39 Error: className:Stages
+2014-04-19 10:40:39 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 60
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:40:39 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"60","state":"1"}
+2014-04-19 10:40:42 Error: ownerId:5
+2014-04-19 10:40:42 Error: className:Stages
+2014-04-19 10:40:42 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:40:42 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:40:42 Error: userId;:44
+2014-04-19 10:40:42 Error: actCheck:
+2014-04-19 10:40:42 Error: act:96
+2014-04-19 10:40:42 Error: use_act:
+2014-04-19 10:40:42 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 95
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 20
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:40:42
+)
+
+2014-04-19 10:40:49 Error: ownerId:
+2014-04-19 10:40:49 Error: className:Stages
+2014-04-19 10:40:52 Error: ownerId:
+2014-04-19 10:40:52 Error: className:Stages
+2014-04-19 10:41:25 Error: ownerId:5
+2014-04-19 10:41:25 Error: className:Stages
+2014-04-19 10:41:25 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 61
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:41:25 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"61","state":"1"}
+2014-04-19 10:41:35 Error: ownerId:5
+2014-04-19 10:41:35 Error: className:Stages
+2014-04-19 10:41:35 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 61
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:41:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"61","state":"1"}
+2014-04-19 10:41:36 Error: ownerId:5
+2014-04-19 10:41:36 Error: className:Stages
+2014-04-19 10:41:36 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:41:36 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:41:36 Error: userId;:44
+2014-04-19 10:41:36 Error: actCheck:
+2014-04-19 10:41:36 Error: act:95
+2014-04-19 10:41:36 Error: use_act:
+2014-04-19 10:41:36 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 94
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 20
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:41:36
+)
+
+2014-04-19 10:41:37 Error: ownerId:5
+2014-04-19 10:41:37 Error: className:Stages
+2014-04-19 10:41:37 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:41:37 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:41:37 Error: userId;:44
+2014-04-19 10:41:37 Error: actCheck:
+2014-04-19 10:41:37 Error: act:94
+2014-04-19 10:41:37 Error: use_act:
+2014-04-19 10:41:37 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 93
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 21
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:41:37
+)
+
+2014-04-19 10:41:52 Error: ownerId:
+2014-04-19 10:41:52 Error: className:Stages
+2014-04-19 10:42:07 Error: ownerId:5
+2014-04-19 10:42:07 Error: className:Stages
+2014-04-19 10:42:07 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 67
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:42:07 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"67","state":"1"}
+2014-04-19 10:42:08 Error: ownerId:5
+2014-04-19 10:42:08 Error: className:Stages
+2014-04-19 10:42:08 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:42:08 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:42:08 Error: userId;:44
+2014-04-19 10:42:08 Error: actCheck:
+2014-04-19 10:42:08 Error: act:93
+2014-04-19 10:42:08 Error: use_act:
+2014-04-19 10:42:08 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 92
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 22
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:42:08
+)
+
+2014-04-19 10:42:09 Error: ownerId:5
+2014-04-19 10:42:09 Error: className:Stages
+2014-04-19 10:42:09 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:42:09 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:42:09 Error: userId;:44
+2014-04-19 10:42:09 Error: actCheck:
+2014-04-19 10:42:09 Error: act:92
+2014-04-19 10:42:09 Error: use_act:
+2014-04-19 10:42:09 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 91
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 22
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:42:09
+)
+
+2014-04-19 10:42:10 Error: ownerId:5
+2014-04-19 10:42:10 Error: className:Stages
+2014-04-19 10:42:11 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:42:11 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:42:11 Error: userId;:44
+2014-04-19 10:42:11 Error: actCheck:
+2014-04-19 10:42:11 Error: act:91
+2014-04-19 10:42:11 Error: use_act:
+2014-04-19 10:42:11 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 90
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 22
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:42:10
+)
+
+2014-04-19 10:42:41 Error: ownerId:
+2014-04-19 10:42:41 Error: className:Stages
+2014-04-19 10:43:47 Error: ownerId:5
+2014-04-19 10:43:47 Error: className:Stages
+2014-04-19 10:43:47 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 74
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:43:47 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"74","state":"1"}
+2014-04-19 10:43:49 Error: ownerId:5
+2014-04-19 10:43:49 Error: className:Stages
+2014-04-19 10:43:49 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:43:49 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:43:49 Error: userId;:44
+2014-04-19 10:43:49 Error: actCheck:
+2014-04-19 10:43:49 Error: act:90
+2014-04-19 10:43:49 Error: use_act:
+2014-04-19 10:43:49 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 89
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 23
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:43:49
+)
+
+2014-04-19 10:43:50 Error: ownerId:5
+2014-04-19 10:43:50 Error: className:File
+2014-04-19 10:43:50 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:44:12 Error: ownerId:5
+2014-04-19 10:44:12 Error: className:Stages
+2014-04-19 10:44:12 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 77
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:44:12 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"77","state":"1"}
+2014-04-19 10:44:14 Error: ownerId:5
+2014-04-19 10:44:14 Error: className:Stages
+2014-04-19 10:44:14 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:14 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:14 Error: userId;:44
+2014-04-19 10:44:14 Error: actCheck:
+2014-04-19 10:44:14 Error: act:89
+2014-04-19 10:44:14 Error: use_act:
+2014-04-19 10:44:14 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 88
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 24
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:14
+)
+
+2014-04-19 10:44:14 Error: ownerId:5
+2014-04-19 10:44:14 Error: className:File
+2014-04-19 10:44:14 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:44:29 Error: ownerId:5
+2014-04-19 10:44:29 Error: className:Stages
+2014-04-19 10:44:29 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:29 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:29 Error: userId;:44
+2014-04-19 10:44:29 Error: actCheck:
+2014-04-19 10:44:29 Error: act:88
+2014-04-19 10:44:29 Error: use_act:
+2014-04-19 10:44:29 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 87
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 25
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:28
+)
+
+2014-04-19 10:44:29 Error: ownerId:5
+2014-04-19 10:44:29 Error: className:Stages
+2014-04-19 10:44:29 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:29 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:29 Error: userId;:44
+2014-04-19 10:44:29 Error: actCheck:
+2014-04-19 10:44:29 Error: act:87
+2014-04-19 10:44:29 Error: use_act:
+2014-04-19 10:44:29 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 86
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 26
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:29
+)
+
+2014-04-19 10:44:30 Error: ownerId:5
+2014-04-19 10:44:30 Error: className:Stages
+2014-04-19 10:44:30 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:30 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:30 Error: userId;:44
+2014-04-19 10:44:30 Error: actCheck:
+2014-04-19 10:44:30 Error: act:86
+2014-04-19 10:44:30 Error: use_act:
+2014-04-19 10:44:30 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 85
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 28
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:30
+)
+
+2014-04-19 10:44:31 Error: ownerId:5
+2014-04-19 10:44:31 Error: className:Stages
+2014-04-19 10:44:31 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:31 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:31 Error: userId;:44
+2014-04-19 10:44:31 Error: actCheck:
+2014-04-19 10:44:31 Error: act:85
+2014-04-19 10:44:31 Error: use_act:
+2014-04-19 10:44:31 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 84
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 30
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:31
+)
+
+2014-04-19 10:44:34 Error: ownerId:5
+2014-04-19 10:44:34 Error: className:Stages
+2014-04-19 10:44:34 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 88
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:44:34 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"88","state":"1"}
+2014-04-19 10:44:36 Error: ownerId:5
+2014-04-19 10:44:36 Error: className:Stages
+2014-04-19 10:44:36 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:36 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:36 Error: userId;:44
+2014-04-19 10:44:36 Error: actCheck:
+2014-04-19 10:44:36 Error: act:84
+2014-04-19 10:44:36 Error: use_act:
+2014-04-19 10:44:36 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 83
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 31
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:36
+)
+
+2014-04-19 10:44:36 Error: ownerId:5
+2014-04-19 10:44:36 Error: className:File
+2014-04-19 10:44:36 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:44:49 Error: ownerId:5
+2014-04-19 10:44:49 Error: className:Stages
+2014-04-19 10:44:49 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 89
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:44:49 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"89","state":"1"}
+2014-04-19 10:44:52 Error: ownerId:5
+2014-04-19 10:44:52 Error: className:Stages
+2014-04-19 10:44:52 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:44:52 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:44:52 Error: userId;:44
+2014-04-19 10:44:52 Error: actCheck:
+2014-04-19 10:44:52 Error: act:83
+2014-04-19 10:44:52 Error: use_act:
+2014-04-19 10:44:52 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 82
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 32
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:44:52
+)
+
+2014-04-19 10:44:52 Error: ownerId:5
+2014-04-19 10:44:52 Error: className:File
+2014-04-19 10:44:52 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:45:11 Error: ownerId:
+2014-04-19 10:45:11 Error: className:Stages
+2014-04-19 10:45:38 Error: ownerId:
+2014-04-19 10:45:38 Error: className:Stages
+2014-04-19 10:45:46 Error: ownerId:
+2014-04-19 10:45:46 Error: className:Stages
+2014-04-19 10:45:52 Error: ownerId:
+2014-04-19 10:45:52 Error: className:Stages
+2014-04-19 10:46:12 Error: ownerId:5
+2014-04-19 10:46:12 Error: className:Stages
+2014-04-19 10:46:12 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:46:12 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:46:12 Error: userId;:44
+2014-04-19 10:46:12 Error: actCheck:
+2014-04-19 10:46:12 Error: act:82
+2014-04-19 10:46:12 Error: use_act:
+2014-04-19 10:46:12 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 81
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 32
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:46:12
+)
+
+2014-04-19 10:46:15 Error: ownerId:5
+2014-04-19 10:46:15 Error: className:Stages
+2014-04-19 10:46:15 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 93
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:46:15 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"93","state":"1"}
+2014-04-19 10:46:17 Error: ownerId:5
+2014-04-19 10:46:17 Error: className:Stages
+2014-04-19 10:46:17 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:46:17 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:46:17 Error: userId;:44
+2014-04-19 10:46:17 Error: actCheck:
+2014-04-19 10:46:17 Error: act:81
+2014-04-19 10:46:17 Error: use_act:
+2014-04-19 10:46:17 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 80
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 32
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:46:17
+)
+
+2014-04-19 10:46:17 Error: ownerId:5
+2014-04-19 10:46:17 Error: className:File
+2014-04-19 10:46:17 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:46:19 Error: ownerId:5
+2014-04-19 10:46:19 Error: className:Stages
+2014-04-19 10:46:19 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:46:19 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:46:19 Error: userId;:44
+2014-04-19 10:46:19 Error: actCheck:
+2014-04-19 10:46:19 Error: act:80
+2014-04-19 10:46:19 Error: use_act:
+2014-04-19 10:46:19 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 79
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 32
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:46:19
+)
+
+2014-04-19 10:47:51 Error: ownerId:
+2014-04-19 10:47:51 Error: className:Stages
+2014-04-19 10:48:59 Error: ownerId:5
+2014-04-19 10:48:59 Error: className:Stages
+2014-04-19 10:48:59 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 99
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-16 10:35:47
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:48:59 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"99","state":"1"}
+2014-04-19 10:49:01 Error: ownerId:5
+2014-04-19 10:49:01 Error: className:Stages
+2014-04-19 10:49:01 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:49:01 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:49:01 Error: userId;:44
+2014-04-19 10:49:01 Error: actCheck:
+2014-04-19 10:49:01 Error: act:79
+2014-04-19 10:49:01 Error: use_act:
+2014-04-19 10:49:01 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 78
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 34
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:49:01
+)
+
+2014-04-19 10:49:01 Error: ownerId:5
+2014-04-19 10:49:01 Error: className:Stages
+2014-04-19 10:49:01 Error: ownerId:5
+2014-04-19 10:49:01 Error: className:File
+2014-04-19 10:49:01 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-04-19 10:49:42 Error: ownerId:5
+2014-04-19 10:49:42 Error: className:Stages
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: UserDeckCard in [/var/www/asns/app/Controller/StagesController.php, line 185]
+Trace:
+StagesController::act() - APP/Controller/StagesController.php, line 185
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/asns/app/Controller/StagesController.php, line 190]
+Trace:
+StagesController::act() - APP/Controller/StagesController.php, line 190
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: card_id in [/var/www/asns/app/Controller/StagesController.php, line 212]
+Trace:
+StagesController::act() - APP/Controller/StagesController.php, line 212
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: effect in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 168]
+Trace:
+BattleComponent::doSkill() - APP/Controller/Component/BattleComponent.php, line 168
+StagesController::act() - APP/Controller/StagesController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: updown in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 183]
+Trace:
+BattleComponent::doSkill() - APP/Controller/Component/BattleComponent.php, line 183
+StagesController::act() - APP/Controller/StagesController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: updown in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 188]
+Trace:
+BattleComponent::doSkill() - APP/Controller/Component/BattleComponent.php, line 188
+StagesController::act() - APP/Controller/StagesController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: updown in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 199]
+Trace:
+BattleComponent::doSkill() - APP/Controller/Component/BattleComponent.php, line 199
+StagesController::act() - APP/Controller/StagesController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined index: updown in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 207]
+Trace:
+BattleComponent::doSkill() - APP/Controller/Component/BattleComponent.php, line 207
+StagesController::act() - APP/Controller/StagesController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 28]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 28
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined variable: damage in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 87]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 87
+StagesController::act() - APP/Controller/StagesController.php, line 226
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 37]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 37
+StagesController::act() - APP/Controller/StagesController.php, line 230
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined variable: target in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 76]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 76
+StagesController::act() - APP/Controller/StagesController.php, line 230
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined variable: target in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 77]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 77
+StagesController::act() - APP/Controller/StagesController.php, line 230
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Notice: Notice (8): Undefined variable: damage in [/var/www/asns/app/Controller/Component/BattleComponent.php, line 87]
+Trace:
+BattleComponent::doBattleEnemy() - APP/Controller/Component/BattleComponent.php, line 87
+StagesController::act() - APP/Controller/StagesController.php, line 230
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-19 10:49:42 Error: ownerId:5
+2014-04-19 10:49:42 Error: className:Stages
+2014-04-19 10:49:49 Error: ownerId:5
+2014-04-19 10:49:49 Error: className:Stages
+2014-04-19 10:49:49 Error: aryData:Array
+(
+    [id] => 8
+    [target] => 1
+    [result] => 2
+    [log] => {"skill":{"def":[[]]},"0":{"targetCards_bf":[{"UserCard":{"enemy_id":"1","card_name":"\u4e00\u30f6\u8c37 \u304b\u307b\u308a","hp":"50","atk":"50","def":"50","skill_id":"1","skill_level":"20","before_words":"\u3042\u306a\u305f\u304c\u671f\u5f85\u306e\u30eb\u30fc\u30ad\u30fc\u541b\u304b\u3057\u3089\uff1f\u3071\u3063\u3068\u898b\u306f\u3068\u3082\u304b\u304f\u3001\u3042\u3063\u3061\u306e\u65b9\u306f\u51c4\u3044\u306e\u304b\u3057\u3089\u306d\uff1f\u3068\u308a\u3042\u3048\u305a\u3001\u30c6\u30b9\u30c8\u3055\u305b\u3066\u3082\u3089\u3046\u308f\u306d\uff01","after_win_words":"\u78ba\u304b\u306b\u306a\u304b\u306a\u304b\u306e\u7269\u3060\u308f\u2026\u79c1\u306e\u4f53\u3092\u3053\u3093\u306a\u306b\u3082\u71b1\u304f\u3055\u305b\u308b\u306a\u3093\u3066\u2026\u3053\u306e\u307e\u307e\u3067\u306f\u2026\u3042\u308c\uff1f\u306a\u3093\u3067\u79c1\u3001\u305d\u3093\u306a\u98a8\u306b\u8003\u3048\u305f\u306e\u304b\u3057\u3089\uff1f","after_lose_words":"","delete_flg":"0","skill_name":"\u30a2\u30d5\u30bf\u30fc\u30b9\u30af\u30fc\u30eb","effect":"1","updown":"1","target":"3","percent":"35","skill_words":"\u5473\u65b9\u306e\u9632\u5fa1\u529b\u3092\u5927\u30a2\u30c3\u30d7"}}],"targetCards_af":null},"1":{"targetCards_bf":null,"targetCards_af":null}}
+)
+
+2014-04-19 10:49:55 Error: ownerId:5
+2014-04-19 10:49:55 Error: className:Quests
+2014-04-19 10:49:57 Error: ownerId:5
+2014-04-19 10:49:57 Error: className:Stages
+2014-04-19 10:49:59 Error: ownerId:5
+2014-04-19 10:49:59 Error: className:Stages
+2014-04-19 10:50:00 Error: ownerId:5
+2014-04-19 10:50:00 Error: className:Stages
+2014-04-19 10:50:00 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:50:00 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:50:46 Error: ownerId:
+2014-04-19 10:50:46 Error: className:Quests
+2014-04-19 10:50:49 Error: ownerId:
+2014-04-19 10:50:49 Error: className:Stages
+2014-04-19 10:51:07 Error: ownerId:
+2014-04-19 10:51:07 Error: className:Stages
+2014-04-19 10:51:42 Error: ownerId:
+2014-04-19 10:51:42 Error: className:Stages
+2014-04-19 10:51:50 Error: ownerId:
+2014-04-19 10:51:50 Error: className:Stages
+2014-04-19 10:51:55 Error: ownerId:5
+2014-04-19 10:51:55 Error: className:Stages
+2014-04-19 10:51:55 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:51:55 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:51:57 Error: ownerId:5
+2014-04-19 10:51:57 Error: className:Stages
+2014-04-19 10:51:57 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:51:57 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:52:35 Error: ownerId:5
+2014-04-19 10:52:35 Error: className:Stages
+2014-04-19 10:52:35 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:52:35 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:52:46 Error: ownerId:5
+2014-04-19 10:52:46 Error: className:Stages
+2014-04-19 10:52:46 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:52:46 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:53:10 Error: ownerId:5
+2014-04-19 10:53:10 Error: className:Stages
+2014-04-19 10:53:10 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:53:10 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:53:15 Error: ownerId:5
+2014-04-19 10:53:15 Error: className:Stages
+2014-04-19 10:53:15 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:53:15 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:53:15 Error: userId;:44
+2014-04-19 10:53:15 Error: actCheck:
+2014-04-19 10:53:15 Error: act:82
+2014-04-19 10:53:15 Error: use_act:
+2014-04-19 10:53:15 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 81
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 34
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:53:15
+)
+
+2014-04-19 10:53:16 Error: ownerId:5
+2014-04-19 10:53:16 Error: className:File
+2014-04-19 10:53:16 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:54:00 Error: ownerId:5
+2014-04-19 10:54:00 Error: className:Stages
+2014-04-19 10:54:00 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:54:00 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:54:02 Error: ownerId:5
+2014-04-19 10:54:02 Error: className:Stages
+2014-04-19 10:54:02 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:54:02 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:54:02 Error: userId;:44
+2014-04-19 10:54:02 Error: actCheck:
+2014-04-19 10:54:02 Error: act:81
+2014-04-19 10:54:02 Error: use_act:
+2014-04-19 10:54:02 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 80
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 35
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:54:02
+)
+
+2014-04-19 10:54:02 Error: ownerId:5
+2014-04-19 10:54:02 Error: className:File
+2014-04-19 10:54:02 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:54:51 Error: ownerId:5
+2014-04-19 10:54:51 Error: className:Stages
+2014-04-19 10:54:51 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:54:51 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:54:53 Error: ownerId:5
+2014-04-19 10:54:53 Error: className:Stages
+2014-04-19 10:54:53 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:54:53 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:54:53 Error: userId;:44
+2014-04-19 10:54:53 Error: actCheck:
+2014-04-19 10:54:53 Error: act:80
+2014-04-19 10:54:53 Error: use_act:
+2014-04-19 10:54:53 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 79
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 37
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:54:53
+)
+
+2014-04-19 10:54:53 Error: ownerId:5
+2014-04-19 10:54:53 Error: className:File
+2014-04-19 10:54:53 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:55:00 Error: ownerId:
+2014-04-19 10:55:00 Error: className:Stages
+2014-04-19 10:55:06 Error: ownerId:5
+2014-04-19 10:55:06 Error: className:Stages
+2014-04-19 10:55:06 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 10:55:06 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 10:55:07 Error: ownerId:5
+2014-04-19 10:55:07 Error: className:Stages
+2014-04-19 10:55:07 Error: aaaaaaaaaaaaaa:
+2014-04-19 10:55:07 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 10:55:07 Error: userId;:44
+2014-04-19 10:55:07 Error: actCheck:
+2014-04-19 10:55:07 Error: act:79
+2014-04-19 10:55:07 Error: use_act:
+2014-04-19 10:55:07 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 78
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 39
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 10:55:07
+)
+
+2014-04-19 10:55:07 Error: ownerId:5
+2014-04-19 10:55:07 Error: className:File
+2014-04-19 10:55:07 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 10:55:50 Error: ownerId:5
+2014-04-19 10:55:50 Error: className:Stages
+2014-04-19 10:55:50 Error: ownerId:5
+2014-04-19 10:55:50 Error: className:File
+2014-04-19 10:55:50 Error: name:kok/var/www/asns/app/Private/scene/scene_bf_1.jpg
+2014-04-19 10:56:41 Error: ownerId:
+2014-04-19 10:56:41 Error: className:Stages
+2014-04-19 11:24:25 Error: ownerId:5
+2014-04-19 11:24:25 Error: className:Quests
+2014-04-19 11:24:27 Error: ownerId:5
+2014-04-19 11:24:27 Error: className:Stages
+2014-04-19 11:24:28 Error: ownerId:5
+2014-04-19 11:24:28 Error: className:Stages
+2014-04-19 11:24:29 Error: ownerId:5
+2014-04-19 11:24:29 Error: className:Stages
+2014-04-19 11:24:29 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:24:29 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:25:46 Error: ownerId:
+2014-04-19 11:25:46 Error: className:Stages
+2014-04-19 11:25:47 Error: ownerId:
+2014-04-19 11:25:47 Error: className:Stages
+2014-04-19 11:25:49 Error: ownerId:
+2014-04-19 11:25:49 Error: className:Quests
+2014-04-19 11:27:56 Error: ownerId:5
+2014-04-19 11:27:56 Error: className:Stages
+2014-04-19 11:27:56 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 9
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:27:56 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"9","state":"1"}
+2014-04-19 11:28:00 Error: ownerId:5
+2014-04-19 11:28:00 Error: className:Stages
+2014-04-19 11:28:00 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:28:00 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:28:00 Error: userId;:44
+2014-04-19 11:28:00 Error: actCheck:
+2014-04-19 11:28:00 Error: act:100
+2014-04-19 11:28:00 Error: use_act:
+2014-04-19 11:28:00 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 41
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:28:00
+)
+
+2014-04-19 11:28:00 Error: ownerId:5
+2014-04-19 11:28:00 Error: className:File
+2014-04-19 11:28:00 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:29:38 Error: ownerId:
+2014-04-19 11:29:38 Error: className:Stages
+2014-04-19 11:30:11 Error: ownerId:5
+2014-04-19 11:30:11 Error: className:Stages
+2014-04-19 11:30:11 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 10
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:30:11 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"10","state":"1"}
+2014-04-19 11:30:17 Error: ownerId:5
+2014-04-19 11:30:17 Error: className:Stages
+2014-04-19 11:30:17 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:30:17 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:30:17 Error: userId;:44
+2014-04-19 11:30:17 Error: actCheck:
+2014-04-19 11:30:17 Error: act:99
+2014-04-19 11:30:17 Error: use_act:
+2014-04-19 11:30:17 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 41
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:30:17
+)
+
+2014-04-19 11:30:17 Error: ownerId:5
+2014-04-19 11:30:17 Error: className:File
+2014-04-19 11:30:17 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:30:40 Error: ownerId:5
+2014-04-19 11:30:40 Error: className:Stages
+2014-04-19 11:30:40 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 11
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:30:40 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"11","state":"1"}
+2014-04-19 11:30:42 Error: ownerId:5
+2014-04-19 11:30:42 Error: className:Stages
+2014-04-19 11:30:42 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:30:42 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:30:42 Error: userId;:44
+2014-04-19 11:30:42 Error: actCheck:
+2014-04-19 11:30:42 Error: act:98
+2014-04-19 11:30:42 Error: use_act:
+2014-04-19 11:30:42 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 41
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:30:41
+)
+
+2014-04-19 11:30:42 Error: ownerId:5
+2014-04-19 11:30:42 Error: className:File
+2014-04-19 11:30:42 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:31:04 Error: ownerId:5
+2014-04-19 11:31:04 Error: className:Stages
+2014-04-19 11:31:04 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 14
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:31:04 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"14","state":"1"}
+2014-04-19 11:31:06 Error: ownerId:5
+2014-04-19 11:31:06 Error: className:Stages
+2014-04-19 11:31:06 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:31:06 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:31:06 Error: userId;:44
+2014-04-19 11:31:06 Error: actCheck:
+2014-04-19 11:31:06 Error: act:97
+2014-04-19 11:31:06 Error: use_act:
+2014-04-19 11:31:06 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 41
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:31:06
+)
+
+2014-04-19 11:31:06 Error: ownerId:5
+2014-04-19 11:31:06 Error: className:File
+2014-04-19 11:31:06 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:31:06 Error: ownerId:5
+2014-04-19 11:31:06 Error: className:Stages
+2014-04-19 11:31:06 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:31:06 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:31:06 Error: userId;:44
+2014-04-19 11:31:06 Error: actCheck:
+2014-04-19 11:31:06 Error: act:96
+2014-04-19 11:31:06 Error: use_act:
+2014-04-19 11:31:06 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 95
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 43
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:31:06
+)
+
+2014-04-19 11:31:19 Error: ownerId:
+2014-04-19 11:31:19 Error: className:Stages
+2014-04-19 11:31:37 Error: ownerId:5
+2014-04-19 11:31:37 Error: className:Stages
+2014-04-19 11:31:37 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 19
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:31:37 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"19","state":"1"}
+2014-04-19 11:31:39 Error: ownerId:5
+2014-04-19 11:31:39 Error: className:Stages
+2014-04-19 11:31:39 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:31:39 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:31:39 Error: userId;:44
+2014-04-19 11:31:39 Error: actCheck:
+2014-04-19 11:31:39 Error: act:95
+2014-04-19 11:31:39 Error: use_act:
+2014-04-19 11:31:39 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 94
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 43
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:31:39
+)
+
+2014-04-19 11:31:40 Error: ownerId:5
+2014-04-19 11:31:40 Error: className:Stages
+2014-04-19 11:31:40 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:31:40 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:31:40 Error: userId;:44
+2014-04-19 11:31:40 Error: actCheck:
+2014-04-19 11:31:40 Error: act:94
+2014-04-19 11:31:40 Error: use_act:
+2014-04-19 11:31:40 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 93
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 44
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:31:40
+)
+
+2014-04-19 11:31:40 Error: ownerId:5
+2014-04-19 11:31:40 Error: className:File
+2014-04-19 11:31:40 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:32:13 Error: ownerId:5
+2014-04-19 11:32:13 Error: className:Stages
+2014-04-19 11:32:13 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:32:13 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:32:16 Error: ownerId:5
+2014-04-19 11:32:16 Error: className:Stages
+2014-04-19 11:32:16 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:32:16 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:32:16 Error: userId;:44
+2014-04-19 11:32:16 Error: actCheck:
+2014-04-19 11:32:16 Error: act:93
+2014-04-19 11:32:16 Error: use_act:
+2014-04-19 11:32:16 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 92
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 44
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:32:16
+)
+
+2014-04-19 11:32:16 Error: ownerId:5
+2014-04-19 11:32:16 Error: className:File
+2014-04-19 11:32:16 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:32:31 Error: ownerId:
+2014-04-19 11:32:31 Error: className:Stages
+2014-04-19 11:33:33 Error: ownerId:
+2014-04-19 11:33:33 Error: className:Stages
+2014-04-19 11:33:41 Error: ownerId:
+2014-04-19 11:33:41 Error: className:Stages
+2014-04-19 11:42:16 Error: ownerId:5
+2014-04-19 11:42:16 Error: className:Stages
+2014-04-19 11:42:16 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:42:16 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:42:41 Error: ownerId:5
+2014-04-19 11:42:41 Error: className:Stages
+2014-04-19 11:42:41 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:42:41 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:45:48 Error: ownerId:5
+2014-04-19 11:45:48 Error: className:Stages
+2014-04-19 11:45:48 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:45:48 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:45:53 Error: ownerId:5
+2014-04-19 11:45:53 Error: className:Stages
+2014-04-19 11:45:53 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:45:53 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:45:53 Error: userId;:44
+2014-04-19 11:45:53 Error: actCheck:
+2014-04-19 11:45:53 Error: act:100
+2014-04-19 11:45:53 Error: use_act:
+2014-04-19 11:45:53 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 45
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:45:53
+)
+
+2014-04-19 11:45:54 Error: ownerId:5
+2014-04-19 11:45:54 Error: className:File
+2014-04-19 11:45:54 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:46:39 Error: ownerId:5
+2014-04-19 11:46:39 Error: className:Stages
+2014-04-19 11:46:39 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:46:39 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:46:50 Error: ownerId:5
+2014-04-19 11:46:50 Error: className:Stages
+2014-04-19 11:46:50 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:46:50 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:47:22 Error: ownerId:5
+2014-04-19 11:47:22 Error: className:Stages
+2014-04-19 11:47:22 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 100
+    [state] => 2
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:47:22 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"100","state":"2"}
+2014-04-19 11:47:31 Error: ownerId:5
+2014-04-19 11:47:31 Error: className:Stages
+2014-04-19 11:47:31 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:47:31 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:47:31 Error: userId;:44
+2014-04-19 11:47:31 Error: actCheck:
+2014-04-19 11:47:31 Error: act:99
+2014-04-19 11:47:31 Error: use_act:
+2014-04-19 11:47:31 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 47
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:47:31
+)
+
+2014-04-19 11:47:32 Error: ownerId:5
+2014-04-19 11:47:32 Error: className:Stages
+2014-04-19 11:47:32 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:47:32 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:47:32 Error: userId;:44
+2014-04-19 11:47:32 Error: actCheck:
+2014-04-19 11:47:32 Error: act:98
+2014-04-19 11:47:32 Error: use_act:
+2014-04-19 11:47:32 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 49
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:47:32
+)
+
+2014-04-19 11:47:32 Error: ownerId:5
+2014-04-19 11:47:32 Error: className:File
+2014-04-19 11:47:32 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 11:48:43 Error: ownerId:
+2014-04-19 11:48:43 Error: className:Stages
+2014-04-19 11:51:05 Error: ownerId:5
+2014-04-19 11:51:05 Error: className:Stages
+2014-04-19 11:51:05 Error: data:Array
+(
+    [user_id] => 44
+    [stage_id] => 1
+    [progress] => 7
+    [state] => 1
+    [delete_flg] => 0
+    [created] => 2014-04-16 10:35:47
+    [modified] => 2014-04-19 10:49:01
+    [quest_id] => 1
+    [stage_title] => 女教師に挨拶！
+    [use_act] => 1
+    [prob_get] => 80
+    [enemy_id] => 1
+    [Quest] => Array
+        (
+            [quest_id] => 1
+            [quest_title] => 女教師に隠された秘蜜
+            [quest_detail] => 早速ですが、いきなり実戦をこなしたあなたに対し、本格的な経験を積ませたいとの事で、ステキな女教師が派遣されたとの事です…というのは表向きで、実はこの美女が、エロイーズの因子を持っていると情報が入りました。レクチャーを受けつつ【鎮激】しましょう！
+            [detail_before1] => 初の実戦をこなしたあなたに対し、本格的な経験を積ませたいと、女教師が派遣されました。ですが、実はこの美女が、エロイーズの因子を持っているとの情報が入っています…
+            [detail_before2] => あなたの前に現れた女教師…【鎮激】の力を確かめるテスト役ですが、どうやらエロイーズ因子の持ち主でもある模様です。
+            [detail_after] => 職務に真面目で魅力的な人にも、エロイーズの因子は眠っている…戦いははじまったばかりです。今回は話の分かる先生でよかったですが、今後もすんなりいくかどうかは未知数といったところですね。ともあれ、お疲れ様でした！今回のミッションを通じて、あなたもあなたの【鎮激】も、一人前と認められたことでしょう…私も引き続きサポートして参りますので、今後ともよろしくお願いいたしますね！
+            [delete_flg] => 0
+        )
+
+    [Enemy] => Array
+        (
+            [enemy_id] => 1
+            [card_name] => 一ヶ谷 かほり
+            [hp] => 50
+            [atk] => 50
+            [def] => 50
+            [skill_id] => 1
+            [skill_level] => 20
+            [before_words] => あなたが期待のルーキー君かしら？ぱっと見はともかく、あっちの方は凄いのかしらね？とりあえず、テストさせてもらうわね！
+            [after_win_words] => 確かになかなかの物だわ…私の体をこんなにも熱くさせるなんて…このままでは…あれ？なんで私、そんな風に考えたのかしら？
+            [after_lose_words] => 
+            [delete_flg] => 0
+        )
+
+)
+
+2014-04-19 11:51:05 Error: main_params:{"stage_id":"1","quest_id":"1","progress":"7","state":"1"}
+2014-04-19 11:51:12 Error: ownerId:5
+2014-04-19 11:51:12 Error: className:Stages
+2014-04-19 11:51:12 Error: aaaaaaaaaaaaaa:
+2014-04-19 11:51:12 Error: bbbbbbbbbbbbbbbb:
+2014-04-19 11:51:12 Error: userId;:44
+2014-04-19 11:51:12 Error: actCheck:
+2014-04-19 11:51:12 Error: act:99
+2014-04-19 11:51:12 Error: use_act:
+2014-04-19 11:51:12 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 49
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-19 11:51:12
+)
+
+2014-04-19 11:51:13 Error: ownerId:5
+2014-04-19 11:51:13 Error: className:File
+2014-04-19 11:51:13 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-19 12:41:10 Error: ownerId:
+2014-04-19 12:41:10 Error: className:File
+2014-04-19 12:41:10 Error: ownerId:
+2014-04-19 12:41:10 Error: className:Stages
+2014-04-19 12:42:22 Error: ownerId:
+2014-04-19 12:42:22 Error: className:Stages
+2014-04-19 13:55:02 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-19 13:55:02 Error: ownerId:
+2014-04-19 13:55:02 Error: className:CakeError
+2014-04-19 13:55:02 Error: userIdErr:0
+2014-04-19 13:55:02 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-19 13:55:02 Error: ownerId:
+2014-04-19 13:55:02 Error: className:Errors
+2014-04-19 13:59:13 Error: ownerId:
+2014-04-19 13:59:13 Error: className:SnsUsers
+2014-04-19 15:44:47 Error: ownerId:
+2014-04-19 15:44:47 Error: className:SnsUsers
+2014-04-19 15:44:48 Error: ownerId:
+2014-04-19 15:44:48 Error: className:Errors
+2014-04-19 18:39:22 Error: ownerId:
+2014-04-19 18:39:22 Error: className:SnsUsers
+2014-04-19 18:39:29 Error: ownerId:
+2014-04-19 18:39:29 Error: className:Errors
+2014-04-19 22:28:22 Error: ownerId:
+2014-04-19 22:28:22 Error: className:SnsUsers
+2014-04-19 22:28:29 Error: ownerId:
+2014-04-19 22:28:29 Error: className:Errors
+2014-04-20 02:57:42 Error: ownerId:
+2014-04-20 02:57:42 Error: className:SnsUsers
+2014-04-20 02:57:43 Error: ownerId:
+2014-04-20 02:57:43 Error: className:SnsUsers
+2014-04-20 03:21:41 Error: ownerId:
+2014-04-20 03:21:41 Error: className:SnsUsers
+2014-04-20 12:56:18 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-20 12:56:18 Error: ownerId:
+2014-04-20 12:56:18 Error: className:CakeError
+2014-04-20 12:56:18 Error: userIdErr:0
+2014-04-20 12:56:18 Error: Errors&&&&&&&&&&&&&&&&&&&&&&&&&&&&&:
+2014-04-20 12:56:18 Error: ownerId:
+2014-04-20 12:56:18 Error: className:Errors
+2014-04-20 13:00:41 Error: ownerId:
+2014-04-20 13:00:41 Error: className:SnsUsers

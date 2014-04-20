@@ -409,7 +409,7 @@ input.btn_submit {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: 485px;
+    top: 500px;
     line-height: 0;
     height: 220px;
     width: 320px;
@@ -418,13 +418,13 @@ input.btn_submit {
     position: absolute;
     top: 0px;
     height: 20px;
-    width: 250px;
+    width: 400px;
 }
 .progQuestMain {
     position: absolute;
     margin: 0 auto;
     top: 20px;
-    left: 55px;
+    left: 85px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
@@ -435,13 +435,13 @@ input.btn_submit {
     position: absolute;
     top: 30px;
     height: 20px;
-    width: 50px;
+    width: 100px;
 }
 .progQuestAct {
     position: absolute;
     margin: 0 auto;
     top: 50px;
-    left: 55px;
+    left: 85px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
@@ -452,13 +452,13 @@ input.btn_submit {
     position: absolute;
     top: 60px;
     height: 20px;
-    width: 50px;
+    width: 100px;
 }
 .progQuestExp {
     position: absolute;
     margin: 0 auto;
     top: 80px;
-    left: 55px;
+    left: 85px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
@@ -469,7 +469,7 @@ input.btn_submit {
     position: absolute;
     top: 90px;
     height: 20px;
-    width: 50px;
+    width: 100px;
 }
 
 /**
@@ -555,15 +555,33 @@ input.btn_submit {
 
 }
 
+/**
+ * クエスト関連
+ */
+/** クエスト基本 */
+.stagesMain {
+    height:980px;
+}
+
 /** クエストの進行ボタン */
 .btnQuestProg {
     left: 103px;
-    top: 450px;
+    top: 470px;
     position: relative;
 }
 .btnQuestNotProg {
     left: 0px;
     top: 390px;
+    position: relative;
+}
+.btnQuestProgBoss {
+    left: 103px;
+    top: 480px;
+    position: relative;
+}
+.btnQuestNotProgBoss {
+    left: 0px;
+    top: 420px;
     position: relative;
 }
 .strQuestProg {
@@ -576,7 +594,7 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 450px;
+    top: 473px;
     position: relative;
 }
 .strQuestBoss {
@@ -595,8 +613,14 @@ input.btn_submit {
 }
 .lotResultDataQuest {
     position: absolute;
+    float:left;
     top: 370px;
-    left: 10px;
+    left: 15px;
+}
+.strLotResultDataQuest {
+    position: absolute;
+    top: 450px;
+    left: 200px;
 }
 
 /** クエストボスバトル */
