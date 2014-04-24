@@ -87,13 +87,28 @@ interpreter.prototype.セリフ = function(args) {
   textLayer.addChild(name);
   this.name = name;
 
-  var text = new Label(args[1]);
+  //var text = new Label(args[1]);
+  var str  = args[1];
+  var text = new Label();
   text.font  = "16px monospace";
   text.color = "rgb(255, 255, 255)";
   text.y     = 320 - 32 * 2;
   text.width = 320;
 
   textLayer.addChild(text);
+
+  var i = 0;
+  var addSel = 0;
+  text.onenterframe= function()
+  {
+      if (undefined != str[i]) {
+          text.text += str[i];
+          i++;
+      }
+      if (undefined == str[i] && 0 == addSel) {
+          addSel = 1; 
+      }
+  }
   this.text = text;
 }
 
@@ -301,7 +316,7 @@ window.onload = function() {
     var save = coer.memory.player.data;
     if (save.scene == null) save.scene = 'start';
     if (save.variables == null) save.variables = [];
-    save.scene = 'start';
+//    save.scene = 'start';
     
     // データ復元
     for (var i in save.variables) {
@@ -342,7 +357,6 @@ window.onload = function() {
       coer.memory.update();
     });
     savelabel.addEventListener('enterframe', function(e) {
- console.log('###########################################################################'); 
       this.y =  0; // セーブラベルを見える位置へ
     });
     coer.rootScene.addChild(savelabel);
