@@ -117124,3 +117124,942 @@ Stack Trace:
 2014-04-20 12:56:18 Error: className:Errors
 2014-04-20 13:00:41 Error: ownerId:
 2014-04-20 13:00:41 Error: className:SnsUsers
+2014-04-21 03:42:51 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-21 06:18:29 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-21 12:42:27 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-21 18:02:07 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-22 00:20:39 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-22 14:29:43 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-22 20:23:15 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/6
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-23 07:47:14 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-23 17:28:12 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-23 19:27:15 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-23 22:57:36 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 06:50:25 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 10:51:44 Error: [MissingControllerException] Controller class AboutController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/About/
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::enchant.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant.js',
+)
+Request URL: /index.php/Stages/enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::scenario.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'scenario.js',
+)
+Request URL: /index.php/Stages/scenario.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::nineleap.enchant.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'nineleap.enchant.js',
+)
+Request URL: /index.php/Stages/nineleap.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::ui.enchant.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'ui.enchant.js',
+)
+Request URL: /index.php/Stages/ui.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::memory.enchant.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'memory.enchant.js',
+)
+Request URL: /index.php/Stages/memory.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:30:17 Error: [MissingActionException] Action StagesController::game.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'game.js',
+)
+Request URL: /index.php/Stages/game.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/nineleap.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/ui.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/memory.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::scenario.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'scenario.js',
+)
+Request URL: /index.php/Stages/scenario.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:44:57 Error: [MissingActionException] Action StagesController::game.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'game.js',
+)
+Request URL: /index.php/Stages/game.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/ui.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::game.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'game.js',
+)
+Request URL: /index.php/Stages/game.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/nineleap.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::enchant() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'enchant',
+)
+Request URL: /index.php/Stages/enchant/memory.enchant.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:45:04 Error: [MissingActionException] Action StagesController::scenario.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'scenario.js',
+)
+Request URL: /index.php/Stages/scenario.js
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 12:46:33 Error: [MissingControllerException] Controller class EnchantController could not be found.
+Exception Attributes: array (
+  'class' => 'EnchantController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/enchant/memory.enchant.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:46:33 Error: [MissingControllerException] Controller class EnchantController could not be found.
+Exception Attributes: array (
+  'class' => 'EnchantController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/enchant/enchant.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:46:33 Error: [MissingControllerException] Controller class Game.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Game.jsController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/game.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:46:33 Error: [MissingControllerException] Controller class EnchantController could not be found.
+Exception Attributes: array (
+  'class' => 'EnchantController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/enchant/nineleap.enchant.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:46:33 Error: [MissingControllerException] Controller class EnchantController could not be found.
+Exception Attributes: array (
+  'class' => 'EnchantController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/enchant/ui.enchant.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 12:46:34 Error: [MissingControllerException] Controller class Scenario.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Scenario.jsController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/scenario.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 13:00:46 Error: [MissingControllerException] Controller class EnchantController could not be found.
+Exception Attributes: array (
+  'class' => 'EnchantController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/enchant/enchant.js
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::font0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'font0.png',
+)
+Request URL: /index.php/Stages/font0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::start.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'start.png',
+)
+Request URL: /index.php/Stages/start.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::pad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'pad.png',
+)
+Request URL: /index.php/Stages/pad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::apad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'apad.png',
+)
+Request URL: /index.php/Stages/apad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::icon0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'icon0.png',
+)
+Request URL: /index.php/Stages/icon0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/school.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::end.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'end.png',
+)
+Request URL: /index.php/Stages/end.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::indicator.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'indicator.png',
+)
+Request URL: /index.php/Stages/indicator.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/entrance.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/toilet.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:45 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/classroom.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/passage.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Like.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Normal.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Dislike.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Normal.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Dislike.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Like.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara3.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:46 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_angry.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::apad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'apad.png',
+)
+Request URL: /index.php/Stages/apad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::pad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'pad.png',
+)
+Request URL: /index.php/Stages/pad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::icon0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'icon0.png',
+)
+Request URL: /index.php/Stages/icon0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::start.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'start.png',
+)
+Request URL: /index.php/Stages/start.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::font0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'font0.png',
+)
+Request URL: /index.php/Stages/font0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:51 Error: [MissingActionException] Action StagesController::indicator.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'indicator.png',
+)
+Request URL: /index.php/Stages/indicator.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/school.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::end.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'end.png',
+)
+Request URL: /index.php/Stages/end.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/passage.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/entrance.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/classroom.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Like.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::bg() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'bg',
+)
+Request URL: /index.php/Stages/bg/toilet.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Normal.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Like.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara1_Dislike.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Normal.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara3.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_Dislike.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:01:52 Error: [MissingActionException] Action StagesController::chara() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'chara',
+)
+Request URL: /index.php/Stages/chara/chara2_angry.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::pad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'pad.png',
+)
+Request URL: /index.php/Stages/pad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::apad.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'apad.png',
+)
+Request URL: /index.php/Stages/apad.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::start.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'start.png',
+)
+Request URL: /index.php/Stages/start.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::icon0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'icon0.png',
+)
+Request URL: /index.php/Stages/icon0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::end.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'end.png',
+)
+Request URL: /index.php/Stages/end.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::font0.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'font0.png',
+)
+Request URL: /index.php/Stages/font0.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:09:53 Error: [MissingActionException] Action StagesController::indicator.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'indicator.png',
+)
+Request URL: /index.php/Stages/indicator.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:14:27 Error: [MissingActionException] Action StagesController::start.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'start.png',
+)
+Request URL: /index.php/Stages/start.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:14:27 Error: [MissingActionException] Action StagesController::indicator.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'indicator.png',
+)
+Request URL: /index.php/Stages/indicator.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:14:27 Error: [MissingActionException] Action StagesController::end.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'end.png',
+)
+Request URL: /index.php/Stages/end.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-24 13:20:06 Error: [MissingActionException] Action StagesController::indicator.png() could not be found.
+Exception Attributes: array (
+  'controller' => 'StagesController',
+  'action' => 'indicator.png',
+)
+Request URL: /index.php/Stages/indicator.png
+Stack Trace:
+#0 /var/www/asns/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
