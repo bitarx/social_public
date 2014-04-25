@@ -200,6 +200,60 @@ class UserDeckCard extends AppModel {
     }
 
     /**
+     * ユーザデッキコスト取得
+     *
+     * @author imanishi
+     * @param int $userId
+     */
+    public function getCost ($userId, $kind = 1) {
+
+        $joins = array(
+            array('table' => 'user_decks',
+                'alias' => 'UserDeck',
+                'type' => 'inner',
+                'conditions' => array(
+                    'UserDeck.user_deck_id = UserDeckCard.user_deck_id',
+                ),
+            ),
+            array('table' => 'user_cards',
+                'alias' => 'UserCard',
+                'type' => 'left',
+                'conditions' => array(
+                    'UserDeckCard.user_card_id = UserCard.user_card_id',
+                ),
+            ),
+            array('table' => 'cards',
+                'alias' => 'Card',
+                'type' => 'left',
+                'conditions' => array(
+                    'UserCard.card_id = Card.card_id',
+                ),
+            ),
+            array('table' => 'skills',
+                'alias' => 'Skill',
+                'type' => 'left',
+                'conditions' => array(
+                    'Card.skill_id = Skill.skill_id',
+                ),
+            ),
+        );
+        $where = array(
+           'UserDeck.user_id' => $userId
+        ,  'UserDeck.kind' => $kind
+        );
+        $order = array();
+        $field = array('Card.card_cost');
+        
+        $list = $this->getAllFind($where, $field, 'all', $order, 0, 0, $recu = -1, $joins);
+        $cost = 0;
+        foreach ($list as $val) {
+            $cost += $val['card_cost'];
+        }
+
+        return $cost;
+    }
+
+    /**
      * デッキ登録
      *
      * @author imanishi 

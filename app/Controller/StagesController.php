@@ -504,10 +504,26 @@ class StagesController extends ApiController {
                 $levelUp = 0;
                 $getExp = $this->Common->lotRange($userStageData['use_act'], $range);
                 $userParam['exp'] += $getExp;
+
+                // レベルアップ
+                $actMaxDiff  = 0;
+                $costAtkDiff = 0;
                 if (100 < $userParam['exp']) {
                     $userParam['exp'] = 0;
                     $userParam['level']++;
                     $levelUp = 1;
+
+                    // レベルアップ処理
+                    $actMaxBef  = $userParam['act_max'];
+                    $costAtkBef = $userParam['cost_atk'];
+
+                    $userParam['act_max'] = ceil($userParam['act_max'] * 1.1);
+                    $userParam['cost_atk_max'] = ceil($userParam['cost_atk'] * 1.1);
+                    $actMaxDiff  = $userParam['act_max'] - $actMaxBef;
+                    $costAtkDiff = $userParam['cost_atk'] - $costAtkBef;
+
+                    // 行動力全回復
+                    $userParam['act'] = $userParam['act_max']; 
                 }
                 $this->UserParam->setUserParams($userId, $userParam);
 
@@ -517,16 +533,18 @@ class StagesController extends ApiController {
                     'result'   => 1
                 ,   'progress' => $data['progress']     
                 ,   'kind'     => $lotData['kind']
-                ,   'target'   => $lotData['target']     // 取得対象のid
-                ,   'num'      => $lotData['num']        // 取得対象の個数（金額）
+                ,   'target'   => $lotData['target']   // 取得対象のid
+                ,   'num'      => $lotData['num']      // 取得対象の個数（金額）
                 ,   'exp'      => $userParam['exp']
                 ,   'act'      => $userParam['act']      
-                ,   'not_act'  => $notAct                // 行動力切れの場合1
-                ,   'level'    => $userParam['level']    // レベル
-                ,   'level_up' => $levelUp               // レベルアップの場合1
-                ,   'stage_clear' => $stageClear         // ステージクリアの場合1 
-                ,   'stage_id' => $data['stage_id']      // ステージID
-                ,   'name'     => $targetData['name']    // 入手物の名前
+                ,   'act_max_diff'   => $actMaxDiff    // 前のレベルとの差分
+                ,   'cost_atk_diff'  => $costAtkDiff   // 前のレベルとの差分
+                ,   'not_act'  => $notAct              // 行動力切れの場合1
+                ,   'level'    => $userParam['level']  // レベル
+                ,   'level_up' => $levelUp             // レベルアップの場合1
+                ,   'stage_clear' => $stageClear       // ステージクリアの場合1 
+                ,   'stage_id' => $data['stage_id']    // ステージID
+                ,   'name'     => $targetData['name']  // 入手物の名前
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 

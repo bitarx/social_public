@@ -118063,3 +118063,3062 @@ Stack Trace:
 #1 /var/www/asns/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(StagesController), Object(CakeRequest), Object(CakeResponse))
 #2 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-04-24 21:31:06 Error: [MissingControllerException] Controller class ArchivesController could not be found.
+Exception Attributes: array (
+  'class' => 'ArchivesController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/archives/5
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 01:44:44 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 01:44:58 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 01:45:29 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 01:45:36 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 01:45:49 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 06:35:49 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 08:41:17 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 99
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 50
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:41:17
+)
+
+2014-04-25 08:41:18 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 08:41:19 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 98
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 50
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:41:19
+)
+
+2014-04-25 08:41:20 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 50
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:41:20
+)
+
+2014-04-25 08:41:31 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 52
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:41:31
+)
+
+2014-04-25 08:48:36 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 97
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 54
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:48:36
+)
+
+2014-04-25 08:48:38 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 96
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 55
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:48:38
+)
+
+2014-04-25 08:48:39 Error: aryData:Array
+(
+    [user_id] => 44
+    [money] => 987536
+    [act] => 95
+    [act_max] => 100
+    [cost_atk] => 10
+    [cost_def] => 100
+    [level] => 1
+    [exp] => 57
+    [win] => 0
+    [lose] => 0
+    [delete_flg] => 0
+    [created] => 0000-00-00 00:00:00
+    [modified] => 2014-04-25 08:48:39
+)
+
+2014-04-25 08:53:33 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 280
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 08:53:33 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 08:53:33 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 11:13:56 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 11:13:56 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 11:26:38 Error: [MissingControllerException] Controller class Robots.txtController could not be found.
+Exception Attributes: array (
+  'class' => 'Robots.txtController',
+  'plugin' => NULL,
+)
+Request URL: /index.php/robots.txt
+Stack Trace:
+#0 /var/www/asns/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-25 12:03:45 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:03:45 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:04:00 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:04:00 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:04:05 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:04:05 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:04:27 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:04:27 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:04:51 Error: over:1
+2014-04-25 12:04:52 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:04:52 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:05:23 Error: over:1
+2014-04-25 12:05:23 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:05:23 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:06:20 Error: over:1
+2014-04-25 12:06:20 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:06:20 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:06:31 Error: over:1
+2014-04-25 12:06:31 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:06:31 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:06:44 Notice: Notice (8): Undefined index: cost_atk_max in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 163]
+Trace:
+UserDeckCardsController::init() - APP/Controller/UserDeckCardsController.php, line 163
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:06:44 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:164:userId:44
+2014-04-25 12:06:44 Notice: Notice (8): Undefined variable: selectDeckCard in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 130]
+Trace:
+UserDeckCardsController::initList() - APP/Controller/UserDeckCardsController.php, line 130
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:06:44 Error: over:1
+2014-04-25 12:06:45 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:06:59 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:157:userId:44
+2014-04-25 12:14:03 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:157:userId:44
+2014-04-25 12:16:11 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:157:userId:44
+2014-04-25 12:17:02 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 280
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:17:03 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:17:03 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:17:19 Error: over:0
+2014-04-25 12:17:20 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:17:20 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:17:41 Notice: Notice (8): Undefined index: cost_atk_max in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 163]
+Trace:
+UserDeckCardsController::init() - APP/Controller/UserDeckCardsController.php, line 163
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:17:41 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:164:userId:44
+2014-04-25 12:17:42 Notice: Notice (8): Undefined variable: selectDeckCard in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 130]
+Trace:
+UserDeckCardsController::initList() - APP/Controller/UserDeckCardsController.php, line 130
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:17:42 Error: over:1
+2014-04-25 12:17:42 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:27:56 Error: over:0
+2014-04-25 12:27:57 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:27:57 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:28:20 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:28:20 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:28:20 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:28:20 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:38:01 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:38:02 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:38:02 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:38:02 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:39:34 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:39:35 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:39:35 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:39:35 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:39:46 Notice: Notice (8): Undefined variable: selectDeckCard in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 136]
+Trace:
+UserDeckCardsController::initList() - APP/Controller/UserDeckCardsController.php, line 136
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:39:46 Error: over:0
+2014-04-25 12:39:47 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:39:56 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:163:userId:44
+2014-04-25 12:42:15 Notice: Notice (8): Undefined variable: selectDeckCard in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 136]
+Trace:
+UserDeckCardsController::initList() - APP/Controller/UserDeckCardsController.php, line 136
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:42:15 Error: over:0
+2014-04-25 12:42:15 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:42:25 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:42:25 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:42:25 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:42:25 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:42:54 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:42:54 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"1"}
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+            [params] => {"user_deck_id":"23","deck_number":"2"}
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"3"}
+        )
+
+)
+
+2014-04-25 12:42:55 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:42:55 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:42:55 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:46:38 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+)
+
+2014-04-25 12:46:38 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"1"}
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+            [params] => {"user_deck_id":"23","deck_number":"2"}
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"3"}
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"4"}
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"5"}
+        )
+
+)
+
+2014-04-25 12:46:39 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:46:39 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:46:39 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:46:41 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+)
+
+2014-04-25 12:46:41 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"1"}
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+            [params] => {"user_deck_id":"23","deck_number":"2"}
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"3"}
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"4"}
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"5"}
+        )
+
+)
+
+2014-04-25 12:46:41 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:46:41 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:46:41 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:46:43 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+        )
+
+)
+
+2014-04-25 12:46:43 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"1"}
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+            [params] => {"user_deck_id":"23","deck_number":"2"}
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"3"}
+        )
+
+    [3] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 4
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"4"}
+        )
+
+    [4] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 5
+            [user_card_id] => 
+            [delete_flg] => 
+            [created] => 
+            [modified] => 
+            [user_id] => 
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 
+            [hp] => 
+            [hp_max] => 
+            [atk] => 
+            [def] => 
+            [level] => 
+            [exp] => 
+            [skill_level] => 
+            [skill_exp] => 
+            [card_name] => 
+            [card_title] => 
+            [height] => 
+            [weight] => 
+            [size] => 
+            [blood] => 
+            [rare_level] => 
+            [card_cost] => 
+            [attr] => 
+            [card_hp] => 
+            [card_atk] => 
+            [card_def] => 
+            [card_level] => 
+            [skill_id] => 
+            [card_words] => 
+            [card_detail] => 
+            [skill_name] => 
+            [effect] => 
+            [updown] => 
+            [target] => 
+            [percent] => 
+            [skill_words] => 
+            [params] => {"user_deck_id":"23","deck_number":"5"}
+        )
+
+)
+
+2014-04-25 12:46:43 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:46:43 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:46:43 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:47:01 Error: over:0
+2014-04-25 12:47:01 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:51:34 Error: UserCardList:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+        )
+
+)
+
+2014-04-25 12:51:34 Error: aryData:Array
+(
+    [0] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 1
+            [user_card_id] => 288
+            [delete_flg] => 0
+            [created] => 2014-04-12 16:44:50
+            [modified] => 2014-04-12 17:44:56
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 15
+            [hp] => 2000
+            [hp_max] => 2000
+            [atk] => 150
+            [def] => 200
+            [level] => 1
+            [exp] => 36
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 4
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 2000
+            [card_atk] => 150
+            [card_def] => 200
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => アイドルなのにっ…けどっ…おちんちんっ…気持ちいいのっ…声、出ちゃう…誰かに聞かれたら…んっ…イくっ…
+            [card_detail] => 押しも押されぬ人気アイドル。ストレスをＨで発散するようになって、活動のキレにさらに磨きがかかった模様。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"1"}
+        )
+
+    [1] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 2
+            [user_card_id] => 366
+            [delete_flg] => 0
+            [created] => 2014-04-25 08:48:38
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 28
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 80
+            [def] => 120
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => 浅黄
+            [card_title] => [夜のご奉仕]
+            [height] => 152
+            [weight] => 49
+            [size] => B84 W59 H84 Dカップ
+            [blood] => AB型
+            [rare_level] => 1
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 500
+            [card_atk] => 80
+            [card_def] => 120
+            [card_level] => 20
+            [skill_id] => 10
+            [card_words] => 私を長期で雇うというのはあなたですか？それでは今日から私の御主人様はあなた様です。宜しくお願いします。
+            [card_detail] => クールで無感情な万能メイド。メイドカフェの給仕だけではなく、金持ち相手の出張メイドとしても働いている。
+            [skill_name] => お帰りなさいませ
+            [effect] => 1
+            [updown] => 1
+            [target] => 1
+            [percent] => 10
+            [skill_words] => 自分の防御力を小アップ
+            [params] => {"user_deck_id":"23","deck_number":"2"}
+        )
+
+    [2] => Array
+        (
+            [user_deck_id] => 23
+            [deck_number] => 3
+            [user_card_id] => 279
+            [delete_flg] => 0
+            [created] => 0000-00-00 00:00:00
+            [modified] => 0000-00-00 00:00:00
+            [user_id] => 44
+            [kind] => 1
+            [user_deck_name] => 
+            [card_id] => 13
+            [hp] => 0
+            [hp_max] => 0
+            [atk] => 0
+            [def] => 0
+            [level] => 1
+            [exp] => 0
+            [skill_level] => 1
+            [skill_exp] => 0
+            [card_name] => つぼみ
+            [card_title] => [絶対美少女]
+            [height] => 163
+            [weight] => 47
+            [size] => B76 W53 H75 Bカップ
+            [blood] => A型
+            [rare_level] => 2
+            [card_cost] => 1
+            [attr] => 1
+            [card_hp] => 1000
+            [card_atk] => 100
+            [card_def] => 150
+            [card_level] => 20
+            [skill_id] => 5
+            [card_words] => あなたが新しいスポンサーの人？言っておくけど、枕とかは絶対イヤだからね！絶対よ！わかった？わかってる？
+            [card_detail] => 押しも押されぬ人気アイドル。小さい頃から夢を叶えるために厳しいレッスンにも頑張って耐えてきた。
+            [skill_name] => アイドルマスタリー
+            [effect] => 2
+            [updown] => 1
+            [target] => 1
+            [percent] => 30
+            [skill_words] => 自分の攻撃力を中アップ
+            [params] => {"user_deck_id":"23","deck_number":"3"}
+        )
+
+)
+
+2014-04-25 12:51:35 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:51:35 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 12:51:35 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:52:17 Notice: Notice (8): Undefined variable: selectDeckCard in [/var/www/asns/app/Controller/UserDeckCardsController.php, line 137]
+Trace:
+UserDeckCardsController::initList() - APP/Controller/UserDeckCardsController.php, line 137
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 185
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 160
+[main] - APP/webroot/index.php, line 108
+
+2014-04-25 12:52:17 Error: over:0
+2014-04-25 12:52:18 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:52:27 Error: /var/www/asns/app/Controller/UserDeckCardsController.php:164:userId:44
+2014-04-25 12:55:36 Error: name:kok/var/www/asns/app/Private/card/card_m_28.jpg
+2014-04-25 12:55:36 Error: name:kok/var/www/asns/app/Private/card/card_m_13.jpg
+2014-04-25 12:55:37 Error: name:kok/var/www/asns/app/Private/card/card_m_15.jpg
+2014-04-25 13:55:15 Error: name:kok/var/www/asns/app/Private/card/card_m_8.jpg

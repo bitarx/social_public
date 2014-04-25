@@ -8,6 +8,11 @@
         設定なし
         </div>
     <{/if}> 
+    <{if !empty($over)}>
+        <div class="costOver">
+           コストオーバーの為設置できません。 
+        </div>
+    <{/if}> 
     <div class="btnDeckBack">
         <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
         <a href="<{$smarty.const.BASE_URL}>UserDeckCards/index">

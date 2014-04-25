@@ -822,6 +822,14 @@ display: block;
     left: 100px;
     font-size: 25px;
 }
+.costOver {
+    position: relative;
+    text-align:center;
+    top: 15px;
+    font-size: 25px;
+    height:35px;
+    color:#FF1493;
+}
 
 
 /** マイページ */

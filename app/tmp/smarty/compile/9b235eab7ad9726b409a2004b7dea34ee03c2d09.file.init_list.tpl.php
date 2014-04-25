@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-04-15 19:32:20
+<?php /* Smarty version Smarty-3.1.16, created on 2014-04-25 12:39:46
          compiled from "/var/www/asns/app/View/UserDeckCards/init_list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:556069463534cc50de72943-81498282%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9b235eab7ad9726b409a2004b7dea34ee03c2d09' => 
     array (
       0 => '/var/www/asns/app/View/UserDeckCards/init_list.tpl',
-      1 => 1397552872,
+      1 => 1398397019,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'data' => 0,
     'deck_number' => 0,
+    'over' => 0,
     'list' => 0,
   ),
   'has_nocache_code' => false,
@@ -36,6 +37,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         デッキ<?php echo $_smarty_tpl->tpl_vars['deck_number']->value;?>
 
         設定なし
+        </div>
+    <?php }?> 
+    <?php if (!empty($_smarty_tpl->tpl_vars['over']->value)) {?>
+        <div class="costOver">
+           コストオーバーの為設置できません。 
         </div>
     <?php }?> 
     <div class="btnDeckBack">

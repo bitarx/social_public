@@ -26,7 +26,6 @@ class UserDeckCardsController extends ApiController {
 	public function index() {
 
         $list = $this->UserDeckCard->getUserDeckData($this->userId );
-   $this->log('UserCardList:' . print_r($list, true)); 
         if (!empty($list)) {
             foreach ($list as &$val) {
                 $tmp = array(
@@ -90,6 +89,8 @@ class UserDeckCardsController extends ApiController {
         $userDeckId = isset($this->params['user_deck_id']) ? $this->params['user_deck_id'] : 0;
         // デッキナンバー
         $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
+        // コストオーバー
+        $over = isset($this->params['over']) ? $this->params['over'] : 0;
 
         // レア度ソート
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
@@ -131,6 +132,8 @@ class UserDeckCardsController extends ApiController {
         $this->set('user_card_id', $userDeckId);
         $this->set('deck_number', $deckNumber);
         $this->set('addParam', $addParam);
+    $this->log('over:'. $over); 
+        $this->set('over', $over);
     } 
 
     /**
@@ -152,6 +155,18 @@ class UserDeckCardsController extends ApiController {
            // パラメータ異常
            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
            $this->rd('errors', 'index', array('error' => 1)); 
+       }
+
+       // コストオーバー
+       $cost = $this->UserDeckCard->getCost($this->userId);
+       if ($this->userParam['cost_atk'] < $cost) {
+           $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+           $param = array(
+               'over' => 1
+           ,   'user_deck_id' => $userDeckId
+           ,   'deck_number'  => $deckNumber
+           );
+           $this->rd('UserDeckCards', 'initList', $param); 
        }
 
 
@@ -197,11 +212,14 @@ class UserDeckCardsController extends ApiController {
         $userDeckData = $this->UserDeck->getUserDeckData($this->userId);
         $userDeckId   = $userDeckData['user_deck_id'];
 
+        $cost = 0;
+
         $this->UserDeckCard->begin(); 
         try {  
             for ($i = 1; $i <= 5; $i++) {
                 $key = $i - 1;
-                if (!empty($list[$key]['user_card_id'])) {
+                $cost += isset($list[$key]['card_cost']) ? $list[$key]['card_cost']:0;
+                if (!empty($list[$key]['user_card_id']) && $cost <= $this->userParam['cost_atk']) {
                     $userCardId = $list[$key]['user_card_id'];
                 } else {
                     $userCardId = 0;
