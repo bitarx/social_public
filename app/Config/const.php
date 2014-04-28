@@ -8,7 +8,7 @@ define("DOMAIN","asns.jp");
 define("BASE_URL","http://" . DOMAIN . "/");
 define("IMG_URL", BASE_URL . "img/");
 define("FILEOUT_URL", BASE_URL . "File/outimage");
-define("ROOT_DIR", '/var/www/asns/');
+define("ROOT_DIR", '/var/www/social/');
 define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
 
 // カード最大所有枚数
