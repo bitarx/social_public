@@ -36,6 +36,7 @@ class QuestsController extends ApiController {
         }
 
         $list = $this->Quest->getQuestList($questId);
+
         $this->set('list', $list);
 /*
         $this->Quest->begin();

@@ -8,7 +8,7 @@ $(function () {
     dispRotResultQuest();
 });
 </script>
-<div class="stagesMain">
+<div class="stages">
 <{*
     <div>
        <{$data['Quest']['detail_before2']}> 
