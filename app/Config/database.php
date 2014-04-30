@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => 'asns.jp',
 		'login' => 'barx',
 		'password' => 'arx0505q',
 		'database' => 'eres',
@@ -75,7 +75,7 @@ class DATABASE_CONFIG {
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => 'asns.jp',
 		'login' => 'barx',
 		'password' => 'arx0505q',
 		'database' => 'test_eres',
