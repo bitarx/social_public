@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>ボスバトル</title>
-        <link rel=stylesheet type="text/css" href="css/evolution.css">
+        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
     </head>
-    <body>
+    <body id="body">
         <canvas id="mainCanvas" height="832" width="640"></canvas>
         <div id="skip">skip###########</div>
     </body>
@@ -22,10 +22,19 @@
     <script type="text/javascript">
       window.onload = function() {
         var imageLoadComplete = function() {
-          console.log("imageLoadComplete");
+            console.log("imageLoadComplete");
+            setTimeout("boss.main.skip()", 3200);
         }
         var contentsComplete = function() {
           console.log("contentsComplete");
+            var element = document.getElementById("body");
+            element.addEventListener("click", function(){
+                <{if $data.result == 2}>
+                    location.href = "comp";
+                <{else}>
+                    location.href = "scene";
+                <{/if}>
+            });
         }
 
         var canvasID = "mainCanvas";
@@ -134,7 +143,12 @@
 
         var el = document.getElementById( "skip" );
         el.addEventListener("click", function(){
-          boss.main.skip();
+            <{if $data.result == 2}>
+                location.href = "comp";
+            <{else}>
+                location.href = "scene";
+            <{/if}>
+//          boss.main.skip();
         }, false);
      };
 

@@ -23,7 +23,7 @@ class BattleComponent extends Component {
      */
     public function doBattleEnemy($selfCards, $targetCards, $kind, &$battleLogTurn) {
 
-        $battleLogTurn['targetCards_bf'] = $targetCards;
+//       $battleLogTurn['targetCards_bf'] = $targetCards;
         $num = 0;
         foreach ($selfCards as $val) {
             
@@ -37,7 +37,6 @@ class BattleComponent extends Component {
                 foreach ($targetCards as $target => $val) {
 
                     $targetData = $targetCards[$target]['UserCard'];
-$this->log('aryDataEnemy:' . print_r($targetData, true)); 
                     $battleLogTurn[$num]['targetData'] = array(
                         'card_id' => $targetData['card_id']
                     ,   'hp'      => $targetData['hp']
@@ -48,6 +47,17 @@ $this->log('aryDataEnemy:' . print_r($targetData, true));
                     $targetCards[$target]['UserCard']['hp'] -= $damage;
 
                     $num++;
+                }
+
+
+                foreach ($targetCards as $key => $val) {
+                    // HPがゼロになった場合
+                    if ($targetCards[$key]['UserCard']['hp'] <= 0) {
+                        unset($targetCards[$key]);
+                        $cnt = count($targetCards);
+$this->log('cnttttttttt:' . print_r($cnt, true)); 
+                        if ($cnt <= 0) break 2;
+                    }
                 }
 
             // プレイヤー攻撃
@@ -66,25 +76,28 @@ $this->log('aryDataPlayer:' . print_r($targetData, true));
                 $targetCards[$target]['UserCard']['hp'] -= $damage;
 
                 $num++;
+                
+                // 攻撃対象のHPがゼロになった場合
+                if ($targetCards[$target]['UserCard']['hp'] <= 0) {
+                    unset($targetCards[$target]);
+                    $cnt = count($targetCards);
+                    if ($cnt <= 0) break;
+
+                    $targets = array();
+                   
+                    foreach ($targetCards as $v) {
+                        $targets[] = $v; 
+                    }
+                    $targetCards = $targets;
+                }
 
             } else {
                 break;
             }
 
 
-            // 攻撃対象のHPがゼロになった場合
-            if ($targetCards[$target]['UserCard']['hp'] <= 0) {
-                unset($targetCards[$target]);
-                $cnt = count($targetCards);
-                if ($cnt <= 0) break;
-               
-                foreach ($targetCards as $v) {
-                    $targets[] = $v; 
-                }
-                $targetCards = $targets;
-            }
         }
-        $battleLogTurn['targetCards_af'] = $damage;
+//        $battleLogTurn['targetCards_af'] = $damage;
         return $targetCards;
     }
 

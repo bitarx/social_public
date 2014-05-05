@@ -239,6 +239,17 @@ boss.main = ( function() {
           _startTurn();
         }, 500 ) );
         break;
+      default:
+        _view.setNextArrow( false );
+        _allRemoveTimeout();
+        _scene = 2;
+        createjs.Tween.removeAllTweens();
+        _view.stopOpening();
+        _timeoutID.push( setTimeout( function( i ){
+          _startSkill();
+        }, 500 ) );
+        break;
+
     }
   }
 

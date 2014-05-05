@@ -179,8 +179,17 @@ class StagesController extends ApiController {
         $target = $this->Enemy->getEnemyData($targetId);
         $targetCards[]['UserCard'] = $target;
 
+        if (empty($targetCards[0]['UserCard'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => 2));
+        }
+
         // 攻撃側のデッキ取得
         $userCards = $this->UserDeck->getUserDeckData($this->userId);
+        if (empty($userCards['UserDeckCard'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => 2));
+        }
 
         $userCards = $userCards['UserDeckCard'];
 
@@ -220,20 +229,23 @@ class StagesController extends ApiController {
         
         // 1:攻撃側勝利 2:防御側勝利
         $winner = 1;
-        $turn = 0;
+        $count = 0;
         while(true) {
             
-            $targetCards = $this->Battle->doBattleEnemy($userCards, $targetCards, $kind = 1, $battleLog[$turn]);
+            $targetCards = $this->Battle->doBattleEnemy($userCards, $targetCards, $kind = 1, $battleLog[$count]);
             if (empty($targetCards)) break;
-            $turn++;
+            $count++;
 
-            $userCards = $this->Battle->doBattleEnemy($targetCards, $userCards, $kind = 2, $battleLog[$turn]);
+            $userCards = $this->Battle->doBattleEnemy($targetCards, $userCards, $kind = 2, $battleLog[$count]);
             if (empty($userCards)) {
                 $winner = 2;
                 break;
             }
-            $turn++;
+            $count++;
         }
+
+        $battleLog['winner'] = $winner;
+        $battleLog['count']   = $count;
 
         $battleLog = json_encode($battleLog);
 
