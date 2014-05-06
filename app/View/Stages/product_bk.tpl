@@ -111,8 +111,27 @@
 
         var enemySkillData = { words:"はじめまして! クッパです!!", type:4 };
 
-        var turn = <{$turn}>;
-
+        var turn = "<{$turn}>";
+<{*
+        var turn = [
+          {
+            enemyHP: [ 45000, 40000, 35000, 30000, 25000 ],
+            playerHP: [ 8000, 0, 0, 3000, 6000 ]
+          },
+          {
+            enemyHP: [ 20000, 15000, 10000, 5000, 100 ],
+            playerHP: [ 7000, 0, 0, 2500, 4000 ]
+          },
+          {
+            enemyHP: [ 0, 0, 0, 0, 0 ],
+            playerHP: [ 1000, 0, 0, 1000, 1000 ]
+          },
+          {
+            enemyHP: [ 0, 0, 0, 0, 0 ],
+            playerHP: [ 1000, 0, 0, 1000, 1000 ]
+          }
+        ]
+*}>
         boss.main.init(
           canvasID,
           fileName,

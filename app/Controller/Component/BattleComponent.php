@@ -56,7 +56,13 @@ class BattleComponent extends Component {
                         unset($targetCards[$key]);
                         $cnt = count($targetCards);
 $this->log('cnttttttttt:' . print_r($cnt, true)); 
-                        if ($cnt <= 0) break 2;
+                        if ($cnt <= 0) {
+                            $battleLogTurn[$num]['targetData'] = array(
+                                'card_id' => $targetData['card_id']
+                            ,   'hp'      => 0
+                            );
+                            break 2;
+                        }
                     }
                 }
 
@@ -81,7 +87,13 @@ $this->log('aryDataPlayer:' . print_r($targetData, true));
                 if ($targetCards[$target]['UserCard']['hp'] <= 0) {
                     unset($targetCards[$target]);
                     $cnt = count($targetCards);
-                    if ($cnt <= 0) break;
+                    if ($cnt <= 0) {
+                        $battleLogTurn[$num]['targetData'] = array(
+                            'enemy_id' => $targetData['enemy_id']
+                        ,   'hp'       => 0
+                        );
+                        break;
+                    }
 
                     $targets = array();
                    
@@ -155,6 +167,8 @@ $this->log('aryDataPlayer:' . print_r($targetData, true));
      */
     public function calcDamage($selfData, $targetData) {
         $multi = mt_rand(90 , 110) / 100;
+    $this->log('selfData:' . print_r($selfData, true)); 
+    $this->log('targetData:' . print_r($targetData, true)); 
         $base = (($selfData['atk'] * 2) * $multi) - ( $targetData['def'] * $multi );     
         if ($base <= 0) {
             $ret = 0;
@@ -163,7 +177,6 @@ $this->log('aryDataPlayer:' . print_r($targetData, true));
         }
 
         return $ret; 
-
     }
 
     /**

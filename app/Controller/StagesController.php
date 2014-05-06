@@ -195,6 +195,42 @@ class StagesController extends ApiController {
 
         $battleLog = array();
 
+        // 敵HP最大
+        $battleLog['enemy_max']   = $target['hp'];
+        // 敵HP初期値
+        $battleLog['enemy_cur']   = $target['hp'];
+
+        // カード１
+        $battleLog['card_id_1']   = isset($userCards[0]['UserCard']['card_id']) ? $userCards[0]['UserCard']['card_id']:0;
+        // カード１HP最大
+        $battleLog['card_id_1_max']   = isset($userCards[0]['UserCard']['hp_max']) ? $userCards[0]['UserCard']['hp_max']:0;
+        // カード１HP初期値
+        $battleLog['card_id_1_cur']   = isset($userCards[0]['UserCard']['hp']) ? $userCards[0]['UserCard']['hp']: 0;
+        // カード2
+        $battleLog['card_id_2']   = isset($userCards[1]['UserCard']['card_id']) ? $userCards[1]['UserCard']['card_id']:0;
+        // カード2HP最大
+        $battleLog['card_id_2_max']   = isset($userCards[1]['UserCard']['hp_max']) ? $userCards[1]['UserCard']['hp_max']:0;
+        // カード2HP初期値
+        $battleLog['card_id_2_cur']   = isset($userCards[1]['UserCard']['hp']) ? $userCards[1]['UserCard']['hp']: 0;
+        // カード3
+        $battleLog['card_id_3']   = isset($userCards[2]['UserCard']['card_id']) ? $userCards[2]['UserCard']['card_id']:0;
+        // カード3HP最大
+        $battleLog['card_id_3_max']   = isset($userCards[2]['UserCard']['hp_max']) ? $userCards[2]['UserCard']['hp_max']:0;
+        // カード3HP初期値
+        $battleLog['card_id_3_cur']   = isset($userCards[2]['UserCard']['hp']) ? $userCards[2]['UserCard']['hp']: 0;
+        // カード4
+        $battleLog['card_id_4']   = isset($userCards[3]['UserCard']['card_id']) ? $userCards[3]['UserCard']['card_id']:0;
+        // カード4HP最大
+        $battleLog['card_id_4_max']   = isset($userCards[3]['UserCard']['hp_max']) ? $userCards[3]['UserCard']['hp_max']:0;
+        // カード4HP初期値
+        $battleLog['card_id_4_cur']   = isset($userCards[3]['UserCard']['hp']) ? $userCards[3]['UserCard']['hp']: 0;
+        // カード5
+        $battleLog['card_id_5']   = isset($userCards[4]['UserCard']['card_id']) ? $userCards[4]['UserCard']['card_id']:0;
+        // カード5HP最大
+        $battleLog['card_id_5_max']   = isset($userCards[4]['UserCard']['hp_max']) ? $userCards[4]['UserCard']['hp']: 0;
+        // カード5HP初期値
+        $battleLog['card_id_5_cur']   = isset($userCards[4]['UserCard']['hp']) ? $userCards[4]['UserCard']['hp']: 0;
+
         // 攻撃側のスキル発動
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
@@ -244,8 +280,12 @@ class StagesController extends ApiController {
             $count++;
         }
 
+        // 勝者1:プレイヤー 2:敵
         $battleLog['winner'] = $winner;
+
+        // 要した攻撃回数（ターン数ではない）
         $battleLog['count']   = $count;
+
 
         $battleLog = json_encode($battleLog);
 
@@ -279,7 +319,35 @@ class StagesController extends ApiController {
         $this->layout = '';
 
         $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $data['log'] = json_decode($data['log'], true);
+        $enemy = $this->Enemy->getEnemyData($data['target']);
+ $this->log('LogData:' . print_r($data, true)); 
+        // 演出用ターン配列生成
+        $turn = array();
+        $i = 0;
+        foreach ($data['log'] as $key => $value) {
+            if (is_numeric($key)) {
+                $hp = array();
+                foreach ($value as $val) {
+                    $hp[] = $val['targetData']['hp'];
+                }
+
+                if ( isset($val['targetData']['enemy_id']) ) {
+                    // プレイヤーの攻撃
+                    $turn[$i]['enemyHP'] = $hp;
+                } else {
+                    // 敵の攻撃
+                    $turn[$i]['playerHP'] = $hp;
+                    $i++;
+                }
+            }
+        }
+
+        $turn = json_encode($turn);
+$this->log('Turn:' . print_r($turn, true)); 
         $this->set('data', $data);
+        $this->set('enemy', $enemy);
+        $this->set('turn', $turn);
 /*
         $fields = array('id');
         $where  = array();
