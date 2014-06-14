@@ -162,7 +162,7 @@ boss.main = ( function() {
       var playerHP = currentTurnData.playerHP[ i ];
 
       var playerDamage = _paramater.getParam( "playerData" )[ i ].current - playerHP;
-      if( playerDamage > 0 ) {
+      if( playerDamage >= 0 ) {
         if( playerHP != null ) {
           if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
             _view.playerDamage( i, _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, playerHP, playerDamage );
