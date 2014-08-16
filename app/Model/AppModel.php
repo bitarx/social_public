@@ -139,6 +139,10 @@ class AppModel extends Model {
                 $data = $row;
             } else {
                 foreach ($ret as $values) {
+                    if (!is_array($values)) {
+                        $data = $ret;
+                        break;
+                    }
                     $row = array();
                     foreach ($values as $val) {
                          $row = array_merge($row, $val);

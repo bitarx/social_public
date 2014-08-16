@@ -95,7 +95,7 @@ function dispRotResultQuest(data)
        // カード
        case "1":
            filename = 'card_get_on.png';
-           image = '<img src="' + BASE_URL + 'File/outimage?size=m&dir=card&target=' + data.target + '" width="160px">'; 
+           image = '<img src="' + BASE_URL + 'File/outimage?size=s&dir=card&target=' + data.target + '" width="160px">'; 
            str = data.name + 'が仲間に加わった！';
            break;
        // 金庫

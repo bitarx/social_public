@@ -1,5 +1,7 @@
 <div class="stages index">
-	<h2>Stages</h2>
+    <div>
+        <img src="<{$smarty.const.IMG_URL}>quest/prologue_<{$list[0]['quest_id']}>.jpg"> 
+    </div>
     <div>
         <{$list[0]['quest_detail']}> 
     </div>

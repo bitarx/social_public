@@ -1,6 +1,6 @@
 <div class="stages">
     <div>
-        <img src="<{$smarty.const.BASE_URL}>File/outimage?size=bf&dir=scene&target=<{$data.enemy_id}>" >
+        <img src="<{$smarty.const.IMG_URL}>enemy/enemy_<{$data.enemy_id}>.jpg" >
     </div>
     <div>
         <{$data.before_words}> 

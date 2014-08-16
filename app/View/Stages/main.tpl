@@ -9,11 +9,7 @@ $(function () {
 });
 </script>
 <div class="stages">
-<{*
-    <div>
-       <{$data['Quest']['detail_before2']}> 
-    </div>
-*}>
+     <img src="<{$smarty.const.IMG_URL}>quest/main_1.jpg">
 
     <{if !empty($boss)}> 
         <a href="conf?stage_id=<{$data.stage_id}>">
