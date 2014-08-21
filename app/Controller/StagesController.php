@@ -367,7 +367,9 @@ $this->log('Turn:' . print_r($turn, true));
         // 共通レイアウトは使わない
         $this->layout = '';
 
-        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $data = $this->Enemy->getEnemyData($log['target']);
+
         $this->set('data', $data);
 
     }

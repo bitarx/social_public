@@ -153,18 +153,15 @@ interpreter.prototype.オートジャンプ = function(arg) {
 // 「選択肢1」を選択すると「シーン名1」に指定したシーンにジャンプ
 // 「選択肢2」を選択すると「シーン名2」に指定したシーンにジャンプ
 interpreter.prototype.選択肢 = function(args) {
-console.log('select######################'); 
   var self = this;
-console.log(args[0]); 
   var str = args[0];
 //  var text = new Label(args[0]);
   var text = new Label();
-console.log(text); 
   text.font  = "16px monospace";
   text.color = "rgb(255,255,255)";
   text.backgroundColor = "rgba(0,0,0,0.6)";
-  text.y     = 320 - 32*3;
-  text.width = 320;
+  text.y     = 800 - 32*3;
+  text.width = 640;
   text.height = 32 * 3;
 
 //          text.text = str;
@@ -176,14 +173,19 @@ console.log(text);
   var select1 = new Label('【'+args[1]+'】');
   select1.font  = "16px monospace";
   select1.color = "rgb(255,125,0)";
-  select1.y     = 320 - 32*2;
-  select1.width = 320;
+//select1.y     = 320 - 32*2;
+  select1.y     = 800 - 32;
+  select1.x     = 570;
+  select1.width = 800;
   select1.addEventListener(Event.TOUCH_START, function(e) {
+    location.href = BASE_URL + 'Stages/comp';
+/*
     self.選択肢クリア();
     exec(eval(args[2]));
+*/
   });
   this.select1 = select1;
-
+/*
   var select2 = new Label('【'+args[3]+'】');
   select2.font  = "16px monospace";
   select2.color = "rgb(255,125,0)";
@@ -194,6 +196,7 @@ console.log(text);
     exec(eval(args[4]));
   });
   this.select2 = select2;
+*/
 
 
   var i = 0;
@@ -207,7 +210,7 @@ console.log(text);
       if (undefined == str[i] && 0 == addSel) {
           addSel = 1; 
           textLayer.addChild(select1);
-          textLayer.addChild(select2);
+//          textLayer.addChild(select2);
       }
   }
 
@@ -295,7 +298,7 @@ window.onload = function() {
   // 「interpreter」オブジェクトを生成する
   interpreter = new interpreter();
 
-  coer = new Core(320, 320);
+  coer = new Core(640, 800);
   coer.fps = 16;
   coer.preload(images);
 
