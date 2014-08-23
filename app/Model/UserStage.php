@@ -125,7 +125,7 @@ class UserStage extends AppModel {
         return $ret;
     }
 
-    public function getUserStageByEnemyId($userId, $enemyId , $recu = 2) {
+    public function getUserStageByEnemyId($userId, $enemyId ) {
 
         $fields = array();
         $order  = array();
@@ -139,16 +139,14 @@ class UserStage extends AppModel {
         );
 
         $data = $this->find($kind, $option);
-//   $this->log('aryData:' . print_r($data, true)); 
         return $data;
-        return 0;
     }
 
     /**
      * ユーザクエスト進捗を更新
      *
      * @author imanishi 
-     * @param int $userId
+     * @param int $data
      * @return array
      */
     public function initUserStage($data) {

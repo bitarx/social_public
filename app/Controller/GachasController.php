@@ -26,31 +26,28 @@ class GachasController extends ApiController {
 	public function index() {
 
         $list = $this->Gacha->getList();
+ $this->log($list); 
         $this->set('list', $list);
+	}
 
-/*
-        $this->Gacha->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->Gacha->save($values);
-            if (!$ret) {
-                throw new AppException('Gacha save failed :' . $this->name . '/' . $this->action);
-            }
+    /**
+     * 決済画面へ遷移前
+     *
+     * @author imanishi 
+     * @return json
+     */
+	public function api() {
 
-        } catch (AppException $e) {
-
-            $this->Gacha->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
+        // 不正
+        if ( empty($this->params['gacha_id']) ) {
+            $this->rd('errors', 'index', array('error' => 2));
         }
-        $this->Gacha->commit();
- */
+        $gachaId = $this->params['gacha_id'];
+
+
+        // 仮に飛ばす
+        $param = array('gacha_id' => $gachaId);
+        $this->rd('gachas', 'act', $param);
 	}
 
 

@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest');
 
     /**
      *　定数
@@ -172,8 +172,15 @@ class StagesController extends ApiController {
      * @return void
      */
     public function act() {
-        
+
         $targetId = $this->params['target_id'];
+
+        $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId );
+        // ブラウザバックなど不正操作
+        if (2 != $userStage['UserStage']['state']) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => 1));
+        }
 
         // 防御側のデッキ取得
         $target = $this->Enemy->getEnemyData($targetId);
@@ -297,6 +304,20 @@ class StagesController extends ApiController {
             $values[] = array($this->userId , $targetId, $winner, $battleLog);
             $this->BattleLog->registBattleLog($values);
 
+            // 勝利の場合ステータス変更
+            if ($winner == 1) {
+                $where = array('enemy_id' => $targetId);
+                $field = array('stage_id');
+                $data = $this->Stage->getAllFind($where, $field, 'first');
+
+                $value = array('state' => 3);
+                $where = array(
+                            'user_id' => $this->userId
+                        ,   'UserStage.stage_id' => $data['stage_id']
+                        );
+                $this->UserStage->updateAll($value, $where);
+            }
+
         } catch (AppException $e) { 
             $this->BattleLog->rollback(); 
             $this->log($e->errmes);
@@ -321,7 +342,7 @@ class StagesController extends ApiController {
         $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
         $data['log'] = json_decode($data['log'], true);
         $enemy = $this->Enemy->getEnemyData($data['target']);
- $this->log('LogData:' . print_r($data, true)); 
+
         // 演出用ターン配列生成
         $turn = array();
         $i = 0;
@@ -381,32 +402,12 @@ $this->log('Turn:' . print_r($turn, true));
      */
     public function comp() {
 
-        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
-        $this->set('data', $data);
+        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
 
-    }
-
-    /**
-     * クエスト完了
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function end() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 次のステージへ
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function next() {
+        // 勝利ではない
+        if (1 != $log['result']) {
+            $this->rd('errors', 'index', array('error' => 2)); 
+        }
 
         // 現在到達最大ステージ
         $stageId = $this->UserStage->getUserMaxStageId($this->userId);
@@ -426,8 +427,37 @@ $this->log('Turn:' . print_r($turn, true));
             return $this->rd('Errors', 'index', array('error'=> 2)); 
         } 
         $this->UserStage->commit(); 
-        $this->rd('Stages', 'main', array('stage_id' => $nextStageId)); 
+
+        $ending = $this->Enemy->judgeEnding($log['target']);
+        if (!$ending) {
+            // エピローグではない場合は次のステージへ
+            $this->rd('Stages', 'next');
+        } else {
+            // エピローグ
+            $this->rd('Stages', 'end');
+        }
+
     }
+
+    /**
+     * エピローグ
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function end() {
+
+        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+
+        // エピローグ
+        $where = array('enemy_id' => $log['target']);
+        $field = array();
+        $data  = $this->Stage->getAllFind($where, $field, 'first');
+ $this->log($data); 
+        $this->set('data', $data);
+
+    }
+
 
     /**
      * データ取得(更新不可)

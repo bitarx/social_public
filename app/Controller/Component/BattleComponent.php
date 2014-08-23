@@ -55,7 +55,6 @@ class BattleComponent extends Component {
                     if ($targetCards[$key]['UserCard']['hp'] <= 0) {
                         unset($targetCards[$key]);
                         $cnt = count($targetCards);
-$this->log('cnttttttttt:' . print_r($cnt, true)); 
                         if ($cnt <= 0) {
                             $battleLogTurn[$num]['targetData'] = array(
                                 'card_id' => $targetData['card_id']
@@ -70,7 +69,6 @@ $this->log('cnttttttttt:' . print_r($cnt, true));
             } else if ($kind = 1) {
                 $target = mt_rand(0, $targetNum);
                 $targetData = $targetCards[$target]['UserCard'];
-$this->log('aryDataPlayer:' . print_r($targetData, true)); 
 
                 $battleLogTurn[$num]['targetData'] = array(
                     'enemy_id' => $targetData['enemy_id']
@@ -167,8 +165,6 @@ $this->log('aryDataPlayer:' . print_r($targetData, true));
      */
     public function calcDamage($selfData, $targetData) {
         $multi = mt_rand(90 , 110) / 100;
-    $this->log('selfData:' . print_r($selfData, true)); 
-    $this->log('targetData:' . print_r($targetData, true)); 
         $base = (($selfData['atk'] * 2) * $multi) - ( $targetData['def'] * $multi );     
         if ($base <= 0) {
             $ret = 0;

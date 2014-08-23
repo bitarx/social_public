@@ -47,6 +47,5 @@
         <{$content_for_layout}>
     </div>
 <div id="errMes"></div>
-<a href="Stages/scene">シーンテスト</a>
 </body>
 </html>

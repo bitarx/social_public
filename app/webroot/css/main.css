@@ -54,6 +54,11 @@ div#contents{
     width:640px;
     position: relative;
 }
+.btn_normal{
+    position: relative;
+    top: 10px;
+    left: 100px;
+}
 .btn_my{
     position: absolute;
     top: 0px;
@@ -201,6 +206,12 @@ div#contents{
     left: 42%;
     font-size: 30px;
 }
+.strTitleGacha {
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    font-size: 30px;
+}
 .strTitleBaseCard {
     position: absolute;
     top: 20px;
@@ -244,6 +255,34 @@ div#contents{
     position:absolute;
     top:1px;
     left:240px;
+}
+
+/** ガチャ */
+.gachaImg {
+    left:5px;
+    top:10px;
+    position: relative;
+}
+.gachaName {
+    left: 180px;
+    top:-140px;
+    position: relative;
+}
+.gachaDetail {
+    left: 180px;
+    top:-120px;
+    position: relative;
+}
+.gachaPrice {
+    left: 180px;
+    top:-70px;
+    position: relative;
+}
+.btnGachaStart {
+    position: relative;
+    top: -30px;
+    left: 180px;
+    height:80px;
 }
 
 /** カード */
@@ -327,6 +366,11 @@ div#contents{
     position:relative;
     top: 20px;
     bottom: 20px;
+    left: 20px;
+}
+.lineGacha {
+    position:relative;
+    top: -30px;
     left: 20px;
 }
 

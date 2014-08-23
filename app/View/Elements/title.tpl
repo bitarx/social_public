@@ -16,5 +16,9 @@
         <div class="strTitleDeckCard" >
            受取BOX 
         </div>
+    <{elseif 'Gachas' == $ctl}> 
+        <div class="strTitleGacha" >
+           ガチャ 
+        </div>
     <{/if}>
 </div>

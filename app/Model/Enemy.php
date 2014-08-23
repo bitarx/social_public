@@ -150,4 +150,19 @@ class Enemy extends AppModel {
         $ret = $this->getAllFind($where, $fields = array(), 'first');  
         return $ret;
     }  
+
+    /**
+     * エピローグ判定
+     *
+     * @author imanishi
+     * @param int $enemyId
+     * @return bool true:エピローグ
+     */
+    public function judgeEnding($enemyId) { 
+
+        $ret = $enemyId % 3;
+        $judge = false;
+        if (0 == $ret) $judge = true;
+        return $judge;
+    }  
 }
