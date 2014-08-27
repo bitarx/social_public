@@ -13,7 +13,7 @@ class GachasController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator', 'Common');
+	public $components = array('Paginator', 'Common', 'Gacha');
 
     public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog');
 
@@ -130,9 +130,11 @@ $this->log($values);
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        $product = $this->Gacha->doProductLot($rareLevel);
         if (empty($rareLevel)) {
             $this->rd('UserCards', 'index', array('error' => 2));
         }
+
 
         // ベースカード
         $baseCard = IMG_URL . 'gacha/card.png';
@@ -140,9 +142,12 @@ $this->log($values);
         // 素材カード
         $target = IMG_URL . 'gacha/card.png';
 
-        // 合成後カード
+        // 最終カード
         $afterCard = IMG_URL . 'gacha/card.png';
 
+
+
+        $this->set('product', $product);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
@@ -163,6 +168,7 @@ $this->log($values);
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        $product = $this->Gacha->doProductLot($rareLevel);
         if (empty($rareLevel)) {
             $this->rd('UserCards', 'index', array('error' => 2));
         }
@@ -176,6 +182,7 @@ $this->log($values);
         // 合成後カード
         $afterCard = IMG_URL . 'gacha/card_s.png';
 
+        $this->set('product', $product);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
