@@ -17,6 +17,9 @@ class GachasController extends ApiController {
 
     public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog');
 
+    // 10連ガチャID
+    public $gacha10 = array( 2 );
+
     /**
      * index method
      *
@@ -26,7 +29,6 @@ class GachasController extends ApiController {
 	public function index() {
 
         $list = $this->Gacha->getList();
- $this->log($list); 
         $this->set('list', $list);
 	}
 
@@ -75,12 +77,14 @@ class GachasController extends ApiController {
         $this->UserCard->begin();
         try {
             $values = array(
-                'card_id' => $cardData['card_id']
+                'user_id' => $this->userId
+            ,   'card_id' => $cardData['card_id']
             ,   'hp' => $cardData['card_hp']
             ,   'hp_max' => $cardData['card_hp']
             ,   'atk' => $cardData['card_atk']
             ,   'def' => $cardData['card_def']
             );
+$this->log($values); 
             $this->UserCard->save($values);
 
             // ログ記述
@@ -89,9 +93,10 @@ class GachasController extends ApiController {
             ,   'gacha_id' => $gachaId
             ,   'card_id'  => $cardData['card_id']
             );
+$this->log($values); 
             $this->UserGachaLog->save($values);
 
-        } catch (Exception $e) {
+        } catch (AppException $e) {
             $this->UserCard->rollback();
             $this->log($e->errmes);
             return $this->rd('Errors', 'index', array('error'=> 2));
@@ -103,7 +108,12 @@ class GachasController extends ApiController {
             'rare_level' => $cardData['rare_level']
         );
 
-        $this->rd('Gacha', 'product', $params);
+        if (in_array($gachaId, $this->gacha10)) {
+            // １０連ガチャ
+            $this->rd('Gachas', 'product10', $params);
+        } else {
+            $this->rd('Gachas', 'product', $params);
+        }
     }
 
     /**
@@ -115,6 +125,102 @@ class GachasController extends ApiController {
     public function product() {
 
 
+        // 共通レイアウトは使わない
+        $this->layout = '';
+
+        // パラメータ取得
+        $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (empty($rareLevel)) {
+            $this->rd('UserCards', 'index', array('error' => 2));
+        }
+
+        // ベースカード
+        $baseCard = IMG_URL . 'gacha/card.png';
+
+        // 素材カード
+        $target = IMG_URL . 'gacha/card.png';
+
+        // 合成後カード
+        $afterCard = IMG_URL . 'gacha/card.png';
+
+        $this->set('baseCard', $baseCard);
+        $this->set('target', $target);
+        $this->set('afterCard', $afterCard);
+
+    }
+
+    /**
+     * ガチャ演出10連
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function product10() {
+
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
+
+        // パラメータ取得
+        $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (empty($rareLevel)) {
+            $this->rd('UserCards', 'index', array('error' => 2));
+        }
+
+        // ベースカード
+        $baseCard = IMG_URL . 'gacha/card.png';
+
+        // 素材カード
+        $target = IMG_URL . 'gacha/card.png';
+
+        // 合成後カード
+        $afterCard = IMG_URL . 'gacha/card_s.png';
+
+        $this->set('baseCard', $baseCard);
+        $this->set('target', $target);
+        $this->set('afterCard', $afterCard);
+
+    }
+
+    /**
+     * ガチャ演出１０連
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function _product10() {
+$this->log('procuct10'); 
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
+
+        // パラメータ取得
+        $baseCard = isset($this->params['base_card']) ? $this->params['base_card'] : 0;
+        $upExp = isset($this->params['up_exp']) ? $this->params['up_exp'] : 0;
+        $startExp = isset($this->params['start_exp']) ? $this->params['start_exp'] : 0;
+
+        $list = array();
+        for ($i = 1; $i <= 10; $i++) {
+            $list[] = IMG_URL . 'gacha/card.png';
+        }
+
+        if (empty($baseCard) || empty($list) || empty($upExp)) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+//            $this->rd('UserCards', 'index', array('error' => 1));
+        }
+
+
+        $sacrificeList = json_encode($list);
+        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
+        $endExp = $upExp + $startExp;
+
+// 仮
+$baseCard = IMG_URL . 'miku_v02.jpg';
+
+        $this->set('baseCard', $baseCard);
+        $this->set('sacrificeList', $sacrificeList);
+        $this->set('startExp', $startExp);
+        $this->set('endExp', $endExp);
     }
 
     /**
@@ -124,11 +230,12 @@ class GachasController extends ApiController {
      * @return void
      */
     public function comp() {
-
+/*
         $fields = array('id');
         $where  = array();
         $this->User->getAllFind($where, $fields);
         $this->set('users', $this->Paginator->paginate());
+*/
     }
 
     /**
