@@ -3,7 +3,7 @@
  * ガチャコンポーネント
  */
 App::uses('Component', 'Controller');
-class GachaComponent extends Component {
+class GachaFuncComponent extends Component {
 
 //    public $uses = array('CardGroup');
 

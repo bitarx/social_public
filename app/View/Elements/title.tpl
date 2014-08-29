@@ -16,6 +16,10 @@
         <div class="strTitleDeckCard" >
            受取BOX 
         </div>
+    <{elseif 'Gachas' == $ctl && 'comp' == $action}> 
+        <div class="strTitleDeckCard" >
+           ガチャ結果 
+        </div>
     <{elseif 'Gachas' == $ctl}> 
         <div class="strTitleGacha" >
            ガチャ 

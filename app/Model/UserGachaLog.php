@@ -93,4 +93,20 @@ class UserGachaLog extends AppModel {
         $ret = $this->getAllFind($where, $fields = array(), 'first'); 
         return $ret;
     } 
+
+   /**
+     * がチャログデータ最新取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @param int $limit 最新から幾つ取得するか
+     * @return array データ
+     */
+    public function getGachaLogDataLatest($userId, $limit = 1) { 
+
+        $where = array('user_id' => $userId);  
+        $order = array('UserGachaLog.created DESC');
+        $list = $this->getAllFind($where, $fields = array(), 'all', $order, $limit, $recursive); 
+        return $list;
+    } 
 }

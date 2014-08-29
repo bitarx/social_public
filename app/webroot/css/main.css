@@ -1006,3 +1006,19 @@ display: block;
     left: 80px;
     font-size: 25px;
 }
+
+
+/** ガチャ */
+.btnGacha {
+    position: relative;
+    top: 50px;
+    left: 180px;
+    height: 140px;
+}
+.strGacha {
+
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    font-size: 24px
+}

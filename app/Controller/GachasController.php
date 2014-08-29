@@ -13,7 +13,7 @@ class GachasController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator', 'Common', 'Gacha');
+	public $components = array('Paginator', 'Common', 'GachaFunc');
 
     public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog');
 
@@ -130,7 +130,7 @@ $this->log($values);
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
-        $product = $this->Gacha->doProductLot($rareLevel);
+        $product = $this->GachaFunc->doProductLot($rareLevel);
         if (empty($rareLevel)) {
             $this->rd('UserCards', 'index', array('error' => 2));
         }
@@ -168,7 +168,7 @@ $this->log($values);
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
-        $product = $this->Gacha->doProductLot($rareLevel);
+        $product = $this->GachaFunc->doProductLot($rareLevel);
         if (empty($rareLevel)) {
             $this->rd('UserCards', 'index', array('error' => 2));
         }
@@ -237,12 +237,17 @@ $baseCard = IMG_URL . 'miku_v02.jpg';
      * @return void
      */
     public function comp() {
-/*
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-*/
+
+        $log = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $limit = 10);
+
+        $one = true;
+        if (in_array($log[0]['gacha_id'], $this->gacha10)) $one = false;
+        $list = array();
+        foreach ($log as $val) {
+            $list[] = $this->UserCard->getUserCardLatest($val['card_id'], $this->userId);
+            if ($one) break;
+        }
+        $this->set('list', $list);
     }
 
     /**

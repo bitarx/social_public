@@ -379,5 +379,25 @@ class UserCard extends AppModel {
         return $data;
     }
 
+    /**
+     * ユーザの保有カード情報最新レコードを取得
+     *
+     * @author imanishi
+     * @param int $cardId
+     * @param int $userId
+     * @return array $data
+     */
+    public function getUserCardLatest ($cardId, $userId = 0) {
+
+        $where = array('card_id' => $cardId);
+        if (!empty($userId)) { 
+            $where['user_id'] = $userId;
+        } 
+        $field = array();
+        $order = array('UserCard.created DESC');
+        $data = $this->getAllFind($where, $field, 'first', $order, $limit = 1, $offset = 0, $recursive = 3);
+        return $data;
+    }
+
 
 }
