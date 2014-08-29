@@ -70,36 +70,87 @@ class GachasController extends ApiController {
 
         $probList = $this->GachaProb->getGachaProbList ($gachaId);
 
-        $data = $this->Common->doLot($probList);
+        $gacha10 = false;
 
-        $cardData = $this->Card->getCardData($data['card_id']);
+        if (in_array($gachaId, $this->gacha10)) $gacha10 = true;
+        
 
         $this->UserCard->begin();
-        try {
-            $values = array(
-                'user_id' => $this->userId
-            ,   'card_id' => $cardData['card_id']
-            ,   'hp' => $cardData['card_hp']
-            ,   'hp_max' => $cardData['card_hp']
-            ,   'atk' => $cardData['card_atk']
-            ,   'def' => $cardData['card_def']
-            );
-$this->log($values); 
-            $this->UserCard->save($values);
 
-            // ログ記述
-            $values = array(
-                'user_id' => $this->userId 
-            ,   'gacha_id' => $gachaId
-            ,   'card_id'  => $cardData['card_id']
-            );
-$this->log($values); 
-            $this->UserGachaLog->save($values);
+        if (!$gacha10) {
+            // 単品ガチャ
 
-        } catch (AppException $e) {
-            $this->UserCard->rollback();
-            $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> 2));
+            $data = $this->Common->doLot($probList);
+
+            $cardData = $this->Card->getCardData($data['card_id']);
+
+            try {
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'card_id' => $cardData['card_id']
+                ,   'hp' => $cardData['card_hp']
+                ,   'hp_max' => $cardData['card_hp']
+                ,   'atk' => $cardData['card_atk']
+                ,   'def' => $cardData['card_def']
+                );
+    $this->log($values); 
+                $this->UserCard->save($values);
+
+                // ログ記述
+                $values = array(
+                    'user_id' => $this->userId 
+                ,   'gacha_id' => $gachaId
+                ,   'card_id'  => $cardData['card_id']
+                );
+                $this->UserGachaLog->save($values);
+
+            } catch (AppException $e) {
+                $this->UserCard->rollback();
+                $this->log($e->errmes);
+                return $this->rd('Errors', 'index', array('error'=> 2));
+            }
+        } else {
+            // 10連ガチャ
+            $cardList = array();
+            $logList  = array();
+
+            for ($i = 1; $i <= 10; $i++) {
+                $data = $this->Common->doLot($probList);
+
+                $cardData = $this->Card->getCardData($data['card_id']);
+
+                // カードリスト
+                $cardList[] = array(
+                    $this->userId
+                ,   $cardData['card_id']
+                ,   $cardData['card_hp']
+                ,   $cardData['card_hp']
+                ,   $cardData['card_atk']
+                ,   $cardData['card_def']
+                );
+
+                // ログリスト
+                $logList[] = array(
+                    $this->userId 
+                ,   $gachaId
+                ,   $cardData['card_id']
+                );
+            }
+
+            try {
+
+                $field = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
+                $this->UserCard->insertBulk($field, $cardList, $ignore = 1);
+
+                $field = array('user_id', 'gacha_id', 'card_id');
+                $this->UserGachaLog->insertBulk($field, $logList, $ignore = 1);
+
+            } catch (AppException $e) {
+                $this->UserCard->rollback();
+                $this->log($e->errmes);
+                return $this->rd('Errors', 'index', array('error'=> 2));
+            }
+
         }
         $this->UserCard->commit();
 
@@ -108,7 +159,7 @@ $this->log($values);
             'rare_level' => $cardData['rare_level']
         );
 
-        if (in_array($gachaId, $this->gacha10)) {
+        if ($gacha10) {
             // １０連ガチャ
             $this->rd('Gachas', 'product10', $params);
         } else {
