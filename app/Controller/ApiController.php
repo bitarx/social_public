@@ -45,7 +45,6 @@ class ApiController extends AppController {
 
         if (is_array($data)) {        
             foreach ($data as $key => $val) {
-
                 $this->set($key, $val);
                 $keys[] = $key;
             }

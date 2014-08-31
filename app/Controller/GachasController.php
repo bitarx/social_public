@@ -93,7 +93,6 @@ class GachasController extends ApiController {
                 ,   'atk' => $cardData['card_atk']
                 ,   'def' => $cardData['card_def']
                 );
-    $this->log($values); 
                 $this->UserCard->save($values);
 
                 // ログ記述
@@ -109,10 +108,14 @@ class GachasController extends ApiController {
                 $this->log($e->errmes);
                 return $this->rd('Errors', 'index', array('error'=> 2));
             }
+
+            $rareLevel = $cardData['rare_level'];
         } else {
+
             // 10連ガチャ
             $cardList = array();
             $logList  = array();
+            $rareLevel = 1;
 
             for ($i = 1; $i <= 10; $i++) {
                 $data = $this->Common->doLot($probList);
@@ -135,6 +138,10 @@ class GachasController extends ApiController {
                 ,   $gachaId
                 ,   $cardData['card_id']
                 );
+
+                if ($rareLevel < $cardData['rare_level']) {
+                    $rareLevel = $cardData['rare_level'];
+                }
             }
 
             try {
@@ -156,7 +163,7 @@ class GachasController extends ApiController {
 
 
         $params = array(
-            'rare_level' => $cardData['rare_level']
+            'rare_level' => $rareLevel
         );
 
         if ($gacha10) {

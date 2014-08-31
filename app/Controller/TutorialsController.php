@@ -16,7 +16,7 @@ class TutorialsController extends ApiController {
 	public $components = array('Paginator');
 
     public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard',
-                    'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox');
+                    'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox', 'UserTutorialQuestcnt');
 
     public $row  = array();
 
@@ -59,6 +59,9 @@ class TutorialsController extends ApiController {
      * @author imanishi 
      */
 	public function tutorial_1() {
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
 
         // マスタデータ格納
         $current = str_replace(self::$actionPref, '', $this->action);
@@ -231,47 +234,6 @@ class TutorialsController extends ApiController {
                 throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
             }
 
-        } catch (AppException $e) {
-
-            $this->User->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->User->commit();
-
-     
-        // アサイン
-        $this->set('row', $this->row);
-        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
-    } 
-
-    /**
-     * チュートリアル5
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function tutorial_5() { 
-
-        $this->_routeTutorial();
-
-        $current = str_replace(self::$actionPref, '', $this->action);
-
-        $this->User->begin();
-        try {
-            $values = array(
-                'user_id'     => $this->userId
-            ,   'tutorial_id' => $current
-            );
-            $ret = $this->UserTutorial->save($values);
-            if (!$ret) {
-                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
-            }
-
             /********************************************** 
             * 初期カードとデッキの登録
             ***********************************************/ 
@@ -317,6 +279,55 @@ class TutorialsController extends ApiController {
                     throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
                 }
             }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+
+     
+        // アサイン
+        $this->set('row', $this->row);
+        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
+
+        $data = array('progress' => 0, 'act' => 100, 'exp' => 0);
+        $this->set('act', $data['act']);
+        $this->set('prog', $data['progress']);
+        $this->set('exp', $data['exp']);
+        $param = json_encode($data);
+        $this->set('param', $param);
+    } 
+
+    /**
+     * チュートリアル5
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_5() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'tutorial_id' => $current
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
 
         } catch (AppException $e) {
 
@@ -812,27 +823,66 @@ class TutorialsController extends ApiController {
     }
 
     /**
-     * 登録更新(変更禁止)
+     * クエスト演出
      *
      * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
+     * @return json 
      */
-	public function init() {
+	public function quest() {
 
         if ($this->request->is(array('ajax'))) {
 
             $this->autoRender = false;   // 自動描画をさせない
 
-            if ($this->Tutorial->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
+            $params = $this->params;
+            $data = (array)json_decode($params['params']);
 
-        $this->setJson($ary);
+            $where = array('user_id' => $this->userId);
+            $field = array('cnt');
+            $row = $this->UserTutorialQuestcnt->getAllFind($where, $field, 'first');
+            if (empty($row)) $row['cnt'] = 0;
+            $cnt = ++$row['cnt'];
+            
+
+            $this->User->begin();
+            try {
+                $values = array(
+                    'user_id'     => $this->userId
+                ,   'cnt'         => $cnt
+                );
+                $this->UserTutorialQuestcnt->save($values);
+
+            } catch (AppException $e) {
+
+                $this->User->rollback();
+
+                $this->log($e->errmes);
+                return $this->redirect(
+                           array('controller' => 'errors', 'action' => 'index'
+                                 , '?' => array('error' => 2)
+                       ));
+            }
+            $this->User->commit();
+
+            $data['act'] = 100 - $cnt;
+            $data['progress'] = $cnt;
+            $data['exp'] = $cnt;
+            $data['result'] = 1;
+            $data['action'] = 'Tutorials_quest';
+
+            if (3 < $cnt) {
+            
+                $data['kind'] = '1';
+                $data['name'] = '結依';
+                $data['target'] = 31;
+            }
+
+        } else {
+            $data = array('result' => 2);
+        }
+        $params = json_encode($data);
+        echo $params;
+        // $this->setJson($data);
 	}
 
 

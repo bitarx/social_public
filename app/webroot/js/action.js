@@ -1,5 +1,5 @@
 /**
- * Appサーバより返された結果により処理を切り分ける
+ * サーバより返された結果により処理を切り分ける
  *
  * @auther imanishi
  * @since 2014/03/20
@@ -8,6 +8,10 @@
  */
 function routes(data)
 {
+    var ret = isJSON (data); 
+    if (ret) {
+        data = JSON.parse(data);
+    }
     if (data.result == "2") {
         $('#errMes').html( '不正なリクエストです' );
         $('#errMes').show(); 
@@ -22,6 +26,12 @@ function routes(data)
         switch(data.action)
         {
             case 'Stages_init':
+                dispProgressQuest(data.progress);
+                dispProgressQuestAct(data.act);
+                dispProgressQuestExp(data.exp);
+                dispRotResultQuest(data);
+                break;
+            case 'Tutorials_quest':
                 dispProgressQuest(data.progress);
                 dispProgressQuestAct(data.act);
                 dispProgressQuestExp(data.exp);
@@ -95,7 +105,7 @@ function dispRotResultQuest(data)
        // カード
        case "1":
            filename = 'card_get_on.png';
-           image = '<img src="' + BASE_URL + 'File/outimage?size=s&dir=card&target=' + data.target + '" width="160px">'; 
+           image = '<img src="' + IMG_URL + 'tutorial/card_s_31.jpg" width="160px">'; 
            str = data.name + 'が仲間に加わった！';
            break;
        // 金庫

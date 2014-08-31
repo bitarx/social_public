@@ -24,7 +24,6 @@ class FileController extends ApiController {
      * @return 問題がなければ対象ファイルを返す。問題があればfalseを返す  
      */
 	public function outimage() {
-
         // ユーザではない
         if (!$this->userId) {
             $this->log('File not userId'); 
