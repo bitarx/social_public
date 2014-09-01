@@ -32,6 +32,10 @@ function routes(data)
                 dispRotResultQuest(data);
                 break;
             case 'Tutorials_quest':
+                if (data.tuto_next == '1') {
+                    // クエスト演出終了し次へ
+                    location.href = BASE_URL + 'Tutorials/tutorial_5';    
+                }
                 dispProgressQuest(data.progress);
                 dispProgressQuestAct(data.act);
                 dispProgressQuestExp(data.exp);

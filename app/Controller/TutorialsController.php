@@ -341,9 +341,13 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
+        // カードデータ
+        $data = $this->Card->getCardData($id = 31);
      
         // アサイン
         $this->set('row', $this->row);
+        $this->set('data', $data);
+        $this->set('guideId', 2 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -842,7 +846,7 @@ class TutorialsController extends ApiController {
             $row = $this->UserTutorialQuestcnt->getAllFind($where, $field, 'first');
             if (empty($row)) $row['cnt'] = 0;
             $cnt = ++$row['cnt'];
-            
+
 
             $this->User->begin();
             try {
@@ -875,6 +879,10 @@ class TutorialsController extends ApiController {
                 $data['kind'] = '1';
                 $data['name'] = '結依';
                 $data['target'] = 31;
+            }
+
+            if (4 < $cnt) {
+                $data['tuto_next'] = '1';
             }
 
         } else {

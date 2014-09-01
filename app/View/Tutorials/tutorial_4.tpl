@@ -9,7 +9,7 @@ $(function () {
 });
 </script>
 <div class="stages">
-     <img src="<{$smarty.const.IMG_URL}>quest/main_1.jpg">
+     <img src="<{$smarty.const.IMG_URL}>quest/main_3.jpg">
 
         <div  class="btnQuestProg" id="appReq" act="Tutorials/quest" params=<{$param}>> 
             <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">

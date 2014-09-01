@@ -1,8 +1,16 @@
 <div class="tutorials index">
-	<h2>Tutorials</h2>
-    <{$row['tutorial_title']}><br />
-    <{$row['tutorial_words']}><br />
-    <{$row['tutorial_words2']}><br />
-    <{$row['tutorial_words3']}><br />
-    <a href="<{$next}>">next</a>
+
+    <div class="bannerTitle">
+        <img src="<{$smarty.const.IMG_URL}>banner_title.png">
+            <div class="strTitleBaseCard" >
+                <{$row['tutorial_title']}>
+            </div>
+    </div>
+
+    <{include file="../Elements/guide.tpl"}>
+
+    <{include file="../Elements/next.tpl"}>
+
+    <{include file="../Elements/card_detail.tpl"}>
+
 </div>
