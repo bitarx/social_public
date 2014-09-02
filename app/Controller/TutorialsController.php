@@ -22,6 +22,9 @@ class TutorialsController extends ApiController {
 
     public static $actionPref = 'tutorial_';
 
+    // チュートリアル中進化をするカード
+    public $tutoSampleCard = 31;
+
     /**
      * チュートリアル振り分け
      *
@@ -342,7 +345,7 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
         // カードデータ
-        $data = $this->Card->getCardData($id = 31);
+        $data = $this->Card->getCardData($this->tutoSampleCard);
      
         // アサイン
         $this->set('row', $this->row);
@@ -386,9 +389,14 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
-     
+        // カードデータ
+        $data = $this->UserCard->getUserCardLatest ($this->tutoSampleCard, $this->userId);
+
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('data', $data );
+        $this->set('guideId', 1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 

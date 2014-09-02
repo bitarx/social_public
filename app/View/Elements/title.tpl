@@ -24,5 +24,9 @@
         <div class="strTitleGacha" >
            ガチャ 
         </div>
+    <{else}>
+        <div class="strCommonTitle" >
+            <{$title}>
+        </div>
     <{/if}>
 </div>
