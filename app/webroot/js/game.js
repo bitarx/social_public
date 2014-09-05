@@ -92,8 +92,9 @@ interpreter.prototype.セリフ = function(args) {
   var text = new Label();
   text.font  = "16px monospace";
   text.color = "rgb(255, 255, 255)";
-  text.y     = 320 - 32 * 2;
+  text.y     = 320 - 32 * 4;
   text.width = 320;
+  text.height  = 320;
 
   textLayer.addChild(text);
 
@@ -155,14 +156,14 @@ interpreter.prototype.オートジャンプ = function(arg) {
 interpreter.prototype.選択肢 = function(args) {
   var self = this;
   var str = args[0];
-//  var text = new Label(args[0]);
+//   var text = new Label(args[0]);
   var text = new Label();
-  text.font  = "16px monospace";
+  text.font  = "12px monospace";
   text.color = "rgb(255,255,255)";
   text.backgroundColor = "rgba(0,0,0,0.6)";
-  text.y     = 800 - 32*3;
-  text.width = 640;
-  text.height = 32 * 3;
+  text.y     = 800 - 30*3;
+  text.width = 638;
+  text.height = 30 * 3;
 
 //          text.text = str;
 
@@ -174,7 +175,7 @@ interpreter.prototype.選択肢 = function(args) {
   select1.font  = "16px monospace";
   select1.color = "rgb(255,125,0)";
 //select1.y     = 320 - 32*2;
-  select1.y     = 800 - 32;
+  select1.y     = 800 - 28;
   select1.x     = 570;
   select1.width = 800;
   select1.addEventListener(Event.TOUCH_START, function(e) {

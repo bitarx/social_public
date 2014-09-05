@@ -264,10 +264,12 @@ class UserDeckCard extends AppModel {
     public function regist($userDeckId, $list) {
 
         $data = array();
+        $num = 1;
         foreach ($list as $val) {
-            $data[] = array($userDeckId, $val['user_card_id']);
+            $data[] = array($userDeckId, $num , $val['user_card_id']);
+            $num++;
         }
-        $fields = array('user_deck_id', 'user_card_id'); 
+        $fields = array('user_deck_id', 'deck_number' ,'user_card_id'); 
         $ret = $this->insertBulk( $fields, $data, $ignoreFlg = 1 );
 
         return $ret;

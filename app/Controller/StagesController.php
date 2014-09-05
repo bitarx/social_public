@@ -365,16 +365,10 @@ class StagesController extends ApiController {
         }
 
         $turn = json_encode($turn);
-$this->log('Turn:' . print_r($turn, true)); 
+
         $this->set('data', $data);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
-/*
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-*/
     }
 
     /**

@@ -10,7 +10,7 @@ class Card extends AppModel {
 
 
     // 初期配布カードID
-    public $startCardIds = array( 13, 31, 43, 46, 55  );
+    public $startCardIds = array( 13, 37, 43, 46, 55  );
 
 /**
  * Primary key field

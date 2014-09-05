@@ -151,9 +151,9 @@ class UserCard extends AppModel {
 
         $data = array();
         foreach ($list as $val) {
-            $data[] = array($userId, $val['card_id'], $val['card_atk'], $val['card_def']);
+            $data[] = array($userId, $val['card_id'], $val['card_hp'], $val['card_hp'], $val['card_atk'], $val['card_def']);
         }
-        $fields = array('user_id', 'card_id', 'atk', 'def');
+        $fields = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
         return $this->insertBulk($fields, $data);
     }
 

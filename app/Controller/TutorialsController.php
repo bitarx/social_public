@@ -15,7 +15,7 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard',
+    public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard', 'UserParam',
                     'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox', 'UserTutorialQuestcnt');
 
     public $row  = array();
@@ -71,7 +71,6 @@ class TutorialsController extends ApiController {
         $this->row = $this->Tutorial->getMstData($current);
 
         $userId = $this->userId;
-
         $this->User->begin();
         try {
             if (empty($userId)) {
@@ -98,6 +97,20 @@ class TutorialsController extends ApiController {
                     throw new AppException('User save failed :' . $this->name . '/' . $this->action);
                 }
                 $userId = $ret['User']['user_id'];
+
+                // パラメータ登録
+                $values = array(
+                    'user_id'        => $userId
+                ,   'act'            => $this->_startAct
+                ,   'act_max'        => $this->_startActMac
+                ,   'cost_atk'       => $this->_costAtk
+                ,   'cost_def'       => $this->_costDef
+                ,   'level'          => $this->_level
+                );
+                $ret = $this->UserParam->save($values);
+                if (!$ret) {
+                    throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
+                }
             }
 
             $where = array(
@@ -275,7 +288,6 @@ class TutorialsController extends ApiController {
                 if (empty($list[0]['user_card_id'])) {
                     throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
                 }
-
                 // デッキとユーザ所有カードを紐づけ
                 $ret = $this->UserDeckCard->regist($ret['UserDeck']['user_deck_id'], $list);
                 if (!$ret) {
@@ -296,6 +308,8 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
      
+                $list = $this->UserCard->getUserCard ($this->userId);
+
         // アサイン
         $this->set('row', $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
@@ -344,13 +358,11 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
-        // カードデータ
-        $data = $this->Card->getCardData($this->tutoSampleCard);
      
         // アサイン
         $this->set('row', $this->row);
-        $this->set('data', $data);
         $this->set('guideId', 2 );
+        $this->set('tutoSampleCard', $this->tutoSampleCard );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -389,13 +401,9 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
-        // カードデータ
-        $data = $this->UserCard->getUserCardLatest ($this->tutoSampleCard, $this->userId);
-
         // アサイン
         $this->set('row',  $this->row);
         $this->set('title',  $this->row['tutorial_title']);
-        $this->set('data', $data );
         $this->set('guideId', 1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
@@ -407,6 +415,9 @@ class TutorialsController extends ApiController {
      * @return void
      */
     public function tutorial_7() { 
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
 
         $this->_routeTutorial();
 
@@ -435,9 +446,24 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
-     
+
+        // ベースカード
+        $baseCard = IMG_URL . 'tutorial/card_l_31.jpg';
+
+        // 素材カード
+        $target = IMG_URL . 'tutorial/card_l_31.jpg';
+
+        // 合成後カード
+        $afterCard = IMG_URL . 'tutorial/card_l_32.jpg';
+
+
         // アサイン
+        $this->set('baseCard', $baseCard);
+        $this->set('target', $target);
+        $this->set('afterCard', $afterCard);
+     
         $this->set('row',  $this->row);
+        $this->set('guideId',  1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -479,6 +505,8 @@ class TutorialsController extends ApiController {
      
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId', 1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -519,6 +547,9 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId',  1);
+        $this->set('tutoSampleCard', $this->tutoSampleCard );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -529,6 +560,9 @@ class TutorialsController extends ApiController {
      * @return void
      */
     public function tutorial_10() { 
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
      
         $this->_routeTutorial();
 
@@ -557,9 +591,20 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
+        // 演出で使用する素材
+        $baseCard = IMG_URL . 'tutorial/card_l_13.jpg';
+        $sacrificeList[] = IMG_URL . 'tutorial/card_l_31.jpg';
+        $sacrificeList = json_encode($sacrificeList);
+        $startExp = 0;
+        $endExp = 120;
+
         // アサイン
         $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
+
+        $this->set('baseCard', $baseCard);
+        $this->set('sacrificeList', $sacrificeList);
+        $this->set('startExp', $startExp);
+        $this->set('endExp', $endExp);
     } 
 
     /**
@@ -599,6 +644,8 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId',  1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -637,8 +684,13 @@ class TutorialsController extends ApiController {
         }
         $this->User->commit();
 
+        $data['before_words'] = $this->row['tutorial_words'];
+
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('data',  $data);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId',  2 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -649,6 +701,9 @@ class TutorialsController extends ApiController {
      * @return void
      */
     public function tutorial_13() { 
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
      
         $this->_routeTutorial();
 
@@ -676,8 +731,160 @@ class TutorialsController extends ApiController {
                    ));
         }
         $this->User->commit();
+/*
+        $data = json_decode('{"enemy_max":"2000","enemy_cur":"2000","card_id_1":"8","card_id_1_max":"200","card_id_1_cur":"200","card_id_2":"8","card_id_2_max":"200","card_id_2_cur":"200","card_id_3":"8","card_id_3_max":"200","card_id_3_cur":"200","card_id_4":"8","card_id_4_max":"200","card_id_4_cur":"200","card_id_5":"8","card_id_5_max":"200","card_id_5_cur":"200","0":[{"targetData":{"enemy_id":"3","hp":"2000"},"damage":307},{"targetData":{"enemy_id":"3","hp":1693},"damage":357},{"targetData":{"enemy_id":"3","hp":1336},"damage":459},{"targetData":{"enemy_id":"3","hp":877},"damage":387},{"targetData":{"enemy_id":"3","hp":490},"damage":335}],"1":[{"targetData":{"card_id":"8","hp":"200"},"damage":9},{"targetData":{"card_id":"8","hp":"200"},"damage":9},{"targetData":{"card_id":"8","hp":"200"},"damage":10},{"targetData":{"card_id":"8","hp":"200"},"damage":8},{"targetData":{"card_id":"8","hp":"200"},"damage":9}],"2":[{"targetData":{"enemy_id":"3","hp":155},"damage":335},{"targetData":{"enemy_id":"3","hp":0}}],"winner":1,"count":2}');
+        $data = (array)$data;
+ var_dump($data);
+ die;
+*/
+
+        // 基礎値
+        $data = array(
+                    'card_id_1_max' => 1000
+                ,   'card_id_1_cur' => 1000
+                ,   'card_id_2_max' => 900
+                ,   'card_id_2_cur' => 900
+                ,   'card_id_3_max' => 800
+                ,   'card_id_3_cur' => 800
+                ,   'card_id_4_max' => 700
+                ,   'card_id_4_cur' => 700
+                ,   'card_id_5_max' => 600
+                ,   'card_id_5_cur' => 600
+                ,   'enemy_max'     => 1000
+                ,   'enemy_cur'     => 1000
+                );
+
+        // ターン
+        $log = array(
+                   0 => array(
+                            0 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 903
+                                                     )
+                                 ,   'damage' => 97                    
+                                 )
+                        ,   1 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 801 
+                                                     )
+                                 ,   'damage' => 102                    
+                                 )
+                        ,   2 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 716
+                                                     )
+                                 ,   'damage' => 85                   
+                                 )
+                        ,   3 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 625
+                                                     )
+                                 ,   'damage' => 91                   
+                                 )
+                        ,   4 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 534
+                                                     )
+                                 ,   'damage' => 91                   
+                                 )
+                        ),
+                   1 => array(
+                            0 => array(
+                                     'targetData' => array(
+                                                        'hp'       => 100
+                                                     )
+                                 ,   'damage' => 17                    
+                                 )
+                        ,   1 => array(
+                                     'targetData' => array(
+                                                        'hp'       => 100
+                                                     )
+                                 ,   'damage' => 12                    
+                                 )
+                        ,   2 => array(
+                                     'targetData' => array(
+                                                        'hp'       => 100
+                                                     )
+                                 ,   'damage' => 15                   
+                                 )
+                        ,   3 => array(
+                                     'targetData' => array(
+                                                        'hp'       => 100
+                                                     )
+                                 ,   'damage' => 20                  
+                                 )
+                        ,   4 => array(
+                                     'targetData' => array(
+                                                        'hp'       => 100
+                                                     )
+                                 ,   'damage' => 13                  
+                                 )
+                        ),
+                   2 => array(
+                            0 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 406
+                                                     )
+                                 ,   'damage' => 128                   
+                                 )
+                        ,   1 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 304
+                                                     )
+                                 ,   'damage' => 102                    
+                                 )
+                        ,   2 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 104
+                                                     )
+                                 ,   'damage' => 200                  
+                                 )
+                        ,   3 => array(
+                                     'targetData' => array(
+                                                         'enemy_id' => 0
+                                                     ,   'hp'       => 0
+                                                     )
+                                 ,   'damage' => 104                  
+                                 )
+                        )
+               );
+
+        // 演出用ターン配列生成
+        $turn = array();
+        $i = 0;
+        foreach ($log as $key => $value) {
+            if (is_numeric($key)) {
+                $hp = array();
+                foreach ($value as $val) {
+                    $hp[] = $val['targetData']['hp'];
+                }
+
+                if ( isset($val['targetData']['enemy_id']) ) {
+                    // プレイヤーの攻撃
+                    $turn[$i]['enemyHP'] = $hp;
+                } else {
+                    // 敵の攻撃
+                    $turn[$i]['playerHP'] = $hp;
+                    $i++;
+                }
+            }
+        }
+
+        $turn = json_encode($turn);
 
         // アサイン
+        $this->set('data', $data);
+        $this->set('enemy', 0 );
+        $this->set('turn', $turn);
+
         $this->set('row',  $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
@@ -689,6 +896,9 @@ class TutorialsController extends ApiController {
      * @return void
      */
     public function tutorial_14() { 
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
      
         $this->_routeTutorial();
 
@@ -759,6 +969,8 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId',  2 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -800,6 +1012,8 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row',  $this->row);
+        $this->set('title',  $this->row['tutorial_title']);
+        $this->set('guideId',  1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 

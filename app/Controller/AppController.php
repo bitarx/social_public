@@ -83,6 +83,12 @@ class AppController extends Controller {
                         ,   9 => '防御力低い順'
                         );
 
+    protected $_startAct    = 100;   // 初期行動力
+    protected $_startActMac = 100;   // 初期行動力最大値
+    protected $_costAtk     = 10;    // 初期攻撃デッキコスト
+    protected $_costDef     = 10;    // 初期防御デッキコスト
+    protected $_level       = 1;     // 初期レベル
+
     public final function beforeFilter() { 
         
         $this->params =  $this->request->query;
@@ -146,6 +152,20 @@ class AppController extends Controller {
                             throw new AppException('User save failed :' . $this->name . '/' . $this->action);
                         }
                         $this->userId = $ret['User']['user_id'];
+
+                        // パラメータ登録
+                        $values = array(
+                            'user_id'        => $this->userId
+                        ,   'act'            => $this->_startAct
+                        ,   'act_max'        => $this->_startActMac
+                        ,   'cost_atk'       => $this->_costAtk
+                        ,   'cost_def'       => $this->_costDef
+                        ,   'level'          => $this->_level
+                        );
+                        $ret = $this->UserParam->save($values);
+                        if (!$ret) {
+                            throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
+                        }
 
                     } catch (AppException $e) {
                         $this->User->rollback();
