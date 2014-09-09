@@ -4,3 +4,9 @@ body {
   background-image: url('../img/synth_evol_bg.png');
   overflow: hidden;
 }
+
+.skip {
+    color:#E6E6FA;
+    font-size: 30px;
+    text-align:right;
+}

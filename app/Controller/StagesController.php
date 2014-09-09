@@ -51,6 +51,7 @@ class StagesController extends ApiController {
             }
         }
         $this->set('list', $list);
+        $this->set('guideId', 1 );
 	}
 
     /**

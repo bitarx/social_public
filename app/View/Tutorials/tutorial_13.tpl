@@ -7,7 +7,7 @@
     </head>
     <body id="body">
         <canvas id="mainCanvas" height="832" width="640"></canvas>
-        <div id="skip">skip###########</div>
+        <div id="skip" class="skip">skip<div>
     </body>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/tweenjs-0.5.1.min.js"></script>

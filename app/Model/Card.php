@@ -218,8 +218,9 @@ class Card extends AppModel {
      public function getStartCardList() {
 
          $where = array('card_id' => $this->startCardIds);
-         $row = $this->getAllFind($where);
+         $order = array('card_id ASC');
+         $list = $this->getAllFind($where, array(), 'all', $order);
 
-         return $row;
+         return $list;
      }
 }

@@ -62,7 +62,7 @@ class TutorialsController extends ApiController {
      * @author imanishi 
      */
 	public function tutorial_1() {
-
+$this->log('tutorial_1'); 
         // 共通レイアウトは使わない
         $this->layout = '';
 
@@ -183,6 +183,7 @@ class TutorialsController extends ApiController {
 
         // アサイン
         $this->set('row', $this->row);
+        $this->set('guideId', 1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -224,6 +225,7 @@ class TutorialsController extends ApiController {
     
         // アサイン
         $this->set('row', $this->row);
+        $this->set('guideId', 1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
 
@@ -284,7 +286,8 @@ class TutorialsController extends ApiController {
                     throw new AppException('UserDeck save failed :' . $this->name . '/' . $this->action);
                 }
 
-                $list = $this->UserCard->getUserCard ($this->userId);
+                $sortItem = 1; // user_card_idの古い順
+                $list = $this->UserCard->getUserCard ($this->userId,$cardId=0, $userCardId=0, $limit = 5, $offset=0, $sortItem);
                 if (empty($list[0]['user_card_id'])) {
                     throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
                 }

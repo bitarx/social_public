@@ -21,7 +21,7 @@
             <div class="guideFukiUpper">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px">
             </div>
-            <div class="guideFukiUnder">
+            <div class="guideFukiUnderL">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_under.png" width="420px">
             </div>
             <div class="guideFukiText">
@@ -32,5 +32,4 @@
 
     <{include file="../Elements/next.tpl"}>
 
-    <a href="<{$next}>">next</a>
 </div>

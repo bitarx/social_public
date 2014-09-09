@@ -1,0 +1,17 @@
+body {
+    background-image: url('../img/tutorial/opening.png');
+    background-position:center top;
+    background-repeat:no-repeat;
+    -moz-background-size:100% auto;
+    background-size:100% auto;
+}
+
+.tutorial1 {
+}
+.slider {
+    position: relative;
+    width:640px;
+    height:800px;
+    top:0px;
+    left:0px;
+}

@@ -1,5 +1,5 @@
 <div class="quests index">
-	<h2>Quests</h2>
+    <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
     <{foreach from=$list item=val}> 
         <div>
             <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "><{$val['quest_id']}>. <{$val['quest_title']}> <br /><{$val['detail_before1']}> </a>

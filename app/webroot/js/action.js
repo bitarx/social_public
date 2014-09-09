@@ -108,9 +108,15 @@ function dispRotResultQuest(data)
     {
        // カード
        case "1":
+           if (undefined == data.target) {
+               data.tareget = 31;
+               image = '<img src="' + IMG_URL + 'tutorial/card_s_' + data.target + '.jpg" width="160px">'; 
+           } else {
+               image = '<img src="' + FILEOUT_URL + '?size=s&dir=card&target=' + data.target + '" width="160px">'; 
+           }
+   console.log(data); 
            filename = 'card_get_on.png';
-           image = '<img src="' + IMG_URL + 'tutorial/card_s_31.jpg" width="160px">'; 
-           str = data.name + 'が仲間に加わった！';
+           str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '">' + data.name + 'が仲間に加わった！</a>';
            break;
        // 金庫
        case "2":
