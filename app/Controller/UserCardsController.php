@@ -43,6 +43,9 @@ class UserCardsController extends ApiController {
         if (2 == $kind) {
             $evolGroup = $userBaseCard['evol_group'];
         }
+        if (empty($userBaseCard['user_card_id'])) {
+            $userBaseCard['user_card_id'] = 0;
+        }
 
         // 所有カード
         $pageAll = 0;
@@ -51,6 +54,7 @@ class UserCardsController extends ApiController {
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
+        $this->set('key', 99);
         $this->set('pageAll', $pageAll);
 	}
 

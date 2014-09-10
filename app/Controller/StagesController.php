@@ -49,6 +49,8 @@ class StagesController extends ApiController {
                     $list[] = $val;
                 }
             }
+            $questData = $this->Quest->getQuestData($questId);
+            $list[0]['quest_detail'] = $questData['quest_detail'];
         }
         $this->set('list', $list);
         $this->set('guideId', 1 );
@@ -118,6 +120,12 @@ class StagesController extends ApiController {
         $stageId = $this->params['stage_id'];
 
         $data = $this->UserStage->getUserStage($this->userId, $stageId, $recu = 2);
+
+        // 到達していない
+        if (!isset($data['progress'])) {
+            $this->log('Stage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> 1)); 
+        }
 
         $userParam = $this->UserParam->getUserParams($this->userId);
 
@@ -386,7 +394,10 @@ class StagesController extends ApiController {
         $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
         $data = $this->Enemy->getEnemyData($log['target']);
 
+        $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $data['enemy_id']);
+$this->log($stage); 
         $this->set('data', $data);
+        $this->set('questId', $stage['Stage']['quest_id']);
 
     }
     /**
@@ -399,14 +410,18 @@ class StagesController extends ApiController {
 
         $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
 
-        // 勝利ではない
-        if (1 != $log['result']) {
-            $this->rd('errors', 'index', array('error' => 2)); 
-        }
-
         // 現在到達最大ステージ
         $stageId = $this->UserStage->getUserMaxStageId($this->userId);
         $nextStageId = $stageId + 1;
+$this->log($log); 
+        // 勝利ではないor処理済
+        if (1 != $log['result'] or "0000-00-00 00:00:00" != $log['modified']) {
+            $param = array(
+                         'stage_id' => $nextStageId
+                     );
+            $this->rd('Stages', 'main' , $param);
+        }
+
 
         $this->UserStage->begin(); 
         try {  
@@ -415,6 +430,12 @@ class StagesController extends ApiController {
             $fields = array('user_id', 'stage_id', 'progress', 'state');
             $values[] = array($this->userId, $nextStageId, 0, 1);
             $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+
+            // 処理済
+            $values = array(
+                          'id' => $log['id']
+                      );
+            $this->BattleLog->save($values);
         
         } catch (AppException $e) { 
             $this->UserStage->rollback(); 
@@ -426,7 +447,10 @@ class StagesController extends ApiController {
         $ending = $this->Enemy->judgeEnding($log['target']);
         if (!$ending) {
             // エピローグではない場合は次のステージへ
-            $this->rd('Stages', 'next');
+            $param = array(
+                         'stage_id' => $nextStageId
+                     );
+            $this->rd('Stages', 'main' , $param);
         } else {
             // エピローグ
             $this->rd('Stages', 'end');
@@ -634,7 +658,9 @@ class StagesController extends ApiController {
                 }
                 $this->UserParam->setUserParams($userId, $userParam);
 
-     
+                // 行動力グラフ用に変更 
+                $actBar = ($userParam['act'] / $userParam['act_max']) * 100;
+
                 // 返却データを配列に格納
                 $ary = array(
                     'result'   => 1
@@ -643,7 +669,7 @@ class StagesController extends ApiController {
                 ,   'target'   => $lotData['target']   // 取得対象のid
                 ,   'num'      => $lotData['num']      // 取得対象の個数（金額）
                 ,   'exp'      => $userParam['exp']
-                ,   'act'      => $userParam['act']      
+                ,   'act'      => $actBar              // 行動力 
                 ,   'act_max_diff'   => $actMaxDiff    // 前のレベルとの差分
                 ,   'cost_atk_diff'  => $costAtkDiff   // 前のレベルとの差分
                 ,   'not_act'  => $notAct              // 行動力切れの場合1

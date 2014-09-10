@@ -70,6 +70,13 @@ function dispProgressQuestAct(act)
      
 }
 
+/**
+ * クエストの経験値を表示
+ *
+ * @author imanishi 
+ * @param int 行動力値
+ * @return void 
+ */
 function dispProgressQuestExp(exp)
 {
     $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
@@ -114,7 +121,6 @@ function dispRotResultQuest(data)
            } else {
                image = '<img src="' + FILEOUT_URL + '?size=s&dir=card&target=' + data.target + '" width="160px">'; 
            }
-   console.log(data); 
            filename = 'card_get_on.png';
            str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '">' + data.name + 'が仲間に加わった！</a>';
            break;

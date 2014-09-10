@@ -18,7 +18,7 @@
 
 // 背景、登場人物の画像を定義する
 背景画像 = {
-  '学校': BASE_URL + 'File/outimage?size=<{$data.enemy_id}>&dir=scene&target=1',
+  '学校': BASE_URL + 'File/outimage?size=<{$questId}>&dir=scene&target=<{$data.enemy_id}>',
   'エントランス': IMG_URL + 'bg/entrance.png',
   '教室1': IMG_URL + 'bg/classroom.png',
   '廊下': IMG_URL + 'bg/passage.png',
@@ -45,13 +45,11 @@ GAME_ID = 'adv002';
 start = {
   'シーン': 'start',
   '背景画像': ['学校', 640, 800],
-  '選択肢': ['<{$data.after_win_words}>','next', 'next'],
+  '選択肢': ['<{$data.after_win_words}>','NEXTSTAGE', 'next'],
 }
 
 function next()
 {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    location.href = 'http://mt.asns.jp';
 }
 
 

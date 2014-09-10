@@ -162,7 +162,7 @@ interpreter.prototype.選択肢 = function(args) {
   text.color = "rgb(255,255,255)";
   text.backgroundColor = "rgba(0,0,0,0.6)";
   text.y     = 800 - 30*3;
-  text.width = 638;
+  text.width = 635;
   text.height = 30 * 3;
 
 //          text.text = str;
@@ -176,7 +176,7 @@ interpreter.prototype.選択肢 = function(args) {
   select1.color = "rgb(255,125,0)";
 //select1.y     = 320 - 32*2;
   select1.y     = 800 - 28;
-  select1.x     = 570;
+  select1.x     = 530;
   select1.width = 800;
   select1.addEventListener(Event.TOUCH_START, function(e) {
     location.href = BASE_URL + 'Stages/comp';

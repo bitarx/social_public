@@ -243,7 +243,7 @@ class AppController extends Controller {
         $carrer = 1;
         if (isset($_SERVER['HTTP_USER_AGENT']) && false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
         $this->set('carrer', $carrer); 
-
+$this->log('userId:' . $this->userId ); 
         // URLアサイン
         $this->_setUrl();
     } 

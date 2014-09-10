@@ -114,7 +114,7 @@ class BattleLog extends AppModel {
     public function getBattleLogDataLatest($userId) {
 
         $where = array('user_id' => $userId);
-        $fields = array('id', 'target', 'result', 'log', 'created');
+        $fields = array('id', 'target', 'result', 'log', 'created', 'modified');
         $order = array($this->getTableAlias() . '.created DESC'); 
         $ret = $this->getAllFind($where, $fields, 'first', $order);
         return $ret;
