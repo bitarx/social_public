@@ -414,8 +414,15 @@ $this->log($stage);
         $stageId = $this->UserStage->getUserMaxStageId($this->userId);
         $nextStageId = $stageId + 1;
 $this->log($log); 
-        // 勝利ではないor処理済
-        if (1 != $log['result'] or "0000-00-00 00:00:00" != $log['modified']) {
+        // 勝利ではない
+        if (1 != $log['result'])  {
+            $param = array(
+                         'stage_id' => $stageId
+                     );
+            $this->rd('Stages', 'main' , $param);
+        }
+        // 処理済
+        if ("0000-00-00 00:00:00" != $log['modified']) {
             $param = array(
                          'stage_id' => $nextStageId
                      );

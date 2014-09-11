@@ -25,7 +25,7 @@ class UserCardsController extends ApiController {
      */
 	public function index() {
 
-        // 並べ替え小目セット
+        // 並べ替え項目セット
         $this->setSort();
 
         // レア度ソート
@@ -113,6 +113,12 @@ class UserCardsController extends ApiController {
             $targetList[] = $this->UserCard->getUserCardById($userCardId);
         }
 
+        // 最大レベル
+        $levelMax = 0;
+        if ($userBaseCard['card_level'] <= $userBaseCard['level']) {
+            $levelMax = 1;
+        }
+
 
         // 消費ゴールド
         $useMoney = $this->Synth->useMoneyUp($targetList);
@@ -125,6 +131,7 @@ class UserCardsController extends ApiController {
         $this->set('money', $money);
         $this->set('data', $userBaseCard);
         $this->set('list', $targetList);
+        $this->set('levelMax', $levelMax);
         $this->set('userParam', $this->userParam);
 	}
 
@@ -250,6 +257,12 @@ class UserCardsController extends ApiController {
         }
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+
+        if ($userBaseCard['card_level'] <= $userBaseCard['level']) {
+            // レベル最大
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
 
         $targetList = array(); 
         $targetData = array();

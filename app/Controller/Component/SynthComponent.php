@@ -34,9 +34,14 @@ class SynthComponent extends Component {
      * @return array 強化後のカードデータ
      */
     public function doSynthUp($baseCard, $targetList, &$upExp) {
-        
+
+        $levelMulti = 8; 
         foreach ($targetList as $key => $val) {
-            $upExp += ($val['level'] * 8) + ($val['rare_level'] * 5);
+            // 同じ属性は大きくアップする
+            if ($baseCard['attr'] == $val['attr']) {
+                $levelMulti = 14; 
+            }
+            $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
         }
 
         // レベルアップ回数
@@ -49,10 +54,18 @@ class SynthComponent extends Component {
             $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.1);
             $baseCard['def']    = (int)floor($baseCard['def'] * 1.1);
             $baseCard['level']++;
+            // 最大レベルで終了
+            if ($baseCard['card_level'] <= $baseCard['level']) {
+                $levelMax = 1; 
+                break;
+            }
         }
 
         // 経験値更新
         $baseCard['exp'] = ($baseCard['exp'] + $upExp) % 100;
+        if (isset($levelMax)) {
+            $baseCard['exp'] = 0;
+        }
          
         return $baseCard;
     }
@@ -97,7 +110,7 @@ class SynthComponent extends Component {
     public function useMoneyUp($list) { 
         $useMoney = 0;
         foreach ($list as $val) {
-            $useMoney += ($val['rare_level'] * $val['level']) * 50;
+            $useMoney += ($val['atk'] + $val['def']) * 5;
         }
         return $useMoney;
     } 

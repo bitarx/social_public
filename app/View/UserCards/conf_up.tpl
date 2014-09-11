@@ -17,6 +17,10 @@
         <div style="text-align:center;">
             <{$smarty.const.MONEY_NAME}>が足りません。
         </div>
+    <{elseif !empty($levelMax)}>
+        <div style="text-align:center;">
+            レベル最大の為これ以上強化できません。
+        </div>
     <{else}>
         <form method=="POST" action="actUp">
             <div class="btnUpComp">
@@ -47,6 +51,10 @@
     <{if !$money}> 
         <div style="text-align:center;">
             <{$smarty.const.MONEY_NAME}>が足りません。
+        </div>
+    <{elseif !empty($levelMax)}>
+        <div style="text-align:center;">
+            レベル最大の為これ以上強化できません。
         </div>
     <{else}>
             <div class="btnUpComp">

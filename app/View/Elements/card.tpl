@@ -1,7 +1,9 @@
 <div class="card">
     <{if empty($data.user_card_id)}> 
-        <div style="position:absolute;left:50px;">
-        設定なし
+        <div style="position:relative;left:50px;height:150px;">
+            <div style="position:absolute;top:60px;">
+                設定なし
+            </div>
         </div>
     <{else}> 
     <div class="cardImg">
@@ -34,7 +36,7 @@
     </script>
 
     <div class="cardLv">
-        Lv.<span style="color:#ffffff"><{$data.level}></span>
+        Lv.<span style="color:#ffffff"><{$data.level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
     </div>
     <div class="cardSkillLv">
         スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
@@ -44,7 +46,11 @@
         <{if $data.Skill.skill_name}> 
             <{$data.Skill.skill_name}>
         <{else}> 
-            <{$data.skill_name}>
+            <{if empty($data.skill_name)}>
+               なし
+            <{else}>
+                <{$data.skill_name}>
+            <{/if}>
         <{/if}> 
         </span>
     </div>
@@ -53,7 +59,11 @@
         <{if $data.Skill.skill_words}> 
             <{$data.Skill.skill_words}>
         <{else}> 
-            <{$data.skill_words}>
+            <{if empty($data.skill_words)}>
+                なし
+            <{else}>
+                <{$data.skill_words}>
+            <{/if}>
         <{/if}> 
         </span>
     </div>
@@ -61,7 +71,7 @@
 
     <{* 強化合成素材カード選択 *}> 
     <{if 'UserCards' == $ctl && 'index' == $action}> 
-        <{if isset($key)}> 
+        <{if isset($key) && $key <= 10}> 
             <{if $kind == 2}> 
                 <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
                     <div class="btnSelectCard">

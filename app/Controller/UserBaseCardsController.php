@@ -19,7 +19,10 @@ class UserBaseCardsController extends ApiController {
      */
     public function index() {
 
-        $list = $this->UserCard->getUserCard($this->userId);
+        $pageAll = 0;
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel=0, $sortItem=0, $evolGroup=0, $pageAll);
+
+        $this->set('pageAll', $pageAll);
         $this->set('list', $list);
     }
 
