@@ -11,10 +11,15 @@
     </div>
     <div class="cardName">
         <{if !empty($data.Card.card_title)}>
-            <{$data.Card.card_title}><span style="color:#ffffff"><{$data.Card.card_name}></span>
+            <{$data.Card.card_title}>
+            <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.Card.card_id}>">
+            <span style="color:#ffffff"><{$data.Card.card_name}></span>
         <{else}> 
-            <{$data.card_title}><span style="color:#ffffff"><{$data.card_name}></span>
+            <{$data.card_title}>
+            <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.card_id}>">
+            <span style="color:#ffffff"><{$data.card_name}></span>
         <{/if}> 
+        </a>
     </div>
     <div class="cardAtk">
         攻撃:<span style="color:#ffffff"><{$data.atk}></span>
@@ -37,6 +42,19 @@
 
     <div class="cardLv">
         Lv.<span style="color:#ffffff"><{$data.level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
+    </div>
+    <div class="cardRareLevel">
+        レアリティ:<{if $data.rare_level == 1}>
+                        <span style="color:#ffffff">N</span>
+                    <{elseif $data.rare_level == 2}>
+                        <span style="color:#ffffff">HN</span>
+                    <{elseif $data.rare_level == 3}>
+                        <span style="color:#FF0000">R</span>
+                    <{elseif $data.rare_level == 4}>
+                        <span style="color:#FF0000">HR</span>
+                    <{elseif $data.rare_level == 5}>
+                        <span style="color:#FF0000">SR</span>
+                    <{/if}>
     </div>
     <div class="cardSkillLv">
         スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>

@@ -24,6 +24,14 @@
         <div class="strTitleGacha" >
            ガチャ 
         </div>
+    <{elseif 'Items' == $ctl}> 
+        <div class="strTitleSynth" >
+           ショップ
+        </div>
+    <{elseif 'UserItems' == $ctl}> 
+        <div class="strTitleSynth" >
+           アイテム
+        </div>
     <{else}>
         <div class="strCommonTitle" >
             <{$title}>

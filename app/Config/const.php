@@ -45,7 +45,8 @@ define("KEY_PAGING", 'p');
 /**
  * 文言
  */
-define("MONEY_NAME","ゴールド");
+define("MONEY_NAME","ゴールド");  // サイト内通貨の呼称
+define("POINT_NAME","ポイント");  // プラットフォーム通貨の呼称
 
 /**
  * 基本的な情報
