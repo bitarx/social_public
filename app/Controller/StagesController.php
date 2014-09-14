@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect');
 
     /**
      *　定数
@@ -395,7 +395,7 @@ class StagesController extends ApiController {
         $data = $this->Enemy->getEnemyData($log['target']);
 
         $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $data['enemy_id']);
-$this->log($stage); 
+
         $this->set('data', $data);
         $this->set('questId', $stage['Stage']['quest_id']);
 
@@ -413,7 +413,7 @@ $this->log($stage);
         // 現在到達最大ステージ
         $stageId = $this->UserStage->getUserMaxStageId($this->userId);
         $nextStageId = $stageId + 1;
-$this->log($log); 
+
         // 勝利ではない
         if (1 != $log['result'])  {
             $param = array(
@@ -479,7 +479,7 @@ $this->log($log);
         $where = array('enemy_id' => $log['target']);
         $field = array();
         $data  = $this->Stage->getAllFind($where, $field, 'first');
- $this->log($data); 
+
         $this->set('data', $data);
 
     }
@@ -547,9 +547,14 @@ $this->log($log);
             $lotData['target'] = 0;
             $lotData['num']    = 0;
             $hit = mt_rand(1, 100);
+
+            $effect = 0;
             if ($hit <= $userStageData['prob_get']) {
                 // 抽選
                 $list = $this->StageProb->getStageProb($data['stage_id']);
+
+                // 確率変動アイテムによる効果
+                $effect = $this->UserStageEffect->changeProbList($this->userId, $list);
                 $lotData = $this->Common->doLot($list);
  
             }
@@ -685,6 +690,7 @@ $this->log($log);
                 ,   'stage_clear' => $stageClear       // ステージクリアの場合1 
                 ,   'stage_id' => $data['stage_id']    // ステージID
                 ,   'name'     => $targetData['name']  // 入手物の名前
+                ,   'effect'   => $effect              // アイテム効果による確率変動(3:カードup 4:ゴールドup)
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 

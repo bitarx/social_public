@@ -61,4 +61,56 @@ class UserStageEffect extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * クエストアイテム効果による確率変動
+ *
+ * @param int $userId
+ * @param array $list 確率のリスト
+ * @return int 0:確率変動なし 1:効果Id(3:カード 4:ゴールド)
+ */
+    public function changeProbList($userId, &$list) {
+
+        // 有効時間
+        $targetTs = time() - (60 * ITEM_EFFECT_MINUTES); 
+        $targetTime = date("Y-m-d H:i:s", $targetTs);
+
+        // 効果 
+        $where = array(
+                     'UserStageEffect.created > ' => $targetTime 
+                 );
+        $field = array('effect');
+        $data = $this->getAllFind($where, $field, 'first');
+
+        $effect = 0;
+
+        // 効果アイテムがある
+        if (!empty($data['effect'])) {
+         
+            $effect = $data['effect'];
+
+            switch ($data['effect']) {
+                // カード
+                case 3:
+                    $kind = KIND_CARD;
+                    break;
+                // ゴールド
+                case 4:
+                    $kind = KIND_GOLD;
+                    break;
+            }
+
+            // 確率変動
+            $afterProb = 0;
+            foreach ($list as $key => &$val) {
+                if($kind == $val['kind']) {
+                    $targetKey = $key;
+                }
+                $afterProb += $val['prob'];
+            }
+            $list[$targetKey]['prob'] = $afterProb * 2;
+        }
+
+        return $effect;
+    }
 }

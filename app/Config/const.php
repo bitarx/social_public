@@ -33,6 +33,9 @@ define("KIND_PROG_HIGHT","5");
 define("KIND_NEW_FRIEND","6");
 
 
+// クエスト効果アイテム有効時間（分 ）
+define("ITEM_EFFECT_MINUTES", 30);
+
 /**
  * ページング
  */
