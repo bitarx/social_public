@@ -67,7 +67,8 @@ class UserStageEffect extends AppModel {
  *
  * @param int $userId
  * @param array $list 確率のリスト
- * @return int 0:確率変動なし 1:効果Id(3:カード 4:ゴールド)
+ * @return array [0] 0:確率変動なし 1:効果Id(3:カード 4:ゴールド)
+ *               [1] アイテム効果残り秒
  */
     public function changeProbList($userId, &$list) {
 
@@ -79,13 +80,20 @@ class UserStageEffect extends AppModel {
         $where = array(
                      'UserStageEffect.created > ' => $targetTime 
                  );
-        $field = array('effect');
+        $field = array('effect', 'created');
         $data = $this->getAllFind($where, $field, 'first');
+
+        $ts = strtotime($data['created']);
+
+        $sabun = time() - $ts;
+
+        // 残り時間【秒】
+        $effectSecond = (60 * ITEM_EFFECT_MINUTES) - $sabun;
 
         $effect = 0;
 
         // 効果アイテムがある
-        if (!empty($data['effect'])) {
+        if (!empty($data['effect']) ) {
          
             $effect = $data['effect'];
 
@@ -102,15 +110,17 @@ class UserStageEffect extends AppModel {
 
             // 確率変動
             $afterProb = 0;
-            foreach ($list as $key => &$val) {
-                if($kind == $val['kind']) {
-                    $targetKey = $key;
+            if (!empty($list)) {
+                foreach ($list as $key => &$val) {
+                    if($kind == $val['kind']) {
+                        $targetKey = $key;
+                    }
+                    $afterProb += $val['prob'];
                 }
-                $afterProb += $val['prob'];
+                $list[$targetKey]['prob'] = $afterProb * 2;
             }
-            $list[$targetKey]['prob'] = $afterProb * 2;
         }
 
-        return $effect;
+        return array($effect, $effectSecond);
     }
 }

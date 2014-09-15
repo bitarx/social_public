@@ -16,6 +16,7 @@
             </div>
 
         <{if !empty($data.useable)}> 
+            <{if empty($effect)}>
             <a href="<{$smarty.const.BASE_URL}>UserItems/<{$nextAction}>/<{$data.id}>">
                 <div class="btnSelectCard">
                     <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
@@ -24,6 +25,11 @@
                     </div>
                 </div>
             </a>
+            <{else}>
+                <div style="text-align:center; top:40px;">
+                現在使用中のアイテムがあるため使用できません
+                </div>
+            <{/if}>
         <{else}>
             <div class="btnSelectCard">
             </div>

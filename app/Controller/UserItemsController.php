@@ -43,8 +43,13 @@ class UserItemsController extends ApiController {
         $field = array();
         $data = $this->UserItem->getAllFind($where, $field, 'first');
 
+        // 確率変動アイテムの使用確認
+        $list = array();
+        list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
+
         $this->set('data',  $data);
         $this->set('nextAction',  'comp');
+        $this->set('effect',  'effect');
     }
 
     /**
@@ -108,6 +113,10 @@ class UserItemsController extends ApiController {
                     ,   'effect' => $data['effect']
                     );
                     $this->UserStageEffect->save($values);    
+
+                    // 減算
+                    $userItem['num']--; 
+                    $this->UserItem->save($userItem);
                 } catch (AppException $e) { 
                     $this->UserStageEffect->rollback(); 
                     $this->log($e->errmes);

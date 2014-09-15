@@ -616,6 +616,13 @@ input.btn_submit {
     height:1180px;
 }
 
+.stageItemEffect {
+    position:relative;
+    top:150px;
+    height:100px;
+    text-align:center;
+}
+
 /** クエストの進行ボタン */
 .btnQuestProg {
     left: 103px;

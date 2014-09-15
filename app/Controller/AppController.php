@@ -39,6 +39,12 @@ class AppController extends Controller {
      */
     public $gameTitle = '鎮激のエロイース';
 
+    // 確率変動アイテム文言
+    public $effectStr = array(
+                            3 => 'カード出現率アップ'
+                        ,   4 =>  'ゴールド出現率アップ'
+                        );
+
 
     public $viewClass = 'Smarty';
 

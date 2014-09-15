@@ -144,18 +144,35 @@ class StagesController extends ApiController {
             $notAct = 1;
         }
 
+        // 確率変動アイテムの使用確認
+        $list = array();
+        list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
+
+        $effectText = '';
+        $dateStr = '';
+        if (!empty($effect)) {
+            $effectText = $this->effectStr[$effect];
+            // 期限
+            $endTime = time() + $effectSecond;
+            $dateStr = date("F d,Y H:i:s" , $endTime);
+        }
+
         // ボスフラグ
         $boss = 0;
         if (2 == $data['state']) $boss = 1;
+
+        $act = (100 / $userParam['act_max']) * $userParam['act'];
 
         $this->set('data', $data);
         $this->set('userParam', $userParam);
         $this->set('param', $params);
         $this->set('prog', $data['progress']);
-        $this->set('act', $userParam['act']);
+        $this->set('act', $act);
         $this->set('exp', $userParam['exp']);
         $this->set('notAct', $notAct);
         $this->set('boss', $boss);
+        $this->set('effectText', $effectText);
+        $this->set('dateStr', $dateStr);
     }
 
     /**
@@ -547,16 +564,19 @@ class StagesController extends ApiController {
             $lotData['target'] = 0;
             $lotData['num']    = 0;
             $hit = mt_rand(1, 100);
-
+$this->log($userStageData); 
             $effect = 0;
+            $effectSecond = 0;
             if ($hit <= $userStageData['prob_get']) {
                 // 抽選
                 $list = $this->StageProb->getStageProb($data['stage_id']);
 
                 // 確率変動アイテムによる効果
-                $effect = $this->UserStageEffect->changeProbList($this->userId, $list);
+                list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
+
                 $lotData = $this->Common->doLot($list);
  
+            } else {
             }
 
             $this->UserStage->begin(); 
@@ -691,6 +711,7 @@ class StagesController extends ApiController {
                 ,   'stage_id' => $data['stage_id']    // ステージID
                 ,   'name'     => $targetData['name']  // 入手物の名前
                 ,   'effect'   => $effect              // アイテム効果による確率変動(3:カードup 4:ゴールドup)
+               ,   'effectSecond' => $effectSecond    // アイテム効果残り秒
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 
@@ -702,7 +723,7 @@ class StagesController extends ApiController {
         } else {
             $ary = array('result' => 2);
         }
-
+$this->log($ary); 
         $this->setJson($ary);
 	}
 
