@@ -253,6 +253,7 @@ boss.layout = ( function() {
         container.x = ( ( 110+ 15 ) * i ) - d;
         container.y = 100 + 500;
         palyerContainer.push( container );
+
         _stocker.getDO( "playerListContainer" ).addChild( container );
       }
       _stocker.setDO( "playerBMContainer", palyerBMContainer );
@@ -309,7 +310,7 @@ boss.layout = ( function() {
     turnNum_bm.x = 250;
     turnNum_bm.y = -310;
     _stocker.setDO( "turnNum", turnNum_bm );
-    _stocker.getDO( "stage" ).addChild( _stocker.getDO( "turnNum" ) );
+//    _stocker.getDO( "stage" ).addChild( _stocker.getDO( "turnNum" ) );
   }
 
   var exports = {};

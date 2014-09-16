@@ -1,5 +1,11 @@
 <div class="tutorials index">
-    <{include file="../Elements/title.tpl"}>
+    <div class="bannerTitle">
+        <img src="<{$smarty.const.IMG_URL}>banner_title.png">
+            <div class="strTitleSynth" >
+               ボス戦！
+            </div>
+    </div>
+
     <div> 
         <img src="<{$smarty.const.IMG_URL}>tutorial/enemy_0.png">
     </div>
@@ -22,7 +28,7 @@
         </div>
         <div class="guideFukidashi">
             <div class="guideFukiMiddle">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="200px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="205px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">

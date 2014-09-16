@@ -77,7 +77,6 @@ boss.view = ( function() {
     };
     for( var i = 0; i < len; i++ ) {
       var p = _stocker.getDO( "playerContainer" )[ i ];
-
       var vect = 0;
       createjs.Tween.get( p )
       .wait( (100 * i) + 500 )

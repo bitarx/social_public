@@ -22,11 +22,9 @@
     <script type="text/javascript">
       window.onload = function() {
         var imageLoadComplete = function() {
-            console.log("imageLoadComplete");
             setTimeout("boss.main.skip()", 3200);
         }
         var contentsComplete = function() {
-          console.log("contentsComplete");
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
                     location.href = "tutorial_14";
@@ -71,13 +69,13 @@
             },
 
             {
-              img: "<{$smarty.const.IMG_URL}>tutorial/card_s_37.jpg",
+              img: "<{$smarty.const.IMG_URL}>tutorial/card_s_43.jpg",
               max: "<{$data.card_id_2_max}>",
               current: "<{$data.card_id_2_cur}>"
             },
 
             {
-              img: "<{$smarty.const.IMG_URL}>tutorial/card_s_43.jpg",
+              img: "<{$smarty.const.IMG_URL}>tutorial/card_s_37.jpg",
               max: "<{$data.card_id_3_max}>",
               current: "<{$data.card_id_3_cur}>",
             },
@@ -102,10 +100,10 @@
           },
         }
 
-        var playerSkillData = [ { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:1 }, null, { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:2 }, null, { words:"キノコ食べ過ぎ", type:3 } ];
+        var playerSkillData = [ { words:"【アイドルマスタリー】 自分の攻撃力を中アップ", type:1 }, null, { words:"【ジューンブライド】 自分の攻撃力を小アップ", type:1 }, null, { words:"【四十九日の近い】 自分の防御力を小アップ", type:1 } ];
         //var playerSkillData = [ null, null, null, null, null ];
 
-        var enemySkillData = { words:"はじめまして! クッパです!!", type:4 };
+        var enemySkillData = { words:"【オフィスラブ】 相手全体の防御力を中ダウン", type:4 };
 
         var turn = <{$turn}>;
 

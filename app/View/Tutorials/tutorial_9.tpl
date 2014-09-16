@@ -44,16 +44,16 @@
 
     <div class="card">
         <div class="cardImg">
-               <img src="<{$smarty.const.IMG_URL}>tutorial/card_m_<{$tutoSampleCard}>.jpg" width="160px">
+               <img src="<{$smarty.const.IMG_URL}>tutorial/card_m_13.jpg" width="160px">
         </div>
         <div class="cardName">
-                [ゆとり育ち]<span style="color:#ffffff">結依</span>
+                [絶対美少女]<span style="color:#ffffff">つぼみ</span>
         </div>
         <div class="cardAtk">
-            攻撃:<span style="color:#ffffff">80</span>
+            攻撃:<span style="color:#ffffff">100</span>
         </div>
         <div class="cardDef">
-            防御:<span style="color:#ffffff">120</span>
+            防御:<span style="color:#ffffff">150</span>
         </div>
         <div class="cardExp">
             経験値:
@@ -76,7 +76,7 @@
         </div>
         <div class="cardSkillName">
             スキル:<span style="color:#ffffff">
-                サークルクラッシュ
+                アイドルマスタリー
             </span>
         </div>
     </div>

@@ -129,6 +129,9 @@ boss.loader = ( function() {
     var playerBMList = new Array();
     var count = 0;
     var len = playerFileNameList.length;
+
+// 以下の処理だと素材セットが非同期なためカードの表示順序が狂う
+/*
     for( var i = 0; i < len; i++ ) {
       var imgFileName = playerFileNameList[ i ];
       _loadImage( imgFileName, "center", function( bmContainer ){
@@ -141,6 +144,23 @@ boss.loader = ( function() {
         }
       } );
     }
+*/
+// 以下暫定対応
+    var setList = setInterval(function() {
+
+      var imgFileName = playerFileNameList[ count ];
+      _loadImage( imgFileName, "center", function( bmContainer ){
+        playerBMList.push( bmContainer );
+
+        count++;
+        if( count >= len ) {
+          _stocker.setDO( "playerBMList", playerBMList );
+          callback();
+           // 処理終了
+           clearInterval(setList);
+        }
+      } );
+    }, 100);
   }
 
   function _loadImage( imageFileName, align, callback ) {

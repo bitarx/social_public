@@ -267,6 +267,7 @@ $this->log('tutorial_1');
             ,   'UserCard.card_id' => $list[0]['card_id'] 
             ); 
             $userCard = $this->UserCard->field('user_card_id', $where);
+
             // 未振込であれば振込処理
             if (!$userCard) {
 
@@ -287,10 +288,11 @@ $this->log('tutorial_1');
                 }
 
                 $sortItem = 1; // user_card_idの古い順
-                $list = $this->UserCard->getUserCard ($this->userId,$cardId=0, $userCardId=0, $limit = 5, $offset=0, $sortItem);
+                $list = $this->UserCard->getUserCard ($this->userId,$cardId=0, $userCardId=0, $limit = 5, $offset=0, $rareLevel = 0,$sortItem);
                 if (empty($list[0]['user_card_id'])) {
                     throw new AppException('UserCardId get failed :' . $this->name . '/' . $this->action);
                 }
+
                 // デッキとユーザ所有カードを紐づけ
                 $ret = $this->UserDeckCard->regist($ret['UserDeck']['user_deck_id'], $list);
                 if (!$ret) {
@@ -734,12 +736,6 @@ $this->log('tutorial_1');
                    ));
         }
         $this->User->commit();
-/*
-        $data = json_decode('{"enemy_max":"2000","enemy_cur":"2000","card_id_1":"8","card_id_1_max":"200","card_id_1_cur":"200","card_id_2":"8","card_id_2_max":"200","card_id_2_cur":"200","card_id_3":"8","card_id_3_max":"200","card_id_3_cur":"200","card_id_4":"8","card_id_4_max":"200","card_id_4_cur":"200","card_id_5":"8","card_id_5_max":"200","card_id_5_cur":"200","0":[{"targetData":{"enemy_id":"3","hp":"2000"},"damage":307},{"targetData":{"enemy_id":"3","hp":1693},"damage":357},{"targetData":{"enemy_id":"3","hp":1336},"damage":459},{"targetData":{"enemy_id":"3","hp":877},"damage":387},{"targetData":{"enemy_id":"3","hp":490},"damage":335}],"1":[{"targetData":{"card_id":"8","hp":"200"},"damage":9},{"targetData":{"card_id":"8","hp":"200"},"damage":9},{"targetData":{"card_id":"8","hp":"200"},"damage":10},{"targetData":{"card_id":"8","hp":"200"},"damage":8},{"targetData":{"card_id":"8","hp":"200"},"damage":9}],"2":[{"targetData":{"enemy_id":"3","hp":155},"damage":335},{"targetData":{"enemy_id":"3","hp":0}}],"winner":1,"count":2}');
-        $data = (array)$data;
- var_dump($data);
- die;
-*/
 
         // 基礎値
         $data = array(
@@ -1097,6 +1093,7 @@ $this->log('tutorial_1');
             $data['progress'] = $cnt;
             $data['exp'] = $cnt;
             $data['result'] = 1;
+            $data['tuto'] = 1;
             $data['action'] = 'Tutorials_quest';
 
             if (3 < $cnt) {
