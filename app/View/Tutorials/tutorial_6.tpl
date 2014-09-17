@@ -26,10 +26,10 @@
                 [ゆとり育ち]<span style="color:#ffffff">結依</span>
         </div>
         <div class="cardAtk">
-            攻撃:<span style="color:#ffffff">80</span>
+            攻撃:<span style="color:#ffffff">800</span>
         </div>
         <div class="cardDef">
-            防御:<span style="color:#ffffff">120</span>
+            防御:<span style="color:#ffffff">1000</span>
         </div>
         <div class="cardExp">
             経験値:
@@ -45,7 +45,8 @@
         </script>
 
         <div class="cardLv">
-            Lv.<span style="color:#ffffff">1</span>
+            Lv.<span style="color:#ffffff">20</span>
+            <span style="color:#ff0000">Max</span>
         </div>
         <div class="cardSkillLv">
             スキルLv:<span style="color:#ffffff">1</span>
@@ -64,7 +65,7 @@
         <a href="<{$next}>">
                 <div class="btnCommon">
                     <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strSelectCard">
+                    <div class="strGacha">
                         進化させる
                     </div>
                 </div>
@@ -86,3 +87,11 @@
 <div>
     <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">
 </div>
+        <a href="<{$next}>">
+                <div class="btnCommon">
+                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <div class="strGacha">
+                        進化させる
+                    </div>
+                </div>
+        </a>

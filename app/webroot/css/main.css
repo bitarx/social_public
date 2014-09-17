@@ -54,6 +54,10 @@ div#contents{
     width:640px;
     position: relative;
 }
+.headerBar {
+    width:640px;
+    height:110px;
+}
 .btn_normal{
     position: relative;
     top: 10px;
@@ -202,7 +206,7 @@ div#contents{
 }
 .strTitleSynth {
     position: absolute;
-    top: 28%;
+    top: 20%;
     left: 42%;
     font-size: 30px;
 }
@@ -214,7 +218,7 @@ div#contents{
 }
 .strTitleBaseCard {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 210px;
     font-size: 30px;
 }
@@ -449,8 +453,8 @@ input.btn_submit {
 }
 .strSelectStComp {
     position: relative;
-    top: -45px;
-    left: 150px;
+    top: -50px;
+    left: 155px;
     font-size: 25px;
 }
 
@@ -1034,7 +1038,7 @@ display: block;
 .strGacha {
 
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 80px;
     font-size: 24px
 }
@@ -1042,7 +1046,7 @@ display: block;
 /** チュートリアル */
 .strTutoNext {
     position: absolute;
-    top: 20px;
+    top: 12px;
     left: 105px;
     font-size: 24px
 }
@@ -1089,12 +1093,12 @@ display: block;
 .guideFukiLeft {
     position: absolute;
     left: 0px;
-    top:45px;
+    top:60px;
 }
 .guideFukiUpper {
     position: absolute;
     left:18px;
-    top:-7px;
+    top:-9px;
 }
 .guideFukiUnder {
     position: absolute;
@@ -1216,9 +1220,9 @@ display: block;
 }
 .strCardDetailName {
     position: absolute;
-    top: 32px;
+    top: 25px;
     left: 50%;
-    margin: 0 0 0 -150px;
+    margin: 0 0 0 -140px;
     font-size: 30px;
 }
 .cardDetailNameUpper {
@@ -1244,7 +1248,7 @@ display: block;
 }
 .cardText {
     position: absolute;
-    top: 10px;
+    top: 18px;
     left: 20px;
     right: 20px;
     bottom: 10px;
@@ -1256,21 +1260,6 @@ display: block;
     top: 110px;
     bottom: 10px;
     height: 840px;
-}
-.strCardDetailName {
-    position: absolute;
-    top: 32px;
-    left: 50%;
-    margin: 0 0 0 -150px;
-    font-size: 30px;
-}
-.cardDetailNameUpper {
-    position: absolute;
-    top: 0px;
-}
-.cardDetailNameUnder {
-    position: absolute;
-    top: 72px;
 }
 .cardTextArea {
     position: relative;
@@ -1278,26 +1267,12 @@ display: block;
     height: 365px;
     font-size: 28px;
 }
-.cardText {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    right: 20px;
-    bottom: 10px;
-    height: 160px;
-    line-height: 1.5em;
-}
-.cardArea {
-    position: relative;
-    top: 110px;
-    bottom: 10px;
-    height: 840px;
-}
+
 
 /** その他共通 */
 .strCommonTitle {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 50%;
     margin: 0 0 0 -150px;
     font-size: 30px;

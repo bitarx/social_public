@@ -43,4 +43,12 @@
             </ul>
         </div>
     </a>
+    <div class="btnStart">
+        <a href="<{$next}>">
+        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="次へ" name="submit">
+        </a>
+        <div class="strStart">
+            チュートリアルへ
+        </div>
+    </div>
 </body>

@@ -75,6 +75,7 @@ interpreter.prototype.回転 = function(args) {
 // セリフを表示するコマンド(メソッド)
 // 'セリフ': ['名前ラベル', 'テキスト']
 interpreter.prototype.セリフ = function(args) {
+/*
   if (args[0]==undefined) args[0] = "";
   if (args[1]==undefined) args[1] = "";
   var name = new Label(args[0]);
@@ -84,8 +85,8 @@ interpreter.prototype.セリフ = function(args) {
   name.y = 320 - 32 * 3;
   name.width = 320;
   name.height = 32 * 3;
-  textLayer.addChild(name);
-  this.name = name;
+  //textLayer.addChild(name);
+  //this.name = name;
 
   //var text = new Label(args[1]);
   var str  = args[1];
@@ -96,21 +97,22 @@ interpreter.prototype.セリフ = function(args) {
   text.width = 320;
   text.height  = 320;
 
-  textLayer.addChild(text);
+//  textLayer.addChild(text);
 
   var i = 0;
   var addSel = 0;
   text.onenterframe= function()
   {
       if (undefined != str[i]) {
-          text.text += str[i];
+  //        text.text += str[i];
           i++;
       }
       if (undefined == str[i] && 0 == addSel) {
           addSel = 1; 
       }
   }
-  this.text = text;
+ // this.text = text;
+*/
 }
 
 // セリフをクリアするコマンド(メソッド)
@@ -154,39 +156,32 @@ interpreter.prototype.オートジャンプ = function(arg) {
 // 「選択肢1」を選択すると「シーン名1」に指定したシーンにジャンプ
 // 「選択肢2」を選択すると「シーン名2」に指定したシーンにジャンプ
 interpreter.prototype.選択肢 = function(args) {
-  var self = this;
+//  var self = this;
   var str = args[0];
 //   var text = new Label(args[0]);
   var text = new Label();
-  text.font  = "12px monospace";
+  text.font  = "18px monospace";
   text.color = "rgb(255,255,255)";
   text.backgroundColor = "rgba(0,0,0,0.6)";
-  text.y     = 800 - 30*3;
-  text.width = 635;
-  text.height = 30 * 3;
-
-//          text.text = str;
+  text.y     = 800 + 3;
+  text.x     = 40;
+  text.width = 520;
+  text.height = 30 * 4;
 
   textLayer.addChild(text);
-  this.selectText = text;
+//  this.selectText = text;
 
 
-  var select1 = new Label('【'+args[1]+'】');
-  select1.font  = "16px monospace";
-  select1.color = "rgb(255,125,0)";
-//select1.y     = 320 - 32*2;
-  select1.y     = 800 - 28;
-  select1.x     = 530;
-  select1.width = 800;
+  var select1 = new Label(args[1]);
+  select1.font  = "24px monospace";
+  select1.color = "rgb(200,125,0)";
+  select1.y     = 800 + 16*3;
+  select1.x     = 555;
   select1.addEventListener(Event.TOUCH_START, function(e) {
-    location.href = BASE_URL + 'Stages/comp';
-/*
-    self.選択肢クリア();
-    exec(eval(args[2]));
-*/
+    location.href = BASE_URL + args[2];
   });
-  this.select1 = select1;
 /*
+//  this.select1 = select1;
   var select2 = new Label('【'+args[3]+'】');
   select2.font  = "16px monospace";
   select2.color = "rgb(255,125,0)";
@@ -205,7 +200,13 @@ interpreter.prototype.選択肢 = function(args) {
   text.onenterframe= function()
   {
       if (undefined != str[i]) {
+          if (0 == i) {
+              //text.text += "<br />";
+          }
           text.text += str[i];
+          if (1 < i && 0 == i % 28) {
+              text.text += "<br />";
+          }
           i++;
       }
       if (undefined == str[i] && 0 == addSel) {
@@ -292,14 +293,16 @@ window.onload = function() {
     images.push(背景画像[key]);
   }
   // 使用する人物画像を配列にプッシュ
+/*
   for (var key in 登場人物) {
     images.push(登場人物[key]);
   }
+*/
 
   // 「interpreter」オブジェクトを生成する
   interpreter = new interpreter();
 
-  coer = new Core(640, 800);
+  coer = new Core(640, 920);
   coer.fps = 16;
   coer.preload(images);
 
@@ -339,8 +342,8 @@ window.onload = function() {
     exec(eval(save.scene));
  
     // セーブラベルを作成する
-    var savelabel = new MutableText(16, -100);
-    savelabel.text = 'SAVE'
+   // var savelabel = new MutableText(16, -100);
+  //  savelabel.text = 'SAVE'
     // セーブラベルの「touchstart」イベントリスナ
     savelabel.addEventListener('touchstart', function(e) {
       this.backgroundColor = '#F0F0F0';
@@ -363,7 +366,7 @@ window.onload = function() {
     savelabel.addEventListener('enterframe', function(e) {
       this.y =  0; // セーブラベルを見える位置へ
     });
-    coer.rootScene.addChild(savelabel);
+    //coer.rootScene.addChild(savelabel);
  
   }
 

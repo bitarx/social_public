@@ -214,9 +214,10 @@ boss.view = ( function() {
       .to( { alpha: 0 }, 200, createjs.Ease.sineIn );
 
       powerUP.scaleY = 0;
+      powerUP.y = 60;
 
       createjs.Tween.get( powerUP )
-      .to( { scaleY: 2 }, 400, createjs.Ease.sineInOut );
+      .to( { scaleY: 1.5 }, 400, createjs.Ease.sineInOut );
 
       createjs.Tween.get( powerUP )
       .to( { alpha: 1 }, 200, createjs.Ease.sineOut )
@@ -235,10 +236,11 @@ boss.view = ( function() {
       .wait( 200 )
       .to( { alpha: 0 }, 200, createjs.Ease.sineIn );
 
-      powerUP.scaleY = 0;
+      powerDown.scaleY = 0;
+      powerDown.y = 60;
 
       createjs.Tween.get( powerDown )
-      .to( { scaleY: 2 }, 400, createjs.Ease.sineOut );
+      .to( { scaleY: 1.5 }, 400, createjs.Ease.sineOut );
 
       createjs.Tween.get( powerDown )
       .to( { alpha: 1 }, 200, createjs.Ease.sineOut )

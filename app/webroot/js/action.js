@@ -84,20 +84,6 @@ function dispProgressQuestExp(exp)
      
 }
 
-/**
- * カードの経験値を表示
- *
- * @author imanishi 
- * @param int 経験値
- * @param int リスト表示時の連番
- * @return void 
- */
-function dispProgressCardExp(exp, num = 0)
-{
-    $('#progCardExp' + num).html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
-    $('#progCardExp' + num).show(); 
-     
-}
 
 function dispRotResultQuest(data)
 {
@@ -162,4 +148,19 @@ function dispRotResultQuest(data)
     // 文言等
     $('#strLotResultDataQuest').html(str);
     $('#strLotResultDataQuest').show(); 
+}
+
+/**
+ * カードの経験値を表示
+ *
+ * @author imanishi 
+ * @param int 経験値
+ * @param int リスト表示時の連番
+ * @return void 
+ */
+function dispProgressCardExp(exp,num)
+{
+    $('#progCardExp' + num).html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
+    $('#progCardExp' + num).show(); 
+     
 }

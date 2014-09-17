@@ -1,10 +1,7 @@
 body {
-    background-image: url('../img/tutorial/opening.png');
     background-color:#000000;
     background-position:center top;
     background-repeat:no-repeat;
-    //-moz-background-size:100% 100%;
-    //background-size:100% 100%;
     width:500px;;
     height:800px;
 }

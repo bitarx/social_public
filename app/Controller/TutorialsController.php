@@ -15,8 +15,9 @@ class TutorialsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard', 'UserParam',
-                    'UserDeck', 'UserDeckCard', 'Items', 'UserItem', 'UserPresentBox', 'UserTutorialQuestcnt');
+    public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard'
+                        , 'UserParam','UserDeck', 'UserDeckCard', 'Items', 'UserItem'
+                        , 'UserPresentBox', 'UserTutorialQuestcnt', 'UserBaseCard');
 
     public $row  = array();
 
@@ -298,6 +299,13 @@ $this->log('tutorial_1');
                 if (!$ret) {
                     throw new AppException('UserDeckCard save failed :' . $this->name . '/' . $this->action);
                 }
+
+                // ベースカード登録
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'user_card_id' => $list[0]['user_card_id']
+                );
+                $this->UserBaseCard->save($values);
             }
 
         } catch (AppException $e) {

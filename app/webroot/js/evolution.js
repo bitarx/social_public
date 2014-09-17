@@ -359,7 +359,7 @@ var evolution = (function() {
       _bm.card1.addChild( _shape.card1GlossLine );
 
       _bm.card1.x = -160; _bm.card1.y = _stage.canvas.height + 200;
-      _bm.card1.scaleX = _bm.card1.scaleY = cardScale;
+      _bm.card1.scaleX = _bm.card1.scaleY = cardScale / 2;
       _stage.addChild( _bm.card1 );
       card1.onload = null;
       card1 = null;
@@ -382,7 +382,7 @@ var evolution = (function() {
       _bm.card2.addChild( _shape.card2GlossLine );
 
       _bm.card2.x = +160; _bm.card2.y = _stage.canvas.height + 200;
-      _bm.card2.scaleX = _bm.card2.scaleY = cardScale;
+      _bm.card2.scaleX = _bm.card2.scaleY = cardScale / 2;
       _stage.addChild( _bm.card2 );
       card2.onload = null;
       card2 = null;
@@ -403,7 +403,8 @@ var evolution = (function() {
       _bm.card1GrowBM.x = 0; _bm.card1GrowBM.y = 0;
       _bm.card2GrowBM.x = 0; _bm.card2GrowBM.y = 0;
       _bm.cardResultGrowBM.x = 0; _bm.cardResultGrowBM.y = 0;
-      _bm.cardResultGrowBM.scaleX = _bm.cardResultGrowBM.scaleY = 2;
+      _bm.cardResultGrowBM.scaleX = 1.95;
+      _bm.cardResultGrowBM.scaleY = 2.05;
       _bm.card1 = new createjs.Container();
       _bm.card1.addChild( _bm.card1GrowBM );
       _bm.card2 = new createjs.Container();

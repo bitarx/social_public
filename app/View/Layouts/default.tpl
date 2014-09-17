@@ -19,14 +19,10 @@
 </head>
 <body>
     <div id="contents">
-<{*
-    <div id="loading" class="loading">
-        <img src="<{$smarty.const.BASE_URL}>img/loading.gif" width="45px">
-    </div>
-*}>
+
         <{include file="../Elements/header_menu.tpl"}>   
         <div class="header">
-            <img src="<{$smarty.const.BASE_URL}>img/header_base.png">
+            <img src="<{$smarty.const.BASE_URL}>img/header_base.png" class="headerBar">
         </div>
 
         <{include file="../Elements/header_menu.tpl"}>   

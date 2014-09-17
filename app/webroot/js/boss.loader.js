@@ -146,13 +146,15 @@ boss.loader = ( function() {
     }
 */
 // 以下暫定対応
+    var i = 0;
     var setList = setInterval(function() {
 
-      var imgFileName = playerFileNameList[ count ];
+      var imgFileName = playerFileNameList[ i ];
+      i++;
       _loadImage( imgFileName, "center", function( bmContainer ){
         playerBMList.push( bmContainer );
-
         count++;
+
         if( count >= len ) {
           _stocker.setDO( "playerBMList", playerBMList );
           callback();
@@ -160,7 +162,7 @@ boss.loader = ( function() {
            clearInterval(setList);
         }
       } );
-    }, 100);
+    }, 350);
   }
 
   function _loadImage( imageFileName, align, callback ) {

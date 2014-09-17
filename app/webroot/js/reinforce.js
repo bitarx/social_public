@@ -64,7 +64,8 @@ var reinforce = (function() {
   function init(canvasID, fileName, startExp, exp, loadCompleteCallback, contentsCompleteCallback ) {
 
     _canvas = document.getElementById(canvasID);
-    _canvas.style.width = '400px';//window.innerWidth + 'px';
+    //_canvas.style.width = '400px';//window.innerWidth + 'px';
+    _canvas.style.width = window.innerWidth + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);
@@ -494,7 +495,8 @@ var reinforce = (function() {
       _bm.card1GrowBM.x = 0; _bm.card1GrowBM.y = 0;
       _bm.card2GrowBM.x = 0; _bm.card2GrowBM.y = 0;
       _bm.cardResultGrowBM.x = 0; _bm.cardResultGrowBM.y = 0;
-      _bm.cardResultGrowBM.scaleX = _bm.cardResultGrowBM.scaleY = 2;
+      _bm.cardResultGrowBM.scaleX = 1.96;
+      _bm.cardResultGrowBM.scaleY = 2.05;
       _bm.card1 = new createjs.Container();
       _bm.card1.addChild( _bm.card1GrowBM );
       _bm.card2 = new createjs.Container();

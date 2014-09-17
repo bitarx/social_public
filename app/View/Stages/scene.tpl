@@ -12,7 +12,10 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/memory.enchant.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/game.js"></script>
     <style type="text/css">
-      body {margin: 0;}
+      body {
+          margin: 0;
+          background-color: #000;
+      }
     </style>
     <script type="text/javascript">
 
@@ -27,13 +30,6 @@
 }
 登場人物 = {
   'まゆ通常': IMG_URL + 'chara/chara1_Normal.png',
-  'まゆ好き': IMG_URL + 'chara/chara1_Like.png',
-  'まゆ嫌悪': IMG_URL + 'chara/chara1_Dislike.png',
-  'しぐれ通常': IMG_URL + 'chara/chara2_Normal.png',
-  'しぐれ好き': IMG_URL + 'chara/chara2_Like.png',
-  'しぐれ嫌悪': IMG_URL + 'chara/chara2_Dislike.png',
-  'しぐれ怒り': IMG_URL + 'chara/chara2_angry.png',
-  '丈太郎': IMG_URL + 'chara/chara3.png',
 }
 
 
