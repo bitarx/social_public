@@ -101,7 +101,7 @@
                 </a>
             <{else}> 
                 <div class="strSelectCardCheckBox">
-                    選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>">
+                    選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
                 </div>
             <{/if}> 
         <{/if}>
@@ -120,27 +120,23 @@
     <{* デッキ編成 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 
         <{if !empty($data.user_card_id)}> 
-            <form method="get" action="<{$smarty.const.BASE_URL}>UserDeckCards/delete">
                 <div class="btnSelectCardInUserDeckLeft">
-                    <input type="hidden" name="user_deck_id" value="<{$data.user_deck_id}>">
-                    <input type="hidden" name="deck_number" value="<{$data.deck_number}>">
+            <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                     <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
                     <div class="strSelectCardInUserDeck">
                         外す
                     </div>
+            </a>
                 </div>
-            </form>
         <{/if}> 
-        <form method="get" action="<{$smarty.const.BASE_URL}>UserDeckCards/initList">
             <div class="btnSelectCardInUserDeckRight">
-                <input type="hidden" name="user_deck_id" value="<{$data.user_deck_id}>">
-                <input type="hidden" name="deck_number" value="<{$data.deck_number}>">
+        <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
                 <div class="strSelectCardInUserDeck">
                     <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
                 </div>
+        </a>
             </div>
-        </form>
 
     <{* デッキに設定 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 

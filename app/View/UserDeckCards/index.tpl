@@ -1,4 +1,5 @@
 <div>
+    <{include file="../Elements/title.tpl"}>
     <div class="changeBase">
         <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
         <a href="<{$smarty.const.BASE_URL}>UserDeckCards/sortAtk">
@@ -16,4 +17,6 @@
       </div>
         <{include file="../Elements/line.tpl"}>
     <{/foreach}>
+    <div class="userCardListUnder">
+    </div>
 </div>

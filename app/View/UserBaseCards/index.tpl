@@ -10,4 +10,6 @@
         </div>
     <{/foreach}>
     <{include file="../Elements/paging.tpl"}>
+    <div class="userCardListUnder">
+    </div>
 </div>

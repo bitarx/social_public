@@ -1,4 +1,4 @@
-<div>
+<div class="userCardList">
     <{include file="../Elements/title.tpl"}>
     <{include file="../Elements/card.tpl"}>
     <div class="changeBase">
@@ -65,4 +65,6 @@
     <{/if}>
     
         <{include file="../Elements/pagingNum.tpl"}>
+    <div class="userCardListUnder">
+    </div>
 </div>
