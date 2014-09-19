@@ -96,6 +96,7 @@ Configure::write('Dispatcher.filters', array(
  * Configures default file logging options
  */
 //App::import('Lib', 'Error/AppExceptions');
+App::import('Lib', 'OAuth/OAuth');
 App::uses('CakeLog', 'Log');
 App::uses('AppException', 'Error');
 /*
@@ -113,3 +114,6 @@ CakeLog::config('error', array(
 
 //ユーザ定義ファイルの読み込み
 Configure::load("const");
+
+// OAuth.php読み込み
+
