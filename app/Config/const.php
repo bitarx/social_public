@@ -57,3 +57,13 @@ define("POINT_NAME","ポイント");  // プラットフォーム通貨の呼称
 define("NOW_DATE",  date("Y-m-d H:i:s") );
 define("NOW_DATE_DB", "'" . NOW_DATE . "'");
 
+
+
+/**
+ * OAuth認証関連
+ */
+// 商用環境の場合
+//define("AH_IS_SANDBOX", false);
+
+// サンドボックスの場合
+define("AH_IS_SANDBOX", true);

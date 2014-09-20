@@ -96,7 +96,8 @@ class AppController extends Controller {
     protected $_level       = 1;     // 初期レベル
 
     public final function beforeFilter() { 
-        
+
+
         $this->params =  $this->request->query;
 
         // 正常な初回アクセスはリクエストにIDが含まれる
@@ -105,19 +106,31 @@ class AppController extends Controller {
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
-            // 初回アクセスが正常に行われている場合はIDをCookieにセット
-            $this->Cookie->write('owner_id', $ownerId, true, '+20 years');
-            $this->Cookie->write('viewer_id', $viewerId, true, '+20 years');
+            // 初回アクセス認証
+            $ahUtil = ApplihillsUtil::create();
+
+            $ret =$ahUtil->checkSignature(); 
+            if (!$ret) {
+                // 検証に失敗した時の処理
+                $this->log(__FILE__.__LINE__.'OAuth Error'); 
+                echo 'OAuth error';
+                exit;
+            }
+
+            $this->set('ownerId', $ownerId);
+            $this->set('viewerId', $viewerId);
         }
 
         if (false !== strpos($_SERVER['SCRIPT_FILENAME'], 'Console')) {
-            // コンソールからのテスト
-            $this->ownerId  = 1;
-            $this->viewerId = 1;
+
         } else {
             $this->ownerId  = $this->Cookie->read('owner_id');
             $this->viewerId = $this->Cookie->read('viewer_id');
+$this->log($this->ownerId);
+$this->log($this->viewerId);
         }
+
+
 
         if ( !in_array($this->name, self::$ctlError) ) {
             if ( (empty($this->ownerId) || empty($this->viewerId) ) ) {
@@ -198,8 +211,14 @@ class AppController extends Controller {
                             // チュートリアル途中
                             $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                         } else {
-                            // チュートリアル初めて
-                            $this->rd('Tutorials', 'tutorial_1');
+                            $ary = array(
+                                'opensocial_owner_id' => $ownerId
+                            ,   'opensocial_viewer_id' => $viewerId
+                            );
+                            //$ary = $_REQUEST;
+                //            $this->rd('Tutorials', 'tutorial_1', $ary);
+                        //    header('Location: /index.php/Tutorials/tutorial_1?opensocial_owner_id='.$ownerId.'&opensocial_viewer_id='.$viewerId);
+
                         }
                     }
                 }

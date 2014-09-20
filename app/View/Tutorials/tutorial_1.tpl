@@ -34,21 +34,31 @@
   });
 })(jQuery);
 </script>
+
+<script type="text/javascript">
+  window.addEventListener("load", function(e) {
+    var target = (parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined));
+
+    var btn = document.getElementById("startGameButton");
+    btn.addEventListener("click", function(evt) {
+      var url          = "http://asns.jp/set_cookie_hills.php?oid=<{$ownerId}>&vid=<{$viewerId}>";
+      var callback_url = "http://asns.jp/Tutorials/tutorial_2";
+      var params       = "url=" + encodeURIComponent(url) + "&callback_url=" + encodeURIComponent(callback_url); 
+      target.postMessage("setCookie:" + params, '*');
+    });
+  });
+</script>
 </head>
 <body>
-    <a href="<{$next}>">
         <div class="slider">
             <ul id="slider">
-                <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png">
+                <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png" class="opening_text" >
             </ul>
         </div>
-    </a>
-    <div class="btnStart">
-        <a href="<{$next}>">
-        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="次へ" name="submit">
-        </a>
+    <div id="startGameButton" class="btnStart">
+        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
         <div class="strStart">
-            チュートリアルへ
+           ゲームスタート 
         </div>
     </div>
 </body>

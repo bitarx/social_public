@@ -23,6 +23,7 @@
 
 /** General Style Info **/
 body {
+    zoom:50%;
     background-image: url('../img/bg.png');
 	color: #fff;
     width:500px;

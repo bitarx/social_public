@@ -213,6 +213,7 @@ abstract class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod {
   }
 
   public function check_signature($request, $consumer, $token, $signature) {
+
     $decoded_sig = base64_decode($signature);
 
     $base_string = $request->get_signature_base_string();
@@ -225,7 +226,6 @@ abstract class OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod {
 
     // Check the computed signature against the one passed in the query
     $ok = openssl_verify($base_string, $decoded_sig, $publickeyid);
-
     // Release the key resource
     openssl_free_key($publickeyid);
 

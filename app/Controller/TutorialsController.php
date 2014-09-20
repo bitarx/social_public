@@ -34,6 +34,7 @@ class TutorialsController extends ApiController {
      */
     private function _routeTutorial() {
 
+
         // チュートリアル終了判定
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
@@ -63,7 +64,7 @@ class TutorialsController extends ApiController {
      * @author imanishi 
      */
 	public function tutorial_1() {
-$this->log('tutorial_1'); 
+
         // 共通レイアウトは使わない
         $this->layout = '';
 
