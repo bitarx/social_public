@@ -4,7 +4,7 @@ body {
     background-position:left top;
     background-repeat:no-repeat;
     -moz-background-size:50% 50%;
-    background-size:50% auto;
+    background-size:50% 50%;
 }
 
 .tutorial1 {
@@ -12,6 +12,7 @@ body {
 .slider {
     position: relative;
     width:320px;
+    height:400px;
     top:0px;
     left:0px;
 }

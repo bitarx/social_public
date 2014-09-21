@@ -80,4 +80,21 @@ class User extends AppModel {
 		)
 	);
 
+/**
+ * SNS側データを反映させるか判定
+ *
+ * @param int userId
+ * @return bool true:反映させる false:させない
+ */
+    public function isSnsDataUpdate($userId) {
+
+        $target = date("Y-m-d H:i:s", time()-SNS_DATA_UPDATE_TARM);
+        $where = array(
+                    'user_id'     => $userId
+                ,   'modified < ' => $target
+                );
+        $ret = $this->getAllFind($where);
+        return empty($ret) ? false : true;
+    }
+
 }

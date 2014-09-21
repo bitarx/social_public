@@ -17,7 +17,7 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
   protected $consumerSecret = "";
   protected $publicKeyDir   = "";
 
-  protected $errorlogFile =  "app/tmp/logs/appli-hills_error.log";
+  protected $errorlogFile =  "../tmp/logs/appli-hills_error.log";
 
   public static function create()
   {

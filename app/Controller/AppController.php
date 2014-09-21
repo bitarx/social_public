@@ -62,6 +62,9 @@ class AppController extends Controller {
 
     public static $ctlError = array('CakeError', 'Errors');
 
+    // キャリア
+    public $carrer = 0;
+
     // ページング
     public $page = 1;
     public $offset = 0;
@@ -100,16 +103,18 @@ class AppController extends Controller {
 
         $this->params =  $this->request->query;
 
+        $this->carrer = $this->Common->judgeCarrer();
+
         // 正常な初回アクセスはリクエストにIDが含まれる
         $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
         $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
 
+        $snsUtil = ApplihillsUtil::create();
+
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            $ahUtil = ApplihillsUtil::create();
-
-            $ret =$ahUtil->checkSignature(); 
+            $ret =$snsUtil->checkSignature(); 
             if (!$ret) {
                 // 検証に失敗した時の処理
                 $this->log(__FILE__.__LINE__.'OAuth Error'); 
@@ -126,6 +131,7 @@ class AppController extends Controller {
         } else {
             $this->ownerId  = $this->Cookie->read('owner_id');
             $this->viewerId = $this->Cookie->read('viewer_id');
+
 $this->log($this->ownerId);
 $this->log($this->viewerId);
         }
@@ -143,13 +149,22 @@ $this->log($this->viewerId);
                 $this->userId = $this->User->field('user_id', $where);
 
 
+
                 // ユーザデータ登録
                 if (empty($this->userId)) {
+
+                    // SNS側より取得
+                    $user = $snsUtil->getSelf();
+                    if (empty($user['displayName'])) {
+                         $this->log(__FILE__.__LINE__.'People Api Error'); 
+                         $this->rd('Errors', 'index', array('error' => 2 ));
+                    }
+
                     $this->User->begin();
                     try {
 
-                        $name   = 'test';
-                        $carrer = 1;
+                        $name   = $user['displayName'];
+                        $carrer = $this->carrer = $this->Common->judgeCarrer;
 
                         $values = array(
                             'sns_user_id'   => $this->ownerId
@@ -162,7 +177,7 @@ $this->log($this->viewerId);
                         }
 
                         $values = array(
-                            'user_name'        => $name
+                            'user_name'   => $name
                         ,   'sns_user_id' => $this->ownerId
                         ,   'carrer'      => $carrer
                         );
@@ -249,6 +264,45 @@ $this->log($this->viewerId);
 
             // 行動力回復
             $this->UserParam->recoverAct($this->userParam);
+
+            
+        }
+
+        if ($this->User->isSnsDataUpdate($userId)) {
+
+            $user = $snsUtil->getSelf();
+            if (empty($user['displayName'])) {
+                $this->rd('Errors', 'index', array('error' => 2  ));
+            }
+
+            $this->User->begin();
+            try {
+
+                $name   = $user['displayName'];
+
+                $values = array(
+                    'sns_user_id'   => $this->ownerId
+                ,   'viewer'        => $this->viewerId
+                ,   'sns_name'      => $name
+                );
+                $this->SnsUser->save($values);
+
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'user_name'   => $name
+                );
+                $this->User->save($values);
+
+            } catch (AppException $e) {
+                $this->User->rollback();
+
+                $this->log($e->errmes);
+                return $this->redirect(
+                           array('controller' => 'errors', 'action' => 'index'
+                                 , '?' => array('error' => 2)
+                       ));
+            }
+            $this->User->commit();
         }
 
         // ページング

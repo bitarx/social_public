@@ -17,6 +17,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/config.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
 
 <title><{$gameTitle}></title>
 <script type="text/javascript">

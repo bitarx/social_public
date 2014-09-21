@@ -103,4 +103,27 @@ class CommonComponent extends Component {
         }
         return $keys;
     }
+
+    /**
+     * キャリア判定
+     *
+     * @return 1:Android 2:iPhone
+     */
+    public function judgeCarrer()
+    {
+        $UA = $_SERVER['HTTP_USER_AGENT'];
+        // Android
+        if (ereg("Android.*Mobile", $UA)) {
+             return CARRER_ANDROID;
+        // iPhone
+        } elseif (ereg("iPhone|iPod", $UA)) {
+             return CARRER_IPHONE;
+        // WindowsPhone
+        } elseif (ereg("Windows.*Phone", $UA)) {
+             return CARRER_WINPHONE;
+        }else{
+             // PC・タブレット
+             return CARRER_PC;
+        }
+    }
 }

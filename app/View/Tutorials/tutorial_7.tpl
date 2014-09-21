@@ -11,6 +11,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/tweenjs-0.5.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/evolution.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
 
     <script type="text/javascript">
       function back()

@@ -14,6 +14,19 @@ define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
 // カード最大所有枚数
 define("CARD_MAX_NUM", 100);
 
+// SNS情報更新期間(秒)
+define("SNS_DATA_UPDATE_TARM", 60*60*24);
+
+// キャリア（Android）
+define("CARRER_ANDROID", 1);
+// キャリア（iPhone）
+define("CARRER_IPHONE", 2);
+// キャリア（WindowsPhone）
+define("CARRER_WINPHONE", 3);
+// キャリア（PC）
+define("CARRER_PC", 9);
+
+
 $config = array();
 
 /**

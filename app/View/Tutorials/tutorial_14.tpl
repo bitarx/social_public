@@ -16,6 +16,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/nineleap.enchant.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/memory.enchant.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/game.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
     <style type="text/css">
       body {margin: 0;}
     </style>
