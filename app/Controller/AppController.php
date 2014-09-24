@@ -65,6 +65,9 @@ class AppController extends Controller {
     // キャリア
     public $carrer = 0;
 
+    // SNSApi関連クラス
+    public $snsUtil = array();
+
     // ページング
     public $page = 1;
     public $offset = 0;
@@ -109,12 +112,13 @@ class AppController extends Controller {
         $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
         $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
 
-        $snsUtil = ApplihillsUtil::create();
+        // SNSクラス生成
+        $this->snsUtil = ApplihillsUtil::create();
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            $ret =$snsUtil->checkSignature(); 
+            $ret =$this->snsUtil->checkSignature(); 
             if (!$ret) {
                 // 検証に失敗した時の処理
                 $this->log(__FILE__.__LINE__.'OAuth Error'); 
@@ -124,13 +128,16 @@ class AppController extends Controller {
 
             $this->set('ownerId', $ownerId);
             $this->set('viewerId', $viewerId);
+            $this->ownerId  = $ownerId;
+            $this->viewerId = $viewerId;
         }
 
-        if (false !== strpos($_SERVER['SCRIPT_FILENAME'], 'Console')) {
+        if (empty($this->ownerId)) {
 
-        } else {
-            $this->ownerId  = $this->Cookie->read('owner_id');
-            $this->viewerId = $this->Cookie->read('viewer_id');
+$this->log('COOKIE');
+$this->log($_COOKIE);
+            $this->ownerId  = $_COOKIE['opensocial_owner_id'];
+            $this->viewerId = $_COOKIE['opensocial_viewer_id'];
 
 $this->log($this->ownerId);
 $this->log($this->viewerId);
@@ -139,7 +146,10 @@ $this->log($this->viewerId);
 
 
         if ( !in_array($this->name, self::$ctlError) ) {
-            if ( (empty($this->ownerId) || empty($this->viewerId) ) ) {
+            if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
+                $firstAccess = 1;
+            }
+            if (  (empty($this->ownerId) || empty($this->viewerId) ) && !isset($firstAccess) ) {
 
                 // Cookieセットされていない場合は不正アクセス
                 $this->rd('Errors', 'index', array('error' => 1 ));
@@ -151,10 +161,10 @@ $this->log($this->viewerId);
 
 
                 // ユーザデータ登録
-                if (empty($this->userId)) {
+                if (empty($this->userId) && (!empty($this->ownerId))) {
 
                     // SNS側より取得
-                    $user = $snsUtil->getSelf();
+                    $user = $this->snsUtil->getSelf();
                     if (empty($user['displayName'])) {
                          $this->log(__FILE__.__LINE__.'People Api Error'); 
                          $this->rd('Errors', 'index', array('error' => 2 ));
@@ -268,10 +278,11 @@ $this->log($this->viewerId);
             
         }
 
-        if ($this->User->isSnsDataUpdate($userId)) {
+        if ($this->User->isSnsDataUpdate($this->userId)) {
 
-            $user = $snsUtil->getSelf();
+            $user = $this->snsUtil->getSelf();
             if (empty($user['displayName'])) {
+                $this->log($this->userId.__FILE__.__LINE__. 'get sns user name error');
                 $this->rd('Errors', 'index', array('error' => 2  ));
             }
 

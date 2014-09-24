@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ .'/OAuth/OAuth.php' ;
 
 class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
 {
@@ -485,8 +486,11 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
 
   public function getOwnerId()
   {
+    // cookieを追加
     if (isset($_SESSION["opensocial_owner_id"])) {
       return $_SESSION["opensocial_owner_id"];
+    } elseif (isset($_COOKIE["opensocial_owner_id"])) {
+      return $_COOKIE["opensocial_owner_id"];
     } elseif (isset($_REQUEST["opensocial_owner_id"])) {
       return $_REQUEST["opensocial_owner_id"];
     } elseif (isset($_GET["opensocial_owner_id"])) {

@@ -83,12 +83,16 @@ class UserStageEffect extends AppModel {
         $field = array('effect', 'created');
         $data = $this->getAllFind($where, $field, 'first');
 
-        $ts = strtotime($data['created']);
+        $effectSecond = 0;
 
-        $sabun = time() - $ts;
+        if (!empty($data['created'])) {
+            $ts = strtotime($data['created']);
 
-        // 残り時間【秒】
-        $effectSecond = (60 * ITEM_EFFECT_MINUTES) - $sabun;
+            $sabun = time() - $ts;
+
+            // 残り時間【秒】
+            $effectSecond = (60 * ITEM_EFFECT_MINUTES) - $sabun;
+        }
 
         $effect = 0;
 

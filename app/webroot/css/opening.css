@@ -3,8 +3,8 @@ body {
     background-color:#000000;
     background-position:left top;
     background-repeat:no-repeat;
-    -moz-background-size:50% 50%;
-    background-size:50% 50%;
+    -moz-background-size:100% auto;
+    background-size:100% auto;
 }
 
 .tutorial1 {

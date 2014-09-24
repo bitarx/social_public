@@ -15,7 +15,7 @@ class ItemsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup');
+    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup', 'PaymentLog');
 
     /**
      * index method
@@ -42,9 +42,66 @@ class ItemsController extends ApiController {
         $where  = array('item_id' => $itemId);
         $data = $this->Item->getAllFind($where, $fields, 'first');
 
+
+        // アプリヒルズ側で購入が確定した際の通知先URL
+        $callbackUrl = BASE_URL . "Items/comp";
+
+        // アプリヒルズ側で購入が完了した後の戻り先URL
+        $finishPageUrl = BASE_URL . "Items/end?item_id=" . $itemId;
+
+        // 購入アイテムの配列（複数のアイテム指定可）
+        // アイテム名や説明文はUTF-8
+        $items = array();
+        $items[] = array(
+          "itemId"      => $data['item_id'],
+          "name"        => $data['item_name'],
+          "unitPrice"   => $data['point'],
+          "quantity"    => 1,
+          "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
+          "description" => $data['item_detail'],
+        );
+
+        $this->snsUtil = ApplihillsUtil::create();
+        $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
+
+        if ($payment) {
+            // 決済ID（Paymentオブジェクトごとに割り当てられます）
+            $paymentId = $payment["paymentId"];
+
+            $itemLog = json_encode($items);
+
+            // 購入情報（Payment IDとアイテム情報を結びつけたもの）をデータベース等に保存
+            $this->PaymentLog->begin();
+            try {
+                $values = array(
+                              'payment_id' => $paymentId
+                          ,   'user_id'   => $this->userId
+                          ,   'log'       => $itemLog
+                          );
+                $this->PaymentLog->save($values);
+
+                
+            } catch (AppException $e) { 
+                $this->UserParam->rollback(); 
+                $this->log($e->errmes);
+                $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+            $this->PaymentLog->commit();
+
+            // アイテム購入ページへリダイレクト
+            header("Location: " . $payment["transactionUrl"], true, 302);
+            exit;
+        } else {
+            // 失敗した時の処理
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+            $this->rd('Errors', 'index', array('error' => 2));
+        }
+
         // 暫定
+/*        
         $param = array('item_id' => $itemId);
         $this->rd('Items', 'comp', $param);
+*/
 	}
 
     /**
@@ -55,11 +112,38 @@ class ItemsController extends ApiController {
      */
     public function comp() {
 
-        $itemId = $this->params['item_id'];
-        $where = array(
-                       'item_id' => $itemId
-                    );
+        $this->autoRender = false;   // 自動描画をさせない
+
+        // 最新ログ取得
+        $latestData = $this->PaymentLog->getLatestData($this->userId);
+        if (empty($latestData)) {
+            $this->UserParam->rollback(); 
+            $this->rd('Errors', 'index', array('error'=> 2)); 
+        }
+        $items = $latestData['log'];
+        $items = json_decode($items);
+        $items[0] = (array)$items[0];
+
+        $paymentId = $latestData['payment_id']; 
+        $payment   = $this->snsUtil->getPayment($paymentId); 
+
+        $err = 0;
+        foreach ($payment["paymentEntries"] as $key => $val) {
+            if ( $items[$key]['itemId'] != $val['itemId'] ) {
+                $err = 1;
+                break;
+            }
+            $itemId = $val['itemId'];
+            break;
+        }
+
+        if ($err == 1) {
+            // 直近で購入したアイテムではない
+            $this->rd('Errors', 'index', array('error'=> 2)); 
+        }
+
         $field = array();
+        $where = array('item_id' => $itemId);
 
         $itemData = $this->Item->getAllFind($where, $field, 'first');
 
@@ -104,17 +188,19 @@ class ItemsController extends ApiController {
                 $this->UserItem->updateAll($value, $where);
             }
 
+            // endFlg
+            $value = array(
+                'id' => $latestData['id']
+            ,   'end_flg' => 1
+            );
+            $this->PaymentLog->save($value);
+
         } catch (AppException $e) { 
             $this->UserParam->rollback(); 
             $this->log($e->errmes);
             $this->rd('Errors', 'index', array('error'=> 2)); 
         } 
         $this->UserItem->commit();
-
-        
-        $param = array('item_id' => $newItemId);
-
-        $this->rd('Items', 'end', $param);
     }
 
     /**
@@ -126,16 +212,27 @@ class ItemsController extends ApiController {
     public function end() {
 
    
-        $where = array('item_id' => $this->params['item_id']);
+        // 最新ログ取得
+        $latestData = $this->PaymentLog->getLatestData($this->userId, $endFlg = 1);
+        $log = json_decode($latestData['log']);
+        $itemData = (array)$log[0];
+
+        $where = array('item_id' => $itemData['itemId']);
         $field = array();
         $data = $this->Item->getAllFind($where, $field, 'first');
 
+        $itemGroup = $this->ItemGroup->getAllFind($where , $field, 'first');
+        if (!empty($itemGroup['item_base_id'])) {
+            $itemId = $itemGroup['item_base_id'];
+        } else {
+            $itemId = $itemData['itemId'];
+        }
+
         $where = array(
                      'user_id' => $this->userId
-                 ,   'item_id' => $data['item_id']
+                 ,   'item_id' => $itemId
                  );
         $userItem = $this->UserItem->getAllFind($where, $field, 'first');
-
         if (empty($userItem['num'])) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error' => 2));

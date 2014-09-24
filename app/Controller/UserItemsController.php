@@ -49,7 +49,7 @@ class UserItemsController extends ApiController {
 
         $this->set('data',  $data);
         $this->set('nextAction',  'comp');
-        $this->set('effect',  'effect');
+        $this->set('effect',  $effect);
     }
 
     /**
