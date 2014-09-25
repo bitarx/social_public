@@ -16,7 +16,7 @@
             <{$data.point}><{$smarty.const.MONEY_NAME}>
         </div>
                 <div class="btnGachaStart">
-                    <a href="<{$smarty.const.BASE_URL}>Gachas/api?gacha_id=<{$data.gacha_id}>">
+                    <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>">
                     <img src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="ガチャる" name="submit">
                     <div class="strUpConf">
                        ガチャる 

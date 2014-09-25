@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog');
+    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog');
 
     // 10連ガチャID
     public $gacha10 = array( 2 );
@@ -48,8 +48,10 @@ class GachasController extends ApiController {
 
 
         // 仮に飛ばす
+/*
         $param = array('gacha_id' => $gachaId);
         $this->rd('gachas', 'act', $param);
+*/
 	}
 
 
@@ -67,6 +69,9 @@ class GachasController extends ApiController {
             // 選択がない
             return $this->rd('Gacha', 'index', array('error'=> 1));
         }
+
+        $where = array('gacha_id' => $gachaId );
+        $gachaData = $this->Gacha->getAllFind($where, array(), 'first');
 
         $probList = $this->GachaProb->getGachaProbList ($gachaId);
 
@@ -162,6 +167,71 @@ class GachasController extends ApiController {
         $this->UserCard->commit();
 
 
+        /********************************************** 
+         * 以下課金API
+        ***********************************************/ 
+        // アプリヒルズ側で購入が確定した際の通知先URL
+        $callbackUrl = BASE_URL . "Gachas/comp";
+
+        // アプリヒルズ側で購入が完了した後の戻り先URL
+        if ($gacha10) {
+            // １０連ガチャ
+            $finishPageUrl = BASE_URL . "Gachas/product10?rare_level=". $rareLevel;
+        } else {
+            // 単品ガチャ
+            $finishPageUrl = BASE_URL . "Gachas/product?rare_level=". $rareLevel;
+        }
+
+
+        // 購入アイテムの配列（複数のアイテム指定可）
+        // アイテム名や説明文はUTF-8
+        $items = array();
+        $items[] = array(
+          "itemId"      => $gachaData['gacha_id'],
+          "name"        => $gachaData['gacha_name'],
+          "unitPrice"   => $gachaData['point'],
+          "quantity"    => 1,
+          "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+          "description" => $gachaData['gacha_detail'],
+        );
+
+        $this->snsUtil = ApplihillsUtil::create();
+        $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
+
+        if ($payment) {
+            // 決済ID（Paymentオブジェクトごとに割り当てられます）
+            $paymentId = $payment["paymentId"];
+
+            $itemLog = json_encode($items);
+
+            // 購入情報（Payment IDとアイテム情報を結びつけたもの）をデータベース等に保存
+            $this->PaymentLog->begin();
+            try {
+                $values = array(
+                              'payment_id' => $paymentId
+                          ,   'user_id'   => $this->userId
+                          ,   'log'       => json_encode($logList)
+                          );
+                $this->PaymentLog->save($values);
+
+                
+            } catch (AppException $e) { 
+                $this->UserParam->rollback(); 
+                $this->log($e->errmes);
+                $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+            $this->PaymentLog->commit();
+
+            // アイテム購入ページへリダイレクト
+            header("Location: " . $payment["transactionUrl"], true, 302);
+            exit;
+        } else {
+            // 失敗した時の処理
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+            $this->rd('Errors', 'index', array('error' => 2));
+        }
+
+
         $params = array(
             'rare_level' => $rareLevel
         );
@@ -254,7 +324,6 @@ class GachasController extends ApiController {
      * @return void
      */
     public function _product10() {
-$this->log('procuct10'); 
 
         // 共通レイアウトは使わない
         $this->layout = '';
@@ -289,12 +358,24 @@ $baseCard = IMG_URL . 'miku_v02.jpg';
     }
 
     /**
-     * ガチャ完了
+     * ガチャ完了処理
      *
      * @author imanishi
      * @return void
      */
     public function comp() {
+
+        $this->autoRender = false;   // 自動描画をさせない
+
+    }
+
+    /**
+     * ガチャ完了画面
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function end() {
 
         $log = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $limit = 10);
 

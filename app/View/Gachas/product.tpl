@@ -16,7 +16,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "comp";
+           location.href = "end";
       }
 
       window.onload = function() {

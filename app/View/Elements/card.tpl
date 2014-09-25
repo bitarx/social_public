@@ -123,19 +123,19 @@
                 <div class="btnSelectCardInUserDeckLeft">
             <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                     <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+            </a>
                     <div class="strSelectCardInUserDeck">
                         外す
                     </div>
-            </a>
                 </div>
         <{/if}> 
             <div class="btnSelectCardInUserDeckRight">
         <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+        </a>
                 <div class="strSelectCardInUserDeck">
                     <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
                 </div>
-        </a>
             </div>
 
     <{* デッキに設定 *}> 
