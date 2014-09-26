@@ -13,7 +13,9 @@ class UserStagesController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
+
+	public $uses = array('UserStage', 'Quest', 'Enemy');
 
     /**
      * シーン鑑賞
@@ -23,75 +25,17 @@ class UserStagesController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->UserStage->getAllFind($where, $fields);
-        $this->set('userStages', $this->Paginator->paginate());
+        $fields = array();
+        $where  = array(
+            'user_id' => $this->userId
+        ,   'state'   => 3     
+        );
+        $pageAll = 0;
+        $list = $this->UserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
+$this->log($list);         
+        $this->set('list', $list);
+        $this->set('pageAll', $pageAll);
 
-        $this->UserStage->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->UserStage->save($values);
-            if (!$ret) {
-                throw new AppException('UserStage save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->UserStage->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->UserStage->commit();
 	}
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->UserStage->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->UserStage->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
-
-        $this->setJson($ary);
-	}
-
 
 }

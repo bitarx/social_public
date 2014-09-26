@@ -125,13 +125,14 @@ class UserStage extends AppModel {
         return $ret;
     }
 
-    public function getUserStageByEnemyId($userId, $enemyId ) {
+    public function getUserStageByEnemyId($userId, $enemyId, $state = 3 ) {
 
         $fields = array();
         $order  = array();
         $kind = 'first';
         $where = array( 'conditions' => array(
             'UserStage.user_id' => $userId
+        ,   'UserStage.state' => $state
         ,   'Stage.enemy_id' => $enemyId
         ));
         $option = array(
@@ -177,5 +178,25 @@ class UserStage extends AppModel {
             $ret = $this->updateAll($values, $where);
         }
         return $ret;
+    }
+
+    /**
+     * シーン鑑賞用のリスト
+     *
+     * @return array $list
+     **/
+    public function getUserStageForScene($where, $field, $limit, $offset, &$pageAll)
+    {
+        $order = array('UserStage.stage_id ASC');
+        $list = $this->getAllFind($where, $field, 'all', $order, $limit, $offset);
+
+        $field = array('stage_id');
+        $all = $this->getAllFind($where, $field, 'all');
+        $pageAll = ceil(count($all) / PAGE_LIMIT);
+        if (empty($pageAll)) {
+            $pageAll = 1;
+        }
+
+        return $list;
     }
 }

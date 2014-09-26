@@ -173,10 +173,10 @@ interpreter.prototype.選択肢 = function(args) {
 
 
   var select1 = new Label(args[1]);
-  select1.font  = "24px monospace";
+  select1.font  = "26px monospace";
   select1.color = "rgb(200,125,0)";
   select1.y     = 800 + 16*3;
-  select1.x     = 555;
+  select1.x     = 550;
   select1.addEventListener(Event.TOUCH_START, function(e) {
     location.href = BASE_URL + args[2];
   });

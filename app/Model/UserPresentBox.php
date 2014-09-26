@@ -148,6 +148,7 @@ class UserPresentBox extends AppModel {
             $cntlist  = $this->getAllFind($where, $field, 'all');
             $cnt = count($cntlist) / PAGE_LIMIT;
             $pageAll = ceil($cnt);
+            if (empty($pageAll)) $pageAll = 1;
         }
         return $list;
     } 

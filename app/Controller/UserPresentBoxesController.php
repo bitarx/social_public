@@ -25,7 +25,7 @@ class UserPresentBoxesController extends ApiController {
 
         $pageAll = 0;
         $list = $this->UserPresentBox->getList($this->userId , $add = 1, $this->offset, $pageAll);
-    $this->log('PboxList:' . print_r($list, true)); 
+
         $this->set('list', $list);
 
         $this->set('pageAll', $pageAll);

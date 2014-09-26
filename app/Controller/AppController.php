@@ -369,7 +369,7 @@ $this->log('userId:' . $this->userId );
         // バトル
         $this->set('linkUserParam', BASE_URL . 'UserParams/index'); 
         // シーン鑑賞
-        $this->set('linkUserStages', BASE_URL . 'UserStages/index'); 
+        $this->set('linkScene', BASE_URL . 'UserStages/index'); 
         // ヘルプ
         $this->set('linkStaticPage', BASE_URL . 'StaticPages/index'); 
     }

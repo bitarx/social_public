@@ -201,7 +201,7 @@ class StagesController extends ApiController {
 
         $targetId = $this->params['target_id'];
 
-        $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId );
+        $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
         // ブラウザバックなど不正操作
         if (2 != $userStage['UserStage']['state']) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
@@ -408,15 +408,31 @@ class StagesController extends ApiController {
         // 共通レイアウトは使わない
         $this->layout = '';
 
-        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
-        $data = $this->Enemy->getEnemyData($log['target']);
-
-        $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $data['enemy_id']);
+        if (empty($this->params['enemy_id'])) {
+            $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+            $data = $this->Enemy->getEnemyData($log['target']);
+            $enemyId = $data['enemy_id'];
+            $next = 'Stages/next';
+            $str  = 'NEXTSTAGE';
+        } else {
+            $enemyId = $this->params['enemy_id'];
+            $data = $this->Enemy->getEnemyData($enemyId);
+            $next = 'UserStages/index';
+            $str  = '戻る';
+        }
+        $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
+        if (empty($stage)) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => 1));
+        }
 
         $this->set('data', $data);
+        $this->set('next', $next);
+        $this->set('str',  $str);
         $this->set('questId', $stage['Stage']['quest_id']);
 
     }
+
     /**
      * ボス戦後
      *

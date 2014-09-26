@@ -12,6 +12,10 @@
         <div class="strTitleDeckCard" >
             デッキ編成
         </div>
+    <{elseif 'UserStages' == $ctl}> 
+        <div class="strTitleDeckCard" >
+            シーン鑑賞
+        </div>
     <{elseif 'UserPresentBoxes' == $ctl}> 
         <div class="strTitleDeckCard" >
            受取BOX 

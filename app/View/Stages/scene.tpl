@@ -41,7 +41,7 @@ GAME_ID = 'adv002';
 start = {
   'シーン': 'start',
   '背景画像': ['学校', 640, 800],
-  '選択肢': ['<{$data.after_win_words}>','NEXTSTAGE', 'next'],
+  '選択肢': ['<{$data.after_win_words}>','<{$str}>', '<{$next}>'],
 }
 
 function next()

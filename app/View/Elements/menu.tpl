@@ -40,7 +40,7 @@
         </div>
 
         <div class="icon_scene">
-            <a href="<{$linkUserStage}> "><img src="<{$smarty.const.BASE_URL}>img/icon_scene.png" ></a>
+            <a href="<{$linkScene}> "><img src="<{$smarty.const.BASE_URL}>img/icon_scene.png" ></a>
         </div>
         <div class="icon_help">
             <a href="<{$linkStaticPage}> "><img src="<{$smarty.const.BASE_URL}>img/icon_help.png" ></a>

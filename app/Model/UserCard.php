@@ -224,13 +224,12 @@ class UserCard extends AppModel {
 
         // レア度絞り込み
         if (!empty($rareLevel)) {
-        $this->log(':######################'); 
             $where['Card.rare_level <='] = $rareLevel;
         }
 
         // ソート
         $order = $this->makeSort($sortItem);
-$this->log($recursive); 
+
         $list = $this->getAllFind($where, $fields = array('*'), $kind = 'all', $order, $limit, $offset, $recursive , $joins);
 
         // ページング用に全ページ数カウント

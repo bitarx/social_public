@@ -1292,6 +1292,21 @@ display: block;
     left:180px;
     height: 120px;
 }
+.btnCommonRight {
+    position:relative; 
+    left:390px;
+}
+.commonName {
+    position:relative; 
+    top:40px; 
+    left:80px;
+    height: 35px;
+}
+.strCcommonName {
+    position:absolute; 
+    top:5px; 
+    left:42px;
+}
 .strCommonButton {
     position:absolute; 
     top:15px; 
