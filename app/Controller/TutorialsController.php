@@ -65,86 +65,91 @@ class TutorialsController extends ApiController {
      */
 	public function tutorial_1() {
 
-        // 共通レイアウトは使わない
-        $this->layout = '';
+        if ($this->tutoEnd == 1) {
+            $this->rd('Users', 'index');
+        } else {
 
-        // マスタデータ格納
-        $current = str_replace(self::$actionPref, '', $this->action);
-        $this->row = $this->Tutorial->getMstData($current);
+            // 共通レイアウトは使わない
+            $this->layout = '';
 
-        $userId = $this->userId;
-        $this->User->begin();
-        try {
-            if (empty($userId)) {
-                $name   = 'test';
-                $carrer = 1;
+            // マスタデータ格納
+            $current = str_replace(self::$actionPref, '', $this->action);
+            $this->row = $this->Tutorial->getMstData($current);
 
-                $values = array(
-                    'sns_user_id'   => $this->ownerId
-                ,   'viewer'        => $this->viewerId
-                ,   'sns_name'      => $name
-                );
-                $ret = $this->SnsUser->save($values);
-                if (!$ret) {
-                    throw new AppException('SnsUser save failed :' . $this->name . '/' . $this->action);
+            $userId = $this->userId;
+            $this->User->begin();
+            try {
+                if (empty($userId)) {
+                    $name   = 'test';
+                    $carrer = 1;
+
+                    $values = array(
+                        'sns_user_id'   => $this->ownerId
+                    ,   'viewer'        => $this->viewerId
+                    ,   'sns_name'      => $name
+                    );
+                    $ret = $this->SnsUser->save($values);
+                    if (!$ret) {
+                        throw new AppException('SnsUser save failed :' . $this->name . '/' . $this->action);
+                    }
+
+                    $values = array(
+                        'user_name'        => $name
+                    ,   'sns_user_id' => $this->ownerId
+                    ,   'carrer'      => $carrer
+                    );
+                    $ret = $this->User->save($values);
+                    if (!$ret) {
+                        throw new AppException('User save failed :' . $this->name . '/' . $this->action);
+                    }
+                    $userId = $ret['User']['user_id'];
+
+                    // パラメータ登録
+                    $values = array(
+                        'user_id'        => $userId
+                    ,   'act'            => $this->_startAct
+                    ,   'act_max'        => $this->_startActMac
+                    ,   'cost_atk'       => $this->_costAtk
+                    ,   'cost_def'       => $this->_costDef
+                    ,   'level'          => $this->_level
+                    );
+                    $ret = $this->UserParam->save($values);
+                    if (!$ret) {
+                        throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
+                    }
                 }
 
-                $values = array(
-                    'user_name'        => $name
-                ,   'sns_user_id' => $this->ownerId
-                ,   'carrer'      => $carrer
+                $where = array(
+                    'user_id' => $userId
                 );
-                $ret = $this->User->save($values);
-                if (!$ret) {
-                    throw new AppException('User save failed :' . $this->name . '/' . $this->action);
+                $utid = $this->UserTutorial->field('user_id', $where);
+                if (empty($utid)) {
+                    $tutorialId = 1;
+                    $values = array(
+                        'user_id'     => $userId
+                    ,   'tutorial_id' => $tutorialId
+                    );
+                    $ret = $this->UserTutorial->save($values);
+                    if (!$ret) {
+                        throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+                    }
                 }
-                $userId = $ret['User']['user_id'];
 
-                // パラメータ登録
-                $values = array(
-                    'user_id'        => $userId
-                ,   'act'            => $this->_startAct
-                ,   'act_max'        => $this->_startActMac
-                ,   'cost_atk'       => $this->_costAtk
-                ,   'cost_def'       => $this->_costDef
-                ,   'level'          => $this->_level
-                );
-                $ret = $this->UserParam->save($values);
-                if (!$ret) {
-                    throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
-                }
+            } catch (AppException $e) {
+                $this->User->rollback();
+
+                $this->log($e->errmes);
+                return $this->redirect(
+                           array('controller' => 'errors', 'action' => 'index'
+                                 , '?' => array('error' => 2)
+                       ));
             }
+            $this->User->commit();
 
-            $where = array(
-                'user_id' => $userId
-            );
-            $utid = $this->UserTutorial->field('user_id', $where);
-            if (empty($utid)) {
-                $tutorialId = 1;
-                $values = array(
-                    'user_id'     => $userId
-                ,   'tutorial_id' => $tutorialId
-                );
-                $ret = $this->UserTutorial->save($values);
-                if (!$ret) {
-                    throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
-                }
-            }
-
-        } catch (AppException $e) {
-            $this->User->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
+            // アサイン
+            $this->set('row',  $this->row);
+            $this->set('next', self::$actionPref . $this->row['tutorial_next']);
         }
-        $this->User->commit();
-
-        // アサイン
-        $this->set('row',  $this->row);
-        $this->set('next', self::$actionPref . $this->row['tutorial_next']);
 	}
 
    /**

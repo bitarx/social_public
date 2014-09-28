@@ -56,35 +56,37 @@
                         <span style="color:#FF0000">SR</span>
                     <{/if}>
     </div>
-    <div class="cardSkillLv">
-        スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
-    </div>
-    <div class="cardSkillName">
-        スキル:<span style="color:#ffffff">
-        <{if $data.Skill.skill_name}> 
-            <{$data.Skill.skill_name}>
-        <{else}> 
-            <{if empty($data.skill_name)}>
-               なし
-            <{else}>
-                <{$data.skill_name}>
-            <{/if}>
-        <{/if}> 
-        </span>
-    </div>
-    <div class="cardSkillEft">
-        効果:<span style="color:#ffffff">
-        <{if $data.Skill.skill_words}> 
-            <{$data.Skill.skill_words}>
-        <{else}> 
-            <{if empty($data.skill_words)}>
-                なし
-            <{else}>
-                <{$data.skill_words}>
-            <{/if}>
-        <{/if}> 
-        </span>
-    </div>
+    <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
+        <div class="cardSkillLv">
+            スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
+        </div>
+    <{/if}>
+    <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
+        <div class="cardSkillName">
+            スキル:<span style="color:#ffffff">
+            <{if $data.Skill.skill_name}> 
+                <{$data.Skill.skill_name}>
+            <{elseif $data.skill_name}> 
+                    <{$data.skill_name}>
+            <{/if}> 
+            </span>
+        </div>
+    <{/if}>
+    <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
+        <div class="cardSkillEft">
+            効果:<span style="color:#ffffff">
+            <{if $data.Skill.skill_words}> 
+                <{$data.Skill.skill_words}>
+            <{else}> 
+                <{if empty($data.skill_words)}>
+                    なし
+                <{else}>
+                    <{$data.skill_words}>
+                <{/if}>
+            <{/if}> 
+            </span>
+        </div>
+    <{/if}>
     <{/if}> 
 
     <{* 強化合成素材カード選択 *}> 

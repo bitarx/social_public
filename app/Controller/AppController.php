@@ -57,6 +57,7 @@ class AppController extends Controller {
     public $userId   = 0;
     public $params   = array();
     public $userParam  = array();
+    public $tutoEnd  = 0;
 
     public static $ctlRegist = array('Tutorials');
 
@@ -134,13 +135,11 @@ class AppController extends Controller {
 
         if (empty($this->ownerId)) {
 
-$this->log('COOKIE');
-$this->log($_COOKIE);
-            $this->ownerId  = $_COOKIE['opensocial_owner_id'];
-            $this->viewerId = $_COOKIE['opensocial_viewer_id'];
+            if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
+                $this->ownerId  = $_COOKIE['opensocial_owner_id'];
+                $this->viewerId = $_COOKIE['opensocial_viewer_id'];
+            }
 
-$this->log($this->ownerId);
-$this->log($this->viewerId);
         }
 
 
@@ -174,7 +173,7 @@ $this->log($this->viewerId);
                     try {
 
                         $name   = $user['displayName'];
-                        $carrer = $this->carrer = $this->Common->judgeCarrer;
+                        $carrer = $this->carrer = $this->Common->judgeCarrer();
 
                         $values = array(
                             'sns_user_id'   => $this->ownerId
@@ -183,7 +182,7 @@ $this->log($this->viewerId);
                         );
                         $ret = $this->SnsUser->save($values);
                         if (!$ret) {
-                            throw new AppException('SnsUser save failed :' . $this->name . '/' . $this->action);
+                            throw new AppException(__FILE__.__LINE__.'SnsUser save failed :' . $this->name . '/' . $this->action);
                         }
 
                         $values = array(
@@ -193,7 +192,7 @@ $this->log($this->viewerId);
                         );
                         $ret = $this->User->save($values);
                         if (!$ret) {
-                            throw new AppException('User save failed :' . $this->name . '/' . $this->action);
+                            throw new AppException(__FILE__.__LINE__.'User save failed :' . $this->name . '/' . $this->action);
                         }
                         $this->userId = $ret['User']['user_id'];
 
@@ -235,15 +234,6 @@ $this->log($this->viewerId);
                         if (!empty($row['UserTutorial']['tutorial_id'])) {
                             // チュートリアル途中
                             $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
-                        } else {
-                            $ary = array(
-                                'opensocial_owner_id' => $ownerId
-                            ,   'opensocial_viewer_id' => $viewerId
-                            );
-                            //$ary = $_REQUEST;
-                //            $this->rd('Tutorials', 'tutorial_1', $ary);
-                        //    header('Location: /index.php/Tutorials/tutorial_1?opensocial_owner_id='.$ownerId.'&opensocial_viewer_id='.$viewerId);
-
                         }
                     }
                 }
@@ -264,9 +254,11 @@ $this->log($this->viewerId);
         $this->set('gameTitle', $this->gameTitle); 
         
         if (empty($row['end_flg'])) {
+            $this->tutoEnd = 0;
             $this->set('tutoEnd', 0); 
         } else {
             // チュートリアルを終えている
+            $this->tutoEnd = 1;
             $this->set('tutoEnd', 1); 
 
             // ユーザーステータス取得

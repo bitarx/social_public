@@ -342,6 +342,22 @@ class StagesController extends ApiController {
                         ,   'UserStage.stage_id' => $data['stage_id']
                         );
                 $this->UserStage->updateAll($value, $where);
+
+                // 現在到達最大ステージ
+                $stageId = $this->UserStage->getUserMaxStageId($this->userId);
+                $nextStageId = $stageId + 1;
+
+                // 次のステージへ
+                $fields = array('user_id', 'stage_id', 'progress', 'state');
+                $values[] = array($this->userId, $nextStageId, 0, 1);
+                $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+
+                // 処理済
+                $values = array(
+                              'id' => $log['id']
+                          );
+                $this->BattleLog->save($values);
+        
             }
 
         } catch (AppException $e) { 
@@ -412,8 +428,8 @@ class StagesController extends ApiController {
             $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
             $data = $this->Enemy->getEnemyData($log['target']);
             $enemyId = $data['enemy_id'];
-            $next = 'Stages/next';
-            $str  = 'NEXTSTAGE';
+            $next = 'Stages/comp';
+            $str  = 'NEXT';
         } else {
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
@@ -443,14 +459,16 @@ class StagesController extends ApiController {
 
         $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
 
-        // 現在到達最大ステージ
-        $stageId = $this->UserStage->getUserMaxStageId($this->userId);
-        $nextStageId = $stageId + 1;
+        $nextStageId = $this->UserStage->getUserMaxStageId($this->userId);
 
         // 勝利ではない
         if (1 != $log['result'])  {
+            $where = array('enemy_id' => $log['target']);
+            $field = array('stage_id');
+            $data = $this->Stage->getAllFind($where, $field, 'first');
+
             $param = array(
-                         'stage_id' => $stageId
+                         'stage_id' => $data['stage_id']
                      );
             $this->rd('Stages', 'main' , $param);
         }
@@ -465,11 +483,6 @@ class StagesController extends ApiController {
 
         $this->UserStage->begin(); 
         try {  
-
-            // 次のステージへ
-            $fields = array('user_id', 'stage_id', 'progress', 'state');
-            $values[] = array($this->userId, $nextStageId, 0, 1);
-            $this->UserStage->insertBulk($fields, $values, $ignore = 1);
 
             // 処理済
             $values = array(

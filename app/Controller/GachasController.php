@@ -20,6 +20,9 @@ class GachasController extends ApiController {
     // 10連ガチャID
     public $gacha10 = array( 2 );
 
+    // 無課金ガチャID
+    public $gachaMoney = array( 3 );
+
     /**
      * index method
      *
@@ -30,6 +33,7 @@ class GachasController extends ApiController {
 
         $list = $this->Gacha->getList();
         $this->set('list', $list);
+        $this->set('haveMoney', $this->userParam['money']);
 	}
 
     /**
@@ -67,13 +71,19 @@ class GachasController extends ApiController {
 
         if (empty($gachaId)) {
             // 選択がない
-            return $this->rd('Gacha', 'index', array('error'=> 1));
+            $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
+            return $this->rd('Errors', 'index', array('error'=> 1));
         }
 
         $where = array('gacha_id' => $gachaId );
         $gachaData = $this->Gacha->getAllFind($where, array(), 'first');
 
         $probList = $this->GachaProb->getGachaProbList ($gachaId);
+        if (empty($probList)) {
+            // データがない
+            $this->log(__FILE__ . __LINE__ . ':No Data ProbList:userId;'. $this->userId);
+            return $this->rd('Gachas', 'index', array('error'=> 1));
+        }
 
         $gacha10 = false;
 
@@ -84,6 +94,14 @@ class GachasController extends ApiController {
 
         if (!$gacha10) {
             // 単品ガチャ
+
+            // 無料ガチャの場合はゴールドチェック
+            if (in_array($gachaId, $this->gachaMoney)) {
+               if ($this->userParam['money'] < $gachaData['point']) {
+                   $param = array('money' => 1);
+                   $this->rd('Gachas', 'index', $param);
+               }
+            }
 
             $data = $this->Common->doLot($probList);
 
@@ -99,6 +117,16 @@ class GachasController extends ApiController {
                 ,   'def' => $cardData['card_def']
                 );
                 $this->UserCard->save($values);
+
+                // 無料ガチャの場合はゴールド減算
+                if (in_array($gachaId, $this->gachaMoney)) {
+                    $money = $this->userParam['money'] - $gachaData['point'];
+                    $values = array(
+                        'user_id' => $this->userId
+                    ,   'money'   => $money 
+                    );
+                    $this->UserParam->save($values);
+                }
 
                 // ログ記述
                 $values = array(
@@ -165,6 +193,12 @@ class GachasController extends ApiController {
 
         }
         $this->UserCard->commit();
+
+        // 無課金ガチャ
+        if (in_array($gachaId, $this->gachaMoney)) {
+            $param = array('rare_level' => $rareLevel );
+            $this->rd('gachas', 'product', $param);
+        }
 
 
         /********************************************** 
@@ -260,7 +294,7 @@ class GachasController extends ApiController {
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
         $product = $this->GachaFunc->doProductLot($rareLevel);
         if (empty($rareLevel)) {
-            $this->rd('UserCards', 'index', array('error' => 2));
+            $this->rd('Errors', 'index', array('error' => 1));
         }
 
 

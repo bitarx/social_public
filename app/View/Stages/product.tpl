@@ -18,7 +18,6 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.loader.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.view.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
 
     <script type="text/javascript">
       window.onload = function() {

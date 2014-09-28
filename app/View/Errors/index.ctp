@@ -1,4 +1,6 @@
 <div class="errors index">
-	<h2>Errors</h2>
-    <{$mes}>
+<br />
+    <div style="text-align:center;top:30px;height:100px;">
+        <{$mes}>
+    </div>
 </div>
