@@ -2,6 +2,7 @@
     var target = (parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined));
 
     var sendHeight = function(height) {
+      height /= 2;
       target.postMessage('adjustHeight:' + height, '*')
     }
 

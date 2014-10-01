@@ -22,8 +22,6 @@
         </div>
 
         <{include file="../Elements/menu.tpl"}>
-    bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-eeeeeeeeeeeeeeee
         <script type="text/javascript">
         $(function() {
             $( 'a[rel*=leanModal]').leanModal({

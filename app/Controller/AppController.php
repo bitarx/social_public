@@ -116,15 +116,27 @@ class AppController extends Controller {
         // SNSクラス生成
         $this->snsUtil = ApplihillsUtil::create();
 
+$this->log($_REQUEST); 
+$this->log($ownerId); 
+$this->log($viewerId); 
         if ( !empty($ownerId) && !empty($viewerId) ) {
+$this->log(11111); 
+            if (isset($this->params['nosb'])) {
+                // サンドボックス外
+                setcookie('opensocial_owner_id', $ownerId);
+                setcookie('opensocial_viewer_id', $viewerId);
+                setcookie('nosb', 1);
 
-            // 初回アクセス認証
-            $ret =$this->snsUtil->checkSignature(); 
-            if (!$ret) {
-                // 検証に失敗した時の処理
-                $this->log(__FILE__.__LINE__.'OAuth Error'); 
-                echo 'OAuth error';
-                exit;
+            } else {
+                // 初回アクセス認証
+                $ret =$this->snsUtil->checkSignature(); 
+                if (!$ret) {
+    $this->log(222222); 
+                    // 検証に失敗した時の処理
+                    $this->log(__FILE__.__LINE__.'OAuth Error'); 
+                    echo 'OAuth error';
+                    exit;
+                }
             }
 
             $this->set('ownerId', $ownerId);
@@ -133,8 +145,10 @@ class AppController extends Controller {
             $this->viewerId = $viewerId;
         }
 
+$this->log(3333); 
         if (empty($this->ownerId)) {
 
+$this->log(3333); 
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
@@ -164,6 +178,10 @@ class AppController extends Controller {
 
                     // SNS側より取得
                     $user = $this->snsUtil->getSelf();
+              $this->log($_COOKIE); 
+                    if (isset($_COOKIE['nosb'])) {
+                        $user['displayName'] = 'nosb_test';
+                    }
                     if (empty($user['displayName'])) {
                          $this->log(__FILE__.__LINE__.'People Api Error'); 
                          $this->rd('Errors', 'index', array('error' => 2 ));
@@ -234,6 +252,11 @@ class AppController extends Controller {
                         if (!empty($row['UserTutorial']['tutorial_id'])) {
                             // チュートリアル途中
                             $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+                        } else {
+
+                            if (isset($_COOKIE['nosb'])) {
+                                $this->rd('Tutorials', 'tutorial_1');
+                            }
                         }
                     }
                 }
@@ -273,6 +296,9 @@ class AppController extends Controller {
         if ($this->User->isSnsDataUpdate($this->userId)) {
 
             $user = $this->snsUtil->getSelf();
+            if (isset($_COOKIE['nosb'])) {
+                $user['displayName'] = 'nosb_test';
+            }
             if (empty($user['displayName'])) {
                 $this->log($this->userId.__FILE__.__LINE__. 'get sns user name error');
                 $this->rd('Errors', 'index', array('error' => 2  ));

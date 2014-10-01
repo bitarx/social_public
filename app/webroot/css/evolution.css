@@ -1,6 +1,8 @@
 body {
   padding: 0px;
   margin: 0px;
+  width:620px;
+  height:800px;
   background-image: url('../img/synth_evol_bg.png');
   overflow: hidden;
 }

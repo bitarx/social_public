@@ -21,7 +21,7 @@ boss.main = ( function() {
     _scene = 0;
 
     var canvas = document.getElementById(canvasID);
-    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.width = window.innerWidth / 2 + 'px';
     canvas.style.height = Math.floor( canvas.style.width * 1.3 )
 
 

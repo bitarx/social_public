@@ -221,6 +221,7 @@ div#contents{
     position: absolute;
     top: 15px;
     left: 210px;
+    width:280px;
     font-size: 30px;
 }
 .strTitleDeckCard {
@@ -1227,6 +1228,7 @@ display: block;
     left: 50%;
     margin: 0 0 0 -140px;
     font-size: 30px;
+    width:400px;
 }
 .cardDetailNameUpper {
     position: absolute;
@@ -1279,6 +1281,7 @@ display: block;
     left: 50%;
     margin: 0 0 0 -150px;
     font-size: 30px;
+    width:450px;
 }
 .spaceSubject {
     position: relative;
@@ -1311,6 +1314,13 @@ display: block;
     position:absolute; 
     top:15px; 
     left:160px;
+}
+.strSozai {
+    position:absolute;
+    left:130px;
+    top:30px;
+    font-size: 30px;
+    width:450px;
 }
 .ckbox {
     width:30px;

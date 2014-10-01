@@ -65,7 +65,7 @@ var reinforce = (function() {
 
     _canvas = document.getElementById(canvasID);
     //_canvas.style.width = '400px';//window.innerWidth + 'px';
-    _canvas.style.width = window.innerWidth + 'px';
+    _canvas.style.width = window.innerWidth / 2 + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);

@@ -833,6 +833,10 @@ enchant.EventTarget = enchant.Class.create({
                     window.innerWidth / this.width,
                     window.innerHeight / this.height
                 );
+
+                // add imanishi
+                this.height = 980;
+
                 this._pageX = 0;
                 this._pageY = 0;
             } else {

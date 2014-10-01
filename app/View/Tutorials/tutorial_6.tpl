@@ -76,7 +76,7 @@
         <div class="cardDetailNameUpper" >
             <img src="<{$smarty.const.IMG_URL}>line_upper.png">
         </div>
-        <div style="position:absolute;left:130px;top:30px;font-size: 30px;">
+        <div class="strSozai">
             このカードを素材にします
         </div>
         <div class="cardDetailNameUnder" >

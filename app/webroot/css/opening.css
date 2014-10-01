@@ -3,8 +3,8 @@ body {
     background-color:#000000;
     background-position:left top;
     background-repeat:no-repeat;
-    -moz-background-size:100% auto;
-    background-size:100% auto;
+    -moz-background-size:57% auto;
+    background-size:57% auto;
 }
 
 .tutorial1 {
@@ -19,7 +19,7 @@ body {
 
 .btnStart {
     position: relative;
-    top: 190px;
+    top: 5px;
     left: 15px;
     height: 50px;
 }

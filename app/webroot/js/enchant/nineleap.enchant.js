@@ -42,6 +42,7 @@
          * @constructs
          */
         initialize: function(width, height) {
+
             enchant.Core.call(this, width, height);
             this.addEventListener('load', function() {
                 var core = this;

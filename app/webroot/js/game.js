@@ -72,84 +72,8 @@ interpreter.prototype.回転 = function(args) {
   this.chara[args[0]].rotation = args[1];
 }
 
-// セリフを表示するコマンド(メソッド)
-// 'セリフ': ['名前ラベル', 'テキスト']
-interpreter.prototype.セリフ = function(args) {
-/*
-  if (args[0]==undefined) args[0] = "";
-  if (args[1]==undefined) args[1] = "";
-  var name = new Label(args[0]);
-  name.font = "16px monospace";
-  name.color = "rgb(255, 255, 255)";
-  name.backgroundColor = "rgba(0, 0, 0, 0.6)";
-  name.y = 320 - 32 * 3;
-  name.width = 320;
-  name.height = 32 * 3;
-  //textLayer.addChild(name);
-  //this.name = name;
 
-  //var text = new Label(args[1]);
-  var str  = args[1];
-  var text = new Label();
-  text.font  = "16px monospace";
-  text.color = "rgb(255, 255, 255)";
-  text.y     = 320 - 32 * 4;
-  text.width = 320;
-  text.height  = 320;
 
-//  textLayer.addChild(text);
-
-  var i = 0;
-  var addSel = 0;
-  text.onenterframe= function()
-  {
-      if (undefined != str[i]) {
-  //        text.text += str[i];
-          i++;
-      }
-      if (undefined == str[i] && 0 == addSel) {
-          addSel = 1; 
-      }
-  }
- // this.text = text;
-*/
-}
-
-// セリフをクリアするコマンド(メソッド)
-// 'セリフクリア': null
-interpreter.prototype.セリフクリア = function() {
-  textLayer.removeChild(this.name);
-  textLayer.removeChild(this.text);
-  textLayer.removeChild(this.next);
-  delete this.name;
-  delete this.text;
-  delete this.next;
-}
-
-// 指定したシーンにジャンプするコマンド(メソッド)
-// 'ジャンプ': 'シーン名'
-interpreter.prototype.ジャンプ = function(args) {
-  var self = this;
-  var next = new Label('【次へ】');
-  next.font  = "16px monospace";
-  next.color = "rgb(255,200,0)";
-  next.x     = 320 - 64;
-  next.y     = 320 - 32;
-  next.width = 320;
-
-  textLayer.addChild(next);
-  this.next = next;
-  next.addEventListener(Event.TOUCH_START, function(e) {
-      self.セリフクリア();
-      exec(eval(args));
-  });
-}
-
-// 自動的に指定したシーンにジャンプさせるコマンド(メソッド)
-// 'オートジャンプ': 'シーン名'
-interpreter.prototype.オートジャンプ = function(arg) {
-  exec(eval(arg));
-}
 
 // 選択肢を表示するコマンド(メソッド)
 // '選択肢': ['テキスト', '選択肢1', 'シーン1', '選択肢2' , 'シーン2']
@@ -163,23 +87,22 @@ interpreter.prototype.選択肢 = function(args) {
   text.font  = "18px monospace";
   text.color = "rgb(255,255,255)";
   text.backgroundColor = "rgba(0,0,0,0.6)";
-  text.y     = 800 + 3;
-  text.x     = 40;
-  text.width = 520;
-  text.height = 30 * 4;
+  text.y     = 692;
+  text.x     = 7;
+  text.width = 626;
+  text.height = 138;
 
   textLayer.addChild(text);
 //  this.selectText = text;
 
 
   var select1 = new Label(args[1]);
-  select1.font  = "28px monospace";
+  select1.font  = "38px monospace";
   select1.color = "rgb(200,125,0)";
   select1.y     = 800 + 16*3;
-  select1.x     = 555;
-  select1.addEventListener(Event.TOUCH_START, function(e) {
-    location.href = BASE_URL + args[2];
-  });
+  select1.x     = 195;
+  select1.width    = 400;
+  select1.height   = 80;
 /*
 //  this.select1 = select1;
   var select2 = new Label('【'+args[3]+'】');
@@ -204,7 +127,7 @@ interpreter.prototype.選択肢 = function(args) {
               //text.text += "<br />";
           }
           text.text += str[i];
-          if (1 < i && 0 == i % 28) {
+          if (1 < i && 0 == i % 35) {
               text.text += "<br />";
           }
           i++;
@@ -213,6 +136,16 @@ interpreter.prototype.選択肢 = function(args) {
           addSel = 1; 
           textLayer.addChild(select1);
 //          textLayer.addChild(select2);
+
+          imageLayer.addEventListener(Event.TOUCH_START, function(e) {
+            location.href = BASE_URL + args[2];
+          });
+          textLayer.addEventListener(Event.TOUCH_START, function(e) {
+            location.href = BASE_URL + args[2];
+          });
+          text.addEventListener(Event.TOUCH_START, function(e) {
+            location.href = BASE_URL + args[2];
+          });
       }
   }
 
@@ -220,30 +153,6 @@ interpreter.prototype.選択肢 = function(args) {
 }
 
 
-// 選択肢をクリアするコマンド(メソッド)
-// '選択肢クリア': null
-interpreter.prototype.選択肢クリア = function() {
-  textLayer.removeChild(this.selectText);
-  textLayer.removeChild(this.select1);
-  textLayer.removeChild(this.select2);
-  delete this.selectText;
-  delete this.select1;
-  delete this.select2;
-}
-
-// 背景画像を削除するコマンド(メソッド)
-// '背景クリア': null
-interpreter.prototype.背景クリア = function() {
-  imageLayer.removeChild(this.bg);
-  delete this.bg;
-}
-
-// キャラを削除するコマンド(メソッド)
-// '退場': '人物画像名'
-interpreter.prototype.退場 = function(arg) {
-  imageLayer.removeChild(this.chara[arg]);
-  delete this.chara[arg];
-}
 
 // イベントリスナを設定するコマンド(メソッド)
 // 'イベント': ['人物画像名', 'イベント' , 'リスナ']
@@ -282,7 +191,6 @@ function exec(scenario) {
   }
 }
 
-
 window.onload = function() {
 
   // 使用する画像を格納する配列
@@ -292,17 +200,11 @@ window.onload = function() {
   for (var key in 背景画像) {
     images.push(背景画像[key]);
   }
-  // 使用する人物画像を配列にプッシュ
-/*
-  for (var key in 登場人物) {
-    images.push(登場人物[key]);
-  }
-*/
 
   // 「interpreter」オブジェクトを生成する
   interpreter = new interpreter();
 
-  coer = new Core(640, 920);
+  coer = new Core(640, 300);
   coer.fps = 16;
   coer.preload(images);
 
@@ -337,7 +239,7 @@ window.onload = function() {
     // テキスト表示用のグループを作成する
     textLayer = new Group();
     coer.rootScene.addChild(textLayer);
-    
+
     // セーブしたシーン(最初は「start」)からを実行する
     exec(eval(save.scene));
  
