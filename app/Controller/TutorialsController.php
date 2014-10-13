@@ -66,7 +66,9 @@ class TutorialsController extends ApiController {
 	public function tutorial_1() {
 
         if ($this->tutoEnd == 1) {
-            $this->rd('Users', 'index');
+            if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])) {
+                $this->rd('Users', 'index');
+            }
         } else {
 
             // 共通レイアウトは使わない

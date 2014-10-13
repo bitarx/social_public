@@ -116,11 +116,7 @@ class AppController extends Controller {
         // SNSクラス生成
         $this->snsUtil = ApplihillsUtil::create();
 
-$this->log($_REQUEST); 
-$this->log($ownerId); 
-$this->log($viewerId); 
         if ( !empty($ownerId) && !empty($viewerId) ) {
-$this->log(11111); 
             if (isset($this->params['nosb'])) {
                 // サンドボックス外
                 setcookie('opensocial_owner_id', $ownerId);
@@ -131,7 +127,6 @@ $this->log(11111);
                 // 初回アクセス認証
                 $ret =$this->snsUtil->checkSignature(); 
                 if (!$ret) {
-    $this->log(222222); 
                     // 検証に失敗した時の処理
                     $this->log(__FILE__.__LINE__.'OAuth Error'); 
                     echo 'OAuth error';
@@ -145,10 +140,8 @@ $this->log(11111);
             $this->viewerId = $viewerId;
         }
 
-$this->log(3333); 
         if (empty($this->ownerId)) {
 
-$this->log(3333); 
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
@@ -178,7 +171,6 @@ $this->log(3333);
 
                     // SNS側より取得
                     $user = $this->snsUtil->getSelf();
-              $this->log($_COOKIE); 
                     if (isset($_COOKIE['nosb'])) {
                         $user['displayName'] = 'nosb_test';
                     }
