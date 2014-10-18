@@ -150,7 +150,6 @@ class AppController extends Controller {
         }
 
 
-
         if ( !in_array($this->name, self::$ctlError) ) {
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
                 $firstAccess = 1;
@@ -246,6 +245,7 @@ class AppController extends Controller {
                             $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
                         } else {
 
+                            // サンドボックス外
                             if (isset($_COOKIE['nosb'])) {
                                 $this->rd('Tutorials', 'tutorial_1');
                             }
@@ -281,8 +281,6 @@ class AppController extends Controller {
 
             // 行動力回復
             $this->UserParam->recoverAct($this->userParam);
-
-            
         }
 
         if ($this->User->isSnsDataUpdate($this->userId)) {
@@ -334,7 +332,16 @@ class AppController extends Controller {
         $this->set('page', $this->page ); 
         $this->set('next', $this->page + 1 ); 
 
+
+        // 共通レイアウトは使わない  
+        if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
+            $this->layout = '';
+        }
+
         // コントローラとアクション
+$this->log('ctl:' . $this->name ); 
+$this->log('act:' . $this->action ); 
+$this->log( $_COOKIE ); 
         $this->set('ctl', $this->name ); 
         $this->set('action',  $this->action); 
         $this->set('ctlAction',  $this->name . '/' . $this->action); 

@@ -402,11 +402,11 @@ class UserCardsController extends ApiController {
         }
 
         $sacrificeList = json_encode($list);
-        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
+        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
         $endExp = $upExp + $startExp;
 
 // 仮
-$baseCard = IMG_URL . 'miku_v02.jpg';
+//$baseCard = IMG_URL . 'miku_v02.jpg';
 
         $this->set('baseCard', $baseCard);
         $this->set('sacrificeList', $sacrificeList);

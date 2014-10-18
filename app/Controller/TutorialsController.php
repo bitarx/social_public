@@ -33,13 +33,14 @@ class TutorialsController extends ApiController {
      * @return void
      */
     private function _routeTutorial() {
-
+$this->log('aaa'); 
 
         // チュートリアル終了判定
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
         if (!empty($row['end_flg'])) {
+$this->log('bbb'); 
             return $this->rd('SnsUsers', 'index');
         }
 
@@ -49,11 +50,13 @@ class TutorialsController extends ApiController {
         $where = array('tutorial_id' => $row['tutorial_id']); 
         $tutorial_next = $this->Tutorial->field('tutorial_next', $where);
         if ($current != $row['tutorial_id']) {
+$this->log('ccc'); 
             if ($current != $tutorial_next) {
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
 
+$this->log('ddd'); 
         // データ格納
         $this->row = $this->Tutorial->getMstData($current);
     }

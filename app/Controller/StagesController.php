@@ -429,7 +429,7 @@ class StagesController extends ApiController {
             $data = $this->Enemy->getEnemyData($log['target']);
             $enemyId = $data['enemy_id'];
             $next = 'Stages/comp';
-            $str  = 'NEXT';
+            $str  = 'TOUCH SCREEN';
         } else {
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);

@@ -14,9 +14,8 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
     <style type="text/css">
       body {
-          margin: 0;
-          height:840px;
-          background-color: #000;
+           margin: 0;
+           background-color: #000;
       }
     </style>
     <script type="text/javascript">
