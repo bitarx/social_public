@@ -1,4 +1,5 @@
 'use strict';
+alert('bossmain');
 var boss = boss || {};
 boss.main = ( function() {
 
@@ -16,7 +17,7 @@ boss.main = ( function() {
   * 初期化
   */
   function init( canvasID, fileName, initial, playerSkillData, enemySkillData, turn, loadCompleteCallback, contentsCompleteCallback ) {
-
+alert('init');
     _timeoutID = new Array();
     _scene = 0;
 
@@ -49,6 +50,7 @@ boss.main = ( function() {
     for( var i = 0; i < len; i++ ) {
       playerFileNameList.push( initial.player[ i ].img );
     }
+alert('ddd');
     _loader.load( fileName, playerFileNameList, initial.enemy.img, loadComplete );
   }
 

@@ -20,13 +20,12 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
 
     <script type="text/javascript">
+    alert('start');
       window.onload = function() {
         var imageLoadComplete = function() {
-            console.log("imageLoadComplete");
             setTimeout("boss.main.skip()", 3200);
         }
         var contentsComplete = function() {
-          console.log("contentsComplete");
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
                 <{if $data.result == 2}>
@@ -67,37 +66,7 @@
         };
         var result = true;
         var initial = {
-          player: [
-            {
-              img: "<{$smarty.const.BASE_URL}>File/outimage?size=s&dir=card&target=<{$data.log.card_id_1}>",
-              max: "<{$data.log.card_id_1_max}>",
-              current:"<{$data.log.card_id_1_cur}>" 
-            },
-
-            {
-              img: "<{$smarty.const.BASE_URL}>File/outimage?size=s&dir=card&target=<{$data.log.card_id_2}>",
-              max: "<{$data.log.card_id_2_max}>",
-              current: "<{$data.log.card_id_2_cur}>"
-            },
-
-            {
-              img: "<{$smarty.const.BASE_URL}>File/outimage?size=s&dir=card&target=<{$data.log.card_id_3}>",
-              max: "<{$data.log.card_id_3_max}>",
-              current: "<{$data.log.card_id_3_cur}>",
-            },
-
-            {
-              img: "<{$smarty.const.BASE_URL}>File/outimage?size=s&dir=card&target=<{$data.log.card_id_4}>",
-              max: "<{$data.log.card_id_4_max}>",
-              current: "<{$data.log.card_id_4_cur}>"
-            },
-
-            {
-              img: "<{$smarty.const.BASE_URL}>File/outimage?size=s&dir=card&target=<{$data.log.card_id_5}>",
-              max: "<{$data.log.card_id_5_max}>",
-              current: "<{$data.log.card_id_5_cur}>"
-            }
-          ],
+          player:<{$player}>, 
           enemy: {
             name: "<{$enemy.card_name}>",
             img: "<{$smarty.const.IMG_URL}>enemy/enemy_<{$enemy.enemy_id}>.jpg",

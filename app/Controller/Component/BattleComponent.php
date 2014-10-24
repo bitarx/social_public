@@ -30,31 +30,42 @@ class BattleComponent extends Component {
             $targetNum = count($targetCards) - 1;
             $selfData = $val['UserCard'];
 
+            if (empty($selfData['atk'])) continue;
+
             // 敵攻撃
             if ($kind == 2) {
 
                 // プレイヤーカードを全体攻撃
                 foreach ($targetCards as $target => $val) {
-
+$this->log('###'); 
                     $targetData = $targetCards[$target]['UserCard'];
-                    $battleLogTurn[$num]['targetData'] = array(
-                        'card_id' => $targetData['card_id']
-                    ,   'hp'      => $targetData['hp']
-                    );
+$this->log($targetData); 
+                    if (!empty($targetData['card_id'])) {
+                        $battleLogTurn[$num]['targetData'] = array(
+                            'card_id' => $targetData['card_id']
+                        ,   'hp'      => $targetData['hp']
+                        );
 
-                    $damage = $this->calcDamage($selfData, $targetData);
-                    $battleLogTurn[$num]['damage'] = $damage;
-                    $targetCards[$target]['UserCard']['hp'] -= $damage;
+                        $damage = $this->calcDamage($selfData, $targetData);
+                        $battleLogTurn[$num]['damage'] = $damage;
+                        $targetCards[$target]['UserCard']['hp'] -= $damage;
 
-                    $num++;
+                        $num++;
+                    } else {
+                        // デッキに設定がない
+                        $targetCards[$target]['UserCard']['hp'] = 0;
+                    }
                 }
 
-
+$this->log(111); 
                 foreach ($targetCards as $key => $val) {
+$this->log(222); 
                     // HPがゼロになった場合
-                    if ($targetCards[$key]['UserCard']['hp'] <= 0) {
+                    if (isset($targetCards[$key]['UserCard']['hp']) && $targetCards[$key]['UserCard']['hp'] <= 0) {
+$this->log(333); 
                         unset($targetCards[$key]);
                         $cnt = count($targetCards);
+$this->log($cnt); 
                         if ($cnt <= 0) {
                             $battleLogTurn[$num]['targetData'] = array(
                                 'card_id' => $targetData['card_id']

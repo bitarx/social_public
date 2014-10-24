@@ -18,7 +18,7 @@
     </div>
 
     <script type="text/javascript">
-        dispProgressQuestAct(<{$data.act}>);
+        dispProgressQuestAct(<{$act}>);
     </script>
 
     <div class="cardCnt">

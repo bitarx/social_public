@@ -191,7 +191,7 @@ class UserParam extends AppModel {
     public function recoverAct($userParam) {
 
         // 回復の余地があれば処理
-        if (isset($userParam['act']) && $userParam['act'] < 100) {
+        if (isset($userParam['act']) && $userParam['act'] < $userParam['act_max']) {
             // 最後に行動した時間
             $userLastActTime = new UserLastActTime();
             $where = array('user_id' => $userParam['user_id']);
@@ -209,10 +209,14 @@ class UserParam extends AppModel {
             if ($needTimeSp < $passTimeSp) {
 
                 $num = floor($passTimeSp / $needTimeSp);
-                $recoverAct = self::ACT_RECOVER_NUM * $num;
+
+                // 行動力最大値の補正
+                $addNum = $userParam['act_max'] / 100;
+                $recoverAct = floor((self::ACT_RECOVER_NUM * $addNum) * $num);
 
                 $userParam['act'] += $recoverAct;
-                if (100 < $userParam['act']) $userParam['act'] = 100;
+                if ($userParam['act_max'] < $userParam['act']) 
+                    $userParam['act'] = $userParam['act_max'];
 
                 // ステータス更新
                 $value = array(

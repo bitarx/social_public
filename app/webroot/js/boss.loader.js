@@ -7,6 +7,7 @@ boss.loader = ( function() {
   var _callback;
 
   function load( fileName, playerFileNameList, enemyFileName, callback ) {
+alert('load');
 
     var bg = new Image();
     bg.onload = function() {

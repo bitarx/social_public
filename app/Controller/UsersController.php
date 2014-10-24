@@ -33,11 +33,13 @@ class UsersController extends ApiController {
 
         // カード所持枚数
         $this->userParam['card_cnt'] = $this->UserCard->getUserCardCnt($this->userId );
-  $this->log($userDeckList); 
+
+        $act = ($this->userParam['act'] / $this->userParam['act_max']) * 100;
 
         // アサイン
         $this->set('list', $userDeckList);
         $this->set('data', $this->userParam);
+        $this->set('act' , $act);
         $this->set('name', $snsUserName);
 	}
 

@@ -1,4 +1,5 @@
 'use strict';
+alert('boss.view');
 var boss = boss || {};
 boss.view = ( function() {
 

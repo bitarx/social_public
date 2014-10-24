@@ -219,6 +219,7 @@ class StagesController extends ApiController {
 
         // 攻撃側のデッキ取得
         $userCards = $this->UserDeck->getUserDeckData($this->userId);
+
         if (empty($userCards['UserDeckCard'])) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => 2));
@@ -267,32 +268,36 @@ class StagesController extends ApiController {
         // 攻撃側のスキル発動
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
-            $hit = mt_rand(1, 100);
-            // 当選
-            if ($hit <= $userCard['skill_level']) {
-                // カードのスキル取得 
-                $skillData = $this->Card->getCardData($userCard['card_id']);
+            if (!empty($userCard['skill_level'])) {
+                $hit = mt_rand(1, 100);
+                // 当選
+                if ($hit <= $userCard['skill_level']) {
+                    // カードのスキル取得 
+                    $skillData = $this->Card->getCardData($userCard['card_id']);
 
-                $battleLog['skill']['atk'][] = $skillData;
+                    $battleLog['skill']['atk'][] = $skillData;
 
-                // スキル実行
-                $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                    // スキル実行
+                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                }
             }
         }
 
         // 防御側のスキル発動
         foreach ($targetCards as $key => $val) {
             $userCard = $val['UserCard'];
-            $hit = mt_rand(1, 100);
-            // 当選
-            if ($hit <= $userCard['skill_level']) {
-                // カードのスキル取得 
-                $skillData = $this->Card->getCardData($userCard['card_id']);
+            if (!empty($userCard['skill_level'])) {
+                $hit = mt_rand(1, 100);
+                // 当選
+                if ($hit <= $userCard['skill_level']) {
+                    // カードのスキル取得 
+                    $skillData = $this->Card->getCardData($userCard['card_id']);
 
-                $battleLog['skill']['def'][] = $skillData;
+                    $battleLog['skill']['def'][] = $skillData;
 
-                // スキル実行
-                $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                    // スキル実行
+                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                }
             }
         }
         
@@ -318,7 +323,6 @@ class StagesController extends ApiController {
 
         // 要した攻撃回数（ターン数ではない）
         $battleLog['count']   = $count;
-
 
         $battleLog = json_encode($battleLog);
 
@@ -387,12 +391,23 @@ class StagesController extends ApiController {
 
         // 演出用ターン配列生成
         $turn = array();
+        //$player = '[';
+        $player  = array();
         $i = 0;
+        $cardNo = 1;
         foreach ($data['log'] as $key => $value) {
+            if ($key === 'card_id_' . $cardNo && !empty($value)) {
+                $player[] = array(
+                               'img'     => BASE_URL . 'File/outimage?size=s&dir=card&target=' . $value 
+                           ,   'max'     => $data['log']['card_id_'. $cardNo . '_max'] 
+                           ,   'current' => $data['log']['card_id_' . $cardNo . '_cur'] 
+                           );
+                $cardNo++;
+            }
             if (is_numeric($key)) {
                 $hp = array();
                 foreach ($value as $val) {
-                    $hp[] = $val['targetData']['hp'];
+                    $hp[] = $val['targetData']['hp'] - $val['damage'];
                 }
 
                 if ( isset($val['targetData']['enemy_id']) ) {
@@ -406,9 +421,11 @@ class StagesController extends ApiController {
             }
         }
 
-        $turn = json_encode($turn);
+        $turn     = json_encode($turn);
+        $player   = json_encode($player);
 
         $this->set('data', $data);
+        $this->set('player', $player);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
     }

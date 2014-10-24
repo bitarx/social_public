@@ -1,4 +1,5 @@
 'use strict';
+alert('strict');
 var boss = boss || {};
 boss.paramater = ( function() {
 
