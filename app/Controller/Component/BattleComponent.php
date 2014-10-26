@@ -23,10 +23,9 @@ class BattleComponent extends Component {
      */
     public function doBattleEnemy($selfCards, $targetCards, $kind, &$battleLogTurn) {
 
-//       $battleLogTurn['targetCards_bf'] = $targetCards;
         $num = 0;
-        foreach ($selfCards as $val) {
-            
+        foreach ($selfCards as $deckNum => $val) {
+
             $targetNum = count($targetCards) - 1;
             $selfData = $val['UserCard'];
 
@@ -37,17 +36,15 @@ class BattleComponent extends Component {
 
                 // プレイヤーカードを全体攻撃
                 foreach ($targetCards as $target => $val) {
-$this->log('###'); 
                     $targetData = $targetCards[$target]['UserCard'];
-$this->log($targetData); 
                     if (!empty($targetData['card_id'])) {
-                        $battleLogTurn[$num]['targetData'] = array(
+                        $battleLogTurn[$target]['targetData'] = array(
                             'card_id' => $targetData['card_id']
                         ,   'hp'      => $targetData['hp']
                         );
 
                         $damage = $this->calcDamage($selfData, $targetData);
-                        $battleLogTurn[$num]['damage'] = $damage;
+                        $battleLogTurn[$target]['damage'] = $damage;
                         $targetCards[$target]['UserCard']['hp'] -= $damage;
 
                         $num++;
@@ -57,20 +54,17 @@ $this->log($targetData);
                     }
                 }
 
-$this->log(111); 
                 foreach ($targetCards as $key => $val) {
-$this->log(222); 
                     // HPがゼロになった場合
                     if (isset($targetCards[$key]['UserCard']['hp']) && $targetCards[$key]['UserCard']['hp'] <= 0) {
-$this->log(333); 
                         unset($targetCards[$key]);
                         $cnt = count($targetCards);
-$this->log($cnt); 
                         if ($cnt <= 0) {
-                            $battleLogTurn[$num]['targetData'] = array(
+                            $battleLogTurn[$key]['targetData'] = array(
                                 'card_id' => $targetData['card_id']
                             ,   'hp'      => 0
                             );
+                            $battleLogTurn[$key]['damage'] = 0;
                             break 2;
                         }
                     }
@@ -78,16 +72,17 @@ $this->log($cnt);
 
             // プレイヤー攻撃
             } else if ($kind = 1) {
+
                 $target = mt_rand(0, $targetNum);
                 $targetData = $targetCards[$target]['UserCard'];
 
-                $battleLogTurn[$num]['targetData'] = array(
+                $battleLogTurn[$deckNum]['targetData'] = array(
                     'enemy_id' => $targetData['enemy_id']
                 ,   'hp'       => $targetData['hp']
                 );
 
                 $damage = $this->calcDamage($selfData, $targetData);
-                $battleLogTurn[$num]['damage'] = $damage;
+                $battleLogTurn[$deckNum]['damage'] = $damage;
                 $targetCards[$target]['UserCard']['hp'] -= $damage;
 
                 $num++;
@@ -97,10 +92,11 @@ $this->log($cnt);
                     unset($targetCards[$target]);
                     $cnt = count($targetCards);
                     if ($cnt <= 0) {
-                        $battleLogTurn[$num]['targetData'] = array(
+                        $battleLogTurn[$deckNum]['targetData'] = array(
                             'enemy_id' => $targetData['enemy_id']
                         ,   'hp'       => 0
                         );
+                        $battleLogTurn[$deckNum] = 0;
                         break;
                     }
 
@@ -194,9 +190,10 @@ $this->log($cnt);
      * @param int key 攻撃側何番目のカードか
      * @param string $selfCards 攻撃側カードデータ
      * @param string $targetCards 防御側カードデータ
+     * @param array $battleLog 結果ログ(スキル配列)
      * @return void
      */
-    public function doSkill($skillData, $key, &$selfCards, &$targetCards) {
+    public function doSkill($skillData, $key, &$selfCards, &$targetCards, &$logSkill, $kind = 'player') {
 
         switch($skillData['effect'])
         {
@@ -211,15 +208,24 @@ $this->log($cnt);
                 break;
         }
 
+        // スキルデータをログ配列に格納
+        $logSkill[$key]['words'] = '【' . $skillData['skill_name'] . '】' . $skillData['skill_words'];
 
         // 自分をアップ
         if($skillData['updown'] == 1 && $skillData['target'] == 1) {
             $up = $selfCards[$key]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
             $selfCards[$key]['UserCard'][$eff] += floor($up);
+
+            if ($kind == 'enemy') {
+                $logSkill[$key]['type'] = 5;
+            } else {
+                $logSkill[$key]['type'] = 1;
+            }
         }
         // 相手をダウン
          elseif ($skillData['updown'] == 2 && $skillData['target'] == 2) 
         {
+        /*
             $tnum = count($targetCards) - 1;
             $tKey = mt_rand(0, $tnum);
 
@@ -227,6 +233,9 @@ $this->log($cnt);
             $targetCards[$tKey]['UserCard'][$eff] -= floor($down);
 
             $targetCards['t_key'] = $tKey;
+
+            $logSkill[$key]['type'] = 6;
+        */
         }
         // 味方をアップ
          elseif ($skillData['updown'] == 1 && $skillData['target'] == 3) 
@@ -234,6 +243,12 @@ $this->log($cnt);
             foreach ($selfCards as $no => $val) {
                 $up = $selfCards[$no]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
                 $selfCards[$no]['UserCard'][$eff] += floor($up);
+            }
+
+            if ($kind == 'enemy') {
+                $logSkill[$key]['type'] = 5;
+            } else {
+                $logSkill[$key]['type'] = 3;
             }
         }
         // 相手全体をダウン
@@ -243,7 +258,14 @@ $this->log($cnt);
                 $down = $targetCards[$no]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
                 $targetCards[$no]['UserCard'][$eff] -= floor($down);
             }
+
+            if ($kind == 'enemy') {
+                $logSkill[$key]['type'] = 4;
+            } else {
+                $logSkill[$key]['type'] = 6;
+            }
         }
+
 
     }
 

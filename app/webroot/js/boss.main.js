@@ -1,5 +1,4 @@
 'use strict';
-alert('bossmain');
 var boss = boss || {};
 boss.main = ( function() {
 
@@ -17,7 +16,6 @@ boss.main = ( function() {
   * 初期化
   */
   function init( canvasID, fileName, initial, playerSkillData, enemySkillData, turn, loadCompleteCallback, contentsCompleteCallback ) {
-alert('init');
     _timeoutID = new Array();
     _scene = 0;
 
@@ -50,7 +48,6 @@ alert('init');
     for( var i = 0; i < len; i++ ) {
       playerFileNameList.push( initial.player[ i ].img );
     }
-alert('ddd');
     _loader.load( fileName, playerFileNameList, initial.enemy.img, loadComplete );
   }
 
@@ -122,6 +119,12 @@ alert('ddd');
   function _startPlayerTurn( currentTurnData ) {
     var count = 0;
     var len = currentTurnData.enemyHP.length;
+    var all = 0;
+    for (var i = 0; i < len; i++) {
+        if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
+            all++;
+        }
+    }
     for( var i = 0; i < len; i++ ) {
 
       if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
@@ -137,13 +140,14 @@ alert('ddd');
             _bossDedAction();
           }
 
-          if( ( len - 1 ) <= i ) {
+          if( ( all - 1 ) <= i ) {
             setTimeout( function( i ){
               _startEnemyTurn( currentTurnData );
             }, 1000 );
           }
         }, 700 * count, i );
         count++;
+
         if( currentTurnData.enemyHP[ i ] <= 0 ) {
           break;
         }
@@ -159,7 +163,6 @@ alert('ddd');
   */
   function _startEnemyTurn( currentTurnData ) {
     var len = currentTurnData.playerHP.length;
-
     for( var i = 0; i < len; i++ ) {
       var playerHP = currentTurnData.playerHP[ i ];
 

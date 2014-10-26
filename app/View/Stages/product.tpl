@@ -20,7 +20,6 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
 
     <script type="text/javascript">
-    alert('start');
       window.onload = function() {
         var imageLoadComplete = function() {
             setTimeout("boss.main.skip()", 3200);
@@ -75,10 +74,12 @@
           },
         }
 
-        var playerSkillData = [ { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:1 }, null, { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:2 }, null, { words:"キノコ食べ過ぎ", type:3 } ];
+//        var playerSkillData = [ { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:5 }, null, { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:6 }, null, { words:"キノコ食べ過ぎ", type:3 } ];
         //var playerSkillData = [ null, null, null, null, null ];
+        var playerSkillData = <{$playerSkillData}>
 
-        var enemySkillData = { words:"はじめまして! クッパです!!", type:4 };
+//        var enemySkillData = { words:"はじめまして! クッパです!!", type:3 };
+        var enemySkillData = <{$enemySkillData}>;
 
         var turn = <{$turn}>;
 

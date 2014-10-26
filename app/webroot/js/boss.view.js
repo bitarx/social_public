@@ -1,5 +1,4 @@
 'use strict';
-alert('boss.view');
 var boss = boss || {};
 boss.view = ( function() {
 
@@ -252,7 +251,7 @@ boss.view = ( function() {
     var enemyPowerUP = function() {
       var bmc = _stocker.getDO( "enemyContainer" );
       var powerUP = bmc.getChildAt( 2 );
-      var arrow = bmc.getChildAt( 3 );
+      var arrow = bmc.getChildAt( 4 );
 
       arrow.rotation = 0;
       arrow.y = 45;
@@ -270,6 +269,32 @@ boss.view = ( function() {
       .to( { scaleY: 3 }, 400, createjs.Ease.sineOut );
 
       createjs.Tween.get( powerUP )
+      .to( { alpha: 1 }, 200, createjs.Ease.sineOut )
+      .wait( 200 )
+      .to( { alpha: 0 }, 200, createjs.Ease.sineIn );
+    }
+
+    var enemyPowerDown = function() {
+      var bmc = _stocker.getDO( "enemyContainer" );
+      var powerDown = bmc.getChildAt( 3 );
+      var arrow = bmc.getChildAt( 4 );
+
+      arrow.rotation = 180;
+      arrow.y = -45;
+      createjs.Tween.get( arrow )
+      .to( { y: 45 }, 600, createjs.Ease.sineOut );
+      createjs.Tween.get( arrow )
+      .to( { alpha: 1 }, 200, createjs.Ease.sineOut )
+      .wait( 200 )
+      .to( { alpha: 0 }, 200, createjs.Ease.sineIn );
+
+      powerDown.scaleY = 0;
+      powerDown.visible = true;
+
+      createjs.Tween.get( powerDown )
+      .to( { scaleY: 3 }, 400, createjs.Ease.sineOut );
+
+      createjs.Tween.get( powerDown )
       .to( { alpha: 1 }, 200, createjs.Ease.sineOut )
       .wait( 200 )
       .to( { alpha: 0 }, 200, createjs.Ease.sineIn );
@@ -305,6 +330,9 @@ boss.view = ( function() {
         break;
       case 5 :
         enemyPowerUP();
+        break;
+      case 6 :
+        enemyPowerDown();
         break;
     }
   }

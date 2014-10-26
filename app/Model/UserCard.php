@@ -348,13 +348,13 @@ class UserCard extends AppModel {
 
         $card = new Card();
         $where = array('card_id' => $cardId);
-        $fields = array('card_id', 'card_name', 'card_atk' , 'card_def');
+        $fields = array('card_id', 'card_name', 'card_hp', 'card_atk' , 'card_def');
         $row = $card->getAllFind($where, $fields, 'first');
         for ($i = 0; $i < $num; $i++) {
-            $data[] = array($userId, $cardId, $row['card_atk'], $row['card_def']);
+            $data[] = array($userId, $cardId, $row['card_hp'], $row['card_hp'], $row['card_atk'], $row['card_def']);
         }
 
-        $fields = array('user_id', 'card_id', 'atk', 'def');
+        $fields = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
         $ret = $this->insertBulk($fields, $data);
         return $ret;
     }

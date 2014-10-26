@@ -1,5 +1,4 @@
 'use strict';
-alert('boss.utils');
 var boss = boss || {};
 boss.utils = ( function() {
 

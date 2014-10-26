@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill');
 
     /**
      *　定数
@@ -266,6 +266,7 @@ class StagesController extends ApiController {
         $battleLog['card_id_5_cur']   = isset($userCards[4]['UserCard']['hp']) ? $userCards[4]['UserCard']['hp']: 0;
 
         // 攻撃側のスキル発動
+        $battleLog['player_skill'] = array();
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
             if (!empty($userCard['skill_level'])) {
@@ -278,29 +279,36 @@ class StagesController extends ApiController {
                     $battleLog['skill']['atk'][] = $skillData;
 
                     // スキル実行
-                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards, $battleLog['player_skill']);
                 }
             }
         }
 
-        // 防御側のスキル発動
+        // 防御側(敵)のスキル発動
+        $battleLog['enemy_skill'] = array();
         foreach ($targetCards as $key => $val) {
             $userCard = $val['UserCard'];
+$this->log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'); 
+$this->log($userCard);  
             if (!empty($userCard['skill_level'])) {
                 $hit = mt_rand(1, 100);
                 // 当選
                 if ($hit <= $userCard['skill_level']) {
                     // カードのスキル取得 
-                    $skillData = $this->Card->getCardData($userCard['card_id']);
+                    $where = array(
+                                 'skill_id' => $userCard['skill_id']
+                             );
+                    $skillData = $this->Card->getAllFind($where, array(), 'first');
 
                     $battleLog['skill']['def'][] = $skillData;
 
                     // スキル実行
-                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards);
+                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards, $battleLog['enemy_skill'], $kind = 'enemy');
+$this->log('battleLog');                     
+$this->log($battleLog);  
                 }
             }
         }
-        
         // 1:攻撃側勝利 2:防御側勝利
         $winner = 1;
         $count = 0;
@@ -406,8 +414,17 @@ class StagesController extends ApiController {
             }
             if (is_numeric($key)) {
                 $hp = array();
-                foreach ($value as $val) {
-                    $hp[] = $val['targetData']['hp'] - $val['damage'];
+                for ($j = 0; $j < 5;$j++) {
+                    if (isset($value[$j])) {
+                        $hp[$j] = $value[$j]['targetData']['hp'] - $value[$j]['damage'];
+                        $val = $value[$j];
+                    } else {
+                        if ( isset($val['targetData']['enemy_id']) ) {
+                            $hp[$j] = $val['targetData']['hp'] - $val['damage'];
+                        } else {
+                            $hp[$j] = 0;
+                        }
+                    }
                 }
 
                 if ( isset($val['targetData']['enemy_id']) ) {
@@ -421,6 +438,14 @@ class StagesController extends ApiController {
             }
         }
 
+        $playerSkillData = array();
+        if (!empty($data['log']['player_skill'])) 
+            $playerSkillData = json_encode($data['log']['player_skill']);
+
+        $enemySkillData = array();
+        if (!empty($data['log']['enemy_skill'])) 
+            $enemySkillData = json_encode($data['log']['enemy_skill'][0]);
+
         $turn     = json_encode($turn);
         $player   = json_encode($player);
 
@@ -428,6 +453,10 @@ class StagesController extends ApiController {
         $this->set('player', $player);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
+        $this->set('playerSkillData', $playerSkillData);
+$this->log('enemySkillData'); 
+$this->log($enemySkillData); 
+        $this->set('enemySkillData' , $enemySkillData);
     }
 
     /**
@@ -610,7 +639,7 @@ class StagesController extends ApiController {
             $lotData['target'] = 0;
             $lotData['num']    = 0;
             $hit = mt_rand(1, 100);
-$this->log($userStageData); 
+
             $effect = 0;
             $effectSecond = 0;
             if ($hit <= $userStageData['prob_get']) {

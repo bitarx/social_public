@@ -1,5 +1,4 @@
 'use strict';
-alert('strict');
 var boss = boss || {};
 boss.paramater = ( function() {
 
@@ -154,6 +153,13 @@ boss.layout = ( function() {
     _stocker.getDO( "enemyContainer" ).addChild( enemyPowerUP );
     enemyPowerUP.visible = false;
     enemyPowerUP.alpha = 0;
+    var enemyPowerDown = _stocker.getDO( "playerPowerDown" ).clone();
+    enemyPowerDown.scaleX = _stocker.getDO( "enemy" ).image.width;
+    enemyPowerDown.rotation = 180;
+    enemyPowerDown.y = _stocker.getDO( "enemy" ).image.height / 2;
+    _stocker.getDO( "enemyContainer" ).addChild( enemyPowerDown );
+    enemyPowerDown.visible = false;
+    enemyPowerDown.alpha = 0;
 
     var enemyArrow = _stocker.getDO( "arrow" ).clone();
     enemyArrow.alpha = 0;
