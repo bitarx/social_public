@@ -35,7 +35,12 @@ class UserDeckCardsController extends ApiController {
                 $val['params'] = json_encode($tmp); 
             }
         }
+        // 現地点のデッキ使用コスト
+        $cost = $this->UserDeckCard->getCost($this->userId);
+
         $this->set('list', $list);
+        $this->set('cost', $cost);
+        $this->set('costAtk', $this->userParam['cost_atk']);
     }
 
     /**
@@ -124,6 +129,9 @@ class UserDeckCardsController extends ApiController {
         // 引き回しパラメータ
         $addParam = '&user_deck_id=' . $userDeckId . '&deck_number=' . $deckNumber;
 
+        // 現地点のデッキ使用コスト
+        $cost = $this->UserDeckCard->getCost($this->userId);
+
         // アサイン
         $this->set('list', $list);
         $this->set('data', $selectDeckCard);
@@ -132,8 +140,10 @@ class UserDeckCardsController extends ApiController {
         $this->set('user_card_id', $userDeckId);
         $this->set('deck_number', $deckNumber);
         $this->set('addParam', $addParam);
-    $this->log('over:'. $over); 
         $this->set('over', $over);
+
+        $this->set('cost', $cost);
+        $this->set('costAtk', $this->userParam['cost_atk']);
     } 
 
     /**
@@ -157,9 +167,15 @@ class UserDeckCardsController extends ApiController {
            $this->rd('errors', 'index', array('error' => 1)); 
        }
 
-       // コストオーバー
+       // 選択カード
+       $card = $this->UserCard->getUserCardById($userCardId);
+       // 現地点のデッキ使用コスト
        $cost = $this->UserDeckCard->getCost($this->userId);
-       if ($this->userParam['cost_atk'] < $cost) {
+
+       // 総コスト
+       $costAll = $cost + $card['card_cost'];
+
+       if ($this->userParam['cost_atk'] < $costAll) {
            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
            $param = array(
                'over' => 1

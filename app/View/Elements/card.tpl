@@ -87,6 +87,13 @@
             </span>
         </div>
     <{/if}>
+    <{if 'UserDeckCards' == $ctl}> 
+        <div class="cardDeckCost">
+            コスト:<span style="color:#ffffff">
+            <{$data.card_cost}>
+            </span>
+        </div>
+    <{/if}>
     <{/if}> 
 
     <{* 強化合成素材カード選択 *}> 

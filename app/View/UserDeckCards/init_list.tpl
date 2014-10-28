@@ -1,5 +1,10 @@
 <div>
     <{include file="../Elements/title.tpl"}>
+
+    <div class="center">
+        <span style="color:#FFA500">デッキコスト</span> <{$cost}> / <{$costAtk}>
+    </div>
+
     <{if !empty($data.user_card_id)}>
         <{include file="../Elements/card.tpl"}>
     <{else}> 

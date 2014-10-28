@@ -46,7 +46,13 @@
             </div>
     <{/if}>
 
-    <{include file="../Elements/paging.tpl"}>
+    <{if $kind == 2 && empty($list)}> 
+        <div class="paging">
+            進化に使えるカードがありません。 
+        </div>
+    <{else}>
+        <{include file="../Elements/paging.tpl"}>
+    <{/if}>
 
     <{foreach from=$list item=data key=key}>
       <div class="listBlock">

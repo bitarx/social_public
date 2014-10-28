@@ -280,6 +280,8 @@ class StagesController extends ApiController {
 
                     // スキル実行
                     $this->Battle->doSkill($skillData, $key, $userCards, $targetCards, $battleLog['player_skill']);
+                } else {
+                    $battleLog['player_skill'][$key] = null;
                 }
             }
         }
@@ -288,8 +290,6 @@ class StagesController extends ApiController {
         $battleLog['enemy_skill'] = array();
         foreach ($targetCards as $key => $val) {
             $userCard = $val['UserCard'];
-$this->log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'); 
-$this->log($userCard);  
             if (!empty($userCard['skill_level'])) {
                 $hit = mt_rand(1, 100);
                 // 当選
@@ -298,14 +298,14 @@ $this->log($userCard);
                     $where = array(
                                  'skill_id' => $userCard['skill_id']
                              );
-                    $skillData = $this->Card->getAllFind($where, array(), 'first');
+                    $skillData = $this->Skill->getAllFind($where, array(), 'first');
 
                     $battleLog['skill']['def'][] = $skillData;
 
                     // スキル実行
                     $this->Battle->doSkill($skillData, $key, $userCards, $targetCards, $battleLog['enemy_skill'], $kind = 'enemy');
-$this->log('battleLog');                     
-$this->log($battleLog);  
+                } else {
+                    $battleLog['enemy_skill'][$key] = null;
                 }
             }
         }
@@ -454,8 +454,6 @@ $this->log($battleLog);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
         $this->set('playerSkillData', $playerSkillData);
-$this->log('enemySkillData'); 
-$this->log($enemySkillData); 
         $this->set('enemySkillData' , $enemySkillData);
     }
 

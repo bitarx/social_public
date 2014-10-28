@@ -362,6 +362,12 @@ div#contents{
     font-size: 24px;
     position: absolute;
 }
+.cardDeckCost {
+    top: 138px;
+    left: 365px;
+    font-size: 24px;
+    position: absolute;
+}
 .progCardExp {
     position: absolute;
     top: 80px;
@@ -1326,6 +1332,12 @@ display: block;
     width:30px;
     height:30px;
     left:5px;
+}
+.center {
+    position:relative;
+    text-align:center;
+    height:30px;
+    top:8px;
 }
 
 input[type=checkbox] {
