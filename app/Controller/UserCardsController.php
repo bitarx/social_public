@@ -305,6 +305,7 @@ class UserCardsController extends ApiController {
             ,   'def' => $cardData['def'] 
             ,   'level' => $cardData['level'] 
             ,   'exp' => $cardData['exp'] 
+            ,   'skill_level' => $cardData['skill_level'] 
             );
             $this->UserCard->save($values);
 

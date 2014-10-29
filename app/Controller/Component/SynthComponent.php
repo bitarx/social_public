@@ -40,9 +40,21 @@ class SynthComponent extends Component {
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {
                 $levelMulti = 14; 
+
+                // ベースと同じ属性であればスキルレベルアップ
+                $baseCard['skill_level']++;
             }
             $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
+
+            // ベースと同じカードであればさらにスキルレベルアップ
+            if ($baseCard['card_id'] == $val['card_id']) {
+                $baseCard['skill_level']++;
+            }
         }
+
+        // スキルレベル最大
+        if ( SKILL_LEVEL_MAX < $baseCard['skill_level'] ) 
+            $baseCard['skill_level'] = SKILL_LEVEL_MAX;
 
         // レベルアップ回数
         $levelUpCnt = $this->getLevelUpNum($upExp, $baseCard['exp']);

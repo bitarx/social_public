@@ -41,7 +41,7 @@
     </script>
 
     <div class="cardLv">
-        Lv.<span style="color:#ffffff"><{$data.level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
+        Lv.<span style="color:#ffffff"><{$data.level}> / <{$data.card_level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
     </div>
     <div class="cardRareLevel">
         レアリティ:<{if $data.rare_level == 1}>
@@ -58,7 +58,7 @@
     </div>
     <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
         <div class="cardSkillLv">
-            スキルLv:<span style="color:#ffffff"><{$data.skill_level}></span>
+            スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
         </div>
     <{/if}>
     <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
@@ -90,7 +90,7 @@
     <{if 'UserDeckCards' == $ctl}> 
         <div class="cardDeckCost">
             コスト:<span style="color:#ffffff">
-            <{$data.card_cost}>
+            <{$data.card_cost}> 
             </span>
         </div>
     <{/if}>

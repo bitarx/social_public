@@ -14,6 +14,9 @@ define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
 // カード最大所有枚数
 define("CARD_MAX_NUM", 100);
 
+// スキルレベル最大
+define("SKILL_LEVEL_MAX", 30);
+
 // SNS情報更新期間(秒)
 define("SNS_DATA_UPDATE_TARM", 60*60*24);
 
