@@ -359,17 +359,20 @@ class StagesController extends ApiController {
                 $stageId = $this->UserStage->getUserMaxStageId($this->userId);
                 $nextStageId = $stageId + 1;
 
-                // 次のステージへ
-                $fields = array('user_id', 'stage_id', 'progress', 'state');
-                $values[] = array($this->userId, $nextStageId, 0, 1);
-                $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+                $field = array('state');
+                $where = array(
+                             'user_id'  => $this->userId
+                         ,   'stage_id' => $stageId
+                         );
+                $maxStage = $this->UserStage->getAllFind($where, $field, 'first');
 
-                // 処理済
-                $values = array(
-                              'id' => $log['id']
-                          );
-                $this->BattleLog->save($values);
-        
+                if ( 3 == $maxStage['state']) {
+                    // 次のステージへ
+                    $fields = array('user_id', 'stage_id', 'progress', 'state');
+                    $values[] = array($this->userId, $nextStageId, 0, 1);
+                    $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+                }
+
             }
 
         } catch (AppException $e) { 
@@ -478,7 +481,7 @@ class StagesController extends ApiController {
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
             $next = 'UserStages/index';
-            $str  = '戻る';
+            $str  = 'TOUCH SCREEN';
         }
         $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {

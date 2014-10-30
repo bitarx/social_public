@@ -35,11 +35,19 @@ class SynthComponent extends Component {
      */
     public function doSynthUp($baseCard, $targetList, &$upExp) {
 
-        $levelMulti = 8; 
         foreach ($targetList as $key => $val) {
+
+            $levelMulti = 8; 
+
+            // 強化素材の補正
+            if ($val['sozai_kind'] == 1) 
+                $val['level'] = 1000;
+
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {
                 $levelMulti = 14; 
+
+                $val['level'] *= 2;
 
                 // ベースと同じ属性であればスキルレベルアップ
                 $baseCard['skill_level']++;

@@ -45,7 +45,7 @@ class FileController extends ApiController {
 
             case 'scene':
                 $ret = $this->UserStage->getUserStageByEnemyId($this->userId , $targetId );
-                $filename = 'scene_' . $size . '_' . $targetId . '.jpg'; 
+                $filename = 'scene_' . $targetId . '.jpg'; 
                 break;
 
             default:

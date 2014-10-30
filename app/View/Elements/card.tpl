@@ -117,14 +117,16 @@
 
     <{* ベースカード選択 *}> 
     <{elseif 'UserBaseCards' == $ctl && 'index' == $action}> 
-        <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
-            <div class="btnSelectCard">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                <div class="strSelectCard">
-                    ベース選択
+        <{if empty($data.sozai_kind)}>
+            <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
+                <div class="btnSelectCard">
+                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <div class="strSelectCard">
+                        ベース選択
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        <{/if}>
 
     <{* デッキ編成 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 

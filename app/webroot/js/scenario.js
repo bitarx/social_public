@@ -1,6 +1,6 @@
 // 背景、登場人物の画像を定義する
 背景画像 = {
-  '学校': IMG_URL + 'bg/school.png',
+  'main': IMG_URL + 'bg/school.png',
   'エントランス': IMG_URL + 'bg/entrance.png',
   '教室1': IMG_URL + 'bg/classroom.png',
   '廊下': IMG_URL + 'bg/passage.png',
@@ -29,7 +29,7 @@ GAME_ID = 'adv002';
 
 start = {
   'シーン': 'start',
-  '背景画像': ['学校', 426, 320],
+  '背景画像': ['main', 426, 320],
   '選択肢': ['どうしようかな？','入る', 'エントランス', '帰る', 'ゲームオーバー'],
 }
 

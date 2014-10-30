@@ -406,8 +406,12 @@ class UserCardsController extends ApiController {
         $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
         $endExp = $upExp + $startExp;
 
-// 仮
-//$baseCard = IMG_URL . 'miku_v02.jpg';
+        $maxExp = $baseCard['level'] * 100;
+
+        // レベルアップ演出回数を抑える
+        if ($maxExp < $endExp) {
+            $endExp = $maxExp;
+        }
 
         $this->set('baseCard', $baseCard);
         $this->set('sacrificeList', $sacrificeList);

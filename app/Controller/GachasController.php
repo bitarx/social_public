@@ -136,6 +136,9 @@ class GachasController extends ApiController {
                 );
                 $this->UserGachaLog->save($values);
 
+                // ログリスト
+                $logList[] = $values;
+
             } catch (AppException $e) {
                 $this->UserCard->rollback();
                 $this->log($e->errmes);

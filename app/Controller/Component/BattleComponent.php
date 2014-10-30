@@ -96,7 +96,6 @@ class BattleComponent extends Component {
                             'enemy_id' => $targetData['enemy_id']
                         ,   'hp'       => 0
                         );
-                        $battleLogTurn[$deckNum] = 0;
                         break;
                     }
 
