@@ -135,8 +135,32 @@ function dispRotResultQuest(data)
        case "99":
            filename = 'card_back.png';
            break;
-    }
-
+       // 何も出ないときはデッキセットキャラがメッセージを発する
+       default:
+           image = '<div class="guide">';
+           image += '<div class="guideImg">';
+           image +=     '<img src="' + FILEOUT_URL + '?size=s&dir=card&target=' + data.target + '" width="160px">'; 
+           image += '</div>';
+           image += '<div class="guideFukidashi">';
+           image += '<div class="guideFukiMiddle">';
+           image +=     '<img src="' + IMG_URL + 'fukidashi_middle.png" width="420px" height="147px">';
+           image += '</div>';
+           image += '<div class="guideFukiLeft">';
+           image +=     '<img src="' + IMG_URL + 'fukidashi_left_side.png" width="20px">';
+           image += '</div>';
+           image += '<div class="guideFukiUpper">';
+           image +=     '<img src="' + IMG_URL + 'fukidashi_upper.png" width="420px">';
+           image += '</div>';
+           image += '<div class="guideFukiUnder">';
+           image +=     '<img src="' + IMG_URL + 'fukidashi_under.png" width="420px">';
+           image += '</div>';
+           image += '<div class="guideFukiText">';
+           image +=     '<span style="color:#000000;">' + data.name + '</span>'; 
+           image += '</div>';
+           image += '</div>';
+           image += '</div>';
+           break; 
+    } 
     // クエストカード
     $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
     $('#lotResultQuest').show(); 

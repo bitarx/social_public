@@ -685,6 +685,18 @@ class StagesController extends ApiController {
                     // 出会い
                     case KIND_NEW_FRIEND:
                         break;
+                    // 当選無しはデッキカードのメッセージ
+                    default:
+                        $deckList = $this->UserDeck->getUserDeckData($this->userId);
+                        $list = $deckList['UserDeckCard'];
+                        shuffle($list);
+
+                        $row = $list[0];
+
+                        $cardData = $this->Card->getCardData($row['UserCard']['card_id']);
+                        $targetData['name'] = $cardData['card_mes'];
+                        $lotData['target']  = $row['UserCard']['card_id'];
+                        
                 }
 
                 $range   = 1;
@@ -799,7 +811,6 @@ class StagesController extends ApiController {
         } else {
             $ary = array('result' => 2);
         }
-$this->log($ary); 
         $this->setJson($ary);
 	}
 

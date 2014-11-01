@@ -680,19 +680,19 @@ input.btn_submit {
 /** クエストの抽選結果表示 */
 .lotResultQuest {
     position: absolute;
-    top: 140px;
+    top: 125px;
     left: 240px;
     width: 150px;
 }
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 460px;
+    top: 445px;
     left: 15px;
 }
 .strLotResultDataQuest {
     position: absolute;
-    top: 520px;
+    top: 505px;
     left: 200px;
 }
 
