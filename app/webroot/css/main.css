@@ -472,7 +472,7 @@ input.btn_submit {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: 240px;
+    top: 145px;
     line-height: 0;
     height: 220px;
     width: 320px;
@@ -639,22 +639,22 @@ input.btn_submit {
 /** クエストの進行ボタン */
 .btnQuestProg {
     left: 103px;
-    top: 210px;
+    top: 330px;
     position: relative;
 }
 .btnQuestNotProg {
     left: 0px;
-    top: 230px;
+    top: 350px;
     position: relative;
 }
 .btnQuestProgBoss {
     left: 103px;
-    top: 220px;
+    top: 340px;
     position: relative;
 }
 .btnQuestNotProgBoss {
     left: 0px;
-    top: 160px;
+    top: 280px;
     position: relative;
 }
 .strQuestProg {
@@ -667,7 +667,7 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 213px;
+    top: 333px;
     position: relative;
 }
 .strQuestBoss {
@@ -680,19 +680,19 @@ input.btn_submit {
 /** クエストの抽選結果表示 */
 .lotResultQuest {
     position: absolute;
-    top: 150px;
+    top: 140px;
     left: 240px;
     width: 150px;
 }
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 470px;
+    top: 460px;
     left: 15px;
 }
 .strLotResultDataQuest {
     position: absolute;
-    top: 530px;
+    top: 520px;
     left: 200px;
 }
 
