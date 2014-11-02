@@ -39,7 +39,7 @@ class UserPresentBoxesController extends ApiController {
     public function initAll() { 
 
         $list = $this->UserPresentBox->getList($this->userId );
-$this->log('initAllList:' . print_r($list, true)); 
+
         if (!empty($list)) {
             $this->UserPresentBox->begin(); 
             try {  
@@ -67,7 +67,7 @@ $this->log('initAllList:' . print_r($list, true));
         $userPresentBoxId = $this->params['user_present_box_id'];
 
         $data = $this->UserPresentBox->getDataById($this->userId , $userPresentBoxId);
-$this->log('initAllList:' . print_r($data, true)); 
+
         if (!empty($data)) {
             $this->UserPresentBox->begin(); 
             try {  

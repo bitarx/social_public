@@ -112,7 +112,7 @@ class UserPresentBox extends AppModel {
      * @param int  $pageAll 1:詳細情報取得追加
      * @return array $list 未受け取り一覧
      */
-    public function getList($userId, $add = 0, $offset, &$pageAll = 'no') { 
+    public function getList($userId, $add = 0, $offset = 0, &$pageAll = 'no') { 
          
         $where = array('user_id' => $userId );
         $field = array('user_present_box_id', 'kind', 'target', 'num', 'message', 'created');

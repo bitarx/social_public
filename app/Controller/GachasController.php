@@ -15,13 +15,13 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog');
+    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem');
 
     // 10連ガチャID
-    public $gacha10 = array( 2 );
+    public $gacha10 = array( GACHA_10_ID );
 
     // 無課金ガチャID
-    public $gachaMoney = array( 3 );
+    public $gachaMoney = array( GACHA_MONEY_ID );
 
     /**
      * index method
@@ -31,33 +31,13 @@ class GachasController extends ApiController {
      */
 	public function index() {
 
+        $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
+
         $list = $this->Gacha->getList();
         $this->set('list', $list);
+        $this->set('tNum', $tNum);
         $this->set('haveMoney', $this->userParam['money']);
 	}
-
-    /**
-     * 決済画面へ遷移前
-     *
-     * @author imanishi 
-     * @return json
-     */
-	public function api() {
-
-        // 不正
-        if ( empty($this->params['gacha_id']) ) {
-            $this->rd('errors', 'index', array('error' => 2));
-        }
-        $gachaId = $this->params['gacha_id'];
-
-
-        // 仮に飛ばす
-/*
-        $param = array('gacha_id' => $gachaId);
-        $this->rd('gachas', 'act', $param);
-*/
-	}
-
 
     /**
      * ガチャ実行
@@ -203,69 +183,99 @@ class GachasController extends ApiController {
             $this->rd('gachas', 'product', $param);
         }
 
-
-        /********************************************** 
-         * 以下課金API
-        ***********************************************/ 
-        // アプリヒルズ側で購入が確定した際の通知先URL
-        $callbackUrl = BASE_URL . "Gachas/comp";
-
-        // アプリヒルズ側で購入が完了した後の戻り先URL
-        if ($gacha10) {
-            // １０連ガチャ
-            $finishPageUrl = BASE_URL . "Gachas/product10?rare_level=". $rareLevel;
-        } else {
-            // 単品ガチャ
-            $finishPageUrl = BASE_URL . "Gachas/product?rare_level=". $rareLevel;
+        // プレミアムガチャチケット判定
+        $tNum = 0;
+        if ($gachaId == GACHA_PREMIUM_ID) {
+            $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
         }
 
+        // チケット保有がなければ
+        if ( empty($tNum) ) {
 
-        // 購入アイテムの配列（複数のアイテム指定可）
-        // アイテム名や説明文はUTF-8
-        $items = array();
-        $items[] = array(
-          "itemId"      => $gachaData['gacha_id'],
-          "name"        => $gachaData['gacha_name'],
-          "unitPrice"   => $gachaData['point'],
-          "quantity"    => 1,
-          "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
-          "description" => $gachaData['gacha_detail'],
-        );
+            /********************************************** 
+             * 以下課金API
+            ***********************************************/ 
+            // アプリヒルズ側で購入が確定した際の通知先URL
+            $callbackUrl = BASE_URL . "Gachas/comp";
 
-        $this->snsUtil = ApplihillsUtil::create();
-        $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
+            // アプリヒルズ側で購入が完了した後の戻り先URL
+            if ($gacha10) {
+                // １０連ガチャ
+                $finishPageUrl = BASE_URL . "Gachas/product10?rare_level=". $rareLevel;
+            } else {
+                // 単品ガチャ
+                $finishPageUrl = BASE_URL . "Gachas/product?rare_level=". $rareLevel;
+            }
 
-        if ($payment) {
-            // 決済ID（Paymentオブジェクトごとに割り当てられます）
-            $paymentId = $payment["paymentId"];
 
-            $itemLog = json_encode($items);
+            // 購入アイテムの配列（複数のアイテム指定可）
+            // アイテム名や説明文はUTF-8
+            $items = array();
+            $items[] = array(
+              "itemId"      => $gachaData['gacha_id'],
+              "name"        => $gachaData['gacha_name'],
+              "unitPrice"   => $gachaData['point'],
+              "quantity"    => 1,
+              "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+              "description" => $gachaData['gacha_detail'],
+            );
 
-            // 購入情報（Payment IDとアイテム情報を結びつけたもの）をデータベース等に保存
-            $this->PaymentLog->begin();
-            try {
-                $values = array(
-                              'payment_id' => $paymentId
-                          ,   'user_id'   => $this->userId
-                          ,   'log'       => json_encode($logList)
-                          );
-                $this->PaymentLog->save($values);
+            $this->snsUtil = ApplihillsUtil::create();
+            $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
 
-                
-            } catch (AppException $e) { 
-                $this->UserParam->rollback(); 
-                $this->log($e->errmes);
-                $this->rd('Errors', 'index', array('error'=> 2)); 
-            } 
-            $this->PaymentLog->commit();
+            if ($payment) {
+                // 決済ID（Paymentオブジェクトごとに割り当てられます）
+                $paymentId = $payment["paymentId"];
 
-            // アイテム購入ページへリダイレクト
-            header("Location: " . $payment["transactionUrl"], true, 302);
-            exit;
+                $itemLog = json_encode($items);
+
+                // 購入情報（Payment IDとアイテム情報を結びつけたもの）をデータベース等に保存
+                $this->PaymentLog->begin();
+                try {
+                    $values = array(
+                                  'payment_id' => $paymentId
+                              ,   'user_id'   => $this->userId
+                              ,   'log'       => json_encode($logList)
+                              );
+                    $this->PaymentLog->save($values);
+
+                    
+                } catch (AppException $e) { 
+                    $this->UserParam->rollback(); 
+                    $this->log($e->errmes);
+                    $this->rd('Errors', 'index', array('error'=> 2)); 
+                } 
+                $this->PaymentLog->commit();
+
+                // アイテム購入ページへリダイレクト
+                header("Location: " . $payment["transactionUrl"], true, 302);
+                exit;
+            } else {
+                // 失敗した時の処理
+                $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+                $this->rd('Errors', 'index', array('error' => 2));
+            }
         } else {
-            // 失敗した時の処理
-            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error' => 2));
+
+            // チケット減算
+            $tNum--;
+
+            $this->UserItem->begin();
+            try {
+                $value = array('num' => $tNum);
+                $where = array(
+                    'UserItem.user_id' => $this->userId
+                ,   'UserItem.item_id' => PGACHA_ITEM_ID
+                );
+                $this->UserItem->updateAll($value, $where);
+
+            } catch (AppException $e) {
+                $this->UserParam->rollback();
+                $this->log($e->errmes);
+                $this->rd('Errors', 'index', array('error'=> 2));
+            }
+            $this->UserItem->commit();
+
         }
 
 

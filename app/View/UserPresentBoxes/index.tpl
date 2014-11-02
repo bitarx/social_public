@@ -14,14 +14,16 @@
       <{/if}>
     </div>
 
-    <{include file="../Elements/paging.tpl"}>
+    <{if !empty($list)}> 
+        <{include file="../Elements/paging.tpl"}>
 
-    <{foreach from=$list item=data key=key}>
-      <div class="listBlock">
-        <{include file="../Elements/present.tpl"}>
-      </div>
-        <{include file="../Elements/line.tpl"}>
-    <{/foreach}>
+        <{foreach from=$list item=data key=key}>
+          <div class="listBlock">
+            <{include file="../Elements/present.tpl"}>
+          </div>
+            <{include file="../Elements/line.tpl"}>
+        <{/foreach}>
 
-    <{include file="../Elements/paging.tpl"}>
+        <{include file="../Elements/paging.tpl"}>
+    <{/if}>
 </div>

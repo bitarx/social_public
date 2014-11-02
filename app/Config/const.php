@@ -79,7 +79,19 @@ define("NOW_DATE_DB", "'" . NOW_DATE . "'");
 // 初回限定アイテムID
 define("FIRST_ITEM_ID", 1 );
 
+// プレミアムガチャチケットID
+define("PGACHA_ITEM_ID", 9 );
 
+
+/**
+ * ガチャ関連
+ */
+// プレミアムガチャID
+define("GACHA_PREMIUM_ID", 1 );
+// 10連ガチャID
+define("GACHA_10_ID", 2 );
+// 無課金ガチャID
+define("GACHA_MONEY_ID", 3 );
 
 /**
  * OAuth認証関連

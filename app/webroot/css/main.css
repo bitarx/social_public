@@ -262,6 +262,22 @@ div#contents{
     top:1px;
     left:240px;
 }
+.subTitleUpper {
+    position:relative;
+    top:10px;
+    height:65px;
+}
+.subTitleLeftStr {
+    position:absolute;
+    top:1px;
+    left:4px;
+}
+.detailStr {
+    top:1px;
+    left:3px;
+    width:640px;
+    line-height: 1.5em
+}
 
 /** ガチャ */
 .gachaImg {
@@ -738,6 +754,13 @@ input.btn_submit {
     position: absolute;
     top: 14px;
     left: 90px;
+    font-size: 24px;
+
+}
+.strUpConfT {
+    position: absolute;
+    top: 14px;
+    left: 25px;
     font-size: 24px;
 
 }
@@ -1236,6 +1259,35 @@ display: block;
     left: 18px;
 }
 
+/** トップページ */
+.topInfo {
+    position: absolute;
+    top: 770px;
+    left: 1px;
+}
+.topLineUpper {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+.topLineStr {
+    position: absolute;
+    top: 30px;
+    left: 260px;
+    width: 290px;
+    font-size: 30px;
+}
+.topLineUnder {
+    position: absolute;
+    top: 70px;
+    left: 1px;
+}
+.topInfoList {
+    position: absolute;
+    top: 880px;
+    left: 30px;
+    font-size: 30px;
+}
 
 /** カード詳細 */
 .cardDetail {

@@ -24,7 +24,10 @@ class UserItemsController extends ApiController {
      */
     public function index() {
 
-        $where = array('user_id' => $this->userId);
+        $where = array(
+            'user_id' => $this->userId
+        ,   'num > ' => 0     
+        );
         $list = $this->UserItem->getAllFind($where);
 
         $this->set('list',  $list);
@@ -43,9 +46,13 @@ class UserItemsController extends ApiController {
         $field = array();
         $data = $this->UserItem->getAllFind($where, $field, 'first');
 
-        // 確率変動アイテムの使用確認
-        $list = array();
-        list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
+        if (5 <= $data['item_effect_id']) {
+            // 確率変動アイテムの使用確認
+            $list = array();
+            list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
+        } else {
+            $effect = 0;
+        }
 
         $this->set('data',  $data);
         $this->set('nextAction',  'comp');
@@ -63,6 +70,7 @@ class UserItemsController extends ApiController {
         $where = array(
                        'id' => $userItemId
                     ,  'user_id' => $this->userId 
+                    ,  'num > '  => 0
                     );
         $field = array();
         $userItem = $this->UserItem->getAllFind($where, $field, 'first');

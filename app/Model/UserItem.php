@@ -126,4 +126,26 @@ class UserItem extends AppModel {
         $ret = $this->save($data);
         return $ret;
     }
+
+    /**
+     * プレミアムガチャチケット所有確認
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @return int 枚数
+     */
+    public function hasPremiumGachaTiket($userId) {
+
+        $where = array(
+            'user_id' => $userId
+        ,   'item_id' => PGACHA_ITEM_ID
+        ,   'num > '  => 0
+        );
+        $fields = array('num'); 
+        $ret = $this->getAllFind($where, $fields, 'first');
+
+        $tNum = !empty($ret['num']) ? $ret['num'] : 0;
+
+        return $tNum;
+    }
 }

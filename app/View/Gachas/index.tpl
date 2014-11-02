@@ -13,24 +13,36 @@
             <{$data.gacha_detail}>
         </div>
         <div class="gachaPrice">
-            <{if $data.gacha_id == 3}>
+            <{if $data.gacha_id == $smarty.const.GACHA_MONEY_ID}>
                 <{$data.point}><{$smarty.const.MONEY_NAME}>
             <{else}> 
-                <{$data.point}><{$smarty.const.POINT_NAME}>
+                <{if $data.gacha_id == $smarty.const.GACHA_PREMIUM_ID && 0 < $tNum}>
+                    ガチャチケット<{$tNum}>枚所有
+                <{else}>
+                    <{$data.point}><{$smarty.const.POINT_NAME}>
+                <{/if}>
             <{/if}> 
         </div>
-                <div class="btnGachaStart">
-                    <{if $data.gacha_id == 3 && 0 < $data.point && $haveMoney < $data.point }>
-                        <{$smarty.const.MONEY_NAME}>が足りません
-                    <{else}>
-                        <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>">
-                        <img src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="ガチャる" name="submit">
-                        <div class="strUpConf">
-                           ガチャる 
-                        </div>
-                        </a>
-                    <{/if}>
-                </div>
+
+        <div class="btnGachaStart">
+            <{if $data.gacha_id == 3 && 0 < $data.point && $haveMoney < $data.point }>
+                <{$smarty.const.MONEY_NAME}>が足りません
+            <{else}>
+                <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>">
+                <img src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="ガチャる" name="submit">
+                <{if $data.gacha_id == $smarty.const.GACHA_PREMIUM_ID && 0 < $tNum}>
+                    <div class="strUpConfT">
+                       チケットでガチャる 
+                    </div>
+                <{else}>
+                    <div class="strUpConf">
+                       ガチャる 
+                    </div>
+                <{/if}>
+                </a>
+            <{/if}>
+        </div>
+
          <div class="lineGacha">
              <img src="<{$smarty.const.IMG_URL}>line.png">
         </div>
