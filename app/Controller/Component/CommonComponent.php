@@ -126,4 +126,13 @@ class CommonComponent extends Component {
              return CARRER_PC;
         }
     }
+
+    /**
+     * 現在時刻
+     *
+     * @return string Y-m-d H:i:s
+     */
+     public function nowDate() {
+         return date("Y-m-d H:i:s");
+     }
 }

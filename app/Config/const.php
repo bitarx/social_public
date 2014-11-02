@@ -73,6 +73,12 @@ define("POINT_NAME","ポイント");  // プラットフォーム通貨の呼称
 define("NOW_DATE",  date("Y-m-d H:i:s") );
 define("NOW_DATE_DB", "'" . NOW_DATE . "'");
 
+/**
+ * アイテム関連
+ */
+// 初回限定アイテムID
+define("FIRST_ITEM_ID", 1 );
+
 
 
 /**

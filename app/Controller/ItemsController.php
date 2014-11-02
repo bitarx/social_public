@@ -13,9 +13,9 @@ class ItemsController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Common');
 
-    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup', 'PaymentLog');
+    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup', 'PaymentLog', 'UserFirstItem');
 
     /**
      * index method
@@ -27,6 +27,15 @@ class ItemsController extends ApiController {
         $fields = array();
         $where  = array('Item.point > ' => 0);
         $list = $this->Item->getAllFind($where, $fields);
+
+        $where = array('user_id' => $this->userId);
+        $ret = $this->UserFirstItem->getAllFind($where, $fields, 'first');
+        if (!empty($ret)) {
+            foreach ($list as $key => $val) {
+                if ($val['item_id'] == FIRST_ITEM_ID) 
+                    unset($list[$key]);
+            }
+        }
 
         $this->set('list', $list);
 	}
@@ -96,12 +105,6 @@ class ItemsController extends ApiController {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error' => 2));
         }
-
-        // 暫定
-/*        
-        $param = array('item_id' => $itemId);
-        $this->rd('Items', 'comp', $param);
-*/
 	}
 
     /**
@@ -152,54 +155,90 @@ class ItemsController extends ApiController {
             $this->rd('Errors', 'index', array('error' => 2));
         }
 
-        if ( 0 == $itemData['box_num'] ) $itemData['box_num'] = 1;
+        if ( 0 == $itemData['box_num'] ) 
+            $itemData['box_num'] = 1;
 
         // セットアイテムチェック
         $where = array('item_id' => $itemData['item_id']);
-        $itemGroup = $this->ItemGroup->getAllFind($where, $field, 'first');
+        $itemGroup = $this->ItemGroup->getAllFind($where, $field);
 
-        $newItemId = empty($itemGroup) ? $itemData['item_id'] : $itemGroup['item_base_id'];
+        $newItemIds = array();
 
-        // 存在確認
-        $where = array(
-                    'user_id'  => $this->userId  
-                ,   'item_id'  => $newItemId
-                );
-        $userItem = $this->UserItem->getAllFind($where,$field, 'first');
+        if (empty($itemGroup)) {
+            $newItemIds[] = $itemData['item_id']; 
+        } else {
+            foreach ($itemGroup as $val) {
+                $newItemIds[] = $val['item_base_id'];
+            }
+        }
 
         $this->UserItem->begin();
-        try {
 
-            if (empty($userItem)) {
-                $values = array(
-                    'user_id'  => $this->userId  
-                ,   'item_id'  => $itemData['item_id']
-                ,   'num'      => $itemData['box_num']
-                );
-                $this->UserItem->save($values);    
-            } else {
+        foreach ($newItemIds as $newItemId) {
+            // 存在確認
+            $where = array(
+                        'user_id'  => $this->userId  
+                    ,   'item_id'  => $newItemId
+                    );
+            $userItem = $this->UserItem->getAllFind($where,$field, 'first');
 
-                $addNum = $userItem['num'] + $itemData['box_num'];
-        
-                $value = array('num' => $addNum);
-                $where = array(
-                            'id' => $userItem['id']
-                        );
-                $this->UserItem->updateAll($value, $where);
+            try {
+
+                if (empty($userItem)) {
+                    $values = array(
+                        'user_id'  => $this->userId  
+                    ,   'item_id'  => $newItemId
+                    ,   'num'      => $itemData['box_num']
+                    );
+                    $this->UserItem->save($values);    
+                } else {
+
+                    $addNum = $userItem['num'] + $itemData['box_num'];
+            
+                    $value = array(
+                                 'num'      => $addNum
+                             ,   'modified' => NOW_DATE_DB
+                             );
+                    $where = array(
+                                'id' => $userItem['id']
+                            );
+                    $this->UserItem->updateAll($value, $where);
+                }
+
+
+            } catch (AppException $e) { 
+                $this->UserItem->rollback(); 
+                $this->log($e->errmes);
+                $this->rd('Errors', 'index', array('error'=> 2)); 
+            } 
+        }
+
+        // 初回限定アイテム
+        if (FIRST_ITEM_ID == $itemId) {
+            $where = array(
+                'user_id' => $this->userId 
+            );
+            $ret = $this->UserFirstItem->getAllFind($where);
+            if (!empty($ret)) {
+                // 不正
+                $this->UserItem->rollback(); 
+                $this->log(__FILE__.__LINE__.':userId;'.$this->userId);
+                $this->rd('Errors', 'index', array('error'=> 2)); 
             }
 
-            // endFlg
             $value = array(
-                'id' => $latestData['id']
-            ,   'end_flg' => 1
+                'user_id' => $this->userId
             );
-            $this->PaymentLog->save($value);
+            $this->UserFirstItem->save($value);
+        }
 
-        } catch (AppException $e) { 
-            $this->UserParam->rollback(); 
-            $this->log($e->errmes);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
-        } 
+        // endFlg
+        $value = array(
+            'id' => $latestData['id']
+        ,   'end_flg' => 1
+        );
+        $this->PaymentLog->save($value);
+
         $this->UserItem->commit();
     }
 
@@ -220,8 +259,9 @@ class ItemsController extends ApiController {
         $where = array('item_id' => $itemData['itemId']);
         $field = array();
         $data = $this->Item->getAllFind($where, $field, 'first');
-
+$this->log($data); 
         $itemGroup = $this->ItemGroup->getAllFind($where , $field, 'first');
+$this->log($itemGroup); 
         if (!empty($itemGroup['item_base_id'])) {
             $itemId = $itemGroup['item_base_id'];
         } else {
@@ -232,6 +272,7 @@ class ItemsController extends ApiController {
                      'user_id' => $this->userId
                  ,   'item_id' => $itemId
                  );
+$this->log($where); 
         $userItem = $this->UserItem->getAllFind($where, $field, 'first');
         if (empty($userItem['num'])) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);

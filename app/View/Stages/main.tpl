@@ -72,11 +72,20 @@ $(function () {
         <div id="progQuestExp" class="progQuestExp">
         </div>
     </div>
-    <div class="stageItemEffect">
-        <{if !empty($effectText)}>
-            <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;">></div>
-        <{/if}>
-    </div>
+
+    <{if !empty($boss)}> 
+        <div class="stageItemEffectBoss">
+            <{if !empty($effectText)}>
+                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;">></div>
+            <{/if}>
+        </div>
+    <{else}>
+        <div class="stageItemEffect">
+            <{if !empty($effectText)}>
+                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;">></div>
+            <{/if}>
+        </div>
+    <{/if}>
 
     <div id="lotResultQuest" class="lotResultQuest">
     </div>
