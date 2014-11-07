@@ -31,6 +31,7 @@ body {
 }
 
 
+
 a {
 	color: #fff;
 	text-decoration: underline;
@@ -1098,6 +1099,24 @@ display: block;
     left: 125px;
     font-size: 25px;
 }
+.tutoStartItemStr {
+    text-align: center;
+    color:#FF0000;
+    font-size: 24px;
+}
+.tutoStartItemTextArea {
+    position: relative;
+    text-align: center;
+    top: 10px;
+    height: 150px;
+}
+.tutoStartItemTextStr {
+    position: absolute;
+    text-align: center;
+    font-size: 22px;
+    top: 10px;
+    left: 80px;
+}
 
 
 /** ガイド */
@@ -1417,5 +1436,16 @@ input[type=checkbox] {
 
 
 
-
-
+/** ヘルプページ */
+.cardh {
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #7B68EE;
+}
+.param {
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #7B68EE;
+}

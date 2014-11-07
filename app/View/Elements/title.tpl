@@ -28,6 +28,10 @@
         <div class="strTitleGacha" >
            ガチャ 
         </div>
+    <{elseif 'StaticPages' == $ctl}> 
+        <div class="strTitleGacha" >
+           ヘルプ 
+        </div>
     <{elseif 'Items' == $ctl}> 
         <div class="strTitleSynth" >
            ショップ

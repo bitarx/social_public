@@ -38,9 +38,10 @@ $(function () {
         <div id="progQuestExp" class="progQuestExp">
         </div>
     </div>
-
+<{*
     <div id="lotResultQuest" class="lotResultQuest">
     </div>
+*}>
     <div id="lotResultDataQuest" class="lotResultDataQuest">
     </div>
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">

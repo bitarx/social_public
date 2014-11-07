@@ -33,14 +33,12 @@ class TutorialsController extends ApiController {
      * @return void
      */
     private function _routeTutorial() {
-$this->log('aaa'); 
 
         // チュートリアル終了判定
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
         $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
         if (!empty($row['end_flg'])) {
-$this->log('bbb'); 
             return $this->rd('SnsUsers', 'index');
         }
 
@@ -50,13 +48,11 @@ $this->log('bbb');
         $where = array('tutorial_id' => $row['tutorial_id']); 
         $tutorial_next = $this->Tutorial->field('tutorial_next', $where);
         if ($current != $row['tutorial_id']) {
-$this->log('ccc'); 
             if ($current != $tutorial_next) {
                 return $this->rd('Tutorials', self::$actionPref . $row['tutorial_id'] );
             }
         }
 
-$this->log('ddd'); 
         // データ格納
         $this->row = $this->Tutorial->getMstData($current);
     }
@@ -973,6 +969,26 @@ $this->log('ddd');
                 throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
             }
 
+            /********************************************** 
+            * 初期カードとデッキの登録
+            ***********************************************/ 
+            // カードデータ取得
+            $list = $this->Card->getStartSpecialCardList();
+
+            // 初回カード振込確認
+            $where = array(
+                'UserCard.user_id' => $this->userId
+            ,   'UserCard.card_id' => $list[0]['card_id'] 
+            ); 
+            $userCard = $this->UserCard->field('user_card_id', $where);
+
+            // 未振込であれば振込処理
+            if (!$userCard) {
+
+                // カード登録
+                $this->UserCard->registStartCard($this->userId, $list);
+            }
+
         } catch (AppException $e) {
 
             $this->User->rollback();
@@ -1107,6 +1123,18 @@ $this->log('ddd');
                        ));
             }
             $this->User->commit();
+
+            // キャラのセリフ抽選
+            $deckList = $this->UserDeck->getUserDeckData($this->userId);
+            $list = $deckList['UserDeckCard'];
+            shuffle($list);
+
+            $row = $list[0];
+
+            $cardData = $this->Card->getCardData($row['UserCard']['card_id']);
+            $data['name'] = $cardData['card_mes'];
+            $data['target']  = $row['UserCard']['card_id'];
+
 
             $data['act'] = 100 - $cnt;
             $data['progress'] = $cnt;

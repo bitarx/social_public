@@ -799,7 +799,7 @@ class StagesController extends ApiController {
                 ,   'stage_id' => $data['stage_id']    // ステージID
                 ,   'name'     => $targetData['name']  // 入手物の名前
                 ,   'effect'   => $effect              // アイテム効果による確率変動(3:カードup 4:ゴールドup)
-               ,   'effectSecond' => $effectSecond    // アイテム効果残り秒
+                ,   'effectSecond' => $effectSecond    // アイテム効果残り秒
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 

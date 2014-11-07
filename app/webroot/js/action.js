@@ -141,7 +141,7 @@ function dispRotResultQuest(data)
        default:
            image = '<div class="guide">';
            image += '<div class="guideImg">';
-           image +=     '<img src="' + FILEOUT_URL + '?size=s&dir=card&target=' + data.target + '" width="160px">'; 
+           image +=     '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" width="160px">'; 
            image += '</div>';
            image += '<div class="stageFukidashi">';
            image += '<div class="guideFukiMiddle">';

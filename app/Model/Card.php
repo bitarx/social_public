@@ -12,6 +12,9 @@ class Card extends AppModel {
     // 初期配布カードID
     public $startCardIds = array( 13, 37, 43, 46, 55  );
 
+    // 初期特典配布カードID
+    public $startSpecialCardIds = array( 64, 65, 66 );
+
 /**
  * Primary key field
  *
@@ -218,6 +221,21 @@ class Card extends AppModel {
      public function getStartCardList() {
 
          $where = array('card_id' => $this->startCardIds);
+         $order = array('card_id ASC');
+         $list = $this->getAllFind($where, array(), 'all', $order);
+
+         return $list;
+     }
+
+    /**
+     * 初期特典カードデータ取得
+     *
+     * @author imanishi
+     * @return array 指定レコード
+     */
+     public function getStartSpecialCardList() {
+
+         $where = array('card_id' => $this->startSpecialCardIds);
          $order = array('card_id ASC');
          $list = $this->getAllFind($where, array(), 'all', $order);
 
