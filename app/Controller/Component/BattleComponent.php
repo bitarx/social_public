@@ -212,12 +212,8 @@ class BattleComponent extends Component {
 
         // 自分をアップ
         if($skillData['updown'] == 1 && $skillData['target'] == 1) {
-   $this->log('upup'); 
-   $this->log($selfCards); 
-   $this->log($selfCards[$key]['UserCard'][$eff]); 
             $up = $selfCards[$key]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
             $selfCards[$key]['UserCard'][$eff] += floor($up);
-   $this->log($selfCards[$key]['UserCard'][$eff]); 
 
             if ($kind == 'enemy') {
                 $logSkill[$key]['type'] = 5;
@@ -251,17 +247,14 @@ class BattleComponent extends Component {
             if ($kind == 'enemy') {
                 $logSkill[$key]['type'] = 5;
             } else {
-                $logSkill[$key]['type'] = 3;
+                $logSkill[$key]['type'] = 2;
             }
         }
         // 相手全体をダウン
          elseif ($skillData['updown'] == 2 && $skillData['target'] == 4) 
         {
             foreach ($targetCards as $no => $val) {
-     $this->log($eff); 
-     $this->log($targetCards[$no]['UserCard'][$eff]); 
                 $down = $targetCards[$no]['UserCard'][$eff] *  ($skillData['percent'] / 100); 
-     $this->log($down); 
                 $targetCards[$no]['UserCard'][$eff] -= floor($down);
             }
 

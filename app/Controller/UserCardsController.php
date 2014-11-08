@@ -47,10 +47,22 @@ class UserCardsController extends ApiController {
             $userBaseCard['user_card_id'] = 0;
         }
 
+        // デッキカード
+        $deckList = $this->UserDeckCard->getUserDeckData($this->userId);
+        $userDeckCards = array();
+        foreach ($deckList as $val) {
+            if (!empty($val['user_card_id'])) $userDeckCards[] = $val['user_card_id'];
+        }
+
+        $notIn = array();
+        if (0 < count($userDeckCards)) {
+            $notIn = array('user_card_id' => $userDeckCards); 
+        }
+        $this->log($notIn); 
+
         // 所有カード
         $pageAll = 0;
-        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll);
-
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
@@ -150,6 +162,13 @@ class UserCardsController extends ApiController {
         $targetData = $this->UserCard->getUserCardById($userCardId);
         // 素材が存在しなければ不正
         if (!$targetData) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => 1)); 
+        }
+
+        // デッキに存在するものは素材に使えない
+        $isDeck = $this->UserDeckCard->isDeck($userCardId);
+        if (!$isDeck) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
             $this->rd('errors', 'index', array('error' => 1)); 
         }
@@ -268,7 +287,8 @@ class UserCardsController extends ApiController {
         $targetData = array();
         foreach ($userCardIds as $key => $userCardId) {
             $tmp = $this->UserCard->getUserCardById($userCardId);
-            if (!empty($tmp)) {
+            $isDeck = $this->UserDeckCard->isDeck($userCardId);
+            if (!empty($tmp) && empty($isDeck)) {
                 $targetList[$key] = $tmp;
                 $i = $key + 1;
                 $targetData['target_' . $i] = $targetList[$key]['card_id'];
@@ -402,11 +422,14 @@ class UserCardsController extends ApiController {
             $this->rd('UserCards', 'index', array('error' => 1));
         }
 
+        // ベースカード情報
+        $cardInfo = $this->Card->getCardData($baseCard);
+
         $sacrificeList = json_encode($list);
         $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
         $endExp = $upExp + $startExp;
 
-        $maxExp = $baseCard['level'] * 100;
+        $maxExp = $cardInfo['card_level'] * 100;
 
         // レベルアップ演出回数を抑える
         if ($maxExp < $endExp) {

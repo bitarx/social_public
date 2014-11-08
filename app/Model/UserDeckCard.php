@@ -274,4 +274,19 @@ class UserDeckCard extends AppModel {
 
         return $ret;
     }
+
+    /**
+     * 対象のカードがデッキに存在するか確認 
+     *
+     * @param int $userCardId
+     * @return bool 存在すればtrue
+     */
+    public function isDeck($userCardId) {
+
+        $where = array('user_card_id' => $userCardId);
+        $field = array('user_deck_id');
+        $ret = $this->getAllFind($where, $field, 'first');
+        $return = empty($ret) ? false : true;
+        return $return;
+    }
 }

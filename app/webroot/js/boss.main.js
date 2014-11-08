@@ -121,13 +121,15 @@ boss.main = ( function() {
     var len = currentTurnData.enemyHP.length;
     var all = 0;
     for (var i = 0; i < len; i++) {
-        if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
+        if( undefined != _paramater.getParam( "playerData" )[ i ] 
+            && _paramater.getParam( "playerData" )[ i ].current > 0 ) {
             all++;
         }
     }
     for( var i = 0; i < len; i++ ) {
 
-      if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
+      if( undefined != _paramater.getParam( "playerData" )[ i ] 
+          && _paramater.getParam( "playerData" )[ i ].current > 0 ) {
 
         setTimeout( function( i ){
           //プレイヤーキャラクター攻撃
@@ -166,14 +168,16 @@ boss.main = ( function() {
     for( var i = 0; i < len; i++ ) {
       var playerHP = currentTurnData.playerHP[ i ];
 
-      var playerDamage = _paramater.getParam( "playerData" )[ i ].current - playerHP;
-      if( playerDamage >= 0 ) {
-        if( playerHP != null ) {
-          if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
-            _view.playerDamage( i, _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, playerHP, playerDamage );
-            _paramater.getParam( "playerData" )[ i ].current = playerHP;
+      if ( undefined != _paramater.getParam( "playerData" )[ i ] ) {
+          var playerDamage = _paramater.getParam( "playerData" )[ i ].current - playerHP;
+          if( playerDamage >= 0 ) {
+            if( playerHP != null ) {
+              if( _paramater.getParam( "playerData" )[ i ].current > 0 ) {
+                _view.playerDamage( i, _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, playerHP, playerDamage );
+                _paramater.getParam( "playerData" )[ i ].current = playerHP;
+              }
+            }
           }
-        }
       }
     }
     _endTurn();

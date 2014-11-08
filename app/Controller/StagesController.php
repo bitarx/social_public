@@ -185,9 +185,15 @@ class StagesController extends ApiController {
 
         $stageId = $this->params['stage_id'];
 
+        $noCard = 0;
+        // デッキにカードが１枚もない
+        if (!empty($this->params['nocard'])) $noCard = 1;
+
         $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
         $enemyData = $this->Enemy->getEnemyData($userStageData['enemy_id']);
         $this->set('data', $enemyData);
+        $this->set('noCard', $noCard);
+        $this->set('stageId', $stageId);
 
     }
 
@@ -200,6 +206,7 @@ class StagesController extends ApiController {
     public function act() {
 
         $targetId = $this->params['target_id'];
+        $stageId  = $this->params['stage_id'];
 
         $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
         // ブラウザバックなど不正操作
@@ -226,6 +233,18 @@ class StagesController extends ApiController {
         }
 
         $userCards = $userCards['UserDeckCard'];
+
+        foreach ($userCards as $key => $val) {
+            if (empty($val['UserCard'])) unset($userCards[$key]); 
+        }
+
+        // デッキにカードがない
+        if (empty($userCards['UserDeckCard'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('Stages', 'conf', array('nocard' => 1, 'stage_id'=> $stageId));
+        }
+$this->log('userCards'); 
+$this->log($userCards); 
 
         $battleLog = array();
 
@@ -288,8 +307,6 @@ class StagesController extends ApiController {
 
         // 防御側(敵)のスキル発動
         $battleLog['enemy_skill'] = array();
- $this->log('targetCards'); 
- $this->log($targetCards); 
         foreach ($targetCards as $key => $val) {
             $selfCard = $val['UserCard'];
             if (!empty($selfCard['skill_level'])) {
@@ -450,6 +467,9 @@ class StagesController extends ApiController {
         $enemySkillData = array();
         if (!empty($data['log']['enemy_skill'])) 
             $enemySkillData = json_encode($data['log']['enemy_skill'][0]);
+
+$this->log('###########################'); 
+$this->log($turn); 
 
         $turn     = json_encode($turn);
         $player   = json_encode($player);
@@ -691,6 +711,9 @@ class StagesController extends ApiController {
                     default:
                         $deckList = $this->UserDeck->getUserDeckData($this->userId);
                         $list = $deckList['UserDeckCard'];
+                        foreach ($list as $key => $val) {
+                            if (empty($val['UserCard'])) unset($list[$key]);
+                        }
                         shuffle($list);
 
                         $row = $list[0];
