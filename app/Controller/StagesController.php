@@ -21,9 +21,9 @@ class StagesController extends ApiController {
      *　定数
      *
      */
-    const STAGE_PROG_NORMAL = 2; // 通常進行
+    const STAGE_PROG_NORMAL = 5; // 通常進行
 
-    const STAGE_PROG_HIGHT  = 5; // 全力進行
+    const STAGE_PROG_HIGHT  = 15; // 全力進行
 
 
     /**
@@ -288,22 +288,24 @@ class StagesController extends ApiController {
 
         // 防御側(敵)のスキル発動
         $battleLog['enemy_skill'] = array();
+ $this->log('targetCards'); 
+ $this->log($targetCards); 
         foreach ($targetCards as $key => $val) {
-            $userCard = $val['UserCard'];
-            if (!empty($userCard['skill_level'])) {
+            $selfCard = $val['UserCard'];
+            if (!empty($selfCard['skill_level'])) {
                 $hit = mt_rand(1, 100);
                 // 当選
-                if ($hit <= $userCard['skill_level']) {
+                if ($hit <= $selfCard['skill_level']) {
                     // カードのスキル取得 
                     $where = array(
-                                 'skill_id' => $userCard['skill_id']
+                                 'skill_id' => $selfCard['skill_id']
                              );
                     $skillData = $this->Skill->getAllFind($where, array(), 'first');
 
                     $battleLog['skill']['def'][] = $skillData;
 
                     // スキル実行
-                    $this->Battle->doSkill($skillData, $key, $userCards, $targetCards, $battleLog['enemy_skill'], $kind = 'enemy');
+                    $this->Battle->doSkill($skillData, $key, $targetCards, $userCards, $battleLog['enemy_skill'], $kind = 'enemy');
                 } else {
                     $battleLog['enemy_skill'][$key] = null;
                 }
@@ -409,7 +411,7 @@ class StagesController extends ApiController {
         foreach ($data['log'] as $key => $value) {
             if ($key === 'card_id_' . $cardNo && !empty($value)) {
                 $player[] = array(
-                               'img'     => BASE_URL . 'File/outimage?size=s&dir=card&target=' . $value 
+                               'img'     => IMG_URL . 'card/card_s_' . $value . '.jpg'
                            ,   'max'     => $data['log']['card_id_'. $cardNo . '_max'] 
                            ,   'current' => $data['log']['card_id_' . $cardNo . '_cur'] 
                            );

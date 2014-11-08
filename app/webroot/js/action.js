@@ -106,7 +106,7 @@ function dispRotResultQuest(data)
                image += '<img src="' + IMG_URL + 'tutorial/card_s_' + data.target + '.jpg" width="160px">'; 
                str = data.name + 'が仲間に加わった！';
            } else {
-               image += '<img src="' + FILEOUT_URL + '?size=s&dir=card&target=' + data.target + '" width="160px">'; 
+               image += '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" width="160px">'; 
                str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '">' + data.name + 'が仲間に加わった！</a>';
            }
            image += '</div></div>';
@@ -164,8 +164,10 @@ function dispRotResultQuest(data)
            break; 
     } 
     // クエストカード
-    $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
-    $('#lotResultQuest').show(); 
+    if ( "99" != kind ) {
+        $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
+        $('#lotResultQuest').show(); 
+    }
 
     // 結果イメージ等
     $('#lotResultDataQuest').html(image);
