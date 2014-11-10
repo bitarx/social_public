@@ -20,8 +20,8 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
 
 <title><{$gameTitle}></title>
+<{if $carrer == 2}>
 <script type="text/javascript">
-
 (function($) {
   $(function() {
     $("#slider").simplyScroll({
@@ -35,7 +35,7 @@
   });
 })(jQuery);
 </script>
-
+<{/if}>
 <script type="text/javascript">
   window.addEventListener("load", function(e) {
     var target = (parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined));
