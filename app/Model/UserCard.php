@@ -399,5 +399,23 @@ class UserCard extends AppModel {
         return $data;
     }
 
+    /**
+     * 最大カード枚数に近いか判定
+     *
+     * @author imanishi
+     * @param int $userId
+     * return bool 近づいている場合はtrue
+     */
+    public function judgeMaxCardCnt($userId) {
+                // カード所持枚数
+        $cnt = $this->getUserCardCnt($userId );
+
+        $num = CARD_MAX_NUM - 10;
+
+        if ($num < $cnt) return true;
+
+        return false;
+    }
+
 
 }

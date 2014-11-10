@@ -51,7 +51,7 @@ var evolution = (function() {
   function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback ) {
 
     _canvas = document.getElementById(canvasID);
-    _canvas.style.width = window.innerWidth + 'px';
+    _canvas.style.width = window.innerWidth / 2 + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);
@@ -62,9 +62,9 @@ var evolution = (function() {
     var bg = new Image();
     bg.onload = function() {
       _bm.bg = new createjs.Bitmap( bg );
-      _bm.bg.regX = _bm.bg.image.width / 2; _bm.bg.regY = _bm.bg.image.height / 2;
+      _bm.bg.regX = _bm.bg.image.width / 2; _bm.bg.regY = _bm.bg.image.height / 2; 
       _bm.bg.x = 0;
-      _bm.bg.y = -20;
+      _bm.bg.y = 0;
       _stage.addChild( _bm.bg );
       _stage.update();
       bg.onload = null;
@@ -105,68 +105,12 @@ var evolution = (function() {
 
 
   function _animationStep01() {
-//    createjs.Tween.get( _bm.card1 ).wait(450).to( {y: 0}, 500, createjs.Ease.backOut );
-//    createjs.Tween.get( _bm.card2 ).wait(600).to( {y: 0}, 500, createjs.Ease.backOut );
-
-//    createjs.Tween.get( _bm.card1GrowBM ).wait(600).to( { alpha: 0.8 }, 600, createjs.Ease.backIn );
-//    createjs.Tween.get( _bm.card2GrowBM ).wait(600).to( { alpha: 0.8 }, 600, createjs.Ease.backIn );
-/*
-    createjs.Tween.get( _shape.card1GlossLine ).wait(900).to( { x: 800 }, 400, createjs.Ease.liner );
-    createjs.Tween.get( _shape.card1GlossLine ).wait(900).to( { alpha: 0.2 }, 400, createjs.Ease.liner );
-    createjs.Tween.get( _shape.card2GlossLine ).wait(900).to( { x: 800 }, 400, createjs.Ease.liner );
-    createjs.Tween.get( _shape.card2GlossLine ).wait(900).to( { alpha: 0.2 }, 400, createjs.Ease.liner );
-
-    var d = 0;
-    var d2 = 0;
-    var card1SwingIntervalID;
-    setTimeout( function(){
-      card1SwingIntervalID = setInterval( function() {
-        _bm.card1.y = Math.sin( d ) * 10;
-        d += 0.1;
-      }, 18 );
-    }, 900 );
-
-    var card2SwingIntervalID
-    setTimeout( function(){
-      card2SwingIntervalID = setInterval( function() {
-        _bm.card2.y = Math.sin( d2 ) * 10;
-        d2 += 0.1;
-      }, 18 );
-    }, 1050 );
-
-    setTimeout( function(){
-      clearInterval( card1SwingIntervalID );
-      clearInterval( card2SwingIntervalID );
-      createjs.Tween.get( _bm.card1 ).to( { y: 0 }, 500, createjs.Ease.backOut );
-      createjs.Tween.get( _bm.card2 ).to( { y: 0 }, 500, createjs.Ease.backOut );
-    }, 2400);
-*/
     setTimeout( function(){
       _animationStep02();
     }, 300);
   }
 
   function _animationStep02() {
-/*
-    createjs.Tween.get( _bm.card1 ).to( { x: -(_stage.canvas.width / 2) + 50 }, 800, createjs.Ease.sineIn );
-    createjs.Tween.get( _bm.card2 ).to( { x: (_stage.canvas.width / 2) - 50 }, 800, createjs.Ease.sineIn );
-
-    setTimeout( function(){
-      createjs.Tween.get( _bm.card1 ).to( { x: -((_stage.canvas.width / 2) - 200) }, 300, createjs.Ease.backIn );
-      createjs.Tween.get( _bm.card2 ).to( { x: (_stage.canvas.width / 2) - 200 }, 300, createjs.Ease.backIn );
-    }, 800 );
-
-    setTimeout( function(){
-      createjs.Tween.get( _bm.card1).to( { x: 0 }, 2000, createjs.Ease.sineOut );
-      createjs.Tween.get( _bm.card2).to( { x: 0 }, 2000, createjs.Ease.sineOut );
-    }, 1100 );
-
-    setTimeout( function(){
-      _setmask();
-      _setGlowLine();
-    }, 1110 );
-
-*/
     var brightness;
     setTimeout( function(){
       brightness = _brightness();

@@ -102,7 +102,7 @@ class AppController extends Controller {
     protected $_costDef     = 10;    // 初期防御デッキコスト
     protected $_level       = 1;     // 初期レベル
 
-    public final function beforeFilter() { 
+    public function beforeFilter() { 
 
 
         $this->params =  $this->request->query;

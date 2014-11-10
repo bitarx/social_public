@@ -106,7 +106,7 @@ class UserGachaLog extends AppModel {
 
         $where = array('user_id' => $userId);  
         $order = array('UserGachaLog.created DESC');
-        $list = $this->getAllFind($where, $fields = array(), 'all', $order, $limit, $recursive); 
+        $list = $this->getAllFind($where, $fields = array(), 'all', $order, $limit); 
         return $list;
     } 
 }

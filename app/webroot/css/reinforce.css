@@ -4,3 +4,7 @@ body {
   background-image: url('../img/synth_up_bg.png');
   overflow: hidden;
 }
+#mainCanvas {
+  background-image: url('../img/synth_up_bg.png');
+  overflow: hidden;
+}

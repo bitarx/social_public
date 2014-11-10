@@ -1,7 +1,11 @@
 <div class="pagingNum">
 
-        <{section name=pageNum start=1 loop=$pageAll+1 step=1}>
-        <div class="btnPagingNum">
+    <{section name=pageNum start=1 loop=$pageAll+1 step=1}>
+        <{if $smarty.section.pageNum.index <= 5}>
+            <div class="btnPagingNum">
+        <{else}>
+            <div class="btnPagingNum2">
+        <{/if}>
           <{if $page == $smarty.section.pageNum.index}>
             <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" height="30px">
 
@@ -14,6 +18,6 @@
           <{/if}>
           </div>
         </div>
-        <{/section}>
+    <{/section}>
 
 </div>

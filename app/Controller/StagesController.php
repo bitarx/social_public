@@ -25,6 +25,16 @@ class StagesController extends ApiController {
 
     const STAGE_PROG_HIGHT  = 15; // 全力進行
 
+    public function beforeFilter(){
+        parent::beforeFilter();
+
+        // カード所持数確認
+        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
+        if ($ret) {
+            $this->rd('Errors', 'index', array('error' => 'max'));
+        }
+    }
+
 
     /**
      * ステージ一覧
@@ -239,12 +249,10 @@ class StagesController extends ApiController {
         }
 
         // デッキにカードがない
-        if (empty($userCards['UserDeckCard'])) {
+        if (empty($userCards)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('Stages', 'conf', array('nocard' => 1, 'stage_id'=> $stageId));
         }
-$this->log('userCards'); 
-$this->log($userCards); 
 
         $battleLog = array();
 
@@ -714,13 +722,19 @@ $this->log($turn);
                         foreach ($list as $key => $val) {
                             if (empty($val['UserCard'])) unset($list[$key]);
                         }
-                        shuffle($list);
 
-                        $row = $list[0];
+                        if (!empty($list)) {
+                            shuffle($list);
 
-                        $cardData = $this->Card->getCardData($row['UserCard']['card_id']);
-                        $targetData['name'] = $cardData['card_mes'];
-                        $lotData['target']  = $row['UserCard']['card_id'];
+                            $row = $list[0];
+
+                            $cardData = $this->Card->getCardData($row['UserCard']['card_id']);
+                            $targetData['name'] = $cardData['card_mes'];
+                            $lotData['target']  = $row['UserCard']['card_id'];
+                        } else {
+                            $targetData['name'] = 'デッキにカードをセットしないとボスと戦うことはできません！';
+                            $lotData['target']  = 1003;
+                        }
                         
                 }
 

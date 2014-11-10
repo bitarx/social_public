@@ -49,16 +49,17 @@ class UserCardsController extends ApiController {
 
         // デッキカード
         $deckList = $this->UserDeckCard->getUserDeckData($this->userId);
-        $userDeckCards = array();
+        $notIn = array();
         foreach ($deckList as $val) {
-            if (!empty($val['user_card_id'])) $userDeckCards[] = $val['user_card_id'];
+            if (!empty($val['user_card_id'])) $notIn[] = $val['user_card_id'];
         }
 
-        $notIn = array();
-        if (0 < count($userDeckCards)) {
-            $notIn = array('user_card_id' => $userDeckCards); 
+        if (0 < count($notIn)) {
+            $notIn = array('user_card_id' => $notIn); 
         }
-        $this->log($notIn); 
+        if (!empty($userBaseCard['user_card_id'])) {
+            $notIn['user_card_id'][] = $userBaseCard['user_card_id'];
+        }
 
         // 所有カード
         $pageAll = 0;

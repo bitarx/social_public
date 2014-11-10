@@ -51,7 +51,7 @@ var evolution = (function() {
   function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback ) {
 
     _canvas = document.getElementById(canvasID);
-    _canvas.style.width = window.innerWidth + 'px';
+    _canvas.style.width = window.innerWidth / 2 + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);
@@ -64,7 +64,7 @@ var evolution = (function() {
       _bm.bg = new createjs.Bitmap( bg );
       _bm.bg.regX = _bm.bg.image.width / 2; _bm.bg.regY = _bm.bg.image.height / 2;
       _bm.bg.x = 0;
-      _bm.bg.y = -20;
+      _bm.bg.y = 0;
       _stage.addChild( _bm.bg );
       _stage.update();
       bg.onload = null;
@@ -107,7 +107,7 @@ var evolution = (function() {
   function _animationStep01() {
     setTimeout( function(){
       _animationStep02();
-    }, 100);
+    }, 300);
   }
 
   function _animationStep02() {
@@ -674,7 +674,8 @@ var evolution = (function() {
     return shape;
   }
 
-  function _getMask( w, h, x = 0, y = -400 ) {
+  // ここが問題のようだ
+  function _getMask( w, h, x , y ) {
     var shape = new createjs.Shape();
     var g = shape.graphics;
     g.beginFill("#ff0000");

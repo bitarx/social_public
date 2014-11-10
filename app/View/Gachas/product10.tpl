@@ -2,15 +2,15 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>10連ガチャ</title>
+        <title>ガチャ</title>
         <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10.css">
     </head>
     <body>
-        <canvas id="mainCanvas" height="832" width="640"></canvas>
+        <canvas id="mainCanvas" height="800" width="640"></canvas>
     </body>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/tweenjs-0.5.1.min.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/gacha10.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/gachajyu.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
 
     <script type="text/javascript">

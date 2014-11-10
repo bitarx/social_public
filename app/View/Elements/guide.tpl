@@ -17,9 +17,10 @@
            <img src="<{$smarty.const.IMG_URL}>fukidashi_under.png" width="420px">
         </div>
         <div class="guideFukiText">
-        <{if empty($tutoEnd)}>
+        <{if empty($tutoEnd) && empty($mes)}>
            <{$row['tutorial_words']}><br />
         <{else}>
+           <{$mes}><br />
         <{/if}>
         </div>
     </div>

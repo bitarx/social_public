@@ -597,11 +597,18 @@ input.btn_submit {
     font-size: 24px;
     height:80px;
     top:35px;
-    left:150px;
+    left:120px;
 }
 .btnPagingNum {
     position:relative;
     float:left;
+    width:80px;
+}
+.btnPagingNum2 {
+    position:relative;
+    float:left;
+    left: -400px;
+    top:50px;
     width:80px;
 }
 .strPagingNum {

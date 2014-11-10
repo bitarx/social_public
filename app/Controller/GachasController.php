@@ -23,6 +23,7 @@ class GachasController extends ApiController {
     // 無課金ガチャID
     public $gachaMoney = array( GACHA_MONEY_ID );
 
+
     /**
      * index method
      *
@@ -30,6 +31,12 @@ class GachasController extends ApiController {
      * @return json
      */
 	public function index() {
+
+        // カード所持数確認
+        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
+        if ($ret) {
+            $this->rd('Errors', 'index', array('error' => 'max'));
+        }
 
         $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
 
@@ -46,6 +53,12 @@ class GachasController extends ApiController {
      * @return void
      */
     public function act() {
+
+        // カード所持数確認
+        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
+        if ($ret) {
+            $this->rd('Errors', 'index', array('error' => 'max'));
+        }
 
         $gachaId = $this->params['gacha_id'];
 
@@ -356,7 +369,10 @@ class GachasController extends ApiController {
 
         // 合成後カード
         $afterCard = IMG_URL . 'gacha/card_s.png';
-
+$this->log('####################################'); 
+$this->log($baseCard); 
+$this->log($target); 
+$this->log($afterCard); 
         $this->set('product', $product);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
