@@ -1,6 +1,7 @@
 body {
     background-image: url('../img/tutorial/opening.png');
-    background-position:center top;
+    background-color:#000000;
+    background-position:left top;
     background-repeat:no-repeat;
     -moz-background-size:100% auto;
     background-size:100% auto;
@@ -10,7 +11,27 @@ body {
 }
 .slider {
     position: relative;
-    width:840px;
+    width:320px;
+    height:400px;
     top:0px;
     left:0px;
+}
+
+.btnStart {
+    position: relative;
+    top: 55px;
+    left: 35px;
+    height: 50px;
+}
+.strStart {
+    position: absolute;
+    top: 14px;
+    left: 85px;
+    font-size: 22px
+}
+.opening_text {
+    width:320px;
+}
+.btnStrongL {
+    width:275px;
 }

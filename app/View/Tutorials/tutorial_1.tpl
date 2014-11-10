@@ -42,8 +42,8 @@
 
     var btn = document.getElementById("startGameButton");
     btn.addEventListener("click", function(evt) {
-      var url          = "http://asns.jp/set_cookie_hills.php?oid=<{$ownerId}>&vid=<{$viewerId}>";
-      var callback_url = "http://asns.jp/Tutorials/tutorial_2";
+      var url          = "<{$smarty.const.BASE_URL}>set_cookie_hills.php?oid=<{$ownerId}>&vid=<{$viewerId}>";
+      var callback_url = "<{$smarty.const.BASE_URL}>Tutorials/tutorial_2";
       var params       = "url=" + encodeURIComponent(url) + "&callback_url=" + encodeURIComponent(callback_url); 
       target.postMessage("setCookie:" + params, '*');
     });

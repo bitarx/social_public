@@ -8,7 +8,7 @@
             <a href="<{$linkUser}>">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png" alt="強化進化へ" name="submit">
             <div class="strGacha">
-                マイページへ
+                マイページ
             </div>
             </a>
         </div>

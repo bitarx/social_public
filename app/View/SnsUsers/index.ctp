@@ -1,16 +1,16 @@
-<div class="snsUsers index">
+<div class="toppage">
 
     <img src="<{$smarty.const.IMG_URL}>tutorial/gametitle.png">
 
     <div class="topInfo">
         <div class="topLineUpper" >
-            <img src="<{$smarty.const.IMG_URL}>line_upper.png">
+            <img src="<{$smarty.const.IMG_URL}>line_upper.png" class="titleLine">
         </div>
         <div class="topLineStr" >
             お知らせ
         </div>
         <div class="topLineUnder" >
-            <img src="<{$smarty.const.IMG_URL}>line_under.png">
+            <img src="<{$smarty.const.IMG_URL}>line_under.png" class="titleLine">
         </div>
     </div>
     <div class="topInfoList">

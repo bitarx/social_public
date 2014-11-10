@@ -35,12 +35,10 @@
     <div style="height:15px;"></div>
     <h4 class="param">パラメータ</h4>
     <div class="param_sub">
-    <li><a href="/jquery/api/core/">Core</a></li>
-    <li><a href="/jquery/api/selectors/">Selectors</a></li>
-    <li><a href="/jquery/api/attributes/">Attributes</a></li>
-    <li><a href="/jquery/api/traversing/">Traversing</a></li>
-    <li><a href="/jquery/api/manipulation/">Manipulation</a></li>
-    <li><a href="/jquery/api/css/">CSS</a></li>
+        ▼<span style="color:#00FF7F">Lv</span><br />
+        ミッションで一定の経験値をためるとLvが上昇します。<br />
+        Lvがアップすると<span style="color:#FFA500">最大行動力</span>と<span style="color:#FFA500">デッキコスト</span>が上昇します。<br />
+        またLvアップ時には、<span style="color:#FFA500">行動力</span>が全回復します。
     </div>
 </div>
 <script><!--

@@ -208,13 +208,13 @@ div#contents{
 }
 .strTitleSynth {
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 42%;
     font-size: 30px;
 }
 .strTitleGacha {
     position: absolute;
-    top: 28%;
+    top: 18%;
     left: 45%;
     font-size: 30px;
 }
@@ -249,7 +249,7 @@ div#contents{
 .subTitleStr {
     position:absolute;
     text-align:center;
-    top:1px;
+    top:-2px;
     left:280px;
 }
 .subTitleMiddle {
@@ -260,7 +260,7 @@ div#contents{
 }
 .subTitleMiddleStr {
     position:absolute;
-    top:1px;
+    top:-2px;
     left:240px;
 }
 .subTitleUpper {
@@ -438,8 +438,14 @@ input.btn_submit {
 }
 .strChangeBase {
     position: absolute;
-    top: 14px;
+    top: 12px;
     left: 115px;
+    font-size: 24px;
+}
+.strCardView {
+    position: absolute;
+    top: 12px;
+    left: 135px;
     font-size: 24px;
 }
 
@@ -467,19 +473,19 @@ input.btn_submit {
 .strSelectCardSozai {
     position: absolute;
     width:200px;
-    top: 14px;
-    left:75px;
+    top: 12px;
+    left:78px;
     font-size: 22px;
 }
 .btnSelectSt {
     clear:both;
-    top: 0px;
+    top: 5px;
     left: 100px;
     position: relative;
 }
 .strSelectStComp {
     position: relative;
-    top: -50px;
+    top: -52px;
     left: 155px;
     font-size: 25px;
 }
@@ -558,9 +564,13 @@ input.btn_submit {
 .paging {
     position:relative;
     text-align:center;
-    font-size: 24px;
+    font-size: 26px;
     height:35px;
     top:10px;
+}
+.btnPaging {
+    width:54px;
+    height:32px;
 }
 .btnPagingPrev {
     position:relative;
@@ -570,8 +580,8 @@ input.btn_submit {
 }
 .strPagingPrev {
     position:absolute;
-    top:-2px;
-    left:10px;
+    top:-4px;
+    left:12px;
 }
 .strPaging {
     position:relative;
@@ -588,8 +598,8 @@ input.btn_submit {
 }
 .strPagingNext {
     position:absolute;
-    top:-2px;
-    left:10px;
+    top:-4px;
+    left:12px;
 }
 .pagingNum {
     position:relative;
@@ -630,8 +640,8 @@ input.btn_submit {
 }
 .btnSortUpdate {
     position: relative;
-    top: 20px;
-    left: 410px;
+    top: 30px;
+    left: 435px;
     height:80px;
 }
 .strSortUpdate {
@@ -775,15 +785,15 @@ input.btn_submit {
 /** 合成決定ボタン */
 .btnUpComp {
     position: relative;
-    top: 0px;
+    top: 5px;
+    height:95px;
     left: 180px;
 }
 .strUpComp {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 90px;
     font-size: 24px;
-
 }
 
 /** 強化進化選択 */
@@ -944,6 +954,8 @@ display: block;
     height:35px;
     color:#FF1493;
 }
+
+/** トップページ */
 
 
 /** マイページ */
@@ -1286,8 +1298,12 @@ display: block;
 }
 
 /** トップページ */
+.toppage {
+    width:600px
+}
 .topInfo {
     position: absolute;
+    width: 600px;
     top: 770px;
     left: 1px;
 }
@@ -1298,7 +1314,7 @@ display: block;
 }
 .topLineStr {
     position: absolute;
-    top: 30px;
+    top: 26px;
     left: 260px;
     width: 290px;
     font-size: 30px;
@@ -1312,6 +1328,7 @@ display: block;
     position: absolute;
     top: 880px;
     left: 30px;
+    width: 600px;
     font-size: 30px;
 }
 
@@ -1377,6 +1394,9 @@ display: block;
 
 
 /** その他共通 */
+.titleLine {
+    width:635px;
+}
 .strCommonTitle {
     position: absolute;
     top: 15px;

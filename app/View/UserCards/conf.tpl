@@ -39,7 +39,7 @@
         <div class="btnSelectSt">
             <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
             <div class="strSelectStComp">
-                合成する
+                進化合成！
             </div>
         </div>
     </a>
