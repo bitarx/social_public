@@ -1,3 +1,5 @@
+<div class="header">
+    <img src="<{$smarty.const.BASE_URL}>img/header_base.png" class="headerBar">
 <{if $tutoEnd == 1}>  
     <div class="btn_my">
         <a href="<{$linkUser}>"><img src="<{$smarty.const.BASE_URL}>img/btn_my_on.png"></a>
@@ -31,3 +33,4 @@
         <img src="<{$smarty.const.BASE_URL}>img/btn_menu_off.png">
     </div>
 <{/if}> 
+</div>

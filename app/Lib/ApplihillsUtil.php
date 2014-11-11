@@ -13,6 +13,11 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
   const SB_CONSUMER_SECRET = "54952402feba3e88d43f96859e6b25af";
   const SB_PUBKEY_FILENAME = "sb.public.crt";
 
+  const DEV_API_HOST        = "sb.app.appli-hills.com";
+  const DEV_CONSUMER_KEY    = "a706b39c5d02be7c";
+  const DEV_CONSUMER_SECRET = "d0612b87942bf3a1cd78944ab47294e7";
+  const DEV_PUBKEY_FILENAME = "sb.public.crt";
+
   protected $apiHost        = "";
   protected $consumerKey    = "";
   protected $consumerSecret = "";
@@ -28,6 +33,10 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
       $util->apiHost        = self::SB_API_HOST;
       $util->consumerKey    = self::SB_CONSUMER_KEY;
       $util->consumerSecret = self::SB_CONSUMER_SECRET;
+    } elseif (defined("DEV_IS_SANDBOX") && DEV_IS_SANDBOX) {
+      $util->apiHost        = self::DEV_API_HOST;
+      $util->consumerKey    = self::DEV_CONSUMER_KEY;
+      $util->consumerSecret = self::DEV_CONSUMER_SECRET;
     } else {
       $util->apiHost        = self::API_HOST;
       $util->consumerKey    = self::CONSUMER_KEY;
@@ -532,6 +541,8 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
   {
     if (defined("AH_IS_SANDBOX") && AH_IS_SANDBOX) {
       return file_get_contents($this->publicKeyDir . "/" . self::SB_PUBKEY_FILENAME);
+    } elseif (defined("DEV_IS_SANDBOX") && DEV_IS_SANDBOX) {
+      return file_get_contents($this->publicKeyDir . "/" . self::DEV_PUBKEY_FILENAME);
     } else {
       return file_get_contents($this->publicKeyDir . "/" . self::PUBKEY_FILENAME);
     }

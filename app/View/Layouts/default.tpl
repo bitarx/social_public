@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.5, user-scalable=yes">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <meta charset="UTF-8">
     <{if $carrer == 2}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
@@ -11,7 +11,7 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script src='<{$smarty.const.BASE_URL}>js/jquery.tabs.js'></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/config.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/<{$smarty.const.DOMAIN}>.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
@@ -19,11 +19,7 @@
 <title><{$gameTitle}></title>
 </head>
 <body>
-    <div id="contents">
-
-        <div class="header">
-            <img src="<{$smarty.const.BASE_URL}>img/header_base.png" class="headerBar">
-        </div>
+    <div class="contents">
 
         <{include file="../Elements/header_menu.tpl"}>   
 

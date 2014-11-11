@@ -3,5 +3,5 @@
     <ModulePrefs title="My Application">
       <Require feature="opensocial-0.9" />
     </ModulePrefs>
-    <Content view="touch" type="url" href="http://eres.xyz/index.php/Tutorials/tutorial_1" />
+    <Content view="touch" type="url" href="http://asns.jp/index.php/Tutorials/tutorial_1" />
   </Module>

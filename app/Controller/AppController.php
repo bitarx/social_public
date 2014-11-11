@@ -104,7 +104,6 @@ class AppController extends Controller {
 
     public function beforeFilter() { 
 
-
         $this->params =  $this->request->query;
 
         $this->carrer = $this->Common->judgeCarrer();

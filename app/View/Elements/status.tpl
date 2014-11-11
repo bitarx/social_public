@@ -24,6 +24,4 @@
     <div class="cardCnt">
         カード：<span style="color:#ffffff"><{$data.card_cnt}> / <{$smarty.const.CARD_MAX_NUM }></span>
     </div>
-
-
 </div>

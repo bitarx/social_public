@@ -26,8 +26,7 @@ body {
     zoom:50%;
     background-image: url('../img/bg.png');
 	color: #fff;
-    width:500px;
-    height:960px;
+    text-align: center;  
 }
 
 
@@ -43,15 +42,14 @@ a:hover {
 }
 
 /** Layout **/
-div#contents{
+.contents{
     overflow:hidden;
     width:640px;
-    font-size:24px;
+    font-size:40px;
+    margin: 0 auto;  
+    text-align: left;
 }
 
-#header{
-	padding: 10px 20px;
-}
 .header{
     width:640px;
     position: relative;
@@ -208,34 +206,28 @@ div#contents{
 }
 .strTitleSynth {
     position: absolute;
-    top: 18%;
+    top: 35%;
     left: 42%;
-    font-size: 30px;
 }
 .strTitleGacha {
     position: absolute;
-    top: 18%;
+    top: 35%;
     left: 45%;
-    font-size: 30px;
 }
 .strTitleBaseCard {
     position: absolute;
-    top: 15px;
-    left: 210px;
-    width:280px;
-    font-size: 30px;
+    top: 35%;
+    left: 35%;
 }
 .strTitleDeckCard {
     position: absolute;
-    top: 15px;
-    left: 245px;
-    font-size: 30px;
+    top: 35%;
+    left: 40%;
 }
 .strTitleBaseCardConf {
     position: absolute;
     top: 20px;
     left: 240px;
-    font-size: 30px;
 }
 
 
@@ -311,7 +303,6 @@ div#contents{
 /** カード */
 .card {
     top:8px;
-    font-size: 24px;
     color: #FFA500;
     position: relative;
 }
@@ -328,61 +319,51 @@ div#contents{
 .cardAtk {
     left: 180px;
     top: 42px;
-    font-size: 24px;
     position: absolute;
 }
 .cardDef {
     left: 350px;
     top: 42px;
-    font-size: 24px;
     position: absolute;
 }
 .cardExp {
     top: 74px;
     left: 180px;
-    font-size: 24px;
     position: absolute;
 }
 .cardExpInt {
     top: 80px;
     left: 350px;
-    font-size: 20px;
     position: absolute;
 }
 .cardLv {
     top: 107px;
     left: 180px;
-    font-size: 24px;
     position: absolute;
 }
 .cardSkillLv {
     top: 105px;
     left: 350px;
-    font-size: 24px;
     position: absolute;
 }
 .cardRareLevel {
     top: 138px;
     left: 180px;
-    font-size: 24px;
     position: absolute;
 }
 .cardSkillName {
     top: 169px;
     left: 180px;
-    font-size: 24px;
     position: absolute;
 }
 .cardSkillEft {
     top: 200px;
     left: 180px;
-    font-size: 24px;
     position: absolute;
 }
 .cardDeckCost {
     top: 138px;
     left: 365px;
-    font-size: 24px;
     position: absolute;
 }
 .progCardExp {
@@ -440,13 +421,11 @@ input.btn_submit {
     position: absolute;
     top: 12px;
     left: 115px;
-    font-size: 24px;
 }
 .strCardView {
     position: absolute;
     top: 12px;
     left: 135px;
-    font-size: 24px;
 }
 
 /** 選択ボタン */
@@ -460,7 +439,6 @@ input.btn_submit {
     position: relative;
     top: -55px;
     left: 80px;
-    font-size: 25px;
 }
 .strSelectCardCheckBox {
     position: relative;
@@ -468,14 +446,12 @@ input.btn_submit {
     left: 460px;
     height:45px;
     width:200px;
-    font-size: 22px;
 }
 .strSelectCardSozai {
     position: absolute;
     width:200px;
     top: 12px;
     left:78px;
-    font-size: 22px;
 }
 .btnSelectSt {
     clear:both;
@@ -487,7 +463,6 @@ input.btn_submit {
     position: relative;
     top: -52px;
     left: 155px;
-    font-size: 25px;
 }
 
 
@@ -564,7 +539,6 @@ input.btn_submit {
 .paging {
     position:relative;
     text-align:center;
-    font-size: 26px;
     height:35px;
     top:10px;
 }
@@ -604,7 +578,6 @@ input.btn_submit {
 .pagingNum {
     position:relative;
     text-align:center;
-    font-size: 24px;
     height:80px;
     top:35px;
     left:120px;
@@ -633,7 +606,6 @@ input.btn_submit {
 .sort {
     position:relative;
     text-align:center;
-    font-size: 24px;
     height:35px;
     left:-80px;
     top:60px;
@@ -648,7 +620,6 @@ input.btn_submit {
     position: absolute;
     top: 8px;
     left: 15px;
-    font-size: 24px;
 
 }
 
@@ -681,7 +652,7 @@ input.btn_submit {
     left: 103px;
     top: 330px;
     height: 200px;
-    width: 500px;
+    width: 450px;
     position: relative;
 }
 .btnQuestNotProg {
@@ -704,7 +675,6 @@ input.btn_submit {
     position: absolute;
     top: 12px;
     left: 190px;
-    font-size: 24px;
 }
 
 /** クエストボス */
@@ -717,7 +687,6 @@ input.btn_submit {
     position: absolute;
     top: 12px;
     left: 170px;
-    font-size: 24px;
 }
 
 /** クエストの抽選結果表示 */
@@ -749,7 +718,6 @@ input.btn_submit {
     position: absolute;
     top: 12px;
     left: 170px;
-    font-size: 24px;
 }
 
 /**
@@ -772,14 +740,12 @@ input.btn_submit {
     position: absolute;
     top: 14px;
     left: 90px;
-    font-size: 24px;
 
 }
 .strUpConfT {
     position: absolute;
     top: 14px;
     left: 25px;
-    font-size: 24px;
 
 }
 /** 合成決定ボタン */
@@ -793,7 +759,6 @@ input.btn_submit {
     position: absolute;
     top: 15px;
     left: 90px;
-    font-size: 24px;
 }
 
 /** 強化進化選択 */
@@ -833,7 +798,6 @@ input.btn_submit {
     padding: 10px 20px;
     border-radius: 2px 2px 0 0;
     color: #ffffff;
-    font-size: 24px;
     font-weight: normal;
     font-family: ‘Lily Script One’, helveti;
     background: rgba(255,255,255,0.2);
@@ -856,7 +820,6 @@ input.btn_submit {
     padding: 10px 20px;
     border-radius: 2px 2px 0 0;
     color: #ffffff;
-    font-size: 24px;
     font-weight: normal;
     font-family: ‘Lily Script One’, helveti;
     background: rgba(158, 40, 163, 1);
@@ -879,7 +842,6 @@ display: block;
     width: 100%;
     height: 300px;
     overflow-y: auto;
-    font-size: 20px;
     line-height: 140%;
     padding-top: 10px;
     background: #08C;
@@ -911,7 +873,6 @@ display: block;
     left:50px;
     top:20px;
     height:50px;
-    font-size: 24px;
     color:#FFA500
 }
 .btnSelectCardInUserDeckLeft {
@@ -931,26 +892,22 @@ display: block;
     position: relative;
     top: -43px;
     left: 41px;
-    font-size: 24px;
     color:#fff;
 }
 .btnDeckBack {
     position: relative;
     top: 20px;
     left: 180px;
-    font-size: 25px;
 }
 .strDeckBack {
     position: absolute;
     top: 15px;
     left: 100px;
-    font-size: 25px;
 }
 .costOver {
     position: relative;
     text-align:center;
     top: 15px;
-    font-size: 25px;
     height:35px;
     color:#FF1493;
 }
@@ -1008,13 +965,11 @@ display: block;
 .myAct {
     top: 74px;
     left: 20px;
-    font-size: 24px;
     position: absolute;
 }
 .myActInt {
     top: 80px;
     left: 380px;
-    font-size: 20px;
     position: absolute;
 }
 .progMyAct {
@@ -1030,13 +985,11 @@ display: block;
 .cardCnt {
     top: 108px;
     left: 20px;
-    font-size: 24px;
     position: absolute;
 }
 
 /** プレゼント受取 */
 .userPresentBoxesIndex {
-    font-size: 24px;
 }
 .btnGetPresentAll {
     position: relative;
@@ -1051,7 +1004,6 @@ display: block;
 }
 .present {
     position:relative;
-    font-size: 24px;
     color: #FFA500;
     top:10px;
     left:20px;
@@ -1086,7 +1038,6 @@ display: block;
     position: relative;
     top: -45px;
     left: 80px;
-    font-size: 25px;
 }
 
 
@@ -1102,7 +1053,6 @@ display: block;
     position: absolute;
     top: 12px;
     left: 80px;
-    font-size: 24px
 }
 
 /** チュートリアル */
@@ -1110,18 +1060,15 @@ display: block;
     position: absolute;
     top: 12px;
     left: 105px;
-    font-size: 24px
 }
 .strMisstionStart {
     position: absolute;
     top: 20px;
     left: 125px;
-    font-size: 25px;
 }
 .tutoStartItemStr {
     text-align: center;
     color:#FF0000;
-    font-size: 24px;
 }
 .tutoStartItemTextArea {
     position: relative;
@@ -1132,7 +1079,6 @@ display: block;
 .tutoStartItemTextStr {
     position: absolute;
     text-align: center;
-    font-size: 22px;
     top: 10px;
     left: 80px;
 }
@@ -1217,7 +1163,6 @@ display: block;
 .guideFukiText {
     position: absolute;
     color: #000000;
-    font-size: 24px;
     line-height: 1.3em;
     left: 30px;
     top: 8px;
@@ -1225,7 +1170,6 @@ display: block;
 .guideFukiTextEnd {
     position: absolute;
     color: #000000;
-    font-size: 23px;
     line-height: 1.3em;
     left: 30px;
     width:400px;
@@ -1287,7 +1231,6 @@ display: block;
 .enemyFukiText {
     position: absolute;
     color: #000000;
-    font-size: 24px;
     line-height: 1.3em;
     left: 30px;
     top: 8px;
@@ -1317,7 +1260,6 @@ display: block;
     top: 26px;
     left: 260px;
     width: 290px;
-    font-size: 30px;
 }
 .topLineUnder {
     position: absolute;
@@ -1329,7 +1271,6 @@ display: block;
     top: 880px;
     left: 30px;
     width: 600px;
-    font-size: 30px;
 }
 
 /** カード詳細 */
@@ -1346,7 +1287,6 @@ display: block;
     top: 25px;
     left: 50%;
     margin: 0 0 0 -140px;
-    font-size: 30px;
     width:400px;
 }
 .cardDetailNameUpper {
@@ -1361,13 +1301,11 @@ display: block;
     position: relative;
     top: 110px;
     height: 200px;
-    font-size: 28px;
 }
 .cardTalkArea {
     position: relative;
     top: 120px;
     height: 180px;
-    font-size: 28px;
     color: #000000;
 }
 .cardText {
@@ -1389,7 +1327,6 @@ display: block;
     position: relative;
     top: 110px;
     height: 365px;
-    font-size: 28px;
 }
 
 
@@ -1399,10 +1336,9 @@ display: block;
 }
 .strCommonTitle {
     position: absolute;
-    top: 15px;
+    top: 35%;
     left: 50%;
     margin: 0 0 0 -150px;
-    font-size: 30px;
     width:450px;
 }
 .spaceSubject {
@@ -1441,7 +1377,6 @@ display: block;
     position:absolute;
     left:130px;
     top:30px;
-    font-size: 30px;
     width:450px;
 }
 .ckbox {
