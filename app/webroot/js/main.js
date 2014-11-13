@@ -5,18 +5,9 @@ $(function(){
 
     $("#loading").hide();
 
-    $("#appReq").bind('click' , appRequest);
+    $("#appReq").on('click ' , appRequest);
+//    document.getElementsById("appReq").addEventListener('touchstart', appRequest);
 
-/*
-    $("a").vclick(function() {
-
-        var data = new Array();
-        data['act'] = $(this).attr("act");
-        data['params'] = $(this).attr("params");
-        data['type'] = $(this).attr("params");
-        appRequest(data);
-    });
-*/
 });
 
 
