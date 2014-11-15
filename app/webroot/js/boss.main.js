@@ -15,12 +15,12 @@ boss.main = ( function() {
   /**
   * 初期化
   */
-  function init( canvasID, fileName, initial, playerSkillData, enemySkillData, turn, loadCompleteCallback, contentsCompleteCallback ) {
+  function init( canvasID, fileName, initial, playerSkillData, enemySkillData, turn, loadCompleteCallback, contentsCompleteCallback, divNum ) {
     _timeoutID = new Array();
     _scene = 0;
 
     var canvas = document.getElementById(canvasID);
-    canvas.style.width = window.innerWidth / 2 + 'px';
+    canvas.style.width = window.innerWidth / divNum + 'px';
     canvas.style.height = Math.floor( canvas.style.width * 1.3 )
 
 

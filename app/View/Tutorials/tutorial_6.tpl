@@ -62,14 +62,14 @@
             </span>
         </div>
 
-        <a href="<{$next}>">
-                <div class="btnCommon">
-                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strGacha">
-                        進化させる
-                    </div>
+        <div class="parent">
+            <a href="<{$next}>">
+                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="child">
+                    進化させる
                 </div>
-        </a>
+            </a>
+        </div>
     </div>
 
     <div class="spaceSubject">

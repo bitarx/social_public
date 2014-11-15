@@ -1,7 +1,7 @@
 <div class="status">
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="64px" width="680px">
+        <div class="child">
             <{$name}> 
         </div>
     </div>

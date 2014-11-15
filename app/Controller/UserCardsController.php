@@ -388,10 +388,10 @@ $this->log($afterCardId);
         }
 
         // ベースカード
-        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
+        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
 
         // 素材カード
-        $target = FILEOUT_URL . '?size=m&dir=card&target=' . $target;
+        $target = FILEOUT_URL . '?size=l&dir=card&target=' . $target;
 
         // 合成後カード
         $afterCard = FILEOUT_URL . '?size=l&dir=card&target=' . $afterCard;

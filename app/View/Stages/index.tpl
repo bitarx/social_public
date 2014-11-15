@@ -1,4 +1,4 @@
-<div class="stages index">
+<div class="stages">
     <div>
         <img src="<{$smarty.const.IMG_URL}>quest/main_<{$list[0]['quest_id']}>.jpg"> 
     </div>
@@ -25,11 +25,19 @@
         </div>
     </div>
 
-    <div style="position:relative;">
+    <div class="stageList">
     <{foreach from=$list item=val}>
-        <div>
-            <a href="<{$smarty.const.BASE_URL}>stages/initStage?stage_id=<{$val['stage_id']}> "><{$val['stage_id']}>. <{$val['stage_title']}> </a>
+        <a href="<{$smarty.const.BASE_URL}>stages/initStage?stage_id=<{$val['stage_id']}>">
+        <{if 3 == $val['state']}>
+            <div class="strStageListEnd">
+        <{else}>
+            <div class="strStageList">
+        <{/if}>
+
+            <{$val['stage_title']}>
         </div>
+        </a>
+        <div class="spaceHigh"></div>
     <{/foreach}>
     </div>
 </div>

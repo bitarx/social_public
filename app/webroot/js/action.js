@@ -119,7 +119,7 @@ function dispRotResultQuest(data)
        // ゴールド
        case "3":
            filename = 'card_gold_on.png';
-           str = data.num + 'ゴールド手に入れた！';
+           str = data.num + MONEY_NAME + '手に入れた！';
            break;
        // 敵
        case "4":

@@ -1,4 +1,4 @@
-<div>
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
     <{foreach from=$list item=data key=key}>

@@ -10,7 +10,7 @@
         </div>
         <div class="guideFukidashi">
             <div class="guideFukiMiddle">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="365px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="430px" height="400px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
@@ -27,11 +27,12 @@
         </div>
     </div>
 
-    <div class="btn_normal">
-        <a href="<{$linkQuest}>"><img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
-        <div class="strSelectStComp" >
-            次の鎮激へ
-        </div>
+    <div class="parent">
+        <a href="<{$linkQuest}>">
+            <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+            <div class="child" >
+                次の鎮激へ
+            </div>
         </a>
     </div>
 </div>

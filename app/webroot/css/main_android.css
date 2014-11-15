@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charst "utf-8";
 /**
  *
  * Generic CSS for CakePHP
@@ -199,16 +199,6 @@ a:hover {
 }
 
 /** タイトルバナーと文字 */
-.bannerTitle {
-    margin: 0;
-    left:4px;
-    position: relative;
-}
-.strTitleSynth {
-    position: absolute;
-    top: 35%;
-    left: 42%;
-}
 .strTitleGacha {
     position: absolute;
     top: 35%;
@@ -230,47 +220,6 @@ a:hover {
     left: 240px;
 }
 
-
-/** サブタイトル */
-.subTitle {
-    position:relative;
-    text-align:center;
-    height:30px;
-    width:680px;
-}
-.subTitleStr {
-    position:absolute;
-    text-align:center;
-    top:-2px;
-    left:280px;
-}
-.subTitleMiddle {
-    position:relative;
-    text-align:center;
-    top:30px;
-    height:65px;
-}
-.subTitleMiddleStr {
-    position:absolute;
-    top:-2px;
-    left:240px;
-}
-.subTitleUpper {
-    position:relative;
-    top:10px;
-    height:65px;
-}
-.subTitleLeftStr {
-    position:absolute;
-    top:1px;
-    left:4px;
-}
-.detailStr {
-    top:1px;
-    left:3px;
-    width:640px;
-    line-height: 1.5em
-}
 
 /** ガチャ */
 .gachaImg {
@@ -332,7 +281,7 @@ a:hover {
     position: absolute;
 }
 .cardExpInt {
-    top: 80px;
+    top: 75px;
     left: 350px;
     position: absolute;
 }
@@ -342,7 +291,7 @@ a:hover {
     position: absolute;
 }
 .cardSkillLv {
-    top: 105px;
+    top: 107px;
     left: 350px;
     position: absolute;
 }
@@ -368,7 +317,7 @@ a:hover {
 }
 .progCardExp {
     position: absolute;
-    top: 80px;
+    top: 76px;
     left: 265px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
@@ -452,17 +401,6 @@ input.btn_submit {
     width:200px;
     top: 12px;
     left:78px;
-}
-.btnSelectSt {
-    clear:both;
-    top: 5px;
-    left: 100px;
-    position: relative;
-}
-.strSelectStComp {
-    position: relative;
-    top: -52px;
-    left: 155px;
 }
 
 
@@ -554,8 +492,8 @@ input.btn_submit {
 }
 .strPagingPrev {
     position:absolute;
-    top:-4px;
-    left:12px;
+    top:5px;
+    left:15px;
 }
 .strPaging {
     position:relative;
@@ -572,13 +510,13 @@ input.btn_submit {
 }
 .strPagingNext {
     position:absolute;
-    top:-4px;
-    left:12px;
+    top:5px;
+    left:15px;
 }
 .pagingNum {
     position:relative;
     text-align:center;
-    height:80px;
+    height:95px;
     top:35px;
     left:120px;
 }
@@ -599,6 +537,10 @@ input.btn_submit {
     top:2px;
     left:35px;
 }
+.pagingImg {
+    height:32px;
+    width:60px;
+}
 
 /**
  * ソート
@@ -612,26 +554,53 @@ input.btn_submit {
 }
 .btnSortUpdate {
     position: relative;
-    top: 30px;
-    left: 435px;
+    top: 25px;
+    left: 440px;
     height:80px;
 }
 .strSortUpdate {
     position: absolute;
-    top: 8px;
+    top: 14px;
     left: 15px;
-
 }
 
 /**
  * クエスト関連
  */
 /** クエスト基本 */
+.quest {
+    height:980px;
+}
 .stages {
+    height:980px;
+}
+.stageMain {
+    position: relative;
     height:980px;
 }
 .stagesEnd {
     height:1180px;
+}
+.stageList {
+    position: relative;
+}
+.strStageList {
+    position: absolute;
+    width: 600px;
+    font-size: 42px;
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #FF1493;
+}
+.strStageListEnd {
+    position: absolute;
+    width: 600px;
+    font-size: 42px;
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #00008B;
 }
 
 .stageItemEffect {
@@ -692,19 +661,19 @@ input.btn_submit {
 /** クエストの抽選結果表示 */
 .lotResultQuest {
     position: absolute;
-    top: 125px;
+    top: 25px;
     left: 240px;
     width: 150px;
 }
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 445px;
+    top: 335px;
     left: 15px;
 }
 .strLotResultDataQuest {
     position: absolute;
-    top: 505px;
+    top: 395px;
     left: 200px;
 }
 
@@ -725,9 +694,8 @@ input.btn_submit {
  */
 /** 一覧 */
 .userCardList {
-}
-.userCardListUnder {
-    height:50px;
+    position: relative;
+    height:780px;
 }
 /** 強化確認ボタン */
 .btnUpConf {
@@ -778,8 +746,8 @@ input.btn_submit {
 }
 
 .tabs {
-    max-width: 650px;
-    height: 400px;
+    max-width: 640px;
+    height: 60px;
     float: none;
     list-style: none;
     position: relative;
@@ -840,7 +808,7 @@ display: block;
     display: none;
     text-align: left;
     width: 100%;
-    height: 300px;
+    height: 30px;
     overflow-y: auto;
     line-height: 140%;
     padding-top: 10px;
@@ -959,22 +927,22 @@ display: block;
 }
 .myLevel {
     position: absolute;
-    top: 40px;
+    top: 80px;
     left: 20px;
 }
 .myAct {
-    top: 74px;
+    top: 118px;
     left: 20px;
     position: absolute;
 }
 .myActInt {
-    top: 80px;
+    top: 118px;
     left: 380px;
     position: absolute;
 }
 .progMyAct {
     position: absolute;
-    top: 80px;
+    top: 118px;
     left: 110px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
@@ -983,7 +951,7 @@ display: block;
     width: 240px;
 }
 .cardCnt {
-    top: 108px;
+    top: 152px;
     left: 20px;
     position: absolute;
 }
@@ -1100,7 +1068,7 @@ display: block;
     position: relative;
     top: 10px;
     left: 1px;
-    height: 415px;
+    height: 455px;
 }
 .guideImg {
     left:5px;
@@ -1138,7 +1106,7 @@ display: block;
 .guideFukiUnder {
     position: absolute;
     left:18px;
-    top:130px;
+    top:126px;
 }
 .guideFukiUnderL {
     position: absolute;
@@ -1158,7 +1126,7 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
-    top:335px;
+    top:380px;
 }
 .guideFukiText {
     position: absolute;
@@ -1177,7 +1145,7 @@ display: block;
 }
 .guideFukiMiddle {
     position: absolute;
-    top: -7px;
+    top: -8px;
     left: 18px;
 }
 
@@ -1242,35 +1210,37 @@ display: block;
 
 /** トップページ */
 .toppage {
-    width:600px
+    position:relative;
+    width:640px;
+    height:1000px;
 }
 .topInfo {
-    position: absolute;
-    width: 600px;
-    top: 770px;
-    left: 1px;
+    position: relative;
+    width: 640px;
+    height:105px;
+    text-align:center;
 }
 .topLineUpper {
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 1px;
 }
 .topLineStr {
     position: absolute;
-    top: 26px;
-    left: 260px;
-    width: 290px;
+    margin: auto;
+    top: 40%;
+    width: 640px;
 }
 .topLineUnder {
     position: absolute;
-    top: 70px;
+    bottom: 0; 
     left: 1px;
 }
 .topInfoList {
-    position: absolute;
-    top: 880px;
+    position: relative;
+    top : 15px;
     left: 30px;
-    width: 600px;
+    width: 640px;
 }
 
 /** カード詳細 */
@@ -1284,10 +1254,10 @@ display: block;
 }
 .strCardDetailName {
     position: absolute;
-    top: 25px;
-    left: 50%;
-    margin: 0 0 0 -140px;
-    width:400px;
+    text-align: center;
+    margin : 36px auto;
+    width: 640px;
+    font-size:42px;
 }
 .cardDetailNameUpper {
     position: absolute;
@@ -1331,27 +1301,41 @@ display: block;
 
 
 /** その他共通 */
+.commonDisplay {
+    position:relative;
+    width:640px;
+    height: 960px;
+}
+.parent {
+    text-align: center;
+    position: relative;
+}
+.child {
+    position: absolute;
+    top: 32%;
+    margin : auto;
+    width: 640px;
+    font-size:42px;
+}
+.space {
+    height: 30px;
+}
+.spaceHigh {
+    height: 80px;
+}
+.subjectImg {
+    width: 640px; 
+    height: 64px; 
+}
+
 .titleLine {
     width:635px;
-}
-.strCommonTitle {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    margin: 0 0 0 -150px;
-    width:450px;
 }
 .spaceSubject {
     position: relative;
     top: 10px;
     height: 110px;
     left: 1px;
-}
-.btnCommon {
-    position:relative; 
-    top:30px; 
-    left:180px;
-    height: 120px;
 }
 .btnCommonRight {
     position:relative; 
@@ -1399,6 +1383,9 @@ input[type=checkbox] {
 
 
 /** ヘルプページ */
+#navi {
+    height: 900px;
+}
 .cardh {
     border-style: solid ; 
     border-width: 1px;

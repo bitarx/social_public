@@ -1,16 +1,18 @@
 <div style="position:relative">
     <{include file="../Elements/title.tpl"}>
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
             進化確認
         </div>
     </div>
     <{include file="../Elements/card.tpl"}>
 
-    <div class="subTitleMiddle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="32px" width="680px">
-        <div class="subTitleMiddleStr">
+    <div class="space"></div>
+
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  class="subjectImg">
+        <div class="child">
            選択された素材
         </div>
     </div>
@@ -35,14 +37,14 @@
             <{$smarty.const.MONEY_NAME}>が足りません。
         </div>
     <{else}>
-    <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
-        <div class="btnSelectSt">
+    <div class="parent">
+        <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
             <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
-            <div class="strSelectStComp">
+            <div class="child">
                 進化合成！
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
     <{/if}>
-
+    <div class="spaceHigh"></div>
 </div>

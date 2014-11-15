@@ -1,246 +1,330 @@
-// 背景、登場人物の画像を定義する
-背景画像 = {
-  'main': IMG_URL + 'bg/school.png',
-  'エントランス': IMG_URL + 'bg/entrance.png',
-  '教室1': IMG_URL + 'bg/classroom.png',
-  '廊下': IMG_URL + 'bg/passage.png',
-  'トイレ': IMG_URL + 'bg/toilet.png',
-  'ゲームオーバー': IMG_URL + 'end.png'
-}
+'use strict';
+var scenario = (function() {
+  var _canvas;
+  var _listContainer;
+  var _nameArea;
+  var _textArea;
+  var _stage;
+  var _text;
+  var _message;
 
-登場人物 = {
-  'まゆ通常': IMG_URL + 'chara/chara1_Normal.png',
-  'まゆ好き': IMG_URL + 'chara/chara1_Like.png',
-  'まゆ嫌悪': IMG_URL + 'chara/chara1_Dislike.png',
-  'しぐれ通常': IMG_URL + 'chara/chara2_Normal.png',
-  'しぐれ好き': IMG_URL + 'chara/chara2_Like.png',
-  'しぐれ嫌悪': IMG_URL + 'chara/chara2_Dislike.png',
-  'しぐれ怒り': IMG_URL + 'chara/chara2_angry.png',
-  '丈太郎': IMG_URL + 'chara/chara3.png',
-}
+  var _eventSpeed;
+  var _intervalID;
+  var _count = 0;
 
+  //Bitmap
+  var _bm;
 
-// セーブ用のゲームIDを設定する
-// 9leapのデータベースに保存する場合は、
-// 9leapの「ゲームID」(9leapにアップロードしたゲームのURLの末尾の数字)を設定する
-GAME_ID = 'adv002';
+  //stageItemBitmap
+  var _bg;
+  var _char;
 
-// シナリオ
+  //イベント管理
+  var _eventID;
+  var _events;
+  var _eventsID;
 
-start = {
-  'シーン': 'start',
-  '背景画像': ['main', 426, 320],
-  '選択肢': ['どうしようかな？','入る', 'エントランス', '帰る', 'ゲームオーバー'],
-}
+  //callBack
+  var _imageLoadProgress;
+  var _imageLoadComplete;
+  var _scenarioComplete;
+  var _selectionComplete;
+  var _scenarioError;
 
-ゲームオーバー  = {
-  '背景画像': ['ゲームオーバー', 189, 97, 70, 110],
-}
+  /*
+   * 初期化.
+  */
+  function init( canvasID, listContainerID, nameAreaID, textAreaID, images, eventSpeed, imageLoadProgress, imageLoadComplete, scenarioComplete, selectionComplete, scenarioError ) {
+    _canvas = document.getElementById( canvasID );
+    _listContainer = document.getElementById( listContainerID );
+    _nameArea = document.getElementById( nameAreaID );
+    _textArea = document.getElementById( textAreaID );
 
-// ルート分岐
+    _stage = new createjs.Stage( _canvas );
+    var matrix = _stage.getMatrix();
+    matrix.translate( _canvas.width >> 1, _canvas.height >> -1 );
+    matrix.decompose( _stage );
 
-エントランス  = {
-  'シーン': 'エントランス',
-  '背景画像': ['エントランス', 426, 320],	
-  '選択肢': ['どうしようかな？','教室に行く', 'まゆルート1 ', '走ってトイレにいく', 'しぐれルート1'],
-}
+    var bgColor = new createjs.Shape();
+    bgColor.graphics.beginFill( "#000000").drawRect( 0, 0, _canvas.width ,_canvas.height );
+    bgColor.x = -_canvas.width / 2;
+    _stage.addChild( bgColor );
 
+    var queue = new createjs.LoadQueue( false );
+    queue.loadManifest( images, true );
+    queue.addEventListener( "complete", _imageLoadCompletehandler );
+    queue.addEventListener( "progress", _imageLoadProgresshandler );
 
-// まゆルート
+    _eventSpeed = eventSpeed;
 
-まゆルート1 = {
-  'シーン': 'まゆルート1',
-  '背景画像': ['教室1', 426, 320],
-  'キャラ1': ['まゆ通常', 160, 480, 180, 50],
-  'セリフ': ['[まゆ]', 'おはよう'],
-  'ジャンプ': 'まゆルート行動選択1' 
-}
+    _imageLoadProgress = imageLoadProgress;
+    _imageLoadComplete = imageLoadComplete;
+    _scenarioComplete = scenarioComplete;
+    _selectionComplete = selectionComplete;
+    _scenarioError = scenarioError;
 
-まゆルート行動選択1 = {
-  '式': 'まゆ好感度 = 10',
-  '選択肢': ['どうしようかな?', 'おはよう', 'まゆ好感度アップ1', '・・・・・・' , 'まゆ好感度ダウン1']
-}
+    _bg = new createjs.Bitmap();
+    _stage.addChild( _bg );
 
-まゆ好感度アップ1 = {
-  '式': 'まゆ好感度 += 5',
-  '退場': 'まゆ通常',
-  'オートジャンプ': 'まゆルート行動選択2'
-}
+    _char = new createjs.Bitmap();
+    _stage.addChild( _char );
 
-まゆ好感度ダウン1 = {
-  '式': 'まゆ好感度 -= 5',
-  '退場': 'まゆ通常',
-  'オートジャンプ': 'まゆルート行動選択2 '
-}
+  }
 
-まゆルート行動選択2 = {
-  '選択肢': ['休み時間だ。', '教室でくつろぐ', 'まゆルート分岐1', 'トイレに行く', 'まゆルートトイレ']
-}
+  /*
+   * データをセットし、イベントスタート.
+  */
+  function setEventData( eventsID, events ) {
+    _eventID = 0;
+    _eventsID = eventsID;
+    _events = events;
+    _listContainer.style.display = "none";
 
-まゆルートトイレ = {
-  'シーン': 'トイレ',
-  '背景画像': ['トイレ', 426, 320],
-  'キャラ1': ['丈太郎', 160, 480, 180, 50],
-  'セリフ': ['[丈太郎]', 'うぃっす！'],
-  'ジャンプ': 'まゆルート教室2'
-}
+    if(_bm) {
+      setEventById( 0 );
+    }
+  }
 
-まゆルート教室2 = {
-  'シーン': 'まゆルート教室2',
-  '背景画像': ['教室1', 426, 320],
-  'オートジャンプ': 'まゆルート行動選択4'
-}
+  /*
+   * イベント進む.
+  */
+  function nextEvent() {
+    _eventID++;
+    if( _events[ _eventID ] ) {
+      setEvent(
+        _events[ _eventID ].text,
+        _events[ _eventID ].name,
+        _events[ _eventID ].bgID,
+        _events[ _eventID ].charID,
+        _events[ _eventID ].eventSpeed,
+        _events[ _eventID ].selection
+      )
+    } else {
+      _eventID = _events.length + 1;
+      _scenarioComplete( _eventsID );
+    }
+  }
 
-まゆルート分岐1 = {
-  '条件分岐': ['まゆ好感度 >= 10', 'まゆルート会話イベント1', 'まゆルート行動選択4']
-}
+  /*
+   * イベント戻る.
+  */
+  function prevEvent() {
+    _eventID--;
+    if( _events[ _eventID ] ) {
+      setEvent(
+        _events[ _eventID ].text,
+        _events[ _eventID ].name,
+        _events[ _eventID ].bgID,
+        _events[ _eventID ].charID,
+        _events[ _eventID ].eventSpeed,
+        _events[ _eventID ].selection
+      )
+    } else {
+      _eventID = -1;
+      _scenarioError();
+    }
+  }
 
-まゆルート会話イベント1　= {
-  'キャラ1': ['まゆ通常', 160, 480, 180, 50],
-  'セリフ': ['[まゆ]', 'ねぇねぇ、このプリント配るの手伝っくれないかなぁ？'],	
-  'ジャンプ': 'まゆルート行動選択3'
-}
+  /*
+   * イベントIDを指定してイベントを開始.
+  */
+  function setEventById( id ) {
+    if( _events[ id ] ) {
+      _eventID = id;
+      setEvent(
+        _events[ _eventID ].text,
+        _events[ _eventID ].name,
+        _events[ _eventID ].bgID,
+        _events[ _eventID ].charID,
+        _events[ _eventID ].eventSpeed,
+        _events[ _eventID ].selection
+      )
+    } else {
+      _scenarioError();
+    }
+  }
 
-まゆルート行動選択3 = {
-  '選択肢': ['めんどくさいなぁ・・', 'でも手伝う', 'まゆ好感度アップ2', '手伝わない', 'まゆ好感度ダウン2']
-}
+  /*
+   * イベント開始.
+  */
+  function setEvent( text, name, bgID, charID, eventSpeed, selection ) {
+    if( name ) {
+      _setName( name );
+      _nameArea.style.display = "block";
+    } else {
+      _nameArea.style.display = "none";
+    }
 
-まゆ好感度アップ2 = {
-  '式': 'まゆ好感度 += 5',
-  '退場': 'まゆ通常',
-  'オートジャンプ': 'まゆルート行動選択4'
-}
+    if( text ) {
+      if( eventSpeed ) {
+        _setText( text, eventSpeed );
+      } else {
+        _setText( text );
+      }
+      _textArea.style.display = "block";
+    } else {
+      _textArea.style.display = "none";
+    }
 
-まゆ好感度ダウン2 = {
-  '式': 'まゆ好感度 -= 5',
-  '退場': 'まゆ通常',
-  'オートジャンプ': 'まゆルート行動選択4'
-}
+    if( bgID ) {
+      _setBG( _bm[ bgID ] )
+      _bg.visible = true;
+    } else {
+      _bg.visible = false;
+    }
+    if( charID ) {
+      _setChar( _bm[ charID ] )
+      _char.visible = true;
+    } else {
+      _char.visible = false;
+    }
 
-まゆルート行動選択4 = {
-  '選択肢': ['放課後だ。', '帰る', 'まゆルート分岐2', 'まだ帰らない', 'まゆルート行動選択4']
-}
+    if( selection ) {
+      setSelectionData( "currentID", selection );
+    }
 
-まゆルート分岐2 = {
-  '条件分岐': ['まゆ好感度 >= 20', 'まゆルートend', 'まゆルートbadend']
-}
+    _stage.update();
+  }
 
+  /*
+   * テキストセット.
+  */
+  function _setName( name ) {
+    _nameArea.innerHTML = name;
+  }
 
-まゆルートend = {
-  'シーン': 'まゆルートend',
-  '背景画像': ['エントランス', 426, 320],
-  'キャラ1': ['まゆ好き', 160, 480, 180, 50],
-  'セリフ': ['[まゆ]', 'ねぇ、いっしょに帰ろう'],
-}
+  /*
+   * テキストセット.
+  */
+  function _setText( text, eventSpeed ) {
+    _textArea.text = "";
 
-まゆルートbadend = {
-  'シーン': 'まゆルートbadend',
-  '背景画像': ['エントランス', 426, 320],
-  'キャラ1': ['まゆ嫌悪', 160, 480, 180, 50],
-  'セリフ': ['[まゆ]', '・・・・・・・'],
-}
+    if( !eventSpeed ) {
+      eventSpeed = _eventSpeed;
+    }
 
-// しぐれルート
+    var currentText = "";
+    var len = text.length;
+    clearInterval( _intervalID )
+    _count = 0;
+    _intervalID = setInterval( function() {
+      currentText += text[ _count ];
+      if ( 0 == _count % 21 && 0 != _count) {
+          currentText += "<br />"; 
+      }
+      _textArea.innerHTML = currentText;
+      _count++;
+      if( _count >= len ) {
+        _textArea.innerHTML += '<div class="nextSign">▼</div>';
+        clearInterval( _intervalID )
+        _count = 0;
+      }
+    }, eventSpeed )
+  }
 
-しぐれルート1 = {
-  'シーン': 'しぐれルート1',
-  '背景画像': ['廊下', 426, 320],
-  'キャラ1': ['しぐれ怒り', 160, 480],
-  'セリフ': ['[しぐれ]', 'こら！、そこのバカ、廊下は走らない！！'],
-  'ジャンプ': 'しぐれルート行動選択1'
-}
+  /*
+   * バックグラウンドセット.
+  */
+  function _setBG( bm ) {
+    _bg.image = bm.image;
+    _bg.regX = _bg.image.width / 2;
+    _stage.update();
+  }
 
-しぐれルート行動選択1 = {
-  '式': 'しぐれ好感度 = 10',
-  '選択肢': ['うるさいのに見つかったな・・','とりあえず謝っておく', 'しぐれ好感度アップ1', '漏れそうなので無視する', 'しぐれ好感度ダウン1'],
-}
+  /*
+   * キャラクターセット.
+  */
+  function _setChar( bm ) {
+    _char.image = bm.image;
+    _char.regX = _char.image.width / 2, _char.regY = -( _canvas.height - _char.image.height)
+    _stage.update();
+  }
 
-しぐれ好感度アップ1 = {
-  '式': 'しぐれ好感度 += 5',
-  'オートジャンプ': 'しぐれルートトイレ'
-}
+  /*
+   * 画像ロードプログレスハンドラー.
+  */
+  function _imageLoadProgresshandler( e ) {
+    _imageLoadProgress( e.loaded );
+  }
 
-しぐれ好感度ダウン1 = {
-  '式': 'しぐれ好感度 -= 5',
-  'オートジャンプ': 'しぐれルートトイレ'
-}
+  /*
+   * 画像ロードコンプリートハンドラー.
+  */
+  function _imageLoadCompletehandler( e ) {
+    var queue = e.currentTarget;
+    queue.removeEventListener( "complete", _imageLoadCompletehandler );
+    queue.removeEventListener( "progress", _imageLoadProgresshandler );
+    _bm = {};
+    for( var id in queue._loadItemsById ) {
+      _bm[ id ] = new createjs.Bitmap( queue._loadItemsById[ id ].tag );
+    }
 
-しぐれルートトイレ = {
-  'シーン': 'しぐれルートトイレ',
-  '背景画像': ['トイレ', 426, 320],
-  'キャラ1': ['丈太郎', 160, 480, 180, 50],
-  'セリフ': ['[丈太郎]', 'うぃっす！'],
-  'ジャンプ': 'しぐれルート教室 '
-}
+    _eventID = 0;
+    setEventById( 0 );
 
-しぐれルート教室 = {
-  'シーン': 'しぐれルート教室',
-  '背景画像': ['教室1', 426, 320],
-  'オートジャンプ': 'しぐれルート行動選択2' 
-}
+    _imageLoadComplete();
+    _imageLoadProgress = null;
+    _imageLoadComplete = null;
 
-しぐれルート行動選択2 = {
-  '選択肢': ['休み時間だ。', '教室でくつろぐ', 'しぐれルート行動選択4', '走ってトイレに行く', 'しぐれルート2']
-}
+  }
 
-しぐれルート2 = {
-  'シーン': 'しぐれルート2',
-  '背景画像': ['廊下', 426, 320],
-  'キャラ1': ['しぐれ怒り', 160, 480],
-  'セリフ': ['[しぐれ]', 'ちょっと！、そこのタコ、廊下は走らない！！'],
-  'ジャンプ': 'しぐれルート行動選択3'	
-}
+  ////////////////////////////////////////////////////////////////
+  //選択
+  var _selectionList = null;
+  var _selectionDataList = null;
 
-しぐれルート行動選択3 = {
-  '選択肢': ['こんどはタコか・・','でも謝る', 'しぐれ好感度アップ2', 'ムカツイタので無視する', 'しぐれ好感度ダウン2'],
-}
+  /*
+   * テキストセット.
+  */
+  function setSelectionData( selectionID, selectionData ) {
+    _removeSelectionData();
+    _selectionList = [];
+    _selectionDataList = [];
+    for( var i in selectionData ) {
+      var data = selectionData[ i ];
+      var elm = document.createElement('li');
+      elm.innerHTML = "<p>" + data.label + "</p>";
+console.log(); 
+      elm.dataset.selectionID = data.selectionID;
+      elm.dataset.eventsID = data.eventsID;
+      _selectionDataList[ data.eventsID ] = data.eventsData;
+      elm.addEventListener( "click", _selectionHandler );
+      _selectionList.push( elm );
+      _listContainer.appendChild( elm );
+    }
+    _listContainer.style.display = "block";
+  }
 
-しぐれ好感度アップ2 = {
-  '式': 'しぐれ好感度 += 5',
-  'オートジャンプ': 'しぐれルートトイレ2'
-}
+  function _removeSelectionData() {
+    if( _selectionList ) {
+      for( var i in _selectionList ) {
+        var elm = _selectionList[ i ];
+        elm.removeEventListener( "click", _selectionHandler );
+        _listContainer.removeChild( elm );
+      }
+    }
+    _selectionList = null;
+    _selectionDataList = null;
+  }
 
-しぐれ好感度ダウン2 = {
-  '式': 'しぐれ好感度 -= 5',
-  'オートジャンプ': 'しぐれルートトイレ2'
-}
+  function _selectionHandler( e ) {
+    _selectionComplete(
+      e.currentTarget.dataset.selectionID,
+      e.currentTarget.dataset.eventsID,
+      _selectionDataList[ e.currentTarget.dataset.eventsID ]
+    )
+    scenario.setEventData( e.currentTarget.dataset.eventsID, _selectionDataList[ e.currentTarget.dataset.eventsID ] );
+     _removeSelectionData();
+  }
+  ////////////////////////////////////////////////////////////////
 
-しぐれルートトイレ2 = {
-  'シーン': 'しぐれルートトイレ2',
-  '背景画像': ['トイレ', 426, 320],
-  'キャラ1': ['丈太郎', 160, 480, 180, 50],
-  'セリフ': ['[丈太郎]', 'よく会うな。'],
-  'ジャンプ': 'しぐれルート教室2'
-}
-
-しぐれルート教室2 = {
-  'シーン': 'しぐれルート教室2',
-  '背景画像': ['教室1', 426, 320],
-  'オートジャンプ': 'しぐれルート行動選択4'
-}
-
-
-しぐれルート行動選択4 = {
-  '選択肢': ['放課後だ。', '帰る', 'しぐれルート分岐2', 'まだ帰らない', 'しぐれルート行動選択4']
-}
-
-しぐれルート分岐2 = {
-  '条件分岐': ['しぐれ好感度 >= 20', 'しぐれルートend', 'しぐれルートbadend']
-}
-
-
-しぐれルートend = {
-  'シーン': 'しぐれルートend',
-  '背景画像': ['エントランス', 426, 320],	
-  'キャラ1': ['しぐれ好き', 160, 480, 180, 50],
-  'セリフ': ['[しぐれ]', 'い。。いっしょに帰るわよ！'],	
-}
-
-しぐれルートbadend = {
-  'シーン': 'しぐれルートbadend',
-  '背景画像': ['エントランス', 426, 320],
-  'キャラ1': ['しぐれ嫌悪', 160, 480, 180, 50],
-  'セリフ': ['[しぐれ]', '・・・・・・・'],
-}
-
-
+  var exports = {};
+  exports.init = init;
+  exports.setEventData = setEventData;
+  exports.setSelectionData = setSelectionData;
+  exports.setEvent = setEvent;
+  exports.setEventById = setEventById;
+  exports.nextEvent = nextEvent;
+  exports.prevEvent = prevEvent;
+  return exports;
+}());

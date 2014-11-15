@@ -116,7 +116,8 @@
           enemySkillData,
           turn,
           imageLoadComplete,
-          contentsComplete
+          contentsComplete,
+          <{$carrer}>
         );
 
         var el = document.getElementById( "skip" );

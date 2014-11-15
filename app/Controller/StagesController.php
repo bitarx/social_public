@@ -48,7 +48,6 @@ class StagesController extends ApiController {
 
         // 到達したステージリスト
         $ret = $this->UserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
-
         // このクエストは初めて
         if (empty($ret)) {
             $list[] = $this->Stage->getFirstStage($questId);
@@ -62,6 +61,7 @@ class StagesController extends ApiController {
             $questData = $this->Quest->getQuestData($questId);
             $list[0]['quest_detail'] = $questData['quest_detail'];
         }
+$this->log($list); 
         $this->set('list', $list);
         $this->set('guideId', 1 );
 	}
@@ -384,6 +384,8 @@ class StagesController extends ApiController {
 
                 // 現在到達最大ステージ
                 $stageId = $this->UserStage->getUserMaxStageId($this->userId);
+
+                // 次のステージ
                 $nextStageId = $stageId + 1;
 
                 $field = array('state');
@@ -393,7 +395,7 @@ class StagesController extends ApiController {
                          );
                 $maxStage = $this->UserStage->getAllFind($where, $field, 'first');
 
-                if ( 3 == $maxStage['state']) {
+                if ( 3 == $maxStage['state'] ) {
                     // 次のステージへ
                     $fields = array('user_id', 'stage_id', 'progress', 'state');
                     $values[] = array($this->userId, $nextStageId, 0, 1);
@@ -476,13 +478,12 @@ class StagesController extends ApiController {
         if (!empty($data['log']['enemy_skill'])) 
             $enemySkillData = json_encode($data['log']['enemy_skill'][0]);
 
-$this->log('###########################'); 
-$this->log($turn); 
 
         $turn     = json_encode($turn);
         $player   = json_encode($player);
 
         $this->set('data', $data);
+        $this->set('divNum', $divNum);
         $this->set('player', $player);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
@@ -506,12 +507,10 @@ $this->log($turn);
             $data = $this->Enemy->getEnemyData($log['target']);
             $enemyId = $data['enemy_id'];
             $next = 'Stages/comp';
-            $str  = 'TOUCH SCREEN';
         } else {
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
             $next = 'UserStages/index';
-            $str  = 'TOUCH SCREEN';
         }
         $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {
@@ -521,7 +520,6 @@ $this->log($turn);
 
         $this->set('data', $data);
         $this->set('next', $next);
-        $this->set('str',  $str);
         $this->set('questId', $stage['Stage']['quest_id']);
 
     }
@@ -561,7 +559,6 @@ $this->log($turn);
         $this->UserStage->begin(); 
         try {  
 
-            // 処理済
             $values = array(
                           'id' => $log['id']
                       );
@@ -604,7 +601,6 @@ $this->log($turn);
         $data  = $this->Stage->getAllFind($where, $field, 'first');
 
         $this->set('data', $data);
-
     }
 
 
@@ -614,6 +610,7 @@ $this->log($turn);
      * @author imanishi 
      * @return json 検索結果一覧
      */
+/*
     public function find() {
 
         if ($this->request->is(array('ajax'))) {
@@ -625,6 +622,7 @@ $this->log($turn);
             $this->setJson($list);
         }
     }
+*/
 
     /**
      * 登録更新
@@ -682,7 +680,6 @@ $this->log($turn);
 
                 $lotData = $this->Common->doLot($list);
  
-            } else {
             }
 
             $this->UserStage->begin(); 
@@ -732,7 +729,7 @@ $this->log($turn);
                             $targetData['name'] = $cardData['card_mes'];
                             $lotData['target']  = $row['UserCard']['card_id'];
                         } else {
-                            $targetData['name'] = 'デッキにカードをセットしないとボスと戦うことはできません！';
+                            $targetData['name'] = DECK_NOCARD;
                             $lotData['target']  = 1003;
                         }
                         
@@ -755,21 +752,13 @@ $this->log($turn);
                         $value = array(
                             'progress' => $data['progress']
                         ,   'state'    => $data['state']
-                        ,   'modified' => "'" . date("Y-m-d H:i:s") . "'"
+                        ,   'modified' => NOW_DATE_DB
                         );
                         $where = array(
                             'user_id' => $this->userId 
                         ,   'UserStage.stage_id' => $data['stage_id']     
                         );
                         $this->UserStage->updateAll($value, $where);
-
-                        // 新ステージ登録(ここではせず、ボス討伐後)
-                        $nextStageId = $data['stage_id'] + 1;
-/*
-                        $fields = array('user_id', 'stage_id', 'progress', 'state');
-                        $values[] = array($data['user_id'], $nextStageId, 0, 1);
-                        $this->UserStage->insertBulk($fields, $values, $ignore = 1);
-*/
 
                         $stageClear = 1;
                     } else {

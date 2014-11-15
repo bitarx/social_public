@@ -12,6 +12,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script src='<{$smarty.const.BASE_URL}>js/jquery.tabs.js'></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/<{$smarty.const.DOMAIN}>.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/const.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>

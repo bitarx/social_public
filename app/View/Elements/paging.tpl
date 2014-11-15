@@ -3,42 +3,42 @@
         <div class="paging">
             <{if $page <= 1}> 
                <div class="btnPagingPrev">
-                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" height="32px" width="55px">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" class="pagingImg">
                  <div class="strPagingPrev">
                    前 
+                 </div>
             <{else}>
                <div class="btnPagingPrev">
                    <{if $ctl == 'UserCards'}>
-                     <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>"><img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging"></a> 
-
+                       <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging">
                    <{else}>
-                     <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}><{if isset($addParam)}><{$addParam}><{/if}>"><img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging"></a> 
-
+                       <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging">
                    <{/if}>
-                 <div class="strPagingPrev">
-                   前
+                   <div class="strPagingPrev">
+                       <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$prev}><{if isset($addParam)}><{$addParam}><{/if}>">前</a>
+                   </div>
              <{/if}> 
-               </div>
              </div>
              <div class="strPaging">
                  <{$page}>  /  <{$pageAll}>
              </div> 
             <{if $pageAll <= $page}> 
                <div class="btnPagingNext">
-                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" height="30px" width="50px">
+                 <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" class="pagingImg">
                  <div class="strPagingNext">
                     次
+                 </div>
             <{else}>
                <div class="btnPagingNext">
                    <{if $ctl == 'UserCards'}>
-                     <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>"><img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging"></a>
+                       <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging">
                    <{else}>
-                     <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}><{if isset($addParam)}><{$addParam}><{/if}>"><img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging"></a>
+                       <img src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" class="btnPaging">
                    <{/if}>
-                 <div class="strPagingNext">
-                   次
+                   <div class="strPagingNext">
+                       <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$next}><{if isset($addParam)}><{$addParam}><{/if}>">次</a>
+                   </div>
              <{/if}> 
-             </div>
            </div>
         </div>
     </div>

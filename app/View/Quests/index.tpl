@@ -1,6 +1,6 @@
-<div class="quests index">
+<div class="quest">
     <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
-    <div style="height:10px;">
+    <div class="space">
     </div>
     <{foreach from=$list item=val}> 
         <div>

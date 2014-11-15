@@ -1,41 +1,116 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.1,minimum-scale=0.5, user-scalable=yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/config.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/enchant.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/ui.enchant.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/nineleap.enchant.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/enchant/memory.enchant.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/game.js"></script>
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+        <title><{$smarty.const.SITE_TITLE}></title>
+        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css">
+    </head>
+    <body>
+        <div id="main" class="userSelectNone">
+            <canvas id="mainCanvas" width="640px" height="960px"></canvas>
+            <ul id="listContainer" width="640px" height="960px"></ul>
+            <p id="nameArea" ></p>
+            <p id="textArea" ></p>
+        </div>
+    </body>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/preloadjs-0.4.1.min.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/scenario.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
-    <style type="text/css">
-      body {
-           margin: 0;
-           background-color: #000;
-      }
-    </style>
+
+    <script type="text/javascript">
+        //使用する画像リスト
+        var images = [
+            { src: "<{$smarty.const.IMG_URL}>xD7ywE4p/scene_<{$data.enemy_id}>.jpg", id: "bg" },
+        ];
+
+        // キャラセリフ
+        var eventData001 = [
+            { text: "<{$data.after_win_words}>", name: "", bgID: "bg", charID: "" },
+        ];
+
+
+    </script>
+
+
+    <script type="text/javascript">
+        //コールバック
+        //画像ローディングプログレスコールバック
+        var imageLoadProgress = function( loaded ) {
+            console.log( "imageLoadProgress", loaded );
+        }
+
+        //画像ローディング完了コールバック
+        var imageLoadComplete = function() {
+            console.log( "imageLoadComplete" );
+        }
+
+        //シナリオ完了
+        var scenarioComplete = function( eventsID ) {
+            console.log( "scenarioComplete", eventsID );
+            location.href = "<{$smarty.const.BASE_URL}><{$next}>";
+        }
+
+        //分岐選択完了
+        var selectionComplete = function( selectionID, eventsID, eventsData ) {
+            console.log( "selectionComplete" );
+        }
+
+        //シナリオエラー
+        var scenarioError = function() {
+            console.log( "scenarioError" );
+        }
+
+    </script>
+
+
     <script type="text/javascript">
 
-// 背景画像を定義する
-背景画像 = {
-  'main': BASE_URL + 'File/outimage?size=<{$questId}>&dir=scene&target=<{$data.enemy_id}>',
-}
+        //タッチイベント
+        document.getElementById( 'mainCanvas' ).addEventListener( 'click', function( e ) {
+            scenario.nextEvent();
+        }, false);
 
-start = {
-  'シーン': 'start',
-  '背景画像': ['main', 640, 800],
-  '選択肢': ['<{$data.after_win_words}>','<{$str}>', '<{$next}>'],
-}
+        window.onload = function() {
+            var canvasID = "mainCanvas"; //画像描画用CanvasのID
+            var listContainerID = "listContainer"
+            var nameAreaID = "nameArea"; //名前表示用の要素ID
+            var textAreaID = "textArea"; //テキスト表示用の要素ID
 
-function next()
-{
-}
+            //テキストの１文字の表示スピード（1/1000秒）
+            var eventSpeed = 25;
+
+            //初期化
+            scenario.init(
+                canvasID,
+                listContainerID,
+                nameAreaID,
+                textAreaID,
+                images,
+                eventSpeed,
+                imageLoadProgress,
+                imageLoadComplete,
+                scenarioComplete,
+                selectionComplete,
+                scenarioError
+            );
+
+            scenario.setEventData( "events001", eventData001 );
+      };
+
     </script>
-  </head>
-  <body>
-  </body>
+
+    <script type="text/javascript">
+        //スクロール停止
+        document.ontouchmove = function( e ){
+            event.preventDefault();
+        }
+    </script>
+
+
 </html>

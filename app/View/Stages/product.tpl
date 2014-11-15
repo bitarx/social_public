@@ -74,11 +74,8 @@
           },
         }
 
-//        var playerSkillData = [ { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:5 }, null, { words:"キノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きキノコ大好きXXXXX", type:6 }, null, { words:"キノコ食べ過ぎ", type:3 } ];
-        //var playerSkillData = [ null, null, null, null, null ];
         var playerSkillData = <{$playerSkillData}>
 
-//        var enemySkillData = { words:"はじめまして! クッパです!!", type:3 };
         var enemySkillData = <{$enemySkillData}>;
 
         var turn = <{$turn}>;
@@ -91,7 +88,8 @@
           enemySkillData,
           turn,
           imageLoadComplete,
-          contentsComplete
+          contentsComplete,
+          <{$divNum}>
         );
 
         var el = document.getElementById( "skip" );

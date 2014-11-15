@@ -1,8 +1,8 @@
 <div style="position:relative">
     <{include file="../Elements/title.tpl"}>
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
             強化確認
         </div>
     </div>
@@ -30,10 +30,11 @@
                 </div>
             </div>
     <{/if}>
+    <div class="space"></div>
 
-    <div class="subTitleMiddle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="32px" width="680px">
-        <div class="subTitleMiddleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  class="subjectImg">
+        <div class="child">
            選択された素材
         </div>
     </div>
@@ -65,5 +66,5 @@
             </div>
         </form>
     <{/if}>
-
+    <div class="space"></div>
 </div>

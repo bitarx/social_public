@@ -85,8 +85,12 @@ define("KEY_PAGING", 'p');
 /**
  * 文言
  */
-define("MONEY_NAME","ゴールド");  // サイト内通貨の呼称
-define("POINT_NAME","ポイント");  // プラットフォーム通貨の呼称
+define("SITE_TITLE", '鎮激のエロイーズ');    // サイトタイトル
+define("MONEY_NAME","ゴールド");             // サイト内通貨の呼称
+define("POINT_NAME","ポイント");             // プラットフォーム通貨の呼称
+
+// デッキにカードがない
+define("DECK_NOCARD", "デッキにカードをセットしないとボスと戦うことはできません！");
 
 /**
  * 基本的な情報

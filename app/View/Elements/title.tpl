@@ -1,48 +1,28 @@
-<div class="bannerTitle">
+<div class="parent">
     <img src="<{$smarty.const.IMG_URL}>banner_title.png">
+    <div class="child" >
     <{if 'UserCards' == $ctl}> 
-        <div class="strTitleSynth" >
-            強化進化
-        </div>
+        強化進化
     <{elseif 'UserBaseCards' == $ctl}> 
-        <div class="strTitleBaseCard" >
-            ベースカード変更
-        </div>
+        ベースカード変更
     <{elseif 'UserDeckCards' == $ctl}> 
-        <div class="strTitleDeckCard" >
-            デッキ編成
-        </div>
+        デッキ編成
     <{elseif 'UserStages' == $ctl}> 
-        <div class="strTitleDeckCard" >
-            シーン鑑賞
-        </div>
+        シーン鑑賞
     <{elseif 'UserPresentBoxes' == $ctl}> 
-        <div class="strTitleDeckCard" >
-           受取BOX 
-        </div>
+        受取BOX 
     <{elseif 'Gachas' == $ctl && 'comp' == $action}> 
-        <div class="strTitleDeckCard" >
-           ガチャ結果 
-        </div>
+        ガチャ結果 
     <{elseif 'Gachas' == $ctl}> 
-        <div class="strTitleGacha" >
-           ガチャ 
-        </div>
+       ガチャ 
     <{elseif 'StaticPages' == $ctl}> 
-        <div class="strTitleGacha" >
-           ヘルプ 
-        </div>
+       ヘルプ 
     <{elseif 'Items' == $ctl}> 
-        <div class="strTitleSynth" >
-           ショップ
-        </div>
+       ショップ
     <{elseif 'UserItems' == $ctl}> 
-        <div class="strTitleSynth" >
-           アイテム
-        </div>
+       アイテム
     <{else}>
-        <div class="strCommonTitle" >
-            <{$title}>
-        </div>
+       <{$title}>
     <{/if}>
+    </div>
 </div>

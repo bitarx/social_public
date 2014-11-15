@@ -2,12 +2,21 @@ body {
   padding: 0px;
   margin: 0px;
   background-image: url('../img/synth_evol_bg.png');
-  text-align:center;
   overflow: hidden;
 }
+
 #mainCanvas {
   background-image: url('../img/synth_evol_bg.png');
+  overflow: hidden;
   margin: auto;
   text-align: left;
-  overflow: hidden;
+  width: 320px;
+  height: 430px;
+}
+
+
+.skip {
+    color:#E6E6FA;
+    font-size: 30px;
+    text-align:right;
 }

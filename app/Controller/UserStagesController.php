@@ -32,10 +32,12 @@ class UserStagesController extends ApiController {
         );
         $pageAll = 0;
         $list = $this->UserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
-$this->log($list);         
+
         $this->set('list', $list);
         $this->set('pageAll', $pageAll);
 
+        // シーンを見た後の戻りURL
+        $this->set('next' ,  'UserStages/index');
 	}
 
 }

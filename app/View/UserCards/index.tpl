@@ -1,12 +1,13 @@
 <div class="userCardList">
     <{include file="../Elements/title.tpl"}>
     <{include file="../Elements/card.tpl"}>
-    <div class="changeBase">
-        <img src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+    <div class="space"></div>
+    <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserBaseCards/index">
-        <div class="strChangeBase" >
-            ベースカードを変更
-        </div>
+            <img src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child" >
+                ベースカードを変更
+            </div>
         </a>
     </div>
 
@@ -35,12 +36,13 @@
         </div> 
 
     <{include file="../Elements/sort.tpl"}>
-    
+
     <{if $kind == 1}> 
+        <div class="space"></div>
         <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
-            <div class="btnUpConf">
+            <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="strUpConf">
+                <div class="child">
                     強化確認
                 </div>
             </div>
@@ -52,25 +54,26 @@
         </div>
     <{else}>
         <{include file="../Elements/paging.tpl"}>
+        <{include file="../Elements/pagingNum.tpl"}>
     <{/if}>
 
     <{foreach from=$list item=data key=key}>
-      <div class="listBlock">
-        <{include file="../Elements/card.tpl"}>
-      </div>
+        <div class="listBlock">
+            <{include file="../Elements/card.tpl"}>
+        </div>
         <{include file="../Elements/line.tpl"}>
     <{/foreach}>
+
     <{if $kind == 1}> 
-            <div class="btnUpConf">
+            <div class="space"></div>
+            <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="strUpConf">
+                <div class="child">
                     強化確認
                 </div>
             </div>
         </form>
     <{/if}>
     
-        <{include file="../Elements/pagingNum.tpl"}>
-    <div class="userCardListUnder">
-    </div>
+    <{include file="../Elements/pagingNum.tpl"}>
 </div>

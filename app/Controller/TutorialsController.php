@@ -66,7 +66,7 @@ class TutorialsController extends ApiController {
 
         if ($this->tutoEnd == 1) {
             if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])) {
-                $this->rd('Users', 'index');
+                $this->rd('SnsUsers', 'index');
             }
         } else {
 

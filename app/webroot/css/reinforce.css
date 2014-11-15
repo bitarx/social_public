@@ -2,9 +2,12 @@ body {
   padding: 0px;
   margin: 0px;
   background-image: url('../img/synth_up_bg.png');
+  text-align:center;
   overflow: hidden;
 }
 #mainCanvas {
   background-image: url('../img/synth_up_bg.png');
+  margin: auto;
+  text-align: left;
   overflow: hidden;
 }

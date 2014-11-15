@@ -8,18 +8,18 @@ $(function () {
     dispRotResultQuest();
 });
 </script>
-<div class="stages">
+<div class="stageMain">
      <img src="<{$smarty.const.IMG_URL}>quest/main_1.jpg">
 
     <{if !empty($boss)}> 
-        <a href="conf?stage_id=<{$data.stage_id}>">
-            <div  class="btnQuestBoss">
+        <div  class="btnQuestBoss">
+            <a href="conf?stage_id=<{$data.stage_id}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="strQuestBoss">
                     ボス出現！
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
         <{if empty($notAct)}> 
             <div  class="btnQuestProgBoss" id="appReq" act="Stages/init" params=<{$param}>>
                 <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">

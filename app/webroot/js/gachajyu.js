@@ -48,10 +48,10 @@ var evolution = (function() {
   /**
   * 初期化
   */
-  function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback ) {
+  function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback , divNum) {
 
     _canvas = document.getElementById(canvasID);
-    _canvas.style.width = window.innerWidth / 2 + 'px';
+    _canvas.style.width = window.innerWidth / divNum + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
     _stage = new createjs.Stage(_canvas);

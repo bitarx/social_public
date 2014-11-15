@@ -345,10 +345,10 @@ $this->log( $_COOKIE );
         $this->set('action',  $this->action); 
         $this->set('ctlAction',  $this->name . '/' . $this->action); 
 
-        // キャリア（1:Android 2:iPhone）
-        $carrer = 1;
-        if (isset($_SERVER['HTTP_USER_AGENT']) && false !== strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone')) $carrer = 2;
-        $this->set('carrer', $carrer); 
+        // Js内で画面横幅変更用（2:iPhone, それ以外は１）
+        $divNum = 1;
+        if (CARRER_IPHONE == $this->carrer) $divNum = 2;
+        $this->set('divNum', $divNum); 
 $this->log('userId:' . $this->userId ); 
         // URLアサイン
         $this->_setUrl();
