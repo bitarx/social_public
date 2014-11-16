@@ -61,7 +61,7 @@ class StagesController extends ApiController {
             $questData = $this->Quest->getQuestData($questId);
             $list[0]['quest_detail'] = $questData['quest_detail'];
         }
-$this->log($list); 
+
         $this->set('list', $list);
         $this->set('guideId', 1 );
 	}
@@ -431,7 +431,6 @@ $this->log($list);
 
         // 演出用ターン配列生成
         $turn = array();
-        //$player = '[';
         $player  = array();
         $i = 0;
         $cardNo = 1;
@@ -457,6 +456,7 @@ $this->log($list);
                             $hp[$j] = 0;
                         }
                     }
+                    if ($hp[$j] < 0) $hp[$j] = 0;
                 }
 
                 if ( isset($val['targetData']['enemy_id']) ) {
@@ -481,9 +481,9 @@ $this->log($list);
 
         $turn     = json_encode($turn);
         $player   = json_encode($player);
-
+$this->log('product_turn'); 
+$this->log($turn); 
         $this->set('data', $data);
-        $this->set('divNum', $divNum);
         $this->set('player', $player);
         $this->set('enemy', $enemy);
         $this->set('turn', $turn);
@@ -797,7 +797,7 @@ $this->log($list);
                     $costAtkBef = $userParam['cost_atk'];
 
                     $userParam['act_max'] = ceil($userParam['act_max'] * 1.1);
-                    $userParam['cost_atk_max'] = ceil($userParam['cost_atk'] * 1.1);
+                    $userParam['cost_atk'] += 1;
                     $actMaxDiff  = $userParam['act_max'] - $actMaxBef;
                     $costAtkDiff = $userParam['cost_atk'] - $costAtkBef;
 

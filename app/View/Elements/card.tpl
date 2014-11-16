@@ -7,7 +7,7 @@
         </div>
     <{else}> 
     <div class="cardImg">
-           <img src="<{$smarty.const.FILEOUT_URL}>?size=m&dir=card&target=<{$data.card_id}>" width="160px">
+           <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="160px">
     </div>
     <div class="cardName">
         <{if !empty($data.Card.card_title)}>
@@ -132,20 +132,20 @@
     <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 
         <{if !empty($data.user_card_id)}> 
                 <div class="btnSelectCardInUserDeckLeft">
-            <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                     <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-            </a>
                     <div class="strSelectCardInUserDeck">
-                        外す
+                       <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
+                            外す
+                       </a>
                     </div>
                 </div>
         <{/if}> 
             <div class="btnSelectCardInUserDeckRight">
-        <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-        </a>
                 <div class="strSelectCardInUserDeck">
-                    <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
+                    <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
+                        <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
+                    </a>
                 </div>
             </div>
 

@@ -96,10 +96,12 @@ boss.gage = ( function() {
     var len = current_arr.length;
     for( var j = 0; j < len; j++ ) {
       var num = current_arr[ j ];
-      var bm = _stocker.getDO( "numList" )[ num ].clone();
-      bm.scaleX = bm.scaleY = 0.3;
-      bm.x = -( j * 20 );
-      con.addChild( bm );
+      if (undefined !== _stocker.getDO( "numList" )[ num ]) {
+          var bm = _stocker.getDO( "numList" )[ num ].clone();
+          bm.scaleX = bm.scaleY = 0.3;
+          bm.x = -( j * 20 );
+          con.addChild( bm );
+      }
     }
     _stocker.getDO( "bossCurrentHP" ).addChild( con );
   }

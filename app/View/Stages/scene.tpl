@@ -8,7 +8,11 @@
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta http-equiv="Expires" content="-1">
         <title><{$smarty.const.SITE_TITLE}></title>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css">
+        <{if $carrer == $smarty.const.CARRER_IPHONE}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css">
+        <{else}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario_android.css">
+        <{/if}>
     </head>
     <body>
         <div id="main" class="userSelectNone">

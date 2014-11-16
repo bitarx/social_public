@@ -164,7 +164,10 @@ boss.main = ( function() {
   * 敵ターン開始
   */
   function _startEnemyTurn( currentTurnData ) {
-    var len = currentTurnData.playerHP.length;
+    var len = 0;
+    if (undefined != currentTurnData.playerHP) {
+      var len = currentTurnData.playerHP.length;
+    }
     for( var i = 0; i < len; i++ ) {
       var playerHP = currentTurnData.playerHP[ i ];
 
@@ -198,7 +201,7 @@ boss.main = ( function() {
 
     if( flg ) {
       _turnCount--;
-      if(_turnCount <= 0) {
+      if(_turnCount < 0) {
         setTimeout( function( i ){
           _view.setTurn( 0 );
           _view.setResult( false );

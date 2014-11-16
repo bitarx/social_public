@@ -516,20 +516,23 @@ input.btn_submit {
     height:35px;
     top:10px;
 }
-.btnPaging {
-    width:54px;
-    height:32px;
+.btnPagingImg {
+    width:75px;
+    height:36px;
 }
 .btnPagingPrev {
     position:relative;
     float:left;
     top:0px;
     left:50px;
+    text-align: center
 }
 .strPagingPrev {
     position:absolute;
-    top:-4px;
-    left:12px;
+    top:-6px;
+    left:2px;
+    font-size: 30px;
+    margin: auto;
 }
 .strPaging {
     position:relative;
@@ -543,11 +546,14 @@ input.btn_submit {
     float:right;
     top:0px;
     right:90px;
+    text-align:center;
 }
 .strPagingNext {
     position:absolute;
-    top:-4px;
-    left:12px;
+    top:-6px;
+    left:2px;
+    font-size: 30px;
+    margin: auto;
 }
 .pagingNum {
     position:relative;
@@ -605,10 +611,15 @@ input.btn_submit {
  */
 /** クエスト基本 */
 .quest {
-    height:980px;
+    position: relative;
+    width: 640px;
 }
 .stages {
     height:980px;
+}
+.stageMain {
+    position: relative;
+    height:880px;
 }
 .stagesEnd {
     height:1180px;
@@ -619,7 +630,7 @@ input.btn_submit {
 .strStageList {
     position: absolute;
     width: 600px;
-    font-size: 42px;
+    font-size: 24px;
     border-style: solid ; 
     border-width: 1px;
     padding: 10px 10px 10px 10px;
@@ -628,7 +639,7 @@ input.btn_submit {
 .strStageListEnd {
     position: absolute;
     width: 600px;
-    font-size: 42px;
+    font-size: 24px;
     border-style: solid ; 
     border-width: 1px;
     padding: 10px 10px 10px 10px;
@@ -695,19 +706,19 @@ input.btn_submit {
 /** クエストの抽選結果表示 */
 .lotResultQuest {
     position: absolute;
-    top: 125px;
+    top: 40px;
     left: 240px;
     width: 150px;
 }
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 445px;
+    top: 330px;
     left: 15px;
 }
 .strLotResultDataQuest {
     position: absolute;
-    top: 505px;
+    top: 395px;
     left: 200px;
 }
 
@@ -888,7 +899,7 @@ display: block;
     position: relative;
     top: -43px;
     left: 41px;
-    font-size: 24px;
+    font-size: 26px;
     color:#fff;
 }
 .btnDeckBack {
@@ -1169,7 +1180,7 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
-    top:380px;
+    top:387px;
 }
 .guideFukiText {
     position: absolute;
@@ -1351,6 +1362,10 @@ display: block;
 
 
 /** その他共通 */
+.commonDisplay {
+    position:relative;
+    width:640px;
+}
 .parent {
     text-align: center;
     position: relative;

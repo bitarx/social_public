@@ -1,36 +1,47 @@
 <?php
 /** 全体定数設定 */
+if (!defined('PRIVATE_DIR')) {
+    define("PRIVATE_DIR", ROOT . DS . 'app' . DS . 'Private' . DS);
+}
 
 /**
- * サービス基本情報
+ * URL基本設定
  */
-if ( false !== strpos( $_SERVER['SERVER_NAME'], 'nomadoworks')) {
+if (!defined('DOMAIN')) {
+    define("DOMAIN", $_SERVER['SERVER_NAME']);
+}
+if (!defined('BASE_URL')) {
+    define("BASE_URL","http://" . DOMAIN . DS);
+}
+if (!defined('IMG_URL')) {
+    define("IMG_URL", BASE_URL . "img" . DS);
+}
+if (!defined('FILEOUT_URL')) {
+    define("FILEOUT_URL", BASE_URL . "File" . DS . "outimage");
+}
+
+
+/**
+ * SNSAPI基本設定
+ */
+if ( false !== strpos( DOMAIN, 'nomadoworks')) {
     // 開発環境
-    define("DOMAIN","nomadoworks.com");
-    define("ROOT_DIR", '/var/www/dev_social/');
 
     // OAuth
     define("DEV_IS_SANDBOX", true);
-} elseif ( false !== strpos($_SERVER['SERVER_NAME'], 'asns') ) {
+} elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
-    define("DOMAIN","asns.jp");
-    define("ROOT_DIR", '/var/www/social/');
 
     // OAuth
     define("AH_IS_SANDBOX", true);
 } else {
     // 本番環境
-    define("DOMAIN","eres.xyz");
-    define("ROOT_DIR", '/var/www/social/');
 
     // OAuth
     define("AH_IS_SANDBOX", false);
 }
 
-define("BASE_URL","http://" . DOMAIN . "/");
-define("IMG_URL", BASE_URL . "img/");
-define("FILEOUT_URL", BASE_URL . "File/outimage");
-define("PRIVATE_DIR", ROOT_DIR . 'app/Private/');
+
 
 // カード最大所有枚数
 define("CARD_MAX_NUM", 100);

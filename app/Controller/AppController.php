@@ -37,11 +37,11 @@ class AppController extends Controller {
      *
      * @var array
      */
-    public $gameTitle = '鎮激のエロイース';
+    public $gameTitle = SITE_TITLE;
 
     // 確率変動アイテム文言
     public $effectStr = array(
-                            3 => 'カード出現率アップ'
+                            3 =>  'カード出現率アップ'
                         ,   4 =>  'ゴールド出現率アップ'
                         );
 
@@ -349,6 +349,9 @@ $this->log( $_COOKIE );
         $divNum = 1;
         if (CARRER_IPHONE == $this->carrer) $divNum = 2;
         $this->set('divNum', $divNum); 
+
+        // キャリア
+        $this->set('carrer', $this->carrer); 
 $this->log('userId:' . $this->userId ); 
         // URLアサイン
         $this->_setUrl();

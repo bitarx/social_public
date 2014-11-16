@@ -480,8 +480,8 @@ input.btn_submit {
     height:35px;
     top:10px;
 }
-.btnPaging {
-    width:54px;
+.btnPagingImg {
+    width:64px;
     height:32px;
 }
 .btnPagingPrev {
@@ -489,11 +489,13 @@ input.btn_submit {
     float:left;
     top:0px;
     left:50px;
+    text-align: center;
 }
 .strPagingPrev {
     position:absolute;
     top:5px;
     left:15px;
+    margin: auto;
 }
 .strPaging {
     position:relative;
@@ -507,11 +509,13 @@ input.btn_submit {
     float:right;
     top:0px;
     right:90px;
+    text-align: center;
 }
 .strPagingNext {
     position:absolute;
     top:5px;
     left:15px;
+    margin: auto;
 }
 .pagingNum {
     position:relative;
@@ -536,10 +540,6 @@ input.btn_submit {
     position:absolute;
     top:2px;
     left:35px;
-}
-.pagingImg {
-    height:32px;
-    width:60px;
 }
 
 /**
@@ -569,7 +569,8 @@ input.btn_submit {
  */
 /** クエスト基本 */
 .quest {
-    height:980px;
+    position: relative;
+    width: 640px;
 }
 .stages {
     height:980px;
@@ -621,7 +622,7 @@ input.btn_submit {
     left: 103px;
     top: 330px;
     height: 200px;
-    width: 450px;
+    width: 430px;
     position: relative;
 }
 .btnQuestNotProg {
@@ -661,14 +662,14 @@ input.btn_submit {
 /** クエストの抽選結果表示 */
 .lotResultQuest {
     position: absolute;
-    top: 25px;
+    top: 40px;
     left: 240px;
     width: 150px;
 }
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 335px;
+    top: 330px;
     left: 15px;
 }
 .strLotResultDataQuest {
@@ -695,7 +696,7 @@ input.btn_submit {
 /** 一覧 */
 .userCardList {
     position: relative;
-    height:780px;
+    width:640px;
 }
 /** 強化確認ボタン */
 .btnUpConf {
@@ -1126,7 +1127,7 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
-    top:380px;
+    top:387px;
 }
 .guideFukiText {
     position: absolute;
@@ -1304,7 +1305,6 @@ display: block;
 .commonDisplay {
     position:relative;
     width:640px;
-    height: 960px;
 }
 .parent {
     text-align: center;

@@ -1,4 +1,4 @@
-<div class="userCardList">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
     
@@ -13,12 +13,12 @@
           <{$data.stage_title}>
       </div>
       <div class="btnCommonRight">
-      <a href="<{$smarty.const.BASE_URL}>Stages/scene/?enemy_id=<{$data.enemy_id}>">
+          <a href="<{$smarty.const.BASE_URL}>Stages/scene/?enemy_id=<{$data.enemy_id}>">
               <img src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-          <div class="strCcommonName">
-              鑑賞
-          </div>
-      </a>
+              <div class="strCcommonName">
+                  鑑賞
+              </div>
+          </a>
       </div>
         <{include file="../Elements/line.tpl"}>
     <{foreachelse}>
@@ -28,6 +28,6 @@
     <{/foreach}>
     <{include file="../Elements/paging.tpl"}>
     
-    <div class="userCardListUnder">
+    <div class="spaceHigh">
     </div>
 </div>

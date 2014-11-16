@@ -4,7 +4,6 @@ App::uses('AppModel', 'Model');
  * StageProb Model
  *
  * @property Stage $Stage
- * @property Raid $Raid
  */
 class StageProb extends AppModel {
 
@@ -22,16 +21,6 @@ class StageProb extends AppModel {
  */
 	public $validate = array(
 		'stage_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'raid_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -104,13 +93,6 @@ class StageProb extends AppModel {
 		'Stage' => array(
 			'className' => 'Stage',
 			'foreignKey' => 'stage_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Raid' => array(
-			'className' => 'Raid',
-			'foreignKey' => 'raid_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

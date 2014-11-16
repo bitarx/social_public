@@ -419,7 +419,7 @@ $this->log($afterCardId);
         $list = array();
         for ($i = 1; $i <= 10; $i++) {
             if (!empty($this->params['target_' . $i])) {
-                $list[] = FILEOUT_URL . '?size=m&dir=card&target=' . $this->params['target_' . $i];
+                $list[] = IMG_URL . 'card/card_m_' . $this->params['target_' . $i] . '.jpg';
             }
         }
 

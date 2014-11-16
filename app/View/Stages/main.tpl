@@ -9,7 +9,7 @@ $(function () {
 });
 </script>
 <div class="stageMain">
-     <img src="<{$smarty.const.IMG_URL}>quest/main_1.jpg">
+     <img src="<{$smarty.const.IMG_URL}>quest/main_<{$data.quest_id}>.jpg">
 
     <{if !empty($boss)}> 
         <div  class="btnQuestBoss">
