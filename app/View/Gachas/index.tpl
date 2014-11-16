@@ -24,7 +24,7 @@
             <{/if}> 
         </div>
 
-        <div class="btnGachaStart">
+        <div class="parent">
             <{if $data.gacha_id == 3 && 0 < $data.point && $haveMoney < $data.point }>
                 <{$smarty.const.MONEY_NAME}>が足りません
             <{else}>
@@ -35,7 +35,7 @@
                        チケットでガチャる 
                     </div>
                 <{else}>
-                    <div class="strUpConf">
+                    <div class="child">
                        ガチャる 
                     </div>
                 <{/if}>
@@ -43,7 +43,9 @@
             <{/if}>
         </div>
 
-         <div class="lineGacha">
+        <div class="space"></div>
+
+        <div class="lineGacha">
              <img src="<{$smarty.const.IMG_URL}>line.png">
         </div>
     <{/foreach}>
