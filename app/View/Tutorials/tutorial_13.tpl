@@ -117,7 +117,7 @@
           turn,
           imageLoadComplete,
           contentsComplete,
-          <{$carrer}>
+          <{$divNum}>
         );
 
         var el = document.getElementById( "skip" );

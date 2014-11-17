@@ -1,7 +1,7 @@
-<div class="tutorials index">
-    <div class="bannerTitle">
+<div class="commonDisplay">
+    <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>banner_title.png">
-            <div class="strMisstionStart" >
+            <div class="child" >
                 <{$row['tutorial_title']}>
             </div>
     </div>

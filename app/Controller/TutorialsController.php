@@ -942,6 +942,7 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
         // アサイン
+   $this->log($this->row); 
         $this->set('row',  $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 

@@ -39,7 +39,8 @@
             glowline: "<{$smarty.const.BASE_URL}>img/glowline.png"
           },
           imageLoadComplete,
-          contentsComplete
+          contentsComplete,
+          <{$divNum}>
         );
       };
 

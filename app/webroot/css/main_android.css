@@ -408,7 +408,7 @@ input.btn_submit {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: 8px;
+    top: -100px;
     height:100px;
     line-height: 0;
     width: 320px;
@@ -620,25 +620,25 @@ input.btn_submit {
 /** クエストの進行ボタン */
 .btnQuestProg {
     left: 103px;
-    top: 330px;
+    top: 250px;
     height: 200px;
     width: 430px;
     position: relative;
 }
 .btnQuestNotProg {
     left: 0px;
-    top: 350px;
+    top: 270px;
     position: relative;
 }
 .btnQuestProgBoss {
     left: 103px;
-    top: 340px;
+    top: 260px;
     height: 130px;
     position: relative;
 }
 .btnQuestNotProgBoss {
     left: 0px;
-    top: 280px;
+    top: 200px;
     position: relative;
 }
 .strQuestProg {
@@ -650,7 +650,7 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 333px;
+    top: 253px;
     position: relative;
 }
 .strQuestBoss {
@@ -669,12 +669,12 @@ input.btn_submit {
 .lotResultDataQuest {
     position: absolute;
     float:left;
-    top: 330px;
+    top: 130px;
     left: 15px;
 }
 .strLotResultDataQuest {
     position: absolute;
-    top: 395px;
+    top: 195px;
     left: 200px;
 }
 
@@ -1043,7 +1043,7 @@ display: block;
     position: relative;
     text-align: center;
     top: 10px;
-    height: 150px;
+    height: 230px;
 }
 .tutoStartItemTextStr {
     position: absolute;
@@ -1117,7 +1117,7 @@ display: block;
 .guideFukiUnderXL {
     position: absolute;
     left:18px;
-    top:188px;
+    top:186px;
 }
 .guideFukiUnder3XL {
     position: absolute;

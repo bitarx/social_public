@@ -43,7 +43,8 @@
           <{$startExp}>,
           <{$endExp}>,
           imageLoadComplete,
-          contentsComplete
+          contentsComplete,
+          <{$divNum}>
         );
       };
 

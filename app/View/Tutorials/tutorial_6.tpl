@@ -1,4 +1,4 @@
-<div class="tutorials index">
+<div class="commonDisplay">
 
     <{include file="../Elements/title.tpl"}>
 
@@ -83,15 +83,17 @@
             <img src="<{$smarty.const.IMG_URL}>line_under.png">
         </div>
     </div>
-</div>
-<div>
-    <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">
-</div>
+    <div>
+        <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">
+    </div>
+
         <a href="<{$next}>">
-                <div class="btnCommon">
-                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strGacha">
-                        進化させる
-                    </div>
+            <div class="parent">
+                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="child">
+                    進化させる
                 </div>
+            </div>
         </a>
+     <div class="space"></div>
+</div>

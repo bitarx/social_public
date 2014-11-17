@@ -8,7 +8,7 @@ $(function () {
     dispRotResultQuest();
 });
 </script>
-<div class="stages">
+<div class="stageMain">
      <img src="<{$smarty.const.IMG_URL}>quest/main_3.jpg">
 
         <div  class="btnQuestProg" id="appReq" act="Tutorials/quest" params=<{$param}>> 
@@ -38,10 +38,6 @@ $(function () {
         <div id="progQuestExp" class="progQuestExp">
         </div>
     </div>
-<{*
-    <div id="lotResultQuest" class="lotResultQuest">
-    </div>
-*}>
     <div id="lotResultDataQuest" class="lotResultDataQuest">
     </div>
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">

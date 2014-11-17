@@ -1,1 +1,1 @@
-const MONEY_NAME = 'ゴールド';
+const MONEY_NAME = 'シルバー';

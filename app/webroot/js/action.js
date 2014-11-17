@@ -104,10 +104,10 @@ function dispRotResultQuest(data)
            image = '<div class="guide"><div class="guideImg">';
            if (1 == data.tuto) {
                image += '<img src="' + IMG_URL + 'tutorial/card_s_' + data.target + '.jpg" width="160px">'; 
-               str = data.name + 'が仲間に加わった！';
+               str = '<span style="color:#FFD700">' + data.name + 'が仲間に加わった！</span>';
            } else {
                image += '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" width="160px">'; 
-               str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '">' + data.name + 'が仲間に加わった！</a>';
+               str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '"><span style="color:#FFD700">' + data.name + 'が仲間に加わった！</span></a>';
            }
            image += '</div></div>';
            filename = 'card_get_on.png';
@@ -119,7 +119,9 @@ function dispRotResultQuest(data)
        // ゴールド
        case "3":
            filename = 'card_gold_on.png';
-           str = data.num + MONEY_NAME + '手に入れた！';
+           str = '<span style="color:#FFD700">';
+           str += data.num + MONEY_NAME + '手に入れた！';
+           str += '</span>';
            break;
        // 敵
        case "4":

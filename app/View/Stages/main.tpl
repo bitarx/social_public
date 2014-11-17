@@ -87,8 +87,6 @@ $(function () {
         </div>
     <{/if}>
 
-    <div id="lotResultQuest" class="lotResultQuest">
-    </div>
     <div id="lotResultDataQuest" class="lotResultDataQuest">
     </div>
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">
