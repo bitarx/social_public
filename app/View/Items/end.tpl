@@ -1,9 +1,9 @@
-<div style="position:relative;height:800px;">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
             購入完了
         </div>
     </div>
@@ -12,13 +12,17 @@
         <{$data.item_name}>を購入しました。
     </div>
 
-    <div class="changeBase">
-        <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+    <div class="space"></div>
+
+    <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserItems/conf/<{$userItemId}>">
-        <div class="strCommonButton" >
+        <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+        <div class="child" >
            早速使う 
         </div>
         </a>
     </div>
+
+    <div class="space"></div>
 
 </div>

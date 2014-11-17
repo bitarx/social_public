@@ -198,28 +198,6 @@ a:hover {
     left: 194px;
 }
 
-/** タイトルバナーと文字 */
-.strTitleGacha {
-    position: absolute;
-    top: 35%;
-    left: 45%;
-}
-.strTitleBaseCard {
-    position: absolute;
-    top: 35%;
-    left: 35%;
-}
-.strTitleDeckCard {
-    position: absolute;
-    top: 35%;
-    left: 40%;
-}
-.strTitleBaseCardConf {
-    position: absolute;
-    top: 20px;
-    left: 240px;
-}
-
 
 /** ガチャ */
 .gachaImg {
@@ -408,7 +386,7 @@ input.btn_submit {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: -100px;
+    top: -140px;
     height:100px;
     line-height: 0;
     width: 320px;
@@ -494,27 +472,27 @@ input.btn_submit {
 .strPagingPrev {
     position:absolute;
     top:5px;
-    left:15px;
+    left:5px;
     margin: auto;
 }
 .strPaging {
     position:relative;
     float:left;
     top:0px;
-    left:200px;
+    left:190px;
     width:100px;
 }
 .btnPagingNext {
     position:relative;
     float:right;
     top:0px;
-    right:90px;
+    right:100px;
     text-align: center;
 }
 .strPagingNext {
     position:absolute;
     top:5px;
-    left:15px;
+    left:10px;
     margin: auto;
 }
 .pagingNum {
@@ -572,6 +550,14 @@ input.btn_submit {
     position: relative;
     width: 640px;
 }
+.strQuestList {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    width: 580px;
+    font-size:42px;
+    color: #000;
+}
 .stages {
     height:980px;
 }
@@ -606,7 +592,7 @@ input.btn_submit {
 
 .stageItemEffect {
     position:relative;
-    top:105px;
+    top:95px;
     height:100px;
     text-align:center;
 }
@@ -622,7 +608,7 @@ input.btn_submit {
     left: 103px;
     top: 250px;
     height: 200px;
-    width: 430px;
+    width: 450px;
     position: relative;
 }
 .btnQuestNotProg {
@@ -677,6 +663,24 @@ input.btn_submit {
     top: 195px;
     left: 200px;
 }
+.textAreaStageImg {
+    width:600px;
+    height: 170px;
+}
+.goldImg {
+    width:150px;
+    left: 0px;
+}
+.stageImgArea {
+    position : absolute;
+    top: 10px;
+    left: 5px;
+}
+.stageMesArea {
+    position : absolute;
+    top: 65px;
+    left: 170px;
+}
 
 /** クエストボスバトル */
 .btnQuestBossBattle {
@@ -693,30 +697,6 @@ input.btn_submit {
 /**
  * 合成関連
  */
-/** 一覧 */
-.userCardList {
-    position: relative;
-    width:640px;
-}
-/** 強化確認ボタン */
-.btnUpConf {
-    position: relative;
-    top: 40px;
-    left: 180px;
-    height:80px;
-}
-.strUpConf {
-    position: absolute;
-    top: 14px;
-    left: 90px;
-
-}
-.strUpConfT {
-    position: absolute;
-    top: 14px;
-    left: 25px;
-
-}
 /** 合成決定ボタン */
 .btnUpComp {
     position: relative;
@@ -958,19 +938,6 @@ display: block;
 }
 
 /** プレゼント受取 */
-.userPresentBoxesIndex {
-}
-.btnGetPresentAll {
-    position: relative;
-    top:20px;
-    left:90px;
-    height:90px;
-}
-.strGetPresentAll {
-    position: absolute;
-    top:15px;
-    left:130px;
-}
 .present {
     position:relative;
     color: #FFA500;
@@ -1319,6 +1286,9 @@ display: block;
 }
 .space {
     height: 30px;
+}
+.spaceLow {
+    height: 10px;
 }
 .spaceHigh {
     height: 80px;

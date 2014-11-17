@@ -1,16 +1,17 @@
-<div class="userPresentBoxesIndex">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
-    <div class="btnGetPresentAll">
+    <div class="parent">
       <{if !empty($list)}> 
-       <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/initAll">
-       <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
-        <div class="strGetPresentAll">
-            一括受け取り
-        </div>
-        </a>
+           <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/initAll">
+               <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+                <div class="child">
+                    一括受け取り
+                </div>
+           </a>
       <{else}>
-        受け取れるプレゼントがありません。
+          <div class="spaceHigh"></div>
+          受け取れるプレゼントがありません。
       <{/if}>
     </div>
 
@@ -26,4 +27,6 @@
 
         <{include file="../Elements/paging.tpl"}>
     <{/if}>
+
+    <div class="spaceHigh"></div>
 </div>

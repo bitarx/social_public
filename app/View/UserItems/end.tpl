@@ -1,9 +1,9 @@
-<div style="position:relative;height:800px;">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
             使用完了
         </div>
     </div>
@@ -12,13 +12,17 @@
         <{$data.detail_after}>
     </div>
 
-    <div class="changeBase">
-        <img src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+    <div class="space"></div>
+
+    <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>Quests/index">
-        <div class="strChangeBase" >
-           ミッションへ 
-        </div>
+            <img src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child" >
+               ミッションへ 
+            </div>
         </a>
     </div>
+
+    <div class="spaceHigh"></div>
 
 </div>

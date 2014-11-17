@@ -1,4 +1,4 @@
-<div class="userCardList">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
     <{include file="../Elements/card.tpl"}>
     <div class="space"></div>
@@ -76,4 +76,6 @@
     <{/if}>
     
     <{include file="../Elements/pagingNum.tpl"}>
+
+    <div class="spaceHigh"></div>
 </div>

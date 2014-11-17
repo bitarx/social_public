@@ -1,4 +1,10 @@
 <div class="stages">
+    <div class="parent">
+        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
+            <{$data.card_name}>
+        </div>
+    </div>
     <div>
         <img src="<{$smarty.const.IMG_URL}>enemy/enemy_<{$data.enemy_id}>.jpg" >
     </div>

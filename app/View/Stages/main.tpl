@@ -9,7 +9,13 @@ $(function () {
 });
 </script>
 <div class="stageMain">
-     <img src="<{$smarty.const.IMG_URL}>quest/main_<{$data.quest_id}>.jpg">
+    <img src="<{$smarty.const.IMG_URL}>quest/main_<{$data.quest_id}>.jpg">
+    <div class="parent">
+        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
+            <{$data.stage_title}>
+        </div>
+    </div>
 
     <{if !empty($boss)}> 
         <div  class="btnQuestBoss">

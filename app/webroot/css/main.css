@@ -30,7 +30,6 @@ body {
 }
 
 
-
 a {
 	color: #fff;
 	text-decoration: underline;
@@ -199,44 +198,6 @@ a:hover {
     position: absolute;
     top: 315px;
     left: 194px;
-}
-
-/** タイトルバナーと文字 */
-.bannerTitle {
-    margin: 0;
-    left:4px;
-    position: relative;
-}
-.strTitleSynth {
-    position: absolute;
-    top: 18%;
-    left: 42%;
-    font-size: 30px;
-}
-.strTitleGacha {
-    position: absolute;
-    top: 18%;
-    left: 45%;
-    font-size: 30px;
-}
-.strTitleBaseCard {
-    position: absolute;
-    top: 15px;
-    left: 210px;
-    width:280px;
-    font-size: 30px;
-}
-.strTitleDeckCard {
-    position: absolute;
-    top: 15px;
-    left: 245px;
-    font-size: 30px;
-}
-.strTitleBaseCardConf {
-    position: absolute;
-    top: 20px;
-    left: 240px;
-    font-size: 30px;
 }
 
 
@@ -538,14 +499,14 @@ input.btn_submit {
     position:relative;
     float:left;
     top:0px;
-    left:200px;
+    left:190px;
     width:100px;
 }
 .btnPagingNext {
     position:relative;
     float:right;
     top:0px;
-    right:90px;
+    right:95px;
     text-align:center;
 }
 .strPagingNext {
@@ -613,6 +574,15 @@ input.btn_submit {
 .quest {
     position: relative;
     width: 640px;
+    left: 10px;
+}
+.strQuestList {
+    position: absolute;
+    top: 18px;
+    left: 12px;
+    width: 580px;
+    font-size:22px;
+    color: #000;
 }
 .stages {
     height:980px;
@@ -648,7 +618,7 @@ input.btn_submit {
 
 .stageItemEffect {
     position:relative;
-    top:25px;
+    top:15px;
     height:100px;
     text-align:center;
 }
@@ -721,6 +691,24 @@ input.btn_submit {
     top: 195px;
     left: 200px;
 }
+.textAreaStageImg {
+    width:600px;
+    height: 170px;
+}
+.goldImg {
+    width:150px;
+    left: 0px;
+}
+.stageImgArea {
+    position : absolute;
+    top: 10px;
+    left: 5px;
+}
+.stageMesArea {
+    position : absolute;
+    top: 65px;
+    left: 170px;
+}
 
 /** クエストボスバトル */
 .btnQuestBossBattle {
@@ -738,18 +726,6 @@ input.btn_submit {
 /**
  * 合成関連
  */
-/** 一覧 */
-.userCardList {
-    height:780px;
-}
-/** 強化確認ボタン */
-.strUpConfT {
-    position: absolute;
-    top: 14px;
-    left: 25px;
-    font-size: 24px;
-
-}
 /** 合成決定ボタン */
 .btnUpComp {
     position: relative;
@@ -1003,20 +979,6 @@ display: block;
 }
 
 /** プレゼント受取 */
-.userPresentBoxesIndex {
-    font-size: 24px;
-}
-.btnGetPresentAll {
-    position: relative;
-    top:20px;
-    left:90px;
-    height:90px;
-}
-.strGetPresentAll {
-    position: absolute;
-    top:15px;
-    left:130px;
-}
 .present {
     position:relative;
     font-size: 24px;
@@ -1380,6 +1342,9 @@ display: block;
 .space {
     height: 30px;
 }
+.spaceLow {
+    height: 10px;
+}
 .spaceHigh {
     height: 80px;
 }
@@ -1440,7 +1405,6 @@ input[type=checkbox] {
   -webkit-transform-origin: right bottom;
   -webkit-transform: scale( 1 , 1 );
 }
-
 
 
 /** ヘルプページ */

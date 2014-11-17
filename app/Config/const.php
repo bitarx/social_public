@@ -97,7 +97,7 @@ define("KEY_PAGING", 'p');
  * 文言
  */
 define("SITE_TITLE", '鎮激のエロイーズ');    // サイトタイトル
-define("MONEY_NAME","シルバー");             // サイト内通貨の呼称
+define("MONEY_NAME","ペニー");             // サイト内通貨の呼称
 define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
 // デッキにカードがない
@@ -128,4 +128,11 @@ define("GACHA_PREMIUM_ID", 1 );
 define("GACHA_10_ID", 2 );
 // 無課金ガチャID
 define("GACHA_MONEY_ID", 3 );
+
+
+/**
+ * クエスト関連
+ */
+// 最大ステージID
+define("MAX_STAGE_ID", 30 );
 

@@ -1,15 +1,23 @@
 <div class="quest">
     <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
-    <div class="space">
+    <div class="spaceLow">
     </div>
     <{foreach from=$list item=val}> 
         <div>
-            <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "><{$val['quest_id']}>. <{$val['quest_title']}> 
-            <div style="height:5px;">
+            <div class="space">
             </div>
-            <{$val['detail_before1']}> </a>
+            <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "><{$val['quest_id']}>. <{$val['quest_title']}>
+                <div class="spaceLow">
+                </div>
+                <div class="quest">
+                    <img src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaStageImg">
+                    <div class="strQuestList">
+                        <{$val['detail_before1']}> 
+                    </div>
+                </div>
+            </a>
         </div>
-        <div style="height:15px;">
+        <div class="spaceLow">
         </div>
     <{/foreach}> 
     <div class="space">

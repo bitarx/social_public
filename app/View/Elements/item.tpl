@@ -17,14 +17,14 @@
 
         <{if !empty($data.useable)}> 
             <{if empty($effect)}>
-            <a href="<{$smarty.const.BASE_URL}>UserItems/<{$nextAction}>/<{$data.id}>">
                 <div class="btnSelectCard">
-                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strSelectCard">
-                        使用する
-                    </div>
+                    <a href="<{$smarty.const.BASE_URL}>UserItems/<{$nextAction}>/<{$data.id}>">
+                        <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                        <div class="strSelectCard">
+                            使用する
+                        </div>
+                    </a>
                 </div>
-            </a>
             <{else}>
                 <div style="text-align:center; top:40px;">
                 現在使用中のアイテムがあるため使用できません
@@ -51,15 +51,21 @@
                     <{$data.item_detail}>
                 </span>
             </div>
+            
+            <{if $carrer == $smarty.const.CARRER_IPHONE}>
+                <div class="spaceHigh"></div>
+            <{else}>
+                <div class="space"></div>
+            <{/if}>
 
-            <a href="conf/<{$data.item_id}>">
-                <div class="btnSelectCard">
+            <div class="btnSelectCard">
+                <a href="conf/<{$data.item_id}>">
                     <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                     <div class="strSelectCard">
                         購入する
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         <{/if}> 
     <{/if}>
 

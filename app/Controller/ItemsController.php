@@ -121,6 +121,7 @@ class ItemsController extends ApiController {
         $latestData = $this->PaymentLog->getLatestData($this->userId);
         if (empty($latestData)) {
             $this->UserParam->rollback(); 
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error'=> 2)); 
         }
         $items = $latestData['log'];
@@ -142,6 +143,7 @@ class ItemsController extends ApiController {
 
         if ($err == 1) {
             // 直近で購入したアイテムではない
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error'=> 2)); 
         }
 
@@ -173,7 +175,6 @@ class ItemsController extends ApiController {
         }
 
         $this->UserItem->begin();
-
         foreach ($newItemIds as $newItemId) {
             // 存在確認
             $where = array(
@@ -185,12 +186,11 @@ class ItemsController extends ApiController {
             try {
 
                 if (empty($userItem)) {
-                    $values = array(
-                        'user_id'  => $this->userId  
-                    ,   'item_id'  => $newItemId
-                    ,   'num'      => $itemData['box_num']
-                    );
-                    $this->UserItem->save($values);    
+
+                    $data     = array();
+                    $fields   = array('user_id', 'item_id', 'num');
+                    $data[]   = array($this->userId, $newItemId, $itemData['box_num']);
+                    $this->UserItem->insertBulk( $fields , $data );
                 } else {
 
                     $addNum = $userItem['num'] + $itemData['box_num'];
@@ -259,9 +259,7 @@ class ItemsController extends ApiController {
         $where = array('item_id' => $itemData['itemId']);
         $field = array();
         $data = $this->Item->getAllFind($where, $field, 'first');
-$this->log($data); 
         $itemGroup = $this->ItemGroup->getAllFind($where , $field, 'first');
-$this->log($itemGroup); 
         if (!empty($itemGroup['item_base_id'])) {
             $itemId = $itemGroup['item_base_id'];
         } else {
@@ -272,7 +270,6 @@ $this->log($itemGroup);
                      'user_id' => $this->userId
                  ,   'item_id' => $itemId
                  );
-$this->log($where); 
         $userItem = $this->UserItem->getAllFind($where, $field, 'first');
         if (empty($userItem['num'])) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);

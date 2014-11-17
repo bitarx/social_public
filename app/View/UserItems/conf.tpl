@@ -1,9 +1,9 @@
-<div style="position:relative">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
-    <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
-        <div class="subTitleStr">
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+        <div class="child">
             使用確認
         </div>
     </div>
@@ -12,4 +12,5 @@
 
     <{include file="../Elements/line.tpl"}>
 
+    <div class="spaceHigh"></div>
 </div>

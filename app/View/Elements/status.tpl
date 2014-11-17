@@ -1,6 +1,6 @@
 <div class="status">
     <div class="parent">
-        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="64px" width="680px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
         <div class="child">
             <{$name}> 
         </div>

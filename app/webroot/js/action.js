@@ -96,21 +96,26 @@ function dispRotResultQuest(data)
 
     var str = "";
     var image = "";
-    var filename = 'card_prog_on.png';
+    var filename = '';
     switch(kind)
     {
        // カード
        case "1":
-           image = '<div class="guide"><div class="guideImg">';
+           image =  '<div class="parent">';
+           image +=     '<img src="' + IMG_URL + 'textarea_gd.png" class="textAreaStageImg">';
+           image +=     '<div class="stageImgArea">';
+           image +=         '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" class="goldImg">'; 
+           image +=     '</div>';
+           image +=     '<div class="stageMesArea">';
+           image +=     '<span style="color:#FFA500">';
            if (1 == data.tuto) {
-               image += '<img src="' + IMG_URL + 'tutorial/card_s_' + data.target + '.jpg" width="160px">'; 
-               str = '<span style="color:#FFD700">' + data.name + 'が仲間に加わった！</span>';
+               image += '<span style="color:#FFA500">' + data.name + 'が仲間に加わった！</span>';
            } else {
-               image += '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" width="160px">'; 
-               str = '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '"><span style="color:#FFD700">' + data.name + 'が仲間に加わった！</span></a>';
+               image += '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '"><span style="color:#FFA500">' + data.name + 'が仲間に加わった！</span></a>';
            }
-           image += '</div></div>';
-           filename = 'card_get_on.png';
+           image +=     '</div>';
+           image += '</div>';
+           filename = '';
            break;
        // 金庫
        case "2":
@@ -118,26 +123,34 @@ function dispRotResultQuest(data)
            break;
        // ゴールド
        case "3":
-           filename = 'card_gold_on.png';
-           str = '<span style="color:#FFD700">';
-           str += data.num + MONEY_NAME + '手に入れた！';
-           str += '</span>';
+           filename = '';
+           image =  '<div class="parent">';
+           image +=     '<img src="' + IMG_URL + 'textarea_gd.png" class="textAreaStageImg">';
+           image +=     '<div class="stageImgArea">';
+           image +=         '<img src="' + IMG_URL + 'item/gold.png" class="goldImg">';
+           image +=     '</div>';
+           image +=     '<div class="stageMesArea">';
+           image +=         '<span style="color:#FFA500">';
+           image +=             data.num + MONEY_NAME + '手に入れた！';
+           image +=         '</span>';
+           image +=     '</div>';
+           image += '</div>';
            break;
        // 敵
        case "4":
-           filename = 'card_enemy_on.png';
+           filename = '';
            break;
        // 全力進行    
        case "5":
-           filename = 'card_bestprog_on.png';
+           filename = '';
            break;
        // 出会い
        case "6":
-           filename = 'card_bestprog_on.png';
+           filename = '';
            break;
        // カードの裏
        case "99":
-           filename = 'card_back.png';
+           filename = '';
            break;
        // 何も出ないときはデッキセットキャラがメッセージを発する
        default:

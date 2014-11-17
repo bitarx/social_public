@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <meta charset="UTF-8">
-    <{if $carrer == 2}>
+    <{if $carrer == $smarty.const.CARRER_IPHONE}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
     <{else}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main_android.css" />

@@ -10,6 +10,6 @@
         保有アイテムはありません
         </div>
     <{/foreach}>
-    <div style="height:20px;">
+    <div class="spaceHigh">
     </div>
 </div>

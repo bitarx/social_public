@@ -142,6 +142,7 @@ class AppController extends Controller {
         if (empty($this->ownerId)) {
 
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
+$this->log('aaaaaaaaaaa'); 
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
             }
@@ -149,6 +150,7 @@ class AppController extends Controller {
         }
 
 
+$this->log('bbbbbbbbb'); 
         if ( !in_array($this->name, self::$ctlError) ) {
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
                 $firstAccess = 1;
@@ -160,8 +162,10 @@ class AppController extends Controller {
             } else { 
                 // 正常なアクセスの場合はユーザIDをセット
                 $where = array('User.sns_user_id' => $this->ownerId); 
+$this->log($where); 
                 $this->userId = $this->User->field('user_id', $where);
-
+$this->log('cccccccccccc'); 
+$this->log($this->userId); 
 
 
                 // ユーザデータ登録
