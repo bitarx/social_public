@@ -93,6 +93,8 @@ $(function () {
         </div>
     <{/if}>
 
+    <div id="levelUp" class="levelUp">
+    </div>
     <div id="lotResultDataQuest" class="lotResultDataQuest">
     </div>
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">

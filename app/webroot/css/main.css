@@ -644,7 +644,7 @@ input.btn_submit {
 }
 .btnQuestProgBoss {
     left: 103px;
-    top: 280px;
+    top: 260px;
     height: 130px;
     position: relative;
 }
@@ -663,13 +663,13 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 253px;
+    top: 243px;
     position: relative;
 }
 .strQuestBoss {
     position: absolute;
     top: 12px;
-    left: 150px;
+    left: 160px;
     font-size: 24px;
 }
 
@@ -709,11 +709,26 @@ input.btn_submit {
     top: 65px;
     left: 170px;
 }
+.levelUp {
+    position: absolute;
+    text-align:center;
+    top: 5px;
+}
+.textAreaLevelUpImg {
+    width:600px;
+    height: 125px;
+}
+.levelUpMesArea {
+    position : absolute;
+    margin: auto;
+    width:640px;
+    top: 8px;
+}
 
 /** クエストボスバトル */
 .btnQuestBossBattle {
     left: 103px;
-    top: 80px;
+    top: 70px;
     position: relative;
 }
 .strQuestBossBattle {

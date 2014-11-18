@@ -790,16 +790,15 @@ $this->log($turn);
                 // レベルアップ
                 $actMaxDiff  = 0;
                 $costAtkDiff = 0;
+                $actMaxBef  = $userParam['act_max'];
+                $costAtkBef = $userParam['cost_atk'];
                 if (100 < $userParam['exp']) {
                     $userParam['exp'] = 0;
                     $userParam['level']++;
                     $levelUp = 1;
 
                     // レベルアップ処理
-                    $actMaxBef  = $userParam['act_max'];
-                    $costAtkBef = $userParam['cost_atk'];
-
-                    $userParam['act_max'] = ceil($userParam['act_max'] * 1.1);
+                    $userParam['act_max'] = ceil($userParam['act_max'] * 1.05);
                     $userParam['cost_atk'] += 1;
                     $actMaxDiff  = $userParam['act_max'] - $actMaxBef;
                     $costAtkDiff = $userParam['cost_atk'] - $costAtkBef;
@@ -817,20 +816,24 @@ $this->log($turn);
                     'result'   => 1
                 ,   'progress' => $data['progress']     
                 ,   'kind'     => $lotData['kind']
-                ,   'target'   => $lotData['target']   // 取得対象のid
-                ,   'num'      => $lotData['num']      // 取得対象の個数（金額）
+                ,   'target'   => $lotData['target']                // 取得対象のid
+                ,   'num'      => $lotData['num']                   // 取得対象の個数（金額）
                 ,   'exp'      => $userParam['exp']
-                ,   'act'      => $actBar              // 行動力 
-                ,   'act_max_diff'   => $actMaxDiff    // 前のレベルとの差分
-                ,   'cost_atk_diff'  => $costAtkDiff   // 前のレベルとの差分
-                ,   'not_act'  => $notAct              // 行動力切れの場合1
-                ,   'level'    => $userParam['level']  // レベル
-                ,   'level_up' => $levelUp             // レベルアップの場合1
-                ,   'stage_clear' => $stageClear       // ステージクリアの場合1 
-                ,   'stage_id' => $data['stage_id']    // ステージID
-                ,   'name'     => $targetData['name']  // 入手物の名前
-                ,   'effect'   => $effect              // アイテム効果による確率変動(3:カードup 4:ゴールドup)
-                ,   'effectSecond' => $effectSecond    // アイテム効果残り秒
+                ,   'act'      => $actBar                           // 行動力 
+                ,   'act_max_diff'     => $actMaxDiff               // 前のレベルとの差分
+                ,   'cost_atk_diff'    => $costAtkDiff              // 前のレベルとの差分
+                ,   'not_act'          => $notAct                   // 行動力切れの場合1
+                ,   'level'            => $userParam['level']       // レベル
+                ,   'level_up'         => $levelUp                  // レベルアップの場合1
+                ,   'level_up_act_bf'  => $actMaxBef                // レベルアップ前の最大行動力
+                ,   'level_up_act_af'  => $userParam['act_max']     // レベルアップ後の最大行動力
+                ,   'level_up_cost_bf' => $costAtkBef               // レベルアップ前のデッキコスト
+                ,   'level_up_cost_af' => $userParam['cost_atk']    // レベルアップ後のデッキコスト
+                ,   'stage_clear'      => $stageClear               // ステージクリアの場合1 
+                ,   'stage_id'         => $data['stage_id']         // ステージID
+                ,   'name'             => $targetData['name']       // 入手物の名前
+                ,   'effect'           => $effect                   // アイテム効果による確率変動(3:カードup 4:ゴールドup)
+                ,   'effectSecond'     => $effectSecond             // アイテム効果残り秒
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 

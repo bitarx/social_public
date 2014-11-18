@@ -115,6 +115,8 @@ function dispRotResultQuest(data)
            }
            image +=     '</div>';
            image += '</div>';
+           location.href = BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+
            filename = '';
            break;
        // 金庫
@@ -178,11 +180,25 @@ function dispRotResultQuest(data)
            image += '</div>';
            break; 
     } 
-    // クエストカード
-    if ( "99" != kind ) {
-        $('#lotResultQuest').html( '<img src="' + BASE_URL + 'img/' + filename  + '">' );
-        $('#lotResultQuest').show(); 
+    // レベルアップ
+    if ( undefined != data && "1" == data.level_up ) {
+           var html =  '<div class="parent">';
+           html +=     '<img src="' + IMG_URL + 'textarea_gd.png" class="textAreaLevelUpImg">';
+           html +=     '<div class="levelUpMesArea">';
+           html +=         '<span style="color:#FFA500">';
+           html +=             'レベルアップ！<br />';
+           html +=         '</span>';
+           html +=         '最大行動力:' + data.level_up_act_bf + '→<span style="color:#FFA500">' + data.level_up_act_af + '</span><br />';
+           html +=         '最大デッキコスト:' + data.level_up_cost_bf + '→<span style="color:#FFA500">' + data.level_up_cost_af + '</span>';
+           html +=     '</div>';
+           html += '</div>';
+        
+    } else {
+        var html = "";
     }
+
+    $('#levelUp').html( html );
+    $('#levelUp').show(); 
 
     // 結果イメージ等
     $('#lotResultDataQuest').html(image);

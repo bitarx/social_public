@@ -214,6 +214,8 @@ class ItemsController extends ApiController {
         }
 
         // 初回限定アイテム
+        $this->log('itemId'); 
+$this->log($itemId); 
         if (FIRST_ITEM_ID == $itemId) {
             $where = array(
                 'user_id' => $this->userId 

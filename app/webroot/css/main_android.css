@@ -681,6 +681,21 @@ input.btn_submit {
     top: 65px;
     left: 170px;
 }
+.levelUp {
+    position: absolute;
+    text-align:center;
+    top: 5px;
+}
+.textAreaLevelUpImg {
+    width:600px;
+    height: 110px;
+}
+.levelUpMesArea {
+    position : absolute;
+    margin: auto;
+    width:640px;
+    top: 15px;
+}
 
 /** クエストボスバトル */
 .btnQuestBossBattle {
