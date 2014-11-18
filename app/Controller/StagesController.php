@@ -784,7 +784,12 @@ $this->log($turn);
 
                 // 経験値アップ
                 $levelUp = 0;
-                $getExp = $this->Common->lotRange($userStageData['use_act'], $range);
+                $expBaseInt = $userStageData['use_act'];
+
+                // 一回のクエスト実行で５以上は上がらない
+                if (5 < $expBaseInt) $expBaseInt = 5;
+
+                $getExp = $this->Common->lotRange($expBaseInt, $range);
                 $userParam['exp'] += $getExp;
 
                 // レベルアップ

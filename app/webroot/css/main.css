@@ -644,7 +644,7 @@ input.btn_submit {
 }
 .btnQuestProgBoss {
     left: 103px;
-    top: 260px;
+    top: 250px;
     height: 130px;
     position: relative;
 }
@@ -663,7 +663,7 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 243px;
+    top: 233px;
     position: relative;
 }
 .strQuestBoss {
