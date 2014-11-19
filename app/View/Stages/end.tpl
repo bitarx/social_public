@@ -15,7 +15,7 @@
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
             </div>
-            <div class="guideFukiUpper">
+            <div class="guideFukiUpperEnd">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px">
             </div>
             <div class="guideFukiUnder4XL">
