@@ -1132,7 +1132,7 @@ display: block;
 .guideFukiUpper {
     position: absolute;
     left:18px;
-    top:-9px;
+    top:-8px;
 }
 .guideFukiUnder {
     position: absolute;
@@ -1178,7 +1178,7 @@ display: block;
 }
 .guideFukiMiddle {
     position: absolute;
-    top: -8px;
+    top: -6px;
     left: 18px;
 }
 

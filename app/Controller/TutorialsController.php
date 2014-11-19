@@ -17,7 +17,7 @@ class TutorialsController extends ApiController {
 
     public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard'
                         , 'UserParam','UserDeck', 'UserDeckCard', 'Items', 'UserItem'
-                        , 'UserPresentBox', 'UserTutorialQuestcnt', 'UserBaseCard');
+                        , 'UserPresentBox', 'UserTutorialQuestcnt', 'UserBaseCard', 'UserCollect');
 
     public $row  = array();
 
@@ -949,7 +949,6 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
         // アサイン
-   $this->log($this->row); 
         $this->set('row',  $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
@@ -1058,37 +1057,6 @@ class TutorialsController extends ApiController {
         $this->set('guideId',  1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 
-
-    /**
-     * チュートリアル最終処理
-     *
-     * @author imanishi 
-     * @return void
-     */
-    public function tutorial_99() { 
-     
-
-        $this->rd('SnsUsers', 'index');
-    } 
-
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->Tutorial->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
 
     /**
      * クエスト演出

@@ -5,6 +5,8 @@ App::uses('UserItem', 'Model');
 App::uses('UserParam', 'Model');
 App::uses('Card', 'Model');
 App::uses('Item', 'Model');
+App::uses('UserCollect', 'Model');
+
 /**
  * UserPresentBox Model
  *
@@ -170,6 +172,10 @@ class UserPresentBox extends AppModel {
             case KIND_CARD:
                $userCard = new UserCard();
                $id = $userCard->registCard($userId, $data['target'], $data['num'], $dam);
+
+               // コレクション登録
+               $userCollect = new UserCollect();
+               $userCollect->initCollect($userId, $data['target']);
                break;
 
             // アイテム

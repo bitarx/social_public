@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill', 'UserCollect');
 
     /**
      *　定数
@@ -687,6 +687,9 @@ class StagesController extends ApiController {
                         $this->UserCard->registCard($userId, $lotData['target'], $lotData['num'], $row);
                         $targetData['name'] = $row['card_name'];
                         $targetData['id']   = $row['card_id'];
+
+                       // コレクション登録
+                       $this->UserCollect->initCollect($this->userId, $row['card_id']);
 
                         break;
                     // アイテム

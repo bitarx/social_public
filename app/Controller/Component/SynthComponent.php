@@ -41,7 +41,7 @@ class SynthComponent extends Component {
 
             // 強化素材の補正
             if ($val['sozai_kind'] == 1) 
-                $val['level'] = 600;
+                $val['level'] = 230;
 
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {
@@ -50,13 +50,19 @@ class SynthComponent extends Component {
                 $val['level'] *= 2;
 
                 // ベースと同じ属性であればスキルレベルアップ
-                $baseCard['skill_level']++;
+                $baseCard['skill_level'] += 1;
+
+                // 強化素材であればさらにスキルアップ
+                if ($val['sozai_kind'] == 1) {
+
+                    $baseCard['skill_level'] += 4;
+                }
             }
             $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
 
             // ベースと同じカードであればさらにスキルレベルアップ
             if ($baseCard['card_id'] == $val['card_id']) {
-                $baseCard['skill_level']++;
+                $baseCard['skill_level'] += 2;
             }
         }
 

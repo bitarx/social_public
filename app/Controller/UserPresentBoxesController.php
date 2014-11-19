@@ -15,6 +15,8 @@ class UserPresentBoxesController extends ApiController {
      */
 	public $components = array('Paginator');
 
+//    public $use = array('UserPresentBox' , 'UserCollect');
+
     /**
      * index method
      *

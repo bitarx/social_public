@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem');
+    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect');
 
     // 10連ガチャID
     public $gacha10 = array( GACHA_10_ID );
@@ -129,6 +129,9 @@ class GachasController extends ApiController {
                 );
                 $this->UserGachaLog->save($values);
 
+                // コレクション登録
+                $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
+
                 // ログリスト
                 $logList[] = $values;
 
@@ -180,6 +183,11 @@ class GachasController extends ApiController {
 
                 $field = array('user_id', 'gacha_id', 'card_id');
                 $this->UserGachaLog->insertBulk($field, $logList, $ignore = 1);
+
+                // コレクション登録
+                foreach ($logList as $val) {
+                    $this->UserCollect->initCollect($val[0], $val[2]);
+                }
 
             } catch (AppException $e) {
                 $this->UserCard->rollback();

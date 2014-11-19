@@ -110,7 +110,7 @@ class AppController extends Controller {
 
         // Js内で画面横幅変更用
         $divNum = 1;
-        if (CARRER_IPHONE == $this->carrer) $divNum = 1;
+        if (CARRER_IPHONE == $this->carrer) $divNum = 2;
         $this->set('divNum', $divNum); 
 
         // キャリア
