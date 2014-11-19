@@ -1,9 +1,13 @@
 <!DOCTYPE HTML>
 <html lang="ja">
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>進化合成</title>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+        <{if $smarty.const.CARRER_IPHONE == $carrer}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+        <{else}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution_android.css">
+        <{/if}>
     </head>
     <body>
         <canvas id="mainCanvas" height="832" width="640"></canvas>

@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>進化合成</title>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+        <{if $smarty.const.CARRER_IPHONE == $carrer}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+        <{else}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution_android.css">
+        <{/if}>
     </head>
     <body>
         <canvas id="mainCanvas" height="832px" width="640px"></canvas>
@@ -11,6 +15,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/tweenjs-0.5.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/evolution.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
 
     <script type="text/javascript">
       function back()

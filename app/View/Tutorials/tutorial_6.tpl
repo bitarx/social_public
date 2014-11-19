@@ -5,14 +5,14 @@
     <{include file="../Elements/guide.tpl"}>
 
 
-    <div class="spaceSubject">
-        <div class="cardDetailNameUpper" >
+    <div class="subTitle">
+        <div class="subLineUpper" >
             <img src="<{$smarty.const.IMG_URL}>line_upper.png">
         </div>
-        <div class="strCardDetailName" >
+        <div class="subLineStr" >
             カードを進化させます
         </div>
-        <div class="cardDetailNameUnder" >
+        <div class="subLineUnder" >
             <img src="<{$smarty.const.IMG_URL}>line_under.png">
         </div>
     </div>
@@ -72,14 +72,16 @@
         </div>
     </div>
 
-    <div class="spaceSubject">
-        <div class="cardDetailNameUpper" >
+    <div class="space"></div>
+
+    <div class="subTitle">
+        <div class="subLineUpper" >
             <img src="<{$smarty.const.IMG_URL}>line_upper.png">
         </div>
-        <div class="strSozai">
+        <div class="subLineStr">
             このカードを素材にします
         </div>
-        <div class="cardDetailNameUnder" >
+        <div class="subLineUnder" >
             <img src="<{$smarty.const.IMG_URL}>line_under.png">
         </div>
     </div>

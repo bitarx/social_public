@@ -1202,7 +1202,7 @@ display: block;
 .enemyFukiUp {
     position: absolute;
     left: 260px;
-    top:-27px;
+    top:-26px;
 }
 .enemyFukiUpper {
     position: absolute;
@@ -1243,31 +1243,10 @@ display: block;
 }
 
 /** トップページ */
-.toppage {
-    width:600px
-}
-.topInfo {
-    position: absolute;
-    width: 600px;
-    top: 770px;
-    left: 1px;
-}
-.topLineUpper {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-}
-.topLineStr {
-    position: absolute;
-    top: 26px;
-    left: 260px;
-    width: 290px;
-    font-size: 30px;
-}
-.topLineUnder {
-    position: absolute;
-    top: 70px;
-    left: 1px;
+.topImg {
+    position:relative;
+    width:640px;
+    height:650px;
 }
 .topInfoList {
     position: absolute;
@@ -1294,14 +1273,6 @@ display: block;
     font-size: 30px;
     width:400px;
 }
-.cardDetailNameUpper {
-    position: absolute;
-    top: 0px;
-}
-.cardDetailNameUnder {
-    position: absolute;
-    top: 72px;
-}
 .cardTextArea {
     position: relative;
     top: 110px;
@@ -1310,7 +1281,7 @@ display: block;
 }
 .cardTalkArea {
     position: relative;
-    top: 120px;
+    top: 15px;
     height: 180px;
     font-size: 28px;
     color: #000000;
@@ -1326,13 +1297,13 @@ display: block;
 }
 .cardArea {
     position: relative;
-    top: 110px;
+    top: 5px;
     bottom: 10px;
     height: 840px;
 }
 .cardTextArea {
     position: relative;
-    top: 110px;
+    top: 10px;
     height: 365px;
     font-size: 28px;
 }
@@ -1368,14 +1339,32 @@ display: block;
     height: 64px; 
 }
 
+.subTitle {
+    position: relative;
+    width: 640px;
+    height:105px;
+    text-align:center;
+}
+.subLineUpper {
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+.subLineStr {
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    font-size: 28px;
+    width: 640px;
+}
+.subLineUnder {
+    position: absolute;
+    bottom: 0; 
+    left: 1px;
+}
+
 .titleLine {
     width:635px;
-}
-.spaceSubject {
-    position: relative;
-    top: 10px;
-    height: 110px;
-    left: 1px;
 }
 .btnCommonRight {
     position:relative; 

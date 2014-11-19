@@ -1,4 +1,4 @@
-<div class="stagesEnd">
+<div class="commonDisplay">
     <div>
         <img src="<{$smarty.const.IMG_URL}>quest/epilogue_<{$data['quest_id']}>.jpg">
     </div>
@@ -10,7 +10,7 @@
         </div>
         <div class="guideFukidashi">
             <div class="guideFukiMiddle">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="420px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="422px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="space"></div>
+    <div class="spaceHigh"></div>
     <div class="parent">
         <a href="<{$linkQuest}>">
             <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">

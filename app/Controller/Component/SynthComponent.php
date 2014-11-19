@@ -41,7 +41,7 @@ class SynthComponent extends Component {
 
             // 強化素材の補正
             if ($val['sozai_kind'] == 1) 
-                $val['level'] = 1000;
+                $val['level'] = 600;
 
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {

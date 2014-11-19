@@ -33,14 +33,14 @@
             <{$smarty.const.MONEY_NAME}>が足りません。
         </div>
     <{else}>
-    <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
-        <div class="btnSelectSt">
+    <div class="btnSelectSt">
+        <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
             <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
             <div class="strSelectStComp">
                 購入する
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
     <{/if}>
 
 </div>

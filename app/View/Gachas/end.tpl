@@ -12,7 +12,7 @@
 
             <div class="btnGacha">
                 <a href="<{$smarty.const.BASE_URL}>Gachas/index">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png" alt="強化>確認" name="submit">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png" alt="ガチャ一覧へ" name="submit">
                 <div class="strGacha">
                     ガチャ選択
                 </div>

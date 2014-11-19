@@ -42,7 +42,7 @@ class AppController extends Controller {
     // 確率変動アイテム文言
     public $effectStr = array(
                             3 =>  'カード出現率アップ'
-                        ,   4 =>  'ゴールド出現率アップ'
+                        ,   4 =>  'ペニー出現率アップ'
                         );
 
 
@@ -108,6 +108,15 @@ class AppController extends Controller {
 
         $this->carrer = $this->Common->judgeCarrer();
 
+        // Js内で画面横幅変更用
+        $divNum = 1;
+        if (CARRER_IPHONE == $this->carrer) $divNum = 1;
+        $this->set('divNum', $divNum); 
+
+        // キャリア
+        $this->set('carrer', $this->carrer); 
+
+
         // 正常な初回アクセスはリクエストにIDが含まれる
         $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
         $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
@@ -147,6 +156,8 @@ class AppController extends Controller {
             }
 
         }
+
+
 
         if ( !in_array($this->name, self::$ctlError) ) {
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
@@ -343,13 +354,6 @@ $this->log( $_COOKIE );
         $this->set('action',  $this->action); 
         $this->set('ctlAction',  $this->name . '/' . $this->action); 
 
-        // Js内で画面横幅変更用（2:iPhone, それ以外は１）
-        $divNum = 1;
-        if (CARRER_IPHONE == $this->carrer) $divNum = 2;
-        $this->set('divNum', $divNum); 
-
-        // キャリア
-        $this->set('carrer', $this->carrer); 
 $this->log('userId:' . $this->userId ); 
         // URLアサイン
         $this->_setUrl();

@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>強化合成</title>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce.css">
+        <{if $smarty.const.CARRER_IPHONE == $carrer}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce.css">
+        <{else}>
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce_android.css">
+        <{/if}>
     </head>
     <body>
         <canvas id="mainCanvas" height="832" width="640"></canvas>

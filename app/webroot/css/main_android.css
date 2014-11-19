@@ -1094,12 +1094,12 @@ display: block;
 .guideFukiUnderL {
     position: absolute;
     left:18px;
-    top:154px;
+    top:152px;
 }
 .guideFukiUnderXL {
     position: absolute;
     left:18px;
-    top:186px;
+    top:184px;
 }
 .guideFukiUnder3XL {
     position: absolute;
@@ -1128,7 +1128,7 @@ display: block;
 }
 .guideFukiMiddle {
     position: absolute;
-    top: -8px;
+    top: -9px;
     left: 18px;
 }
 
@@ -1152,7 +1152,7 @@ display: block;
 .enemyFukiUp {
     position: absolute;
     left: 260px;
-    top:-27px;
+    top:-25px;
 }
 .enemyFukiUpper {
     position: absolute;
@@ -1192,32 +1192,10 @@ display: block;
 }
 
 /** トップページ */
-.toppage {
+.topImg {
     position:relative;
     width:640px;
-    height:1000px;
-}
-.topInfo {
-    position: relative;
-    width: 640px;
-    height:105px;
-    text-align:center;
-}
-.topLineUpper {
-    position: absolute;
-    top: 0;
-    left: 1px;
-}
-.topLineStr {
-    position: absolute;
-    margin: auto;
-    top: 40%;
-    width: 640px;
-}
-.topLineUnder {
-    position: absolute;
-    bottom: 0; 
-    left: 1px;
+    height:650px;
 }
 .topInfoList {
     position: relative;
@@ -1237,18 +1215,11 @@ display: block;
 }
 .strCardDetailName {
     position: absolute;
-    text-align: center;
-    margin : 36px auto;
-    width: 640px;
-    font-size:42px;
-}
-.cardDetailNameUpper {
-    position: absolute;
-    top: 0px;
-}
-.cardDetailNameUnder {
-    position: absolute;
-    top: 72px;
+    top: 25px;
+    left: 50%;
+    margin: 0 0 0 -140px;
+    font-size: 30px;
+    width:400px;
 }
 .cardTextArea {
     position: relative;
@@ -1257,7 +1228,7 @@ display: block;
 }
 .cardTalkArea {
     position: relative;
-    top: 120px;
+    top: 15px;
     height: 180px;
     color: #000000;
 }
@@ -1272,13 +1243,13 @@ display: block;
 }
 .cardArea {
     position: relative;
-    top: 110px;
+    top: 5px;
     bottom: 10px;
     height: 840px;
 }
 .cardTextArea {
     position: relative;
-    top: 110px;
+    top: 10px;
     height: 365px;
 }
 
@@ -1313,14 +1284,31 @@ display: block;
     height: 64px; 
 }
 
+.subTitle {
+    position: relative;
+    width: 640px;
+    height:105px;
+    text-align:center;
+}
+.subLineUpper {
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+.subLineStr {
+    position: absolute;
+    margin: auto;
+    top: 40%;
+    width: 640px;
+}
+.subLineUnder {
+    position: absolute;
+    bottom: 0; 
+    left: 1px;
+}
+
 .titleLine {
     width:635px;
-}
-.spaceSubject {
-    position: relative;
-    top: 10px;
-    height: 110px;
-    left: 1px;
 }
 .btnCommonRight {
     position:relative; 

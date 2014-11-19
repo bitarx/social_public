@@ -1,7 +1,7 @@
 <div class="tutorials index">
-    <div class="bannerTitle">
+    <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>banner_title.png">
-            <div class="strTitleSynth" >
+            <div class="child" >
                ボス戦！
             </div>
     </div>

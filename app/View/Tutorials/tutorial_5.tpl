@@ -1,8 +1,8 @@
 <div class="tutorials index">
 
-    <div class="bannerTitle">
+    <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>banner_title.png">
-            <div class="strTitleBaseCard" >
+            <div class="child" >
                 <{$row['tutorial_title']}>
             </div>
     </div>
@@ -11,14 +11,14 @@
 
     <{include file="../Elements/next.tpl"}>
 
-    <div class="cardDetailName">
-        <div class="cardDetailNameUpper" >
+    <div class="subTitle">
+        <div class="subLineUpper" >
             <img src="<{$smarty.const.IMG_URL}>line_upper.png">
         </div>
-        <div class="strCardDetailName" >
+        <div class="subLineStr" >
             [ゆとり育ち]結依
         </div>
-        <div class="cardDetailNameUnder" >
+        <div class="subLineUnder" >
             <img src="<{$smarty.const.IMG_URL}>line_under.png">
         </div>
     </div>

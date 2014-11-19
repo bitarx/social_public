@@ -37,7 +37,8 @@ class SnsUsersController extends ApiController {
 
         $limit = 3;
         $list = $this->Info->getList($limit);
-$this->log($list); 
+
         $this->set('list',  $list);
+        $this->set('subTitle',  'お知らせ');
 	}
 }

@@ -34,6 +34,12 @@ class TutorialsController extends ApiController {
      */
     private function _routeTutorial() {
 
+        // Js内で画面横幅変更用
+        $divNum = 1;
+        if (CARRER_IPHONE == $this->carrer) $divNum = 2;
+        $this->set('divNum', $divNum); 
+
+
         // チュートリアル終了判定
         $where = array('user_id' => $this->userId);
         $fields = array('tutorial_id', 'end_flg');
@@ -569,6 +575,7 @@ class TutorialsController extends ApiController {
         $this->set('row',  $this->row);
         $this->set('title',  $this->row['tutorial_title']);
         $this->set('guideId',  1);
+        $this->set('subTitle',  'このカードを強化します');
         $this->set('tutoSampleCard', $this->tutoSampleCard );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
     } 

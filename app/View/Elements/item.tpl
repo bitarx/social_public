@@ -17,10 +17,10 @@
 
         <{if !empty($data.useable)}> 
             <{if empty($effect)}>
-                <div class="btnSelectCard">
+                <div class="parent">
                     <a href="<{$smarty.const.BASE_URL}>UserItems/<{$nextAction}>/<{$data.id}>">
                         <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                        <div class="strSelectCard">
+                        <div class="child">
                             使用する
                         </div>
                     </a>
@@ -58,15 +58,15 @@
                 <div class="space"></div>
             <{/if}>
 
-            <div class="btnSelectCard">
+            <div class="parent">
                 <a href="conf/<{$data.item_id}>">
                     <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strSelectCard">
+                    <div class="child">
                         購入する
                     </div>
                 </a>
             </div>
         <{/if}> 
     <{/if}>
-
+    <div class="space"></div>
 </div>

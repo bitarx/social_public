@@ -31,9 +31,11 @@ class CardsController extends ApiController {
 
         $where  = array('card_id' => $id);
         $data = $this->Card->getAllFind($where);
+        $data = $data[0];
    $this->log($data); 
-        $this->set('data', $data[0]);
+        $this->set('data', $data);
         $this->set('stageId', $stageId);
+        $this->set('subTitle', $data['card_title']. $data['card_name']);
 	}
 
     /**

@@ -135,4 +135,6 @@ define("GACHA_MONEY_ID", 3 );
  */
 // 最大ステージID
 define("MAX_STAGE_ID", 30 );
+// クエストアイテムプラス値(%)
+define("QUEST_ITEM_EFFECT", 15 );
 

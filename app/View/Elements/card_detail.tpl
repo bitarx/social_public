@@ -1,15 +1,5 @@
-    <div class="cardDetailName">
-        <div class="cardDetailNameUpper" >
-            <img src="<{$smarty.const.IMG_URL}>line_upper.png">
-        </div>
-        <div class="strCardDetailName" >
-            <{$data['card_title']}>
-            <{$data['card_name']}>
-        </div>
-        <div class="cardDetailNameUnder" >
-            <img src="<{$smarty.const.IMG_URL}>line_under.png">
-        </div>
-    </div>
+    <{include file="../Elements/sub_title.tpl"}>
+
     <div class="cardArea">
         <{if empty($tutoEnd)}>
             <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">

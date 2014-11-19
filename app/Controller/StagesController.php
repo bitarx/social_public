@@ -484,8 +484,11 @@ class StagesController extends ApiController {
 
         $turn     = json_encode($turn);
         $player   = json_encode($player);
-$this->log('product_turn'); 
-$this->log($turn); 
+
+        // Js内で画面横幅変更用
+        $divNum = 1;
+        if (CARRER_IPHONE == $this->carrer) $divNum = 2;
+        $this->set('divNum', $divNum); 
         $this->set('data', $data);
         $this->set('player', $player);
         $this->set('enemy', $enemy);
@@ -651,15 +654,24 @@ $this->log($turn);
             $lotData['num']    = 0;
             $hit = mt_rand(1, 100);
 
+
             $effect = 0;
             $effectSecond = 0;
+
+            // 確率変動アイテムの効果有無
+            list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId);
+
+            // 確変中は出現率もアップ
+            if ( 0 < $effect ) $userStageData['prob_get'] += QUEST_ITEM_EFFECT;
+
             if ($hit <= $userStageData['prob_get']) {
-                // 抽選
+                // 抽選設定値取得
                 $list = $this->StageProb->getStageProb($data['stage_id']);
 
                 // 確率変動アイテムによる効果
                 list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
 
+                // 抽選
                 $lotData = $this->Common->doLot($list);
  
             }

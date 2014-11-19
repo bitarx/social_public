@@ -29,17 +29,7 @@
         </div>
     </div>
 
-    <div class="spaceSubject">
-        <div class="cardDetailNameUpper" >
-            <img src="<{$smarty.const.IMG_URL}>line_upper.png">
-        </div>
-        <div style="position:absolute; font-size:30px;left:140px; top:30px;">
-            このカードを強化します
-        </div>
-        <div class="cardDetailNameUnder" >
-            <img src="<{$smarty.const.IMG_URL}>line_under.png">
-        </div>
-    </div>
+    <{include file="../Elements/sub_title.tpl"}>
 
 
     <div class="card">
@@ -89,14 +79,14 @@
         </a>
     </div>
 
-    <div class="spaceSubject">
-        <div class="cardDetailNameUpper" >
+    <div class="subTitle">
+        <div class="subLineUpper" >
             <img src="<{$smarty.const.IMG_URL}>line_upper.png">
         </div>
-        <div style="position:absolute; font-size:30px;left:130px; top:30px" >
+        <div class="subLineStr" >
             このカードを素材にします
         </div>
-        <div class="cardDetailNameUnder" >
+        <div class="subLineUnder" >
             <img src="<{$smarty.const.IMG_URL}>line_under.png">
         </div>
     </div>

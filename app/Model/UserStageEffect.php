@@ -70,7 +70,7 @@ class UserStageEffect extends AppModel {
  * @return array [0] 0:確率変動なし 1:効果Id(3:カード 4:ゴールド)
  *               [1] アイテム効果残り秒
  */
-    public function changeProbList($userId, &$list) {
+    public function changeProbList($userId, &$list = array()) {
 
         // 有効時間
         $targetTs = time() - (60 * ITEM_EFFECT_MINUTES); 

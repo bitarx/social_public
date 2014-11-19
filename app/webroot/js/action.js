@@ -115,7 +115,9 @@ function dispRotResultQuest(data)
            }
            image +=     '</div>';
            image += '</div>';
-           location.href = BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+           if (1 != data.tuto) {
+               location.href = BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+           }
 
            filename = '';
            break;
