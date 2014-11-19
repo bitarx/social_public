@@ -40,9 +40,9 @@
     <{if $kind == 1}> 
         <div class="space"></div>
         <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
-            <div class="parent">
+            <div class="btnUpComp">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="child">
+                <div class="strUpComp">
                     強化確認
                 </div>
             </div>

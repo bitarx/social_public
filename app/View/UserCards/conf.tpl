@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <{foreach from=$list item=data key=k}>
+    <{foreach from=$list item=data key=key}>
         <{include file="../Elements/card.tpl"}>
     <{/foreach}>
 

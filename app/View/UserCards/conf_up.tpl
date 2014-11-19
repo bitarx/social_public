@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <{foreach from=$list item=data key=k}>
+    <{foreach from=$list item=data key=key}>
         <{include file="../Elements/card.tpl"}>
         <input type="hidden" name="user_card_id_<{$data.user_card_id}>" value="<{$data.user_card_id}>">
     <{/foreach}>

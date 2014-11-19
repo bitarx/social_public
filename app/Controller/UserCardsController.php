@@ -102,6 +102,7 @@ class UserCardsController extends ApiController {
         $this->set('data', $userBaseCard);
         $this->set('list', $list);
         $this->set('userParam', $this->userParam);
+        $this->set('key', 99);
         $this->set('judgeEvol', $judgeEvol);
 	}
 
@@ -145,6 +146,7 @@ class UserCardsController extends ApiController {
         $this->set('data', $userBaseCard);
         $this->set('list', $targetList);
         $this->set('levelMax', $levelMax);
+        $this->set('key', 99);
         $this->set('userParam', $this->userParam);
 	}
 
