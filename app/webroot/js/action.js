@@ -3,7 +3,7 @@
  *
  * @auther imanishi
  * @since 2014/03/20
- * @param object data Appサーバより返された結果
+ * @param object data サーバより返された結果
  * @return void
  */
 function routes(data)
@@ -180,9 +180,11 @@ function dispRotResultQuest(data)
            image += '</div>';
            break; 
     } 
+
     // レベルアップ
+    var html = "";
     if ( undefined != data && "1" == data.level_up ) {
-           var html =  '<div class="parent">';
+           html += '<div class="parent">';
            html +=     '<img src="' + IMG_URL + 'textarea_gd.png" class="textAreaLevelUpImg">';
            html +=     '<div class="levelUpMesArea">';
            html +=         '<span style="color:#FFA500">';
@@ -192,10 +194,7 @@ function dispRotResultQuest(data)
            html +=         '最大デッキコスト:' + data.level_up_cost_bf + '→<span style="color:#FFA500">' + data.level_up_cost_af + '</span>';
            html +=     '</div>';
            html += '</div>';
-        
-    } else {
-        var html = "";
-    }
+    } 
 
     $('#levelUp').html( html );
     $('#levelUp').show(); 

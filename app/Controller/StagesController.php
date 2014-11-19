@@ -606,32 +606,11 @@ $this->log($turn);
         $this->set('data', $data);
     }
 
-
-    /**
-     * データ取得(更新不可)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-/*
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->Stage->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-*/
-
     /**
      * 登録更新
      *
      * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
+     * @return json 0:失敗 1:成功 2:ajax以外のリクエスト
      */
 	public function init() {
 
@@ -655,7 +634,7 @@ $this->log($turn);
             $data['progress'] = $userStageData['progress'];
 
             // ユーザステータス取得
-            $userParam = $this->UserParam->getUserParams($userId);
+            $userParam = $this->userParam;
 
             // 行動力チェック
             if ($userParam['act'] < $userStageData['use_act']) {
@@ -818,13 +797,13 @@ $this->log($turn);
 
                 // 返却データを配列に格納
                 $ary = array(
-                    'result'   => 1
-                ,   'progress' => $data['progress']     
-                ,   'kind'     => $lotData['kind']
-                ,   'target'   => $lotData['target']                // 取得対象のid
-                ,   'num'      => $lotData['num']                   // 取得対象の個数（金額）
-                ,   'exp'      => $userParam['exp']
-                ,   'act'      => $actBar                           // 行動力 
+                    'result'           => 1
+                ,   'progress'         => $data['progress']         // クエスト進行度 
+                ,   'kind'             => $lotData['kind']          // 取得対象の種別（1.カード 3.お金）
+                ,   'target'           => $lotData['target']        // 取得対象のid
+                ,   'num'              => $lotData['num']           // 取得対象の個数（金額）
+                ,   'exp'              => $userParam['exp']         // 経験値
+                ,   'act'              => $actBar                   // 行動力 
                 ,   'act_max_diff'     => $actMaxDiff               // 前のレベルとの差分
                 ,   'cost_atk_diff'    => $costAtkDiff              // 前のレベルとの差分
                 ,   'not_act'          => $notAct                   // 行動力切れの場合1
