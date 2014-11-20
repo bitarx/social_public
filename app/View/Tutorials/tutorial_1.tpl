@@ -14,7 +14,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script src='<{$smarty.const.BASE_URL}>js/jquery.tabs.js'></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.simplyscroll.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/config.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/const.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>

@@ -41,6 +41,12 @@ if ( false !== strpos( DOMAIN, 'nomadoworks')) {
     define("AH_IS_SANDBOX", false);
 }
 
+/** エラーID */
+// 不正な操作
+define("ERROR_ID_BAD_OPERATION", 1 );
+// システムエラー
+define("ERROR_ID_SYSTEM", 2 );
+
 
 
 // カード最大所有枚数

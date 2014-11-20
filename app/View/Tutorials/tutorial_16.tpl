@@ -48,9 +48,9 @@
 
     <div class="tutoStartItemStr">
         ▼強化合成素材▼<br />
-        <img src="<{$smarty.const.FILEOUT_URL}>?size=l&dir=card&target=64" width="160px">
-        <img src="<{$smarty.const.FILEOUT_URL}>?size=l&dir=card&target=65" width="160px">
-        <img src="<{$smarty.const.FILEOUT_URL}>?size=l&dir=card&target=66" width="160px">
+        <img src="<{$smarty.const.IMG_URL}>card/ai_rabbit.jpg" width="160px">
+        <img src="<{$smarty.const.IMG_URL}>card/mai_pengin.jpg" width="160px">
+        <img src="<{$smarty.const.IMG_URL}>card/mi_cat.jpg" width="160px">
     </div>
     <div class="tutoStartItemTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="170px">

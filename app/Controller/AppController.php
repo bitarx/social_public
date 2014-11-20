@@ -166,7 +166,7 @@ class AppController extends Controller {
             if (  (empty($this->ownerId) || empty($this->viewerId) ) && !isset($firstAccess) ) {
 
                 // Cookieセットされていない場合は不正アクセス
-                $this->rd('Errors', 'index', array('error' => 1 ));
+                $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
             } else { 
                 // 正常なアクセスの場合はユーザIDをセット
                 $where = array('User.sns_user_id' => $this->ownerId); 
@@ -183,7 +183,7 @@ class AppController extends Controller {
                     }
                     if (empty($user['displayName'])) {
                          $this->log(__FILE__.__LINE__.'People Api Error'); 
-                         $this->rd('Errors', 'index', array('error' => 2 ));
+                         $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
                     }
 
                     $this->User->begin();
@@ -233,7 +233,7 @@ class AppController extends Controller {
                         $this->log($e->errmes);
                         return $this->redirect(
                                    array('controller' => 'errors', 'action' => 'index'
-                                         , '?' => array('error' => 2)
+                                         , '?' => array('error' => ERROR_ID_SYSTEM )
                                ));
                     }
                     $this->User->commit();
@@ -241,16 +241,18 @@ class AppController extends Controller {
 
                 // チュートリアル判定
                 $where = array('user_id' => $this->userId);
-                $fields = array('tutorial_id', 'end_flg');
-                $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
-
+                $endFlg = $this->UserTutorial->field('end_flg', $where);
                 $ary = array_merge(self::$ctlRegist , self::$ctlError);
                 if (!in_array($this->name, $ary)) {
                     // チュートリアルを終えていない
-                    if (empty($row['end_flg'])) {
-                        if (!empty($row['UserTutorial']['tutorial_id'])) {
+                    if (empty($endFlg)) {
+                        $where = array('user_id' => $this->userId);
+                        $fields = array('tutorial_id', 'end_flg');
+                        $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
+
+                        if (!empty($row['tutorial_id'])) {
                             // チュートリアル途中
-                            $this->rd('Tutorials', 'tutorial_'. $row['UserTutorial']['tutorial_id']);
+                            $this->rd('Tutorials', 'tutorial_'. $row['tutorial_id']);
                         } else {
 
                             // サンドボックス外
@@ -266,17 +268,17 @@ class AppController extends Controller {
             if ( !isset($this->params['error']) ) {
                 if ($this->name == 'CakeError') { 
                     // システムエラー
-                    $err = 2;
+                    $err = ERROR_ID_SYSTEM;
                 } else {
                     // 不正な操作
-                    $err = 1;
+                    $err = ERROR_ID_BAD_OPERATION;
                 }
                 $this->rd('Errors', 'index', array('error' => $err ));
             }
         }
         $this->set('gameTitle', $this->gameTitle); 
         
-        if (empty($row['end_flg'])) {
+        if (empty($endFlg)) {
             $this->tutoEnd = 0;
             $this->set('tutoEnd', 0); 
         } else {
@@ -299,7 +301,7 @@ class AppController extends Controller {
             }
             if (empty($user['displayName'])) {
                 $this->log($this->userId.__FILE__.__LINE__. 'get sns user name error');
-                $this->rd('Errors', 'index', array('error' => 2  ));
+                $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM  ));
             }
 
             $this->User->begin();
