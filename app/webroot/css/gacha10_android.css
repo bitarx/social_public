@@ -1,0 +1,10 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  height:900px;
+}
+
+#mainCanvas {
+  background-image: url('../img/synth_evol_bg.png');
+  overflow: hidden;
+}
