@@ -3,6 +3,17 @@
         <img src="<{$smarty.const.IMG_URL}>tutorial/gametitle.png">
     </div>
 
+    <div class="space"></div>
+    <div class="parent">
+        <a href="<{$linkQuest}>">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+            <div class="child">
+                鎮激開始！
+            </div>
+        </a>
+    </div>
+    <div class="space"></div>
+
     <{include file="../Elements/sub_title.tpl"}>
 
     <div class="topInfoList">

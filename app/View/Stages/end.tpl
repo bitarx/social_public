@@ -10,7 +10,7 @@
         </div>
         <div class="guideFukidashi">
             <div class="guideFukiMiddle">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="422px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="425px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">

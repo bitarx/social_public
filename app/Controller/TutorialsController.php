@@ -1032,7 +1032,6 @@ class TutorialsController extends ApiController {
             $values = array(
                 'user_id'     => $this->userId
             ,   'tutorial_id' => $current
-            ,   'end_flg'     => 1
             );
             $ret = $this->UserTutorial->save($values);
             if (!$ret) {
@@ -1056,6 +1055,46 @@ class TutorialsController extends ApiController {
         $this->set('title',  $this->row['tutorial_title']);
         $this->set('guideId',  1 );
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
+    } 
+
+
+    /**
+     * チュートリアル最終処理
+     *
+     * @author imanishi 
+     * @return void
+     */
+    public function tutorial_99() { 
+
+        $this->_routeTutorial();
+
+        $current = str_replace(self::$actionPref, '', $this->action);
+
+        $this->User->begin();
+        try {
+            $values = array(
+                'user_id'     => $this->userId
+            ,   'end_flg'     => 1
+            );
+            $ret = $this->UserTutorial->save($values);
+            if (!$ret) {
+                throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+        } catch (AppException $e) {
+
+            $this->User->rollback();
+
+            $this->log($e->errmes);
+            return $this->redirect(
+                       array('controller' => 'errors', 'action' => 'index'
+                             , '?' => array('error' => 2)
+                   ));
+        }
+        $this->User->commit();
+     
+
+        $this->rd('SnsUsers', 'index');
     } 
 
     /**

@@ -145,7 +145,7 @@ boss.main = ( function() {
           if( ( all - 1 ) <= i ) {
             setTimeout( function( i ){
               _startEnemyTurn( currentTurnData );
-            }, 1000 );
+            }, 1200 );
           }
         }, 700 * count, i );
         count++;
