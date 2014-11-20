@@ -650,7 +650,10 @@ class StagesController extends ApiController {
             if ($userParam['act'] < $userStageData['use_act']) {
 
                 // 不足の場合は不正
-                $ary = array('result' => 2);
+                $ary = array(
+                    'result' => 2
+                ,   'stage_id' => $data['stage_id']
+                );
                 $this->setJson($ary);
                 return false;
             }

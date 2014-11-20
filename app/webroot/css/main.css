@@ -640,6 +640,7 @@ input.btn_submit {
 .btnQuestNotProg {
     left: 0px;
     top: 270px;
+    height: 200px;
     position: relative;
 }
 .btnQuestProgBoss {
@@ -1137,7 +1138,7 @@ display: block;
 .guideFukiUpperEnd {
     position: absolute;
     left:18px;
-    top:-4px;
+    top:-2px;
 }
 .guideFukiUnder {
     position: absolute;
@@ -1162,7 +1163,7 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
-    top:387px;
+    top:391px;
 }
 .guideFukiText {
     position: absolute;
@@ -1254,8 +1255,7 @@ display: block;
     height:650px;
 }
 .topInfoList {
-    position: absolute;
-    top: 880px;
+    position: relative;
     left: 30px;
     width: 600px;
     font-size: 30px;

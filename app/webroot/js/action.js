@@ -13,8 +13,8 @@ function routes(data)
         data = JSON.parse(data);
     }
     if (data.result == "2") {
-        $('#errMes').html( '不正なリクエストです' );
-        $('#errMes').show(); 
+        // 体力不足など
+        location.href = BASE_URL + 'Stages/main?stage_id=' + data.stage_id;    
     } 
     // ステージクリア
      else if (data.stage_clear == "1") {
