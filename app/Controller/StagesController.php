@@ -167,6 +167,12 @@ class StagesController extends ApiController {
             $dateStr = date("F d,Y H:i:s" , $endTime);
         }
 
+        // 獲得最大経験値
+        $maxExp = $data['use_act'];
+        if ( QUEST_MAX_EXP < $maxExp ) {
+            $maxExp = QUEST_MAX_EXP;
+        }
+
         // ボスフラグ
         $boss = 0;
         if (2 == $data['state']) $boss = 1;
@@ -183,6 +189,7 @@ class StagesController extends ApiController {
         $this->set('boss', $boss);
         $this->set('effectText', $effectText);
         $this->set('dateStr', $dateStr);
+        $this->set('maxExp', $maxExp);
     }
 
     /**
@@ -780,8 +787,8 @@ class StagesController extends ApiController {
                 $levelUp = 0;
                 $expBaseInt = $userStageData['use_act'];
 
-                // 一回のクエスト実行で５以上は上がらない
-                if (5 < $expBaseInt) $expBaseInt = 5;
+                // 一回のクエスト実行で獲得経験値最大
+                if (QUEST_MAX_EXP < $expBaseInt) $expBaseInt = QUEST_MAX_EXP;
 
                 $getExp = $this->Common->lotRange($expBaseInt, $range);
                 $userParam['exp'] += $getExp;
