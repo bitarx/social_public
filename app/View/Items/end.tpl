@@ -16,7 +16,7 @@
 
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserItems/conf/<{$userItemId}>">
-        <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
         <div class="child" >
            早速使う 
         </div>

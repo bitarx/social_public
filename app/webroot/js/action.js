@@ -51,7 +51,7 @@ function routes(data)
 
 function dispProgressQuest(prog)
 {
-    $('#progQuestMain').html( '<img src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
+    $('#progQuestMain').html( '<input type="image" src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
     $('#progQuest').show(); 
      
 }

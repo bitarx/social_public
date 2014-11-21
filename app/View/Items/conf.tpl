@@ -1,7 +1,7 @@
 <div style="position:relative">
     <{include file="../Elements/title.tpl"}>
     <div class="subTitle">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
+       <input type="image" src="<{$smarty.const.IMG_URL}>textarea_gd.png" height="32px" width="680px">
         <div class="subTitleStr">
             購入確認
         </div>
@@ -35,7 +35,7 @@
     <{else}>
     <div class="btnSelectSt">
         <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
-            <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
             <div class="strSelectStComp">
                 購入する
             </div>

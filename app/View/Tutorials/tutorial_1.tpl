@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
-    <{if $carrer == 2}>
+    <{if $carrer == $smarty.const.CARRER_IPHONE}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css" />
     <{else}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_android.css" />
@@ -20,7 +20,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
 
 <title><{$gameTitle}></title>
-<{if $carrer == 2}>
+<{if $carrer == $smarty.const.CARRER_IPHONE}>
 <script type="text/javascript">
 (function($) {
   $(function() {

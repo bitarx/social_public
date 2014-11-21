@@ -157,6 +157,10 @@ var isJSON = function(arg) {
       if (0 != m) str += m + '分';
       str += s + '秒';
 
+      if ( s < 0 ) {
+          str = 0 + '秒';
+      }
+
       $("#TimeLeft").text(str);
         setTimeout('countDown("' + dateStr + '")', 1000);
   }

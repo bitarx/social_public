@@ -14,7 +14,7 @@ body {
     width:320px;
     height:400px;
     top:-370px;
-    left:-30px;
+    left:-20px;
 }
 
 .btnStart {
@@ -25,9 +25,9 @@ body {
 }
 .strStart {
     position: absolute;
-    top: 14px;
-    left: 85px;
-    font-size: 22px
+    top: 8px;
+    left: 70px;
+    font-size: 20px
 }
 .opening_text {
     width:320px;

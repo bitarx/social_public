@@ -19,7 +19,7 @@
             <{if empty($effect)}>
                 <div class="parent">
                     <a href="<{$smarty.const.BASE_URL}>UserItems/<{$nextAction}>/<{$data.id}>">
-                        <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                         <div class="child">
                             使用する
                         </div>
@@ -38,7 +38,7 @@
     <{else}>
         <{if !empty($data.point)}> 
             <div class="cardImg">
-                   <img src="<{$smarty.const.IMG_URL}>item/item_<{$data.item_id}>.png" width="160px">
+                   <input type="image" src="<{$smarty.const.IMG_URL}>item/item_<{$data.item_id}>.png" width="160px">
             </div>
             <div class="cardName">
                 <span style="color:#ffffff"><{$data.item_name}></span>
@@ -60,7 +60,7 @@
 
             <div class="parent">
                 <a href="conf/<{$data.item_id}>">
-                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                     <div class="child">
                         購入する
                     </div>

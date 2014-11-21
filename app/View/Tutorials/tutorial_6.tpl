@@ -64,7 +64,7 @@
 
         <div class="parent">
             <a href="<{$next}>">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <input type="image"  src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="child">
                     進化させる
                 </div>
@@ -89,13 +89,13 @@
         <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">
     </div>
 
-        <a href="<{$next}>">
-            <div class="parent">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+        <div class="parent">
+            <a href="<{$next}>">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="child">
                     進化させる
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
      <div class="space"></div>
 </div>

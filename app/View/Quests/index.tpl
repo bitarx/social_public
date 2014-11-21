@@ -10,7 +10,7 @@
                 <div class="spaceLow">
                 </div>
                 <div class="quest">
-                    <img src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaStageImg">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaStageImg">
                     <div class="strQuestList">
                         <{$val['detail_before1']}> 
                     </div>

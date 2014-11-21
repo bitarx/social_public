@@ -14,10 +14,10 @@
 
     <div class="btnGacha">
         <a href="<{$next}>">
-        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="鎮激！" name="submit">
-        <div class="strTutoNext">
-            鎮激！
-        </div>
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="鎮激！" name="submit">
+            <div class="strTutoNext">
+                鎮激！
+            </div>
         </a>
     </div>
 

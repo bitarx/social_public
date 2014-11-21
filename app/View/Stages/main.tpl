@@ -82,13 +82,13 @@ $(function () {
     <{if !empty($boss)}> 
         <div class="stageItemEffectBoss">
             <{if !empty($effectText)}>
-                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;">></div>
+                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>
             <{/if}>
         </div>
     <{else}>
         <div class="stageItemEffect">
             <{if !empty($effectText)}>
-                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;">></div>
+                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>
             <{/if}>
         </div>
     <{/if}>

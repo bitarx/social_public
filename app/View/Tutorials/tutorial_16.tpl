@@ -9,12 +9,12 @@
         <img src="<{$smarty.const.IMG_URL}>item/item_1.png">
     </div>
     <div class="tutoStartItemTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="230px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="210px">
         <div class="tutoStartItemTextStr">
             R以上のカードGETのチャンス(^^♪<br />
-            プレミアムガチャチケット！<br />
-            鎮激進行に役立つ体力回復薬！<br />
-            カードゲット確率がアップする幸の香水！<br />
+            <span style="color:#FFA500">プレミアムガチャチケット！</span><br />
+            鎮激進行に役立つ<span style="color:#FFA500">体力回復薬！</span><br />
+            カードゲット確率がアップする<span style="color:#FFA500">幸の香水！</span><br />
             上記３点セットが初回に限り100<{$smarty.const.POINT_NAME}>!!<br />
             ショップでGETできるよ♪
         </div>
@@ -53,7 +53,7 @@
         <img src="<{$smarty.const.IMG_URL}>card/mi_cat.jpg" width="160px">
     </div>
     <div class="tutoStartItemTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="170px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="160px">
         <div class="tutoStartItemTextStr">
             カードレベルMAXへ成長させるチャンス♪<br />
             <span style="color:#FFA500">[愛属性の強化素材]</span>ララ<br />

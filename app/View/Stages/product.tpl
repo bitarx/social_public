@@ -6,7 +6,7 @@
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle_android.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css">
         <{/if}>
     </head>
     <body id="body">

@@ -102,7 +102,7 @@
             <{if $kind == 2}> 
                 <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
                     <div class="btnSelectCard">
-                        <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                         <div class="strSelectCardSozai">
                             素材に選択
                         </div>
@@ -120,7 +120,7 @@
         <{if empty($data.sozai_kind)}>
             <div class="btnSelectCard">
                 <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
-                    <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                     <div class="strSelectCard">
                         ベース選択
                     </div>
@@ -153,7 +153,7 @@
     <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 
         <div class="btnSelectCard">
             <a href="init?user_card_id=<{$data.user_card_id}><{$addParam}>">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="strSelectCard">
                    デッキ設定 
                 </div>
