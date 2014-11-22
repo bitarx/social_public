@@ -15,7 +15,7 @@ class FileController extends ApiController {
      */
 	public $components = array();
 
-    public $uses = array('UserCard', 'UserStage');
+    public $uses = array('UserCard', 'UserStage', 'UserCollect');
 
     /**
      * 画像取得
@@ -39,7 +39,11 @@ class FileController extends ApiController {
         // 所有チェック
         switch ($dir) {
             case 'card':
-                $ret = $this->UserCard->getUserCardWithDeleteFlg ($this->userId , $targetId );
+                $where = array(
+                    'user_id' => $this->userId
+                ,   'UserCollect.card_id' => $targetId 
+                );
+                $ret = $this->UserCollect->field ('user_id' , $where );
                 $filename = 'card_' . $size . '_' . $targetId . '.jpg'; 
                 break;
 

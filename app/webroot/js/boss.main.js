@@ -126,6 +126,7 @@ boss.main = ( function() {
             all++;
         }
     }
+    var num = 0;
     for( var i = 0; i < len; i++ ) {
 
       if( undefined != _paramater.getParam( "playerData" )[ i ] 
@@ -142,12 +143,14 @@ boss.main = ( function() {
             _bossDedAction();
           }
 
-          if( ( all - 1 ) <= i ) {
+          num++;
+
+          if( ( all  ) <= num ) {
             setTimeout( function( i ){
               _startEnemyTurn( currentTurnData );
-            }, 1200 );
+            }, 800 );
           }
-        }, 700 * count, i );
+        }, 600 * count, i );
         count++;
 
         if( currentTurnData.enemyHP[ i ] <= 0 ) {

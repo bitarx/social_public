@@ -7,7 +7,7 @@
         </div>
     <{else}> 
     <div class="cardImg">
-           <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="160px">
+           <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="150px">
     </div>
     <div class="cardName">
         <{if !empty($data.Card.card_title)}>

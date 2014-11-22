@@ -75,10 +75,10 @@ class SynthComponent extends Component {
 
         // レベルアップ
         for ($i = 1; $i <= $levelUpCnt; $i++) {
-            $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.1);
-            $baseCard['hp_max'] = (int)floor($baseCard['hp_max'] * 1.1);
-            $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.1);
-            $baseCard['def']    = (int)floor($baseCard['def'] * 1.1);
+            $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.01);
+            $baseCard['hp_max'] = (int)floor($baseCard['hp_max'] * 1.01);
+            $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.02);
+            $baseCard['def']    = (int)floor($baseCard['def'] * 1.02);
             $baseCard['level']++;
             // 最大レベルで終了
             if ($baseCard['card_level'] <= $baseCard['level']) {
@@ -115,19 +115,19 @@ class SynthComponent extends Component {
     } 
 
     /**
-     * 進化合成に必要なゴールドを返却
+     * 進化合成に必要なペニーを返却
      *
      * @author imanishi 
      * @param array $baseCard ベースカードのデータ
      * @return int 金額
      */
     public function useMoneyEvol($baseCard) { 
-        $useMoney = $baseCard['rare_level'] * 800;
+        $useMoney = $baseCard['rare_level'] * 1000;
         return $useMoney;
     } 
 
     /**
-     * 強化合成に必要なゴールドを返却
+     * 強化合成に必要なペニーを返却
      *
      * @author imanishi 
      * @param array $list 素材カードリスト
@@ -136,7 +136,7 @@ class SynthComponent extends Component {
     public function useMoneyUp($list) { 
         $useMoney = 0;
         foreach ($list as $val) {
-            $useMoney += ($val['atk'] + $val['def']) * 5;
+            $useMoney += ($val['atk'] + $val['def']);
         }
         return $useMoney;
     } 

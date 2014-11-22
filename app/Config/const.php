@@ -24,21 +24,26 @@ if (!defined('FILEOUT_URL')) {
 /**
  * SNSAPI基本設定
  */
-if ( false !== strpos( DOMAIN, 'nomadoworks')) {
-    // 開発環境
+if ( false !== strpos( DOMAIN, 'eres')) {
+    // 本番環境
+    define("MODE", 'com');
 
     // OAuth
-    define("DEV_IS_SANDBOX", true);
+    define("AH_IS_SANDBOX", false);
+
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
+    define("MODE", 'stg');
 
     // OAuth
     define("AH_IS_SANDBOX", true);
 } else {
-    // 本番環境
+    // 開発環境
+    define("MODE", 'dev');
 
     // OAuth
-    define("AH_IS_SANDBOX", false);
+    define("DEV_IS_SANDBOX", true);
+
 }
 
 /** エラーID */
