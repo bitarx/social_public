@@ -31,7 +31,7 @@
                 防御:<span style="color:#ffffff"><{$data.def}></span>
             </div>
             <div class="cardHpIos">
-                HP:<span style="color:#ffffff"><{$data.def}></span>
+                HP:<span style="color:#ffffff"><{$data.hp_max}></span>
             </div>
             <div class="cardExp">
                 経験値:
@@ -93,7 +93,7 @@
                 防御:<span style="color:#ffffff"><{$data.def}></span>
             </div>
             <div class="cardHp">
-                HP:<span style="color:#ffffff"><{$data.def}></span>
+                HP:<span style="color:#ffffff"><{$data.hp_max}></span>
             </div>
             <div class="cardExp">
                 経験値:

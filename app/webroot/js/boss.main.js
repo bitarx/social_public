@@ -120,6 +120,7 @@ boss.main = ( function() {
     var count = 0;
     var len = currentTurnData.enemyHP.length;
     var all = 0;
+
     for (var i = 0; i < len; i++) {
         if( undefined != _paramater.getParam( "playerData" )[ i ] 
             && _paramater.getParam( "playerData" )[ i ].current > 0 ) {
@@ -127,6 +128,7 @@ boss.main = ( function() {
         }
     }
     var num = 0;
+
     for( var i = 0; i < len; i++ ) {
 
       if( undefined != _paramater.getParam( "playerData" )[ i ] 
@@ -145,10 +147,10 @@ boss.main = ( function() {
 
           num++;
 
-          if( ( all  ) <= num ) {
+          if( ( all ) <= num ) {
             setTimeout( function( i ){
               _startEnemyTurn( currentTurnData );
-            }, 800 );
+            }, 850 );
           }
         }, 600 * count, i );
         count++;

@@ -29,7 +29,7 @@
     <div class="spaceHigh"></div>
     <div class="parent">
         <a href="<{$linkQuest}>">
-            <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+            <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
             <div class="child" >
                 次の鎮激へ
             </div>
