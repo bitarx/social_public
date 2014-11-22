@@ -108,7 +108,7 @@ define("KEY_PAGING", 'p');
  * 文言
  */
 define("SITE_TITLE", '鎮激のエロイーズ');    // サイトタイトル
-define("MONEY_NAME","ペニー");             // サイト内通貨の呼称
+define("MONEY_NAME","ペニー");               // サイト内通貨の呼称
 define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
 // デッキにカードがない

@@ -18,12 +18,12 @@
            コストオーバーの為設置できません。 
         </div>
     <{/if}> 
-    <div class="btnDeckBack">
-        <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+    <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserDeckCards/index">
-        <div class="strDeckBack" >
-            戻る
-        </div>
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+            <div class="child" >
+                戻る
+            </div>
         </a>
     </div>
 

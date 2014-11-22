@@ -13,8 +13,8 @@
           <{$data.stage_title}>
       </div>
       <div class="btnCommonRight">
-          <a href="<{$smarty.const.BASE_URL}>Stages/scene/?enemy_id=<{$data.enemy_id}>">
-              <img src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+          <a href="<{$smarty.const.BASE_URL}>Stages/scene/?enemy_id=<{$data.enemy_id}>&<{$smarty.const.KEY_PAGING}>=<{$page}>">
+              <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
               <div class="strCcommonName">
                   鑑賞
               </div>

@@ -31,8 +31,7 @@ class UserStagesController extends ApiController {
         ,   'state'   => 3     
         );
         $pageAll = 0;
- $this->log('#########################333'); 
-  $this->log($this->offset); 
+
         $list = $this->UserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
 
         $this->set('list', $list);

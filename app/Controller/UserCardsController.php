@@ -198,12 +198,13 @@ class UserCardsController extends ApiController {
             $this->UserCard->begin(); 
             try {  
                 $values = array(
-                    'user_id' => $this->userId 
-                ,   'card_id' => $cardData['card_id'] 
-                ,   'hp' => $cardData['card_hp'] 
-                ,   'hp_max' => $cardData['card_hp'] 
-                ,   'atk' => $cardData['card_atk'] 
-                ,   'def' => $cardData['card_def'] 
+                    'user_id'     => $this->userId 
+                ,   'card_id'     => $cardData['card_id'] 
+                ,   'hp'          => $cardData['card_hp'] 
+                ,   'hp_max'      => $cardData['card_hp'] 
+                ,   'atk'         => $cardData['card_atk'] 
+                ,   'def'         => $cardData['card_def'] 
+                ,   'skill_level' => $userBaseCard['skill_level']     // スキルレベルは引き継ぐ
                 );
                 $ret = $this->UserCard->save($values);
 

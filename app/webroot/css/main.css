@@ -244,69 +244,119 @@ a:hover {
 .cardName {
     left: 180px;
     top:12px;
+    font-size: 24px;
     position: absolute;
 }
 .cardAtk {
     left: 180px;
-    top: 42px;
+    top: 45px;
     font-size: 24px;
     position: absolute;
 }
 .cardDef {
-    left: 350px;
-    top: 42px;
+    left: 323px;
+    top: 45px;
+    font-size: 24px;
+    position: absolute;
+}
+.cardHp {
+    left: 455px;
+    top: 45px;
+    font-size: 24px;
+    position: absolute;
+}
+.cardHpIos {
+    left: 455px;
+    top: 50px;
     font-size: 24px;
     position: absolute;
 }
 .cardExp {
-    top: 74px;
+    top: 78px;
     left: 180px;
     font-size: 24px;
     position: absolute;
 }
 .cardExpInt {
-    top: 79px;
+    top: 81px;
     left: 350px;
-    font-size: 20px;
+    font-size: 22px;
+    position: absolute;
+}
+.cardExpIntIos {
+    top: 83px;
+    left: 350px;
+    font-size: 22px;
     position: absolute;
 }
 .cardLv {
-    top: 109px;
+    top: 113px;
     left: 180px;
+    font-size: 24px;
+    position: absolute;
+}
+.cardLvIos {
+    top: 114px;
+    left: 180px;
+    font-size: 24px;
     position: absolute;
 }
 .cardSkillLv {
-    top: 109px;
+    top: 114px;
     left: 350px;
+    font-size: 24px;
+    position: absolute;
+}
+.cardSkillLvIos {
+    top: 110px;
+    left: 350px;
+    font-size: 24px;
     position: absolute;
 }
 .cardRareLevel {
-    top: 138px;
+    top: 145px;
     left: 180px;
+    font-size: 24px;
     position: absolute;
 }
 .cardSkillName {
-    top: 169px;
+    top: 176px;
     left: 180px;
+    font-size: 24px;
     position: absolute;
 }
 .cardSkillEft {
-    top: 200px;
+    top: 209px;
     left: 180px;
+    font-size: 24px;
     position: absolute;
 }
 .cardDeckCost {
-    top: 138px;
+    top: 144px;
     left: 365px;
+    font-size: 24px;
     position: absolute;
 }
 .progCardExp {
     position: absolute;
-    top: 78px;
+    top: 81px;
     left: 265px;
     background: url(../img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
+    height:18px;
+    font-size: 22px;
+    width: 240px;
+}
+.progCardExpIos {
+    position: absolute;
+    top: 86px;
+    left: 265px;
+    background: url(../img/progress_base.png) top repeat-x;
+    border : 1px solid #d3d3d3;
+    line-height: 0;
+    height:18px;
+    font-size: 22px;
     width: 240px;
 }
 
@@ -344,17 +394,6 @@ input.btn_submit {
 
 
 /** ベースカード変更 */
-.changeBase {
-    top: 25px;
-    left: 110px;
-    height:70px;
-    position: relative;
-}
-.strChangeBase {
-    position: absolute;
-    top: 12px;
-    left: 115px;
-}
 .strCardView {
     position: absolute;
     top: 12px;
@@ -477,7 +516,7 @@ input.btn_submit {
 }
 .strPagingPrev {
     position:absolute;
-    top:0px;
+    top:-1px;
     left:6px;
     font-size: 30px;
     margin: auto;
@@ -492,7 +531,7 @@ input.btn_submit {
 .btnPagingNext {
     position:relative;
     float:right;
-    top:0px;
+    top:-1px;
     right:95px;
     text-align:center;
 }
@@ -862,19 +901,9 @@ display: block;
 }
 .strSelectCardInUserDeck {
     position: relative;
-    top: -43px;
+    top: -40px;
     left: 41px;
     color:#fff;
-}
-.btnDeckBack {
-    position: relative;
-    top: 20px;
-    left: 180px;
-}
-.strDeckBack {
-    position: absolute;
-    top: 15px;
-    left: 100px;
 }
 .costOver {
     position: relative;
@@ -1276,7 +1305,7 @@ display: block;
 }
 .child {
     position: absolute;
-    top: 20%;
+    top: 22%;
     margin : auto;
     width: 640px;
 }
@@ -1308,8 +1337,9 @@ display: block;
 .subLineStr {
     position: absolute;
     margin: auto;
-    top: 30%;
+    top: 34%;
     width: 640px;
+    font-size:26px;
 }
 .subLineUnder {
     position: absolute;
@@ -1332,7 +1362,7 @@ display: block;
 }
 .strCcommonName {
     position:absolute; 
-    top:5px; 
+    top:4px; 
     left:42px;
 }
 .strCommonButton {

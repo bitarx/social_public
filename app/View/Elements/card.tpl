@@ -6,61 +6,131 @@
             </div>
         </div>
     <{else}> 
-    <div class="cardImg">
-           <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="150px">
-    </div>
-    <div class="cardName">
-        <{if !empty($data.Card.card_title)}>
-            <{$data.Card.card_title}>
-            <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.Card.card_id}>">
-            <span style="color:#ffffff"><{$data.Card.card_name}></span>
-        <{else}> 
-            <{$data.card_title}>
-            <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.card_id}>">
-            <span style="color:#ffffff"><{$data.card_name}></span>
-        <{/if}> 
-        </a>
-    </div>
-    <div class="cardAtk">
-        攻撃:<span style="color:#ffffff"><{$data.atk}></span>
-    </div>
-    <div class="cardDef">
-        防御:<span style="color:#ffffff"><{$data.def}></span>
-    </div>
-    <div class="cardExp">
-        経験値:
-    </div>
-    <div id="progCardExp<{$key}>" class="progCardExp">
-    </div>
-    <div class="cardExpInt">
-        <span style="color:#ffffff"><{$data.exp}> / 100</span>
-    </div>
 
-    <script type="text/javascript">
-        dispProgressCardExp(<{$data.exp}>, <{$key}> );
-    </script>
+        <{if $carrer == $smarty.const.CARRER_IPHONE}>
+            <{* iPhone *}>
+            <div class="cardImg">
+                <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="150px">
+            </div>
+            <div class="cardName">
+                <{if !empty($data.Card.card_title)}>
+                    <{$data.Card.card_title}>
+                    <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.Card.card_id}>">
+                    <span style="color:#ffffff"><{$data.Card.card_name}></span>
+                <{else}> 
+                    <{$data.card_title}>
+                    <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.card_id}>">
+                    <span style="color:#ffffff"><{$data.card_name}></span>
+                <{/if}> 
+                </a>
+            </div>
+            <div class="cardAtk">
+                攻撃:<span style="color:#ffffff"><{$data.atk}></span>
+            </div>
+            <div class="cardDef">
+                防御:<span style="color:#ffffff"><{$data.def}></span>
+            </div>
+            <div class="cardHpIos">
+                HP:<span style="color:#ffffff"><{$data.def}></span>
+            </div>
+            <div class="cardExp">
+                経験値:
+            </div>
+            <div id="progCardExp<{$key}>" class="progCardExpIos">
+            </div>
+            <div class="cardExpIntIos">
+                <span style="color:#ffffff"><{$data.exp}> / 100</span>
+            </div>
 
-    <div class="cardLv">
-        Lv.<span style="color:#ffffff"><{$data.level}> / <{$data.card_level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
-    </div>
-    <div class="cardRareLevel">
-        レアリティ:<{if $data.rare_level == 1}>
-                        <span style="color:#ffffff">N</span>
-                    <{elseif $data.rare_level == 2}>
-                        <span style="color:#ffffff">HN</span>
-                    <{elseif $data.rare_level == 3}>
-                        <span style="color:#FF0000">R</span>
-                    <{elseif $data.rare_level == 4}>
-                        <span style="color:#FF0000">HR</span>
-                    <{elseif $data.rare_level == 5}>
-                        <span style="color:#FF0000">SR</span>
-                    <{/if}>
-    </div>
-    <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
-        <div class="cardSkillLv">
-            スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
-        </div>
-    <{/if}>
+            <script type="text/javascript">
+                dispProgressCardExp(<{$data.exp}>, <{$key}> );
+            </script>
+
+            <div class="cardLvIos">
+                Lv.<span style="color:#ffffff"><{$data.level}> / <{$data.card_level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
+            </div>
+            <div class="cardRareLevel">
+                レアリティ:<{if $data.rare_level == 1}>
+                                <span style="color:#ffffff">N</span>
+                            <{elseif $data.rare_level == 2}>
+                                <span style="color:#ffffff">HN</span>
+                            <{elseif $data.rare_level == 3}>
+                                <span style="color:#FF0000">R</span>
+                            <{elseif $data.rare_level == 4}>
+                                <span style="color:#FF0000">HR</span>
+                            <{elseif $data.rare_level == 5}>
+                                <span style="color:#FF0000">SR</span>
+                            <{/if}>
+            </div>
+
+            <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
+                <div class="cardSkillLvIos">
+                    スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
+                </div>
+            <{/if}>
+
+        <{else}>
+            <{* Android *}>
+            <div class="cardImg">
+                <img src="<{$smarty.const.IMG_URL}>card/card_m_<{$data.card_id}>.jpg" width="150px">
+            </div>
+            <div class="cardName">
+                <{if !empty($data.Card.card_title)}>
+                    <{$data.Card.card_title}>
+                    <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.Card.card_id}>">
+                    <span style="color:#ffffff"><{$data.Card.card_name}></span>
+                <{else}> 
+                    <{$data.card_title}>
+                    <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.card_id}>">
+                    <span style="color:#ffffff"><{$data.card_name}></span>
+                <{/if}> 
+                </a>
+            </div>
+            <div class="cardAtk">
+                攻撃:<span style="color:#ffffff"><{$data.atk}></span>
+            </div>
+            <div class="cardDef">
+                防御:<span style="color:#ffffff"><{$data.def}></span>
+            </div>
+            <div class="cardHp">
+                HP:<span style="color:#ffffff"><{$data.def}></span>
+            </div>
+            <div class="cardExp">
+                経験値:
+            </div>
+            <div id="progCardExp<{$key}>" class="progCardExp">
+            </div>
+            <div class="cardExpInt">
+                <span style="color:#ffffff"><{$data.exp}> / 100</span>
+            </div>
+
+            <script type="text/javascript">
+                dispProgressCardExp(<{$data.exp}>, <{$key}> );
+            </script>
+
+            <div class="cardLv">
+                Lv.<span style="color:#ffffff"><{$data.level}> / <{$data.card_level}></span><{if $data.card_level <= $data.level}>&nbsp;<span style="color:#FF0000">Max</span><{/if}>
+            </div>
+            <div class="cardRareLevel">
+                レアリティ:<{if $data.rare_level == 1}>
+                                <span style="color:#ffffff">N</span>
+                            <{elseif $data.rare_level == 2}>
+                                <span style="color:#ffffff">HN</span>
+                            <{elseif $data.rare_level == 3}>
+                                <span style="color:#FF0000">R</span>
+                            <{elseif $data.rare_level == 4}>
+                                <span style="color:#FF0000">HR</span>
+                            <{elseif $data.rare_level == 5}>
+                                <span style="color:#FF0000">SR</span>
+                            <{/if}>
+            </div>
+
+            <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
+                <div class="cardSkillLv">
+                    スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
+                </div>
+            <{/if}>
+        <{/if}>
     <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
         <div class="cardSkillName">
             スキル:<span style="color:#ffffff">
@@ -132,21 +202,21 @@
     <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 
         <{if !empty($data.user_card_id)}> 
                 <div class="btnSelectCardInUserDeckLeft">
-                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-                    <div class="strSelectCardInUserDeck">
-                       <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
-                            外す
-                       </a>
-                    </div>
+                   <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
+                        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+                        <div class="strSelectCardInUserDeck">
+                             外す
+                        </div>
+                    </a>
                 </div>
         <{/if}> 
             <div class="btnSelectCardInUserDeckRight">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-                <div class="strSelectCardInUserDeck">
-                    <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
+                <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
+                    <div class="strSelectCardInUserDeck">
                         <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
 
     <{* デッキに設定 *}> 

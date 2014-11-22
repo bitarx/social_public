@@ -521,20 +521,20 @@ class StagesController extends ApiController {
             $enemyId = $data['enemy_id'];
             $next = 'Stages/comp';
         } else {
+            $page = isset($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 0;
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
-            $next = 'UserStages/index';
+            $next = 'UserStages/index?' . KEY_PAGING . '='. $page;
         }
         $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('errors', 'index', array('error' => 1));
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
         $this->set('data', $data);
         $this->set('next', $next);
         $this->set('questId', $stage['Stage']['quest_id']);
-
     }
 
     /**
