@@ -217,7 +217,8 @@ class UserCardsController extends ApiController {
 
                 // 元カードと素材を削除
                 $where = array('UserDeckCard.user_card_id' => $userBaseCard['user_card_id']);
-                $this->UserDeckCard->deleteAll($where);
+                $update = array('UserDeckCard.user_card_id' => 0);
+                $this->UserDeckCard->updateAll($update, $where);
 
                 // 演出に表示必要なのでカードは論理削除
                 $value = array(
@@ -228,7 +229,7 @@ class UserCardsController extends ApiController {
 
 
                 $where = array('UserDeckCard.user_card_id' => $targetData['user_card_id']);
-                $this->UserDeckCard->deleteAll($where);
+                $this->UserDeckCard->updateAll($update, $where);
 
                 // 演出に表示必要なのでカードは論理削除
                 $value = array(

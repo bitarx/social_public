@@ -75,10 +75,10 @@ class SynthComponent extends Component {
 
         // レベルアップ
         for ($i = 1; $i <= $levelUpCnt; $i++) {
-            $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.01);
-            $baseCard['hp_max'] = (int)floor($baseCard['hp_max'] * 1.01);
-            $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.02);
-            $baseCard['def']    = (int)floor($baseCard['def'] * 1.02);
+            $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.02);
+            $baseCard['hp_max'] = (int)floor($baseCard['hp_max'] * 1.02);
+            $baseCard['atk']    = (int)floor($baseCard['atk'] * 1.03);
+            $baseCard['def']    = (int)floor($baseCard['def'] * 1.03);
             $baseCard['level']++;
             // 最大レベルで終了
             if ($baseCard['card_level'] <= $baseCard['level']) {

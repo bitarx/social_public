@@ -712,7 +712,7 @@ input.btn_submit {
 }
 .textAreaStageImg {
     width:600px;
-    height: 176px;
+    height: 178px;
 }
 .goldImg {
     width:150px;
@@ -1064,7 +1064,7 @@ display: block;
     position: relative;
     text-align: center;
     top: 10px;
-    height: 210px;
+    height: 225px;
 }
 .tutoStartItemTextStr {
     position: absolute;
@@ -1123,12 +1123,12 @@ display: block;
 .guideFukiUpper {
     position: absolute;
     left:18px;
-    top:-8px;
+    top:-9px;
 }
 .guideFukiUpperEnd {
     position: absolute;
     left:18px;
-    top:-2px;
+    top:-3px;
 }
 .guideFukiUnder {
     position: absolute;
@@ -1148,7 +1148,7 @@ display: block;
 .guideFukiUnder3XL {
     position: absolute;
     left:18px;
-    top:250px;
+    top:249px;
 }
 .guideFukiUnder4XL {
     position: absolute;
@@ -1168,11 +1168,11 @@ display: block;
     line-height: 1.3em;
     left: 30px;
     width:400px;
-    top: 13px;
+    top: 12px;
 }
 .guideFukiMiddle {
     position: absolute;
-    top: -6px;
+    top: -9px;
     left: 18px;
 }
 
@@ -1228,7 +1228,7 @@ display: block;
     color: #000000;
     line-height: 1.3em;
     left: 30px;
-    top: 8px;
+    top: 10px;
 }
 .enemyFukiMiddle {
     position: absolute;

@@ -51,7 +51,6 @@ boss.loader = ( function() {
       {src: fileName.gion002, id: "gion002" },
       {src: fileName.gion003, id: "gion003" },
       {src: fileName.yajirushiDown, id: "yajirushiDown" },
-      {src: fileName.textarea_gd, id: "namePlate" },
       {src: fileName.numSL, id: "numSL" }
     ];
 

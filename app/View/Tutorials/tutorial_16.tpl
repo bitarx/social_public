@@ -9,7 +9,7 @@
         <img src="<{$smarty.const.IMG_URL}>item/item_1.png">
     </div>
     <div class="tutoStartItemTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="210px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="225px">
         <div class="tutoStartItemTextStr">
             R以上のカードGETのチャンス(^^♪<br />
             <span style="color:#FFA500">プレミアムガチャチケット！</span><br />
@@ -53,7 +53,7 @@
         <img src="<{$smarty.const.IMG_URL}>card/mi_cat.jpg" width="160px">
     </div>
     <div class="tutoStartItemTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="160px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="165px">
         <div class="tutoStartItemTextStr">
             カードレベルMAXへ成長させるチャンス♪<br />
             <span style="color:#FFA500">[愛属性の強化素材]</span>ララ<br />

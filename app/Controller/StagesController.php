@@ -445,8 +445,6 @@ class StagesController extends ApiController {
         $deckKeys = array();
         $i = 0;
         $cardNo = 1;
-$this->log('###############################'); 
-$this->log($data['log']); 
         foreach ($data['log'] as $key => $value) {
             if ( $key === 'card_id_' . $cardNo ) {
                 if (!empty($value)) {
@@ -489,6 +487,7 @@ $this->log($data['log']);
                 if ( isset($val['targetData']['enemy_id']) ) {
 
                     $end  = 0;
+                    $tmp = 0;
                     for ($k = 4; $end <= $k ; $k--) {
                         if (!isset($hp[$k]))  {
                             $hp[$k] = $tmp; 
@@ -540,8 +539,7 @@ $this->log($data['log']);
         $enemySkillData = array();
         if (!empty($data['log']['enemy_skill'])) 
             $enemySkillData = json_encode($data['log']['enemy_skill'][0]);
-$this->log('$$$$$$$$$$$$$$$$$$$$$$$$$$'); 
-$this->log($turn); 
+
         $turn     = json_encode($turn);
         $player   = json_encode($player);
 
