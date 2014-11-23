@@ -18,6 +18,7 @@
     </a>
         </div>
     <{if !empty($noCard)}>
+        <div class="spaceHigh"></div>
         <div style="position:relative;color:#FF0000;text-align:center;">
             <span style="#FF0000">デッキにカードがセットされていません</span>
         </div>

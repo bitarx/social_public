@@ -201,23 +201,25 @@
     <{* デッキ編成 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'index' == $action}> 
         <{if !empty($data.user_card_id)}> 
-                <div class="btnSelectCardInUserDeckLeft">
+                <div class="parent">
                    <a href="<{$smarty.const.BASE_URL}>UserDeckCards/delete?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
-                        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-                        <div class="strSelectCardInUserDeck">
+                        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                        <div class="child">
                              外す
                         </div>
                     </a>
                 </div>
+                <div class="space"></div>
         <{/if}> 
-            <div class="btnSelectCardInUserDeckRight">
+            <div class="parent">
                 <a href="<{$smarty.const.BASE_URL}>UserDeckCards/initList?user_deck_id=<{$data.user_deck_id}>&deck_number=<{$data.deck_number}>">
-                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_s.png">
-                    <div class="strSelectCardInUserDeck">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <div class="child">
                         <{if !empty($data.user_card_id)}>変更<{else}>設定<{/if}>  
                     </div>
                 </a>
             </div>
+            <div class="space"></div>
 
     <{* デッキに設定 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 

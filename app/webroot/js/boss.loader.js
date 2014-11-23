@@ -51,6 +51,7 @@ boss.loader = ( function() {
       {src: fileName.gion002, id: "gion002" },
       {src: fileName.gion003, id: "gion003" },
       {src: fileName.yajirushiDown, id: "yajirushiDown" },
+      {src: fileName.textarea_gd, id: "namePlate" },
       {src: fileName.numSL, id: "numSL" }
     ];
 
@@ -130,22 +131,6 @@ boss.loader = ( function() {
     var count = 0;
     var len = playerFileNameList.length;
 
-// 以下の処理だと素材セットが非同期なためカードの表示順序が狂う
-/*
-    for( var i = 0; i < len; i++ ) {
-      var imgFileName = playerFileNameList[ i ];
-      _loadImage( imgFileName, "center", function( bmContainer ){
-        playerBMList.push( bmContainer );
-
-        count++;
-        if( count >= len ) {
-          _stocker.setDO( "playerBMList", playerBMList );
-          callback();
-        }
-      } );
-    }
-*/
-// 以下暫定対応
     var i = 0;
     var eventFunc = function() {
 

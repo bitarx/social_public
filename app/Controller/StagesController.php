@@ -456,13 +456,11 @@ $this->log($data['log']);
                                ,   'current' => $data['log']['card_id_' . $cardNo . '_cur'] 
                                );
                 } else {
-                /*
                     $player[] = array(
                                    'img'     => IMG_URL . 'card/card_s_1.jpg'
                                ,   'max'     => $data['log']['card_id_'. $cardNo . '_max'] 
                                ,   'current' => $data['log']['card_id_' . $cardNo . '_cur'] 
                                );
-                */
 
                 }
                 $cardNo++;
@@ -471,14 +469,6 @@ $this->log($data['log']);
 
             if (is_numeric($key)) {
 
-                // playerのセットされているデッキ配列値を抽出
-                if ($key == 1) {
-                    foreach ($value as $dk => $num) {
-                        if (!empty($num)) {
-                            $deckKeys[] = $dk;
-                        }
-                    }
-                }
                 $hp = array();
                 $val = array();
                 for ($j = 0; $j < 5 ; $j++) {
@@ -486,9 +476,7 @@ $this->log($data['log']);
                         $hp[$j] = $value[$j]['targetData']['hp'] - $value[$j]['damage'];
                         $val = $value[$j];
                     } else {
-                        if ( isset($val['targetData']['enemy_id']) ) {
-//                           $hp[$j] = $val['targetData']['hp'] - $val['damage'];
-                        } else {
+                        if ( !isset($val['targetData']['enemy_id']) ) {
                             $hp[$j] = 0;
                         }
                     }
@@ -498,32 +486,37 @@ $this->log($data['log']);
                 }
 
 
-                $hpTurn = array();
                 if ( isset($val['targetData']['enemy_id']) ) {
-                    $last = count($hp) - 1;
-                    $keyNum = 0;
-                    foreach ($hp as $k => $num) {
-                        if ($k == $last || !empty($num)) {
-                            $hpTurn[$keyNum] = $num;
-                            $keyNum++;
+
+                    $end  = 0;
+                    for ($k = 4; $end <= $k ; $k--) {
+                        if (!isset($hp[$k]))  {
+                            $hp[$k] = $tmp; 
+                            continue;
+                        }
+
+                        if ($hp[$k] <= 0 && !empty($tmp)) {
+                            $hp[$k] = $tmp;
+                        }
+                        $tmp = $hp[$k];
+                    }
+
+                    ksort($hp);
+
+                    $cnt = count($hp);
+                    $num = $lastKey = $cnt - 1;
+                    if (!empty($hp[$lastKey])) {
+                        while ($num < 4) {
+                            $num++;
+                            $hp[$num] = $hp[$lastKey];
                         }
                     }
-                    $lastNum = $num;
-                    while ($keyNum < 5) {
-                        $hpTurn[$keyNum] = $lastNum;
-                        $keyNum++;
-                    }
+
                     // プレイヤーの攻撃
-                    $turn[$i]['enemyHP'] = $hpTurn;
+                    $turn[$i]['enemyHP'] = $hp;
                 } else {
-                    foreach ($hp as $deckNo => $num) {
-                        if (in_array($deckNo, $deckKeys)) {
-                            $hpTurn[] = $num;
-                        }
-                    }
-//                    $hpTurn[] = 0;
                     // 敵の攻撃
-                    $turn[$i]['playerHP'] = $hpTurn;
+                    $turn[$i]['playerHP'] = $hp;
                     $i++;
                 }
             }
@@ -531,20 +524,23 @@ $this->log($data['log']);
 
 
         // プレイヤースキル
-        $pSkill = array();
-        $i = 0;
-        foreach ($data['log']['player_skill'] as $val) {
-            $pSkill[] = $val;
-        }
         $playerSkillData = array();
-        if (!empty($data['log']['player_skill'])) 
+        if (!empty($data['log']['player_skill'])) {
+            $pSkill = array();
+            for ($i = 0; $i < 5; $i++) {
+                if (!isset($data['log']['player_skill'][$i])) {
+                    $pSkill[$i] = "";
+                } else {
+                    $pSkill[$i] = $data['log']['player_skill'][$i];
+                }
+            }
             $playerSkillData = json_encode($pSkill);
+        }
 
         $enemySkillData = array();
         if (!empty($data['log']['enemy_skill'])) 
             $enemySkillData = json_encode($data['log']['enemy_skill'][0]);
-
-$this->log('$$$$$$$$$$$$$$$$'); 
+$this->log('$$$$$$$$$$$$$$$$$$$$$$$$$$'); 
 $this->log($turn); 
         $turn     = json_encode($turn);
         $player   = json_encode($player);

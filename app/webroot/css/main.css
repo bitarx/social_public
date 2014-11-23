@@ -897,12 +897,14 @@ display: block;
     top: 15px;
     left: 240px;
     height:90px;
+    width: 100px;
     position: relative;
 }
 .strSelectCardInUserDeck {
     position: relative;
     top: -40px;
     left: 41px;
+    font-size: 30px;
     color:#fff;
 }
 .costOver {

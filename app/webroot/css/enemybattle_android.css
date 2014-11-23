@@ -1,13 +1,15 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-image: url('../img/synth_evol_bg.png');
+//  background-image: url('../img/synth_evol_bg.png');
+  background-color:#000;
   height:980px;
   overflow: hidden;
 }
 
 #mainCanvas {
-  background-image: url('../img/synth_evol_bg.png');
+//  background-image: url('../img/synth_evol_bg.png');
+  background-color:#000;
   overflow: hidden;
   margin: auto;
   text-align: left;

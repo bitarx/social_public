@@ -131,12 +131,13 @@ boss.layout = ( function() {
     _stocker.getDO( "stage" ).addChild( _stocker.getDO( "bg" ) );
 
     //敵名前
-    var bossName_txt = new createjs.Text( _paramater.getParam( "enemyData" ).name, "24px Arial", "#000" );
+    var bossName_txt = new createjs.Text( _paramater.getParam( "enemyData" ).name, "24px Arial", "#fff" );
     _stocker.setDO( "bossName", bossName_txt );
     bossName_txt.regX = bossName_txt.width / 2; bossName_txt.regY = bossName_txt.height / 2;
     bossName_txt.y = -400;
     bossName_txt.textAlign = "center";
     _stocker.getDO( "stage" ).addChild( bossName_txt );
+    
 
     //敵
     _stocker.setDO( "enemyContainer", new createjs.Container() );
@@ -192,7 +193,6 @@ boss.layout = ( function() {
     _stocker.getDO( "bossCurrentHP" ).x = _stocker.getDO( "bossMaxHP" ).x - 20;
     _stocker.getDO( "bossCurrentHP" ).y = _stocker.getDO( "bossMaxHP" ).y = -30;
     _stocker.getDO( "stage" ).addChild( _stocker.getDO( "bossCurrentHP" ) );
-
 
     var setPlayer = function() {
       //Playerキャラクター

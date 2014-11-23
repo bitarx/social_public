@@ -18,6 +18,7 @@
            コストオーバーの為設置できません。 
         </div>
     <{/if}> 
+    <div class="space"></div>
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserDeckCards/index">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
