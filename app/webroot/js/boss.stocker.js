@@ -224,19 +224,34 @@ boss.layout = ( function() {
         damageMask.alpha = 0.5;
         damageMask.visible = false;
         container.addChild( damageMask );
+        if (bm.image.height < 280) {
+            var hpProgBase = _stocker.getDO( "playerHPProgBase" ).clone();
+            hpProgBase.scaleX = 0.5;
+            hpProgBase.scaleY = 0.8;
+            hpProgBase.y = 70;
+            container.addChild( hpProgBase );
 
-        var hpProgBase = _stocker.getDO( "playerHPProgBase" ).clone();
-        hpProgBase.scaleX = 0.5;
-        hpProgBase.scaleY = 0.8;
-        hpProgBase.y = 70;
-        container.addChild( hpProgBase );
+            var hpProgBar = _stocker.getDO( "playerHPProgBar" ).clone();
+            hpProgBar.scaleY = 0.8;
+            hpProgBar.scaleX = _utils.getPercentage( _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, 58 );;
+            hpProgBar.x = -58;
+            hpProgBar.y = 70;
+            container.addChild( hpProgBar );
 
-        var hpProgBar = _stocker.getDO( "playerHPProgBar" ).clone();
-        hpProgBar.scaleY = 0.8;
-        hpProgBar.scaleX = _utils.getPercentage( _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, 58 );;
-        hpProgBar.x = -58;
-        hpProgBar.y = 70;
-        container.addChild( hpProgBar );
+        } else {
+            var hpProgBaseT = _stocker.getDO( "playerHPProgBaseT" ).clone();
+            hpProgBaseT.scaleX = 0.5;
+            hpProgBaseT.scaleY = 0.8;
+            hpProgBaseT.y = 70;
+            container.addChild( hpProgBaseT );
+
+            hpProgBaseT.scaleY = 0.8;
+            hpProgBaseT.scaleX = _utils.getPercentage( _paramater.getParam( "playerData" )[ i ].max, _paramater.getParam( "playerData" )[ i ].current, 58 );;
+            hpProgBaseT.x = -58;
+            hpProgBaseT.y = 70;
+            container.addChild( hpProgBaseT );
+        }
+
 
         var playerPowerUP = _stocker.getDO( "playerPowerUP" ).clone();
         playerPowerUP.scaleX = 110;

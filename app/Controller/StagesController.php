@@ -455,7 +455,7 @@ class StagesController extends ApiController {
                                );
                 } else {
                     $player[] = array(
-                                   'img'     => IMG_URL . 'card/card_s_1.jpg'
+                                   'img'     => IMG_URL . 'touka_card.png'
                                ,   'max'     => $data['log']['card_id_'. $cardNo . '_max'] 
                                ,   'current' => $data['log']['card_id_' . $cardNo . '_cur'] 
                                );

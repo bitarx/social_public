@@ -34,6 +34,7 @@ boss.loader = ( function() {
       {src: fileName.enemyHPProgBase, id: "enemyHPProgBase" },
       {src: fileName.enemyHPProgRed, id: "enemyHPProgRed" },
       {src: fileName.playerHPProgBase, id: "playerHPProgBase" },
+      {src: fileName.playerHPProgBaseT, id: "playerHPProgBaseT" },
       {src: fileName.playerHPProgBar, id: "playerHPProgBar" },
       {src: fileName.fukidashiMiddle, id: "fukidashiMiddle" },
       {src: fileName.fukidashiLeftUnder, id: "fukidashiLeftUnder" },
@@ -73,6 +74,7 @@ boss.loader = ( function() {
       _stocker.setDO( "enemyHPProgBase", _getBitmap( loader.getResult( "enemyHPProgBase" ), "center" ) );
       _stocker.setDO( "enemyHPProgRed", _getBitmap( loader.getResult( "enemyHPProgRed" ), "centerY" ) );
       _stocker.setDO( "playerHPProgBase", _getBitmap( loader.getResult( "playerHPProgBase" ), "center" ) );
+      _stocker.setDO( "playerHPProgBaseT", _getBitmap( loader.getResult( "playerHPProgBaseT" ), "center" ) );
       _stocker.setDO( "playerHPProgBar", _getBitmap( loader.getResult( "playerHPProgBar" ), "centerY" ) );
       _stocker.setDO( "fukidashiMiddle", _getBitmap( loader.getResult( "fukidashiMiddle" ), "center" ) );
       _stocker.setDO( "fukidashiLeftUnder", _getBitmap( loader.getResult( "fukidashiLeftUnder" ), "centerX" ) );
