@@ -48,9 +48,9 @@
         <div class="cardExp">
             経験値:
         </div>
-        <div id="progCardExp" class="progCardExp">
+        <div id="progCardExp" class="progCardExpIos">
         </div>
-        <div class="cardExpInt">
+        <div class="cardExpIntIos">
             <span style="color:#ffffff">0 / 100</span>
         </div>
 
@@ -61,7 +61,7 @@
         <div class="cardLv">
             Lv.<span style="color:#ffffff">1</span>
         </div>
-        <div class="cardSkillLv">
+        <div class="cardSkillLvIos">
             スキルLv:<span style="color:#ffffff">1</span>
         </div>
         <div class="cardSkillName">

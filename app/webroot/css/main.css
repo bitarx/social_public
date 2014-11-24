@@ -712,7 +712,7 @@ input.btn_submit {
 }
 .textAreaStageImg {
     width:600px;
-    height: 178px;
+    height: 180px;
 }
 .goldImg {
     width:150px;
@@ -1138,12 +1138,12 @@ display: block;
 .guideFukiUnderL {
     position: absolute;
     left:18px;
-    top:154px;
+    top:152px;
 }
 .guideFukiUnderXL {
     position: absolute;
     left:18px;
-    top:186px;
+    top:185px;
 }
 .guideFukiUnder3XL {
     position: absolute;

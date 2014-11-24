@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "end";
+           location.href = "end?has_max_flg=<{$hasMaxFlg}>";
       }
 
       window.onload = function() {

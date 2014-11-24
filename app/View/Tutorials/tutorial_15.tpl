@@ -1,4 +1,4 @@
-<div class="tutorials index">
+<div class="commonDisplay">
 
     <{include file="../Elements/title.tpl"}>
 

@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect');
+    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox');
 
     // 10連ガチャID
     public $gacha10 = array( GACHA_10_ID );
@@ -31,12 +31,6 @@ class GachasController extends ApiController {
      * @return json
      */
 	public function index() {
-
-        // カード所持数確認
-        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
-        if ($ret) {
-            $this->rd('Errors', 'index', array('error' => 'max'));
-        }
 
         $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
 
@@ -54,18 +48,12 @@ class GachasController extends ApiController {
      */
     public function act() {
 
-        // カード所持数確認
-        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
-        if ($ret) {
-            $this->rd('Errors', 'index', array('error' => 'max'));
-        }
-
         $gachaId = $this->params['gacha_id'];
 
         if (empty($gachaId)) {
             // 選択がない
             $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
-            return $this->rd('Errors', 'index', array('error'=> 1));
+            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION ));
         }
 
         $where = array('gacha_id' => $gachaId );
@@ -75,94 +63,37 @@ class GachasController extends ApiController {
         if (empty($probList)) {
             // データがない
             $this->log(__FILE__ . __LINE__ . ':No Data ProbList:userId;'. $this->userId);
-            return $this->rd('Gachas', 'index', array('error'=> 1));
+            return $this->rd('Gachas', 'index', array('error'=> ERROR_ID_BAD_OPERATION ));
         }
 
-        $gacha10 = false;
+        $gacha10 = 0;
 
-        if (in_array($gachaId, $this->gacha10)) $gacha10 = true;
+        if (in_array($gachaId, $this->gacha10)) $gacha10 = 1;
+
+        $gachaFree = 0;
+        if (in_array($gachaId, $this->gachaMoney)) $gachaFree = 1;
         
+        // カード所持数確認
+        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId);
 
-        $this->UserCard->begin();
 
-        if (!$gacha10) {
-            // 単品ガチャ
+        // プレミアムガチャチケット判定
+        $tNum = 0;
+        if ($gachaId == GACHA_PREMIUM_ID) {
+            $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
+        }
 
-            // 無料ガチャの場合はゴールドチェック
-            if (in_array($gachaId, $this->gachaMoney)) {
-               if ($this->userParam['money'] < $gachaData['point']) {
-                   $param = array('money' => 1);
-                   $this->rd('Gachas', 'index', $param);
-               }
-            }
+        // チケット保有がない課金ガチャ
+        if ( empty($tNum) && 0 == $gachaFree ) {
 
-            $data = $this->Common->doLot($probList);
-
-            $cardData = $this->Card->getCardData($data['card_id']);
-
-            try {
-                $values = array(
-                    'user_id' => $this->userId
-                ,   'card_id' => $cardData['card_id']
-                ,   'hp' => $cardData['card_hp']
-                ,   'hp_max' => $cardData['card_hp']
-                ,   'atk' => $cardData['card_atk']
-                ,   'def' => $cardData['card_def']
-                );
-                $this->UserCard->save($values);
-
-                // 無料ガチャの場合はゴールド減算
-                if (in_array($gachaId, $this->gachaMoney)) {
-                    $money = $this->userParam['money'] - $gachaData['point'];
-                    $values = array(
-                        'user_id' => $this->userId
-                    ,   'money'   => $money 
-                    );
-                    $this->UserParam->save($values);
-                }
-
-                // ログ記述
-                $values = array(
-                    'user_id' => $this->userId 
-                ,   'gacha_id' => $gachaId
-                ,   'card_id'  => $cardData['card_id']
-                );
-                $this->UserGachaLog->save($values);
-
-                // コレクション登録
-                $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
-
-                // ログリスト
-                $logList[] = $values;
-
-            } catch (AppException $e) {
-                $this->UserCard->rollback();
-                $this->log($e->errmes);
-                return $this->rd('Errors', 'index', array('error'=> 2));
-            }
-
-            $rareLevel = $cardData['rare_level'];
-        } else {
-
-            // 10連ガチャ
-            $cardList = array();
-            $logList  = array();
             $rareLevel = 1;
 
-            for ($i = 1; $i <= 10; $i++) {
+            // 抽選だけ先に行う
+            $num = empty($gacha10) ? 1 : 10;
+            for ($i = 1; $i <= $num; $i++) {
                 $data = $this->Common->doLot($probList);
 
                 $cardData = $this->Card->getCardData($data['card_id']);
-
-                // カードリスト
-                $cardList[] = array(
-                    $this->userId
-                ,   $cardData['card_id']
-                ,   $cardData['card_hp']
-                ,   $cardData['card_hp']
-                ,   $cardData['card_atk']
-                ,   $cardData['card_def']
-                );
 
                 // ログリスト
                 $logList[] = array(
@@ -176,56 +107,46 @@ class GachasController extends ApiController {
                 }
             }
 
+            // 抽選結果保存
+            $this->UserGachaLog->begin();
             try {
-
-                $field = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
-                $this->UserCard->insertBulk($field, $cardList, $ignore = 1);
-
-                $field = array('user_id', 'gacha_id', 'card_id');
-                $this->UserGachaLog->insertBulk($field, $logList, $ignore = 1);
-
-                // コレクション登録
-                foreach ($logList as $val) {
-                    $this->UserCollect->initCollect($val[0], $val[2]);
+                if (empty($gacha10)) {
+                    // 単品ガチャ
+                    $value = array(
+                        'user_id'    => $this->userId
+                    ,   'gacha_id'   => $gachaId    
+                    ,   'card_id'    => $data['card_id']    
+                    );
+                    $this->UserGachaLog->save($value);
+                } else {
+                    // １０連ガチャ
+                    $field = array('user_id', 'gacha_id', 'card_id');
+                    $this->UserGachaLog->insertBulk($field, $logList);
                 }
 
             } catch (AppException $e) {
-                $this->UserCard->rollback();
+                $this->UserParam->rollback();
                 $this->log($e->errmes);
-                return $this->rd('Errors', 'index', array('error'=> 2));
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
             }
+            $this->UserGachaLog->commit();
 
-        }
-        $this->UserCard->commit();
-
-        // 無課金ガチャ
-        if (in_array($gachaId, $this->gachaMoney)) {
-            $param = array('rare_level' => $rareLevel );
-            $this->rd('gachas', 'product', $param);
-        }
-
-        // プレミアムガチャチケット判定
-        $tNum = 0;
-        if ($gachaId == GACHA_PREMIUM_ID) {
-            $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
-        }
-
-        // チケット保有がなければ
-        if ( empty($tNum) ) {
 
             /********************************************** 
              * 以下課金API
             ***********************************************/ 
             // アプリヒルズ側で購入が確定した際の通知先URL
-            $callbackUrl = BASE_URL . "Gachas/comp";
+            $callbackUrl = BASE_URL . "Gachas/comp?gacha_id=". $gachaId;
 
             // アプリヒルズ側で購入が完了した後の戻り先URL
-            if ($gacha10) {
+            if (!empty($gacha10)) {
                 // １０連ガチャ
-                $finishPageUrl = BASE_URL . "Gachas/product10?rare_level=". $rareLevel;
+                $finishPageUrl 
+                    = BASE_URL . "Gachas/product10?rare_level=". $rareLevel. '&has_max_flg='. $hasMaxFlg;
             } else {
                 // 単品ガチャ
-                $finishPageUrl = BASE_URL . "Gachas/product?rare_level=". $rareLevel;
+                $finishPageUrl 
+                    = BASE_URL . "Gachas/product?rare_level=". $rareLevel . "&has_max_flg=" . $hasMaxFlg;
             }
 
 
@@ -256,7 +177,7 @@ class GachasController extends ApiController {
                     $values = array(
                                   'payment_id' => $paymentId
                               ,   'user_id'   => $this->userId
-                              ,   'log'       => json_encode($logList)
+                              ,   'log'       => json_encode($itemLog)
                               );
                     $this->PaymentLog->save($values);
 
@@ -278,36 +199,106 @@ class GachasController extends ApiController {
             }
         } else {
 
-            // チケット減算
-            $tNum--;
+            if ( 0 == $gachaFree ) {
+                // チケット減算
+                $tNum--;
 
-            $this->UserItem->begin();
-            try {
-                $value = array('num' => $tNum);
-                $where = array(
-                    'UserItem.user_id' => $this->userId
-                ,   'UserItem.item_id' => PGACHA_ITEM_ID
-                );
-                $this->UserItem->updateAll($value, $where);
+                $this->UserItem->begin();
+                try {
+                    $value = array('num' => $tNum);
+                    $where = array(
+                        'UserItem.user_id' => $this->userId
+                    ,   'UserItem.item_id' => PGACHA_ITEM_ID
+                    );
+                    $this->UserItem->updateAll($value, $where);
 
-            } catch (AppException $e) {
-                $this->UserParam->rollback();
-                $this->log($e->errmes);
-                $this->rd('Errors', 'index', array('error'=> 2));
+                } catch (AppException $e) {
+                    $this->UserParam->rollback();
+                    $this->log($e->errmes);
+                    $this->rd('Errors', 'index', array('error'=> 2));
+                }
+                $this->UserItem->commit();
             }
-            $this->UserItem->commit();
-
         }
 
 
-        $params = array(
-            'rare_level' => $rareLevel
-        );
+        // 以下の処理はチケットで回した場合と無課金ガチャの場合に通る
 
-        if ($gacha10) {
+        $data = $this->Common->doLot($probList);
+
+        $cardData = $this->Card->getCardData($data['card_id']);
+
+        try {
+
+            // カード所持最大未満の場合はカードテーブルへ
+            if (empty($hasMaxFlg)) {
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'card_id' => $cardData['card_id']
+                ,   'hp' => $cardData['card_hp']
+                ,   'hp_max' => $cardData['card_hp']
+                ,   'atk' => $cardData['card_atk']
+                ,   'def' => $cardData['card_def']
+                );
+                $this->UserCard->save($values);
+            } else {
+                // カード所持最大の場合はプレゼントボックスへ
+                $values = array();
+                $values[] = array(
+                    $this->userId
+                ,   KIND_CARD
+                ,   $cardData['card_id']
+                ,   1
+                ,   $gachaData['gacha_name'] . 'で入手'
+                );
+                $this->UserPresentBox->registPBox($values);
+            }
+
+            // 無料ガチャの場合はゴールド減算
+            if (in_array($gachaId, $this->gachaMoney)) {
+                $money = $this->userParam['money'] - $gachaData['point'];
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'money'   => $money 
+                );
+                $this->UserParam->save($values);
+            }
+
+            // ログ記述
+            $values = array(
+                'user_id' => $this->userId 
+            ,   'gacha_id' => $gachaId
+            ,   'card_id'  => $cardData['card_id']
+            ,   'end_flg'  => 1
+            );
+            $field = array('user_id', 'gacha_id', 'card_id', 'end_flg');
+            $this->UserGachaLog->save($values);
+
+            // コレクション登録
+            $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
+
+            // ログリスト
+            $logList[] = $values;
+
+        } catch (AppException $e) {
+            $this->UserCard->rollback();
+            $this->log($e->errmes);
+            exit;
+        }
+
+        $rareLevel = $cardData['rare_level'];
+
+
+        // 演出へ
+        $params = array(
+            'rare_level'  => $rareLevel
+        ,   'has_max_flg' => $hasMaxFlg
+        );
+        if (!empty($gacha10)) {
             // １０連ガチャ
             $this->rd('Gachas', 'product10', $params);
         } else {
+            // 単品ガチャ
             $this->rd('Gachas', 'product', $params);
         }
     }
@@ -326,11 +317,11 @@ class GachasController extends ApiController {
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
         $product = $this->GachaFunc->doProductLot($rareLevel);
-        if (empty($rareLevel)) {
+        if (empty($rareLevel) || false === $hasMaxFlg) {
             $this->rd('Errors', 'index', array('error' => 1));
         }
-
 
         // ベースカード
         $baseCard = IMG_URL . 'gacha/card.png';
@@ -342,12 +333,11 @@ class GachasController extends ApiController {
         $afterCard = IMG_URL . 'gacha/card.png';
 
 
-
         $this->set('product', $product);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
-
+        $this->set('hasMaxFlg', $hasMaxFlg);
     }
 
     /**
@@ -358,16 +348,17 @@ class GachasController extends ApiController {
      */
     public function product10() {
 
-
         // 共通レイアウトは使わない
         $this->layout = '';
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
-        $product = $this->GachaFunc->doProductLot($rareLevel);
-        if (empty($rareLevel)) {
-            $this->rd('UserCards', 'index', array('error' => 2));
+        $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
+        if (empty($rareLevel) || false === $hasMaxFlg ) {
+            $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
+
+        $product = $this->GachaFunc->doProductLot($rareLevel);
 
         // ベースカード
         $baseCard = IMG_URL . 'gacha/card.png';
@@ -377,59 +368,17 @@ class GachasController extends ApiController {
 
         // 合成後カード
         $afterCard = IMG_URL . 'gacha/card_s.png';
-$this->log('####################################'); 
-$this->log($baseCard); 
-$this->log($target); 
-$this->log($afterCard); 
+
         $this->set('product', $product);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
+        $this->set('hasMaxFlg', $hasMaxFlg);
 
     }
 
     /**
-     * ガチャ演出１０連
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function _product10() {
-
-        // 共通レイアウトは使わない
-        $this->layout = '';
-
-        // パラメータ取得
-        $baseCard = isset($this->params['base_card']) ? $this->params['base_card'] : 0;
-        $upExp = isset($this->params['up_exp']) ? $this->params['up_exp'] : 0;
-        $startExp = isset($this->params['start_exp']) ? $this->params['start_exp'] : 0;
-
-        $list = array();
-        for ($i = 1; $i <= 10; $i++) {
-            $list[] = IMG_URL . 'gacha/card.png';
-        }
-
-        if (empty($baseCard) || empty($list) || empty($upExp)) {
-            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-//            $this->rd('UserCards', 'index', array('error' => 1));
-        }
-
-
-        $sacrificeList = json_encode($list);
-        $baseCard = FILEOUT_URL . '?size=m&dir=card&target=' . $baseCard;
-        $endExp = $upExp + $startExp;
-
-// 仮
-$baseCard = IMG_URL . 'miku_v02.jpg';
-
-        $this->set('baseCard', $baseCard);
-        $this->set('sacrificeList', $sacrificeList);
-        $this->set('startExp', $startExp);
-        $this->set('endExp', $endExp);
-    }
-
-    /**
-     * ガチャ完了処理
+     * ガチャ完了処理(課金処理が成功した場合のコールバック)
      *
      * @author imanishi
      * @return void
@@ -438,6 +387,145 @@ $baseCard = IMG_URL . 'miku_v02.jpg';
 
         $this->autoRender = false;   // 自動描画をさせない
 
+        $gachaId = $this->params['gacha_id'];
+
+        if (empty($gachaId)) {
+            // 選択がない
+            $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
+            exit;
+        }
+
+        $gacha10 = 0;
+        if (in_array($gachaId, $this->gacha10)) $gacha10 = 1;
+        
+        $limit = empty($gacha10) ? 1: 10;
+        $logList = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $endFlg = 0, $limit);
+        if (empty($logList)) {
+            // ログがない
+            $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
+            exit;
+        }
+
+        $where = array('gacha_id' => $gachaId );
+        $gachaData = $this->Gacha->getAllFind($where, array(), 'first');
+
+        
+        // カード所持数確認
+        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId);
+
+        $this->UserCard->begin();
+
+        if (empty($gacha10)) {
+            // 単品ガチャ
+            $cardData = $this->Card->getCardData($logList[0]['card_id']);
+
+            try {
+
+                // カード所持最大未満の場合はカードテーブルへ
+                if (empty($hasMaxFlg)) {
+                    $values = array(
+                        'user_id' => $this->userId
+                    ,   'card_id' => $cardData['card_id']
+                    ,   'hp' => $cardData['card_hp']
+                    ,   'hp_max' => $cardData['card_hp']
+                    ,   'atk' => $cardData['card_atk']
+                    ,   'def' => $cardData['card_def']
+                    );
+                    $this->UserCard->save($values);
+                } else {
+                    // カード所持最大の場合はプレゼントボックスへ
+                    $values[] = array(
+                        $this->userId
+                    ,   KIND_CARD
+                    ,   $cardData['card_id']
+                    ,   1
+                    ,   $gachaData['gacha_name'] . 'ガチャで入手'
+                    );
+                    $this->UserPresentBox->registPBox($values);
+                }
+
+                // ログ記述
+                $values = array(
+                    'id'       => $logList[0]['id'] 
+                ,   'end_flg'  => 1
+                );
+                $this->UserGachaLog->save($values);
+
+                // コレクション登録
+                $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
+
+                // ログリスト
+                $logList[] = $values;
+
+            } catch (AppException $e) {
+                $this->UserCard->rollback();
+                $this->log($e->errmes);
+                exit;
+            }
+
+        } else {
+
+            // 10連ガチャ
+            for ($i = 0; $i < 10; $i++) {
+
+                $cardData = $this->Card->getCardData($logList[$i]['card_id']);
+
+                if (empty($hasMaxFlg)) {
+                    // カードリスト
+                    $values[] = array(
+                        $this->userId
+                    ,   $cardData['card_id']
+                    ,   $cardData['card_hp']
+                    ,   $cardData['card_hp']
+                    ,   $cardData['card_atk']
+                    ,   $cardData['card_def']
+                    );
+                } else {
+
+                    // プレゼントボックスリスト
+                    $values[] = array(
+                        $this->userId
+                    ,   KIND_CARD
+                    ,   $cardData['card_id']
+                    ,   1
+                    ,   $gachaData['gacha_name'] . 'ガチャで入手'
+                    );
+                }
+
+            }
+
+            try {
+
+                // カード所持最大未満の場合はカードテーブルへ
+                if (empty($hasMaxFlg)) {
+                    $field = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
+                    $this->UserCard->insertBulk($field, $values, $ignore = 1);
+                } else {
+                    // カード所持最大の場合はプレゼントボックスへ
+                    $this->UserPresentBox->registPBox($values);
+                }
+
+                foreach ($logList as $val) {
+                    $value = array(
+                        'id'       => $val['id'] 
+                    ,   'end_flg'  => 1
+                    );
+                    $this->UserGachaLog->save($value);
+
+                    // コレクション登録
+                    $this->UserCollect->initCollect($val['user_id'], $val['card_id']);
+                }
+
+            } catch (AppException $e) {
+                $this->UserCard->rollback();
+                $this->log($e->errmes);
+                exit;
+            }
+        }
+        $this->UserCard->commit();
+
+        header("HTTP/1.1 200 OK"); 
+        echo "OK";
     }
 
     /**
@@ -448,59 +536,25 @@ $baseCard = IMG_URL . 'miku_v02.jpg';
      */
     public function end() {
 
-        $log = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $limit = 10);
+        $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
+        $log = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $endFlg = 'no', $limit = 10);
+
+        if (empty($log[0]['end_flg'])) {
+            // データがない
+            $this->log(__FILE__ . __LINE__ . ':No Data ProbList:userId;'. $this->userId);
+            return $this->rd('Gachas', 'index', array('error'=> ERROR_ID_SYSTEM ));
+        }
 
         $one = true;
         if (in_array($log[0]['gacha_id'], $this->gacha10)) $one = false;
         $list = array();
         foreach ($log as $val) {
-            $list[] = $this->UserCard->getUserCardLatest($val['card_id'], $this->userId);
+            $list[] = $this->Card->getCardData($val['card_id']);
             if ($one) break;
         }
         $this->set('list', $list);
+        $this->set('hasMaxFlg', $hasMaxFlg);
     }
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->Gacha->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->Gacha->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
-
-        $this->setJson($ary);
-	}
 
 
 }

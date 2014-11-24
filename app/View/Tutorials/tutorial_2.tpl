@@ -1,4 +1,4 @@
-<div class="tutorials index">
+<div class="commonDisplay">
     <img src="<{$smarty.const.IMG_URL}>tutorial/gametitle.png">
     <div class="guide">
 

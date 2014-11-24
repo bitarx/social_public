@@ -136,7 +136,7 @@ class SynthComponent extends Component {
     public function useMoneyUp($list) { 
         $useMoney = 0;
         foreach ($list as $val) {
-            $useMoney += ($val['atk'] + $val['def']);
+            $useMoney += ($val['atk'] + $val['def']) / 2;
         }
         return $useMoney;
     } 

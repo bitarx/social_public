@@ -84,6 +84,18 @@ class UserPresentBox extends AppModel {
 			),
 		),
 	);
+    /**
+     * プレゼントテーブルへ登録
+     *
+     * @author imanishi 
+     * @param array  $values[] = array()
+     * @return bool
+     */
+    public function registPBox($values) {
+
+        $field = array('user_id', 'kind', 'target', 'num', 'message');
+        return $this->insertBulk($field, $values);
+    }
 
     /**
      * プレゼントデータ取得

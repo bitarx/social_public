@@ -151,3 +151,4 @@ define("QUEST_ITEM_EFFECT", 15 );
 // クエスト1回実行で獲得経験値最大
 define("QUEST_MAX_EXP", 3 );
 
+

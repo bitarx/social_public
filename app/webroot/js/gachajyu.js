@@ -331,7 +331,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -250; cardResultBM.y = -400;
+      cardResultBM.x = -200; cardResultBM.y = -400;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine1
@@ -350,7 +350,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -80; cardResultBM.y = -400;
+      cardResultBM.x = -30; cardResultBM.y = -400;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine2
@@ -369,7 +369,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = 90; cardResultBM.y = -400;
+      cardResultBM.x = 140; cardResultBM.y = -400;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine3
@@ -388,7 +388,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -320; cardResultBM.y = -100;
+      cardResultBM.x = -270; cardResultBM.y = -100;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine4
@@ -406,7 +406,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -150; cardResultBM.y = -100;
+      cardResultBM.x = -100; cardResultBM.y = -100;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine5
@@ -424,7 +424,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = 20; cardResultBM.y = -100;
+      cardResultBM.x = 70; cardResultBM.y = -100;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine6
@@ -442,7 +442,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = 190; cardResultBM.y = -100;
+      cardResultBM.x = 240; cardResultBM.y = -100;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine7
@@ -460,7 +460,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -250; cardResultBM.y = 200;
+      cardResultBM.x = -200; cardResultBM.y = 200;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine8
@@ -479,7 +479,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = -80; cardResultBM.y = 200;
+      cardResultBM.x = -30; cardResultBM.y = 200;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine9
@@ -498,7 +498,7 @@ var evolution = (function() {
       var h = cardResultBM.image.height;
       cardResultBM.cache(0, 0, w, h);
       _regCenter( cardResultBM, w, h );
-      cardResultBM.x = 90; cardResultBM.y = 200;
+      cardResultBM.x = 140; cardResultBM.y = 200;
       _bm.cardResult.addChild( cardResultBM );
 
       //glossLine10
@@ -592,7 +592,7 @@ var evolution = (function() {
       _bm.card2GrowBM.alpha = 0;
       _bm.card1GrowBM.x = 0; _bm.card1GrowBM.y = 0;
       _bm.card2GrowBM.x = 0; _bm.card2GrowBM.y = 0;
-      _bm.cardResultGrowBM.x = -250; _bm.cardResultGrowBM.y = -400;
+      _bm.cardResultGrowBM.x = -200; _bm.cardResultGrowBM.y = -400;
       _bm.cardResultGrowBM.scaleX = _bm.cardResultGrowBM.scaleY = 0.4;
       _bm.card1 = new createjs.Container();
       _bm.card1.addChild( _bm.card1GrowBM );
@@ -602,39 +602,39 @@ var evolution = (function() {
       _bm.cardResult.addChild( _bm.cardResultGrowBM );
 
       _bm.cardResultGrowBM2 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM2.x = -80; _bm.cardResultGrowBM2.y = -400;
+      _bm.cardResultGrowBM2.x = -30; _bm.cardResultGrowBM2.y = -400;
       _bm.cardResult.addChild( _bm.cardResultGrowBM2 );
 
       _bm.cardResultGrowBM3 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM3.x = 90; _bm.cardResultGrowBM2.y = -400;
+      _bm.cardResultGrowBM3.x = 140; _bm.cardResultGrowBM2.y = -400;
       _bm.cardResult.addChild( _bm.cardResultGrowBM3 );
 
       _bm.cardResultGrowBM4 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM4.x = -320; _bm.cardResultGrowBM4.y = -100;
+      _bm.cardResultGrowBM4.x = -270; _bm.cardResultGrowBM4.y = -100;
       _bm.cardResult.addChild( _bm.cardResultGrowBM4 );
 
       _bm.cardResultGrowBM5 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM5.x = -150; _bm.cardResultGrowBM5.y = -100;
+      _bm.cardResultGrowBM5.x = -100; _bm.cardResultGrowBM5.y = -100;
       _bm.cardResult.addChild( _bm.cardResultGrowBM5 );
 
       _bm.cardResultGrowBM6 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM6.x = 20; _bm.cardResultGrowBM6.y = -100;
+      _bm.cardResultGrowBM6.x = 70; _bm.cardResultGrowBM6.y = -100;
       _bm.cardResult.addChild( _bm.cardResultGrowBM6 );
 
       _bm.cardResultGrowBM7 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM7.x = 190; _bm.cardResultGrowBM7.y = -100;
+      _bm.cardResultGrowBM7.x = 240; _bm.cardResultGrowBM7.y = -100;
       _bm.cardResult.addChild( _bm.cardResultGrowBM7 );
 
       _bm.cardResultGrowBM8 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM8.x = -250; _bm.cardResultGrowBM8.y = 200;
+      _bm.cardResultGrowBM8.x = -200; _bm.cardResultGrowBM8.y = 200;
       _bm.cardResult.addChild( _bm.cardResultGrowBM8 );
 
       _bm.cardResultGrowBM9 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM9.x = -80; _bm.cardResultGrowBM9.y = 200;
+      _bm.cardResultGrowBM9.x = -30; _bm.cardResultGrowBM9.y = 200;
       _bm.cardResult.addChild( _bm.cardResultGrowBM9 );
 
       _bm.cardResultGrowBM10 = _bm.cardResultGrowBM.clone();
-      _bm.cardResultGrowBM10.x = 90; _bm.cardResultGrowBM10.y = 200;
+      _bm.cardResultGrowBM10.x = 140; _bm.cardResultGrowBM10.y = 200;
       _bm.cardResult.addChild( _bm.cardResultGrowBM10 );
 
       card2.src = _fileName.card2;

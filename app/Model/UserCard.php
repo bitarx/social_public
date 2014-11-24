@@ -413,7 +413,7 @@ class UserCard extends AppModel {
      *
      * @author imanishi
      * @param int $userId
-     * return bool 近づいている場合はtrue
+     * return int 近づいている場合は1
      */
     public function judgeMaxCardCnt($userId) {
                 // カード所持枚数
@@ -421,9 +421,9 @@ class UserCard extends AppModel {
 
         $num = CARD_MAX_NUM - 10;
 
-        if ($num < $cnt) return true;
+        if ($num < $cnt) return 1;
 
-        return false;
+        return 0;
     }
 
 

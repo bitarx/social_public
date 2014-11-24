@@ -9,7 +9,7 @@
         <img src="<{$smarty.const.IMG_URL}>item/item_1.png">
     </div>
     <div class="tutoStartItemTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="225px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="240px">
         <div class="tutoStartItemTextStr">
             R以上のカードGETのチャンス(^^♪<br />
             <span style="color:#FFA500">プレミアムガチャチケット！</span><br />
