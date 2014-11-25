@@ -130,6 +130,13 @@ boss.layout = ( function() {
     _stocker.getDO( "bg" ).y = 0;
     _stocker.getDO( "stage" ).addChild( _stocker.getDO( "bg" ) );
 
+    // 名前背景
+    var namePlate = _stocker.getDO( "namePlate" ).clone();
+    namePlate.scaleY = 0.45;
+    namePlate.y = -390;
+    namePlate.index = 0;
+    _stocker.getDO( "stage" ).addChild( namePlate );
+
     //敵名前
     var bossName_txt = new createjs.Text( _paramater.getParam( "enemyData" ).name, "24px Arial", "#fff" );
     _stocker.setDO( "bossName", bossName_txt );
@@ -137,6 +144,7 @@ boss.layout = ( function() {
     bossName_txt.y = -400;
     bossName_txt.textAlign = "center";
     _stocker.getDO( "stage" ).addChild( bossName_txt );
+
     
 
     //敵
@@ -251,6 +259,7 @@ boss.layout = ( function() {
             hpProgBaseT.y = 70;
             container.addChild( hpProgBaseT );
         }
+
 
 
         var playerPowerUP = _stocker.getDO( "playerPowerUP" ).clone();

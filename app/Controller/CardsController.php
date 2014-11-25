@@ -15,140 +15,40 @@ class CardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
+    public $uses = array('Card', 'UserCollect');
+
+    public static $errMes = 'カードの取得履歴が確認できません。受取BOXにある場合は受け取ってください。';
+
     /**
      * index method
      *
      * @author imanishi 
-     * @return json
      */
 	public function index($id = 0) {
 
         if (empty($id)) {
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
+
+        // 所有チェック
+        $where = array(
+            'user_id' => $this->userId
+        ,   'Card.card_id' => $id
+        );
+        $hasCard = $this->UserCollect->field('user_id', $where);
         
         $stageId = !empty($this->params['stage_id']) ? $this->params['stage_id'] : 0 ;
 
         $where  = array('card_id' => $id);
         $data = $this->Card->getAllFind($where);
         $data = $data[0];
-   $this->log($data); 
+
+        $this->set('hasCard', $hasCard);
+        $this->set('mes', self::$errMes);
+        $this->set('guideId', 1 );
         $this->set('data', $data);
         $this->set('stageId', $stageId);
         $this->set('subTitle', $data['card_title']. $data['card_name']);
 	}
-
-    /**
-     * 素材選択
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function select() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 合成前確認
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function conf() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 強化合成演出
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function product() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 進化合成演出
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function elproduct() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 合成完了
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function comp() {
-
-        $fields = array('id');
-        $where  = array();
-        $this->User->getAllFind($where, $fields);
-        $this->set('users', $this->Paginator->paginate());
-    }
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->Card->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->Card->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
-
-        $this->setJson($ary);
-	}
-
 
 }

@@ -21,7 +21,7 @@ class GachasController extends ApiController {
     public $gacha10 = array( GACHA_10_ID );
 
     // 無課金ガチャID
-    public $gachaMoney = array( GACHA_MONEY_ID );
+    public $gachaFree = array( GACHA_MONEY_ID );
 
 
     /**
@@ -71,10 +71,11 @@ class GachasController extends ApiController {
         if (in_array($gachaId, $this->gacha10)) $gacha10 = 1;
 
         $gachaFree = 0;
-        if (in_array($gachaId, $this->gachaMoney)) $gachaFree = 1;
+        if (in_array($gachaId, $this->gachaFree)) $gachaFree = 1;
         
         // カード所持数確認
-        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId);
+        $num = empty($gacha10) ? 1 : 10;
+        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId, $minus = $num);
 
 
         // プレミアムガチャチケット判定
@@ -89,7 +90,6 @@ class GachasController extends ApiController {
             $rareLevel = 1;
 
             // 抽選だけ先に行う
-            $num = empty($gacha10) ? 1 : 10;
             for ($i = 1; $i <= $num; $i++) {
                 $data = $this->Common->doLot($probList);
 
@@ -185,7 +185,7 @@ class GachasController extends ApiController {
                 } catch (AppException $e) { 
                     $this->UserParam->rollback(); 
                     $this->log($e->errmes);
-                    $this->rd('Errors', 'index', array('error'=> 2)); 
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
                 } 
                 $this->PaymentLog->commit();
 
@@ -195,7 +195,7 @@ class GachasController extends ApiController {
             } else {
                 // 失敗した時の処理
                 $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-                $this->rd('Errors', 'index', array('error' => 2));
+                $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
             }
         } else {
 
@@ -215,7 +215,7 @@ class GachasController extends ApiController {
                 } catch (AppException $e) {
                     $this->UserParam->rollback();
                     $this->log($e->errmes);
-                    $this->rd('Errors', 'index', array('error'=> 2));
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
                 }
                 $this->UserItem->commit();
             }
@@ -255,7 +255,7 @@ class GachasController extends ApiController {
             }
 
             // 無料ガチャの場合はゴールド減算
-            if (in_array($gachaId, $this->gachaMoney)) {
+            if (in_array($gachaId, $this->gachaFree)) {
                 $money = $this->userParam['money'] - $gachaData['point'];
                 $values = array(
                     'user_id' => $this->userId
@@ -320,7 +320,7 @@ class GachasController extends ApiController {
         $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
         $product = $this->GachaFunc->doProductLot($rareLevel);
         if (empty($rareLevel) || false === $hasMaxFlg) {
-            $this->rd('Errors', 'index', array('error' => 1));
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
         // ベースカード
@@ -411,7 +411,8 @@ class GachasController extends ApiController {
 
         
         // カード所持数確認
-        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId);
+        $num = empty($gacha10) ? 1 : 10;
+        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId, $minus = $num);
 
         $this->UserCard->begin();
 
@@ -432,6 +433,9 @@ class GachasController extends ApiController {
                     ,   'def' => $cardData['card_def']
                     );
                     $this->UserCard->save($values);
+
+                    // コレクション登録
+                    $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
                 } else {
                     // カード所持最大の場合はプレゼントボックスへ
                     $values[] = array(
@@ -451,8 +455,6 @@ class GachasController extends ApiController {
                 );
                 $this->UserGachaLog->save($values);
 
-                // コレクション登録
-                $this->UserCollect->initCollect($this->userId, $cardData['card_id']);
 
                 // ログリスト
                 $logList[] = $values;
@@ -513,7 +515,9 @@ class GachasController extends ApiController {
                     $this->UserGachaLog->save($value);
 
                     // コレクション登録
-                    $this->UserCollect->initCollect($val['user_id'], $val['card_id']);
+                    if (empty($hasMaxFlg)) {
+                        $this->UserCollect->initCollect($val['user_id'], $val['card_id']);
+                    }
                 }
 
             } catch (AppException $e) {

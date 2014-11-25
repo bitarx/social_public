@@ -22,6 +22,3 @@
                 <{$data['card_detail']}>
         </div>
     </div>
-    <{if !empty($tutoEnd)}>
-
-    <{/if}>

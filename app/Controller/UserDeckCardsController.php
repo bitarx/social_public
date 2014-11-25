@@ -55,7 +55,7 @@ class UserDeckCardsController extends ApiController {
 
        if (empty($userDeckId) || empty($deckNumber)) {
            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-           $this->rd('errors', 'index', array('error' => 1)); 
+           $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
        }
 
        $this->UserDeckCard->begin(); 
@@ -72,7 +72,7 @@ class UserDeckCardsController extends ApiController {
        } catch (AppException $e) { 
            $this->UserDeckCard->rollback(); 
            $this->log($e->errmes); 
-           $this->rd('Errors', 'index', array('error'=> 2)); 
+           $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
        } 
        $this->UserDeckCard->commit(); 
 
@@ -164,7 +164,7 @@ class UserDeckCardsController extends ApiController {
        if (empty($userDeckId) || empty($deckNumber) || empty($userCardId)) {
            // パラメータ異常
            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-           $this->rd('errors', 'index', array('error' => 1)); 
+           $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
        }
 
        // 選択カード
@@ -205,7 +205,7 @@ class UserDeckCardsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->UserDeckCard->commit();
@@ -254,7 +254,7 @@ class UserDeckCardsController extends ApiController {
         } catch (AppException $e) { 
             $this->UserDeckCard->rollback(); 
             $this->log($e->errmes); 
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->UserDeckCard->commit(); 
          

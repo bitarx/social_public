@@ -20,6 +20,11 @@ boss.main = ( function() {
     _scene = 0;
 
     var canvas = document.getElementById(canvasID);
+
+    // ios
+    if ( 2 == divNum) {
+        window.innerWidth = 640;
+    }
     canvas.style.width = window.innerWidth / divNum + 'px';
     canvas.style.height = Math.floor( canvas.style.width * 1.3 )
 

@@ -672,6 +672,7 @@ input.btn_submit {
 .btnQuestNotProgBoss {
     left: 0px;
     top: 250px;
+    height: 130px;
     position: relative;
 }
 .strQuestProg {
@@ -1123,9 +1124,14 @@ display: block;
 .guideFukiUpper {
     position: absolute;
     left:18px;
-    top:-9px;
+    top:-10px;
 }
 .guideFukiUpperEnd {
+    position: absolute;
+    left:18px;
+    top:-6px;
+}
+.guideFukiUpperEndIos {
     position: absolute;
     left:18px;
     top:-3px;
@@ -1153,6 +1159,11 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
+    top:413px;
+}
+.guideFukiUnder4XLIos {
+    position: absolute;
+    left:18px;
     top:408px;
 }
 .guideFukiText {
@@ -1173,6 +1184,11 @@ display: block;
 .guideFukiMiddle {
     position: absolute;
     top: -9px;
+    left: 18px;
+}
+.guideFukiMiddleEnd {
+    position: absolute;
+    top: -8px;
     left: 18px;
 }
 
@@ -1266,7 +1282,7 @@ display: block;
 .cardTextArea {
     position: relative;
     top: 110px;
-    height: 200px;
+    height: 190px;
 }
 .cardTalkArea {
     position: relative;

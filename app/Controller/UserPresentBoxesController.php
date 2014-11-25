@@ -15,7 +15,6 @@ class UserPresentBoxesController extends ApiController {
      */
 	public $components = array('Paginator');
 
-//    public $use = array('UserPresentBox' , 'UserCollect');
 
     /**
      * index method
@@ -25,11 +24,12 @@ class UserPresentBoxesController extends ApiController {
      */
 	public function index() {
 
+        $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : 0;
         $pageAll = 0;
         $list = $this->UserPresentBox->getList($this->userId , $add = 1, $this->offset, $pageAll);
-
+$this->log($hasMaxFlg); 
         $this->set('list', $list);
-
+        $this->set('hasMaxFlg', $hasMaxFlg);
         $this->set('pageAll', $pageAll);
 	}
 
@@ -46,17 +46,20 @@ class UserPresentBoxesController extends ApiController {
             $this->UserPresentBox->begin(); 
             try {  
                 foreach ($list as $val) {
-                    $this->UserPresentBox->getPresent($this->userId, $val, $this->userParam);
+                    $data = $this->UserPresentBox->getDataById($this->userId , $val['user_present_box_id']);
+  $this->log($data); 
+                    list($id, $hasMaxFlg) = $this->UserPresentBox->getPresent($this->userId, $data, $this->userParam);
+                    if (!empty($hasMaxFlg)) break;
                 }
             } catch (AppException $e) { 
                 $this->UserPresentBox->rollback(); 
                 $this->log($e->errmes); 
-                $this->rd('Errors', 'index', array('error'=> 2)); 
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             } 
             $this->UserPresentBox->commit(); 
         }
         
-        $this->rd('UserPresentBoxes', 'index', array('all_end' => 1));  
+        $this->rd('UserPresentBoxes', 'index', array('all_end' => 1, 'has_max_flg' => $hasMaxFlg));  
     } 
 
     /**
@@ -73,16 +76,16 @@ class UserPresentBoxesController extends ApiController {
         if (!empty($data)) {
             $this->UserPresentBox->begin(); 
             try {  
-                $this->UserPresentBox->getPresent($this->userId, $data, $this->userParam);
+                list($id, $hasMaxFlg) = $this->UserPresentBox->getPresent($this->userId, $data, $this->userParam);
             } catch (AppException $e) { 
                 $this->UserPresentBox->rollback(); 
                 $this->log($e->errmes); 
-                $this->rd('Errors', 'index', array('error'=> 2)); 
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             } 
             $this->UserPresentBox->commit(); 
         }
         
-        $this->rd('UserPresentBoxes', 'index', array('init_end' => 1));  
+        $this->rd('UserPresentBoxes', 'index', array('init_end' => 1, 'has_max_flg' => $hasMaxFlg ));  
     } 
 
 }

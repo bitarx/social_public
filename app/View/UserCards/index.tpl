@@ -57,6 +57,8 @@
         <{include file="../Elements/pagingNum.tpl"}>
     <{/if}>
 
+    <div class="space"></div>
+
     <{foreach from=$list item=data key=key}>
         <div class="listBlock">
             <{include file="../Elements/card.tpl"}>

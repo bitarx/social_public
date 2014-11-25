@@ -174,20 +174,26 @@ class UserPresentBox extends AppModel {
      * @param int    $userId
      * @param array  $data 
      * @param array  $userParam   ユーザステータス    
-     * @return int 受け取り後登録テーブルのID
+     * @return array [0]受け取り後登録テーブルのID [1]カード所持最大フラグ
      */
     public function getPresent($userId, $data, $userParam = array()) { 
 
         $id = 0;
+        $hasMaxFlg = 0;
         switch ($data['kind']) {
             // カード
             case KIND_CARD:
                $userCard = new UserCard();
-               $id = $userCard->registCard($userId, $data['target'], $data['num'], $dam);
 
-               // コレクション登録
-               $userCollect = new UserCollect();
-               $userCollect->initCollect($userId, $data['target']);
+               // 最大所持数判定
+               $hasMaxFlg = $userCard->judgeMaxCardCnt($userId);
+               if (empty($hasMaxFlg)) {
+                   $id = $userCard->registCard($userId, $data['target'], $data['num'], $dam);
+
+                   // コレクション登録
+                   $userCollect = new UserCollect();
+                   $userCollect->initCollect($userId, $data['target']);
+               }
                break;
 
             // アイテム
@@ -205,13 +211,15 @@ class UserPresentBox extends AppModel {
         }
 
         // プレゼント論理削除
-        $value[$this->_filDelFlg] = 1;
-        $value['modified'] = NOW_DATE_DB;
-        $where = array('user_present_box_id' => $data['user_present_box_id']);
-  
-        $this->updateAll($value, $where);
+        if (empty($hasMaxFlg)) {
+            $value[$this->_filDelFlg] = 1;
+            $value['modified'] = NOW_DATE_DB;
+            $where = array('user_present_box_id' => $data['user_present_box_id']);
+      
+            $this->updateAll($value, $where);
+        }
          
-        return $id;
+        return array($id, $hasMaxFlg);
     } 
 }
 

@@ -4,7 +4,7 @@
     <{if !empty($hasMaxFlg)}>
         <div class="space"></div>
             <div style="text-align:center">
-                <span style="color:#FF0000">受取ボックスへ振込みました。</span>
+                <span style="color:#FFA500">受取ボックスへ振込みました。</span>
             </div>
         <div class="space"></div>
     <{/if}>

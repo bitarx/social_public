@@ -148,7 +148,7 @@ class TutorialsController extends ApiController {
                 $this->log($e->errmes);
                 return $this->redirect(
                            array('controller' => 'errors', 'action' => 'index'
-                                 , '?' => array('error' => 2)
+                                 , '?' => array('error' => ERROR_ID_SYSTEM )
                        ));
             }
             $this->User->commit();
@@ -189,7 +189,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM)
                    ));
         }
         $this->User->commit();
@@ -231,7 +231,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM)
                    ));
         }
         $this->User->commit();
@@ -328,7 +328,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM)
                    ));
         }
         $this->User->commit();
@@ -379,7 +379,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM)
                    ));
         }
         $this->User->commit();
@@ -422,7 +422,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -467,7 +467,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -523,7 +523,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -566,7 +566,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -613,7 +613,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -664,7 +664,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -706,7 +706,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -754,7 +754,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -943,7 +943,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -1003,7 +1003,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -1045,7 +1045,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -1088,7 +1088,7 @@ class TutorialsController extends ApiController {
             $this->log($e->errmes);
             return $this->redirect(
                        array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
+                             , '?' => array('error' => ERROR_ID_SYSTEM )
                    ));
         }
         $this->User->commit();
@@ -1134,7 +1134,7 @@ class TutorialsController extends ApiController {
                 $this->log($e->errmes);
                 return $this->redirect(
                            array('controller' => 'errors', 'action' => 'index'
-                                 , '?' => array('error' => 2)
+                                 , '?' => array('error' => ERROR_ID_SYSTEM )
                        ));
             }
             $this->User->commit();

@@ -21,14 +21,14 @@
 
     <{if $ctl == 'UserPresentBoxes'}>
 
-        <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/init?user_present_box_id=<{$data.user_present_box_id}><{$addParam}>">
-            <div class="btnSelectPresent">
-                <img src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+        <div class="btnSelectPresent">
+            <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/init?user_present_box_id=<{$data.user_present_box_id}><{$addParam}>">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="strSelectPresent">
                    受け取る 
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     <{/if}>
 
 </div>

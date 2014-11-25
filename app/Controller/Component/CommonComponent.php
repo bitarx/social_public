@@ -128,6 +128,21 @@ class CommonComponent extends Component {
     }
 
     /**
+     * 経験値減算
+     *
+     * @param int $exp
+     * @param int $level
+     * @return int 減算後の経験値
+     */
+    public function expMinus($exp, $level) {
+
+        $minus = floor( $level / 10 ); 
+        $exp -= $minus;
+        if ($exp < 0) $exp = 0;
+        return $exp;
+    }
+
+    /**
      * 現在時刻
      *
      * @return string Y-m-d H:i:s

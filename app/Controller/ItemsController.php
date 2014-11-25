@@ -93,7 +93,7 @@ class ItemsController extends ApiController {
             } catch (AppException $e) { 
                 $this->UserParam->rollback(); 
                 $this->log($e->errmes);
-                $this->rd('Errors', 'index', array('error'=> 2)); 
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             } 
             $this->PaymentLog->commit();
 
@@ -103,7 +103,7 @@ class ItemsController extends ApiController {
         } else {
             // 失敗した時の処理
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error' => 2));
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
         }
 	}
 
@@ -122,7 +122,7 @@ class ItemsController extends ApiController {
         if (empty($latestData)) {
             $this->UserParam->rollback(); 
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         }
         $items = $latestData['log'];
         $items = json_decode($items);
@@ -144,7 +144,7 @@ class ItemsController extends ApiController {
         if ($err == 1) {
             // 直近で購入したアイテムではない
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         }
 
         $field = array();
@@ -154,7 +154,7 @@ class ItemsController extends ApiController {
 
         if (empty($itemData)) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error' => 2));
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
         }
 
         if ( 0 == $itemData['box_num'] ) 
@@ -209,13 +209,13 @@ class ItemsController extends ApiController {
             } catch (AppException $e) { 
                 $this->UserItem->rollback(); 
                 $this->log($e->errmes);
-                $this->rd('Errors', 'index', array('error'=> 2)); 
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             } 
         }
 
         // 初回限定アイテム
         $this->log('itemId'); 
-$this->log($itemId); 
+
         if (FIRST_ITEM_ID == $itemId) {
             $where = array(
                 'user_id' => $this->userId 
@@ -225,7 +225,7 @@ $this->log($itemId);
                 // 不正
                 $this->UserItem->rollback(); 
                 $this->log(__FILE__.__LINE__.':userId;'.$this->userId);
-                $this->rd('Errors', 'index', array('error'=> 2)); 
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             }
 
             $value = array(
@@ -242,6 +242,9 @@ $this->log($itemId);
         $this->PaymentLog->save($value);
 
         $this->UserItem->commit();
+
+        header("HTTP/1.1 200 OK"); 
+        echo "OK";
     }
 
     /**
@@ -251,7 +254,6 @@ $this->log($itemId);
      * @return void
      */
     public function end() {
-
    
         // 最新ログ取得
         $latestData = $this->PaymentLog->getLatestData($this->userId, $endFlg = 1);
@@ -275,7 +277,7 @@ $this->log($itemId);
         $userItem = $this->UserItem->getAllFind($where, $field, 'first');
         if (empty($userItem['num'])) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error' => 2));
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
         }
 
         $this->set('data',  $data);

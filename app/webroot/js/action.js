@@ -107,15 +107,10 @@ function dispRotResultQuest(data)
            image +=         '<img src="' + IMG_URL + 'card/card_s_' + data.target + '.jpg" class="goldImg">'; 
            image +=     '</div>';
            image +=     '<div class="stageMesArea">';
-           image +=     '<span style="color:#FFA500">';
-           if (1 == data.tuto) {
-               image += '<span style="color:#FFA500">' + data.name + 'が仲間に加わった！</span>';
-           } else {
-               image += '<a href="' + BASE_URL + 'cards/index/' + data.target + '?stage_id=' + data.stage_id + '"><span style="color:#FFA500">' + data.name + 'が仲間に加わった！</span></a>';
-           }
+           image +=         '<span style="color:#FFA500">' + data.name + 'が仲間に加わった！</span>';
            image +=     '</div>';
            image += '</div>';
-           if (1 != data.tuto) {
+           if (1 != data.tuto && 0 == data.has_max_flg) {
                location.href = BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
            }
 
@@ -220,7 +215,7 @@ function dispRotResultQuest(data)
  */
 function dispProgressCardExp(exp,num)
 {
-    $('#progCardExp' + num).html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
+    $('#progCardExp' + num).html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="18px">' );
     $('#progCardExp' + num).show(); 
      
 }

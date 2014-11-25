@@ -116,7 +116,7 @@ class UserCardsController extends ApiController {
 
         $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
         if (!$userCardIds) {
-            $this->rd('UserCards', 'index', array('error' => 1)); 
+            $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         // ベースカード
@@ -166,28 +166,28 @@ class UserCardsController extends ApiController {
         // 素材が存在しなければ不正
         if (!$targetData) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         // デッキに存在するものは素材に使えない
         $isDeck = $this->UserDeckCard->isDeck($userCardId);
         if ($isDeck) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         // 進化できるか判定
         $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
         if (!$judgeEvol) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         // 消費ゴールド
         $useMoney = $this->Synth->useMoneyEvol($userBaseCard);
         if ($this->userParam['money'] < $useMoney) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['card_id']);
@@ -248,13 +248,13 @@ class UserCardsController extends ApiController {
             } catch (AppException $e) { 
                 $this->UserCard->rollback(); 
                 $this->log($e->errmes);
-                return $this->rd('Errors', 'index', array('error'=> 2)); 
+                return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
             } 
             $this->UserCard->commit(); 
 
         } else {
             // 進化できる組み合わせではない
-            $this->rd('UserCards', 'conf', array('error'=> 1)); 
+            $this->rd('UserCards', 'conf', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
 
 
@@ -278,7 +278,7 @@ class UserCardsController extends ApiController {
         $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
         if (!$userCardIds) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
@@ -286,7 +286,7 @@ class UserCardsController extends ApiController {
         if ($userBaseCard['card_level'] <= $userBaseCard['level']) {
             // レベル最大
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         $targetList = array(); 
@@ -304,7 +304,7 @@ class UserCardsController extends ApiController {
         if (empty($targetList)) {
             // 素材がない
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         // 消費ゴールド
@@ -313,7 +313,7 @@ class UserCardsController extends ApiController {
         if ($this->userParam['money'] < $useMoney) {
             // お金がない
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('errors', 'index', array('error' => 1)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         $upExp = 0;
@@ -351,7 +351,7 @@ class UserCardsController extends ApiController {
         } catch (AppException $e) { 
             $this->UserCard->rollback(); 
             $this->log($e->errmes);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->UserCard->commit(); 
 
@@ -384,7 +384,7 @@ class UserCardsController extends ApiController {
         $target = isset($this->params['target']) ? $this->params['target'] : 0;
         $afterCard = isset($this->params['after_card']) ? $this->params['after_card'] : 0;
         if (empty($baseCard) || empty($target) || empty($afterCard)) {
-            $this->rd('UserCards', 'index', array('error' => 1));
+            $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
         // ベースカード
@@ -425,7 +425,7 @@ class UserCardsController extends ApiController {
 
         if (empty($baseCard) || empty($list) || empty($upExp)) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('UserCards', 'index', array('error' => 1));
+            $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
         // ベースカード情報
@@ -461,16 +461,13 @@ class UserCardsController extends ApiController {
         );
         $this->UserCard->begin(); 
         try {  
-$this->log('deleteStartttttttttttttttttttttttt:'); 
-$this->log('aryData:' . print_r($where, true)); 
             $this->UserCard->deleteAll($where);
         } catch (AppException $e) { 
             $this->UserCard->rollback(); 
             $this->log($e->errmes); 
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->UserCard->commit(); 
-$this->log('deleteEndddddddd:'); 
 
         $this->rd('UserCards', 'index', array('end' => 1));  
     } 

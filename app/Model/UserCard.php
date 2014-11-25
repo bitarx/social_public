@@ -413,13 +413,16 @@ class UserCard extends AppModel {
      *
      * @author imanishi
      * @param int $userId
+     * @param int $minus 残スペース
      * return int 近づいている場合は1
      */
-    public function judgeMaxCardCnt($userId) {
-                // カード所持枚数
+    public function judgeMaxCardCnt($userId, $minus = 1) {
+        // カード所持枚数
         $cnt = $this->getUserCardCnt($userId );
-
-        $num = CARD_MAX_NUM - 10;
+$this->log('judgeMaxCardCnt'); 
+$this->log($cnt); 
+        $num = CARD_MAX_NUM - $minus;
+$this->log($num); 
 
         if ($num < $cnt) return 1;
 

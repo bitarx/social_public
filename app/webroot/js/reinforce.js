@@ -64,7 +64,11 @@ var reinforce = (function() {
   function init(canvasID, fileName, startExp, exp, loadCompleteCallback, contentsCompleteCallback, divNum ) {
 
     _canvas = document.getElementById(canvasID);
-    //_canvas.style.width = '400px';//window.innerWidth + 'px';
+
+    // ios
+    if ( 2 == divNum ) {
+        window.innerWidth = 640;
+    }
     _canvas.style.width = window.innerWidth / divNum + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 

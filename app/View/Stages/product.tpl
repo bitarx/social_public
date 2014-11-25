@@ -42,6 +42,7 @@
         var canvasID = "mainCanvas";
         var fileName = {
           bg: "<{$smarty.const.BASE_URL}>img/clear.png", //背景
+          namePlate: "<{$smarty.const.BASE_URL}>img/textarea_gd.png", //背景
           enemyHPProgBase: "<{$smarty.const.BASE_URL}>img/hp_prog_base.png",
           enemyHPProgRed: "<{$smarty.const.BASE_URL}>img/hp_prog_red.png",
           playerHPProgBase: "<{$smarty.const.BASE_URL}>img/progress_base.png",

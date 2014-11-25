@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill', 'UserCollect');
+    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox');
 
     /**
      *　定数
@@ -28,11 +28,6 @@ class StagesController extends ApiController {
     public function beforeFilter(){
         parent::beforeFilter();
 
-        // カード所持数確認
-        $ret = $this->UserCard->judgeMaxCardCnt($this->userId);
-        if ($ret) {
-            $this->rd('Errors', 'index', array('error' => 'max'));
-        }
     }
 
 
@@ -89,7 +84,7 @@ class StagesController extends ApiController {
 
         // 不正
         if ( ($curMaxStageId < $stageId) || empty($stageId) ) {
-            $this->rd('errors', 'index', array('error' => 2)); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
         $this->UserCurStage->begin(); 
@@ -111,7 +106,7 @@ class StagesController extends ApiController {
         } catch (AppException $e) { 
             $this->UserCurStage->rollback(); 
             $this->log($e->errmes);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->UserCurStage->commit(); 
 
@@ -134,7 +129,7 @@ class StagesController extends ApiController {
         // 到達していない
         if (!isset($data['progress'])) {
             $this->log('Stage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
-            $this->rd('Errors', 'index', array('error'=> 1)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
 
         $userParam = $this->UserParam->getUserParams($this->userId);
@@ -169,9 +164,8 @@ class StagesController extends ApiController {
 
         // 獲得最大経験値
         $maxExp = $data['use_act'];
-        if ( QUEST_MAX_EXP < $maxExp ) {
-            $maxExp = QUEST_MAX_EXP;
-        }
+        // 獲得経験値抑制
+        $maxExp = $this->Common->expMinus($maxExp, $userParam['level']);
 
         // ボスフラグ
         $boss = 0;
@@ -229,7 +223,7 @@ class StagesController extends ApiController {
         // ブラウザバックなど不正操作
         if (2 != $userStage['UserStage']['state']) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('errors', 'index', array('error' => 1));
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
         // 防御側のデッキ取得
@@ -238,7 +232,7 @@ class StagesController extends ApiController {
 
         if (empty($targetCards[0]['UserCard'])) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('errors', 'index', array('error' => 2));
+             $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
         }
 
         // 攻撃側のデッキ取得
@@ -246,7 +240,7 @@ class StagesController extends ApiController {
 
         if (empty($userCards['UserDeckCard'])) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('errors', 'index', array('error' => 2));
+             $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
         }
 
         $userCards = $userCards['UserDeckCard'];
@@ -417,7 +411,7 @@ class StagesController extends ApiController {
         } catch (AppException $e) { 
             $this->BattleLog->rollback(); 
             $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> 2)); 
+            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->BattleLog->commit(); 
 
@@ -631,7 +625,7 @@ class StagesController extends ApiController {
         } catch (AppException $e) { 
             $this->UserStage->rollback(); 
             $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> 2)); 
+            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
         $this->UserStage->commit(); 
 
@@ -731,11 +725,14 @@ class StagesController extends ApiController {
 
                 // 確率変動アイテムによる効果
                 list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
-
+$this->log($list); 
                 // 抽選
                 $lotData = $this->Common->doLot($list);
- 
+$this->log($lotData);  
             }
+
+            // カード所有最大フラグ初期化
+            $hasMaxFlg = 0;
 
             $this->UserStage->begin(); 
             try {
@@ -744,13 +741,32 @@ class StagesController extends ApiController {
                 {
                     // カード
                     case KIND_CARD:
+                        // カード所持数確認
+                        $hasMaxFlg = $this->UserCard->judgeMaxCardCnt($this->userId);
+
                         $row = array();
-                        $this->UserCard->registCard($userId, $lotData['target'], $lotData['num'], $row);
+                        if (empty($hasMaxFlg)) {
+                            // カード所持に余裕がある場合は直接
+                            $this->UserCard->registCard($userId, $lotData['target'], $lotData['num'], $row);
+
+                            // コレクション登録
+                            $this->UserCollect->initCollect($this->userId, $row['card_id']);
+                        } else {
+                            // カード所持に余裕がない場合は受取ボックスへ
+                            $regist[] = array(
+                                $this->userId
+                            ,   KIND_CARD
+                            ,   $lotData['target']
+                            ,   1
+                            ,   'ミッション内で取得' 
+                            );
+                            $this->UserPresentBox->registPBox($regist);
+
+                            $row = $this->Card->getCardData($lotData['target']);
+                        }
                         $targetData['name'] = $row['card_name'];
                         $targetData['id']   = $row['card_id'];
 
-                       // コレクション登録
-                       $this->UserCollect->initCollect($this->userId, $row['card_id']);
 
                         break;
                     // アイテム
@@ -842,9 +858,9 @@ class StagesController extends ApiController {
                 $expBaseInt = $userStageData['use_act'];
 
                 // 一回のクエスト実行で獲得経験値最大
-                if (QUEST_MAX_EXP < $expBaseInt) $expBaseInt = QUEST_MAX_EXP;
-
-                $getExp = $this->Common->lotRange($expBaseInt, $range);
+                $getExp = mt_rand(1, $expBaseInt);
+                // 獲得経験値抑制
+                $getExp = $this->Common->expMinus($getExp, $userParam['level']);
                 $userParam['exp'] += $getExp;
 
                 // レベルアップ
@@ -894,6 +910,7 @@ class StagesController extends ApiController {
                 ,   'name'             => $targetData['name']       // 入手物の名前
                 ,   'effect'           => $effect                   // アイテム効果による確率変動(3:カードup 4:ゴールドup)
                 ,   'effectSecond'     => $effectSecond             // アイテム効果残り秒
+                ,   'has_max_flg'      => $hasMaxFlg                // カード所持最大フラグ
                 );
             } catch (AppException $e) { 
                 $this->UserStage->rollback(); 

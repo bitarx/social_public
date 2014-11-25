@@ -51,7 +51,12 @@ var evolution = (function() {
   function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback, divNum ) {
 
     _canvas = document.getElementById(canvasID);
-    //_canvas.style.width = window.innerWidth + 'px';
+
+    // ios
+    if ( 2 == divNum ) {
+        window.innerWidth = 640;
+    }
+
     _canvas.style.width = window.innerWidth / divNum + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 

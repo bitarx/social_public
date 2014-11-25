@@ -37,6 +37,7 @@
             <{$smarty.const.MONEY_NAME}>が足りません。
         </div>
     <{else}>
+    <div class="space"></div>
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>UserCards/actEvol?user_card_id=<{$data.user_card_id}>">
             <img src="<{$smarty.const.IMG_URL}>btn_st_l.png">

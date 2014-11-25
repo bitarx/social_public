@@ -9,16 +9,24 @@
            <img src="<{$smarty.const.IMG_URL}>guide/guide_1.png" width="160px">
         </div>
         <div class="guideFukidashi">
-            <div class="guideFukiMiddle">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="445px">
+            <div class="guideFukiMiddleEnd">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="447px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
             </div>
-            <div class="guideFukiUpperEnd">
+            <{if $carrer == $smarty.const.CARRER_IPHONE}>
+                <div class="guideFukiUpperEndIos">
+            <{else}>
+                <div class="guideFukiUpperEnd">
+            <{/if}>
                <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px">
             </div>
-            <div class="guideFukiUnder4XL">
+            <{if $carrer == $smarty.const.CARRER_IPHONE}>
+                <div class="guideFukiUnder4XLIos">
+            <{else}>
+                <div class="guideFukiUnder4XL">
+            <{/if}>
                <img src="<{$smarty.const.IMG_URL}>fukidashi_under.png" width="420px">
             </div>
             <div class="guideFukiTextEnd">

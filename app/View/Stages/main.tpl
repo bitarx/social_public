@@ -60,7 +60,7 @@ $(function () {
 
     <div class="progQuest">
         <div class="progQuestUseStr">
-            消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 1 == $maxExp}>1<{else}>1～<{$maxExp}><{/if}></span>
+            消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
         </div>
         <div class="progQuestMainStr">
             進行度:
