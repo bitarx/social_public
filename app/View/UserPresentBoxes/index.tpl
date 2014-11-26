@@ -1,4 +1,4 @@
-<div class="commonDisplay">
+<div class="present">
     <{include file="../Elements/title.tpl"}>
 
     <div class="space"></div>

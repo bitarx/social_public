@@ -1,4 +1,4 @@
-<div class="commonDisplay">
+<div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
     <{include file="../Elements/card.tpl"}>
     <div class="space"></div>

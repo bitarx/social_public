@@ -1316,10 +1316,16 @@ display: block;
 .commonDisplay {
     position:relative;
     width:640px;
+    height:980px;
+}
+.commonDisplayFree {
+    position:relative;
+    width:640px;
 }
 .parent {
     text-align: center;
     position: relative;
+    height:1100px;
 }
 .child {
     position: absolute;
@@ -1413,6 +1419,11 @@ input[type=checkbox] {
 
 
 /** ヘルプページ */
+.help {
+    position:relative;
+    width:640px;
+    height:1500px;
+}
 .cardh {
     border-style: solid ; 
     border-width: 1px;
@@ -1420,6 +1431,24 @@ input[type=checkbox] {
     background-color: #7B68EE;
 }
 .param {
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #7B68EE;
+}
+.synth {
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #7B68EE;
+}
+.shop {
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    background-color: #7B68EE;
+}
+.gacha {
     border-style: solid ; 
     border-width: 1px;
     padding: 10px 10px 10px 10px;

@@ -1,4 +1,4 @@
-<div class="userBaseCards index">
+<div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
         <{include file="../Elements/paging.tpl"}>
     <div class="space">
