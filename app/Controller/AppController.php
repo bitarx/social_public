@@ -331,14 +331,10 @@ class AppController extends Controller {
         }
 
         // コントローラとアクション
-$this->log('ctl:' . $this->name ); 
-$this->log('act:' . $this->action ); 
-$this->log( $_COOKIE ); 
         $this->set('ctl', $this->name ); 
         $this->set('action',  $this->action); 
         $this->set('ctlAction',  $this->name . '/' . $this->action); 
 
-$this->log('userId:' . $this->userId ); 
         // URLアサイン
         $this->_setUrl();
     } 
