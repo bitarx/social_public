@@ -392,7 +392,9 @@ class GachasController extends ApiController {
         if (empty($gachaId)) {
             // 選択がない
             $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
-            exit;
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
         }
 
         $gacha10 = 0;
@@ -403,7 +405,9 @@ class GachasController extends ApiController {
         if (empty($logList)) {
             // ログがない
             $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
-            exit;
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
         }
 
         $where = array('gacha_id' => $gachaId );
@@ -523,6 +527,8 @@ class GachasController extends ApiController {
             } catch (AppException $e) {
                 $this->UserCard->rollback();
                 $this->log($e->errmes);
+                header("HTTP/1.1 400 NG"); 
+                echo "NG";
                 exit;
             }
         }

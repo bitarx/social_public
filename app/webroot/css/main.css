@@ -995,9 +995,8 @@ display: block;
 /** プレゼント受取 */
 .present {
     position:relative;
-    color: #FFA500;
-    top:10px;
-    left:20px;
+    width:640px;
+    height:1100px;
 }
 .presentImg {
     left:5px;
@@ -1139,7 +1138,7 @@ display: block;
 .guideFukiUnder {
     position: absolute;
     left:18px;
-    top:128px;
+    top:127px;
 }
 .guideFukiUnderL {
     position: absolute;
@@ -1316,7 +1315,6 @@ display: block;
 .commonDisplay {
     position:relative;
     width:640px;
-    height:980px;
 }
 .commonDisplayFree {
     position:relative;
@@ -1325,7 +1323,6 @@ display: block;
 .parent {
     text-align: center;
     position: relative;
-    height:1100px;
 }
 .child {
     position: absolute;
@@ -1422,7 +1419,7 @@ input[type=checkbox] {
 .help {
     position:relative;
     width:640px;
-    height:1500px;
+    height:1600px;
 }
 .cardh {
     border-style: solid ; 
