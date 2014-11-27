@@ -224,6 +224,11 @@ class UserParam extends AppModel {
                 );
                 $where = array('user_id' => $userParam['user_id']); 
                 $this->updateAll($value, $where);
+
+                $value = array(
+                    'modified' => NOW_DATE_DB 
+                );
+                $userLastActTime->updateAll($value, $where);
             }
         }
 
