@@ -224,7 +224,7 @@
     <{* デッキに設定 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 
         <div class="btnSelectCard">
-            <a href="init?user_card_id=<{$data.user_card_id}><{$addParam}>">
+            <a href="<{$smarty.const.BASE_URL}>UserDeckCards/init?user_card_id=<{$data.user_card_id}><{$addParam}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="strSelectCard">
                    デッキ設定 

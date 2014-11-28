@@ -7,7 +7,7 @@
     <input type="hidden" name="kind" value="<{$kind}>">
 
     <{if $ctl == 'UserDeckCards'}> 
-        <input type="hidden" name="user_card_id" value="<{$user_card_id}>">
+        <input type="hidden" name="user_deck_id" value="<{$user_deck_id}>">
         <input type="hidden" name="deck_number" value="<{$deck_number}>">
     <{/if}> 
 
