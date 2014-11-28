@@ -103,9 +103,6 @@ class UserDeckCardsController extends ApiController {
         $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
 
         $kind = 1;
-$this->log('#####################'); 
-$this->log($userDeckId); 
-$this->log($deckNumber); 
 
         $deckList = $this->UserDeckCard->getUserDeckData($this->userId );
         foreach ($deckList as $val) {
