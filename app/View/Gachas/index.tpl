@@ -14,7 +14,8 @@
         </div>
         <div class="gachaPrice">
             <{if $data.gacha_id == $smarty.const.GACHA_MONEY_ID}>
-                <{$data.point}><{$smarty.const.MONEY_NAME}>
+                <{$data.point}><{$smarty.const.MONEY_NAME}><br />
+                所持<{$smarty.const.MONEY_NAME}>：<{$haveMoney}>
             <{else}> 
                 <{if $data.gacha_id == $smarty.const.GACHA_PREMIUM_ID && 0 < $tNum}>
                     ガチャチケット<{$tNum}>枚所有

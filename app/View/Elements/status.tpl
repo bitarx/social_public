@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="myLevel">
-        レベル:<span style="color:#ffffff"><{$data.level}></span>
+        レベル:&nbsp;<span style="color:#ffffff"><{$data.level}></span>
     </div>
     <div class="myAct">
         行動力:
@@ -23,5 +23,8 @@
 
     <div class="cardCnt">
         カード：<span style="color:#ffffff"><{$data.card_cnt}> / <{$smarty.const.CARD_MAX_NUM }></span>
+    </div>
+    <div class="myMoney">
+        所持<{$smarty.const.MONEY_NAME}>：&nbsp;<span style="color:#ffffff"><{$haveMoney}></span>
     </div>
 </div>

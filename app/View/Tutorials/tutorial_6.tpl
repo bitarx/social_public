@@ -48,6 +48,9 @@
             Lv.<span style="color:#ffffff">20</span>
             <span style="color:#ff0000">Max</span>
         </div>
+        <div class="cardRareLevel">
+            <span style="color:#ff0000">レベルMaxで進化させることができます</span>
+        </div>
         <div class="cardSkillLv">
             スキルLv:<span style="color:#ffffff">1</span>
         </div>

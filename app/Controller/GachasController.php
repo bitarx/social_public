@@ -35,9 +35,16 @@ class GachasController extends ApiController {
         $tNum = $this->UserItem->hasPremiumGachaTiket($this->userId);
 
         $list = $this->Gacha->getList();
+        foreach ($list as &$val) {
+            if ($val['gacha_id'] == GACHA_10_ID ) {
+                $ret = $this->UserGachaLog->isGacha10($this->userId);
+                if (!$ret) {
+                    $val['point'] /= 2;
+                }
+            }
+        }
         $this->set('list', $list);
         $this->set('tNum', $tNum);
-        $this->set('haveMoney', $this->userParam['money']);
 	}
 
     /**
@@ -143,6 +150,12 @@ class GachasController extends ApiController {
                 // １０連ガチャ
                 $finishPageUrl 
                     = BASE_URL . "Gachas/product10?rare_level=". $rareLevel. '&has_max_flg='. $hasMaxFlg;
+
+                // 10連ガチャの初回割引
+                $ret = $this->UserGachaLog->isGacha10($this->userId);
+                if (empty($ret)) {
+                    $gachaData['point'] /= 2;
+                }
             } else {
                 // 単品ガチャ
                 $finishPageUrl 

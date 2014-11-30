@@ -41,5 +41,6 @@ class UsersController extends ApiController {
         $this->set('data', $this->userParam);
         $this->set('act' , $act);
         $this->set('name', $snsUserName);
+        $this->set('haveMoney', $this->userParam['money']);
 	}
 }

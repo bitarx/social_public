@@ -324,6 +324,8 @@ class AppController extends Controller {
         $this->set('page', $this->page ); 
         $this->set('next', $this->page + 1 ); 
 
+        // 所持金
+        $this->set('haveMoney', $this->userParam['money']);
 
         // 共通レイアウトは使わない  
         if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {

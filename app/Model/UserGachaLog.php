@@ -114,4 +114,21 @@ class UserGachaLog extends AppModel {
         $list = $this->getAllFind($where, $fields = array(), 'all', $order, $limit); 
         return $list;
     } 
+
+   /**
+     * 10連ガチャを行ったことがあるか判定
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return bool ある：true ない：false
+     */
+    public function isGacha10($userId) { 
+        $where = array(
+            'user_id' => $userId
+        ,   'UserGachaLog.gacha_id' => GACHA_10_ID     
+        ,   'end_flg' => 1 
+        );
+        $ret = $this->field('id', $where);
+        return empty($ret) ? false : true;
+    }
 }

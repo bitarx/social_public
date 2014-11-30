@@ -991,6 +991,11 @@ display: block;
     left: 20px;
     position: absolute;
 }
+.myMoney {
+    top: 186px;
+    left: 20px;
+    position: absolute;
+}
 
 /** プレゼント受取 */
 .present {
