@@ -5,7 +5,6 @@
 App::uses('Component', 'Controller');
 class SynthComponent extends Component {
 
-//    public $uses = array('CardGroup');
 
     /**
      * 進化合成を実行する
@@ -138,7 +137,7 @@ class SynthComponent extends Component {
         foreach ($list as $val) {
             $useMoney += ($val['atk'] + $val['def']) / 2;
         }
-        return $useMoney;
+        return floor($useMoney);
     } 
 
     /**

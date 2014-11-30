@@ -7,11 +7,13 @@
         </div>
     </div>
     <{include file="../Elements/card.tpl"}>
+    <{include file="../Elements/line.tpl"}>
 
     <div class="synthConfMsg">
         所持<{$smarty.const.MONEY_NAME}>:<{$userParam.money}><br /> 
         <span style="color:#FF4500;">必要<{$smarty.const.MONEY_NAME}>:<{$useMoney}></span> 
     </div>
+    <div class="space"></div>
 
     <{if !$money}> 
         <div style="text-align:center;">
@@ -58,6 +60,7 @@
             レベル最大の為これ以上強化できません。
         </div>
     <{else}>
+            <div class="space"></div>
             <div class="btnUpComp">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
                 <div class="strUpComp">
@@ -66,5 +69,5 @@
             </div>
         </form>
     <{/if}>
-    <div class="space"></div>
+    <div class="spaceHigh"></div>
 </div>

@@ -38,7 +38,7 @@
     <{include file="../Elements/sort.tpl"}>
 
     <{if $kind == 1}> 
-        <div class="space"></div>
+        <div class="spaceHigh"></div>
         <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
             <div class="btnUpComp">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
@@ -74,6 +74,7 @@
                     強化確認
                 </div>
             </div>
+            <div class="space"></div>
         </form>
     <{/if}>
     

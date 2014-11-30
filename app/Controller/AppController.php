@@ -275,6 +275,9 @@ class AppController extends Controller {
 
             // 行動力回復
             $this->UserParam->recoverAct($this->userParam);
+
+            // 所持金
+            $this->set('haveMoney', $this->userParam['money']);
         }
 
         if ($this->User->isSnsDataUpdate($this->userId)) {
@@ -324,8 +327,6 @@ class AppController extends Controller {
         $this->set('page', $this->page ); 
         $this->set('next', $this->page + 1 ); 
 
-        // 所持金
-        $this->set('haveMoney', $this->userParam['money']);
 
         // 共通レイアウトは使わない  
         if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {

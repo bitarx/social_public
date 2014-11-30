@@ -38,6 +38,7 @@
            </div>
         </div>
     </div>
+    <div class="space"></div>
     <div class="line">
         <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>

@@ -1,7 +1,7 @@
 <div class="toppage">
     <div class="topImg">
-<{*        <img src="<{$smarty.const.IMG_URL}>tutorial/gametitle.png">  *}>
-        <img src="<{$smarty.const.IMG_URL}>sampletop.jpg">
+        <img src="<{$smarty.const.IMG_URL}>tutorial/gametitle.png">  
+<{*        <img src="<{$smarty.const.IMG_URL}>sampletop.jpg">   *}>
     </div>
 
     <div class="space"></div>
