@@ -35,4 +35,16 @@
        <{/if}>
     </div>
     <{include file="../Elements/status.tpl"}>
+
+    <div style="position:relative;left:20px;">
+         <img src="<{$smarty.const.IMG_URL}>line.png">
+    </div>
+    <div style="position:relative;height:285px;top:-60px;text-align:center;">
+        <a href="<{$linkGacha}>">
+        <div class="child">
+            <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" width="90%" height="90%">
+        </div>
+        </a>
+    </div>
+    <div class="spaceLow"></div>
 </div>

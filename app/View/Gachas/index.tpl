@@ -1,6 +1,13 @@
 <div>
-    <{include file="../Elements/title.tpl"}>
-
+    <div style="position:relative;height:285px;top:-60px;text-align:center;">
+        <div class="child">
+            <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png">
+        </div>
+    </div>
+    <div class="spaceLow"></div>
+    <div style="position:relative;left:20px;">
+         <img src="<{$smarty.const.IMG_URL}>line.png">
+    </div>
 
     <{foreach from=$list item=data key=key}>
         <div class="gachaImg">

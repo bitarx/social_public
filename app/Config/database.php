@@ -61,7 +61,18 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
+	public $com = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'eres.xyz',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
+	public $stg = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
@@ -72,13 +83,13 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
-	public $test = array(
+	public $dev = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'barx',
 		'password' => 'arx0505q',
-		'database' => 'test_eres',
+		'database' => 'eres',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

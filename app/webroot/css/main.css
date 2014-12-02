@@ -600,6 +600,11 @@ input.btn_submit {
 .quest {
     position: relative;
     width: 640px;
+    left: 6px;
+}
+.questText {
+    position: relative;
+    width: 600px;
     left: 10px;
 }
 .strQuestList {
@@ -716,7 +721,7 @@ input.btn_submit {
 }
 .textAreaStageImg {
     width:600px;
-    height: 180px;
+    height: 182px;
 }
 .goldImg {
     width:150px;
@@ -924,7 +929,7 @@ display: block;
 
 /** マイページ */
 .mypage {
-    height:900px;
+    height:980px;
 }
 /** マイページデッキ */
 .deckCard1 {
@@ -962,6 +967,7 @@ display: block;
     position: relative;
     top: 40px;
     left: 0px;
+    height:280px;
     color:#FFA500
 }
 .myLevel {

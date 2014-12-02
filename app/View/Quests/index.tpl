@@ -6,16 +6,17 @@
         <div>
             <div class="space">
             </div>
-            <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "><{$val['quest_id']}>. <{$val['quest_title']}>
+            <{$val['quest_id']}>. <{$val['quest_title']}>
                 <div class="spaceLow">
                 </div>
-                <div class="quest">
+                 <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "> 
+                 <div class="questText">
                     <input type="image" src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaStageImg">
                     <div class="strQuestList">
                         <{$val['detail_before1']}> 
                     </div>
                 </div>
-            </a>
+                </a>
         </div>
         <div class="spaceLow">
         </div>
