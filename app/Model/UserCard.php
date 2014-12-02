@@ -419,10 +419,7 @@ class UserCard extends AppModel {
     public function judgeMaxCardCnt($userId, $minus = 1) {
         // カード所持枚数
         $cnt = $this->getUserCardCnt($userId );
-$this->log('judgeMaxCardCnt'); 
-$this->log($cnt); 
         $num = CARD_MAX_NUM - $minus;
-$this->log($num); 
 
         if ($num < $cnt) return 1;
 

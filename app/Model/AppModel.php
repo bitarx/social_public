@@ -43,7 +43,9 @@ class AppModel extends Model {
     public function __construct($id = false, $table = null, $ds = null) {
 
         // 環境によってデータベース設定変更
-        $this->useDbConfig = MODE;
+        if (env('APP_ENV') != 'stg') {
+            $this->useDbConfig = APP_ENV;
+        } 
 
         parent::__construct( $id, $table, $ds );
     }

@@ -572,7 +572,9 @@ class GachasController extends ApiController {
         if (in_array($log[0]['gacha_id'], $this->gacha10)) $one = false;
         $list = array();
         foreach ($log as $val) {
-            $list[] = $this->Card->getCardData($val['card_id']);
+            $data = $this->Card->getCardData($val['card_id']);
+            $data['level'] = 1;
+            $list[] = $data;
             if ($one) break;
         }
         $this->set('list', $list);

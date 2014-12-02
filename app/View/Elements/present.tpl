@@ -1,4 +1,4 @@
-<div class="present">
+<div class="presentBlock">
     <div class="presentImg">
        <{if $smarty.const.KIND_CARD == $data.kind }>
            <img src="<{$smarty.const.IMG_URL}>card/card_s_<{$data.target}>.jpg" width="120px">

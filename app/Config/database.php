@@ -72,6 +72,17 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
 	public $stg = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,

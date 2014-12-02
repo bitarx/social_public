@@ -26,24 +26,23 @@ if (!defined('FILEOUT_URL')) {
  */
 if ( false !== strpos( DOMAIN, 'eres')) {
     // 本番環境
-    define("MODE", 'com');
+    define("APP_ENV", 'com');
 
     // OAuth
     define("AH_IS_SANDBOX", false);
 
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
-    define("MODE", 'stg');
+    define("APP_ENV", 'stg');
 
     // OAuth
     define("AH_IS_SANDBOX", true);
 } else {
     // 開発環境
-    define("MODE", 'dev');
+    define("APP_ENV", 'dev');
 
     // OAuth
     define("DEV_IS_SANDBOX", true);
-
 }
 
 /** エラーID */
