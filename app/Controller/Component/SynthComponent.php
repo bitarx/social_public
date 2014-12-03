@@ -58,11 +58,6 @@ class SynthComponent extends Component {
                 }
             }
             $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
-
-            // ベースと同じカードであればさらにスキルレベルアップ
-            if ($baseCard['card_id'] == $val['card_id']) {
-                $baseCard['skill_level'] += 2;
-            }
         }
 
         // スキルレベル最大
@@ -71,7 +66,7 @@ class SynthComponent extends Component {
 
         // レベルアップ回数
         $levelUpCnt = $this->getLevelUpNum($upExp, $baseCard['exp']);
-
+        
         // レベルアップ
         for ($i = 1; $i <= $levelUpCnt; $i++) {
             $baseCard['hp']     = (int)floor($baseCard['hp_max'] * 1.02);
@@ -85,6 +80,9 @@ class SynthComponent extends Component {
                 break;
             }
         }
+
+        if ( 1 == $levelMax ) 
+            $upExp = $i * 100;
 
         // 経験値更新
         $baseCard['exp'] = ($baseCard['exp'] + $upExp) % 100;
@@ -146,7 +144,7 @@ class SynthComponent extends Component {
      * @author imanishi 
      * @param array $baseCard ベースカードのデータ
      * @param array $targetCard 素材カードのデータ
-     * @return bool true:進化可能 false:不可
+     * @return  true:進化可能 false:不可 0:これ以上進化できない
      */
     public function judgeEvol($baseCard, $targetCard) { 
 

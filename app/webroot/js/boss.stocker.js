@@ -232,7 +232,7 @@ boss.layout = ( function() {
         damageMask.alpha = 0.5;
         damageMask.visible = false;
         container.addChild( damageMask );
- //       if (bm.image.height < 280) {
+       if (bm.image.height < 280) {
             var hpProgBase = _stocker.getDO( "playerHPProgBase" ).clone();
             hpProgBase.scaleX = 0.5;
             hpProgBase.scaleY = 0.8;
@@ -245,7 +245,7 @@ boss.layout = ( function() {
             hpProgBar.x = -58;
             hpProgBar.y = 70;
             container.addChild( hpProgBar );
-/*
+
         } else {
             var hpProgBaseT = _stocker.getDO( "playerHPProgBaseT" ).clone();
             hpProgBaseT.scaleX = 0.5;
@@ -259,7 +259,7 @@ boss.layout = ( function() {
             hpProgBaseT.y = 70;
             container.addChild( hpProgBaseT );
         }
-*/
+
 
 
         var playerPowerUP = _stocker.getDO( "playerPowerUP" ).clone();

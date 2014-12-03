@@ -35,13 +35,15 @@
         </div>
     </div>
     <div class="spaceHigh"></div>
-    <div class="parent">
-        <a href="<{$linkQuest}>">
-            <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
-            <div class="child" >
-                次の鎮激へ
-            </div>
-        </a>
-    </div>
+    <{if $data.stage_id < $smarty.const.MAX_STAGE_ID}>
+        <div class="parent">
+            <a href="<{$linkQuest}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    次の鎮激へ
+                </div>
+            </a>
+        </div>
+    <{/if}>
     <div class="spaceHigh"></div>
 </div>

@@ -111,7 +111,7 @@ class CardGroup extends AppModel {
      * @author imanishi
      * @param int $baseCardId  
      * @param int $targetCardId 
-     * @return bool 
+     * @return true:進化可能 false:進化不可 
      */
     public function judgeSameCardGroup ($baseCardId, $targetCardId) {
 
@@ -124,6 +124,18 @@ class CardGroup extends AppModel {
         if ($baseData['evol_group'] == $targetData['evol_group']) { 
             $ret = true; 
         } 
+
+        // 次へ進化できるか
+        if ($ret) {
+            $where = array(
+                'CardGroup.card_id' => $baseData['next']
+            );
+            $next = $this->field('next', $where);
+            if (empty($next)) {
+                // これ以上進化できない
+                $ret = 0;
+            }
+        }
         return $ret;
     }
 }

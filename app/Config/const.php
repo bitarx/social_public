@@ -34,12 +34,14 @@ if ( false !== strpos( DOMAIN, 'eres')) {
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
     define("APP_ENV", 'stg');
+    Configure::write('debug', 2);
 
     // OAuth
     define("AH_IS_SANDBOX", true);
 } else {
     // 開発環境
     define("APP_ENV", 'dev');
+    Configure::write('debug', 2);
 
     // OAuth
     define("DEV_IS_SANDBOX", true);

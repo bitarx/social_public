@@ -221,7 +221,7 @@ class StagesController extends ApiController {
 
         $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
         // ブラウザバックなど不正操作
-        if (2 != $userStage['UserStage']['state']) {
+        if (empty($userStage) || 2 != $userStage['UserStage']['state']) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }

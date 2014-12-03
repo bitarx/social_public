@@ -48,7 +48,7 @@
         Lvが一定値を超えると同じステージでも<span style="color:#FFA500">獲得値が減少、もしくは獲得出来なくなります</span>。<br /><br />
         ▼<span style="color:#00FF7F">行動力</span><br />
         鎮激ミッションを行うと減少します。<br />
-        行動力は<span style="color:#FFA500">３分</span>で<span style="color:#FFA500">1%回復</span>します。<br />
+        行動力は<span style="color:#FFA500">３分</span>で<span style="color:#FFA500">約1%回復</span>します。<br />
         アイテムで回復させることもできます。<br /><br />
         ▼<span style="color:#00FF7F">ペニー</span><br />
         鎮激ミッションなどで取得できる通貨です。<br />

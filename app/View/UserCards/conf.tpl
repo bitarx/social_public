@@ -30,11 +30,11 @@
 
     <{if !$judgeEvol}> 
         <div style="text-align:center;">
-            進化できません。
+            <{if 0 === $judgeEvol}>これ以上<{/if}>進化できません
         </div>
     <{elseif !$money}> 
         <div style="text-align:center;">
-            <{$smarty.const.MONEY_NAME}>が足りません。
+            <{$smarty.const.MONEY_NAME}>が足りません
         </div>
     <{else}>
     <div class="space"></div>

@@ -135,11 +135,13 @@ class UserStage extends AppModel {
         ,   'UserStage.state' => $state
         ,   'Stage.enemy_id' => $enemyId
         ));
+ /*
         $option = array(
             $where
         );
+ */
 
-        $data = $this->find($kind, $option);
+        $data = $this->find($kind, $where);
         return $data;
     }
 
