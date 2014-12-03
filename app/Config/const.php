@@ -94,7 +94,7 @@ define("KIND_NEW_FRIEND","6");
 
 
 // クエスト効果アイテム有効時間（分 ）
-define("ITEM_EFFECT_MINUTES", 30);
+define("ITEM_EFFECT_MINUTES", 20);
 
 /**
  * ページング
@@ -147,7 +147,7 @@ define("GACHA_MONEY_ID", 3 );
  */
 // 最大ステージID
 define("MAX_STAGE_ID", 30 );
-// クエストアイテムプラス値(%)
-define("QUEST_ITEM_EFFECT", 15 );
+// クエストアイテム出現率プラス値(%)
+define("QUEST_ITEM_EFFECT", 5 );
 
 

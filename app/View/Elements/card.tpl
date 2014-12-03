@@ -39,7 +39,7 @@
             <div id="progCardExp<{$key}>" class="progCardExpIos">
             </div>
             <div class="cardExpIntIos">
-                <span style="color:#ffffff"><{$data.exp}> / 100</span>
+                <span style="color:#ffffff"><{if empty($data.exp)}>0<{else}><{$data.exp}><{/if}> / 100</span>
             </div>
 
             <script type="text/javascript">
@@ -101,7 +101,7 @@
             <div id="progCardExp<{$key}>" class="progCardExp">
             </div>
             <div class="cardExpInt">
-                <span style="color:#ffffff"><{$data.exp}> / 100</span>
+                <span style="color:#ffffff"><{if empty($data.exp)}>0<{else}><{$data.exp}><{/if}> / 100</span>
             </div>
 
             <script type="text/javascript">

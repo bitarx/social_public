@@ -725,10 +725,9 @@ class StagesController extends ApiController {
 
                 // 確率変動アイテムによる効果
                 list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
-$this->log($list); 
+
                 // 抽選
                 $lotData = $this->Common->doLot($list);
-$this->log($lotData);  
             }
 
             // カード所有最大フラグ初期化

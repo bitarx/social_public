@@ -128,7 +128,7 @@ class CardGroup extends AppModel {
         // 次へ進化できるか
         if ($ret) {
             $where = array(
-                'CardGroup.card_id' => $baseData['next']
+                'CardGroup.card_id' => $baseData['card_id']
             );
             $next = $this->field('next', $where);
             if (empty($next)) {

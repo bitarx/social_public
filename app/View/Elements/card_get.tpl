@@ -39,7 +39,7 @@
             <div id="progCardExp<{$key}>" class="progCardExpIos">
             </div>
             <div class="cardExpIntIos">
-                <span style="color:#ffffff"><{$data.exp}> / 100</span>
+                <span style="color:#ffffff">0 / 100</span>
             </div>
 
             <script type="text/javascript">
