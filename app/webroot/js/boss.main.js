@@ -123,7 +123,10 @@ boss.main = ( function() {
   */
   function _startPlayerTurn( currentTurnData ) {
     var count = 0;
-    var len = currentTurnData.enemyHP.length;
+    var len = 0;
+    if (undefined != currentTurnData) {
+       len = currentTurnData.enemyHP.length;
+    }
     var all = 0;
 
     for (var i = 0; i < len; i++) {

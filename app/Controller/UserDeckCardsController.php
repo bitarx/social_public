@@ -15,7 +15,7 @@ class UserDeckCardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard', 'UserDeck');
+    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard', 'UserDeck', 'Card');
 
     /**
      * index method
@@ -171,11 +171,24 @@ class UserDeckCardsController extends ApiController {
        // 現地点のデッキ使用コスト
        $cost = $this->UserDeckCard->getCost($this->userId);
 
-       // 総コスト
-       $costAll = $cost + $card['card_cost'];
+       // 選択デッキカードコスト
+       $curCardCost = 0;
+       $where = array(
+           'user_deck_id' => $userDeckId 
+       ,   'deck_number'  => $deckNumber
+       );
+       $curCard = $this->UserDeckCard->getAllFind($where);
+       if (!empty($curCard[0]['card_id'])) {
+           $where = array('card_id' => $curCard[0]['card_id']);
+           $curCardCost = $this->Card->field('card_cost', $where);
+       }
 
+       // 総コスト
+       $costAll = $cost - $curCardCost + $card['card_cost'];
+
+       // コストオーバー
        if ($this->userParam['cost_atk'] < $costAll) {
-           $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+
            $param = array(
                'over' => 1
            ,   'user_deck_id' => $userDeckId
