@@ -184,11 +184,6 @@ a:hover {
     left: 388px;
 }
 
-.icon_battle {
-    position: absolute;
-    top: 315px;
-    left: 388px;
-}
 .icon_scene {
     position: absolute;
     top: 315px;
@@ -198,6 +193,11 @@ a:hover {
     position: absolute;
     top: 315px;
     left: 194px;
+}
+.icon_card_list {
+    position: absolute;
+    top: 315px;
+    left: 388px;
 }
 
 
