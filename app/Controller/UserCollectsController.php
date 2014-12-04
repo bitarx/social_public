@@ -1,97 +1,51 @@
 <?php
 App::uses('ApiController', 'Controller');
 /**
- * UserCollects Controller
+ * Collect Controller
  *
- * @property UserCollect $UserCollect
- * @property PaginatorComponent $Paginator
+ * @since 2014/12/04
+ * @author imanishi
  */
 class UserCollectsController extends ApiController {
+
+    protected static $title = '図鑑';
 
     /**
      * Components
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
+
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect');
 
     /**
-     * index method
+     * カード一覧
      *
      * @author imanishi 
      * @return json
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->UserCollect->getAllFind($where, $fields);
-        $this->set('userCollects', $this->Paginator->paginate());
 
-        $this->UserCollect->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->UserCollect->save($values);
-            if (!$ret) {
-                throw new AppException('UserCollect save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->UserCollect->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->UserCollect->commit();
-	}
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->UserCollect->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->UserCollect->save($this->request->query)) {
-                $ary = array('result' => 1);
+        // 入手済みカード
+        $pageAll = 0;
+        $order = array('Card.card_id ASC');
+        $list = $this->Card->getCardListWithCollect($this->userId, $order, $this->offset, $pageAll); 
+        foreach ($list as &$val) {
+            if (!empty($val['created'])) {
+                $val['created'] = str_replace('-', '/', $val['created']);
+                $val['disp'] = 1;
             } else {
-                $ary = array('result' => 0);
+                $val['created'] = null;
+                $val['disp'] = 0;
             }
-        } else {
-            $ary = array('result' => 2);
         }
 
-        $this->setJson($ary);
+        $this->set('list', $list);
+        $this->set('key', 99);
+        $this->set('pageAll', $pageAll);
+        $this->set('title', self::$title);
 	}
-
 
 }

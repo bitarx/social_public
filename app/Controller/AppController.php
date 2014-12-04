@@ -376,6 +376,8 @@ class AppController extends Controller {
         $this->set('linkScene', BASE_URL . 'UserStages/index'); 
         // ヘルプ
         $this->set('linkStaticPage', BASE_URL . 'StaticPages/index'); 
+        // 図鑑
+        $this->set('linkCollect', BASE_URL . 'UserCollects/index'); 
     }
 
     /**

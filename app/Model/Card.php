@@ -241,4 +241,40 @@ class Card extends AppModel {
 
          return $list;
      }
+
+    /**
+     * 取得済みカードリスト取得
+     *
+     * @param int $userId
+     *
+     *
+     */
+    public function getCardListWithCollect ($userId,$order, $offset, &$pageAll) {
+
+        $field = array('Card.card_id', 'Card.card_name', 'Card.card_title', 'Card.rare_level', 'Card.attr', 'Card.card_hp', 'Card.card_atk', 'Card.card_def','UserCollect.new_flg' ,'UserCollect.created');
+        $where = array('UserCollect.user_id' => $userId);
+        $where = array();
+        $limit = PAGE_LIMIT;
+
+        $joins = array(
+            array('table' => 'user_collects',
+                'alias' => 'UserCollect',
+                'type' => 'left',
+                'conditions' => array(
+                    'UserCollect.user_id = ' . $userId,
+                    'Card.card_id = UserCollect.card_id',
+                ),
+            ),
+        );
+
+        $recursive = -1;
+
+
+        $all = $this->getAllFind($where, $field, $kind = 'all', $order, $lm = 0, $of = 0, $recursive , $joins);
+
+        $pageAll = ceil(count($all) / PAGE_LIMIT);
+
+        $list = $this->getAllFind($where, $field, $kind = 'all', $order, $limit, $offset, $recursive , $joins);
+        return $list;
+    }
 }
