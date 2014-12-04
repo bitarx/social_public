@@ -16,7 +16,7 @@
 
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>Quests/index">
-            <img src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
             <div class="child" >
                ミッションへ 
             </div>

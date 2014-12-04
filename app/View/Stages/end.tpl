@@ -10,7 +10,7 @@
         </div>
         <div class="guideFukidashi">
             <div class="guideFukiMiddleEnd">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="447px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="446px">
             </div>
             <div class="guideFukiLeft">
                <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
@@ -20,7 +20,7 @@
             <{else}>
                 <div class="guideFukiUpperEnd">
             <{/if}>
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px">
+               <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px" height="52px">
             </div>
             <{if $carrer == $smarty.const.CARRER_IPHONE}>
                 <div class="guideFukiUnder4XLIos">

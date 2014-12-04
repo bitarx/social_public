@@ -40,11 +40,8 @@
     <{if $kind == 1}> 
         <div class="spaceHigh"></div>
         <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
-            <div class="btnUpComp">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="strUpComp">
-                    強化確認
-                </div>
+            <div class="parent">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_conf.png" alt="強化確認" name="submit">
             </div>
     <{/if}>
 
@@ -67,12 +64,9 @@
     <{/foreach}>
 
     <{if $kind == 1}> 
-            <div class="space"></div>
+            <div class="spaceHigh"></div>
             <div class="parent">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="child">
-                    強化確認
-                </div>
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_conf.png" alt="強化確認" name="submit">
             </div>
             <div class="space"></div>
         </form>

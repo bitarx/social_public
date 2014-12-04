@@ -54,7 +54,7 @@ class SynthComponent extends Component {
                 // 強化素材であればさらにスキルアップ
                 if ($val['sozai_kind'] == 1) {
 
-                    $baseCard['skill_level'] += 4;
+                    $baseCard['skill_level'] += 14;
                 }
             }
             $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
@@ -81,7 +81,7 @@ class SynthComponent extends Component {
             }
         }
 
-        if ( 1 == $levelMax ) 
+        if ( isset($levelMax) && 1 == $levelMax ) 
             $upExp = $i * 100;
 
         // 経験値更新

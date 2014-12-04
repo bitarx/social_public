@@ -3,10 +3,10 @@ require_once __DIR__ .'/OAuth/OAuth.php' ;
 
 class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
 {
-  const API_HOST        = "sb.app.appli-hills.com";
-  const CONSUMER_KEY    = "38fb76184bb9586b";
-  const CONSUMER_SECRET = "f725a825d2d594494509f7f2f03a96b1";
-  const PUBKEY_FILENAME = "sb.public.crt";
+  const API_HOST        = "app.appli-hills.com";
+  const CONSUMER_KEY    = "0b32fa9b34313ac6";
+  const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
+  const PUBKEY_FILENAME = "public.crt";
 
   const SB_API_HOST        = "sb.app.appli-hills.com";
   const SB_CONSUMER_KEY    = "0bacae904380ed27";

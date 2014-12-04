@@ -662,7 +662,7 @@ input.btn_submit {
     left: 103px;
     top: 250px;
     height: 200px;
-    width: 500px;
+    width: 480px;
     position: relative;
 }
 .btnQuestNotProg {
@@ -768,19 +768,6 @@ input.btn_submit {
 /**
  * 合成関連
  */
-/** 合成決定ボタン */
-.btnUpComp {
-    position: relative;
-    top: 5px;
-    height:95px;
-    left: 180px;
-}
-.strUpComp {
-    position: absolute;
-    top: 15px;
-    left: 90px;
-}
-
 /** 強化進化選択 */
 .selectSynthKind {
     top: -20px;
@@ -790,7 +777,6 @@ input.btn_submit {
 
 
 /*　タブ　*/
-
 .tabs input[type=radio] {
     position: absolute;
     top: -9999px;
@@ -1146,12 +1132,12 @@ display: block;
 .guideFukiUpperEnd {
     position: absolute;
     left:18px;
-    top:-6px;
+    top:-8px;
 }
 .guideFukiUpperEndIos {
     position: absolute;
     left:18px;
-    top:-3px;
+    top:-7px;
 }
 .guideFukiUnder {
     position: absolute;
@@ -1176,12 +1162,12 @@ display: block;
 .guideFukiUnder4XL {
     position: absolute;
     left:18px;
-    top:413px;
+    top:416px;
 }
 .guideFukiUnder4XLIos {
     position: absolute;
     left:18px;
-    top:411px;
+    top:410px;
 }
 .guideFukiText {
     position: absolute;
@@ -1196,7 +1182,7 @@ display: block;
     line-height: 1.3em;
     left: 30px;
     width:400px;
-    top: 12px;
+    top: 11px;
 }
 .guideFukiMiddle {
     position: absolute;
@@ -1205,7 +1191,7 @@ display: block;
 }
 .guideFukiMiddleEnd {
     position: absolute;
-    top: -8px;
+    top: -7px;
     left: 18px;
 }
 

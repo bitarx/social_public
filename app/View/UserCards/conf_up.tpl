@@ -25,11 +25,8 @@
         </div>
     <{else}>
         <form method=="POST" action="actUp">
-            <div class="btnUpComp">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="strUpComp">
-                    合成実行
-                </div>
+            <div class="parent">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_comp.png" alt="強化実行" name="submit">
             </div>
     <{/if}>
     <div class="space"></div>
@@ -61,11 +58,8 @@
         </div>
     <{else}>
             <div class="space"></div>
-            <div class="btnUpComp">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="強化確認" name="submit">
-                <div class="strUpComp">
-                    合成実行
-                </div>
+            <div class="parent">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_comp.png" alt="強化実行" name="submit">
             </div>
         </form>
     <{/if}>
