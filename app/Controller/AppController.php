@@ -33,6 +33,12 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
     /**
+     * メンテナンス
+     */
+    public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
+    public static $menteEnd = '14:00';
+
+    /**
      * 定数
      *
      * @var array
@@ -149,6 +155,7 @@ class AppController extends Controller {
             }
         }
 
+
         if ( !in_array($this->name, self::$ctlError) ) {
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
                 $firstAccess = 1;
@@ -158,6 +165,14 @@ class AppController extends Controller {
                 // Cookieセットされていない場合は不正アクセス
                 $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
             } else { 
+                // メンテナンス
+                if (!empty(self::$menteNo)) {
+                     $this->rd('Errors', 'index', array(
+                                  'error' => 'mente'
+                               ,  'mente_no' => self::$menteNo    
+                               ));
+                }
+
                 // 正常なアクセスの場合はユーザIDをセット
                 $where = array('User.sns_user_id' => $this->ownerId); 
                 $this->userId = $this->User->field('user_id', $where);

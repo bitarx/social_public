@@ -13,7 +13,7 @@ class ErrorsController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
 
     /**
      * index method
@@ -32,7 +32,13 @@ class ErrorsController extends ApiController {
             $mes = $this->Error->field('message', $where);
             $this->set('mes', $mes);
         } else {
-            $mes = 'カード所持数が最大の'. CARD_MAX_NUM . '枚に近づいています。合成などで枚数を減らしてください。';
+            $no = $this->request->query['mente_no'];
+           
+            if (2 == $no) {
+                $mes = 'メンテナンス時間を延長します。終了予定は'. parent::$menteEnd . 'となっています。ご迷惑をお掛けして申し訳ございません。';
+            } else {
+                $mes = 'ただいまメンテナンス中です。終了予定は'. parent::$menteEnd . 'となっています。それまでしばらくお待ちください。';
+            }
             $this->set('mes', $mes);
             $this->set('guideId', 1 );
         }

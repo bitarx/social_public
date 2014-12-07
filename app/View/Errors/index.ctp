@@ -15,13 +15,5 @@
     <{else}>
         <{include file="../Elements/guide.tpl"}>
 
-        <div class="btnGacha">
-            <a href="<{$linkUserCard}>">
-            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png" alt="強化進化へ" name="submit">
-            <div class="strGacha">
-                強化進化へ
-            </div>
-            </a>
-        </div>
     <{/if}>
 </div>
