@@ -75,10 +75,7 @@ class FileController extends ApiController {
                 }
 
                 $path = PRIVATE_DIR . $dir . '/' . $filename;
-//$this->log('path:'. $path); 
                 if (file_exists($path)) {
-//$this->log('path:okok'. $path); 
-$this->log('name:kok'. $path); 
                     header("Content-Disposition: inline; filename=test");
                     header('Content-type: image/' . $name);
                     echo readfile($path);
