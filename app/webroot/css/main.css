@@ -548,7 +548,7 @@ input.btn_submit {
 .pagingNum {
     position:relative;
     text-align:center;
-    height:80px;
+    height:55px;
     top:35px;
     left:120px;
 }
@@ -557,17 +557,10 @@ input.btn_submit {
     float:left;
     width:80px;
 }
-.btnPagingNum2 {
-    position:relative;
-    float:left;
-    left: -400px;
-    top:50px;
-    width:80px;
-}
 .strPagingNum {
     position:absolute;
     top:2px;
-    left:35px;
+    left:32px;
 }
 
 /**
