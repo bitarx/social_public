@@ -69,4 +69,34 @@ class UserCollect extends AppModel {
 		)
 	);
 
+
+    /**
+     * まだ取得がない場合は登録する
+     *
+     * @author imanishi
+     * @param int userId
+     * @param int cardId
+     * @return bool true:初めての取得なので登録した false:既に取得済み
+     */
+     public function initCollect($userId, $cardId) {
+
+         // 存在確認
+         $where = array(
+             'user_id' => $userId
+         ,   'card_id' => $cardId
+         );
+         $field = array('user_id');
+         $ret = $this->getAllFind($where, $field, 'first');
+         if (empty($ret)) {
+             $field = array('user_id', 'card_id');
+             $values = array();
+             $values[] = array($userId, $cardId);
+             $this->insertBulk($field, $values);
+
+             return true;
+         } else {
+             // 既に取得済み
+             return false;
+         }
+     }
 }
