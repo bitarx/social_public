@@ -38,6 +38,9 @@ class AppController extends Controller {
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
     public static $menteEnd = '14:00';
 
+    // メンテナンス中でも入れるユーザーのowner_id
+    public static $testUserHills = array(553919);
+
     /**
      * 定数
      *
@@ -166,11 +169,14 @@ class AppController extends Controller {
                 $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
             } else { 
                 // メンテナンス
-                if (!empty(self::$menteNo)) {
-                     $this->rd('Errors', 'index', array(
-                                  'error' => 'mente'
-                               ,  'mente_no' => self::$menteNo    
-                               ));
+                if ('com' == APP_ENV) {
+                    $testUser = self::$testUserHills;
+                    if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
+                         $this->rd('Errors', 'index', array(
+                                      'error' => 'mente'
+                                   ,  'mente_no' => self::$menteNo    
+                                   ));
+                    }
                 }
 
                 // 正常なアクセスの場合はユーザIDをセット
