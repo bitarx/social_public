@@ -151,3 +151,11 @@ define("MAX_STAGE_ID", 30 );
 define("QUEST_ITEM_EFFECT", 5 );
 
 
+
+/**
+ * カード関連
+ */
+// 強化素材カードID
+define("SYNTH_AI_CARD_ID", 64 );
+define("SYNTH_MAI_CARD_ID", 65 );
+define("SYNTH_MI_CARD_ID", 66 );
