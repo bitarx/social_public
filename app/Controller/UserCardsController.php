@@ -15,7 +15,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup', 'UserEvolLog');
 
     /**
      * カード一覧
@@ -90,6 +90,7 @@ class UserCardsController extends ApiController {
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
         // 素材
         $targetData = $this->UserCard->getUserCardById($userCardId);
+        $targetData['next'] = $this->CardGroup->getNext($targetData['card_id']);
 
         // 進化できるか判定
         $judgeEvol = $this->Synth->judgeEvol($userBaseCard, $targetData);
@@ -249,6 +250,15 @@ class UserCardsController extends ApiController {
 
                // コレクション登録
                $this->UserCollect->initCollect($this->userId, $afterCardId);
+
+               // 進化ログ
+               $value = array(
+                   'user_id' => $this->userId
+               ,   'base_card_id' => $userBaseCard['card_id']
+               ,   'target_card_id' => $targetData['card_id']
+               ,   'after_card_id'  => $afterCardId
+               );
+               $this->UserEvolLog->save($value);
             
             } catch (AppException $e) { 
                 $this->UserCard->rollback(); 
