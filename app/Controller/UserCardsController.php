@@ -15,7 +15,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup');
 
     /**
      * カード一覧
@@ -64,6 +64,11 @@ class UserCardsController extends ApiController {
         // 所有カード
         $pageAll = 0;
         $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
+
+        // 進化段階取得
+        foreach ($list as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
+        }
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);

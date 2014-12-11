@@ -410,6 +410,30 @@ class GachasController extends ApiController {
             die;
         }
 
+
+        // 最新ログ取得
+        $latestData = $this->PaymentLog->getLatestData($this->userId);
+        if (empty($latestData)) {
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
+        }
+
+        $paymentId = $latestData['payment_id'];
+
+        $payment   = $this->snsUtil->getPayment($paymentId);
+
+        if (empty($payment['status']) || 1 != $payment['status']) {
+            // 購入処理が正常に行われていない 
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
+        }
+
         $gacha10 = 0;
         if (in_array($gachaId, $this->gacha10)) $gacha10 = 1;
         
@@ -545,6 +569,14 @@ class GachasController extends ApiController {
                 exit;
             }
         }
+
+        // endFlg
+        $value = array(
+            'id' => $latestData['id']
+        ,   'end_flg' => 1
+        );
+        $this->PaymentLog->save($value);
+
         $this->UserCard->commit();
 
         header("HTTP/1.1 200 OK"); 
