@@ -129,14 +129,22 @@ class AppController extends Controller {
         // 正常な初回アクセスはリクエストにIDが含まれる
         $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
         $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
-
+$this->log($_SERVER); 
+$this->log(PLATFORM_ENV); 
         // SNSクラス生成
-        $this->snsUtil = ApplihillsUtil::create();
+        if ( 'hills' == PLATFORM_ENV ) {
+            $this->snsUtil = ApplihillsUtil::create();
+        } elseif ( 'waku' == PLATFORM_ENV ) {
+            $this->snsUtil = WakuUtil::create();
+        } elseif ( 'niji' == PLATFORM_ENV ) {
+            $this->snsUtil = NijiUtil::create();
+        }
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
             $ret =$this->snsUtil->checkSignature(); 
+var_dump($ret); 
             if (!$ret) {
                 // 検証に失敗した時の処理
                 $this->log(__FILE__.__LINE__.'OAuth Error'); 
@@ -334,7 +342,7 @@ class AppController extends Controller {
                 $this->log($e->errmes);
                 return $this->redirect(
                            array('controller' => 'errors', 'action' => 'index'
-                                 , '?' => array('error' => 2)
+                                 , '?' => array('error' => ERROR_ID_SYSTEM )
                        ));
             }
             $this->User->commit();

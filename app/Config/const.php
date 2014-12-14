@@ -20,6 +20,29 @@ if (!defined('FILEOUT_URL')) {
     define("FILEOUT_URL", BASE_URL . "File" . DS . "outimage");
 }
 
+/**
+ * プラットフォーム識別
+ */
+if ( false !== strpos( DOMAIN, 'hills')) {
+
+    // アプリヒルズ
+    define("PLATFORM_ENV", 'hills');
+
+} elseif ( false !== strpos( DOMAIN, 'waku')) {
+
+    // waku+
+    define("PLATFORM_ENV", 'waku');
+
+} elseif ( false !== strpos( DOMAIN, 'niji') ) {
+
+    // にじよめ
+    define("PLATFORM_ENV", 'niji');
+
+} else {
+    // プラットフォーム外
+    define("PLATFORM_ENV", 'out');
+}
+
 
 /**
  * SNSAPI基本設定

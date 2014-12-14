@@ -117,5 +117,12 @@ Configure::load("const");
 
 // OAuth関連読み込み
 App::import('Lib', 'OAuth/OAuth');
-App::import('Lib', 'ApplihillsUtil');
+
+if ( 'hills' == PLATFORM_ENV ) {
+    App::import('Lib', 'ApplihillsUtil');
+} elseif ( 'waku' == PLATFORM_ENV ) {
+    App::import('Lib', 'WakuUtil');
+} elseif ( 'niji' == PLATFORM_ENV ) {
+    App::import('Lib', 'NijiUtil');
+}
 

@@ -43,8 +43,11 @@ class AppModel extends Model {
     public function __construct($id = false, $table = null, $ds = null) {
 
         // 環境によってデータベース設定変更
-        if (env('APP_ENV') != 'stg') {
+        if (env('APP_ENV') != 'dev') {
             $this->useDbConfig = APP_ENV;
+            if (PLATFORM_ENV != 'hills') {
+                $this->useDbConfig .= '_' . PLATFORM_ENV;
+            }
         } 
 
         parent::__construct( $id, $table, $ds );
