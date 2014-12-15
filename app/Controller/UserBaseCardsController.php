@@ -9,7 +9,7 @@ class UserBaseCardsController extends ApiController {
 
     public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'CardGroup');
 
     /**
      * カード一覧
@@ -23,6 +23,11 @@ class UserBaseCardsController extends ApiController {
 
         $pageAll = 0;
         $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel=0, $sortItem=0, $evolGroup=0, $pageAll);
+
+        // 進化段階取得
+        foreach ($list as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
+        }
 
         $this->set('pageAll', $pageAll);
         $this->set('list', $list);

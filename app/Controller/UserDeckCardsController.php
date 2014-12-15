@@ -15,7 +15,7 @@ class UserDeckCardsController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard', 'UserDeck', 'Card');
+    public $uses = array('UserDeckCard', 'UserCard', 'UserBaseCard', 'UserDeck', 'Card', 'CardGroup');
 
     /**
      * index method
@@ -124,6 +124,10 @@ class UserDeckCardsController extends ApiController {
         // 所有カード
         $pageAll = 0;
         $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, 0, $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
+        // 進化段階取得
+        foreach ($list as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
+        }
 
         // 引き回しパラメータ
         $addParam = '&user_deck_id=' . $userDeckId . '&deck_number=' . $deckNumber;

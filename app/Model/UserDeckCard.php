@@ -179,6 +179,13 @@ class UserDeckCard extends AppModel {
                     'UserCard.card_id = Card.card_id',
                 ),
             ),
+            array('table' => 'card_groups',
+                'alias' => 'CardGroup',
+                'type' => 'left',
+                'conditions' => array(
+                    'Card.card_id = CardGroup.card_id',
+                ),
+            ),
             array('table' => 'skills',
                 'alias' => 'Skill',
                 'type' => 'left',

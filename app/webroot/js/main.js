@@ -165,6 +165,3 @@ var isJSON = function(arg) {
         setTimeout('countDown("' + dateStr + '")', 1000);
   }
 
-
-
-

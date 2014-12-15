@@ -138,4 +138,18 @@ class CardGroup extends AppModel {
         }
         return $ret;
     }
+
+    /**
+     * 次の進化カードIDを取得
+     *
+     * @param int card_id
+     * @return int 次の進化のカードID
+     */
+    public function getNext($cardId) {
+        $where = array('card_id' => $cardId);
+        $field = array('next');
+        $row = $this->getAllFind($where, $field, 'first', array(), array(), array(), $recu = -1);
+
+        return empty($row['next']) ? 0 : $row['next'];
+    }
 }

@@ -68,6 +68,17 @@
                     スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
                 </div>
             <{/if}>
+            <div class="cardComment">
+                <{if !($smarty.const.SYNTH_AI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MAI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MI_CARD_ID == $data.card_id)}>
+                    <{if empty($data.next)}>
+                        <span style="color:#00FFFF">これ以上進化しません</span>
+                    <{elseif $data.card_level <= $data.level}>
+                        <span style="color:#EE82EE">同種カードで進化します！</span>
+                    <{else}>
+                        <span style="color:#00FF7F">レベルMax、同種カードで進化します</span>
+                    <{/if}>
+                <{/if}>
+            </div>
 
         <{else}>
             <{* Android *}>
@@ -130,6 +141,17 @@
                     スキルLv:<span style="color:#ffffff"><{$data.skill_level}> / <{$smarty.const.SKILL_LEVEL_MAX}></span>
                 </div>
             <{/if}>
+            <div class="cardComment">
+                <{if !($smarty.const.SYNTH_AI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MAI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MI_CARD_ID == $data.card_id)}>
+                    <{if empty($data.next)}>
+                        <span style="color:#00FFFF">これ以上進化しません</span>
+                    <{elseif $data.card_level <= $data.level}>
+                        <span style="color:#EE82EE">同種カードで進化します！</span>
+                    <{else}>
+                        <span style="color:#00FF7F">レベルMax、同種カードで進化します</span>
+                    <{/if}>
+                <{/if}>
+            </div>
         <{/if}>
     <{if !empty($data.Skill.skill_name) || !empty($data.skill_name)}>
         <div class="cardSkillName">
