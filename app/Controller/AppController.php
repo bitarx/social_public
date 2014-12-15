@@ -144,7 +144,6 @@ $this->log(PLATFORM_ENV);
 
             // 初回アクセス認証
             $ret =$this->snsUtil->checkSignature(); 
-var_dump($ret); 
             if (!$ret) {
                 // 検証に失敗した時の処理
                 $this->log(__FILE__.__LINE__.'OAuth Error'); 
@@ -197,9 +196,6 @@ var_dump($ret);
 
                     // SNS側より取得
                     $user = $this->snsUtil->getSelf();
-                    if (isset($_COOKIE['nosb'])) {
-                        $user['displayName'] = 'nosb_test';
-                    }
                     if (empty($user['displayName'])) {
                          $this->log(__FILE__.__LINE__.'People Api Error'); 
                          $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));

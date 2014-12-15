@@ -3,15 +3,15 @@ require_once __DIR__ .'/OAuth/OAuth.php' ;
 
 class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
 {
-  const API_HOST        = "pf.wakupl.com";
+  const API_HOST        = "os.wakupl.com";
   const CONSUMER_KEY    = "0b32fa9b34313ac6";
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
 
-  const SB_API_HOST        = "pf.sb.wakupl.com";
+  const SB_API_HOST        = "os.sb.wakupl.com";
   const SB_CONSUMER_KEY    = "3f59d5668d3a";
   const SB_CONSUMER_SECRET = "48e6546c556706b9ef3c8643740ecf37";
 
-  const DEV_API_HOST        = "pf.sb.wakupl.com";
+  const DEV_API_HOST        = "os.sb.wakupl.com";
   const DEV_CONSUMER_KEY    = "3f59d5668d3a";
   const DEV_CONSUMER_SECRET = "48e6546c556706b9ef3c8643740ecf37";
 
@@ -47,7 +47,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   public function getSelf($fields = array())
   {
     $result = $this->getPeople("@me", "@self", null, $fields);
-    return (isset($result["entry"]) && is_array($result["entry"])) ? $result["entry"] : null;
+    return (isset($result["person"]) && is_array($result["person"])) ? $result["person"] : null;
   }
 
   public function getPerson($targetId, $fields = array())
@@ -374,9 +374,10 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
       $api .= "?fields=" . implode(",", $fields);
     }
 
-    $request = $this->getOAuthRequest($api, $this->getOwnerId(), "GET");
-    $result  = $this->sendRequest($request, "200", $request->to_postdata());
+    $id = $this->getOwnerId();
 
+    $request = $this->getOAuthRequest($api, $id, "GET");
+    $result  = $this->sendRequest($request, "200", $request->to_postdata());
     return ($result) ? @json_decode($result, true) : null;
   }
 
@@ -405,19 +406,20 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     return (isset($result["entry"]) && is_array($result["entry"])) ? $result["entry"] : null;
   }
 
-  protected function getOAuthRequest($api, $requestorId = null, $method = "GET")
+  protected function getOAuthRequest($api, $requestorId = null, $method = "GET", $token = null )
   {
-    $url = "http://" . $this->apiHost . "/social/rest" . $api;
+    $url = "http://" . $this->apiHost . "/api/rest/v1" . $api ;
 
+    $request = OAuthRequest::from_request(null,null,null);
+    $token = new OAuthToken(
+        $request->get_parameter('oauth_token'),
+        $request->get_parameter('oauth_token_secret'));
     $consumer = new OAuthConsumer($this->consumerKey, $this->consumerSecret);
-    $request = OAuthRequest::from_consumer_and_token($consumer, null, $method, $url);
-
+    $request = OAuthRequest::from_consumer_and_token($consumer, $token, $method, $url);
     if (!empty($requestorId)) {
       $request->set_parameter('xoauth_requestor_id', $requestorId);
     }
-
-    $request->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, null);
-
+    $request->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, $token);
     return $request;
   }
 
@@ -425,7 +427,6 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   {
   	$uri    = $request->get_normalized_http_url();
     $method = $request->get_normalized_http_method();
-
     if (!empty($data) && is_array($data)) {
       $data = http_build_query($data, "", "&");
     }
@@ -433,7 +434,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     $method = strtoupper($method);
 
     if ($method !== "POST" && !empty($data)) {
-      $uri .= "?" . $data;
+        $uri .= "?" . $data;
     }
 
     $curl = curl_init();
@@ -449,7 +450,10 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
 
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_HEADER, 1);
+    $data = (array)$request;
+    $data = $data['base_string'];
 
+    $headers = $this->requestToHeaders($request, $data);
     if (!empty($headers)) {
       curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     }
@@ -463,7 +467,6 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     if (preg_match("!^(HTTP/\d\.\d) (\d{3})(?: (.+))?!", $header, $match)) {
       $responseCode = $match[2];
     }
-
     if ($responseCode === $expectedCode) {
       return $body;
     } else {
@@ -515,18 +518,18 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   protected function requestToHeaders($request, $data)
   {
     $authHeader = $request->to_header();
-
     if ($requestorId = $request->get_parameter("xoauth_requestor_id")) {
       $key   = OAuthUtil::urlencode_rfc3986("xoauth_requestor_id");
       $value = OAuthUtil::urlencode_rfc3986($requestorId);
 
       $authHeader .= ',' . $key . '="' . $value . '"';
     }
+    $authHeader .= ',realm=""';
 
     return array(
       $authHeader,
-      'Content-Type: application/json',
-      'Content-Length: ' . strlen($data),
+       'Content-Type: application/json',
+//      'Content-Length: ' . strlen($data),
     );
   }
 

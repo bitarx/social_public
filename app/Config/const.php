@@ -54,7 +54,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // OAuth
     define("AH_IS_SANDBOX", false);
 
-} elseif ( false !== strpos( DOMAIN, 'asns') ) {
+} elseif ( false !== strpos( DOMAIN, 'jp') ) {
     // ステージング環境
     define("APP_ENV", 'stg');
     Configure::write('debug', 2);
