@@ -3,11 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <meta charset="UTF-8">
-    <{if $carrer == $smarty.const.CARRER_IPHONE}>
-        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
-    <{else}>
-        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css" />
-    <{/if}>
+    <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css.php" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script src='<{$smarty.const.BASE_URL}>js/jquery.tabs.js'></script>

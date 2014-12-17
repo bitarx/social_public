@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
   <ModulePrefs title="Sample Application"></ModulePrefs>
-  <Content view="smartphone" type="url" href="http://waku.devasns.red/index.php/Tutorials/tutorial_1" />
+  <Content view="smartphone" type="url" href="http://waku.devsocial.red/index.php/Tutorials/tutorial_1" />
 </Module>

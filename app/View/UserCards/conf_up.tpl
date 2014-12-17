@@ -24,7 +24,7 @@
             レベル最大の為これ以上強化できません。
         </div>
     <{else}>
-        <form method=="POST" action="actUp">
+        <form method="post" action="<{$smarty.const.BASE_URL_PRE}>UserCards/actUp">
             <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_comp.png" alt="強化実行" name="submit">
             </div>

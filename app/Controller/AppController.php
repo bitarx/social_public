@@ -129,8 +129,7 @@ class AppController extends Controller {
         // 正常な初回アクセスはリクエストにIDが含まれる
         $ownerId  = isset($this->params['opensocial_owner_id']) ? $this->params['opensocial_owner_id'] : '';
         $viewerId = isset($this->params['opensocial_viewer_id']) ? $this->params['opensocial_viewer_id'] : '';
-$this->log($_SERVER); 
-$this->log(PLATFORM_ENV); 
+
         // SNSクラス生成
         if ( 'hills' == PLATFORM_ENV ) {
             $this->snsUtil = ApplihillsUtil::create();
@@ -143,12 +142,14 @@ $this->log(PLATFORM_ENV);
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            $ret =$this->snsUtil->checkSignature(); 
-            if (!$ret) {
-                // 検証に失敗した時の処理
-                $this->log(__FILE__.__LINE__.'OAuth Error'); 
-                echo 'OAuth error';
-                exit;
+            if ('waku' != PLATFORM_ENV || ('waku' == PLATFORM_ENV && !empty($this->params['quest_flg']))) {
+                $ret =$this->snsUtil->checkSignature(); 
+                if (!$ret) {
+                    // 検証に失敗した時の処理
+                    $this->log(__FILE__.__LINE__.'OAuth Error'); 
+                    echo 'OAuth error';
+                    exit;
+                }
             }
 
             $this->set('ownerId', $ownerId);
@@ -156,7 +157,6 @@ $this->log(PLATFORM_ENV);
             $this->ownerId  = $ownerId;
             $this->viewerId = $viewerId;
         }
-
         if (empty($this->ownerId)) {
 
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
@@ -173,6 +173,7 @@ $this->log(PLATFORM_ENV);
             if (  (empty($this->ownerId) || empty($this->viewerId) ) && !isset($firstAccess) ) {
 
                 // Cookieセットされていない場合は不正アクセス
+                $this->log(__FILE__.__LINE__.' Cookie set Error : '. $this->userId ); 
                 $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
             } else { 
                 // メンテナンス

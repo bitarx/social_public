@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>進化合成</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution_android.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/evolution_android.css.php">
         <{/if}>
     </head>
     <body>
@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "tutorial_8";
+           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Tutorials/tutorial_8";
       }
 
       window.onload = function() {

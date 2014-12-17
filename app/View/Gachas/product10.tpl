@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "end?has_max_flg=<{$hasMaxFlg}>";
+           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Gchas/end?has_max_flg=<{$hasMaxFlg}>";
       }
 
       window.onload = function() {

@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <title>ボスバトル</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css.php">
         <{/if}>
     </head>
     <body id="body">
@@ -32,9 +32,9 @@
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
                 <{if $data.result == 2}>
-                    location.href = "comp";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/comp";
                 <{else}>
-                    location.href = "scene";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/scene";
                 <{/if}>
             });
         }
@@ -101,9 +101,9 @@
         var el = document.getElementById( "skip" );
         el.addEventListener("click", function(){
             <{if $data.result == 2}>
-                location.href = "comp";
+                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/comp";
             <{else}>
-                location.href = "scene";
+                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/scene";
             <{/if}>
         }, false);
      };

@@ -114,7 +114,7 @@ class UserCardsController extends ApiController {
      */
 	public function confUp() {
 
-        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        $userCardIds = $this->Common->getParamsInKey($this->request->data, 'user_card_id_');
         if (!$userCardIds) {
             $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
@@ -275,7 +275,7 @@ class UserCardsController extends ApiController {
      */
 	public function actUp() {
 
-        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        $userCardIds = $this->Common->getParamsInKey($this->request->data, 'user_card_id_');
         if (!$userCardIds) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 

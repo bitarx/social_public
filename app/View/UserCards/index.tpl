@@ -39,7 +39,7 @@
 
     <{if $kind == 1}> 
         <div class="spaceHigh"></div>
-        <form method=="POST" action="<{$smarty.const.BASE_URL}>UserCards/confUp">
+        <form method="post" action="<{$smarty.const.BASE_URL_PRE}>UserCards/confUp">
             <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_conf.png" alt="強化確認" name="submit">
             </div>

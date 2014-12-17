@@ -27,7 +27,7 @@ $(function () {
             </a>
         </div>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProgBoss" id="appReq" act="Stages/init" params=<{$param}>>
+            <div  class="btnQuestProgBoss" id="appReq" act="Stages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
                     進行！
@@ -43,7 +43,7 @@ $(function () {
 
     <{else}>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProg" id="appReq" act="Stages/init" params=<{$param}>>
+            <div  class="btnQuestProg" id="appReq" act="Stages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
                     進行！
