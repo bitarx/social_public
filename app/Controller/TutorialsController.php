@@ -336,11 +336,10 @@ class TutorialsController extends ApiController {
      
         $list = $this->UserCard->getUserCard ($this->userId);
 
-        // waku+対応
-        $ownerInfo = array();
-        if ('waku' == PLATFORM_ENV) {
-            $ownerInfo = '?opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
+        if (!empty($this->ownerInfo)) {
+            $ownerInfo = '?' . $this->ownerInfo;
         }
+
 
         // アサイン
         $this->set('row', $this->row);

@@ -47,6 +47,8 @@ class AppController extends Controller {
      * @var array
      */
     public $gameTitle = SITE_TITLE;
+    
+    public $ownerInfo = array();
 
     // 確率変動アイテム文言
     public $effectStr = array(
@@ -357,6 +359,11 @@ class AppController extends Controller {
         // 共通レイアウトは使わない  
         if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
             $this->layout = '';
+        }
+
+        // waku+対応
+        if ('waku' == PLATFORM_ENV) {
+            $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
         }
 
         // コントローラとアクション

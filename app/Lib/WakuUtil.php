@@ -250,8 +250,8 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   {
     $data = array(
       "callbackUrl"    => $callbackUrl,
-      "finishPageUrl"  => $finishPageUrl,
-      "paymentEntries" => $items,
+      "finishUrl"  => $finishPageUrl,
+      "entry" => $items,
     );
 
     $data = json_encode($data);
@@ -263,16 +263,29 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     }
 
     $result = @json_decode($result, true);
-    return (isset($result["payment"][0])) ? $result["payment"][0] : null;
+    return (isset($result["payment"])) ? $result["payment"] : null;
   }
 
-  public function getPayment($paymentId, $ownerId = null)
+  public function getPayment($paymentId, $ownerId = null, $appId = null)
   {
     if (empty($ownerId)) {
       $ownerId = $this->getOwnerId();
     }
+    if (!empty($ownerId)) {
+        $guid = $ownerId;
+    } else {
+        $guid = '@me';
+    }
 
-    $request = $this->getOAuthRequest("/payment/@me/@self/@app/{$paymentId}", $ownerId, "GET");
+    // waku+のみ、Trustedモードの場合はアプリIDをセット
+    if (!empty($appId)) {
+        $id = $appId;
+    } else {
+        $id = $this->getOwnerId();
+    }
+
+    $request = $this->getOAuthRequest("/payment/" . $guid . "/@self/@app/{$paymentId}", $id, "GET");
+
     $result  = $this->sendRequest($request, "200", $request->to_postdata());
 
     if (!$result) {
@@ -280,7 +293,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     }
 
     $result = @json_decode($result, true);
-    return (isset($result["payment"][0])) ? $result["payment"][0] : null;
+    return (isset($result["payment"])) ? $result["payment"] : null;
   }
 
   public function getNgword($text)
@@ -310,7 +323,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   {
     $data = array(
       "callbackUrl"    => $callbackUrl,
-      "finishPageUrl"  => $finishPageUrl,
+      "finishUrl"  => $finishPageUrl,
       "paymentEntries" => $items,
     );
 

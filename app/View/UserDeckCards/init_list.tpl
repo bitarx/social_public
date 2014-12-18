@@ -41,5 +41,6 @@
         <{include file="../Elements/line.tpl"}>
     <{/foreach}>
     
-        <{include file="../Elements/pagingNum.tpl"}>
+    <{include file="../Elements/pagingNum.tpl"}>
+    <div class="spaceHigh"></div>
 </div>

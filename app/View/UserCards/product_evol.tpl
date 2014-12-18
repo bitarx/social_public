@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>UserStages/delete";
+           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>UserCards/delete";
       }
 
       window.onload = function() {

@@ -61,21 +61,59 @@ class ItemsController extends ApiController {
         // 購入アイテムの配列（複数のアイテム指定可）
         // アイテム名や説明文はUTF-8
         $items = array();
-        $items[] = array(
-          "itemId"      => $data['item_id'],
-          "name"        => $data['item_name'],
-          "unitPrice"   => $data['point'],
-          "quantity"    => 1,
-          "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
-          "description" => $data['item_detail'],
-        );
+        // SNSクラス生成
+        if ( 'hills' == PLATFORM_ENV ) {
 
-        $this->snsUtil = ApplihillsUtil::create();
+            $this->snsUtil = ApplihillsUtil::create();
+
+            $items[] = array(
+              "itemId"      => $data['item_id'],
+              "name"        => $data['item_name'],
+              "unitPrice"   => $data['point'],
+              "quantity"    => 1,
+              "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
+              "description" => $data['item_detail'],
+            );
+
+        } elseif ( 'waku' == PLATFORM_ENV ) {
+
+            $this->snsUtil = WakuUtil::create();
+
+            $items[] = array(
+              "itemId"      => $data['item_id'],
+              "name"        => $data['item_name'],
+              "unitPrice"   => $data['point'],
+              "amount"    => 1,
+              "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
+              "description" => $data['item_detail'],
+            );
+
+        } elseif ( 'niji' == PLATFORM_ENV ) {
+
+            $this->snsUtil = NijiUtil::create();
+
+            $items[] = array(
+              "itemId"      => $data['item_id'],
+              "name"        => $data['item_name'],
+              "unitPrice"   => $data['point'],
+              "quantity"    => 1,
+              "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
+              "description" => $data['item_detail'],
+            );
+
+        }
+
         $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
 
         if ($payment) {
             // 決済ID（Paymentオブジェクトごとに割り当てられます）
-            $paymentId = $payment["paymentId"];
+            if ( 'waku' == PLATFORM_ENV ) {
+                $paymentId = $payment['entry'][0]["paymentId"];
+                $endpoint  = $payment['endpointUrl'];
+            } else {
+                $paymentId = $payment["paymentId"];
+                $endpoint  = $payment['transactionUrl'];
+            }
 
             $itemLog = json_encode($items);
 
@@ -98,7 +136,7 @@ class ItemsController extends ApiController {
             $this->PaymentLog->commit();
 
             // アイテム購入ページへリダイレクト
-            header("Location: " . $payment["transactionUrl"], true, 302);
+            header("Location: " . $endpoint , true, 302);
             exit;
         } else {
             // 失敗した時の処理
@@ -129,10 +167,19 @@ class ItemsController extends ApiController {
         $items[0] = (array)$items[0];
 
         $paymentId = $latestData['payment_id']; 
-        $payment   = $this->snsUtil->getPayment($paymentId); 
+        $appId = null;
+        if (!empty($this->params['opensocial_app_id'])) {
+            $appId = $this->params['opensocial_app_id'];
+        }
 
+        $payment   = $this->snsUtil->getPayment($paymentId, $this->ownerId, $appId); 
+        if ( 'waku' == PLATFORM_ENV ) {
+            $column = 'entry';
+        } else {
+            $column = 'paymentEntries';
+        }
         $err = 0;
-        foreach ($payment["paymentEntries"] as $key => $val) {
+        foreach ($payment[$column] as $key => $val) {
             if ( $items[$key]['itemId'] != $val['itemId'] ) {
                 $err = 1;
                 break;
@@ -149,9 +196,7 @@ class ItemsController extends ApiController {
 
         $field = array();
         $where = array('item_id' => $itemId);
-
         $itemData = $this->Item->getAllFind($where, $field, 'first');
-
         if (empty($itemData)) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
@@ -214,8 +259,6 @@ class ItemsController extends ApiController {
         }
 
         // 初回限定アイテム
-        $this->log('itemId'); 
-
         if (FIRST_ITEM_ID == $itemId) {
             $where = array(
                 'user_id' => $this->userId 

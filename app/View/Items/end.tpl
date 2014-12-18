@@ -24,5 +24,7 @@
     </div>
 
     <div class="space"></div>
+    <{include file="../Elements/line.tpl"}>
+    <div class="space"></div>
 
 </div>
