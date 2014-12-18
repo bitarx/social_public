@@ -146,7 +146,7 @@ boss.loader = ( function() {
         if( count >= len ) {
           // 処理終了
           _stocker.setDO( "playerBMList", playerBMList );
-          callback();
+           callback();
         } else {
            eventFunc();
         }

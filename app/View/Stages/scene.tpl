@@ -9,9 +9,9 @@
         <meta http-equiv="Expires" content="-1">
         <title><{$smarty.const.SITE_TITLE}></title>
         <{if $carrer == $smarty.const.CARRER_IPHONE}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css.php">
         <{/if}>
     </head>
     <body>
@@ -57,7 +57,7 @@
         //シナリオ完了
         var scenarioComplete = function( eventsID ) {
             console.log( "scenarioComplete", eventsID );
-            location.href = "<{$smarty.const.BASE_URL}><{$next}>";
+            location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}><{$next}>";
         }
 
         //分岐選択完了

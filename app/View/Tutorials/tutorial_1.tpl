@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
     <{if $carrer == $smarty.const.CARRER_IPHONE}>
-        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css" />
+        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css.php" />
     <{else}>
-        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_android.css" />
+        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_android.css.php" />
     <{/if}>
     <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/jquery.simplyscroll.css" />
 
@@ -56,10 +56,22 @@
                 <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png" class="opening_text" >
             </ul>
         </div>
-    <div id="startGameButton" class="btnStart">
-        <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
-        <div class="strStart">
-           ゲームスタート 
+    <{if 'waku' == $smarty.const.PLATFORM_ENV}>
+        <div class="btnStart">
+            <a href="<{$smarty.const.BASE_URL}>Tutorials/tutorial_2">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <div class="strStart">
+               ゲームスタート 
+            </div>
+            </a>
         </div>
-    </div>
+    <{else}>
+        <div id="startGameButton" class="btnStart">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <div class="strStart">
+               ゲームスタート 
+            </div>
+        </div>
+    <{/if}>
+    <div style="height:60px"></div>
 </body>

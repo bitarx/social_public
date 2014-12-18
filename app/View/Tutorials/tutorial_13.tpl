@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <title>ボスバトル</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css">
+             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle.css.php">
         <{else}>
-             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle_android.css">
+             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/enemybattle_android.css.php">
         <{/if}>
     </head>
     <body id="body">
@@ -32,7 +32,7 @@
         var contentsComplete = function() {
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
-                    location.href = "tutorial_14";
+                    location.href = "<{$smarty.const.BASE_URL_PRE}>Tutorials/tutorial_14";
             });
         }
 
@@ -128,8 +128,7 @@
 
         var el = document.getElementById( "skip" );
         el.addEventListener("click", function(){
-                location.href = "tutorial_14";
-//          boss.main.skip();
+                location.href = "<{$smarty.const.BASE_URL_PRE}>Tutorials/tutorial_14";
         }, false);
      };
 

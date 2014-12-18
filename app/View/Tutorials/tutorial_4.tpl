@@ -10,7 +10,7 @@ $(function () {
 <div class="stageMain">
     <img src="<{$smarty.const.IMG_URL}>quest/main_3.jpg">
 
-    <div  class="btnQuestProg" id="appReq" act="Tutorials/quest" params=<{$param}>> 
+    <div  class="btnQuestProg" id="appReq" act="Tutorials/quest<{$ownerInfo}>" params=<{$param}>> 
         <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
         <div class="strQuestProg" >
             進行！

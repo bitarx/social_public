@@ -1,4 +1,8 @@
-@charset "utf-8";
+<?php
+header('Content-Type: text/css; charaset=utf-8');
+$url = 'http://' . $_SERVER['HTTP_HOST'];
+
+echo "
 /**
  *
  * Generic CSS for CakePHP
@@ -24,7 +28,7 @@
 /** General Style Info **/
 body {
     zoom:50%;
-    background-image: url('../img/bg.png');
+    background-image: url('" . $url . "/img/bg.png');
 	color: #fff;
     text-align: center;  
 }
@@ -347,7 +351,7 @@ a:hover {
     position: absolute;
     top: 81px;
     left: 265px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height:18px;
@@ -358,7 +362,7 @@ a:hover {
     position: absolute;
     top: 86px;
     left: 265px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height:18px;
@@ -387,7 +391,7 @@ input.btn_submit {
     height: 50px;
     border: none;
     text-indent: -9999px;
-    background: url(../img/btn_st_s.png) no-repeat 0 0;
+    background: url(" . $url . "/img/btn_st_s.png) no-repeat 0 0;
 }
  
 
@@ -453,7 +457,7 @@ input.btn_submit {
     margin: 0 auto;
     top: 20px;
     left: 85px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height: 20px;
@@ -470,7 +474,7 @@ input.btn_submit {
     margin: 0 auto;
     top: 50px;
     left: 85px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height: 20px;
@@ -487,7 +491,7 @@ input.btn_submit {
     margin: 0 auto;
     top: 80px;
     left: 85px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height: 20px;
@@ -973,7 +977,7 @@ display: block;
     position: absolute;
     top: 120px;
     left: 110px;
-    background: url(../img/progress_base.png) top repeat-x;
+    background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
     height: 20px;
@@ -1453,3 +1457,5 @@ input[type=checkbox] {
     padding: 10px 10px 10px 10px;
     background-color: #7B68EE;
 }
+";
+?>

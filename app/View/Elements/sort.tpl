@@ -1,4 +1,4 @@
-<form method=="POST" name="sort" action="<{$smarty.const.BASE_URL}><{$ctlAction}>">    
+<form method="post" name="sort" action="<{$smarty.const.BASE_URL}><{$ctlAction}>">    
     <div class="sort">
         <{html_options name=rare_level options=$rareLevel selected=$rareLevelSelect}>
         <{html_options name=sort_item options=$sortItem selected=$sortItemSelect}>

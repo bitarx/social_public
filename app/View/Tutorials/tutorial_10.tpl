@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <title>強化合成</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce_android.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce_android.css.php">
         <{/if}>
     </head>
     <body>
@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "tutorial_11";
+           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Tutorials/tutorial_11";
       }
 
       window.onload = function() {

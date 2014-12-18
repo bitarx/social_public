@@ -1,5 +1,10 @@
+<?php 
+header('Content-Type: text/css; charaset=utf-8'); 
+$url = 'http://' . $_SERVER['HTTP_HOST'];
+
+echo "
 body {
-    background-image: url('../img/tutorial/opening.png');
+    background-image: url('" . $url . "/img/tutorial/opening.png');
     background-color:#000000;
     background-position:left top;
     background-repeat:no-repeat;
@@ -35,3 +40,5 @@ body {
 .btnStrongL {
     width:275px;
 }
+";
+?>

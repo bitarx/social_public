@@ -166,21 +166,52 @@ class GachasController extends ApiController {
             // 購入アイテムの配列（複数のアイテム指定可）
             // アイテム名や説明文はUTF-8
             $items = array();
-            $items[] = array(
-              "itemId"      => $gachaData['gacha_id'],
-              "name"        => $gachaData['gacha_name'],
-              "unitPrice"   => $gachaData['point'],
-              "quantity"    => 1,
-              "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
-              "description" => $gachaData['gacha_detail'],
-            );
 
-            $this->snsUtil = ApplihillsUtil::create();
+            // SNSクラス生成
+            if ( 'hills' == PLATFORM_ENV ) {
+
+                $items[] = array(
+                  "itemId"      => $gachaData['gacha_id'],
+                  "name"        => $gachaData['gacha_name'],
+                  "unitPrice"   => $gachaData['point'],
+                  "quantity"    => 1,
+                  "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+                  "description" => $gachaData['gacha_detail'],
+                );
+
+            } elseif ( 'waku' == PLATFORM_ENV ) {
+
+                $items[] = array(
+                  "itemId"      => $gachaData['gacha_id'],
+                  "name"        => $gachaData['gacha_name'],
+                  "unitPrice"   => $gachaData['point'],
+                  "amount"    => 1,
+                  "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+                  "description" => $gachaData['gacha_detail'],
+                );
+
+            } elseif ( 'niji' == PLATFORM_ENV ) {
+
+                $items[] = array(
+                  "itemId"      => $gachaData['gacha_id'],
+                  "name"        => $gachaData['gacha_name'],
+                  "unitPrice"   => $gachaData['point'],
+                  "amount"    => 1,
+                  "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+                  "description" => $gachaData['gacha_detail'],
+                );
+            }
             $payment = $this->snsUtil->createPayment($callbackUrl, $finishPageUrl, $items);
 
             if ($payment) {
                 // 決済ID（Paymentオブジェクトごとに割り当てられます）
-                $paymentId = $payment["paymentId"];
+                if ( 'waku' == PLATFORM_ENV ) {
+                    $paymentId = $payment['entry'][0]["paymentId"];
+                    $endpoint  = $payment['endpointUrl'];
+                } else {
+                    $paymentId = $payment["paymentId"];
+                    $endpoint  = $payment['transactionUrl'];
+                }
 
                 $itemLog = json_encode($items);
 
@@ -203,7 +234,7 @@ class GachasController extends ApiController {
                 $this->PaymentLog->commit();
 
                 // アイテム購入ページへリダイレクト
-                header("Location: " . $payment["transactionUrl"], true, 302);
+                header("Location: " . $endpoint, true, 302);
                 exit;
             } else {
                 // 失敗した時の処理
@@ -423,9 +454,14 @@ class GachasController extends ApiController {
 
         $paymentId = $latestData['payment_id'];
 
-        $payment   = $this->snsUtil->getPayment($paymentId);
+        $appId = null;
+        if (!empty($this->params['opensocial_app_id'])) {
+            $appId = $this->params['opensocial_app_id'];
+        }
 
-        if (empty($payment['status']) || 1 != $payment['status']) {
+        $payment   = $this->snsUtil->getPayment($paymentId, $this->ownerId, $appId);
+        if (empty($payment)) {
+
             // 購入処理が正常に行われていない 
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));

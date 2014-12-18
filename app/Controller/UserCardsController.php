@@ -120,7 +120,7 @@ class UserCardsController extends ApiController {
      */
 	public function confUp() {
 
-        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        $userCardIds = $this->Common->getParamsInKey($this->request->data, 'user_card_id_');
         if (!$userCardIds) {
             $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
@@ -290,7 +290,7 @@ class UserCardsController extends ApiController {
      */
 	public function actUp() {
 
-        $userCardIds = $this->Common->getParamsInKey($this->params, 'user_card_id_');
+        $userCardIds = $this->Common->getParamsInKey($this->request->data, 'user_card_id_');
         if (!$userCardIds) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
@@ -402,14 +402,19 @@ class UserCardsController extends ApiController {
             $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
 
+        $add = "";
+        if (!empty($this->ownerInfo)) {
+            $add = '&' . $this->ownerInfo;
+        }
+
         // ベースカード
-        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
+        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard . $add;
 
         // 素材カード
-        $target = FILEOUT_URL . '?size=l&dir=card&target=' . $target;
+        $target = FILEOUT_URL . '?size=l&dir=card&target=' . $target . $add;
 
         // 合成後カード
-        $afterCard = FILEOUT_URL . '?size=l&dir=card&target=' . $afterCard;
+        $afterCard = FILEOUT_URL . '?size=l&dir=card&target=' . $afterCard . $add;
 
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
@@ -434,7 +439,7 @@ class UserCardsController extends ApiController {
         $list = array();
         for ($i = 1; $i <= 10; $i++) {
             if (!empty($this->params['target_' . $i])) {
-                $list[] = IMG_URL . 'card/card_m_' . $this->params['target_' . $i] . '.jpg';
+                $list[] = URL_PRE . IMG_URL . 'card/card_m_' . $this->params['target_' . $i] . '.jpg';
             }
         }
 
@@ -447,7 +452,12 @@ class UserCardsController extends ApiController {
         $cardInfo = $this->Card->getCardData($baseCard);
 
         $sacrificeList = json_encode($list);
-        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard;
+        $add = "";
+        if (!empty($this->ownerInfo)) {
+            $add = '&' . $this->ownerInfo;
+        }
+        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $cardInfo['card_id'] . $add;
+
         $endExp = $upExp + $startExp;
 
         $maxExp = $cardInfo['card_level'] * 100;
@@ -486,48 +496,5 @@ class UserCardsController extends ApiController {
 
         $this->rd('UserCards', 'index', array('end' => 1));  
     } 
-
-    /**
-     * 条件検索(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 検索結果一覧
-     */
-    public function find() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            $fields = func_get_args();
-            $list = $this->UserCard->getAllFind($this->request->query, $fields);
-            $this->setJson($list);
-        }
-    }
-
-    /**
-     * 登録更新(変更禁止)
-     *
-     * @author imanishi 
-     * @return json 0:失敗 1:成功 2:put以外のリクエスト
-     */
-	public function init() {
-
-        if ($this->request->is(array('ajax'))) {
-
-            $this->autoRender = false;   // 自動描画をさせない
-
-            if ($this->UserCard->save($this->request->query)) {
-                $ary = array('result' => 1);
-            } else {
-                $ary = array('result' => 0);
-            }
-        } else {
-            $ary = array('result' => 2);
-        }
-
-        $this->setJson($ary);
-	}
-
 
 }

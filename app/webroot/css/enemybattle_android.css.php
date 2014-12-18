@@ -1,13 +1,18 @@
+<?php
+header('Content-Type: text/css; charaset=utf-8');
+$url = 'http://' . $_SERVER['HTTP_HOST'];
+
+echo "
 body {
   padding: 0px;
   margin: 0px;
-  background-image: url('../img/synth_evol_bg.png');
+  background-image: url('".$url."/img/synth_evol_bg.png');
   height:980px;
   overflow: hidden;
 }
 
 #mainCanvas {
-  background-image: url('../img/synth_evol_bg.png');
+  background-image: url('".$url."/img/synth_evol_bg.png');
   overflow: hidden;
   margin: auto;
   text-align: left;
@@ -21,3 +26,4 @@ body {
     font-size: 30px;
     text-align:right;
 }
+";

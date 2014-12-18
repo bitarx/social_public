@@ -334,18 +334,28 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
      
-                $list = $this->UserCard->getUserCard ($this->userId);
+        $list = $this->UserCard->getUserCard ($this->userId);
+
+        if (!empty($this->ownerInfo)) {
+            $ownerInfo = '?' . $this->ownerInfo;
+        }
+
 
         // アサイン
         $this->set('row', $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
 
-        $data = array('progress' => 0, 'act' => 100, 'exp' => 0);
+        $data = array(
+              'progress' => 0
+            , 'act' => 100
+            , 'exp' => 0
+        );
         $this->set('act', $data['act']);
         $this->set('prog', $data['progress']);
         $this->set('exp', $data['exp']);
         $param = json_encode($data);
         $this->set('param', $param);
+        $this->set('ownerInfo', $ownerInfo);
     } 
 
     /**
@@ -619,8 +629,8 @@ class TutorialsController extends ApiController {
         $this->User->commit();
 
         // 演出で使用する素材
-        $baseCard = IMG_URL . 'tutorial/card_l_13.jpg';
-        $sacrificeList[] = IMG_URL . 'tutorial/card_l_31.jpg';
+        $baseCard = URL_PRE.IMG_URL . 'tutorial/card_l_13.jpg';
+        $sacrificeList[] = URL_PRE.IMG_URL . 'tutorial/card_l_31.jpg';
         $sacrificeList = json_encode($sacrificeList);
         $startExp = 0;
         $endExp = 120;
@@ -908,6 +918,7 @@ class TutorialsController extends ApiController {
 
         $this->set('row',  $this->row);
         $this->set('next', self::$actionPref . $this->row['tutorial_next']);
+
     } 
 
     /**
@@ -1105,7 +1116,7 @@ class TutorialsController extends ApiController {
      */
 	public function quest() {
 
-        if ($this->request->is(array('ajax'))) {
+        if ('waku' == PLATFORM_ENV || $this->request->is(array('ajax'))) {
 
             $this->autoRender = false;   // 自動描画をさせない
 
@@ -1172,9 +1183,14 @@ class TutorialsController extends ApiController {
         } else {
             $data = array('result' => 2);
         }
+
         $params = json_encode($data);
+
+        if ('waku' == PLATFORM_ENV) {
+            // クロスドメイン許可
+            $this->header('Access-Control-Allow-Origin: *');
+        }
         echo $params;
-        // $this->setJson($data);
 	}
 
 

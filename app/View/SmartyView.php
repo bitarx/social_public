@@ -17,6 +17,8 @@ class SmartyView extends View {
 		//$this->subDir = 'smarty'.DS;
 		$this->ext= '.tpl';
 		//$this->Smarty->plugins_dir[] = VENDORS.DS.'smarty'.DS.'plugins';
+        //$this->Smarty->autoload_filters['pre'][] = 'replace_href';
+
 		$this->Smarty->compile_dir = TMP.'smarty'.DS.'compile'.DS;
 		$this->Smarty->cache_dir = TMP.'smarty'.DS.'cache'.DS;
 		$this->Smarty->error_reporting = 'E_ALL';
@@ -28,8 +30,14 @@ class SmartyView extends View {
         $this->Smarty->left_delimiter  = "<{";
         $this->Smarty->right_delimiter = "}>";
 
+        // プリフィルタ
+        if ( 'waku' == PLATFORM_ENV ) {
+//            $this->Smarty->registerFilter('pre','replace_href');
+        }
+
 		$this->Helpers = new HelperCollection($this);
 	}
+
 
 	protected function _render($___viewFn, $___dataForView = array()) {
 		$trace = debug_backtrace();

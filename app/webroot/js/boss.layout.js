@@ -7,7 +7,6 @@ boss.layout = ( function() {
   */
   function init( stage, bm, initial, turn ) {
 
-
   }
 
 

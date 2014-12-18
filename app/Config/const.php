@@ -10,15 +10,6 @@ if (!defined('PRIVATE_DIR')) {
 if (!defined('DOMAIN')) {
     define("DOMAIN", $_SERVER['SERVER_NAME']);
 }
-if (!defined('BASE_URL')) {
-    define("BASE_URL","http://" . DOMAIN . DS);
-}
-if (!defined('IMG_URL')) {
-    define("IMG_URL", BASE_URL . "img" . DS);
-}
-if (!defined('FILEOUT_URL')) {
-    define("FILEOUT_URL", BASE_URL . "File" . DS . "outimage");
-}
 
 /**
  * プラットフォーム識別
@@ -43,6 +34,27 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     define("PLATFORM_ENV", 'out');
 }
 
+// waku+対応
+if ('waku' == PLATFORM_ENV) {
+    define("URL_PRE", '?url=');
+} else {
+    define("URL_PRE", '');
+}
+
+
+if (!defined('BASE_URL')) {
+    define("BASE_URL","http://" . DOMAIN . DS);
+}
+if (!defined('IMG_URL')) {
+    define("IMG_URL", BASE_URL . "img" . DS);
+}
+if (!defined('FILEOUT_URL')) {
+    define("FILEOUT_URL", BASE_URL . "File" . DS . "outimage");
+}
+
+
+define("BASE_URL_PRE", URL_PRE . BASE_URL);
+
 
 /**
  * SNSAPI基本設定
@@ -54,7 +66,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // OAuth
     define("AH_IS_SANDBOX", false);
 
-} elseif ( false !== strpos( DOMAIN, 'jp') ) {
+} elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
     define("APP_ENV", 'stg');
     Configure::write('debug', 2);

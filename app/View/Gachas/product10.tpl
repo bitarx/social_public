@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <title>ガチャ</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_android.css">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_android.css.php">
         <{/if}>
     </head>
     <body>
@@ -20,7 +20,7 @@
     <script type="text/javascript">
       function back()
       {
-           location.href = "end?has_max_flg=<{$hasMaxFlg}>";
+           location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Gachas/end?has_max_flg=<{$hasMaxFlg}>";
       }
 
       window.onload = function() {

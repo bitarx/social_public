@@ -173,6 +173,12 @@ class StagesController extends ApiController {
 
         $act = (100 / $userParam['act_max']) * $userParam['act'];
 
+        // waku+対応
+        $ownerInfo = array();
+        if ('waku' == PLATFORM_ENV) {
+            $ownerInfo = '?opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
+        }
+        $this->set('ownerInfo', $ownerInfo);
         $this->set('data', $data);
         $this->set('userParam', $userParam);
         $this->set('param', $params);
@@ -669,7 +675,7 @@ class StagesController extends ApiController {
      */
 	public function init() {
 
-        if ($this->request->is(array('ajax'))) {
+        if ('waku' == PLATFORM_ENV || $this->request->is(array('ajax'))) {
             $userId = $this->userId;
 
             // 進行度の基本

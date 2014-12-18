@@ -1,3 +1,8 @@
+<?php
+header('Content-Type: text/css; charaset=utf-8');
+$url = 'http://' . $_SERVER['HTTP_HOST'];
+
+echo "
 html, body {
   height: 960px;
   background-color:#000;
@@ -42,17 +47,17 @@ li {
 #textArea {
   padding: 0px;
   margin: 0px;
-  background-image: url( "../img/scene/textarea.png" );
+  background-image: url( '".$url."/img/scene/textarea.png' );
   background-repeat: no-repeat;
   background-size: 300px 75px;
   position: absolute;
   top:400px;
-  bottom: 20px;
+  bottom: 30px;
   left: 10px;
   width: 300px;
-  height: 66px;
-  padding: 5px;
-  font-size: 12px;
+  height: 75px;
+  padding: 10px;
+  font-size: 22px;
   pointer-events: none;
 }
 
@@ -100,6 +105,6 @@ li {
 
 .nextSign {
     position: absolute;
-    top: 46px;
     right: 10%;
 }
+";

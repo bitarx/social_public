@@ -14,12 +14,12 @@ function routes(data)
     }
     if (data.result == "2") {
         // 体力不足など
-        location.href = BASE_URL + 'Stages/main?stage_id=' + data.stage_id;    
+        location.href = URL_PRE + BASE_URL + 'Stages/main?stage_id=' + data.stage_id;    
     } 
     // ステージクリア
      else if (data.stage_clear == "1") {
 
-        location.href = BASE_URL + 'Stages/conf?stage_id=' + data.stage_id;    
+        location.href = URL_PRE + BASE_URL + 'Stages/conf?stage_id=' + data.stage_id;    
     } 
      else {
 
@@ -34,7 +34,7 @@ function routes(data)
             case 'Tutorials_quest':
                 if (data.tuto_next == '1') {
                     // クエスト演出終了し次へ
-                    location.href = BASE_URL + 'Tutorials/tutorial_5';    
+                    location.href = URL_PRE + BASE_URL + 'Tutorials/tutorial_5';    
                 }
                 dispProgressQuest(data.progress);
                 dispProgressQuestAct(data.act);
@@ -111,7 +111,7 @@ function dispRotResultQuest(data)
            image +=     '</div>';
            image += '</div>';
            if (1 != data.tuto && 0 == data.has_max_flg) {
-               location.href = BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+               location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
            }
 
            filename = '';
