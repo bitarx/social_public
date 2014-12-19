@@ -6,10 +6,7 @@
     <div class="space"></div>
     <div class="parent">
         <a href="<{$linkQuest}>">
-            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
-            <div class="child">
-                鎮激開始！
-            </div>
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_start.jpg">
         </a>
     </div>
     <div class="space"></div>

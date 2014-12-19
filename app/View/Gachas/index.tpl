@@ -1,15 +1,22 @@
 <div>
-    <div style="position:relative;height:285px;top:-60px;text-align:center;">
+    <{include file="../Elements/title.tpl"}>
+    <div style="position:relative;height:520px;top:-110px;text-align:center;">
         <div class="child">
-            <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png">
+            <img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" width="80%">
         </div>
     </div>
-    <div class="spaceLow"></div>
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>
 
     <{foreach from=$list item=data key=key}>
+        <{if $data.gacha_id == $smarty.const.GACHA_10_ID}>
+            <div style="position:relative;height:255px;top:-60px;text-align:center;">
+                <div class="child">
+                    <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" width="85%">
+                </div>
+            </div>
+        <{/if}>
         <div class="gachaImg">
            <img src="<{$smarty.const.IMG_URL}>gacha/icon_<{$data.gacha_id}>.png" width="160px">
         </div>

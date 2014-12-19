@@ -94,6 +94,28 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
+	public $stg_waku = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres_waku',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
+	public $stg_niji = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres_niji',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
 	public $dev = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
