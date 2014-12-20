@@ -232,6 +232,11 @@ a:hover {
     left: 180px;
     height:80px;
 }
+.gachaTextArea {
+    position: relative;
+    text-align:center;
+    top:5px;
+}
 
 /** カード */
 .card {

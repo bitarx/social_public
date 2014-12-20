@@ -1,8 +1,17 @@
 <div>
     <{include file="../Elements/title.tpl"}>
-    <div style="position:relative;height:520px;top:-110px;text-align:center;">
+    <div style="position:relative;height:640px;top:-140px;text-align:center;">
         <div class="child">
-            <img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" width="80%">
+            <img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg">
+        </div>
+    </div>
+    <div class="gachaTextArea">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="150px" width="630px">
+        <div class="cardText">
+                カードのレアリティは開始地点から３段階進化します<br />
+                レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
+                <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
+                <{$data['card_detail']}>
         </div>
     </div>
     <div style="position:relative;left:20px;">
