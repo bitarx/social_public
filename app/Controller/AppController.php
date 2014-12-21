@@ -36,10 +36,10 @@ class AppController extends Controller {
      * メンテナンス
      */
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
-    public static $menteEnd = '14:00';
+    public static $menteEnd = '8:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
-    public static $testUserHills = array(553919);
+    public static $testUserHills = array(553544);
 
     public static $testUserWaku = array(553919);
 
