@@ -3,5 +3,5 @@
     <ModulePrefs title="My Application">
       <Require feature="opensocial-0.9" />
     </ModulePrefs>
-    <Content view="touch" type="url" href="http://hills.devasns.red/index.php/Tutorials/tutorial_1" />
+    <Content view="touch" type="url" href="http://hills.devsocial.red/index.php/Tutorials/tutorial_1" />
   </Module>

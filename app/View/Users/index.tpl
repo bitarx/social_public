@@ -36,6 +36,9 @@
     </div>
     <{include file="../Elements/status.tpl"}>
 
+    <{if !empty($event)}>
+        <{include file="../Elements/event.tpl"}>
+    <{/if}>
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>

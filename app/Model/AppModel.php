@@ -255,4 +255,11 @@ class AppModel extends Model {
          return $querylog;
     }
 
+    /**
+     * 現在時刻の文字列を返す
+     */
+   protected function nowDate () {
+       return date("Y-m-d H:i:s");
+   }
+
 }

@@ -100,4 +100,18 @@ class EvQuest extends AppModel {
 			),
 		),
 	);
+
+    /**
+     * 稼働中のイベントを返す
+     */
+    public function isEvent () {
+        $nowDate = $this->nowDate();
+
+        $where = array(
+            'start_time < ' => $nowDate
+        ,   'end_time > '   => $nowDate
+        );
+        $row = $this->getAllFind($where , array(), 'first');
+        return $row;
+    }
 }

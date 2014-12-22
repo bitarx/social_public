@@ -59,7 +59,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest');
 
     public $components = array('Cookie', 'Common');
 
@@ -69,6 +69,8 @@ class AppController extends Controller {
     public $params   = array();
     public $userParam  = array();
     public $tutoEnd  = 0;
+
+    public $event = array();
 
     public static $ctlRegist = array('Tutorials');
 
@@ -347,6 +349,9 @@ class AppController extends Controller {
             $this->User->commit();
         }
 
+        // イベント
+        $this->event = $this->EvQuest->isEvent();
+
         // ページング
         $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
         $this->offset = ($this->page - 1) * PAGE_LIMIT;
@@ -370,6 +375,7 @@ class AppController extends Controller {
         $this->set('ctl', $this->name ); 
         $this->set('action',  $this->action); 
         $this->set('ctlAction',  $this->name . '/' . $this->action); 
+        $this->set('event', $this->event);
 
         // URLアサイン
         $this->_setUrl();

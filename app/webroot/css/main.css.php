@@ -919,6 +919,12 @@ display: block;
 .mypage {
     height:980px;
 }
+.mypageEvent {
+    text-align:center;
+    top:12px;
+    height:100px;
+}
+
 /** マイページデッキ */
 .deckCard1 {
     position: relative;
