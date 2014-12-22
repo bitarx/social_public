@@ -336,6 +336,7 @@ class TutorialsController extends ApiController {
      
         $list = $this->UserCard->getUserCard ($this->userId);
 
+        $ownerInfo = '';
         if (!empty($this->ownerInfo)) {
             $ownerInfo = '?' . $this->ownerInfo;
         }

@@ -36,10 +36,14 @@ class AppController extends Controller {
      * メンテナンス
      */
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
-    public static $menteEnd = '14:00';
+    public static $menteEnd = '8:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
-    public static $testUserHills = array(553919);
+    public static $testUserHills = array(553544);
+
+    public static $testUserWaku = array(553919);
+
+    public static $testUserNiji = array(553919);
 
     /**
      * 定数
@@ -48,7 +52,7 @@ class AppController extends Controller {
      */
     public $gameTitle = SITE_TITLE;
     
-    public $ownerInfo = array();
+    public $ownerInfo = "";
 
     // 確率変動アイテム文言
     public $effectStr = array(
@@ -182,7 +186,13 @@ class AppController extends Controller {
             } else { 
                 // メンテナンス
                 if ('com' == APP_ENV) {
-                    $testUser = self::$testUserHills;
+                    if ('hills' == PLATFORM_ENV) {
+                        $testUser = self::$testUserHills;
+                    } elseif ('waku' == PLATFORM_ENV) {
+                        $testUser = self::$testUserWaku;
+                    } elseif ('niji' == PLATFORM_ENV) {
+                        $testUser = self::$testUserNiji;
+                    }
                     if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
                          $this->rd('Errors', 'index', array(
                                       'error' => 'mente'
