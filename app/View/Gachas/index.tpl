@@ -1,9 +1,9 @@
 <div>
-    <{include file="../Elements/title.tpl"}>
-    <div style="position:relative;height:260px;top:-58px;text-align:center;">
+<{*    <{include file="../Elements/title.tpl"}>   *}>
+    <div style="position:relative;height:280px;top:-60px;text-align:center;">
         <div class="child">
 <{*            <img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg">     *}>
-            <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" width="90%">
+            <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png">
         </div>
     </div>
     <div class="gachaTextArea">
