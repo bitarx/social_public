@@ -407,6 +407,7 @@ class StagesController extends ApiController {
                     if ( 3 == $maxStage['state'] ) {
                         // 次のステージへ
                         $fields = array('user_id', 'stage_id', 'progress', 'state');
+                        $values = array();
                         $values[] = array($this->userId, $nextStageId, 0, 1);
                         $this->UserStage->insertBulk($fields, $values, $ignore = 1);
                     }
