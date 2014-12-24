@@ -602,6 +602,25 @@ input.btn_submit {
 }
 
 /**
+ * イベント
+ */
+.eventTextArea {
+    position: relative;
+    width: 600px;
+    left: 10px;
+}
+.eventStr {
+    position: absolute;
+    top:10px;
+    left:5px;
+    flort:left;
+    color:#fff;
+}
+.textAreaEvent {
+    height:220px;
+}
+
+/**
  * クエスト関連
  */
 /** クエスト基本 */

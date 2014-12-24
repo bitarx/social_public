@@ -1,9 +1,9 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * EvStage Model
+ * Stage Model
  *
- * @property EvQuest $EvQuest
+ * @property Quest $Quest
  * @property Enemy $Enemy
  */
 class EvStage extends AppModel {
@@ -31,7 +31,7 @@ class EvStage extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'ev_stage_title' => array(
+		'stage_title' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -106,4 +106,42 @@ class EvStage extends AppModel {
 			'order' => ''
 		)
 	);
+
+    /**
+     * クエストの最初のステージを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return array 対象のステージデータ
+     */
+    public function getFirstStage($questId) {
+
+        $fields = array();
+        $order  = array();
+        $kind = 'first';
+        $where = array('ev_quest_id' => $questId);
+        $order = array('ev_stage_id ASC');
+
+        $data = $this->getAllFind($where, $fields, $kind, $order, $limit = 1);
+        return $data;
+    }
+
+    /**
+     * クエストのステージIDを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return array 対象のステージデータ
+     */
+    public function getQuestStageId($questId) {
+
+        $fields = array('ev_stage_id');
+        $order  = array();
+        $kind = 'all';
+        $where = array('ev_quest_id' => $questId);
+        $order = array('ev_stage_id ASC');
+
+        $data = $this->getAllFind($where, $fields, $kind, $order);
+        return $data;
+    }
 }

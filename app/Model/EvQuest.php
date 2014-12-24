@@ -39,7 +39,7 @@ class EvQuest extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail_before1' => array(
+		'prologue' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -49,7 +49,7 @@ class EvQuest extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'detail_before2' => array(
+		'epilogue' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -111,7 +111,37 @@ class EvQuest extends AppModel {
             'start_time < ' => $nowDate
         ,   'end_time > '   => $nowDate
         );
-        $row = $this->getAllFind($where , array(), 'first');
+        $order = array('start_time DESC');
+        $row = $this->getAllFind($where , array(), 'first', $order);
         return $row;
+    }
+
+    /**
+     * クエストデータ取得
+     *
+     * @author imanishi
+     * @param int $questId
+     * @return array 対象データ
+     */
+    public function getQuestData($questId) {
+
+        $where = array('ev_quest_id' => $questId);
+        $ret = $this->getAllFind($where, $fields = array(), 'first');
+        return $ret;
+    }
+
+    /**
+     * 進行可能クエストリスト取得
+     *
+     * @author imanishi
+     * @param int $questId
+     * @return array 対象リスト
+     */
+    public function getQuestList($questId) {
+
+        $where = array('ev_quest_id <=' => $questId);
+        $order = array('ev_quest_id DESC');
+        $ret = $this->getAllFind($where, $fields = array(), $kind = 'all', $order);
+        return $ret;
     }
 }

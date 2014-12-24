@@ -1,9 +1,9 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * EvStageProb Model
+ * StageProb Model
  *
- * @property EvStage $EvStage
+ * @property Stage $Stage
  */
 class EvStageProb extends AppModel {
 
@@ -99,17 +99,16 @@ class EvStageProb extends AppModel {
 		)
 	);
 
-
     /**
-     * イベントステージアイテム抽選確率取得
+     * ステージアイテム抽選確率取得
      *
-     * @author imanishi
-     * @param int $evStageId
+     * @author imanishi 
+     * @param int $stageId
      * @return array 抽選確率リスト
      */
-    public function getEvStageProb($evStageId) {
-        $where = array('ev_stage_id' => $evStageId );
-        $list = $this->getAllFind($where);
+    public function getStageProb($stageId) { 
+        $where = array('ev_stage_id' => $stageId );  
+        $list = $this->getAllFind($where); 
         return $list;
-    }
+    } 
 }

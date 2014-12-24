@@ -8,12 +8,23 @@ App::uses('ApiController', 'Controller');
  */
 class EvQuestsController extends ApiController {
 
+    public static $strPref   = '[プロローグ]';
+    public static $strPrefEp = '[エピローグ]';
+
     /**
      * Components
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
+
+    public function beforeFilter(){
+        parent::beforeFilter();
+        if(empty($this->event)) {
+            $this->rd('errors', 'index', array('error' => END_EVENT )); 
+        }
+
+    }
 
     /**
      * index method
@@ -32,6 +43,7 @@ class EvQuestsController extends ApiController {
      */
 	public function prologue() {
 
+        $this->set('title', self::$strPref . $this->event['quest_title']);
 	}
 
     /**
@@ -41,6 +53,7 @@ class EvQuestsController extends ApiController {
      */
 	public function epilogue() {
 
+        $this->set('title', self::$strPrefEp . $this->event['quest_title']);
 	}
 
 }

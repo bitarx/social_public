@@ -31,6 +31,7 @@ class ErrorsController extends ApiController {
             $where  = array('error_id' => $id);
             $mes = $this->Error->field('message', $where);
             $this->set('mes', $mes);
+            $this->set('guideId', 3 );
         } else {
             $no = $this->request->query['mente_no'];
            

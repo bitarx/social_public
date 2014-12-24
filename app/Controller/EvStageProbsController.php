@@ -13,7 +13,14 @@ class EvStageProbsController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
+
+    public function beforeFilter(){
+        parent::beforeFilter();
+        if(empty($this->event)) {
+            $this->rd('errors', 'index', array('error' => END_EVENT )); 
+        }
+    }
 
     /**
      * index method

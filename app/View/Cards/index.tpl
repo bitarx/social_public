@@ -11,6 +11,16 @@
                 </a>
             </div>
             <div class="space"></div>
+        <{elseif !empty($evStageId)}>
+            <div class="parent">
+                <a href="<{$smarty.const.BASE_URL}>EvStages/main?ev_stage_id=<{$evStageId}>">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+                    <div class="child" >
+                       イベントミッションへ 
+                    </div>
+                </a>
+            </div>
+            <div class="space"></div>
         <{/if}>
         <div class="parent">
             <a href="<{$linkUserCard}>">
