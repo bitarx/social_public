@@ -44,7 +44,7 @@ class SynthComponent extends Component {
 
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {
-                $levelMulti = 14; 
+                $levelMulti = 13; 
 
                 $val['level'] *= 2;
 
@@ -57,7 +57,14 @@ class SynthComponent extends Component {
                     $baseCard['skill_level'] += 14;
                 }
             }
-            $upExp += ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
+            
+            $num = ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
+
+            // ベースのレア度に応じて減算
+            $ret = $num - ($baseCard['rare_level'] * 2);
+            if ($ret < 2) $ret = 2;
+
+            $upExp += $ret;
         }
 
         // スキルレベル最大

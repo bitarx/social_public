@@ -2,18 +2,19 @@
     <img src="<{$smarty.const.BASE_URL}>img/header_base.png" class="headerBar">
 <{if $tutoEnd == 1}>  
     <div class="btn_my">
-        <a href="<{$linkUser}>"><img src="<{$smarty.const.BASE_URL}>img/btn_my_on.png"></a>
+        <a href="<{$linkUser}>"><input type="image" src="<{$smarty.const.BASE_URL}>img/btn_my_on.png"></a>
     </div>
     <div class="btn_synth">
-        <a href="<{$linkUserCard}>"><img src="<{$smarty.const.BASE_URL}>img/btn_synth_on.png"></a>
+        <a href="<{$linkUserCard}>"><input type="image" src="<{$smarty.const.BASE_URL}>img/btn_synth_on.png"></a>
     </div>
     <div class="btn_quest">
-        <a href="<{$linkQuest}>"><img src="<{$smarty.const.BASE_URL}>img/btn_quest_on.png"></a>
-    </div>        <div class="btn_gacha">
-        <a href="<{$linkGacha}>"><img src="<{$smarty.const.BASE_URL}>img/btn_gacha_on.png"></a>
+        <a href="<{$linkQuest}>"><input type="image" src="<{$smarty.const.BASE_URL}>img/btn_quest_on.png"></a>
+    </div>        
+    <div class="btn_gacha">
+        <a href="<{$linkGacha}>"><input type="image" src="<{$smarty.const.BASE_URL}>img/btn_gacha_on.png"></a>
     </div>
     <div class="btn_menu">
-        <a rel="leanModal" href="#div_menu"><img src="<{$smarty.const.BASE_URL}>img/btn_menu_on.png"></a>
+        <a rel="leanModal" href="#div_menu"><input type="image" src="<{$smarty.const.BASE_URL}>img/btn_menu_on.png"></a>
     </div>
 <{else}> 
 

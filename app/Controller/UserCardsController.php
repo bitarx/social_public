@@ -103,6 +103,11 @@ class UserCardsController extends ApiController {
             $money = false;
         }
 
+        // 進化段階取得
+        foreach ($list as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
+        }
+
         $this->set('useMoney', $useMoney);
         $this->set('money', $money);
         $this->set('data', $userBaseCard);
@@ -145,6 +150,11 @@ class UserCardsController extends ApiController {
         $money = true;
         if ($this->userParam['money'] < $useMoney) {
             $money = false;
+        }
+
+        // 進化段階取得
+        foreach ($targetList as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
 
         $this->set('useMoney', $useMoney);
