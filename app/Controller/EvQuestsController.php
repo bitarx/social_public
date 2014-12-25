@@ -11,6 +11,8 @@ class EvQuestsController extends ApiController {
     public static $strPref   = '[プロローグ]';
     public static $strPrefEp = '[エピローグ]';
 
+    public $uses = array('EvQuest', 'EvPresent');
+
     /**
      * Components
      *
@@ -27,23 +29,17 @@ class EvQuestsController extends ApiController {
     }
 
     /**
-     * index method
-     *
-     * @author imanishi 
-     * @return json
-     */
-	public function index() {
-
-	}
-
-    /**
      * prologue method
      *
      * @author imanishi 
      */
 	public function prologue() {
 
+        $list = $this->EvPresent->getList($this->event['ev_quest_id']);
+
         $this->set('title', self::$strPref . $this->event['quest_title']);
+        $this->set('list', $list);
+        $this->set('subTitle',  'イベントクリア報酬');
 	}
 
     /**

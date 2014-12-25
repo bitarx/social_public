@@ -946,7 +946,7 @@ display: block;
 .mypageEvent {
     text-align:center;
     top:12px;
-    height:100px;
+    height:230px;
 }
 
 /** マイページデッキ */
@@ -1064,6 +1064,24 @@ display: block;
     position: relative;
     top: -45px;
     left: 80px;
+}
+
+/** イベントプレゼント */
+.evPresentImg {
+    left:25px;
+    top:0px;
+    position: absolute;
+}
+.evListBlock {
+    position:relative;
+    height:150px;
+    top:0px;
+}
+.evPresentBlock {
+    position:relative;
+    top:-50px;
+    width:640px;
+    height:220px;
 }
 
 

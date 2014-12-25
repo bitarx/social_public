@@ -15,7 +15,7 @@ class EvStagesController extends ApiController {
      */
 	public $components = array('Common', 'Battle');
 
-    public $uses = array('EvUserStage', 'Enemy', 'UserDeck', 'EvStage', 'EvUserCurStage', 'UserParam', 'EvStageProb', 'UserCard', 'EvBattleLog', 'Card', 'UserLastActTime', 'EvQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox');
+    public $uses = array('EvUserStage', 'Enemy', 'UserDeck', 'EvStage', 'EvUserCurStage', 'UserParam', 'EvStageProb', 'UserCard', 'EvBattleLog', 'Card', 'UserLastActTime', 'EvQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'EvPresent');
 
     /**
      *　定数
@@ -438,6 +438,15 @@ class EvStagesController extends ApiController {
                         $values[] = array($this->userId, $nextStageId, 0, 1);
                         $this->EvUserStage->insertBulk($fields, $values, $ignore = 1);
                     }
+                } else {
+                    // イベントクリア報酬
+                    $list = $this->EvPresent->getList($this->event['ev_quest_id']);
+                    $values = array();
+                    $mes = 'イベント' . $this->event['quest_title'] . 'の報酬';
+                    foreach ($list as $val) {
+                        $values[] = array($this->userId, $val['kind'], $val['target'], $val['num'], $mes); 
+                    }
+                    $this->UserPresentBox->registPBox($values);
                 }
 
             }

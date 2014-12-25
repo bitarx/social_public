@@ -27,7 +27,7 @@ class UserPresentBoxesController extends ApiController {
         $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : 0;
         $pageAll = 0;
         $list = $this->UserPresentBox->getList($this->userId , $add = 1, $this->offset, $pageAll);
-$this->log($hasMaxFlg); 
+
         $this->set('list', $list);
         $this->set('hasMaxFlg', $hasMaxFlg);
         $this->set('pageAll', $pageAll);
