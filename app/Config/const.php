@@ -87,6 +87,8 @@ if ( false !== strpos( DOMAIN, 'eres')) {
 define("ERROR_ID_BAD_OPERATION", 1 );
 // システムエラー
 define("ERROR_ID_SYSTEM", 2 );
+// イベント終了
+define("END_EVENT", 3 );
 
 
 
@@ -184,6 +186,12 @@ define("GACHA_MONEY_ID", 3 );
 define("MAX_STAGE_ID", 30 );
 // クエストアイテム出現率プラス値(%)
 define("QUEST_ITEM_EFFECT", 5 );
+
+/**
+ * イベント関連
+ */
+// 最大ステージID
+define("EVENT_MAX_STAGE_ID", 3 );
 
 
 

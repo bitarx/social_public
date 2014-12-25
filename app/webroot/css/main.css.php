@@ -602,6 +602,25 @@ input.btn_submit {
 }
 
 /**
+ * イベント
+ */
+.eventTextArea {
+    position: relative;
+    width: 600px;
+    left: 10px;
+}
+.eventStr {
+    position: absolute;
+    top:10px;
+    left:5px;
+    flort:left;
+    color:#fff;
+}
+.textAreaEvent {
+    height:220px;
+}
+
+/**
  * クエスト関連
  */
 /** クエスト基本 */
@@ -927,7 +946,7 @@ display: block;
 .mypageEvent {
     text-align:center;
     top:12px;
-    height:100px;
+    height:230px;
 }
 
 /** マイページデッキ */
@@ -1045,6 +1064,24 @@ display: block;
     position: relative;
     top: -45px;
     left: 80px;
+}
+
+/** イベントプレゼント */
+.evPresentImg {
+    left:25px;
+    top:0px;
+    position: absolute;
+}
+.evListBlock {
+    position:relative;
+    height:150px;
+    top:0px;
+}
+.evPresentBlock {
+    position:relative;
+    top:-50px;
+    width:640px;
+    height:220px;
 }
 
 

@@ -124,4 +124,36 @@ class UserItem extends AppModel {
 
         return $tNum;
     }
+
+    /**
+     * 取得アイテムを登録
+     *
+     * @author imanishi 
+     * @param int $userId
+     * @param int $itemId
+     * @param int $num
+     * @return bool 
+     */
+    public function registItem($userId, $itemId, $num) {
+
+        $where = array(
+            'user_id' => $userId
+        ,   'item_id' => $itemId
+        );
+        $fields = array('id', 'item_id', 'num'); 
+        $data = $this->getAllFind($where, $fields, 'first');
+
+        if (empty($data)) {
+            $data = array(
+                'user_id' => $userId
+            ,   'item_id' => $itemId
+            ,   'num' => 0
+            );
+        }
+
+        $data['num'] += $num;
+
+        $ret = $this->save($data);
+        return $ret;
+    }
 }

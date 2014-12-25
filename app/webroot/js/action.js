@@ -14,18 +14,26 @@ function routes(data)
     }
     if (data.result == "2") {
         // 体力不足など
-        location.href = URL_PRE + BASE_URL + 'Stages/main?stage_id=' + data.stage_id;    
+        if (data.action == 'EvStages_init') {
+            location.href = URL_PRE + BASE_URL + 'EvStages/main?ev_stage_id=' + data.ev_stage_id;    
+        } else {
+            location.href = URL_PRE + BASE_URL + 'Stages/main?stage_id=' + data.stage_id;    
+        }
     } 
     // ステージクリア
      else if (data.stage_clear == "1") {
 
-        location.href = URL_PRE + BASE_URL + 'Stages/conf?stage_id=' + data.stage_id;    
+        if (data.action == 'EvStages_init') {
+            location.href = URL_PRE + BASE_URL + 'EvStages/conf?ev_stage_id=' + data.ev_stage_id;    
+        } else {
+            location.href = URL_PRE + BASE_URL + 'Stages/conf?stage_id=' + data.stage_id;    
+        }
     } 
      else {
-
         switch(data.action)
         {
             case 'Stages_init':
+            case 'EvStages_init':
                 dispProgressQuest(data.progress);
                 dispProgressQuestAct(data.act);
                 dispProgressQuestExp(data.exp);
@@ -111,7 +119,12 @@ function dispRotResultQuest(data)
            image +=     '</div>';
            image += '</div>';
            if (1 != data.tuto && 0 == data.has_max_flg) {
-               location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+               if (data.action == 'EvStages_init') {
+                   location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?ev_stage_id=' + data.stage_id;
+               } else {
+                   location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
+
+               }
            }
 
            filename = '';

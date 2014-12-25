@@ -8,22 +8,25 @@ App::uses('ApiController', 'Controller');
  */
 class EvQuestsController extends ApiController {
 
+    public static $strPref   = '[プロローグ]';
+    public static $strPrefEp = '[エピローグ]';
+
+    public $uses = array('EvQuest', 'EvPresent');
+
     /**
      * Components
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Common');
 
-    /**
-     * index method
-     *
-     * @author imanishi 
-     * @return json
-     */
-	public function index() {
+    public function beforeFilter(){
+        parent::beforeFilter();
+        if(empty($this->event)) {
+            $this->rd('errors', 'index', array('error' => END_EVENT )); 
+        }
 
-	}
+    }
 
     /**
      * prologue method
@@ -32,6 +35,11 @@ class EvQuestsController extends ApiController {
      */
 	public function prologue() {
 
+        $list = $this->EvPresent->getList($this->event['ev_quest_id']);
+
+        $this->set('title', self::$strPref . $this->event['quest_title']);
+        $this->set('list', $list);
+        $this->set('subTitle',  'イベントクリア報酬');
 	}
 
     /**
@@ -41,6 +49,7 @@ class EvQuestsController extends ApiController {
      */
 	public function epilogue() {
 
+        $this->set('title', self::$strPrefEp . $this->event['quest_title']);
 	}
 
 }

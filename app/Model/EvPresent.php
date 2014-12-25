@@ -1,19 +1,20 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Card', 'Model');
+App::uses('Item', 'Model');
 /**
- * EvItemProb Model
+ * EvPresent Model
  *
- * @property Item $Item
- * @property EvStage $EvStage
+ * @property EvQuest $EvQuest
  */
-class EvItemProb extends AppModel {
+class EvPresent extends AppModel {
 
 /**
  * Primary key field
  *
  * @var string
  */
-	public $primaryKey = 'ev_item_prob_id';
+	public $primaryKey = 'ev_present_id';
 
 /**
  * Validation rules
@@ -21,27 +22,7 @@ class EvItemProb extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'item_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'ev_stage_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'prob' => array(
+		'ev_quest_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -101,19 +82,46 @@ class EvItemProb extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Item' => array(
-			'className' => 'Item',
-			'foreignKey' => 'item_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'EvStage' => array(
-			'className' => 'EvStage',
-			'foreignKey' => 'ev_stage_id',
+		'EvQuest' => array(
+			'className' => 'EvQuest',
+			'foreignKey' => 'ev_quest_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
+
+    /**
+     * イベント報酬一覧取得
+     *
+     * @author imanishi 
+     * @param int イベントクエストID 
+     * @return array $list 報酬一覧
+     */
+    public function getList($evQuestId) { 
+         
+        $where = array('ev_quest_id' => $evQuestId );
+        $field = array('ev_present_id', 'kind', 'target', 'num');
+        $list  = $this->getAllFind($where, $field, 'all');
+
+        if (!empty($list)) {
+            foreach ($list as &$val) {
+                if (KIND_CARD == $val['kind']) {
+                    $card = new Card();
+                    $tmp = $card->getCardData($val['target']);
+                    $val['name'] = $tmp['card_name'];
+
+                } elseif (KIND_ITEM == $val['kind']) {
+                    $item = new Item();
+                    $tmp = $item->getData($val['target']);
+                    $val['name'] = $tmp['item_name'];
+
+                } elseif (KIND_GOLD == $val['kind']) {
+                    $val['name'] = $val['num'] . MONEY_NAME;
+
+                }
+            }
+        }
+        return $list;
+    } 
 }

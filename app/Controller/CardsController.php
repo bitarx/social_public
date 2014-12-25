@@ -38,6 +38,8 @@ class CardsController extends ApiController {
         $hasCard = $this->UserCollect->field('user_id', $where);
         
         $stageId = !empty($this->params['stage_id']) ? $this->params['stage_id'] : 0 ;
+        $evStageId = !empty($this->params['ev_stage_id']) ? $this->params['ev_stage_id'] : 0 ;
+
 
         $where  = array('card_id' => $id);
         $data = $this->Card->getAllFind($where);
@@ -50,6 +52,7 @@ class CardsController extends ApiController {
         $this->set('guideId', 1 );
         $this->set('data', $data);
         $this->set('stageId', $stageId);
+        $this->set('evStageId', $evStageId);
         $this->set('subTitle', $subTitle);
 	}
 
