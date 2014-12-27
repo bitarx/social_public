@@ -4,8 +4,6 @@
     <div class="spaceLow">
     </div>
     <div>
-        <div class="space">
-        </div>
         <div class="eventTextArea">
             <input type="image" src="<{$smarty.const.IMG_URL}>textarea_to.png" class="textAreaEvent">
             <div class="eventStr">

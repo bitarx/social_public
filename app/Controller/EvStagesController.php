@@ -422,7 +422,14 @@ class EvStagesController extends ApiController {
                 // 次のステージ
                 $nextStageId = $stageId + 1;
 
-                if ($nextStageId < EVENT_MAX_STAGE_ID) {
+                // 最終ステージ
+                $maxStageId = $this->EvStage->getLastStageId($this->event['ev_quest_id']);
+                if (empty($maxStageId)) {
+                     $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+                     $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+                }
+
+                if ( $nextStageId <= $maxStageId ) {
 
                     $field = array('state');
                     $where = array(
@@ -612,7 +619,7 @@ class EvStagesController extends ApiController {
             $page = isset($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 0;
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
-            $next = 'EvUserStages/index?' . KEY_PAGING . '='. $page;
+            $next = 'UserStages/index?' . KEY_PAGING . '='. $page. '&kind=2';
         }
         $stage = $this->EvUserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {

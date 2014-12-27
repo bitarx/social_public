@@ -187,13 +187,6 @@ define("MAX_STAGE_ID", 30 );
 // クエストアイテム出現率プラス値(%)
 define("QUEST_ITEM_EFFECT", 5 );
 
-/**
- * イベント関連
- */
-// 最大ステージID
-define("EVENT_MAX_STAGE_ID", 3 );
-
-
 
 /**
  * カード関連

@@ -144,4 +144,24 @@ class EvStage extends AppModel {
         $data = $this->getAllFind($where, $fields, $kind, $order);
         return $data;
     }
+
+    /**
+     * クエストの最後のステージIDを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return int 対象のステージID
+     */
+    public function getLastStageId($questId) {
+
+        $fields = array('ev_stage_id');
+        $order  = array();
+        $kind = 'first';
+        $where = array('ev_quest_id' => $questId);
+        $order = array('ev_stage_id DESC');
+
+        $data = $this->getAllFind($where, $fields, $kind, $order, $limit = 1);
+        if (empty($data['ev_stage_id'])) return false;
+        return $data['ev_stage_id'];
+    }
 }

@@ -24,7 +24,8 @@ var reinforce = (function() {
 
     synthProgBase: "",
     synthProgRed: "",
-    levelup: ""
+    levelup: "",
+    bigsuccess:""
   }
 
   //Shape
@@ -42,13 +43,16 @@ var reinforce = (function() {
 
     synthProgBase: "",
     synthProgRed: "",
-    levelup: ""
+    levelup: "",
+    bigsuccess: ""
   }
 
   var _exp;
 
   // 開始経験値
   var _startExp;
+
+  var _bigSFlg;
 
   //Matrix
   var _card1Matrix;
@@ -61,7 +65,7 @@ var reinforce = (function() {
   /**
   * 初期化
   */
-  function init(canvasID, fileName, startExp, exp, loadCompleteCallback, contentsCompleteCallback, divNum ) {
+  function init(canvasID, fileName, startExp, exp, loadCompleteCallback, contentsCompleteCallback, divNum, bigSFlg ) {
 
     _canvas = document.getElementById(canvasID);
 
@@ -107,14 +111,14 @@ var reinforce = (function() {
     _fileName.synthProgBase = fileName.synthProgBase;
     _fileName.synthProgRed = fileName.synthProgRed;
     _fileName.levelup = fileName.levelup;
-
+    _fileName.bigsuccess = fileName.bigsuccess;
     _contentsCompleteCallback = contentsCompleteCallback;
 
     bg.src = _fileName.bg;
 
     _exp = exp;
     _startExp = startExp;
-
+    _bigSFlg = bigSFlg;
   }
 
   /**
@@ -196,6 +200,10 @@ var reinforce = (function() {
       createjs.Tween.get( _bm.synthProgBase ).to( { scaleX: 1, scaleY: 1 }, 500, createjs.Ease.backOut );
     }, 10 );
 
+    if ( "1" == _bigSFlg ) {
+      _startBigSuccessAction( );  
+    }
+
     setTimeout( function(){
       _startLevelUPAction( update );
     }, 500 );
@@ -220,6 +228,39 @@ var reinforce = (function() {
       _contentsCompleteCallback();
     }
   }
+
+  function _startBigSuccessAction( ) {
+
+    var bigSCount = 0;
+
+    var start = function() {
+
+      var bigs = _bm.bigsuccess.clone();
+      bigs.alpha = 0;
+      bigs.y = 100;
+      _stage.addChild( bigs );
+
+      var scale1 = ( _stage.canvas.width - 120 ) / 700;//scale;
+      var scale2 = ( _stage.canvas.width - 200 ) / 700;//scale;
+
+      _bm.synthProgRed.scaleX = _startExp;
+
+      if (bigSCount <= 0) {
+        createjs.Tween.get( _bm.synthProgRed ).to({scaleX:97.8}, 500, createjs.Ease.liner)
+        .call( start );
+
+        createjs.Tween.get( _bm.cardResult ).to( { scaleX: scale1, scaleY: scale1 }, 200, createjs.Ease.sineIn ).to({ scaleX: scale2, scaleY: scale2 }, 300, createjs.Ease.sineOut);
+        createjs.Tween.get( _bm.cardResultBMBrightness ).to( { alpha: 1 }, 200, createjs.Ease.sineIn ).to({ alpha: 0 }, 300, createjs.Ease.sineInOut);
+
+        createjs.Tween.get( bigs ).to({alpha:1}, 200, createjs.Ease.sineIn)
+        .to({alpha:0}, 1000, createjs.Ease.sineOut);
+        createjs.Tween.get( bigs ).to({y: 100 - 350, scaleX: 1.5, scaleY: 1.5}, 2000, createjs.Ease.sineOut);
+
+        bigSCount++;
+      }
+    }
+    start();
+  };
 
   /**
   * 合成用マスク追加
@@ -419,6 +460,16 @@ var reinforce = (function() {
       _bm.levelup.x = 0; _bm.levelup.y = 0;
     }
 
+    var bigsuccess = new Image();
+    bigsuccess.onload = function() {
+      _bm.bigsuccess = new createjs.Bitmap( bigsuccess );
+      var w = _bm.bigsuccess.image.width;
+      var h = _bm.bigsuccess.image.height;
+      _bm.levelup.scaleX = _bm.bigsuccess.scaleY = 1.2;
+      _regCenter( _bm.bigsuccess, w, h );
+      _bm.bigsuccess.x = 0; _bm.bigsuccess.y = 0;
+    }
+
     var synthProgRed = new Image();
     synthProgRed.onload = function() {
       _bm.synthProgRed = new createjs.Bitmap( synthProgRed );
@@ -430,6 +481,7 @@ var reinforce = (function() {
       _bm.synthProgRed.visible = false;
       _stage.addChild( _bm.synthProgRed );
       levelup.src = _fileName.levelup;
+      bigsuccess.src = _fileName.bigsuccess;
       synthProgRed.visible = false;
     }
 

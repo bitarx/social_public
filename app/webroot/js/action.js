@@ -120,7 +120,7 @@ function dispRotResultQuest(data)
            image += '</div>';
            if (1 != data.tuto && 0 == data.has_max_flg) {
                if (data.action == 'EvStages_init') {
-                   location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?ev_stage_id=' + data.stage_id;
+                   location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?ev_stage_id=' + data.ev_stage_id;
                } else {
                    location.href = URL_PRE + BASE_URL + 'Cards/index/' + data.target + '/?stage_id=' + data.stage_id;
 

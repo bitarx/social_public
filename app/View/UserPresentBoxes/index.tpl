@@ -21,6 +21,7 @@
       <{else}>
           <div class="spaceHigh"></div>
           受け取れるプレゼントがありません。
+          <div class="spaceHigh"></div>
       <{/if}>
     </div>
 

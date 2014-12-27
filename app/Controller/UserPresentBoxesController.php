@@ -47,7 +47,6 @@ class UserPresentBoxesController extends ApiController {
             try {  
                 foreach ($list as $val) {
                     $data = $this->UserPresentBox->getDataById($this->userId , $val['user_present_box_id']);
-  $this->log($data); 
                     list($id, $hasMaxFlg) = $this->UserPresentBox->getPresent($this->userId, $data, $this->userParam);
                     if (!empty($hasMaxFlg)) break;
                 }

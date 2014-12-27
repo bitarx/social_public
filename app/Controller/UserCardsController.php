@@ -342,8 +342,8 @@ class UserCardsController extends ApiController {
         }
 
         $upExp = 0;
-        $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList, $upExp);
-
+        $bigSFlg = 0;
+        $cardData = $this->Synth->doSynthUp($userBaseCard, $targetList, $upExp, $bigSFlg);
 
         $this->UserCard->begin(); 
         try {  
@@ -386,6 +386,7 @@ class UserCardsController extends ApiController {
             'base_card' => $userBaseCard['card_id']
         ,   'up_exp'    => $upExp
         ,   'start_exp' => $startExp
+        ,   'bigs_flg'  => $bigSFlg
         );
         $params = array_merge($data, $targetData);
 
@@ -444,6 +445,7 @@ class UserCardsController extends ApiController {
         // パラメータ取得
         $baseCard = isset($this->params['base_card']) ? $this->params['base_card'] : 0;
         $upExp = isset($this->params['up_exp']) ? $this->params['up_exp'] : 0;
+        $bigSFlg = isset($this->params['bigs_flg']) ? $this->params['bigs_flg'] : 0;
         $startExp = isset($this->params['start_exp']) ? $this->params['start_exp'] : 0;
 
         $list = array();
@@ -469,14 +471,15 @@ class UserCardsController extends ApiController {
         $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $cardInfo['card_id'] . $add;
 
         $endExp = $upExp + $startExp;
-
+/*
         $maxExp = $cardInfo['card_level'] * 100;
 
         // レベルアップ演出回数を抑える
         if ($maxExp < $endExp) {
             $endExp = $maxExp;
         }
-
+*/
+        $this->set('bigSFlg', $bigSFlg);
         $this->set('baseCard', $baseCard);
         $this->set('sacrificeList', $sacrificeList);
         $this->set('startExp', $startExp);

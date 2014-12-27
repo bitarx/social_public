@@ -204,6 +204,7 @@
                 <div class="strSelectCardCheckBox">
                     選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
                 </div>
+                <div class="spaceLow"></div>
             <{/if}> 
         <{/if}>
 

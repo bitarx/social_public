@@ -42,7 +42,8 @@
             glowline: "<{$smarty.const.BASE_URL}>img/glowline.png",
             synthProgBase: "<{$smarty.const.BASE_URL}>img/synth_prog_base.png",
             synthProgRed: "<{$smarty.const.BASE_URL}>img/synth_prog_red.png",
-            levelup: "<{$smarty.const.BASE_URL}>img/levelup.png"
+            levelup: "<{$smarty.const.BASE_URL}>img/levelup.png",
+            bigsuccess: "<{$smarty.const.BASE_URL}>img/bigsuccess.png"
           },
           <{$startExp}>,
           <{$endExp}>,

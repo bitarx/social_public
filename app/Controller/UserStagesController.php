@@ -15,7 +15,7 @@ class UserStagesController extends ApiController {
      */
 	public $components = array('Common');
 
-	public $uses = array('UserStage', 'Quest', 'Enemy');
+	public $uses = array('UserStage', 'Quest', 'Enemy', 'EvUserStage');
 
     /**
      * シーン鑑賞
@@ -25,6 +25,9 @@ class UserStagesController extends ApiController {
      */
 	public function index() {
 
+        // 1:通常 2:イベント
+        $kind = isset($this->params['kind']) ? $this->params['kind']:1;
+
         $fields = array();
         $where  = array(
             'user_id' => $this->userId
@@ -32,9 +35,17 @@ class UserStagesController extends ApiController {
         );
         $pageAll = 0;
 
-        $list = $this->UserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
+        if (1 == $kind) {
+            $list = $this->UserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
+            $targetCtl = 'Stages';
+        } else {
+            $list = $this->EvUserStage->getUserStageForScene($where, $fields, $limit=PAGE_LIMIT, $this->offset, $pageAll);
+            $targetCtl = 'EvStages';
+        }
 
         $this->set('list', $list);
+        $this->set('kind', $kind);
+        $this->set('targetCtl', $targetCtl);
         $this->set('pageAll', $pageAll);
 
 	}

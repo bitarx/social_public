@@ -30,11 +30,26 @@ class SynthComponent extends Component {
      * @param array $baseCard ベースカードのデータ
      * @param array $targetList 素材カードリスト
      * @param int   $upExp 加算される経験値
+     * @param int   $bigSFlg 大成功は1
      * @return array 強化後のカードデータ
      */
-    public function doSynthUp($baseCard, $targetList, &$upExp) {
+    public function doSynthUp($baseCard, $targetList, &$upExp, &$bigSFlg) {
+
+        $isAi  = 0;
+        $isMai = 0;
+        $isMi  = 0;
+        $count = 0;
+        $sameCnt = 0;
 
         foreach ($targetList as $key => $val) {
+
+            // 属性存在チェック
+            if ($val['attr'] == 1) $isAi = 1;
+            if ($val['attr'] == 2) $isMai = 1;
+            if ($val['attr'] == 3) $isMi = 1;
+
+            // 素材総数
+            $count++;
 
             $levelMulti = 8; 
 
@@ -56,6 +71,8 @@ class SynthComponent extends Component {
 
                     $baseCard['skill_level'] += 14;
                 }
+
+                $sameCnt++;
             }
             
             $num = ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
@@ -65,6 +82,23 @@ class SynthComponent extends Component {
             if ($ret < 2) $ret = 2;
 
             $upExp += $ret;
+        }
+
+        // 大成功判定
+        if (!empty($isAi) && !empty($isMai) && !empty($isMi)) {
+           // 素材が半分以上が同属性で全属性含んでいる 
+           $ret = ($sameCnt / $count) * 10;
+           if (5 <= $ret) {
+               // 成功条件が揃っている場合、さらに抽選
+               $int = mt_rand(1, 100);
+
+               // 70%大成功
+               if ($int <= 70) {
+                   // 大成功で経験値３倍
+                   $upExp *= 3;
+                   $bigSFlg = 1;
+               }
+           }
         }
 
         // スキルレベル最大
@@ -88,8 +122,9 @@ class SynthComponent extends Component {
             }
         }
 
-        if ( isset($levelMax) && 1 == $levelMax ) 
-            $upExp = $i * 100;
+        if ( isset($levelMax) && 1 == $levelMax ) {
+            $upExp = ($i * 100) - $baseCard['exp'];
+        }
 
         // 経験値更新
         $baseCard['exp'] = ($baseCard['exp'] + $upExp) % 100;

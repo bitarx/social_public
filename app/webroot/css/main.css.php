@@ -203,6 +203,11 @@ a:hover {
     top: 315px;
     left: 388px;
 }
+.menu_bn {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+}
 
 
 /** ガチャ */
@@ -378,9 +383,9 @@ a:hover {
 /** 区切りライン */
 .line {
     position:relative;
-    top: 20px;
-    bottom: 20px;
-    left: 20px;
+    top: 12px;
+    bottom: 10px;
+    left: 10px;
 }
 .lineGacha {
     position:relative;
@@ -586,11 +591,11 @@ input.btn_submit {
     text-align:center;
     height:35px;
     left:-80px;
-    top:60px;
+    top:45px;
 }
 .btnSortUpdate {
     position: relative;
-    top: 30px;
+    top: 15px;
     left: 450px;
     height:80px;
 }
@@ -598,7 +603,6 @@ input.btn_submit {
     position: absolute;
     top: 12px;
     left: 15px;
-
 }
 
 /**
@@ -606,8 +610,8 @@ input.btn_submit {
  */
 .eventTextArea {
     position: relative;
-    width: 600px;
-    left: 10px;
+    width: 640px;
+    left: 5px;
 }
 .eventStr {
     position: absolute;
@@ -617,7 +621,8 @@ input.btn_submit {
     color:#fff;
 }
 .textAreaEvent {
-    height:220px;
+    height:260px;
+    width:635px;
 }
 
 /**
@@ -796,7 +801,7 @@ input.btn_submit {
  */
 /** 強化進化選択 */
 .selectSynthKind {
-    top: -20px;
+    top: -30px;
     height: 30px;
     position: relative;
 }
@@ -854,7 +859,7 @@ input.btn_submit {
     color: #ffffff;
     font-weight: normal;
     font-family: ‘Lily Script One’, helveti;
-    background: rgba(158, 40, 163, 1);
+    background: rgba(255, 79, 25, 1);
     cursor: pointer;
     position: relative;
     top: 3px;
@@ -941,7 +946,6 @@ display: block;
 
 /** マイページ */
 .mypage {
-    height:980px;
 }
 .mypageEvent {
     text-align:center;
@@ -1370,6 +1374,11 @@ display: block;
     position:relative;
     width:640px;
 }
+.commonDisplayH {
+    position:relative;
+    height:980px;
+    width:640px;
+}
 .commonDisplayFree {
     position:relative;
     width:640px;
@@ -1432,6 +1441,7 @@ display: block;
 .commonName {
     position:relative; 
     top:40px; 
+
     left:80px;
     height: 35px;
 }

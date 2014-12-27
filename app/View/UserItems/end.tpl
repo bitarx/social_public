@@ -1,4 +1,4 @@
-<div class="commonDisplay">
+<div class="commonDisplayH">
     <{include file="../Elements/title.tpl"}>
 
     <div class="parent">
@@ -12,7 +12,7 @@
         <{$data.detail_after}>
     </div>
 
-    <div class="space"></div>
+    <div class="spaceHigh"></div>
 
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>Quests/index">
