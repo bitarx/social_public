@@ -78,7 +78,7 @@ class SynthComponent extends Component {
             $num = ($val['level'] * $levelMulti) + ($val['rare_level'] * 5);
 
             // ベースのレア度に応じて減算
-            $ret = $num - ($baseCard['rare_level'] * 2);
+            $ret = $num - ($baseCard['rare_level'] * 1);
             if ($ret < 2) $ret = 2;
 
             $upExp += $ret;
