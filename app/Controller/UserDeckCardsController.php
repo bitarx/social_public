@@ -92,8 +92,14 @@ class UserDeckCardsController extends ApiController {
 
         // ユーザデッキID
         $userDeckId = isset($this->params['user_deck_id']) ? $this->params['user_deck_id'] : 0;
+        if (!empty($this->request->data['user_deck_id'])) {
+            $userDeckId = $this->request->data['user_deck_id'];
+        }
         // デッキナンバー
         $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
+        if (!empty($this->request->data['deck_number'])) {
+            $deckNumber = $this->request->data['deck_number'];
+        }
         // コストオーバー
         $over = isset($this->params['over']) ? $this->params['over'] : 0;
 
