@@ -617,8 +617,9 @@ input.btn_submit {
     position: absolute;
     top:10px;
     left:5px;
-    flort:left;
+    float:left;
     color:#fff;
+    line-height: 1.5em;
 }
 .textAreaEvent {
     height:275px;
@@ -1353,6 +1354,16 @@ display: block;
     left: 20px;
     right: 20px;
     bottom: 10px;
+    height: 160px;
+    line-height: 1.5em;
+}
+.cardGachaText {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    right: 20px;
+    bottom: 10px;
+    float:left;
     height: 160px;
     line-height: 1.5em;
 }

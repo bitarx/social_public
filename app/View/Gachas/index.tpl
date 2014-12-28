@@ -6,8 +6,8 @@
     </div>
     <div class="gachaTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="150px" width="630px">
-        <div class="cardText">
-                カードのレアリティは開始地点から３段階進化します<br />
+        <div class="cardGachaText">
+                カードのレアリティは最大で３段階まで進化します<br />
                 レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
                 <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
                 <{$data['card_detail']}>
