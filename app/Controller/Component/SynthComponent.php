@@ -51,15 +51,15 @@ class SynthComponent extends Component {
             // 素材総数
             $count++;
 
-            $levelMulti = 8; 
+            $levelMulti = 9; 
 
             // 強化素材の補正
             if ($val['sozai_kind'] == 1) 
-                $val['level'] = 230;
+                $val['level'] = 205;
 
             // 同じ属性は大きくアップする
             if ($baseCard['attr'] == $val['attr']) {
-                $levelMulti = 13; 
+                $levelMulti = 14; 
 
                 $val['level'] *= 2;
 
