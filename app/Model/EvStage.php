@@ -164,4 +164,20 @@ class EvStage extends AppModel {
         if (empty($data['ev_stage_id'])) return false;
         return $data['ev_stage_id'];
     }
+
+    /**
+     * 敵IDよりステージIDを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return int 対象のステージID
+     */
+    public function getStageIdByEnemyId($enemyId) {
+
+        $where = array('EvStage.enemy_id' => $enemyId);
+
+        $evStageId = $this->field('ev_stage_id', $where);
+        if (empty($evStageId)) return false;
+        return $evStageId;
+    }
 }

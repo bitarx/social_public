@@ -1,5 +1,9 @@
 <div class="present">
     <{include file="../Elements/title.tpl"}>
+    <{if empty($list)}>
+        <div class="spaceHigh"></div>
+        <{include file="../Elements/guide.tpl"}>
+    <{/if}>
 
     <div class="space"></div>
     <{if !empty($hasMaxFlg)}>
@@ -18,10 +22,6 @@
                     一括受け取り
                 </div>
            </a>
-      <{else}>
-          <div class="spaceHigh"></div>
-          受け取れるプレゼントがありません。
-          <div class="spaceHigh"></div>
       <{/if}>
     </div>
 

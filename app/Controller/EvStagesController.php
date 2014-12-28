@@ -679,8 +679,9 @@ class EvStagesController extends ApiController {
         } 
         $this->EvUserStage->commit(); 
 
-        $ending = $this->Enemy->judgeEnding($log['target']);
-        if (!$ending) {
+        $evStageId = $this->EvStage->getStageIdByEnemyId($log['target']);
+        $lastStageId = $this->EvStage->getLastStageId($this->event['ev_quest_id']);
+        if ($evStageId < $lastStageId) {
             // エピローグではない場合は次のステージへ
             $param = array(
                          'ev_stage_id' => $nextStageId

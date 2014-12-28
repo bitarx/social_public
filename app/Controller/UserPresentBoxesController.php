@@ -31,6 +31,9 @@ class UserPresentBoxesController extends ApiController {
         $this->set('list', $list);
         $this->set('hasMaxFlg', $hasMaxFlg);
         $this->set('pageAll', $pageAll);
+
+        $this->set('mes', '受け取れるプレゼントがありません。');
+        $this->set('guideId', 2 );
 	}
 
     /**

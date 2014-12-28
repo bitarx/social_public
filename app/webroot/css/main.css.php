@@ -621,7 +621,7 @@ input.btn_submit {
     color:#fff;
 }
 .textAreaEvent {
-    height:270px;
+    height:275px;
     width:635px;
 }
 

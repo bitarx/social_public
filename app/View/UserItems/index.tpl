@@ -7,9 +7,7 @@
         <{include file="../Elements/line.tpl"}>
     <{foreachelse}>
         <div class="spaceHigh"></div>
-        <div style="position:relative;top:20px;text-align:center;height:100px;">
-        保有アイテムはありません
-        </div>
+        <{include file="../Elements/guide.tpl"}>
         <div class="spaceHigh"></div>
     <{/foreach}>
     <div class="spaceHigh">

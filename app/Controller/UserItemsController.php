@@ -32,6 +32,8 @@ class UserItemsController extends ApiController {
 
         $this->set('list',  $list);
         $this->set('nextAction',  'conf');
+        $this->set('mes', '保有アイテムはありません。');
+        $this->set('guideId', 2 );
     }
 
     /**
