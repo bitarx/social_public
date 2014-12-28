@@ -92,8 +92,8 @@ class SynthComponent extends Component {
                // 成功条件が揃っている場合、さらに抽選
                $int = mt_rand(1, 100);
 
-               // 70%大成功
-               if ($int <= 70) {
+               // 条件を満たせば75%大成功
+               if ($int <= 75) {
                    // 大成功で経験値３倍
                    $upExp *= 3;
                    $bigSFlg = 1;
