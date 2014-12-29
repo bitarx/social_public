@@ -28,10 +28,23 @@ class UserCardsController extends ApiController {
         // 並べ替え項目セット
         $this->setSort();
 
+        $addParam = '';
+
         // レア度ソート
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (!empty($this->request->data['rare_level'])) {
+            $rareLevel = $this->request->data['rare_level'];
+        }
+
         // 項目ソート
         $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
+        if (!empty($this->request->data['sort_item'])) {
+            $sortItem = $this->request->data['sort_item'];
+        }
+
+        if (!empty($rareLevel) || !empty($sortItem)) { 
+            $addParam .= '&rare_level='. $rareLevel . '&sort_item=' . $sortItem;
+        }
 
         // 1:強化 2:進化
         $kind = isset($this->params['kind']) ? $this->params['kind']:1;
@@ -74,6 +87,7 @@ class UserCardsController extends ApiController {
         $this->set('kind', $kind);
         $this->set('key', 99);
         $this->set('pageAll', $pageAll);
+        $this->set('addParam', $addParam);
 	}
 
     /**

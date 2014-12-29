@@ -105,8 +105,21 @@ class UserDeckCardsController extends ApiController {
 
         // レア度ソート
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (!empty($this->request->data['rare_level'])) {
+            $rareLevel = $this->request->data['rare_level'];
+        }
+
         // 項目ソート
         $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
+        if (!empty($this->request->data['sort_item'])) {
+            $sortItem = $this->request->data['sort_item'];
+        }
+        
+        $addParam = '';
+        if (!empty($rareLevel) || !empty($sortItem)) { 
+            $addParam .= '&rare_level='. $rareLevel . '&sort_item=' . $sortItem;
+            $addParam .= '&deck_number='. $deckNumber . '&user_deck_id=' . $userDeckId;
+        }
 
         $kind = 1;
 
@@ -135,9 +148,6 @@ class UserDeckCardsController extends ApiController {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
 
-        // 引き回しパラメータ
-        $addParam = '&user_deck_id=' . $userDeckId . '&deck_number=' . $deckNumber;
-
         // 現地点のデッキ使用コスト
         $cost = $this->UserDeckCard->getCost($this->userId);
 
@@ -150,6 +160,7 @@ class UserDeckCardsController extends ApiController {
         $this->set('deck_number', $deckNumber);
         $this->set('addParam', $addParam);
         $this->set('over', $over);
+        $this->set('addParam', $addParam);
 
         $this->set('cost', $cost);
         $this->set('costAtk', $this->userParam['cost_atk']);

@@ -597,7 +597,7 @@ input.btn_submit {
     position: relative;
     top: 15px;
     left: 450px;
-    height:80px;
+    height:90px;
 }
 .strSortUpdate {
     position: absolute;

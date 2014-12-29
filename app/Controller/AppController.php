@@ -174,7 +174,26 @@ class AppController extends Controller {
         }
 
 
+
         if ( !in_array($this->name, self::$ctlError) ) {
+
+            // メンテナンス
+            if ('com' == APP_ENV) {
+                if ('hills' == PLATFORM_ENV) {
+                    $testUser = self::$testUserHills;
+                } elseif ('waku' == PLATFORM_ENV) {
+                    $testUser = self::$testUserWaku;
+                } elseif ('niji' == PLATFORM_ENV) {
+                    $testUser = self::$testUserNiji;
+                }
+                if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
+                     $this->rd('Errors', 'index', array(
+                                  'error' => 'mente'
+                               ,  'mente_no' => self::$menteNo    
+                               ));
+                }
+            }
+
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
                 $firstAccess = 1;
             }
@@ -184,22 +203,6 @@ class AppController extends Controller {
                 $this->log(__FILE__.__LINE__.' Cookie set Error : '. $this->userId ); 
                 $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
             } else { 
-                // メンテナンス
-                if ('com' == APP_ENV) {
-                    if ('hills' == PLATFORM_ENV) {
-                        $testUser = self::$testUserHills;
-                    } elseif ('waku' == PLATFORM_ENV) {
-                        $testUser = self::$testUserWaku;
-                    } elseif ('niji' == PLATFORM_ENV) {
-                        $testUser = self::$testUserNiji;
-                    }
-                    if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
-                         $this->rd('Errors', 'index', array(
-                                      'error' => 'mente'
-                                   ,  'mente_no' => self::$menteNo    
-                                   ));
-                    }
-                }
 
                 // 正常なアクセスの場合はユーザIDをセット
                 $where = array('User.sns_user_id' => $this->ownerId); 
@@ -440,12 +443,18 @@ class AppController extends Controller {
         
         // レア度
         $rareLevelSelect = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (!empty($this->request->data['rare_level'])) {
+            $rareLevelSelect = $this->request->data['rare_level'];
+        }
 
         $this->set('rareLevel', $this->rareLevel); 
         $this->set('rareLevelSelect', $rareLevelSelect); 
 
         // 項目
         $sortItemSelect = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
+        if (!empty($this->request->data['sort_item'])) {
+            $sortItemSelect = $this->request->data['sort_item'];
+        }
 
         $this->set('sortItem', $this->sortItem); 
         $this->set('sortItemSelect', $sortItemSelect); 
