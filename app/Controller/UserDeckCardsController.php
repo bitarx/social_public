@@ -118,8 +118,8 @@ class UserDeckCardsController extends ApiController {
         $addParam = '';
         if (!empty($rareLevel) || !empty($sortItem)) { 
             $addParam .= '&rare_level='. $rareLevel . '&sort_item=' . $sortItem;
-            $addParam .= '&deck_number='. $deckNumber . '&user_deck_id=' . $userDeckId;
         }
+        $addParam .= '&deck_number='. $deckNumber . '&user_deck_id=' . $userDeckId;
 
         $kind = 1;
 
@@ -180,7 +180,6 @@ class UserDeckCardsController extends ApiController {
         $deckNumber = isset($this->params['deck_number']) ? $this->params['deck_number'] : 0;
         // カードID
         $userCardId = isset($this->params['user_card_id']) ? $this->params['user_card_id'] : 0;
-
        if (empty($userDeckId) || empty($deckNumber) || empty($userCardId)) {
            // パラメータ異常
            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 

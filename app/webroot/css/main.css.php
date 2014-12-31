@@ -240,7 +240,7 @@ a:hover {
 .gachaTextArea {
     position: relative;
     text-align:center;
-    top:10px;
+    top:0px;
 }
 
 /** カード */
