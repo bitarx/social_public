@@ -16,22 +16,46 @@ if (!defined('DOMAIN')) {
  */
 if ( false !== strpos( DOMAIN, 'hills')) {
 
-    // アプリヒルズ
+    /** アプリヒルズ */
     define("PLATFORM_ENV", 'hills');
+    $platformDomain = 'appli-hills.com';
+
+    // APIのパス
+    define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
+
+    // 文言等
+    define("SNS_FRIEND_NAME", 'フレンド');
+    define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
 } elseif ( false !== strpos( DOMAIN, 'waku')) {
 
-    // waku+
+    /** waku+ */
     define("PLATFORM_ENV", 'waku');
+    $platformDomain = 'appli-hills.com';
+
+    // APIのパス
+    define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
+
+    define("SNS_FRIEND_NAME", '友達');
+    define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
 } elseif ( false !== strpos( DOMAIN, 'niji') ) {
 
-    // にじよめ
+    /** にじよめ */
     define("PLATFORM_ENV", 'niji');
+    $platformDomain = 'appli-hills.com';
+
+    // APIのパス
+    define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
+
+    define("SNS_FRIEND_NAME", '友達');
+    define("POINT_NAME","にじコイン");             // プラットフォーム通貨の呼称
 
 } else {
     // プラットフォーム外
     define("PLATFORM_ENV", 'out');
+
+    define("SNS_FRIEND_NAME", '友達');
 }
 
 // waku+対応
@@ -63,24 +87,58 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // 本番環境
     define("APP_ENV", 'com');
 
+    define("PLATFORM_DOMAIN",  $platformDomain);
+
     // OAuth
     define("AH_IS_SANDBOX", false);
+
+    if ('hills' == PLATFORM_ENV) {
+        define("PLATFORM_APP_ID", 155);
+    } elseif ('waku' == PLATFORM_ENV) {
+
+    } else {
+
+    }
 
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
     // ステージング環境
     define("APP_ENV", 'stg');
     Configure::write('debug', 2);
 
+    define("PLATFORM_DOMAIN", 'sb.'. $platformDomain);
+
     // OAuth
     define("AH_IS_SANDBOX", true);
+
+    if ('hills' == PLATFORM_ENV) {
+        define("PLATFORM_APP_ID", 178);
+    } elseif ('waku' == PLATFORM_ENV) {
+
+    } else {
+
+    }
 } else {
     // 開発環境
     define("APP_ENV", 'dev');
     Configure::write('debug', 2);
 
+    define("PLATFORM_DOMAIN", 'sb.'. $platformDomain);
+
+    if ('hills' == PLATFORM_ENV) {
+        define("PLATFORM_APP_ID", 190);
+    } elseif ('waku' == PLATFORM_ENV) {
+
+    } else {
+
+    }
+
     // OAuth
     define("DEV_IS_SANDBOX", true);
 }
+
+
+// プラットフォームURL
+define("PLATFORM_URL", 'http://'. PLATFORM_DOMAIN);
 
 /** エラーID */
 // 不正な操作
@@ -147,7 +205,6 @@ define("KEY_PAGING", 'p');
  */
 define("SITE_TITLE", '鎮激のエロイーズ');    // サイトタイトル
 define("MONEY_NAME","ペニー");               // サイト内通貨の呼称
-define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
 // デッキにカードがない
 define("DECK_NOCARD", "デッキにカードをセットしないとボスと戦うことはできません！");
