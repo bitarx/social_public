@@ -1,10 +1,18 @@
 <div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
+    <{if !empty($plus)}>
+        <div class="space"></div>
+            <div style="text-align:center">
+                <span style="color:#00FF00">おまけは受取ボックスへ振込みました。</span>
+            </div>
+        <div class="space"></div>
+    <{/if}>
+
     <{if !empty($hasMaxFlg)}>
         <div class="space"></div>
             <div style="text-align:center">
-                <span style="color:#FFA500">受取ボックスへ振込みました。</span>
+                <span style="color:#FFA500">カードは受取ボックスへ振込みました。</span>
             </div>
         <div class="space"></div>
     <{/if}>

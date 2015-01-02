@@ -8,6 +8,9 @@
             });
         });
 </script>
+<div style="text-align:center;">
+    <span style="color:#00FF00">プレミアム&10連は体力回復薬付き！</span>
+</div>
 <div class="bx-wrapper">
     <{if $ctl != 'Gachas'}>
         <a href="<{$linkGacha}>">

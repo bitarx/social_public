@@ -185,6 +185,8 @@ define("GACHA_PREMIUM_ID", 1 );
 define("GACHA_10_ID", 2 );
 // 無課金ガチャID
 define("GACHA_MONEY_ID", 3 );
+// 強化素材ガチャID
+define("GACHA_SOZAI_ID", 4 );
 
 
 /**
