@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: text/css; charaset=utf-8');
-$url = 'http://' . $_SERVER['HTTP_HOST'];
+$url = 'http://' . $_SERVER['HTTP_HOST'] . '/img';
 
 echo "
 /**
@@ -24,10 +24,11 @@ echo "
 	margin: 0 auto 60px;
 	padding: 0;
 	*zoom: 1;
+	max-width: 600px;
 }
 
 .bx-wrapper img {
-	max-width: 100%;
+	max-width: 600px;
 	display: block;
 }
 
@@ -38,9 +39,12 @@ echo "
 	-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #000;
-	left: -5px;
-	background: #fff;
+	border:  2px solid #000;
+	left: -2px;
+	width: 600px;
+	height: 280px;
+    text-align:center;
+	background: #000;
 	
 	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
@@ -54,7 +58,7 @@ echo "
 .bx-wrapper .bx-controls-auto {
 	position: absolute;
 	bottom: -30px;
-	width: 100%;
+	width: 600px;
 }
 
 /* LOADER */
@@ -62,8 +66,8 @@ echo "
 .bx-wrapper .bx-loading {
 	min-height: 50px;
 	background: url(".$url."/bx_loader.gif) center center no-repeat #fff;
-	height: 100%;
-	width: 100%;
+	height: 600px;
+	width: 280px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -197,7 +201,7 @@ echo "
 	left: 0;
 	background: #666\9;
 	background: rgba(80, 80, 80, 0.75);
-	width: 100%;
+	width: 600px;
 }
 
 .bx-wrapper .bx-caption span {

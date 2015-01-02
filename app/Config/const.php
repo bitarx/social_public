@@ -19,19 +19,27 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     // アプリヒルズ
     define("PLATFORM_ENV", 'hills');
 
+    define("SNS_FRIEND_NAME", '友達');
+
 } elseif ( false !== strpos( DOMAIN, 'waku')) {
 
     // waku+
     define("PLATFORM_ENV", 'waku');
+
+    define("SNS_FRIEND_NAME", '友達');
 
 } elseif ( false !== strpos( DOMAIN, 'niji') ) {
 
     // にじよめ
     define("PLATFORM_ENV", 'niji');
 
+    define("SNS_FRIEND_NAME", '友達');
+
 } else {
     // プラットフォーム外
     define("PLATFORM_ENV", 'out');
+
+    define("SNS_FRIEND_NAME", '友達');
 }
 
 // waku+対応

@@ -23,4 +23,11 @@
             <span style="#FF0000">デッキにカードがセットされていません</span>
         </div>
     <{/if}>
+
+
+    <div class="spaceHigh"></div>
+
+    <div class="spaceHigh"></div>
+    <{include file="../Elements/gacha_bn.tpl"}>
+    <div class="space"></div>
 </div>

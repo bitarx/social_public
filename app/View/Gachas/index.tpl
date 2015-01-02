@@ -1,21 +1,7 @@
-<script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/jquery.bxslider.css.php" />
-<script type="text/javascript">
-        $(document).ready(function(){
-            $('.bxslider').bxSlider({
-                auto: true,
-                mode: 'fade', 
-            });
-        });
-</script>
 <div>
     <{include file="../Elements/title.tpl"}>   
 
-    <ul class="bxslider">
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad1" /></li>
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad1" /></li>
-    </ul>
+    <{include file="../Elements/gacha_bn.tpl"}>
 
     <div class="gachaTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="150px" width="630px">
@@ -31,6 +17,7 @@
     </div>
 
     <{foreach from=$list item=data key=key}>
+<{*
         <{if $data.gacha_id == $smarty.const.GACHA_10_ID}>
             <div style="position:relative;height:255px;top:-60px;text-align:center;">
                 <div class="child">
@@ -38,6 +25,7 @@
                 </div>
             </div>
         <{/if}>
+*}>
         <div class="gachaImg">
            <img src="<{$smarty.const.IMG_URL}>gacha/icon_<{$data.gacha_id}>.png" width="160px">
         </div>
