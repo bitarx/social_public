@@ -1,7 +1,23 @@
+<script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/jquery.bxslider.css.php" />
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+                auto: true,
+                mode: 'fade',
+            });
+        });
+</script>
 <div>
     <{include file="../Elements/title.tpl"}>   
 
-    <{include file="../Elements/gacha_bn.tpl"}>
+    <div class="bx-wrapper">
+        <ul class="bxslider">
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
+        </ul>
+    </div>
 
     <div class="gachaTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="150px" width="630px">

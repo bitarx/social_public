@@ -57,9 +57,9 @@
                             <{elseif $data.rare_level == 3}>
                                 <span style="color:#FF0000">R</span>
                             <{elseif $data.rare_level == 4}>
-                                <span style="color:#FF0000">HR</span>
+                                <span style="color:#FFFF00">HR</span>
                             <{elseif $data.rare_level == 5}>
-                                <span style="color:#FF0000">SR</span>
+                                <span style="color:#EE82EE">SR</span>
                             <{/if}>
             </div>
 
@@ -130,9 +130,9 @@
                             <{elseif $data.rare_level == 3}>
                                 <span style="color:#FF0000">R</span>
                             <{elseif $data.rare_level == 4}>
-                                <span style="color:#FF0000">HR</span>
+                                <span style="color:#FFFF00">HR</span>
                             <{elseif $data.rare_level == 5}>
-                                <span style="color:#FF0000">SR</span>
+                                <span style="color:#EE82EE">SR</span>
                             <{/if}>
             </div>
 
