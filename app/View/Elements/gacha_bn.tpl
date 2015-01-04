@@ -17,6 +17,7 @@
     <{/if}>
     <ul class="bxslider">
       <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" title="ad1" /></li>
+      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bnst.png" title="ad2" /></li>
       <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn2.png" title="ad2" /></li>
       <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn3.png" title="ad3" /></li>
     </ul>

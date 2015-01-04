@@ -33,15 +33,21 @@
     </div>
 
     <{foreach from=$list item=data key=key}>
-<{*
         <{if $data.gacha_id == $smarty.const.GACHA_10_ID}>
+            <div class="bx-wrapper">
+                <ul class="bxslider">
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" title="ad1" /></li>
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn2.png" title="ad2" /></li>
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn3.png" title="ad3" /></li>
+                </ul>
+            </div>
+        <{elseif $data.gacha_id == $smarty.const.GACHA_SOZAI_ID}>
             <div style="position:relative;height:255px;top:-60px;text-align:center;">
                 <div class="child">
-                    <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" width="85%">
+                    <img src="<{$smarty.const.IMG_URL}>banner/gacha_bnst.png" width="85%">
                 </div>
             </div>
         <{/if}>
-*}>
         <div class="gachaImg">
            <img src="<{$smarty.const.IMG_URL}>gacha/icon_<{$data.gacha_id}>.png" width="160px">
         </div>
