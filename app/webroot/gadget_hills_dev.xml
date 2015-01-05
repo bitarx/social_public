@@ -4,4 +4,5 @@
       <Require feature="opensocial-0.9" />
     </ModulePrefs>
     <Content view="touch" type="url" href="http://hills.devsocial.red/index.php/Tutorials/tutorial_1" />
+    <Link rel="event.addapp" type="url" href="http://hills.devsocial.red/index.php/FriendInvites/callback" />
   </Module>

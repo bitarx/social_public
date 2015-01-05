@@ -36,15 +36,12 @@
     </div>
     <{include file="../Elements/status.tpl"}>
 
-    <{if !empty($event)}>
-        <div style="position:relative;left:20px;">
-             <img src="<{$smarty.const.IMG_URL}>line.png">
-        </div>
-        <{include file="../Elements/event.tpl"}>
-    <{/if}>
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>
+
+    <{include file="../Elements/friend_invite.tpl"}>
+
     <div style="position:relative;height:285px;top:-60px;text-align:center;">
         <a href="<{$linkGacha}>">
         <div class="child">
@@ -52,5 +49,12 @@
         </div>
         </a>
     </div>
+    <{if !empty($event)}>
+        <div class="spaceLow"></div>
+        <div style="position:relative;left:20px;">
+             <img src="<{$smarty.const.IMG_URL}>line.png">
+        </div>
+        <{include file="../Elements/event.tpl"}>
+    <{/if}>
     <div class="spaceLow"></div>
 </div>

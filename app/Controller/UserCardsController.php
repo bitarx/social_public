@@ -8,6 +8,8 @@ App::uses('ApiController', 'Controller');
  */
 class UserCardsController extends ApiController {
 
+    public static $invitePoint3Text = '招待特典【初めての進化合成】';
+
     /**
      * Components
      *
@@ -15,7 +17,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup', 'UserEvolLog');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup', 'UserEvolLog', 'FriendInvite', 'FriendInvitePresent');
 
     /**
      * カード一覧
@@ -225,6 +227,15 @@ class UserCardsController extends ApiController {
             // 進化後のカードデータ取得
             $cardData = $this->Card->getCardData($afterCardId);
 
+            $firstFlg = false;
+
+            // 進化合成が初めてか確認
+            $where = array('user_id' => $this->userId);
+            $isEvol = $this->UserEvolLog->field('id', $where);
+            if (empty($isEvol)) {
+                $firstFlg = true;
+            }
+
             $this->UserCard->begin(); 
             try {  
                 $values = array(
@@ -283,6 +294,51 @@ class UserCardsController extends ApiController {
                ,   'after_card_id'  => $afterCardId
                );
                $this->UserEvolLog->save($value);
+
+               
+               // 進化合成が初めてであれば招待インセンティブ対象
+               if ($firstFlg) {
+
+                   // 招待されたユーザー確認
+                   $where = array(
+                        'invite_sns_user_id' => $this->ownerId 
+                    ,   'callback_flg' => 1 
+                    ,   'point3_flg' => 0 
+                   );
+                   $inviteUserId = $this->FriendInvite->field('user_id', $where);
+
+                   // 招待されたユーザーであればインセンティブ振込み
+                   if (!empty($inviteUserId)) {
+                        $pList = $this->FriendInvitePresent->getList($point = 3);
+                        if (empty($pList)) {
+                            $this->log(__FILE__.__LINE__. ' Insentive Error In Point3 : ownerId : '. $this->ownerId);
+                        } else {
+                            $mes = self::$invitePoint3Text;
+                            $present = array();
+                            $presentInvite = array();
+                            foreach ($pList as $val) {
+                                $present[] = array($this->userId, $val['kind'], $val['target'], $val['num'], $mes);
+                                $presentInvite[] = array($inviteUserId, $val['kind'], $val['target'], $val['num'], $mes);
+                            }
+                            // 招待した人へ振込み
+                            $this->UserPresentBox->registPBox($present);
+
+                            // 招待された人へ振込み
+                            $this->UserPresentBox->registPBox($presentInvite);
+
+                            // フラグ更新
+                            $values = array(
+                                'point3_flg' => 1
+                            ,   'FriendInvite.modified' => NOW_DATE_DB    
+                            );
+                            $where = array(
+                                'FriendInvite.user_id' => $inviteUserId 
+                            ,   'invite_sns_user_id'   => $this->ownerId 
+                            );
+                            $this->FriendInvite->updateAll($values, $where);
+                       }
+                   }
+               }
             
             } catch (AppException $e) { 
                 $this->UserCard->rollback(); 
