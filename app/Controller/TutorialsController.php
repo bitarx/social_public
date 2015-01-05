@@ -8,6 +8,8 @@ App::uses('ApiController', 'Controller');
  */
 class TutorialsController extends ApiController {
 
+    public static $invitePoint2Text = '招待特典【チュートリアル突破】';
+
     /**
      * Components
      *
@@ -17,7 +19,8 @@ class TutorialsController extends ApiController {
 
     public $uses = array('User', 'SnsUser','UserTutorial', 'Tutorial', 'Card', 'UserCard'
                         , 'UserParam','UserDeck', 'UserDeckCard', 'Items', 'UserItem'
-                        , 'UserPresentBox', 'UserTutorialQuestcnt', 'UserBaseCard', 'UserCollect');
+                        , 'UserPresentBox', 'UserTutorialQuestcnt', 'UserBaseCard', 'UserCollect'
+                        , 'FriendInvite', 'FriendInvitePresent');
 
     public $row  = array();
 
@@ -1080,6 +1083,14 @@ class TutorialsController extends ApiController {
 
         $this->_routeTutorial();
 
+        // 招待ユーザー確認
+        $where = array(
+            'invite_sns_user_id' => $this->ownerId 
+        ,   'callback_flg' => 1 
+        ,   'point2_flg' => 0 
+        );
+        $inviteUserId = $this->FriendInvite->field('user_id', $where);
+
         $current = str_replace(self::$actionPref, '', $this->action);
 
         $this->User->begin();
@@ -1091,6 +1102,38 @@ class TutorialsController extends ApiController {
             $ret = $this->UserTutorial->save($values);
             if (!$ret) {
                 throw new AppException('UserTutorial save failed :' . $this->name . '/' . $this->action);
+            }
+
+            // 招待されたユーザーであればインセンティブ振込み
+            if (!empty($inviteUserId)) {
+                $pList = $this->FriendInvitePresent->getList($point = 2);
+                if (empty($pList)) {
+                    $this->log(__FILE__.__LINE__. ' Insentive Error In Point2 : ownerId : '. $this->ownerId);
+                } else {
+                    $mes = self::$invitePoint2Text;
+                    $present = array();
+                    $presentInvite = array();
+                    foreach ($pList as $val) {
+                        $present[] = array($this->userId, $val['kind'], $val['target'], $val['num'], $mes);
+                        $presentInvite[] = array($inviteUserId, $val['kind'], $val['target'], $val['num'], $mes);
+                    }
+                    // 招待した人へ振込み
+                    $this->UserPresentBox->registPBox($present);
+
+                    // 招待された人へ振込み
+                    $this->UserPresentBox->registPBox($presentInvite);
+
+                    // フラグ更新
+                    $values = array(
+                        'point2_flg' => 1
+                    ,   'FriendInvite.modified' => NOW_DATE_DB    
+                    );
+                    $where = array(
+                        'FriendInvite.user_id'            => $inviteUserId 
+                    ,   'invite_sns_user_id' => $this->ownerId 
+                    );
+                    $this->FriendInvite->updateAll($values, $where);
+                }
             }
 
         } catch (AppException $e) {

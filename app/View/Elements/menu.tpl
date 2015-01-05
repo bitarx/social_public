@@ -49,10 +49,11 @@
             <a href="<{$linkCollect}> "><img src="<{$smarty.const.BASE_URL}>img/icon_collect.png" ></a> 
         </div>
 
-        <{if !empty($event)}>
             <div class="menu_bn">
-                <{include file="../Elements/event.tpl"}>
+                <{if !empty($event)}>
+                    <{include file="../Elements/event.tpl"}>
+                <{/if}>
+                <{include file="../Elements/friend_invite.tpl"}>
             </div>
-        <{/if}>
     </div>
 </div>

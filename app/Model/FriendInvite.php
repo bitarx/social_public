@@ -51,6 +51,16 @@ class FriendInvite extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'callback_flg' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 		'point2_flg' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
@@ -87,13 +97,11 @@ class FriendInvite extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
-		'InviteSnsUser' => array(
-			'className' => 'InviteSnsUser',
-			'foreignKey' => 'invite_sns_user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
 		)
 	);
+
+    public function registFriendInvite($values) {
+        $fields = array('user_id', 'invite_sns_user_id');
+        return $this->insertBulk( $fields, $values);
+    }
 }

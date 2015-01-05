@@ -56,13 +56,14 @@ class FriendInvitesController extends ApiController {
         }
 
         $tmp = explode(",", $inviteMember);
+$this->log($tmp); 
+$this->log($this->userId); 
         $mList = array();
         if (is_array($tmp)) {
             $mList = $tmp;
         } else {
             $mList[] = $tmp;
         }
-
         $pList = $this->FriendInvitePresent->getList($point = 1);    
         $present = array();
         $message = SNS_FRIEND_NAME . self::$inviteSendText;
@@ -78,21 +79,35 @@ class FriendInvitesController extends ApiController {
 
         $this->FriendInvite->begin(); 
         try {
+            $values = array();
             foreach ($mList as $val) {
-                $values = array(
-                    'user_id'  => $this->userId  
-                ,   'invite_sns_user_id ' => $val
+                $values[] = array(
+                    $this->userId  
+                ,   $val
                 );
-                $this->FriendInvite->save($values);    
+                $this->UserPresentBox->registPBox($present);    
+            }
+            $this->FriendInvite->registFriendInvite($values);    
 
+            foreach ($mList as $val) {
+
+                // フラグ更新
+                $value = array('point1_flg' => 1);
+                $where = array(
+                    'FriendInvite.user_id'            => $this->userId 
+                ,   'invite_sns_user_id' => $val 
+                ,   'FriendInvite.modified' => NOW_DATE_DB
+                );
+                $this->FriendInvite->updateAll($value, $where);
             }
 
-            $this->UserPresentBox->registPBox($present);    
+
         } catch (AppException $e) { 
             $this->FriendInvite->rollback(); 
             $this->log($e->errmes);
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
+
         $this->FriendInvite->commit(); 
 
         $params = array('invite_membe', $inviteMember);
@@ -104,6 +119,47 @@ class FriendInvitesController extends ApiController {
      */
     public function end () {
 
+    }
+
+    /**
+     * 招待通知を受け取る
+     */
+    public function callback () {
+
+        $this->autoRender = false;   // 自動描画をさせない
+$this->log($this->params); 
+$this->log($this->request->data); 
+        if (empty($this->params['invite_user_id']) || empty($this->params['opensocial_owner_id'])) {
+            $this->log(__FILE__.__LINE__.' Param Invalid : ' . $this->userId);
+            die;
+        }
+
+        // 招待した人のuserId取得
+        $where = array('User.sns_user_id' => $this->params['invite_user_id']);
+        $userId = $this->User->field('user_id', $where);
+       
+        $this->FriendInvite->begin(); 
+        try {
+
+                // フラグ更新
+                $values = array(
+                    'callback_flg' => 1
+                ,   'FriendInvite.modified' => NOW_DATE_DB 
+                );
+                $where = array(
+                    'FriendInvite.user_id'  => $userId
+                ,   'invite_sns_user_id'    => $this->params['opensocial_owner_id'] 
+                );
+                $this->FriendInvite->updateAll($values, $where);
+
+
+        } catch (AppException $e) { 
+            $this->FriendInvite->rollback(); 
+            $this->log($e->errmes);
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+        } 
+
+        $this->FriendInvite->commit(); 
     }
 
 

@@ -215,7 +215,7 @@ var scenario = (function() {
       _textArea.innerHTML = currentText;
       _count++;
       if( _count >= len ) {
-        _textArea.innerHTML += '<div class="nextSign">▼</div>';
+        _textArea.innerHTML += '<div id="play" class="nextSign">▼</div>';
         clearInterval( _intervalID )
         _count = 0;
       }
@@ -284,7 +284,6 @@ var scenario = (function() {
       var data = selectionData[ i ];
       var elm = document.createElement('li');
       elm.innerHTML = "<p>" + data.label + "</p>";
-console.log(); 
       elm.dataset.selectionID = data.selectionID;
       elm.dataset.eventsID = data.eventsID;
       _selectionDataList[ data.eventsID ] = data.eventsData;

@@ -952,6 +952,11 @@ display: block;
     top:12px;
     height:230px;
 }
+.mypageInvite {
+    text-align:center;
+    top:12px;
+    height:120px;
+}
 
 /** マイページデッキ */
 .deckCard1 {
@@ -1514,6 +1519,12 @@ input[type=checkbox] {
     border-width: 1px;
     padding: 10px 10px 10px 10px;
     background-color: #7B68EE;
+}
+
+.btn_play{
+    position: absolute;
+    top: 450px;
+    left: 400px;
 }
 ";
 ?>

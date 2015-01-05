@@ -4,7 +4,7 @@ $url = 'http://' . $_SERVER['HTTP_HOST'];
 
 echo "
 html, body {
-  height: 960px;
+  height: 510px;
   background-color:#000;
 }
 html, body {
@@ -27,13 +27,14 @@ li {
   overflow: hidden;
   margin: auto;
   width: 320px;
-  height: 480px;
+  height: 520px;
   font-size: 16px;
   color: #FFF;
 }
 #nameArea {
   color: #000;
   margin: 0px;
+//  background-image: url('".$url."/img/btn_play.gif' );
   background-repeat: no-repeat;
   background-size: 150px 24px;
   position: absolute;
@@ -41,6 +42,17 @@ li {
   left: 10px;
   width: 150px;
   height: 24px;
+  padding: 0px 10px;
+  pointer-events: none;
+}
+.play {
+  position:relative;
+  color: #000;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: 150px 24px;
+  width: 150px;
+  height: 150px;
   padding: 0px 10px;
   pointer-events: none;
 }

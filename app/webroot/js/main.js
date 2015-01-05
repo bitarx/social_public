@@ -6,7 +6,8 @@ $(function(){
     $("#loading").hide();
 
     $("#appReq").on('click ' , appRequest);
-//    document.getElementsById("appReq").addEventListener('touchstart', appRequest);
+
+    $(document).on('click ' , '#play', playVoice);
 
 });
 
@@ -165,3 +166,22 @@ var isJSON = function(arg) {
         setTimeout('countDown("' + dateStr + '")', 1000);
   }
 
+/**
+ * Voiceを再生する
+ */
+function playVoice(e) {
+
+    $(document).off("click");
+
+    var fname = $(this).attr("src");
+    var audio = new Audio(fname);
+    audio.load();
+
+    audio.addEventListener('canplaythrough', function() {
+        audio.play();
+    }, false);
+
+    audio.addEventListener("ended", function() {
+        $(document).on('click ' , '#play', playVoice);
+    }, false);
+}
