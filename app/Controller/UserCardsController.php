@@ -17,7 +17,7 @@ class UserCardsController extends ApiController {
      */
 	public $components = array('Paginator', 'Synth');
 
-    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup', 'UserEvolLog', 'FriendInvite', 'FriendInvitePresent');
+    public $uses = array('UserCard', 'UserBaseCard', 'Card', 'UserDeckCard', 'UserParam', 'UserCollect', 'CardGroup', 'UserEvolLog', 'FriendInvite', 'FriendInvitePresent', 'UserPresentBox');
 
     /**
      * カード一覧
@@ -190,6 +190,7 @@ class UserCardsController extends ApiController {
      */
 	public function actEvol() {
 
+$this->log('aaa'); 
         $userCardId = $this->params['user_card_id'];
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
@@ -223,21 +224,25 @@ class UserCardsController extends ApiController {
         }
 
         $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['card_id']);
+$this->log('bbbb'); 
         if (!empty($afterCardId)) {
             // 進化後のカードデータ取得
             $cardData = $this->Card->getCardData($afterCardId);
 
+$this->log('ccc'); 
             $firstFlg = false;
 
             // 進化合成が初めてか確認
-            $where = array('user_id' => $this->userId);
+            $where = array('UserEvolLog.user_id' => $this->userId);
             $isEvol = $this->UserEvolLog->field('id', $where);
             if (empty($isEvol)) {
                 $firstFlg = true;
             }
+$this->log('ddd'); 
 
             $this->UserCard->begin(); 
             try {  
+$this->log('eee'); 
                 $values = array(
                     'user_id'     => $this->userId 
                 ,   'card_id'     => $cardData['card_id'] 
@@ -248,13 +253,14 @@ class UserCardsController extends ApiController {
                 ,   'skill_level' => $userBaseCard['skill_level']     // スキルレベルは引き継ぐ
                 );
                 $ret = $this->UserCard->save($values);
-
                 // ベースカード更新
                 $values = array(
                     'user_id'      => $this->userId  
                 ,   'user_card_id' => $ret['UserCard']['user_card_id']
                 );
                 $this->UserBaseCard->save($values);
+$this->log('fff'); 
+                // ベースカード更新
 
                 // 元カードと素材を削除
                 $where = array('UserDeckCard.user_card_id' => $userBaseCard['user_card_id']);
@@ -285,19 +291,21 @@ class UserCardsController extends ApiController {
 
                // コレクション登録
                $this->UserCollect->initCollect($this->userId, $afterCardId);
-
+$this->log(1111); 
                // 進化ログ
                $value = array(
-                   'user_id' => $this->userId
+                   'UserEvolLog.user_id' => $this->userId
                ,   'base_card_id' => $userBaseCard['card_id']
                ,   'target_card_id' => $targetData['card_id']
                ,   'after_card_id'  => $afterCardId
                );
                $this->UserEvolLog->save($value);
+$this->log(2222); 
 
                
                // 進化合成が初めてであれば招待インセンティブ対象
                if ($firstFlg) {
+$this->log(333); 
 
                    // 招待されたユーザー確認
                    $where = array(
@@ -305,37 +313,55 @@ class UserCardsController extends ApiController {
                     ,   'callback_flg' => 1 
                     ,   'point3_flg' => 0 
                    );
-                   $inviteUserId = $this->FriendInvite->field('user_id', $where);
+                   $inviteUserId = $this->FriendInvite->field('FriendInvite.user_id', $where);
+$this->log(444); 
 
                    // 招待されたユーザーであればインセンティブ振込み
                    if (!empty($inviteUserId)) {
-                        $pList = $this->FriendInvitePresent->getList($point = 3);
-                        if (empty($pList)) {
-                            $this->log(__FILE__.__LINE__. ' Insentive Error In Point3 : ownerId : '. $this->ownerId);
-                        } else {
-                            $mes = self::$invitePoint3Text;
-                            $present = array();
-                            $presentInvite = array();
-                            foreach ($pList as $val) {
-                                $present[] = array($this->userId, $val['kind'], $val['target'], $val['num'], $mes);
-                                $presentInvite[] = array($inviteUserId, $val['kind'], $val['target'], $val['num'], $mes);
-                            }
-                            // 招待した人へ振込み
-                            $this->UserPresentBox->registPBox($present);
+ $this->log('invite Point3'); 
+                        // 双方の電話番号認証を確認
+                        $self = $this->snsUtil->getTelAuth($this->ownerId);
+ $this->log($self); 
+                        $where = array(
+                            'User.user_id' => $inviteUserId
+                        );
+                        $inviteOwnerId = $this->User->field('sns_user_id', $where);
+ $this->log($inviteOwnerId); 
+                        $inviteUser = $this->snsUtil->getTelAuth($inviteOwnerId);
+ $this->log($inviteUser); 
 
-                            // 招待された人へ振込み
-                            $this->UserPresentBox->registPBox($presentInvite);
+                        // 電話番号認証が双方取れている場合は振り込む
+                        if (!empty($self['telAuthResult']) && !empty($inviteUser['telAuthResult'])) {
+ $this->log('tel Auth Ok!!'); 
+                            $pList = $this->FriendInvitePresent->getList($point = 3);
+                            if (empty($pList)) {
+                                $this->log(__FILE__.__LINE__. ' Insentive Error In Point3 : ownerId : '. $this->ownerId);
+                            } else {
+ $this->log('present start'); 
+                                $mes = self::$invitePoint3Text;
+                                $present = array();
+                                $presentInvite = array();
+                                foreach ($pList as $val) {
+                                    $present[] = array($this->userId, $val['kind'], $val['target'], $val['num'], $mes);
+                                    $presentInvite[] = array($inviteUserId, $val['kind'], $val['target'], $val['num'], $mes);
+                                }
+                                // 招待した人へ振込み
+                                $this->UserPresentBox->registPBox($present);
 
-                            // フラグ更新
-                            $values = array(
-                                'point3_flg' => 1
-                            ,   'FriendInvite.modified' => NOW_DATE_DB    
-                            );
-                            $where = array(
-                                'FriendInvite.user_id' => $inviteUserId 
-                            ,   'invite_sns_user_id'   => $this->ownerId 
-                            );
-                            $this->FriendInvite->updateAll($values, $where);
+                                // 招待された人へ振込み
+                                $this->UserPresentBox->registPBox($presentInvite);
+
+                                // フラグ更新
+                                $values = array(
+                                    'point3_flg' => 1
+                                ,   'FriendInvite.modified' => NOW_DATE_DB    
+                                );
+                                $where = array(
+                                    'FriendInvite.user_id' => $inviteUserId 
+                                ,   'invite_sns_user_id'   => $this->ownerId 
+                                );
+                                $this->FriendInvite->updateAll($values, $where);
+                           }
                        }
                    }
                }

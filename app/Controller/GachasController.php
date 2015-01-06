@@ -306,6 +306,22 @@ class GachasController extends ApiController {
                 ,   'money'   => $money 
                 );
                 $this->UserParam->save($values);
+            } else {
+                if ($gachaData['gacha_id'] == GACHA_SOZAI_ID) {
+                    $itemId = 14;
+                } else {
+                    $itemId = 6;
+                }
+                // 有料ガチャの場合はおまけを受け取りボックスへ
+                $values = array();
+                $values[] = array(
+                    $this->userId
+                ,   KIND_ITEM
+                ,   $itemId 
+                ,   1
+                ,   $gachaData['gacha_name'] . 'のおまけ'
+                );
+                $this->UserPresentBox->registPBox($values);
             }
 
             // ログ記述
@@ -525,6 +541,22 @@ class GachasController extends ApiController {
                     $this->UserPresentBox->registPBox($values);
                 }
 
+                // 有料ガチャの場合はおまけを受け取りボックスへ
+                if ($gachaData['gacha_id'] == GACHA_SOZAI_ID) {
+                    $itemId = 14;
+                } else {
+                    $itemId = 6;
+                }
+                $values = array();
+                $values[] = array(
+                    $this->userId
+                ,   KIND_ITEM
+                ,   $itemId 
+                ,   1
+                ,   $gachaData['gacha_name'] . 'のおまけ'
+                );
+                $this->UserPresentBox->registPBox($values);
+
                 // ログ記述
                 $values = array(
                     'id'       => $logList[0]['id'] 
@@ -583,6 +615,19 @@ class GachasController extends ApiController {
                     // カード所持最大の場合はプレゼントボックスへ
                     $this->UserPresentBox->registPBox($values);
                 }
+
+                // 有料ガチャの場合はおまけを受け取りボックスへ
+                $itemId = 6;
+
+                $values = array();
+                $values[] = array(
+                    $this->userId
+                ,   KIND_ITEM
+                ,   $itemId 
+                ,   10
+                ,   $gachaData['gacha_name'] . 'のおまけ'
+                );
+                $this->UserPresentBox->registPBox($values);
 
                 foreach ($logList as $val) {
                     $value = array(
@@ -645,6 +690,11 @@ class GachasController extends ApiController {
             $list[] = $data;
             if ($one) break;
         }
+        $plus = 0;
+        if (GACHA_MONEY_ID != $log[0]['gacha_id']) {
+            $plus = 1;
+        }
+        $this->set('plus', $plus);
         $this->set('list', $list);
         $this->set('hasMaxFlg', $hasMaxFlg);
     }

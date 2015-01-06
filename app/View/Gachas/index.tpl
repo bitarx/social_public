@@ -4,18 +4,20 @@
         $(document).ready(function(){
             $('.bxslider').bxSlider({
                 auto: true,
-                mode: 'fade', 
+                mode: 'fade',
             });
         });
 </script>
 <div>
     <{include file="../Elements/title.tpl"}>   
 
-    <ul class="bxslider">
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad1" /></li>
-      <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad1" /></li>
-    </ul>
+    <div class="bx-wrapper">
+        <ul class="bxslider">
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
+          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
+        </ul>
+    </div>
 
     <div class="gachaTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="150px" width="630px">
@@ -32,9 +34,17 @@
 
     <{foreach from=$list item=data key=key}>
         <{if $data.gacha_id == $smarty.const.GACHA_10_ID}>
+            <div class="bx-wrapper">
+                <ul class="bxslider">
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" title="ad1" /></li>
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn2.png" title="ad2" /></li>
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_bn3.png" title="ad3" /></li>
+                </ul>
+            </div>
+        <{elseif $data.gacha_id == $smarty.const.GACHA_SOZAI_ID}>
             <div style="position:relative;height:255px;top:-60px;text-align:center;">
                 <div class="child">
-                    <img src="<{$smarty.const.IMG_URL}>banner/gacha_bn1.png" width="85%">
+                    <img src="<{$smarty.const.IMG_URL}>banner/gacha_bnst.png" width="85%">
                 </div>
             </div>
         <{/if}>

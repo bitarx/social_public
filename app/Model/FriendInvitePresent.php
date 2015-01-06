@@ -1,5 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
+App::uses('Card', 'Model');
+App::uses('Item', 'Model');
 /**
  * FriendInvitePresent Model
  *

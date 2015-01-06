@@ -648,11 +648,9 @@ input.btn_submit {
     color: #000;
 }
 .stages {
-    height:980px;
 }
 .stageMain {
     position: relative;
-    height:880px;
 }
 .stagesEnd {
     height:1180px;
@@ -993,9 +991,9 @@ display: block;
 /** マイページステータス */
 .status {
     position: relative;
-    top: 40px;
+    top: 20px;
     left: 0px;
-    height:280px;
+    height:270px;
     color:#FFA500
 }
 .myLevel {

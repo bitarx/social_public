@@ -27,6 +27,7 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     define("SNS_FRIEND_NAME", 'フレンド');
     define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
+
 } elseif ( false !== strpos( DOMAIN, 'waku')) {
 
     /** waku+ */
@@ -38,6 +39,7 @@ if ( false !== strpos( DOMAIN, 'hills')) {
 
     define("SNS_FRIEND_NAME", '友達');
     define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
+
 
 } elseif ( false !== strpos( DOMAIN, 'niji') ) {
 
@@ -234,6 +236,8 @@ define("GACHA_PREMIUM_ID", 1 );
 define("GACHA_10_ID", 2 );
 // 無課金ガチャID
 define("GACHA_MONEY_ID", 3 );
+// 強化素材ガチャID
+define("GACHA_SOZAI_ID", 4 );
 
 
 /**

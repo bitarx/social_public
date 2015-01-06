@@ -383,7 +383,8 @@ class AppController extends Controller {
         if ('waku' == PLATFORM_ENV) {
             $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
         }
-
+$this->log($this->ownerId); 
+$this->log($this->userId); 
         // コントローラとアクション
         $this->set('ctl', $this->name ); 
         $this->set('action',  $this->action); 

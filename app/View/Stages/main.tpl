@@ -100,5 +100,10 @@ $(function () {
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">
     </div>
 
+    <div class="space"></div>
+    <{if !empty($boss)}>
+       <div class="spaceHigh"></div>
+    <{/if}>
+    <{include file="../Elements/gacha_bn.tpl"}>
 
 </div>

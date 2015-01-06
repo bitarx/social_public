@@ -1105,11 +1105,14 @@ class TutorialsController extends ApiController {
             }
 
             // 招待されたユーザーであればインセンティブ振込み
+     $this->log(111); 
             if (!empty($inviteUserId)) {
+     $this->log(222); 
                 $pList = $this->FriendInvitePresent->getList($point = 2);
                 if (empty($pList)) {
                     $this->log(__FILE__.__LINE__. ' Insentive Error In Point2 : ownerId : '. $this->ownerId);
                 } else {
+     $this->log(333); 
                     $mes = self::$invitePoint2Text;
                     $present = array();
                     $presentInvite = array();
@@ -1133,6 +1136,7 @@ class TutorialsController extends ApiController {
                     ,   'invite_sns_user_id' => $this->ownerId 
                     );
                     $this->FriendInvite->updateAll($values, $where);
+     $this->log(444); 
                 }
             }
 

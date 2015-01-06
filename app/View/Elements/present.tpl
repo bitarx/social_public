@@ -10,7 +10,7 @@
        <{/if}>
     </div>
     <div class="presentName">
-            <span style="color:#ffffff"><{$data.name}>
+            <span style="color:#ffffff"><{$data.name}><{if $smarty.const.KIND_ITEM == $data.kind}>×<{$data.num}><{/if}>
     </div>
     <div class="presentMes">
         <span style="color:#ffffff"><{$data.message}></span>
