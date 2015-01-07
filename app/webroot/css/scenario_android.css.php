@@ -4,7 +4,7 @@ $url = 'http://' . $_SERVER['HTTP_HOST'];
 
 echo "
 html, body {
-  height: 960px;
+  height: 1060px;
   background-color:#000;
 }
 html, body {
@@ -27,13 +27,14 @@ li {
   overflow: hidden;
   margin: auto;
   width: 320px;
-  height: 480px;
+  height: 500px;
   font-size: 16px;
   color: #FFF;
 }
 #nameArea {
   color: #000;
   margin: 0px;
+//  background-image: url('".$url."/img/btn_play.gif' );
   background-repeat: no-repeat;
   background-size: 150px 24px;
   position: absolute;
@@ -44,20 +45,31 @@ li {
   padding: 0px 10px;
   pointer-events: none;
 }
+.play {
+  position:relative;
+  color: #000;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: 150px 24px;
+  width: 150px;
+  height: 150px;
+  padding: 0px 10px;
+  pointer-events: none;
+}
 #textArea {
   padding: 0px;
   margin: 0px;
-  background-image: url( '".$url."/img/scene/textarea.png' );
+  background-image: url('".$url."/img/scene/textarea.png' );
   background-repeat: no-repeat;
   background-size: 300px 75px;
   position: absolute;
   top:400px;
-  bottom: 30px;
+  bottom: 20px;
   left: 10px;
   width: 300px;
-  height: 75px;
-  padding: 10px;
-  font-size: 22px;
+  height: 66px;
+  padding: 5px;
+  font-size: 12px;
   pointer-events: none;
 }
 
@@ -105,6 +117,7 @@ li {
 
 .nextSign {
     position: absolute;
+    top: 46px;
     right: 10%;
 }
 ";

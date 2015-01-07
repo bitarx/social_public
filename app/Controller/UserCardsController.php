@@ -190,7 +190,6 @@ class UserCardsController extends ApiController {
      */
 	public function actEvol() {
 
-$this->log('aaa'); 
         $userCardId = $this->params['user_card_id'];
 
         $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
@@ -224,12 +223,10 @@ $this->log('aaa');
         }
 
         $afterCardId = $this->Synth->doSynthEvol($userBaseCard['card_id'], $targetData['card_id']);
-$this->log('bbbb'); 
         if (!empty($afterCardId)) {
             // 進化後のカードデータ取得
             $cardData = $this->Card->getCardData($afterCardId);
 
-$this->log('ccc'); 
             $firstFlg = false;
 
             // 進化合成が初めてか確認
@@ -238,11 +235,9 @@ $this->log('ccc');
             if (empty($isEvol)) {
                 $firstFlg = true;
             }
-$this->log('ddd'); 
 
             $this->UserCard->begin(); 
             try {  
-$this->log('eee'); 
                 $values = array(
                     'user_id'     => $this->userId 
                 ,   'card_id'     => $cardData['card_id'] 
@@ -259,8 +254,6 @@ $this->log('eee');
                 ,   'user_card_id' => $ret['UserCard']['user_card_id']
                 );
                 $this->UserBaseCard->save($values);
-$this->log('fff'); 
-                // ベースカード更新
 
                 // 元カードと素材を削除
                 $where = array('UserDeckCard.user_card_id' => $userBaseCard['user_card_id']);
@@ -291,7 +284,7 @@ $this->log('fff');
 
                // コレクション登録
                $this->UserCollect->initCollect($this->userId, $afterCardId);
-$this->log(1111); 
+
                // 進化ログ
                $value = array(
                    'UserEvolLog.user_id' => $this->userId
@@ -300,12 +293,11 @@ $this->log(1111);
                ,   'after_card_id'  => $afterCardId
                );
                $this->UserEvolLog->save($value);
-$this->log(2222); 
 
                
                // 進化合成が初めてであれば招待インセンティブ対象
+/*
                if ($firstFlg) {
-$this->log(333); 
 
                    // 招待されたユーザー確認
                    $where = array(
@@ -314,25 +306,19 @@ $this->log(333);
                     ,   'point3_flg' => 0 
                    );
                    $inviteUserId = $this->FriendInvite->field('FriendInvite.user_id', $where);
-$this->log(444); 
 
                    // 招待されたユーザーであればインセンティブ振込み
                    if (!empty($inviteUserId)) {
- $this->log('invite Point3'); 
                         // 双方の電話番号認証を確認
                         $self = $this->snsUtil->getTelAuth($this->ownerId);
- $this->log($self); 
                         $where = array(
                             'User.user_id' => $inviteUserId
                         );
                         $inviteOwnerId = $this->User->field('sns_user_id', $where);
- $this->log($inviteOwnerId); 
                         $inviteUser = $this->snsUtil->getTelAuth($inviteOwnerId);
- $this->log($inviteUser); 
 
                         // 電話番号認証が双方取れている場合は振り込む
                         if (!empty($self['telAuthResult']) && !empty($inviteUser['telAuthResult'])) {
- $this->log('tel Auth Ok!!'); 
                             $pList = $this->FriendInvitePresent->getList($point = 3);
                             if (empty($pList)) {
                                 $this->log(__FILE__.__LINE__. ' Insentive Error In Point3 : ownerId : '. $this->ownerId);
@@ -365,7 +351,7 @@ $this->log(444);
                        }
                    }
                }
-            
+*/           
             } catch (AppException $e) { 
                 $this->UserCard->rollback(); 
                 $this->log($e->errmes);

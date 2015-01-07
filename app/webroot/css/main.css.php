@@ -1444,6 +1444,10 @@ display: block;
     bottom: 0; 
     left: 1px;
 }
+.textareaGd {
+    height:42px;
+    width:640px;
+}
 
 .titleLine {
     width:635px;

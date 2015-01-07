@@ -143,7 +143,7 @@ class GachasController extends ApiController {
              * 以下課金API
             ***********************************************/ 
             // アプリヒルズ側で購入が確定した際の通知先URL
-            $callbackUrl = BASE_URL . "Gachas/comp?gacha_id=". $gachaId;
+            $callbackUrl = BASE_URL . "Gachas/comp?gacha_id=". $gachaId. '&uxid=' . $this->userId;
 
             // アプリヒルズ側で購入が完了した後の戻り先URL
             if (!empty($gacha10)) {
@@ -448,14 +448,18 @@ class GachasController extends ApiController {
         $this->autoRender = false;   // 自動描画をさせない
 
         $gachaId = $this->params['gacha_id'];
+        $userId = $this->params['uxid'];
 
-        if (empty($gachaId)) {
-            // 選択がない
-            $this->log(__FILE__ . __LINE__ . ':userId;'. $this->userId);
+        if (empty($gachaId) || empty($userId)) {
+            // 不正
+            $this->log(__FILE__ . __LINE__ . ': gachaCompError');
             header("HTTP/1.1 400 NG"); 
             echo "NG";
             die;
         }
+
+        // applihillsのopensocial_owner_idは正しくない為
+        $this->userId = $userId;
 
 
         // 最新ログ取得

@@ -11,7 +11,7 @@
         <{if $carrer == $smarty.const.CARRER_IPHONE}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css.php">
         <{else}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css.php">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario_android.css.php">
         <{/if}>
     </head>
     <body>

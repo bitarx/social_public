@@ -12,6 +12,9 @@ class FriendInvitesController extends ApiController {
 
     public static $inviteSendText = 'へ招待メール送信の報酬';
 
+    public static $inviteGuideText = 'を招待し限定カードをGETしましょう！';
+    public static $inviteEndGuideText = 'へ招待メールを送りました！';
+
     /**
      * index method
      *
@@ -22,10 +25,17 @@ class FriendInvitesController extends ApiController {
         $point = 1;
         $list = $this->FriendInvitePresent->getList($point);
 
+        $point = 2;
+        $listP2 = $this->FriendInvitePresent->getList($point);
+
         $inviteText = SITE_TITLE . self::$inviteText;
+        $inviteGuideText = SNS_FRIEND_NAME . self::$inviteGuideText;
 
         $this->set('title', SNS_FRIEND_NAME . '招待');
+        $this->set('mes', $inviteGuideText );
+        $this->set('guideId', 1 );
         $this->set('list', $list);
+        $this->set('listP2', $listP2);
         $this->set('subTitle',  SNS_FRIEND_NAME . '招待報酬');
         $this->set('action',  PLATFORM_URL . PLATFORM_INVITE_PATH . PLATFORM_APP_ID );
         $this->set('body',  urlencode($inviteText) );
@@ -56,8 +66,7 @@ class FriendInvitesController extends ApiController {
         }
 
         $tmp = explode(",", $inviteMember);
-$this->log($tmp); 
-$this->log($this->userId); 
+
         $mList = array();
         if (is_array($tmp)) {
             $mList = $tmp;
@@ -119,6 +128,11 @@ $this->log($this->userId);
      */
     public function end () {
 
+        $inviteEndGuideText = SNS_FRIEND_NAME . self::$inviteEndGuideText;
+
+        $this->set('mes', $inviteEndGuideText );
+        $this->set('guideId', 2 );
+        $this->set('title', '招待完了' );
     }
 
     /**
@@ -127,8 +141,7 @@ $this->log($this->userId);
     public function callback () {
 
         $this->autoRender = false;   // 自動描画をさせない
-$this->log($this->params); 
-$this->log($this->request->data); 
+
         if (empty($this->params['invite_user_id']) || empty($this->params['opensocial_owner_id'])) {
             $this->log(__FILE__.__LINE__.' Param Invalid : ' . $this->userId);
             die;

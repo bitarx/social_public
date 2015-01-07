@@ -138,7 +138,10 @@ class UserDeckCardsController extends ApiController {
         $evolGroup = 0;
 
         // NOT IN
-        $notIn = array('user_card_id' => $userCardIds);
+        $notIn = array();
+        if (!empty($userCardIds)) {
+            $notIn = array('user_card_id' => $userCardIds);
+        }
 
         // 所有カード
         $pageAll = 0;

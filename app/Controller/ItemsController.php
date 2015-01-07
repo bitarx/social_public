@@ -52,10 +52,10 @@ class ItemsController extends ApiController {
         $data = $this->Item->getAllFind($where, $fields, 'first');
 
 
-        // アプリヒルズ側で購入が確定した際の通知先URL
-        $callbackUrl = BASE_URL . "Items/comp";
+        // 購入が確定した際の通知先URL
+        $callbackUrl = BASE_URL . "Items/comp?uxid=". $this->userId;
 
-        // アプリヒルズ側で購入が完了した後の戻り先URL
+        // 購入が完了した後の戻り先URL
         $finishPageUrl = BASE_URL . "Items/end?item_id=" . $itemId;
 
         // 購入アイテムの配列（複数のアイテム指定可）
@@ -154,6 +154,18 @@ class ItemsController extends ApiController {
     public function comp() {
 
         $this->autoRender = false;   // 自動描画をさせない
+
+        $userId = $this->params['uxid'];
+        if (empty($userId)) {
+            // 不正
+            $this->log(__FILE__ . __LINE__ . ': itemCompError');
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
+        }
+
+        // applihillsはopensocial_owner_idの付与が正しくない為
+        $this->userId = $userId;
 
         // 最新ログ取得
         $latestData = $this->PaymentLog->getLatestData($this->userId);

@@ -42,5 +42,5 @@ $(function () {
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">
     </div>
 
-
+    <div class="spaceHigh"></div>
 </div>
