@@ -40,12 +40,17 @@
         <{/foreach}>
         </div>
     </div>
-    <div class="space">
+    <div class="spaceHigh">
     </div>
     <div class="parent">
       <form action="<{$action}>" method="post">
         <input type="hidden" name="body" value="<{$body}>" />
-        <input type="hidden" name="callbackUrl" value="<{$callbackUrl}>" />
+        <{if $smarty.const.PLATFORM_ENV == 'waku'}>
+            <input type="hidden" name="subject" value="<{$subject}>" />
+            <input type="hidden" name="url" value="<{$callbackUrl}>" />
+        <{else}>
+            <input type="hidden" name="callbackUrl" value="<{$callbackUrl}>" />
+        <{/if}>
         <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="招待" name="submit">
         <div class="child">
             <{$smarty.const.SNS_FRIEND_NAME}>を招待            

@@ -143,6 +143,7 @@ class UserCardsController extends ApiController {
 
         $userCardIds = $this->Common->getParamsInKey($this->request->data, 'user_card_id_');
         if (!$userCardIds) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
             $this->rd('UserCards', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
@@ -160,8 +161,13 @@ class UserCardsController extends ApiController {
             $levelMax = 1;
         }
 
+        // 素材が存在しなければ不正
+        if (empty($targetList)) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
+        }
 
-        // 消費ゴールド
+        // 消費ペニー
         $useMoney = $this->Synth->useMoneyUp($targetList);
         $money = true;
         if ($this->userParam['money'] < $useMoney) {

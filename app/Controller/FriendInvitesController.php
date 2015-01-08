@@ -8,7 +8,7 @@ class FriendInvitesController extends ApiController {
 
     public $uses = array('SnsUser', 'User', 'FriendInvite', 'FriendInvitePresent', 'UserPresentBox');
 
-    public static $inviteText = 'を一緒にプレイしましょう';
+    public static $inviteText = 'を一緒にプレイしましょう！';
 
     public static $inviteSendText = 'へ招待メール送信の報酬';
 
@@ -31,13 +31,19 @@ class FriendInvitesController extends ApiController {
         $inviteText = SITE_TITLE . self::$inviteText;
         $inviteGuideText = SNS_FRIEND_NAME . self::$inviteGuideText;
 
+        if ('waku' == PLATFORM_ENV) {
+            $action = 'invite:friends';
+        } else {
+            $action = PLATFORM_URL . PLATFORM_INVITE_PATH . PLATFORM_APP_ID;
+        }
+
         $this->set('title', SNS_FRIEND_NAME . '招待');
         $this->set('mes', $inviteGuideText );
         $this->set('guideId', 1 );
         $this->set('list', $list);
         $this->set('listP2', $listP2);
         $this->set('subTitle',  SNS_FRIEND_NAME . '招待報酬');
-        $this->set('action',  PLATFORM_URL . PLATFORM_INVITE_PATH . PLATFORM_APP_ID );
+        $this->set('action',  $action );
         $this->set('body',  urlencode($inviteText) );
         $this->set('callbackUrl',  BASE_URL . $this->name . '/init' );
 	}
