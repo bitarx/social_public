@@ -102,6 +102,6 @@ class FriendInvite extends AppModel {
 
     public function registFriendInvite($values) {
         $fields = array('user_id', 'invite_sns_user_id');
-        return $this->insertBulk( $fields, $values);
+        return $this->insertBulk( $fields, $values, $ignore = 1);
     }
 }

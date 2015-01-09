@@ -39,7 +39,7 @@ class AppController extends Controller {
     public static $menteEnd = '8:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
-    public static $testUserHills = array(553544);
+    public static $testUserHills = array(553544, 553984, 566162);
 
     public static $testUserWaku = array(553919);
 

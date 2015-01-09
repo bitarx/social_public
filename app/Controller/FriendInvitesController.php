@@ -96,13 +96,24 @@ class FriendInvitesController extends ApiController {
         try {
             $values = array();
             foreach ($mList as $val) {
-                $values[] = array(
-                    $this->userId  
-                ,   $val
+                // 既に招待がないか確認
+                // 招待した人のuserId取得
+                $where = array(
+                    'invite_sns_user_id' => $val
+                ,   'FriendInvite.user_id' => $this->userId
                 );
-                $this->UserPresentBox->registPBox($present);    
+                $ret = $this->FriendInvite->field('user_id', $where);
+                if (empty($ret)) {
+                    $values[] = array(
+                        $this->userId  
+                    ,   $val
+                    );
+                    $this->UserPresentBox->registPBox($present);    
+                }
             }
-            $this->FriendInvite->registFriendInvite($values);    
+            if (!empty($values)) {
+                $this->FriendInvite->registFriendInvite($values);    
+            }
 
             foreach ($mList as $val) {
 
@@ -148,18 +159,17 @@ class FriendInvitesController extends ApiController {
 
         $this->autoRender = false;   // 自動描画をさせない
 
-        if (empty($this->params['invite_user_id']) || empty($this->params['opensocial_owner_id'])) {
+        if (empty($this->params['opensocial_owner_id'])) {
             $this->log(__FILE__.__LINE__.' Param Invalid : ' . $this->userId);
             die;
         }
 
         // 招待した人のuserId取得
-        $where = array('User.sns_user_id' => $this->params['invite_user_id']);
-        $userId = $this->User->field('user_id', $where);
+        $where = array('invite_sns_user_id' => $this->params['opensocial_owner_id']);
+        $userId = $this->FriendInvite->field('user_id', $where);
        
         $this->FriendInvite->begin(); 
         try {
-
                 // フラグ更新
                 $values = array(
                     'callback_flg' => 1

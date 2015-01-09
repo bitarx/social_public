@@ -203,10 +203,10 @@ a:hover {
     top: 315px;
     left: 388px;
 }
-.menu_bn {
+.bn_menu {
     position: absolute;
     top: 400px;
-    left: 0px;
+    left: 10px;
 }
 
 
