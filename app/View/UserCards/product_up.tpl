@@ -8,6 +8,9 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/reinforce_android.css.php">
         <{/if}>
+        <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+            <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <{/if}>
     </head>
     <body>
         <canvas id="mainCanvas" height="832px" width="640px"></canvas>

@@ -23,6 +23,9 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.view.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
+    <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+        <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+    <{/if}>
 
     <script type="text/javascript">
       window.onload = function() {

@@ -12,6 +12,9 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
+    <{if PLATFORM_ENV == 'niji'}>
+        <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+    <{/if}>
 
 <title><{$gameTitle}></title>
 </head>

@@ -146,11 +146,10 @@ class AppController extends Controller {
         } elseif ( 'niji' == PLATFORM_ENV ) {
             $this->snsUtil = NijiUtil::create();
         }
-
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            if ('waku' != PLATFORM_ENV || ('waku' == PLATFORM_ENV && !empty($this->params['quest_flg']))) {
+            if ('hills' == PLATFORM_ENV || ('hills' != PLATFORM_ENV && !empty($this->params['quest_flg']))) {
                 $ret =$this->snsUtil->checkSignature(); 
                 if (!$ret) {
                     // 検証に失敗した時の処理
@@ -160,13 +159,21 @@ class AppController extends Controller {
                 }
             }
 
+            if ('hills' != PLATFORM_ENV) {
+                if (empty($_COOKIE['opensocial_owner_id']) || empty($_COOKIE['opensocial_viewer_id'])) {
+                    $time = time() + (60 * 60 * 24 * 365 * 10);
+                    // 初回アクセスが正常に行われている場合はIDをCookieにセット
+                    setcookie('opensocial_owner_id', $ownerId,  $time );
+                    setcookie('opensocial_viewer_id', $viewerId, $time );
+                }
+            }
+
             $this->set('ownerId', $ownerId);
             $this->set('viewerId', $viewerId);
             $this->ownerId  = $ownerId;
             $this->viewerId = $viewerId;
         }
         if (empty($this->ownerId)) {
-
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
@@ -379,8 +386,8 @@ class AppController extends Controller {
             $this->layout = '';
         }
 
-        // waku+対応
-        if ('waku' == PLATFORM_ENV) {
+        // ajax通信時使用
+        if ('hills' != PLATFORM_ENV) {
             $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
         }
 

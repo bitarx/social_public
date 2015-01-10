@@ -50,8 +50,11 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     // APIのパス
     define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
 
-    define("SNS_FRIEND_NAME", '友達');
+    define("SNS_FRIEND_NAME", 'フレンド');
     define("POINT_NAME","にじコイン");             // プラットフォーム通貨の呼称
+
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
 
 } else {
     // プラットフォーム外
@@ -94,6 +97,9 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // OAuth
     define("AH_IS_SANDBOX", false);
 
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_URL", 'http://'. NIJI_JSLIB_DOMAIN . '/');
+
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
     } elseif ('waku' == PLATFORM_ENV) {
@@ -112,6 +118,9 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // OAuth
     define("AH_IS_SANDBOX", true);
 
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_URL", 'http://sp'. NIJI_JSLIB_DOMAIN . '/');
+
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 178);
     } elseif ('waku' == PLATFORM_ENV) {
@@ -125,6 +134,9 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     Configure::write('debug', 2);
 
     define("PLATFORM_DOMAIN", 'sb.'. $platformDomain);
+
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_URL", 'http://sp'. NIJI_JSLIB_DOMAIN . '/');
 
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 190);

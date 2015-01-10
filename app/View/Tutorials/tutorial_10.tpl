@@ -16,6 +16,9 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/tweenjs-0.5.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/reinforce.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
+    <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+        <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+    <{/if}>
 
     <script type="text/javascript">
       function back()
