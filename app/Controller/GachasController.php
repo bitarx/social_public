@@ -547,7 +547,7 @@ class GachasController extends ApiController {
 
                 // 有料ガチャの場合はおまけを受け取りボックスへ
                 if ($gachaData['gacha_id'] == GACHA_SOZAI_ID) {
-                    $itemId = 14;
+                    $itemId = 6;
                 } else {
                     $itemId = 6;
                 }
