@@ -159,13 +159,19 @@ class FriendInvitesController extends ApiController {
 
         $this->autoRender = false;   // 自動描画をさせない
 
-        if (empty($this->params['opensocial_owner_id'])) {
+        if ('waku' == PLATFORM_ENV) {
+            $idName = 'id';
+        } else {
+            $idName = 'opensocial_owner_id';
+        }
+
+        if (empty($this->params[$idName])) {
             $this->log(__FILE__.__LINE__.' Param Invalid : ' . $this->userId);
             die;
         }
 
         // 招待した人のuserId取得
-        $where = array('invite_sns_user_id' => $this->params['opensocial_owner_id']);
+        $where = array('invite_sns_user_id' => $this->params[$idName]);
         $userId = $this->FriendInvite->field('user_id', $where);
        
         $this->FriendInvite->begin(); 
@@ -177,7 +183,7 @@ class FriendInvitesController extends ApiController {
                 );
                 $where = array(
                     'FriendInvite.user_id'  => $userId
-                ,   'invite_sns_user_id'    => $this->params['opensocial_owner_id'] 
+                ,   'invite_sns_user_id'    => $this->params[$idName] 
                 );
                 $this->FriendInvite->updateAll($values, $where);
 
