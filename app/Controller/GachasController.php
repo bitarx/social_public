@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox');
+    public $uses = array('User', 'SnsUser', 'Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox');
 
     // 10連ガチャID
     public $gacha10 = array( GACHA_10_ID );
@@ -479,7 +479,11 @@ class GachasController extends ApiController {
             $appId = $this->params['opensocial_app_id'];
         }
 
-        $payment   = $this->snsUtil->getPayment($paymentId, $this->ownerId, $appId);
+
+        $where = array('user_id' => $userId);
+        $ownerId = $this->User->field('sns_user_id', $where);
+
+        $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId);
         if (empty($payment)) {
 
             // 購入処理が正常に行われていない 

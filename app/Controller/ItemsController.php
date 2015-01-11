@@ -184,7 +184,11 @@ class ItemsController extends ApiController {
             $appId = $this->params['opensocial_app_id'];
         }
 
-        $payment   = $this->snsUtil->getPayment($paymentId, $this->ownerId, $appId); 
+
+        $where = array('user_id' => $userId);
+        $ownerId = $this->User->field('sns_user_id', $where);
+
+        $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId); 
         if ( 'waku' == PLATFORM_ENV ) {
             $column = 'entry';
         } else {
