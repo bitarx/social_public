@@ -27,6 +27,9 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     define("SNS_FRIEND_NAME", 'フレンド');
     define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
+
 
 } elseif ( false !== strpos( DOMAIN, 'waku')) {
 
@@ -39,6 +42,9 @@ if ( false !== strpos( DOMAIN, 'hills')) {
 
     define("SNS_FRIEND_NAME", '友達');
     define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
+
+    // 独自JSライブラリ
+    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
 
 
 } elseif ( false !== strpos( DOMAIN, 'niji') ) {

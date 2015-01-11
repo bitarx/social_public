@@ -15,7 +15,8 @@ class ItemsController extends ApiController {
      */
 	public $components = array('Paginator', 'Common');
 
-    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup', 'PaymentLog', 'UserFirstItem');
+    public $uses = array('User', 'SnsUser', 'UserParam', 'Item', 'UserItem', 'ItemEffect', 'ItemGroup', 'PaymentLog'
+                         , 'UserFirstItem', 'UserQueryString');
 
     /**
      * index method
@@ -37,7 +38,13 @@ class ItemsController extends ApiController {
             }
         }
 
+        $queryString = "";
+        if ('niji' == PLATFORM_ENV) {
+            $queryString = $this->UserQueryString->getQueryString($this->ownerId);
+        }
+
         $this->set('list', $list);
+        $this->set('queryString', $queryString);
 	}
 
     /**
@@ -94,10 +101,10 @@ class ItemsController extends ApiController {
 
             $items[] = array(
               "itemId"      => $data['item_id'],
-              "name"        => $data['item_name'],
+              "itemName"        => $data['item_name'],
               "unitPrice"   => $data['point'],
-              "quantity"    => 1,
-              "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.png',
+              "quantity"    => "1",
+              "imageUrl"    => IMG_URL . 'item/item_' . $data['item_id'] . '.jpg',
               "description" => $data['item_detail'],
             );
 
@@ -164,6 +171,14 @@ class ItemsController extends ApiController {
             die;
         }
 
+        // キャンセル
+        if ('niji' == PLATFORM_ENV && isset($this->params['status']) && 3 <= $this->params['status']) {
+            $this->log(__FILE__ . __LINE__ . ': itemCancel');
+            header("HTTP/1.1 400 NG");
+            echo "NG";
+            die;
+        }
+
         // applihillsはopensocial_owner_idの付与が正しくない為
         $this->userId = $userId;
 
@@ -184,11 +199,16 @@ class ItemsController extends ApiController {
             $appId = $this->params['opensocial_app_id'];
         }
 
-        $payment   = $this->snsUtil->getPayment($paymentId, $this->ownerId, $appId); 
+        $where = array('user_id' => $userId);
+        $ownerId = $this->User->field('sns_user_id', $where);
+
+        $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId); 
         if ( 'waku' == PLATFORM_ENV ) {
             $column = 'entry';
-        } else {
+        } elseif ( 'hills' == PLATFORM_ENV ) {
             $column = 'paymentEntries';
+        } else {
+            $column = 'paymentItems';
         }
         $err = 0;
         foreach ($payment[$column] as $key => $val) {
@@ -309,7 +329,19 @@ class ItemsController extends ApiController {
      * @return void
      */
     public function end() {
-   
+
+        // キャンセル
+        if (!empty($this->params['paymentId'])) {
+            $where = array(
+                'payment_id' => $this->params['paymentId']
+            ,   'end_flg' => 1     
+            );
+            $ret = $this->PaymentLog->field('id', $where);
+            if (empty($ret)) {
+                $this->rd('Items', 'index');
+            }
+        }
+
         // 最新ログ取得
         $latestData = $this->PaymentLog->getLatestData($this->userId, $endFlg = 1);
         $log = json_decode($latestData['log']);

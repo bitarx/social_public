@@ -63,7 +63,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString');
 
     public $components = array('Cookie', 'Common');
 
@@ -146,6 +146,7 @@ class AppController extends Controller {
         } elseif ( 'niji' == PLATFORM_ENV ) {
             $this->snsUtil = NijiUtil::create();
         }
+
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
@@ -159,13 +160,34 @@ class AppController extends Controller {
                 }
             }
 
-            if ('hills' != PLATFORM_ENV) {
+            if ('niji' == PLATFORM_ENV) {
                 if (empty($_COOKIE['opensocial_owner_id']) || empty($_COOKIE['opensocial_viewer_id'])) {
                     $time = time() + (60 * 60 * 24 * 365 * 10);
                     // 初回アクセスが正常に行われている場合はIDをCookieにセット
                     setcookie('opensocial_owner_id', $ownerId,  $time );
                     setcookie('opensocial_viewer_id', $viewerId, $time );
                 }
+
+                // 初回に付与されてくるパラメータを保存
+                $this->UserQueryString->begin();
+                try {
+
+                    $values = array(
+                        'owner_id'      => $ownerId
+                    ,   'query_string'  => $_SERVER['QUERY_STRING']
+                    );
+                    $this->UserQueryString->save($values);
+
+                } catch (AppException $e) {
+                    $this->UserQueryString->rollback();
+
+                    $this->log($e->errmes);
+                    return $this->redirect(
+                               array('controller' => 'errors', 'action' => 'index'
+                                     , '?' => array('error' => ERROR_ID_SYSTEM )
+                           ));
+                }
+                $this->UserQueryString->commit();
             }
 
             $this->set('ownerId', $ownerId);
