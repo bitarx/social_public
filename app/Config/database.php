@@ -72,13 +72,35 @@ class DATABASE_CONFIG {
 		'encoding' => 'utf8',
 	);
 
+	public $com_waku = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'eres.xyz',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres_waku',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
+	public $com_niji = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'eres.xyz',
+		'login' => 'barx',
+		'password' => 'arx0505q',
+		'database' => 'eres_niji',
+		'prefix' => '',
+		'encoding' => 'utf8',
+	);
+
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'barx',
 		'password' => 'arx0505q',
-		'database' => 'eres',
+		'database' => '',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

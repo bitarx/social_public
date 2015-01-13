@@ -57,6 +57,7 @@
         </div>
     </div>
     <div class="spaceHigh">
+    <div class="space"></div>
     </div>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <div id="startInvite" class="parent">
