@@ -28,6 +28,12 @@ body {
     left: 15px;
     height: 50px;
 }
+.btnStartNiji {
+    position: relative;
+    top: -35px;
+    left: 15px;
+    height: 50px;
+}
 .strStart {
     position: absolute;
     top: 7px;

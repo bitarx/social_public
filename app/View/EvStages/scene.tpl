@@ -34,7 +34,7 @@
     <script type="text/javascript">
         //使用する画像リスト
         var images = [
-            { src: "<{$smarty.const.IMG_URL}>xD7ywE4p/scene_<{$data.enemy_id}>.jpg", id: "bg" },
+            { src: "<{$smarty.const.IMG_URL}><{$smarty.const.SCENE_DIR}>/scene_<{$data.enemy_id}>.jpg", id: "bg" },
         ];
 
         // キャラセリフ

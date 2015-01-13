@@ -20,6 +20,13 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            setInterval(function() {
+                var height = $(document).height() / 1.8;
+                gadgets.window.adjustHeight(height); }, 500);
+        });
+        </script>
     <{/if}>
 
 <title><{$gameTitle}></title>
@@ -85,8 +92,15 @@
             </div>
             </a>
         </div>
-    <{else}>
+    <{elseif 'hills' == $smarty.const.PLATFORM_ENV}>
         <div id="startGameButton" class="btnStart">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <div class="strStart">
+               ゲームスタート 
+            </div>
+        </div>
+    <{else}>
+        <div id="startGameButton" class="btnStartNiji">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
             <div class="strStart">
                ゲームスタート 

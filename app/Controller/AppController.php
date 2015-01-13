@@ -160,49 +160,53 @@ class AppController extends Controller {
                 }
             }
 
-            if ('niji' == PLATFORM_ENV) {
-                if (empty($_COOKIE['opensocial_owner_id']) || empty($_COOKIE['opensocial_viewer_id'])) {
+            /** WAKU+は全てのリクエストにopensocial_owner_idが付与されている為cookiesetは不要 */
+            if ('niji' == PLATFORM_ENV ) {
+                if (empty($this->params['paymentId']) && empty($this->params['gacha_id']) 
+                    && empty($this->params['item_id']) && empty($this->params['params'])) {
+
                     $time = time() + (60 * 60 * 24 * 365 * 10);
                     // 初回アクセスが正常に行われている場合はIDをCookieにセット
                     setcookie('opensocial_owner_id', $ownerId,  $time );
                     setcookie('opensocial_viewer_id', $viewerId, $time );
+                    $queryString = 'oauth_token=' . $this->params['oauth_token'] . '&oauth_token_secret=' . $this->params['oauth_token_secret'];
+
+                    // 初回に付与されてくるtokenパラメータを保存
+                    $this->UserQueryString->begin();
+                    try {
+
+                        $values = array(
+                            'owner_id'      => $ownerId
+                        ,   'query_string'  => $queryString
+                        );
+                        $this->UserQueryString->save($values);
+
+                    } catch (AppException $e) {
+                        $this->UserQueryString->rollback();
+
+                        $this->log($e->errmes);
+                        return $this->redirect(
+                                   array('controller' => 'errors', 'action' => 'index'
+                                         , '?' => array('error' => ERROR_ID_SYSTEM )
+                               ));
+                    }
+                    $this->UserQueryString->commit();
                 }
-
-                // 初回に付与されてくるパラメータを保存
-                $this->UserQueryString->begin();
-                try {
-
-                    $values = array(
-                        'owner_id'      => $ownerId
-                    ,   'query_string'  => $_SERVER['QUERY_STRING']
-                    );
-                    $this->UserQueryString->save($values);
-
-                } catch (AppException $e) {
-                    $this->UserQueryString->rollback();
-
-                    $this->log($e->errmes);
-                    return $this->redirect(
-                               array('controller' => 'errors', 'action' => 'index'
-                                     , '?' => array('error' => ERROR_ID_SYSTEM )
-                           ));
-                }
-                $this->UserQueryString->commit();
             }
 
             $this->set('ownerId', $ownerId);
             $this->set('viewerId', $viewerId);
+
             $this->ownerId  = $ownerId;
             $this->viewerId = $viewerId;
         }
+
         if (empty($this->ownerId)) {
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
             }
         }
-
-
 
         if ( !in_array($this->name, self::$ctlError) ) {
 

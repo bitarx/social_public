@@ -95,7 +95,7 @@ define("BASE_URL_PRE", URL_PRE . BASE_URL);
  * SNSAPI基本設定
  */
 if ( false !== strpos( DOMAIN, 'eres')) {
-    // 本番環境
+    /*  本番環境 */
     define("APP_ENV", 'com');
 
     define("PLATFORM_DOMAIN",  $platformDomain);
@@ -106,16 +106,20 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // 独自JSライブラリ
     define("NIJI_JSLIB_URL", 'http://'. NIJI_JSLIB_DOMAIN . '/');
 
+    // Lサイズカード保存ディレクトリ
+    define("CARD_L_DIR", '9KegdFdW' );
+    define("SCENE_DIR", 'xD7ywE4p' );
+
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
     } elseif ('waku' == PLATFORM_ENV) {
-
+        define("PLATFORM_APP_ID", 155);
     } else {
-
+        define("PLATFORM_APP_ID", 155);
     }
 
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
-    // ステージング環境
+    /* ステージング環境 */
     define("APP_ENV", 'stg');
     Configure::write('debug', 2);
 
@@ -127,15 +131,19 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // 独自JSライブラリ
     define("NIJI_JSLIB_URL", 'http://sp'. NIJI_JSLIB_DOMAIN . '/');
 
+    // Lサイズカード保存ディレクトリ
+    define("CARD_L_DIR", '9KegdFdW' );
+    define("SCENE_DIR", 'xD7ywE4p' );
+
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 178);
     } elseif ('waku' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 100388);
     } else {
-
+        define("PLATFORM_APP_ID", 100388);
     }
 } else {
-    // 開発環境
+    /* 開発環境 */
     define("APP_ENV", 'dev');
     Configure::write('debug', 2);
 
@@ -144,12 +152,16 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // 独自JSライブラリ
     define("NIJI_JSLIB_URL", 'http://sp'. NIJI_JSLIB_DOMAIN . '/');
 
+    // Lサイズカード保存ディレクトリ
+    define("CARD_L_DIR", '9KegdFdW' );
+    define("SCENE_DIR", 'xD7ywE4p' );
+
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 190);
     } elseif ('waku' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 100388);
     } else {
-
+        define("PLATFORM_APP_ID", 264);
     }
 
     // OAuth
@@ -274,3 +286,4 @@ define("QUEST_ITEM_EFFECT", 5 );
 define("SYNTH_AI_CARD_ID", 64 );
 define("SYNTH_MAI_CARD_ID", 65 );
 define("SYNTH_MI_CARD_ID", 66 );
+

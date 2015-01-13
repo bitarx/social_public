@@ -4,7 +4,7 @@
         <{if empty($tutoEnd)}>
             <img src="<{$smarty.const.IMG_URL}>tutorial/card_l_31.jpg">
         <{else}>
-            <img src="<{$smarty.const.FILEOUT_URL}>?size=l&dir=card&target=<{$data.card_id}>" width="640px">
+            <img src="<{$smarty.const.IMG_URL}><{$smarty.const.CARD_L_DIR}>/card_l_<{$data.card_id}>.jpg" width="640px">
         <{/if}>
     </div>
     <div class="cardTalkArea">

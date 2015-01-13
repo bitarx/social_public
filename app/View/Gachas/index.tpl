@@ -8,7 +8,7 @@
             });
         });
 </script>
-<div>
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>   
 
     <div class="bx-wrapper">
