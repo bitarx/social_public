@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <Module>
+    <ModulePrefs title="My Application">
+      <Require feature="opensocial-0.9" />
+    </ModulePrefs>
+    <Content view="touch" type="url" href="http://niji.eres.xyz/index.php/Tutorials/tutorial_1" />
+  </Module>

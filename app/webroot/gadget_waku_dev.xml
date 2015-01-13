@@ -2,5 +2,4 @@
 <Module>
   <ModulePrefs title="Sample Application"></ModulePrefs>
   <Content view="smartphone" type="url" href="http://waku.devsocial.red/index.php/Tutorials/tutorial_1" />
-  <Link rel="event.addapp" type="url" href="http://waku.devsocial.red/index.php/FriendInvites/callback" />
 </Module>

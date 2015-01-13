@@ -63,7 +63,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString');
 
     public $components = array('Cookie', 'Common');
 
@@ -150,7 +150,7 @@ class AppController extends Controller {
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            if ('waku' != PLATFORM_ENV || ('waku' == PLATFORM_ENV && !empty($this->params['quest_flg']))) {
+            if ('hills' == PLATFORM_ENV || ('hills' != PLATFORM_ENV && !empty($this->params['quest_flg']))) {
                 $ret =$this->snsUtil->checkSignature(); 
                 if (!$ret) {
                     // 検証に失敗した時の処理
@@ -160,20 +160,53 @@ class AppController extends Controller {
                 }
             }
 
+            /** WAKU+は全てのリクエストにopensocial_owner_idが付与されている為cookiesetは不要 */
+            if ('niji' == PLATFORM_ENV ) {
+                if (empty($this->params['paymentId']) && empty($this->params['gacha_id']) 
+                    && empty($this->params['item_id']) && empty($this->params['params'])) {
+
+                    $time = time() + (60 * 60 * 24 * 365 * 10);
+                    // 初回アクセスが正常に行われている場合はIDをCookieにセット
+                    setcookie('opensocial_owner_id', $ownerId,  $time );
+                    setcookie('opensocial_viewer_id', $viewerId, $time );
+                    $queryString = 'oauth_token=' . $this->params['oauth_token'] . '&oauth_token_secret=' . $this->params['oauth_token_secret'];
+
+                    // 初回に付与されてくるtokenパラメータを保存
+                    $this->UserQueryString->begin();
+                    try {
+
+                        $values = array(
+                            'owner_id'      => $ownerId
+                        ,   'query_string'  => $queryString
+                        );
+                        $this->UserQueryString->save($values);
+
+                    } catch (AppException $e) {
+                        $this->UserQueryString->rollback();
+
+                        $this->log($e->errmes);
+                        return $this->redirect(
+                                   array('controller' => 'errors', 'action' => 'index'
+                                         , '?' => array('error' => ERROR_ID_SYSTEM )
+                               ));
+                    }
+                    $this->UserQueryString->commit();
+                }
+            }
+
             $this->set('ownerId', $ownerId);
             $this->set('viewerId', $viewerId);
+
             $this->ownerId  = $ownerId;
             $this->viewerId = $viewerId;
         }
-        if (empty($this->ownerId)) {
 
+        if (empty($this->ownerId)) {
             if (isset($_COOKIE['opensocial_owner_id']) && isset($_COOKIE['opensocial_viewer_id'])) {
                 $this->ownerId  = $_COOKIE['opensocial_owner_id'];
                 $this->viewerId = $_COOKIE['opensocial_viewer_id'];
             }
         }
-
-
 
         if ( !in_array($this->name, self::$ctlError) ) {
 
@@ -379,8 +412,8 @@ class AppController extends Controller {
             $this->layout = '';
         }
 
-        // waku+対応
-        if ('waku' == PLATFORM_ENV) {
+        // ajax通信時使用
+        if ('hills' != PLATFORM_ENV) {
             $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
         }
 

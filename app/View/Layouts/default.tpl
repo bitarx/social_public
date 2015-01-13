@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/main.css.php" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -12,6 +12,10 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust.js"></script>
+    <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+        <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji.js"></script>
+    <{/if}>
 
 <title><{$gameTitle}></title>
 </head>

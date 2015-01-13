@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('User', 'SnsUser', 'Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox');
+    public $uses = array('User', 'SnsUser', 'Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox', 'UserQueryString');
 
     // 10連ガチャID
     public $gacha10 = array( GACHA_10_ID );
@@ -43,8 +43,14 @@ class GachasController extends ApiController {
                 }
             }
         }
+        $queryString = "";
+        if ('niji' == PLATFORM_ENV) {
+            $queryString = $this->UserQueryString->getQueryString($this->ownerId);
+        }
+
         $this->set('list', $list);
         $this->set('tNum', $tNum);
+        $this->set('queryString', $queryString);
 	}
 
     /**
@@ -162,6 +168,9 @@ class GachasController extends ApiController {
                     = BASE_URL . "Gachas/product?rare_level=". $rareLevel . "&has_max_flg=" . $hasMaxFlg;
             }
 
+            // タグ除去
+            $gachaData['gacha_detail'] = strip_tags($gachaData['gacha_detail']);
+
 
             // 購入アイテムの配列（複数のアイテム指定可）
             // アイテム名や説明文はUTF-8
@@ -194,10 +203,10 @@ class GachasController extends ApiController {
 
                 $items[] = array(
                   "itemId"      => $gachaData['gacha_id'],
-                  "name"        => $gachaData['gacha_name'],
+                  "itemName"    => $gachaData['gacha_name'],
                   "unitPrice"   => $gachaData['point'],
-                  "amount"    => 1,
-                  "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.png',
+                  "quantity"    => 1,
+                  "imageUrl"    => IMG_URL . 'gacha/icon_' . $gachaData['gacha_id'] . '.jpg',
                   "description" => $gachaData['gacha_detail'],
                 );
             }
@@ -375,6 +384,18 @@ class GachasController extends ApiController {
         // 共通レイアウトは使わない
         $this->layout = '';
 
+        // キャンセル
+        if (!empty($this->params['paymentId'])) {
+            $where = array(
+                'payment_id' => $this->params['paymentId']
+            ,   'end_flg' => 1
+            );
+            $ret = $this->PaymentLog->field('id', $where);
+            if (empty($ret)) {
+                $this->rd('Gachas', 'index');
+            }
+        }
+
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
         $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
@@ -410,6 +431,18 @@ class GachasController extends ApiController {
 
         // 共通レイアウトは使わない
         $this->layout = '';
+
+        // キャンセル
+        if (!empty($this->params['paymentId'])) {
+            $where = array(
+                'payment_id' => $this->params['paymentId']
+            ,   'end_flg' => 1
+            );
+            $ret = $this->PaymentLog->field('id', $where);
+            if (empty($ret)) {
+                $this->rd('Gachas', 'index');
+            }
+        }
 
         // パラメータ取得
         $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
@@ -453,6 +486,14 @@ class GachasController extends ApiController {
         if (empty($gachaId) || empty($userId)) {
             // 不正
             $this->log(__FILE__ . __LINE__ . ': gachaCompError');
+            header("HTTP/1.1 400 NG"); 
+            echo "NG";
+            die;
+        }
+
+        // キャンセル
+        if ('niji' == PLATFORM_ENV && isset($this->params['status']) && 3 <= $this->params['status']) {
+            $this->log(__FILE__ . __LINE__ . ': gachaCancel');
             header("HTTP/1.1 400 NG"); 
             echo "NG";
             die;
@@ -679,6 +720,18 @@ class GachasController extends ApiController {
      * @return void
      */
     public function end() {
+
+        // キャンセル
+        if (!empty($this->params['paymentId'])) {
+            $where = array(
+                'payment_id' => $this->params['paymentId']
+            ,   'end_flg' => 1     
+            );
+            $ret = $this->PaymentLog->field('id', $where);
+            if (empty($ret)) {
+                $this->rd('Gachas', 'index');
+            }
+        }
 
         $hasMaxFlg = isset($this->params['has_max_flg']) ? $this->params['has_max_flg'] : false;
         $log = $this->UserGachaLog->getGachaLogDataLatest($this->userId, $endFlg = 'no', $limit = 10);

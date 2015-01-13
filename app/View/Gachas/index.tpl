@@ -8,7 +8,7 @@
             });
         });
 </script>
-<div>
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>   
 
     <div class="bx-wrapper">
@@ -74,7 +74,7 @@
             <{if $data.gacha_id == 3 && 0 < $data.point && $haveMoney < $data.point }>
                 <{$smarty.const.MONEY_NAME}>が足りません
             <{else}>
-                <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>">
+                <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>&<{$queryString}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png" alt="ガチャる" name="submit">
                 <{if $data.gacha_id == $smarty.const.GACHA_PREMIUM_ID && 0 < $tNum}>
                     <div class="child">

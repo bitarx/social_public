@@ -72,9 +72,11 @@ class TutorialsController extends ApiController {
      * @author imanishi 
      */
 	public function tutorial_1() {
-
+$this->log('tutorial_1'); 
         if ($this->tutoEnd == 1) {
-            if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])) {
+            if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])
+               && empty($this->params['opensocial_owner_id'])) {
+$this->log($this->params); 
                 $this->rd('SnsUsers', 'index');
             }
         } else {
@@ -1087,7 +1089,6 @@ class TutorialsController extends ApiController {
         $inviteUserId = 0;
         $where = array(
             'invite_sns_user_id' => $this->ownerId 
-        ,   'callback_flg' => 1 
         ,   'point2_flg' => 0 
         );
         $inviteUserId = $this->FriendInvite->field('user_id', $where);

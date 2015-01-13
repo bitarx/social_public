@@ -18,6 +18,16 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/action.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
+    <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+        <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            setInterval(function() {
+                var height = $(document).height() / 1.8;
+                gadgets.window.adjustHeight(height); }, 500);
+        });
+        </script>
+    <{/if}>
 
 <title><{$gameTitle}></title>
 <{if $carrer == $smarty.const.CARRER_IPHONE}>
@@ -36,6 +46,7 @@
 })(jQuery);
 </script>
 <{/if}>
+<{if $smarty.const.PLATFORM_ENV == 'hills'}>
 <script type="text/javascript">
   window.addEventListener("load", function(e) {
     var target = (parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined));
@@ -49,6 +60,22 @@
     });
   });
 </script>
+<{elseif $smarty.const.PLATFORM_ENV == 'niji'}>
+<script type="text/javascript">
+  window.addEventListener("load", function(e) {
+
+    var btn = document.getElementById("startGameButton");
+    btn.addEventListener("click", function(evt) {
+
+        // トップフレームでiframe内のドメインを呼び出す指示
+        nijiyome.cookie({
+            "url": "<{$smarty.const.BASE_URL}>set_cookie_niji.php?oid=<{$ownerId}>|<{$viewerId}>",  // cookie初回書き込み用URL
+            "callback_url": "<{$smarty.const.BASE_URL}>index.php/Tutorials/tutorial_2"  // 書き込み後の戻りでiframe内に表示するURL
+        });
+    });
+  });
+</script>
+<{/if}>
 </head>
 <body>
         <div class="slider">
@@ -65,8 +92,15 @@
             </div>
             </a>
         </div>
-    <{else}>
+    <{elseif 'hills' == $smarty.const.PLATFORM_ENV}>
         <div id="startGameButton" class="btnStart">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <div class="strStart">
+               ゲームスタート 
+            </div>
+        </div>
+    <{else}>
+        <div id="startGameButton" class="btnStartNiji">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
             <div class="strStart">
                ゲームスタート 

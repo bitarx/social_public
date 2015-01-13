@@ -1,29 +1,26 @@
 <?php
 require_once __DIR__ .'/OAuth/OAuth.php' ;
 
-class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
+class NijiUtil extends OAuthSignatureMethod_HMAC_SHA1
 {
-  const API_HOST        = "app.appli-hills.com";
+  const API_HOST        = "api.nijiyome.jp";
   const CONSUMER_KEY    = "0b32fa9b34313ac6";
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
-  const PUBKEY_FILENAME = "public.crt";
 
-  const SB_API_HOST        = "sb.app.appli-hills.com";
+  const SB_API_HOST        = "spapi.nijiyome.jp";
   const SB_CONSUMER_KEY    = "0bacae904380ed27";
   const SB_CONSUMER_SECRET = "54952402feba3e88d43f96859e6b25af";
-  const SB_PUBKEY_FILENAME = "sb.public.crt";
 
-  const DEV_API_HOST        = "sb.app.appli-hills.com";
-  const DEV_CONSUMER_KEY    = "a706b39c5d02be7c";
-  const DEV_CONSUMER_SECRET = "d0612b87942bf3a1cd78944ab47294e7";
-  const DEV_PUBKEY_FILENAME = "sb.public.crt";
+  const DEV_API_HOST        = "spapi.nijiyome.jp";
+  const DEV_CONSUMER_KEY    = "9f5209192c38200ec70b4aee70fab3";
+  const DEV_CONSUMER_SECRET = "76b5597856";
 
   protected $apiHost        = "";
   protected $consumerKey    = "";
   protected $consumerSecret = "";
   protected $publicKeyDir   = "";
 
-  protected $errorlogFile =  "../tmp/logs/appli-hills_error.log";
+  protected $errorlogFile =  "../tmp/logs/niji_error.log";
 
   public static function create()
   {
@@ -50,7 +47,7 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
   public function getSelf($fields = array())
   {
     $result = $this->getPeople("@me", "@self", null, $fields);
-    return (isset($result["entry"]) && is_array($result["entry"])) ? $result["entry"] : null;
+    return (isset($result["entry"][0]) && is_array($result["entry"][0])) ? $result["entry"][0] : null;
   }
 
   public function getPerson($targetId, $fields = array())
@@ -254,28 +251,42 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
     $data = array(
       "callbackUrl"    => $callbackUrl,
       "finishPageUrl"  => $finishPageUrl,
-      "paymentEntries" => $items,
+      "paymentItems" => $items,
     );
 
     $data = json_encode($data);
 
     $request = $this->getOAuthRequest("/payment/@me/@self/@app", $this->getOwnerId(), "POST");
     $result  = $this->sendRequest($request, "201", $data, $this->requestToHeaders($request, $data));
+
     if (!$result) {
       return null;
     }
 
     $result = @json_decode($result, true);
-    return (isset($result["payment"][0])) ? $result["payment"][0] : null;
+    return (isset($result["entry"])) ? $result["entry"] : null;
   }
 
-  public function getPayment($paymentId, $ownerId = null)
+  public function getPayment($paymentId, $ownerId = null, $appId = null)
   {
     if (empty($ownerId)) {
       $ownerId = $this->getOwnerId();
     }
 
-    $request = $this->getOAuthRequest("/payment/@me/@self/@app/{$paymentId}", $ownerId, "GET");
+    if (!empty($ownerId)) {
+        $guid = $ownerId;
+    } else {
+        $guid = '@me';
+    }
+
+    // バッチタイプの場合はアプリIDをセット
+    if (!empty($appId)) {
+        $id = $appId;
+    } else {
+        $id = $this->getOwnerId();
+    }
+
+    $request = $this->getOAuthRequest("/payment/{$guid}/@self/@app/{$paymentId}", $id, "GET");
     $result  = $this->sendRequest($request, "200", $request->to_postdata());
 
     if (!$result) {
@@ -283,7 +294,7 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
     }
 
     $result = @json_decode($result, true);
-    return (isset($result["payment"][0])) ? $result["payment"][0] : null;
+    return (isset($result["entry"])) ? $result["entry"] : null;
   }
 
   public function getNgword($text)
@@ -379,7 +390,6 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
 
     $request = $this->getOAuthRequest($api, $this->getOwnerId(), "GET");
     $result  = $this->sendRequest($request, "200", $request->to_postdata());
-
     return ($result) ? @json_decode($result, true) : null;
   }
 
@@ -410,17 +420,18 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
 
   protected function getOAuthRequest($api, $requestorId = null, $method = "GET")
   {
-    $url = "http://" . $this->apiHost . "/social/rest" . $api;
+    $url = "http://" . $this->apiHost . "/rest" . $api;
 
+    $request = OAuthRequest::from_request(null,null,null);
+    $token = new OAuthToken(
+        $request->get_parameter('oauth_token'),
+        $request->get_parameter('oauth_token_secret'));
     $consumer = new OAuthConsumer($this->consumerKey, $this->consumerSecret);
-    $request = OAuthRequest::from_consumer_and_token($consumer, null, $method, $url);
-
+    $request = OAuthRequest::from_consumer_and_token($consumer, $token, $method, $url);
     if (!empty($requestorId)) {
       $request->set_parameter('xoauth_requestor_id', $requestorId);
     }
-
-    $request->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, null);
-
+    $request->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, $token);
     return $request;
   }
 
@@ -442,7 +453,6 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
     $curl = curl_init();
 
     curl_setopt($curl, CURLOPT_URL, $uri);
-
     if ($method === "POST") {
       curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
       curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
@@ -452,7 +462,6 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
 
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_HEADER, 1);
-
     if (!empty($headers)) {
       curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     }
@@ -466,7 +475,6 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
     if (preg_match("!^(HTTP/\d\.\d) (\d{3})(?: (.+))?!", $header, $match)) {
       $responseCode = $match[2];
     }
-
     if ($responseCode === $expectedCode) {
       return $body;
     } else {
@@ -490,7 +498,13 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
   public function checkSignature($method = null, $url = null, $parameters = null)
   {
     $request = OAuthRequest::from_request($method, $url, $parameters);
-    return $this->check_signature($request, null, null, $request->get_parameter("oauth_signature"));
+
+    $consumer = new OAuthConsumer($this->consumerKey, $this->consumerSecret, NULL);
+
+    $token = new OAuthToken(
+        $request->get_parameter('oauth_token'),
+        $request->get_parameter('oauth_token_secret'));
+    return $this->check_signature($request, $consumer, $token, $request->get_parameter("oauth_signature"));
   }
 
   public function getOwnerId()
@@ -513,13 +527,29 @@ class NijiUtil extends OAuthSignatureMethod_RSA_SHA1
   {
     $authHeader = $request->to_header();
 
+    $head = explode(',', $authHeader);
+    $authHeader = "";
+    $tmp = "";
+    foreach ($head as $val) {
+        if (false !== strpos($val, 'oauth_signature')) {
+            if (false === strpos($val, 'oauth_signature_method')) { 
+                $authHeader .= ',' . $val . ',' . $tmp; 
+            } else {
+                $tmp = $val;
+            }
+        } else {
+            if (false === strpos($val, 'Authorization')) {
+                $authHeader .= ',';
+            }
+            $authHeader .= $val;
+        }
+    }
     if ($requestorId = $request->get_parameter("xoauth_requestor_id")) {
       $key   = OAuthUtil::urlencode_rfc3986("xoauth_requestor_id");
       $value = OAuthUtil::urlencode_rfc3986($requestorId);
 
       $authHeader .= ',' . $key . '="' . $value . '"';
     }
-
     return array(
       $authHeader,
       'Content-Type: application/json',

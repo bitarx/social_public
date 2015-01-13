@@ -503,17 +503,17 @@ class UserCardsController extends ApiController {
 
         $add = "";
         if (!empty($this->ownerInfo)) {
-            $add = '&' . $this->ownerInfo;
+            $add = '?' . $this->ownerInfo;
         }
 
         // ベースカード
-        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $baseCard . $add;
+        $baseCard = IMG_URL . CARD_L_DIR . DS . 'card_l_' . $baseCard . '.jpg'. $add;
 
         // 素材カード
-        $target = FILEOUT_URL . '?size=l&dir=card&target=' . $target . $add;
+        $target = IMG_URL . CARD_L_DIR . DS . 'card_l_' . $target . '.jpg'. $add;
 
         // 合成後カード
-        $afterCard = FILEOUT_URL . '?size=l&dir=card&target=' . $afterCard . $add;
+        $afterCard = IMG_URL . CARD_L_DIR . DS . 'card_l_' . $afterCard . '.jpg'. $add;
 
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
@@ -554,19 +554,12 @@ class UserCardsController extends ApiController {
         $sacrificeList = json_encode($list);
         $add = "";
         if (!empty($this->ownerInfo)) {
-            $add = '&' . $this->ownerInfo;
+            $add = '?' . $this->ownerInfo;
         }
-        $baseCard = FILEOUT_URL . '?size=l&dir=card&target=' . $cardInfo['card_id'] . $add;
+        $baseCard = IMG_URL . CARD_L_DIR . DS . 'card_l_' . $cardInfo['card_id'] . '.jpg'. $add;
 
         $endExp = $upExp + $startExp;
-/*
-        $maxExp = $cardInfo['card_level'] * 100;
 
-        // レベルアップ演出回数を抑える
-        if ($maxExp < $endExp) {
-            $endExp = $maxExp;
-        }
-*/
         $this->set('bigSFlg', $bigSFlg);
         $this->set('baseCard', $baseCard);
         $this->set('sacrificeList', $sacrificeList);
