@@ -945,6 +945,8 @@ display: block;
 
 /** マイページ */
 .mypage {
+    position: relative;
+    width:640px;
 }
 .mypageEvent {
     text-align:center;

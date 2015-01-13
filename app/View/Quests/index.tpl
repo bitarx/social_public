@@ -1,5 +1,7 @@
 <div class="quest">
-    <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
+    <div style="left:-40px;">
+        <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
+    </div>
     <div class="spaceLow">
     </div>
     <{foreach from=$list item=val}> 

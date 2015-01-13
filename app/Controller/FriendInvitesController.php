@@ -36,6 +36,10 @@ class FriendInvitesController extends ApiController {
         } else {
             $action = PLATFORM_URL . PLATFORM_INVITE_PATH . PLATFORM_APP_ID;
         }
+        // 本文エンコード
+        if ('niji' != PLATFORM_ENV) {
+            $inviteText = urlencode($inviteText);
+        }
 
         $this->set('title', SNS_FRIEND_NAME . '招待');
         $this->set('mes', $inviteGuideText );
@@ -44,7 +48,7 @@ class FriendInvitesController extends ApiController {
         $this->set('listP2', $listP2);
         $this->set('subTitle',  SNS_FRIEND_NAME . '招待報酬');
         $this->set('action',  $action );
-        $this->set('body',  urlencode($inviteText) );
+        $this->set('body',  $inviteText );
         $this->set('callbackUrl',  BASE_URL . $this->name . '/init' );
 	}
 

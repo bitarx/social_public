@@ -72,9 +72,11 @@ class TutorialsController extends ApiController {
      * @author imanishi 
      */
 	public function tutorial_1() {
-
+$this->log('tutorial_1'); 
         if ($this->tutoEnd == 1) {
-            if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])) {
+            if (!empty($_COOKIE['opensocial_owner_id']) && !empty($_COOKIE['opensocial_viewer_id'])
+               && empty($this->params['opensocial_owner_id'])) {
+$this->log($this->params); 
                 $this->rd('SnsUsers', 'index');
             }
         } else {

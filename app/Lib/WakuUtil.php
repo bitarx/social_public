@@ -277,7 +277,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
         $guid = '@me';
     }
 
-    // waku+のみ、Trustedモードの場合はアプリIDをセット
+    // Trustedモードの場合はアプリIDをセット
     if (!empty($appId)) {
         $id = $appId;
     } else {

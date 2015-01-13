@@ -13,6 +13,10 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario_android.css.php">
         <{/if}>
+
+        <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+            <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <{/if}>
     </head>
     <body>
         <div id="main" class="userSelectNone">
@@ -30,7 +34,7 @@
     <script type="text/javascript">
         //使用する画像リスト
         var images = [
-            { src: "<{$smarty.const.IMG_URL}>xD7ywE4p/scene_<{$data.enemy_id}>.jpg", id: "bg" },
+            { src: "<{$smarty.const.IMG_URL}><{$smarty.const.SCENE_DIR}>/scene_<{$data.enemy_id}>.jpg", id: "bg" },
         ];
 
         // キャラセリフ

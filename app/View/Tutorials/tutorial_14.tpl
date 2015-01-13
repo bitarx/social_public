@@ -13,6 +13,9 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario_android.css.php">
         <{/if}>
+        <{if $smarty.const.PLATFORM_ENV == 'niji'}>
+            <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
+        <{/if}>
     </head>
     <body>
         <div id="main" class="userSelectNone">

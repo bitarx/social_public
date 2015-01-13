@@ -59,7 +59,7 @@
             <{/if}>
 
             <div class="parent">
-                <a href="conf/<{$data.item_id}>">
+                <a href="<{$smarty.const.BASE_URL}>Items/conf/<{$data.item_id}>?<{$queryString}>">
                     <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                     <div class="child">
                         購入する

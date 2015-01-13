@@ -8,7 +8,6 @@ $(function(){
     $("#appReq").on('click ' , appRequest);
 
     $(document).on('click ' , '#play', playVoice);
-
 });
 
 
