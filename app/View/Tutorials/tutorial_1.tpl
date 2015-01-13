@@ -3,14 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
     <meta charset="UTF-8">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <{if $carrer == $smarty.const.CARRER_IPHONE}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css.php" />
+        <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji.js"></script>
     <{else}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_android.css.php" />
+        <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji_android.js"></script>
     <{/if}>
     <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/jquery.simplyscroll.css" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.leanModal.min.js"></script>
     <script src='<{$smarty.const.BASE_URL}>js/jquery.tabs.js'></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/jquery.simplyscroll.js"></script>
@@ -20,13 +22,6 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_opening.js"></script>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
-        <script type="text/javascript">
-        $(function() {
-            setInterval(function() {
-                var height = $(document).height() / 1.8;
-                gadgets.window.adjustHeight(height); }, 500);
-        });
-        </script>
     <{/if}>
 
 <title><{$gameTitle}></title>
