@@ -25,7 +25,11 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
-        <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji.js"></script>
+        <{if $smarty.const.CARRER_IPHONE == $carrer}>
+            <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji.js"></script>
+        <{else}>
+            <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji_android_battle.js"></script>
+        <{/if}>
     <{/if}>
 
     <script type="text/javascript">

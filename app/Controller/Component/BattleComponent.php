@@ -73,6 +73,7 @@ class BattleComponent extends Component {
             // プレイヤー攻撃
             } else if ($kind = 1) {
 
+                mt_srand();
                 $target = mt_rand(0, $targetNum);
                 $targetData = $targetCards[$target]['UserCard'];
 
@@ -126,6 +127,7 @@ class BattleComponent extends Component {
      * @return int 与えたダメージ
      */
     public function calcDamage($selfData, $targetData) {
+        mt_srand();
         $multi = mt_rand(90 , 110) / 100;
         $base = (($selfData['atk'] * 2) * $multi) - ( $targetData['def'] * $multi );     
         if ($base <= 0) {

@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <{if $carrer == $smarty.const.CARRER_IPHONE}>
-        <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css.php" />
+        <{if $smarty.const.PLATFORM_ENV == 'waku'}>
+            <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_waku.css.php" />
+        <{else}>
+            <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening.css.php" />
+        <{/if}>
         <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/adjust_niji.js"></script>
     <{else}>
         <link rel="stylesheet" href="<{$smarty.const.BASE_URL}>css/opening_android.css.php" />
@@ -81,7 +85,11 @@
     <{if 'waku' == $smarty.const.PLATFORM_ENV}>
         <div class="btnStart">
             <a href="<{$smarty.const.BASE_URL}>Tutorials/tutorial_2">
-            <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <{if $carrer == $smarty.const.CARRER_IPHONE}>
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" >
+            <{else}>
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
+            <{/if}>
             <div class="strStart">
                ゲームスタート 
             </div>

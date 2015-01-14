@@ -73,6 +73,7 @@ class UserParamsController extends ApiController {
         // 攻撃側のスキル発動
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
+            mt_srand();
             $hit = mt_rand(1, 100);
             // 当選
             if ($hit <= $userCard['skill_level']) {
@@ -86,6 +87,7 @@ class UserParamsController extends ApiController {
         // 防御側のスキル発動
         foreach ($targetCards as $key => $val) {
             $userCard = $val['UserCard'];
+            mt_srand();
             $hit = mt_rand(1, 100);
             // 当選
             if ($hit <= $userCard['skill_level']) {

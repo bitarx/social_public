@@ -26,23 +26,19 @@
             <p id="nameArea" ></p>
             <p id="textArea" ></p>
             <{if $carrer == $smarty.const.CARRER_IPHONE}>
-<{*
                 <div id="play" src="<{$smarty.const.BASE_URL}>voice/enemy/enemy_<{$data.enemy_id}>.mp3">
                     <div style="text-align:center;">
                         <img src="<{$smarty.const.IMG_URL}>btn_play.png">
                     </div>
                 </div>
- *}>
             <{/if}>
         </div>
         <{if $carrer == $smarty.const.CARRER_ANDROID}>
-<{*
             <div id="play" src="<{$smarty.const.BASE_URL}>voice/enemy/enemy_<{$data.enemy_id}>.mp3">
                 <div style="text-align:center;">
                     <img src="<{$smarty.const.IMG_URL}>btn_play.png">
                 </div>
             </div>
- *}>
         <{/if}>
     </body>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>

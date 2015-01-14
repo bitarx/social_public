@@ -47,7 +47,16 @@ class CardsController extends ApiController {
 
         $subTitle = '<span style="color:#FFA500">' . $data['card_title'] . '</span>' . $data['card_name'];
 
+        // voiceチェック
+        $docRoot = $_SERVER['DOCUMENT_ROOT'];
+        $fname = 'card_' . $data['card_id']. '.mp3';
+        $voice = false;
+        $file = $docRoot . '/voice/card/'. $fname;
+        if (file_exists($file))
+            $voice = true;
+
         $this->set('hasCard', $hasCard);
+        $this->set('voice', $voice);
         $this->set('mes', self::$errMes);
         $this->set('guideId', 1 );
         $this->set('data', $data);

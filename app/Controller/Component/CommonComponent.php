@@ -29,6 +29,7 @@ class CommonComponent extends Component {
             }
         }
 
+        mt_srand();
         $hit = mt_rand(0, $sum);
         
         $data = $list[$lot[$hit]];
@@ -81,6 +82,7 @@ class CommonComponent extends Component {
         $min = $baseInt - $range;
         $max = $baseInt + $range;
 
+        mt_srand();
         $ret = mt_rand($min, $max);
         return $ret;
     }

@@ -82,6 +82,7 @@ class GachaFuncComponent extends Component {
                return 0;
         endswitch;
 
+        mt_srand();
         $lot = mt_rand(1, 100);
         $ret = $ary[$lot];
 

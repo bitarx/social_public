@@ -78,11 +78,12 @@ class UserStageEffect extends AppModel {
 
         // 効果 
         $where = array(
-                     'UserStageEffect.created > ' => $targetTime 
+                     'UserStageEffect.user_id' => $userId 
+                 ,   'UserStageEffect.created > ' => $targetTime 
                  );
+        $order = array('UserStageEffect.created DESC');
         $field = array('effect', 'created');
-        $data = $this->getAllFind($where, $field, 'first');
-
+        $data = $this->getAllFind($where, $field, 'first', $order);
         $effectSecond = 0;
 
         if (!empty($data['created'])) {

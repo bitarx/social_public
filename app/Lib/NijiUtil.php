@@ -8,8 +8,8 @@ class NijiUtil extends OAuthSignatureMethod_HMAC_SHA1
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
 
   const SB_API_HOST        = "spapi.nijiyome.jp";
-  const SB_CONSUMER_KEY    = "0bacae904380ed27";
-  const SB_CONSUMER_SECRET = "54952402feba3e88d43f96859e6b25af";
+  const SB_CONSUMER_KEY    = "7b206d725fb6339fe953a258b85977";
+  const SB_CONSUMER_SECRET = "106472f591";
 
   const DEV_API_HOST        = "spapi.nijiyome.jp";
   const DEV_CONSUMER_KEY    = "9f5209192c38200ec70b4aee70fab3";

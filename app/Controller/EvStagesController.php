@@ -331,6 +331,7 @@ class EvStagesController extends ApiController {
         foreach ($userCards as $key => $val) {
             $userCard = $val['UserCard'];
             if (!empty($userCard['skill_level'])) {
+                mt_srand();
                 $hit = mt_rand(1, 100);
                 // 当選
                 if ($hit <= $userCard['skill_level']) {
@@ -352,6 +353,7 @@ class EvStagesController extends ApiController {
         foreach ($targetCards as $key => $val) {
             $selfCard = $val['UserCard'];
             if (!empty($selfCard['skill_level'])) {
+                mt_srand();
                 $hit = mt_rand(1, 100);
                 // 当選
                 if ($hit <= $selfCard['skill_level']) {
@@ -758,6 +760,7 @@ class EvStagesController extends ApiController {
             $lotData['kind']   = 0;
             $lotData['target'] = 0;
             $lotData['num']    = 0;
+            mt_srand();
             $hit = mt_rand(1, 100);
 
 
@@ -908,6 +911,7 @@ class EvStagesController extends ApiController {
                 $expBaseInt = $userStageData['use_act'];
 
                 // 一回のクエスト実行で獲得経験値最大
+                mt_srand();
                 $getExp = mt_rand(1, $expBaseInt);
                 // 獲得経験値抑制
                 $getExp = $this->Common->expMinus($getExp, $userParam['level']);

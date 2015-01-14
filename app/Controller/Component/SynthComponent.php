@@ -90,6 +90,7 @@ class SynthComponent extends Component {
            $ret = ($sameCnt / $count) * 10;
            if (5 <= $ret) {
                // 成功条件が揃っている場合、さらに抽選
+               mt_srand();
                $int = mt_rand(1, 100);
 
                // 条件を満たせば75%大成功
