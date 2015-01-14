@@ -1,5 +1,5 @@
 $(function() {
     setInterval(function() {
-        var height = $(document).height() / 2;
+        var height = 550;//$(document).height() / 1.01;
         gadgets.window.adjustHeight(height); }, 500);
 });

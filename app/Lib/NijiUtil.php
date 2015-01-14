@@ -4,8 +4,8 @@ require_once __DIR__ .'/OAuth/OAuth.php' ;
 class NijiUtil extends OAuthSignatureMethod_HMAC_SHA1
 {
   const API_HOST        = "api.nijiyome.jp";
-  const CONSUMER_KEY    = "0b32fa9b34313ac6";
-  const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
+  const CONSUMER_KEY    = "745856a4c91cef5626ed2feb8819c4";
+  const CONSUMER_SECRET = "ae72113111";
 
   const SB_API_HOST        = "spapi.nijiyome.jp";
   const SB_CONSUMER_KEY    = "7b206d725fb6339fe953a258b85977";
