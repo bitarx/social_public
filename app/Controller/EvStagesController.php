@@ -27,7 +27,7 @@ class EvStagesController extends ApiController {
 
     public function beforeFilter(){
         parent::beforeFilter();
-        if(empty($this->event)) {
+        if(empty($this->event) && $this->action != 'scene') {
             $this->log( __FILE__ .  ':' . __LINE__ .' : EndEvent :userId:' . $this->userId );
             $this->rd('errors', 'index', array('error' => END_EVENT )); 
         }

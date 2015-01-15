@@ -7,6 +7,8 @@
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta http-equiv="Expires" content="-1">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/main.js"></script>
         <title><{$smarty.const.SITE_TITLE}></title>
         <{if $carrer == $smarty.const.CARRER_IPHONE}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/scenario.css.php">
@@ -24,7 +26,21 @@
             <ul id="listContainer" width="640px" height="960px"></ul>
             <p id="nameArea" ></p>
             <p id="textArea" ></p>
+            <{if $carrer == $smarty.const.CARRER_IPHONE}>
+                <div id="play" src="<{$smarty.const.BASE_URL}>voice/enemy/enemy_<{$data.enemy_id}>.mp3">
+                    <div style="text-align:center;">
+                        <img src="<{$smarty.const.IMG_URL}>btn_play.png">
+                    </div>
+                </div>
+            <{/if}>
         </div>
+        <{if $carrer == $smarty.const.CARRER_ANDROID}>
+            <div id="play" src="<{$smarty.const.BASE_URL}>voice/enemy/enemy_<{$data.enemy_id}>.mp3">
+                <div style="text-align:center;">
+                    <img src="<{$smarty.const.IMG_URL}>btn_play.png">
+                </div>
+            </div>
+        <{/if}>
     </body>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/preloadjs-0.4.1.min.js"></script>
@@ -116,7 +132,7 @@
     <script type="text/javascript">
         //スクロール停止
         document.ontouchmove = function( e ){
-            event.preventDefault();
+//            event.preventDefault();
         }
     </script>
 

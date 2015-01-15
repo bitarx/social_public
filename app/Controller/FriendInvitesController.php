@@ -163,21 +163,40 @@ class FriendInvitesController extends ApiController {
 
         $this->autoRender = false;   // 自動描画をさせない
 
-        if ('waku' == PLATFORM_ENV) {
-            $idName = 'id';
-        } else {
+        // 招待された人のIDキー名
+        if ('hills' == PLATFORM_ENV) {
             $idName = 'opensocial_owner_id';
+        } else {
+            $idName = 'id';
         }
 
         if (empty($this->params[$idName])) {
-            $this->log(__FILE__.__LINE__.' Param Invalid : ' . $this->userId);
+            $this->log(__FILE__.__LINE__.' App Add No Invite  ' );
             die;
         }
 
         // 招待した人のuserId取得
-        $where = array('invite_sns_user_id' => $this->params[$idName]);
-        $userId = $this->FriendInvite->field('user_id', $where);
-       
+        if ('niji' == PLATFORM_ENV) {
+            $where = array(
+                'User.sns_user_id' => $this->params['invite_from_id']
+            );
+            $fields = array('user_id');
+            $user = $this->User->getAllFind($where, $fields, 'first');
+
+        } else {
+            $where = array(
+                'invite_sns_user_id' => $this->params[$idName]
+            );
+            $order = array('FriendInvite.created DESC');
+            $fields = array('user_id');
+            $user = $this->FriendInvite->getAllFind($where, $fields, 'first', $order);
+        }
+        if (empty($user['user_id'])) {
+            $this->log(__FILE__.__LINE__.' App Add No Invite  ' );
+            die;
+        }
+        $userId = $user['user_id'];
+
         $this->FriendInvite->begin(); 
         try {
                 // フラグ更新

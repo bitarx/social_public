@@ -113,6 +113,8 @@ class CommonComponent extends Component {
      */
     public function judgeCarrer()
     {
+        if (empty($_SERVER['HTTP_USER_AGENT'])) return "";
+
         $UA = $_SERVER['HTTP_USER_AGENT'];
         // Android
         if (ereg("Android.*Mobile", $UA)) {

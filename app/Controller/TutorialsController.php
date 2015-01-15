@@ -1089,6 +1089,7 @@ $this->log($this->params);
         $inviteUserId = 0;
         $where = array(
             'invite_sns_user_id' => $this->ownerId 
+        ,   'callback_flg' => 1 
         ,   'point2_flg' => 0 
         );
         $inviteUserId = $this->FriendInvite->field('user_id', $where);

@@ -2,7 +2,7 @@
   <Module>
     <ModulePrefs title="My Application">
       <Require feature="opensocial-0.9" />
-      <Require feature="dynamic-height" />
+      <Link rel="event.addapp" href="http://niji.devsocial.red/index.php/FriendInvites/callback" />
     </ModulePrefs>
     <Content view="touch" type="url" href="http://niji.devsocial.red/index.php/Tutorials/tutorial_1" />
   </Module>

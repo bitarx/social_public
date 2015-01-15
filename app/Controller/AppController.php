@@ -208,223 +208,227 @@ class AppController extends Controller {
             }
         }
 
-        if ( !in_array($this->name, self::$ctlError) ) {
+        // 友達招待コールバックは認証をしない
+        if (!('FriendInvites' == $this->name && 'callback' == $this->action)) {
 
-            // メンテナンス
-            if ('com' == APP_ENV) {
-                if ('hills' == PLATFORM_ENV) {
-                    $testUser = self::$testUserHills;
-                } elseif ('waku' == PLATFORM_ENV) {
-                    $testUser = self::$testUserWaku;
-                } elseif ('niji' == PLATFORM_ENV) {
-                    $testUser = self::$testUserNiji;
+            if ( !in_array($this->name, self::$ctlError) ) {
+
+                // メンテナンス
+                if ('com' == APP_ENV) {
+                    if ('hills' == PLATFORM_ENV) {
+                        $testUser = self::$testUserHills;
+                    } elseif ('waku' == PLATFORM_ENV) {
+                        $testUser = self::$testUserWaku;
+                    } elseif ('niji' == PLATFORM_ENV) {
+                        $testUser = self::$testUserNiji;
+                    }
+                    if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
+                         $this->rd('Errors', 'index', array(
+                                      'error' => 'mente'
+                                   ,  'mente_no' => self::$menteNo    
+                                   ));
+                    }
                 }
-                if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
-                     $this->rd('Errors', 'index', array(
-                                  'error' => 'mente'
-                               ,  'mente_no' => self::$menteNo    
-                               ));
+
+                if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
+                    $firstAccess = 1;
+                }
+                if (  (empty($this->ownerId) || empty($this->viewerId) ) && !isset($firstAccess) ) {
+
+                    // Cookieセットされていない場合は不正アクセス
+                    $this->log(__FILE__.__LINE__.' Cookie set Error : '. $this->userId ); 
+                    $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+                } else { 
+
+                    // 正常なアクセスの場合はユーザIDをセット
+                    $where = array('User.sns_user_id' => $this->ownerId); 
+                    $this->userId = $this->User->field('user_id', $where);
+
+
+                    // ユーザデータ登録
+                    if (empty($this->userId) && (!empty($this->ownerId))) {
+
+                        // SNS側より取得
+                        $user = $this->snsUtil->getSelf();
+                        if (empty($user['displayName'])) {
+                             $this->log(__FILE__.__LINE__.'People Api Error'); 
+                             $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+                        }
+
+                        $this->User->begin();
+                        try {
+
+                            $name   = $user['displayName'];
+                            $carrer = $this->carrer = $this->Common->judgeCarrer();
+
+                            $values = array(
+                                'sns_user_id'   => $this->ownerId
+                            ,   'viewer'        => $this->viewerId
+                            ,   'sns_name'      => $name
+                            );
+                            $ret = $this->SnsUser->save($values);
+                            if (!$ret) {
+                                throw new AppException(__FILE__.__LINE__.'SnsUser save failed :' . $this->name . '/' . $this->action);
+                            }
+
+                            $values = array(
+                                'user_name'   => $name
+                            ,   'sns_user_id' => $this->ownerId
+                            ,   'carrer'      => $carrer
+                            );
+                            $ret = $this->User->save($values);
+                            if (!$ret) {
+                                throw new AppException(__FILE__.__LINE__.'User save failed :' . $this->name . '/' . $this->action);
+                            }
+                            $this->userId = $ret['User']['user_id'];
+
+                            // パラメータ登録
+                            $values = array(
+                                'user_id'        => $this->userId
+                            ,   'act'            => $this->_startAct
+                            ,   'act_max'        => $this->_startActMac
+                            ,   'cost_atk'       => $this->_costAtk
+                            ,   'cost_def'       => $this->_costDef
+                            ,   'level'          => $this->_level
+                            );
+                            $ret = $this->UserParam->save($values);
+                            if (!$ret) {
+                                throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
+                            }
+
+                        } catch (AppException $e) {
+                            $this->User->rollback();
+
+                            $this->log($e->errmes);
+                            return $this->redirect(
+                                       array('controller' => 'errors', 'action' => 'index'
+                                             , '?' => array('error' => ERROR_ID_SYSTEM )
+                                   ));
+                        }
+                        $this->User->commit();
+                    }
+
+                    // チュートリアル判定
+                    $where = array('user_id' => $this->userId);
+                    $endFlg = $this->UserTutorial->field('end_flg', $where);
+                    $ary = array_merge(self::$ctlRegist , self::$ctlError);
+                    if (!in_array($this->name, $ary)) {
+                        // チュートリアルを終えていない
+                        if (empty($endFlg)) {
+                            $where = array('user_id' => $this->userId);
+                            $fields = array('tutorial_id', 'end_flg');
+                            $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
+
+                            if (!empty($row['tutorial_id'])) {
+                                // チュートリアル途中
+                                $this->rd('Tutorials', 'tutorial_'. $row['tutorial_id']);
+                            } 
+                        }
+                    }
+                }
+            } else {
+
+                if ( !isset($this->params['error']) ) {
+                    if ($this->name == 'CakeError') { 
+                        // システムエラー
+                        $err = ERROR_ID_SYSTEM;
+                    } else {
+                        // 不正な操作
+                        $err = ERROR_ID_BAD_OPERATION;
+                    }
+                    $this->rd('Errors', 'index', array('error' => $err ));
                 }
             }
+            $this->set('gameTitle', $this->gameTitle); 
+            
+            if (empty($endFlg)) {
+                $this->tutoEnd = 0;
+                $this->set('tutoEnd', 0); 
+            } else {
+                // チュートリアルを終えている
+                $this->tutoEnd = 1;
+                $this->set('tutoEnd', 1); 
 
+                // ユーザーステータス取得
+                $this->userParam = $this->UserParam->getUserParams($this->userId);
+
+                // 行動力回復
+                $this->UserParam->recoverAct($this->userParam);
+
+                // 所持金
+                $this->set('haveMoney', $this->userParam['money']);
+            }
+
+            if ($this->User->isSnsDataUpdate($this->userId)) {
+
+                $user = $this->snsUtil->getSelf();
+
+                if (empty($user['displayName'])) {
+                    $this->log($this->userId.__FILE__.__LINE__. 'get sns user name error');
+                    $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM  ));
+                }
+
+                $this->User->begin();
+                try {
+
+                    $name   = $user['displayName'];
+
+                    $values = array(
+                        'sns_user_id'   => $this->ownerId
+                    ,   'viewer'        => $this->viewerId
+                    ,   'sns_name'      => $name
+                    );
+                    $this->SnsUser->save($values);
+
+                    $values = array(
+                        'user_id' => $this->userId
+                    ,   'user_name'   => $name
+                    );
+                    $this->User->save($values);
+
+                } catch (AppException $e) {
+                    $this->User->rollback();
+
+                    $this->log($e->errmes);
+                    return $this->redirect(
+                               array('controller' => 'errors', 'action' => 'index'
+                                     , '?' => array('error' => ERROR_ID_SYSTEM )
+                           ));
+                }
+                $this->User->commit();
+            }
+
+            // イベント
+            $this->event = $this->EvQuest->isEvent();
+
+            // ページング
+            $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
+            $this->offset = ($this->page - 1) * PAGE_LIMIT;
+
+            $this->set('prev', $this->page - 1 ); 
+            $this->set('page', $this->page ); 
+            $this->set('next', $this->page + 1 ); 
+
+
+            // 共通レイアウトは使わない  
             if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
-                $firstAccess = 1;
-            }
-            if (  (empty($this->ownerId) || empty($this->viewerId) ) && !isset($firstAccess) ) {
-
-                // Cookieセットされていない場合は不正アクセス
-                $this->log(__FILE__.__LINE__.' Cookie set Error : '. $this->userId ); 
-                $this->rd('Errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
-            } else { 
-
-                // 正常なアクセスの場合はユーザIDをセット
-                $where = array('User.sns_user_id' => $this->ownerId); 
-                $this->userId = $this->User->field('user_id', $where);
-
-
-                // ユーザデータ登録
-                if (empty($this->userId) && (!empty($this->ownerId))) {
-
-                    // SNS側より取得
-                    $user = $this->snsUtil->getSelf();
-                    if (empty($user['displayName'])) {
-                         $this->log(__FILE__.__LINE__.'People Api Error'); 
-                         $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM ));
-                    }
-
-                    $this->User->begin();
-                    try {
-
-                        $name   = $user['displayName'];
-                        $carrer = $this->carrer = $this->Common->judgeCarrer();
-
-                        $values = array(
-                            'sns_user_id'   => $this->ownerId
-                        ,   'viewer'        => $this->viewerId
-                        ,   'sns_name'      => $name
-                        );
-                        $ret = $this->SnsUser->save($values);
-                        if (!$ret) {
-                            throw new AppException(__FILE__.__LINE__.'SnsUser save failed :' . $this->name . '/' . $this->action);
-                        }
-
-                        $values = array(
-                            'user_name'   => $name
-                        ,   'sns_user_id' => $this->ownerId
-                        ,   'carrer'      => $carrer
-                        );
-                        $ret = $this->User->save($values);
-                        if (!$ret) {
-                            throw new AppException(__FILE__.__LINE__.'User save failed :' . $this->name . '/' . $this->action);
-                        }
-                        $this->userId = $ret['User']['user_id'];
-
-                        // パラメータ登録
-                        $values = array(
-                            'user_id'        => $this->userId
-                        ,   'act'            => $this->_startAct
-                        ,   'act_max'        => $this->_startActMac
-                        ,   'cost_atk'       => $this->_costAtk
-                        ,   'cost_def'       => $this->_costDef
-                        ,   'level'          => $this->_level
-                        );
-                        $ret = $this->UserParam->save($values);
-                        if (!$ret) {
-                            throw new AppException('UserParam save failed :' . $this->name . '/' . $this->action);
-                        }
-
-                    } catch (AppException $e) {
-                        $this->User->rollback();
-
-                        $this->log($e->errmes);
-                        return $this->redirect(
-                                   array('controller' => 'errors', 'action' => 'index'
-                                         , '?' => array('error' => ERROR_ID_SYSTEM )
-                               ));
-                    }
-                    $this->User->commit();
-                }
-
-                // チュートリアル判定
-                $where = array('user_id' => $this->userId);
-                $endFlg = $this->UserTutorial->field('end_flg', $where);
-                $ary = array_merge(self::$ctlRegist , self::$ctlError);
-                if (!in_array($this->name, $ary)) {
-                    // チュートリアルを終えていない
-                    if (empty($endFlg)) {
-                        $where = array('user_id' => $this->userId);
-                        $fields = array('tutorial_id', 'end_flg');
-                        $row = $this->UserTutorial->getAllFind($where, $fields, 'first');
-
-                        if (!empty($row['tutorial_id'])) {
-                            // チュートリアル途中
-                            $this->rd('Tutorials', 'tutorial_'. $row['tutorial_id']);
-                        } 
-                    }
-                }
-            }
-        } else {
-
-            if ( !isset($this->params['error']) ) {
-                if ($this->name == 'CakeError') { 
-                    // システムエラー
-                    $err = ERROR_ID_SYSTEM;
-                } else {
-                    // 不正な操作
-                    $err = ERROR_ID_BAD_OPERATION;
-                }
-                $this->rd('Errors', 'index', array('error' => $err ));
-            }
-        }
-        $this->set('gameTitle', $this->gameTitle); 
-        
-        if (empty($endFlg)) {
-            $this->tutoEnd = 0;
-            $this->set('tutoEnd', 0); 
-        } else {
-            // チュートリアルを終えている
-            $this->tutoEnd = 1;
-            $this->set('tutoEnd', 1); 
-
-            // ユーザーステータス取得
-            $this->userParam = $this->UserParam->getUserParams($this->userId);
-
-            // 行動力回復
-            $this->UserParam->recoverAct($this->userParam);
-
-            // 所持金
-            $this->set('haveMoney', $this->userParam['money']);
-        }
-
-        if ($this->User->isSnsDataUpdate($this->userId)) {
-
-            $user = $this->snsUtil->getSelf();
-
-            if (empty($user['displayName'])) {
-                $this->log($this->userId.__FILE__.__LINE__. 'get sns user name error');
-                $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM  ));
+                $this->layout = '';
             }
 
-            $this->User->begin();
-            try {
-
-                $name   = $user['displayName'];
-
-                $values = array(
-                    'sns_user_id'   => $this->ownerId
-                ,   'viewer'        => $this->viewerId
-                ,   'sns_name'      => $name
-                );
-                $this->SnsUser->save($values);
-
-                $values = array(
-                    'user_id' => $this->userId
-                ,   'user_name'   => $name
-                );
-                $this->User->save($values);
-
-            } catch (AppException $e) {
-                $this->User->rollback();
-
-                $this->log($e->errmes);
-                return $this->redirect(
-                           array('controller' => 'errors', 'action' => 'index'
-                                 , '?' => array('error' => ERROR_ID_SYSTEM )
-                       ));
+            // ajax通信時使用
+            if ('hills' != PLATFORM_ENV) {
+                $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
             }
-            $this->User->commit();
+
+            // コントローラとアクション
+            $this->set('ctl', $this->name ); 
+            $this->set('action',  $this->action); 
+            $this->set('ctlAction',  $this->name . '/' . $this->action); 
+            $this->set('event', $this->event);
+
+            // URLアサイン
+            $this->_setUrl();
         }
-
-        // イベント
-        $this->event = $this->EvQuest->isEvent();
-
-        // ページング
-        $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
-        $this->offset = ($this->page - 1) * PAGE_LIMIT;
-
-        $this->set('prev', $this->page - 1 ); 
-        $this->set('page', $this->page ); 
-        $this->set('next', $this->page + 1 ); 
-
-
-        // 共通レイアウトは使わない  
-        if ($this->name == 'Tutorials' && $this->action == 'tutorial_1') {
-            $this->layout = '';
-        }
-
-        // ajax通信時使用
-        if ('hills' != PLATFORM_ENV) {
-            $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
-        }
-
-        // コントローラとアクション
-        $this->set('ctl', $this->name ); 
-        $this->set('action',  $this->action); 
-        $this->set('ctlAction',  $this->name . '/' . $this->action); 
-        $this->set('event', $this->event);
-
-        // URLアサイン
-        $this->_setUrl();
     } 
 
     /**
