@@ -8,7 +8,7 @@ class FriendInvitesController extends ApiController {
 
     public $uses = array('SnsUser', 'User', 'FriendInvite', 'FriendInvitePresent', 'UserPresentBox');
 
-    public static $inviteText = 'を一緒にプレイしましょう！';
+    public static $inviteText = '一緒に世界を救うセックスバトルしませんか？';
 
     public static $inviteSendText = 'へ招待メール送信の報酬';
 
@@ -28,7 +28,7 @@ class FriendInvitesController extends ApiController {
         $point = 2;
         $listP2 = $this->FriendInvitePresent->getList($point);
 
-        $inviteText = SITE_TITLE . self::$inviteText;
+        $inviteText = self::$inviteText;
         $inviteGuideText = SNS_FRIEND_NAME . self::$inviteGuideText;
 
         if ('waku' == PLATFORM_ENV) {
