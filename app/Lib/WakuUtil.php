@@ -8,12 +8,12 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
 
   const SB_API_HOST        = "os.sb.wakupl.com";
-  const SB_CONSUMER_KEY    = "3f59d5668d3a";
-  const SB_CONSUMER_SECRET = "48e6546c556706b9ef3c8643740ecf37";
+  const SB_CONSUMER_KEY    = "00df3a0024d3";
+  const SB_CONSUMER_SECRET = "bfb77430bc1dd6fd8454b97a5513b282";
 
   const DEV_API_HOST        = "os.sb.wakupl.com";
-  const DEV_CONSUMER_KEY    = "3f59d5668d3a";
-  const DEV_CONSUMER_SECRET = "48e6546c556706b9ef3c8643740ecf37";
+  const DEV_CONSUMER_KEY    = "00df3a0024d3";
+  const DEV_CONSUMER_SECRET = "bfb77430bc1dd6fd8454b97a5513b282";
 
   protected $apiHost        = "";
   protected $consumerKey    = "";

@@ -37,7 +37,7 @@ class FriendInvitesController extends ApiController {
             $action = PLATFORM_URL . PLATFORM_INVITE_PATH . PLATFORM_APP_ID;
         }
         // 本文エンコード
-        if ('niji' != PLATFORM_ENV) {
+        if ('hills' == PLATFORM_ENV) {
             $inviteText = urlencode($inviteText);
         }
 
@@ -179,6 +179,13 @@ class FriendInvitesController extends ApiController {
         if ('niji' == PLATFORM_ENV) {
             $where = array(
                 'User.sns_user_id' => $this->params['invite_from_id']
+            );
+            $fields = array('user_id');
+            $user = $this->User->getAllFind($where, $fields, 'first');
+
+        } elseif ('waku' == PLATFORM_ENV) {
+            $where = array(
+                'User.sns_user_id' => $this->params['wakuwaku_invite_from']
             );
             $fields = array('user_id');
             $user = $this->User->getAllFind($where, $fields, 'first');

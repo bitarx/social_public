@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-  <ModulePrefs title="Sample Application"></ModulePrefs>
+  <ModulePrefs title="Sample Application">
+    <Link rel="event.addapp" href="http://waku.devsocial.red/index.php/FriendInvites/callback" method="GET" />
+  </ModulePrefs>
   <Content view="smartphone" type="url" href="http://waku.devsocial.red/index.php/Tutorials/tutorial_1" />
 </Module>
