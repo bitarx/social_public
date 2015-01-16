@@ -115,7 +115,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     } elseif ('waku' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
     } else {
-        define("PLATFORM_APP_ID", 155);
+        define("PLATFORM_APP_ID", 218);
     }
 
 } elseif ( false !== strpos( DOMAIN, 'asns') ) {
@@ -140,7 +140,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     } elseif ('waku' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 100388);
     } else {
-        define("PLATFORM_APP_ID", 100388);
+        define("PLATFORM_APP_ID", 265);
     }
 } else {
     /* 開発環境 */
