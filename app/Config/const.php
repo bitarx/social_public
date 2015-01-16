@@ -11,6 +11,7 @@ if (!defined('DOMAIN')) {
     define("DOMAIN", $_SERVER['SERVER_NAME']);
 }
 
+
 /**
  * プラットフォーム識別
  */
