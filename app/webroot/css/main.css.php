@@ -1033,6 +1033,12 @@ display: block;
     left: 20px;
     position: absolute;
 }
+.emojiComment {
+    top: 218px;
+    left: 20px;
+    color:#fff;
+    position: absolute;
+}
 
 /** プレゼント受取 */
 .present {

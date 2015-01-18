@@ -6,7 +6,7 @@ echo "
 body {
     background-image: url('" . $url . "/img/tutorial/opening.png');
     background-color:#000000;
-    background-position:left top;
+    background-position:center top;
     background-repeat:no-repeat;
     -moz-background-size:100% auto;
     background-size:100% auto;
@@ -25,26 +25,26 @@ body {
 .btnStart {
     position: relative;
     top: 55px;
-    left: 35px;
+    left: 10px;
     height: 50px;
 }
 .btnStartNiji {
     position: relative;
     top: 55px;
-    left: 35px;
+    left: 15px;
     height: 50px;
 }
 .strStart {
     position: absolute;
     top: 8px;
-    left: 70px;
+    left: 90px;
     font-size: 20px
 }
 .opening_text {
     width:320px;
 }
 .btnStrongL {
-    width:275px;
+    width:310px;
 }
 ";
 ?>

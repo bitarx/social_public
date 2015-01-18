@@ -203,6 +203,15 @@ class ItemsController extends ApiController {
         $ownerId = $this->User->field('sns_user_id', $where);
 
         $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId); 
+        if (empty($payment)) {
+            // 購入処理が正常に行われていない
+            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+            header("HTTP/1.1 400 NG");
+            echo "NG";
+            die;
+        }
+
         if ( 'waku' == PLATFORM_ENV ) {
             $column = 'entry';
         } elseif ( 'hills' == PLATFORM_ENV ) {

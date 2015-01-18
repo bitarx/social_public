@@ -27,4 +27,9 @@
     <div class="myMoney">
         所持<{$smarty.const.MONEY_NAME}>：&nbsp;<span style="color:#ffffff"><{$haveMoney}></span>
     </div>
+    <{if $smarty.const.PLATFORM_ENV == 'waku'}>
+        <div class="emojiComment">
+            ※当ゲームでは絵文字は非対応となっております。
+        </div>
+    <{/if}>
 </div>

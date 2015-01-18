@@ -177,6 +177,10 @@ class FriendInvitesController extends ApiController {
 
         // 招待した人のuserId取得
         if ('niji' == PLATFORM_ENV) {
+            if (empty($this->params['invite_from_id'])) {
+                $this->log(__FILE__.__LINE__.' No Invite Param ' );
+                die;
+            }
             $where = array(
                 'User.sns_user_id' => $this->params['invite_from_id']
             );
@@ -184,6 +188,10 @@ class FriendInvitesController extends ApiController {
             $user = $this->User->getAllFind($where, $fields, 'first');
 
         } elseif ('waku' == PLATFORM_ENV) {
+            if (empty($this->params['wakuwaku_invite_from'])) {
+                $this->log(__FILE__.__LINE__.' No Invite Param ' );
+                die;
+            }
             $where = array(
                 'User.sns_user_id' => $this->params['wakuwaku_invite_from']
             );

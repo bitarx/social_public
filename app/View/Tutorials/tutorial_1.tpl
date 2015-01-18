@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=0.5, maximum-scale=0.5, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
     <meta charset="UTF-8">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <{if $carrer == $smarty.const.CARRER_IPHONE}>
