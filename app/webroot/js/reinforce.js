@@ -25,6 +25,8 @@ var reinforce = (function() {
     synthProgBase: "",
     synthProgRed: "",
     levelup: "",
+    pushS: "",
+    pushL: "",
     bigsuccess:""
   }
 
@@ -44,6 +46,8 @@ var reinforce = (function() {
     synthProgBase: "",
     synthProgRed: "",
     levelup: "",
+    pushL: "",
+    pushS: "",
     bigsuccess: ""
   }
 
@@ -112,6 +116,8 @@ var reinforce = (function() {
     _fileName.synthProgRed = fileName.synthProgRed;
     _fileName.levelup = fileName.levelup;
     _fileName.bigsuccess = fileName.bigsuccess;
+    _fileName.pushL = fileName.pushL;
+    _fileName.pushS = fileName.pushS;
     _contentsCompleteCallback = contentsCompleteCallback;
 
     bg.src = _fileName.bg;
@@ -189,7 +195,6 @@ var reinforce = (function() {
       _bm.sacrificeList[ i ].visible = false;
     }
 
-
     _bm.cardResult.y = 0;
 
     createjs.Tween.get( brightness ).to( { alpha: 0 }, 500, createjs.Ease.sineOut );
@@ -225,6 +230,7 @@ var reinforce = (function() {
       }, 3000 );
 
       _startParticle();
+//      _startPush();
       _contentsCompleteCallback();
     }
   }
@@ -343,6 +349,32 @@ var reinforce = (function() {
       }
     }
     setInterval( emit, 200 );
+  }
+
+  /**
+  * PUSHスタート
+  */
+  function _startPush() {
+
+    var pushL = _bm.pushL.clone();
+    pushL.y = 380;
+    pushL.rotation = -5;
+    var pushS = _bm.pushS.clone();
+    pushS.y = 380;
+    pushS.rotation = -5;
+
+    var cnt = 0;
+    function push() {
+        if( ( cnt % 2 ) == 0 ) {
+          _stage.removeChild( pushS );
+          _stage.addChild( pushL );
+        } else {
+          _stage.removeChild( pushL );
+          _stage.addChild( pushS );
+        }
+        cnt++;
+    }
+    setInterval( push, 400 );
   }
 
 
@@ -465,9 +497,29 @@ var reinforce = (function() {
       _bm.bigsuccess = new createjs.Bitmap( bigsuccess );
       var w = _bm.bigsuccess.image.width;
       var h = _bm.bigsuccess.image.height;
-      _bm.levelup.scaleX = _bm.bigsuccess.scaleY = 1.2;
+      _bm.bigsuccess.scaleX = _bm.bigsuccess.scaleY = 1.2;
       _regCenter( _bm.bigsuccess, w, h );
       _bm.bigsuccess.x = 0; _bm.bigsuccess.y = 0;
+    }
+
+    var pushL = new Image();
+    pushL.onload = function() {
+      _bm.pushL = new createjs.Bitmap( pushL );
+      var w = _bm.pushL.image.width;
+      var h = _bm.pushL.image.height;
+      _bm.pushL.scaleX = _bm.pushL.scaleY = 1.2;
+      _regCenter( _bm.pushL, w, h );
+      _bm.pushL.x = 0; _bm.pushL.y = 0;
+    }
+
+    var pushS = new Image();
+    pushS.onload = function() {
+      _bm.pushS = new createjs.Bitmap( pushS );
+      var w = _bm.pushS.image.width;
+      var h = _bm.pushS.image.height;
+      _bm.pushS.scaleX = _bm.pushS.scaleY = 1.2;
+      _regCenter( _bm.pushS, w, h );
+      _bm.pushS.x = 0; _bm.pushS.y = 0;
     }
 
     var synthProgRed = new Image();
@@ -482,6 +534,8 @@ var reinforce = (function() {
       _stage.addChild( _bm.synthProgRed );
       levelup.src = _fileName.levelup;
       bigsuccess.src = _fileName.bigsuccess;
+      pushL.src = _fileName.pushL;
+      pushS.src = _fileName.pushS;
       synthProgRed.visible = false;
     }
 
