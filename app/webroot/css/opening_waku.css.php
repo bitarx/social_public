@@ -24,9 +24,9 @@ body {
 
 .btnStart {
     position: relative;
-    top: 8px;
-    left: 95px;
-    height: 100px;
+    top: -405px;
+    left: 20px;
+    height: 50px;
 }
 .btnStartNiji {
     position: relative;
@@ -36,12 +36,12 @@ body {
 }
 .strStart {
     position: absolute;
-    top: 10px;
-    left: 120px;
-    font-size: 28px
+    top: 3px;
+    left: 70px;
+    font-size: 20px
 }
 .opening_text {
-    width:640px;
+    width:320px;
 }
 .btnStrongL {
     width:275px;

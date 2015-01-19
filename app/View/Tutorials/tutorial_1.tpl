@@ -85,11 +85,7 @@
     <{if 'waku' == $smarty.const.PLATFORM_ENV}>
         <div class="btnStart">
             <a href="<{$smarty.const.BASE_URL}>Tutorials/tutorial_2">
-            <{if $carrer == $smarty.const.CARRER_IPHONE}>
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" >
-            <{else}>
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png" alt="start" name="submit" class="btnStrongL">
-            <{/if}>
             <div class="strStart">
                ゲームスタート 
             </div>

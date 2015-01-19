@@ -198,7 +198,6 @@ class ItemsController extends ApiController {
         if (!empty($this->params['opensocial_app_id'])) {
             $appId = $this->params['opensocial_app_id'];
         }
-
         $where = array('user_id' => $userId);
         $ownerId = $this->User->field('sns_user_id', $where);
 
