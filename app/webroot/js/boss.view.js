@@ -505,6 +505,38 @@ boss.view = ( function() {
        _stageShake();
       }, 300 );
     }
+
+    var timer = setTimeout(function(){
+        _startPush();
+        clearTimeout(timer); 
+    }, 1500);
+  }
+
+
+  /**
+  * PUSHスタート
+  */
+  function _startPush() {
+
+    var pushL = _stocker.getDO( "pushL" ).clone();
+    pushL.y = 370;
+    pushL.rotation = -5;
+    var pushS = _stocker.getDO( "pushS" ).clone();
+    pushS.y = 370;
+    pushS.rotation = -5;
+
+    var cnt = 0;
+    function push() {
+        if( ( cnt % 2 ) == 0 ) {
+          _stocker.getDO( "stage" ).removeChild( pushS );
+          _stocker.getDO( "stage" ).addChild( pushL );
+        } else {
+          _stocker.getDO( "stage" ).removeChild( pushL );
+          _stocker.getDO( "stage" ).addChild( pushS );
+        }
+        cnt++;
+    }
+    setInterval( push, 400 );
   }
 
   /**

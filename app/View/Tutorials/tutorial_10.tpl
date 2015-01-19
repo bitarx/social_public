@@ -48,7 +48,9 @@
             synthProgBase: "<{$smarty.const.BASE_URL}>img/synth_prog_base.png",
             synthProgRed: "<{$smarty.const.BASE_URL}>img/synth_prog_red.png",
             levelup: "<{$smarty.const.BASE_URL}>img/levelup.png",
-            bigsuccess: "<{$smarty.const.BASE_URL}>img/bigsuccess.png"
+            bigsuccess: "<{$smarty.const.BASE_URL}>img/bigsuccess.png",
+            pushL: "<{$smarty.const.BASE_URL}>img/push_l.png",
+            pushS: "<{$smarty.const.BASE_URL}>img/push_s.png"
           },
           <{$startExp}>,
           <{$endExp}>,
