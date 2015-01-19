@@ -230,7 +230,12 @@ var reinforce = (function() {
       }, 3000 );
 
       _startParticle();
-      _startPush();
+
+      var timer = setTimeout(function(){
+          _startPush();
+          clearTimeout(timer); 
+      }, 1500);
+
       _contentsCompleteCallback();
     }
   }
@@ -357,10 +362,10 @@ var reinforce = (function() {
   function _startPush() {
 
     var pushL = _bm.pushL.clone();
-    pushL.y = 380;
+    pushL.y = 370;
     pushL.rotation = -5;
     var pushS = _bm.pushS.clone();
-    pushS.y = 380;
+    pushS.y = 370;
     pushS.rotation = -5;
 
     var cnt = 0;
