@@ -16,7 +16,9 @@ var evolution = (function() {
     glowline: "",
     cardResultGrowBM: "",
     card1GrowBM: "",
-    card2GrowBM: ""
+    card2GrowBM: "",
+    pushS: "",
+    pushL: ""
   }
 
   //Shape
@@ -34,6 +36,8 @@ var evolution = (function() {
     cardGrow: "",
     particle001: "",
     particle002: "",
+    pushL: "",
+    pushS: "",
     glowline: ""
   }
 
@@ -92,6 +96,8 @@ var evolution = (function() {
     _fileName.particle001 = fileName.particle001;
     _fileName.particle002 = fileName.particle002;
     _fileName.glowline = fileName.glowline;
+    _fileName.pushL = fileName.pushL;
+    _fileName.pushS = fileName.pushS;
 
     _contentsCompleteCallback = contentsCompleteCallback;
 
@@ -109,6 +115,31 @@ var evolution = (function() {
   }
 
 
+  /**
+  * PUSHスタート
+  */
+  function _startPush() {
+
+    var pushL = _bm.pushL.clone();
+    pushL.y = 380;
+    pushL.rotation = -5;
+    var pushS = _bm.pushS.clone();
+    pushS.y = 380;
+    pushS.rotation = -5;
+
+    var cnt = 0;
+    function push() {
+        if( ( cnt % 2 ) == 0 ) {
+          _stage.removeChild( pushS );
+          _stage.addChild( pushL );
+        } else {
+          _stage.removeChild( pushL );
+          _stage.addChild( pushS );
+        }
+        cnt++;
+    }
+    setInterval( push, 400 );
+  }
 
   function _animationStep01() {
     createjs.Tween.get( _bm.card1 ).wait(450).to( {y: 0}, 500, createjs.Ease.backOut );
@@ -218,6 +249,8 @@ var evolution = (function() {
 
       _contentsCompleteCallback();
     }, 600 );
+
+    _startPush();
   }
 
   /**
@@ -439,6 +472,28 @@ var evolution = (function() {
       particle002 = null;
     }
     particle002.src = _fileName.particle002;
+
+
+    var pushL = new Image();
+    pushL.onload = function() {
+      _bm.pushL = new createjs.Bitmap( pushL );
+      var w = _bm.pushL.image.width;
+      var h = _bm.pushL.image.height;
+      _bm.pushL.scaleX = _bm.pushL.scaleY = 1.2;
+      _regCenter( _bm.pushL, w, h );
+      _bm.pushL.x = 0; _bm.pushL.y = 0;
+    }
+    var pushS = new Image();
+    pushS.onload = function() {
+      _bm.pushS = new createjs.Bitmap( pushS );
+      var w = _bm.pushS.image.width;
+      var h = _bm.pushS.image.height;
+      _bm.pushS.scaleX = _bm.pushS.scaleY = 1.2;
+      _regCenter( _bm.pushS, w, h );
+      _bm.pushS.x = 0; _bm.pushS.y = 0;
+    }
+    pushL.src = _fileName.pushL;
+    pushS.src = _fileName.pushS;
 
   }
 

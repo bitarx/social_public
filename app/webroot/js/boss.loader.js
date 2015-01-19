@@ -53,7 +53,9 @@ boss.loader = ( function() {
       {src: fileName.gion002, id: "gion002" },
       {src: fileName.gion003, id: "gion003" },
       {src: fileName.yajirushiDown, id: "yajirushiDown" },
-      {src: fileName.numSL, id: "numSL" }
+      {src: fileName.numSL, id: "numSL" },
+      {src: fileName.pushL, id: "pushL" },
+      {src: fileName.pushS, id: "pushS" }
     ];
 
     for( var i = 0; i < fileName.numList.length; i++ ) {
@@ -95,6 +97,8 @@ boss.loader = ( function() {
       _stocker.setDO( "gion003", _getBitmap( loader.getResult( "gion003" ), "center" ) );
       _stocker.setDO( "yajirushiDown", _getBitmap( loader.getResult( "yajirushiDown" ), "center" ) );
       _stocker.setDO( "numSL", _getBitmap( loader.getResult( "numSL" ), "center" ) );
+      _stocker.setDO( "pushL", _getBitmap( loader.getResult( "pushL" ), "center" ) );
+      _stocker.setDO( "pushS", _getBitmap( loader.getResult( "pushS" ), "center" ) );
 
       var numList = new Array();
       for( var i = 0; i < fileName.numList.length; i++ ) {

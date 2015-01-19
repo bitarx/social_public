@@ -230,7 +230,7 @@ var reinforce = (function() {
       }, 3000 );
 
       _startParticle();
-//      _startPush();
+      _startPush();
       _contentsCompleteCallback();
     }
   }

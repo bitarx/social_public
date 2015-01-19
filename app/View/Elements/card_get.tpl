@@ -43,7 +43,7 @@
             </div>
 
             <script type="text/javascript">
-                dispProgressCardExp(<{$data.exp}>, <{$key}> );
+                dispProgressCardExp(0, <{$key}> );
             </script>
 
             <div class="cardLvIos">

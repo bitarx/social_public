@@ -51,7 +51,9 @@
             cardGrow: "<{$smarty.const.BASE_URL}>img/cardGlow.png",
             particle001: "<{$smarty.const.BASE_URL}>img/particle001.png",
             particle002: "<{$smarty.const.BASE_URL}>img/particle002.png",
-            glowline: "<{$smarty.const.BASE_URL}>img/glowline.png"
+            glowline: "<{$smarty.const.BASE_URL}>img/glowline.png",
+            pushL: "<{$smarty.const.BASE_URL}>img/push_l.png",
+            pushS: "<{$smarty.const.BASE_URL}>img/push_s.png"
           },
           imageLoadComplete,
           contentsComplete,
