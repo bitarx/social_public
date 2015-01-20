@@ -160,10 +160,10 @@ class UserCard extends AppModel {
         // コレクション登録
         $userCollect = new UserCollect();
         $fd = array('user_id', 'card_id');
-        $userCollect->insertBulk($fd, $values);
+        $userCollect->insertBulk($fd, $values, $ignore = 1);
 
         $fields = array('user_id', 'card_id', 'hp', 'hp_max', 'atk', 'def');
-        return $this->insertBulk($fields, $data);
+        return $this->insertBulk($fields, $data, $ignore = 1);
     }
 
     /**

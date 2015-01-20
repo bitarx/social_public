@@ -121,10 +121,10 @@ var evolution = (function() {
   function _startPush() {
 
     var pushL = _bm.pushL.clone();
-    pushL.y = 370;
+    pushL.y = 365;
     pushL.rotation = -5;
     var pushS = _bm.pushS.clone();
-    pushS.y = 370;
+    pushS.y = 365;
     pushS.rotation = -5;
 
     var cnt = 0;
@@ -251,9 +251,9 @@ var evolution = (function() {
     }, 600 );
 
     var timer = setTimeout(function(){
-        _startPush();
+//        _startPush();
         clearTimeout(timer); 
-    }, 1500);
+    }, 1400);
   }
 
   /**
