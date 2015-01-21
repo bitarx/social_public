@@ -251,7 +251,7 @@ var evolution = (function() {
     }, 600 );
 
     var timer = setTimeout(function(){
-//        _startPush();
+        _startPush();
         clearTimeout(timer); 
     }, 1400);
   }

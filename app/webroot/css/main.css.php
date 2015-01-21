@@ -385,7 +385,7 @@ a:hover {
     position:relative;
     top: 12px;
     bottom: 10px;
-    left: 10px;
+    text-align:center
 }
 .lineGacha {
     position:relative;
@@ -410,6 +410,7 @@ input.btn_submit {
 .listBlock {
     position:relative;
     top:30px;
+    left:8px;
 }
 
 
@@ -451,67 +452,73 @@ input.btn_submit {
 .progQuest {
     position: relative;
     margin: 0 auto;
-    top: -140px;
-    height:100px;
+    top: -161px;
+    left:-40px;
+    height:120px;
     line-height: 0;
-    width: 320px;
+    width: 520px;
 }
 .progQuestUseStr {
     position: absolute;
     top: 0px;
-    height: 20px;
+    left:100px;
+    height: 24px;
     width: 400px;
+    font-size: 26px;
 }
 .progQuestMain {
     position: absolute;
     margin: 0 auto;
-    top: 20px;
-    left: 85px;
+    top: 27px;
+    left: 110px;
     background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
-    height: 20px;
-    width: 240px;
+    height: 40px;
+    width: 480px;
 }
 .progQuestMainStr {
     position: absolute;
-    top: 30px;
-    height: 20px;
-    width: 100px;
+    top: 48px;
+    height: 30px;
+    width: 120px;
+    font-size: 32px;
 }
 .progQuestAct {
     position: absolute;
     margin: 0 auto;
-    top: 50px;
-    left: 85px;
+    top: 79px;
+    left: 110px;
     background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
-    height: 20px;
-    width: 240px;
+    height: 40px;
+    width: 480px;
 }
 .progQuestActStr {
     position: absolute;
-    top: 60px;
-    height: 20px;
-    width: 100px;
+    top: 99px;
+    height: 30px;
+    width: 120px;
+    font-size: 32px;
 }
 .progQuestExp {
     position: absolute;
     margin: 0 auto;
-    top: 80px;
-    left: 85px;
+    top: 130px;
+    left: 110px;
     background: url(" . $url . "/img/progress_base.png) top repeat-x;
     border : 1px solid #d3d3d3;
     line-height: 0;
-    height: 20px;
-    width: 240px;
+    height: 40px;
+    width: 480px;
 }
 .progQuestExpStr {
     position: absolute;
-    top: 90px;
-    height: 20px;
-    width: 100px;
+    top: 151px;
+    height: 30px;
+    width: 120px;
+    font-size: 32px;
 }
 
 /**
@@ -547,13 +554,13 @@ input.btn_submit {
     position:relative;
     float:left;
     top:4px;
-    left:170px;
+    left:190px;
 }
 .btnPagingNext {
     position:relative;
     float:right;
     top:0px;
-    right:95px;
+    right:70px;
     width:100px;
     height:50px;
     text-align:center;
@@ -791,8 +798,9 @@ input.btn_submit {
 }
 .strQuestBossBattle {
     position: absolute;
-    top: 12px;
-    left: 170px;
+    top: 8px;
+    left: 150px;
+    font-size:30px;
 }
 
 /**
@@ -1141,6 +1149,40 @@ display: block;
     text-align: center;
     top: 10px;
     left: 80px;
+}
+.attrList {
+    position: relative;
+    height:60px;
+}
+.strAttrAi {
+    position: absolute;
+    width: 133px;
+    left:74px;
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    text-align:center;
+    background-color: #EE82EE;
+}
+.strAttrMai {
+    position: absolute;
+    width: 133px;
+    left:242px;
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    text-align:center;
+    background-color: #008000;
+}
+.strAttrMi {
+    position: absolute;
+    width: 133px;
+    left:408px;
+    border-style: solid ; 
+    border-width: 1px;
+    padding: 10px 10px 10px 10px;
+    text-align:center;
+    background-color: #8A2BE2;
 }
 
 

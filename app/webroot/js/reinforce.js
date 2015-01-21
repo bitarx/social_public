@@ -232,7 +232,7 @@ var reinforce = (function() {
       _startParticle();
 
       var timer = setTimeout(function(){
-//          _startPush();
+          _startPush();
           clearTimeout(timer); 
       }, 1400);
 

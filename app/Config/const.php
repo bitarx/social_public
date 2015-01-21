@@ -114,7 +114,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
     } elseif ('waku' == PLATFORM_ENV) {
-        define("PLATFORM_APP_ID", 155);
+        define("PLATFORM_APP_ID", 100388);
     } else {
         define("PLATFORM_APP_ID", 218);
     }

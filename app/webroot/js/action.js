@@ -59,7 +59,7 @@ function routes(data)
 
 function dispProgressQuest(prog)
 {
-    $('#progQuestMain').html( '<input type="image" src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="20px">' );
+    $('#progQuestMain').html( '<img src="' + BASE_URL + 'img/progress_blue.png" width="' + prog + '%" height="40px">' );
     $('#progQuest').show(); 
      
 }
@@ -72,6 +72,12 @@ function dispProgressQuest(prog)
  * @return void 
  */
 function dispProgressQuestAct(act)
+{
+    $('#progQuestAct').html( '<img src="' + BASE_URL + 'img/progress_yellow.png" width="' + act + '%" height="40px">' );
+    $('#progQuestAct').show(); 
+     
+}
+function dispProgressQuestActMy(act)
 {
     $('#progQuestAct').html( '<img src="' + BASE_URL + 'img/progress_yellow.png" width="' + act + '%" height="20px">' );
     $('#progQuestAct').show(); 
@@ -87,7 +93,7 @@ function dispProgressQuestAct(act)
  */
 function dispProgressQuestExp(exp)
 {
-    $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="20px">' );
+    $('#progQuestExp').html( '<img src="' + BASE_URL + 'img/progress_green.png" width="' + exp + '%" height="40px">' );
     $('#progQuestExp').show(); 
      
 }

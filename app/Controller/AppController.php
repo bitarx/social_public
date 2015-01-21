@@ -145,17 +145,21 @@ class AppController extends Controller {
             $this->snsUtil = WakuUtil::create();
         } elseif ( 'niji' == PLATFORM_ENV ) {
             $this->snsUtil = NijiUtil::create();
+        } else {
+            $this->log(__FILE__.__LINE__. ' Platform error ');
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM  ));
         }
+
 
         if ( !empty($ownerId) && !empty($viewerId) ) {
 
             // 初回アクセス認証
-            if ('hills' == PLATFORM_ENV || ('hills' != PLATFORM_ENV && !empty($this->params['quest_flg']))) {
+            if (empty($this->params['qststg_flg'])) {
                 $ret =$this->snsUtil->checkSignature(); 
                 if (!$ret) {
                     // 検証に失敗した時の処理
                     $this->log(__FILE__.__LINE__.'OAuth Error'); 
-                    echo 'OAuth error';
+                    echo 'error';
                     exit;
                 }
             }
@@ -418,6 +422,7 @@ class AppController extends Controller {
             // ajax通信時使用
             if ('hills' != PLATFORM_ENV) {
                 $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
+                $this->ownerInfo .= '&qststg_flg=1';
             }
 
             // コントローラとアクション
@@ -426,6 +431,7 @@ class AppController extends Controller {
             $this->set('ctlAction',  $this->name . '/' . $this->action); 
             $this->set('event', $this->event);
 
+$this->log($this->userId); 
             // URLアサイン
             $this->_setUrl();
         }

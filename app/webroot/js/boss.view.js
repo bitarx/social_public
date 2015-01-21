@@ -507,9 +507,9 @@ boss.view = ( function() {
     }
 
     var timer = setTimeout(function(){
-//        _startPush();
+        _startPush();
         clearTimeout(timer); 
-    }, 800);
+    }, 600);
   }
 
 

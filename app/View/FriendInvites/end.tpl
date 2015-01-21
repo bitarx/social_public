@@ -5,7 +5,7 @@
         <a href="<{$linkPbox}>">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
             <div class="child" >
-               プレゼントボックスへ
+               受取BOXへ
             </div>
         </a>
     </div>

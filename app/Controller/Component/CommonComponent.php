@@ -154,4 +154,18 @@ class CommonComponent extends Component {
      public function nowDate() {
          return date("Y-m-d H:i:s");
      }
+
+     /**
+      * ランダム英数字生成
+      *
+      * @param 文字数
+      */
+    function makeRandStr($length) {
+        $str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z'));
+        $r_str = null;
+        for ($i = 0; $i < $length; $i++) {
+            $r_str .= $str[rand(0, count($str))];
+        }
+        return $r_str;
+    }
 }

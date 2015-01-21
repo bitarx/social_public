@@ -4,7 +4,7 @@
     <{if !empty($plus)}>
         <div class="space"></div>
             <div style="text-align:center">
-                <span style="color:#00FF00">おまけは受取ボックスへ振込みました。</span>
+                <span style="color:#00FF00">おまけは受取BOXへ送りました。</span>
             </div>
         <div class="space"></div>
     <{/if}>
@@ -12,7 +12,7 @@
     <{if !empty($hasMaxFlg)}>
         <div class="space"></div>
             <div style="text-align:center">
-                <span style="color:#FFA500">カードは受取ボックスへ振込みました。</span>
+                <span style="color:#FFA500">カードは受取BOXへ送りました。</span>
             </div>
         <div class="space"></div>
     <{/if}>

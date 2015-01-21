@@ -161,9 +161,15 @@ class ItemsController extends ApiController {
     public function comp() {
 
         $this->autoRender = false;   // 自動描画をさせない
+        if ('waku' == PLATFORM_ENV) {
+            $pidCol = 'payment_id';
+        } else {
+            $pidCol = 'paymentId';
+        }
 
         $userId = $this->params['uxid'];
-        if (empty($userId)) {
+        $paymentId = $this->params[$pidCol];
+        if (empty($userId) || empty($paymentId)) {
             // 不正
             $this->log(__FILE__ . __LINE__ . ': itemCompError');
             header("HTTP/1.1 400 NG"); 
@@ -182,8 +188,14 @@ class ItemsController extends ApiController {
         // applihillsはopensocial_owner_idの付与が正しくない為
         $this->userId = $userId;
 
-        // 最新ログ取得
-        $latestData = $this->PaymentLog->getLatestData($this->userId);
+        // 対象ログ取得
+        $field = array();
+        $where = array(
+            'payment_id' => $paymentId
+        ,   'user_id' => $this->userId
+        ,   'end_flg' => 0
+        );
+        $latestData = $this->PaymentLog->getAllFind($where, $field, 'first');
         if (empty($latestData)) {
             $this->UserParam->rollback(); 
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
@@ -192,46 +204,50 @@ class ItemsController extends ApiController {
         $items = $latestData['log'];
         $items = json_decode($items);
         $items[0] = (array)$items[0];
-
         $paymentId = $latestData['payment_id']; 
         $appId = null;
         if (!empty($this->params['opensocial_app_id'])) {
             $appId = $this->params['opensocial_app_id'];
         }
-        $where = array('user_id' => $userId);
+        $where = array('user_id' => $this->userId);
         $ownerId = $this->User->field('sns_user_id', $where);
 
-        $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId); 
-        if (empty($payment)) {
-            // 購入処理が正常に行われていない
-            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
-            header("HTTP/1.1 400 NG");
-            echo "NG";
-            die;
-        }
+        if ('waku' != PLATFORM_ENV) {
 
-        if ( 'waku' == PLATFORM_ENV ) {
-            $column = 'entry';
-        } elseif ( 'hills' == PLATFORM_ENV ) {
-            $column = 'paymentEntries';
-        } else {
-            $column = 'paymentItems';
-        }
-        $err = 0;
-        foreach ($payment[$column] as $key => $val) {
-            if ( $items[$key]['itemId'] != $val['itemId'] ) {
-                $err = 1;
+            $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId); 
+            if (empty($payment)) {
+                // 購入処理が正常に行われていない
+                $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+                header("HTTP/1.1 400 NG");
+                echo "NG";
+                die;
+            }
+
+            if ( 'waku' == PLATFORM_ENV ) {
+                $column = 'entry';
+            } elseif ( 'hills' == PLATFORM_ENV ) {
+                $column = 'paymentEntries';
+            } else {
+                $column = 'paymentItems';
+            }
+            $err = 0;
+            foreach ($payment[$column] as $key => $val) {
+                if ( $items[$key]['itemId'] != $val['itemId'] ) {
+                    $err = 1;
+                    break;
+                }
+                $itemId = $val['itemId'];
                 break;
             }
-            $itemId = $val['itemId'];
-            break;
-        }
 
-        if ($err == 1) {
-            // 直近で購入したアイテムではない
-            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+            if ($err == 1) {
+                // 直近で購入したアイテムではない
+                $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+            }
+        } else {
+            $itemId = $items[0]['itemId'];
         }
 
         $field = array();

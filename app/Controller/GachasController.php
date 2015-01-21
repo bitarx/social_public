@@ -480,10 +480,17 @@ class GachasController extends ApiController {
 
         $this->autoRender = false;   // 自動描画をさせない
 
+        if ('waku' == PLATFORM_ENV) {
+            $pidCol = 'payment_id';
+        } else {
+            $pidCol = 'paymentId';
+        }
+
         $gachaId = $this->params['gacha_id'];
         $userId = $this->params['uxid'];
+        $paymentId = $this->params[$pidCol];
 
-        if (empty($gachaId) || empty($userId)) {
+        if (empty($gachaId) || empty($userId) || empty($paymentId)) {
             // 不正
             $this->log(__FILE__ . __LINE__ . ': gachaCompError');
             header("HTTP/1.1 400 NG"); 
@@ -503,8 +510,14 @@ class GachasController extends ApiController {
         $this->userId = $userId;
 
 
-        // 最新ログ取得
-        $latestData = $this->PaymentLog->getLatestData($this->userId);
+        // 対象ログ取得
+        $field = array();
+        $where = array(
+            'payment_id' => $paymentId
+        ,   'user_id' => $this->userId
+        ,   'end_flg' => 0
+        );
+        $latestData = $this->PaymentLog->getAllFind($where, $field, 'first');
         if (empty($latestData)) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
@@ -524,15 +537,17 @@ class GachasController extends ApiController {
         $where = array('user_id' => $userId);
         $ownerId = $this->User->field('sns_user_id', $where);
 
-        $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId);
-        if (empty($payment)) {
+        if ('waku' != PLATFORM_ENV) {
+            $payment   = $this->snsUtil->getPayment($paymentId, $ownerId, $appId);
+            if (empty($payment)) {
 
-            // 購入処理が正常に行われていない 
-            $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
-            header("HTTP/1.1 400 NG"); 
-            echo "NG";
-            die;
+                // 購入処理が正常に行われていない 
+                $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+                header("HTTP/1.1 400 NG"); 
+                echo "NG";
+                die;
+            }
         }
 
         $gacha10 = 0;

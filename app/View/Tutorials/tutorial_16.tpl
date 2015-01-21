@@ -52,6 +52,17 @@
         <img src="<{$smarty.const.IMG_URL}>card/mai_pengin.jpg" width="160px">
         <img src="<{$smarty.const.IMG_URL}>card/mi_cat.jpg" width="160px">
     </div>
+    <div class="attrList">
+        <div class="strAttrAi">
+           愛 
+        </div>
+        <div class="strAttrMai">
+           舞 
+        </div>
+        <div class="strAttrMi">
+           魅 
+        </div>
+    </div>
     <div class="tutoStartItemTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="165px">
         <div class="tutoStartItemTextStr">
