@@ -459,7 +459,7 @@ $this->log($this->userId);
         $this->set('linkSnsUser', BASE_URL . 'SnsUsers/index'); 
         // デッキ
         $this->set('linkDeck', BASE_URL . 'UserDeckCards/index'); 
-        // プレゼントボックス
+        // 受取ボックス
         $this->set('linkPbox', BASE_URL . 'UserPresentBoxes/index'); 
         // アイテム
         $this->set('linkUserItem', BASE_URL . 'UserItems/index'); 
@@ -473,6 +473,8 @@ $this->log($this->userId);
         $this->set('linkStaticPage', BASE_URL . 'StaticPages/index'); 
         // 図鑑
         $this->set('linkCollect', BASE_URL . 'UserCollects/index'); 
+        // レイドボス
+        $this->set('linkRaid', BASE_URL . 'RaidQuests/index'); 
     }
 
     /**

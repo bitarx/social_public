@@ -203,9 +203,19 @@ a:hover {
     top: 315px;
     left: 388px;
 }
-.bn_menu {
+.icon_raid {
     position: absolute;
     top: 400px;
+    left: 0px;
+}
+.icon_card {
+    position: absolute;
+    top: 400px;
+    left: 194px;
+}
+.bn_menu {
+    position: absolute;
+    top: 485px;
     left: 10px;
 }
 

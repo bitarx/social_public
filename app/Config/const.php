@@ -15,6 +15,12 @@ if (!defined('DOMAIN')) {
 /**
  * プラットフォーム識別
  */
+
+$platformDomain = "";
+
+// 独自JSライブラリ
+define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
+
 if ( false !== strpos( DOMAIN, 'hills')) {
 
     /** アプリヒルズ */
@@ -28,40 +34,31 @@ if ( false !== strpos( DOMAIN, 'hills')) {
     define("SNS_FRIEND_NAME", 'フレンド');
     define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
 
-    // 独自JSライブラリ
-    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
-
 
 } elseif ( false !== strpos( DOMAIN, 'waku')) {
 
     /** waku+ */
     define("PLATFORM_ENV", 'waku');
-    $platformDomain = 'appli-hills.com';
+    $platformDomain = 'pf.wakupl.com';
 
     // APIのパス
     define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
 
     define("SNS_FRIEND_NAME", '友達');
-    define("POINT_NAME","ゴールド");             // プラットフォーム通貨の呼称
-
-    // 独自JSライブラリ
-    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
+    define("POINT_NAME","コイン");             // プラットフォーム通貨の呼称
 
 
 } elseif ( false !== strpos( DOMAIN, 'niji') ) {
 
     /** にじよめ */
     define("PLATFORM_ENV", 'niji');
-    $platformDomain = 'appli-hills.com';
+    $platformDomain = 'nijiyome.com';
 
     // APIのパス
     define("PLATFORM_INVITE_PATH", '/sp/application/invite/');
 
     define("SNS_FRIEND_NAME", 'フレンド');
     define("POINT_NAME","にじコイン");             // プラットフォーム通貨の呼称
-
-    // 独自JSライブラリ
-    define("NIJI_JSLIB_DOMAIN", 'gm.nijiyome.jp');
 
 } else {
     // プラットフォーム外
