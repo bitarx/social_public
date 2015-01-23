@@ -27,7 +27,7 @@
 
     <div class="stageList">
     <{foreach from=$list item=val}>
-        <a href="<{$smarty.const.BASE_URL}>stages/initStage?stage_id=<{$val['stage_id']}>">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/initStage?stage_id=<{$val['raid_stage_id']}>">
         <{if 3 == $val['state']}>
             <div class="strStageListEnd">
         <{else}>

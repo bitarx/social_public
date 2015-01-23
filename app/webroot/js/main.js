@@ -21,6 +21,7 @@ $(function(){
  * @return void
  */
 function appRequest(e){
+
     var act = $(this).attr("act");
     var params = $(this).attr("params");
     var method = $(this).attr("method");
@@ -41,6 +42,7 @@ function appRequest(e){
         type: type, 
 
         success: function( data, textStatus, jqXHR ) {
+console.log(data);
            routes(data);
         },
         error: function (request, status, error) {

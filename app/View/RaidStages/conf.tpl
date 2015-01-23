@@ -9,11 +9,20 @@
         <img src="<{$smarty.const.IMG_URL}>enemy/enemy_<{$data.enemy_id}>.jpg" >
     </div>
     <{include file="../Elements/before_words.tpl"}>
-    <div  class="btnQuestBossBattle">
-        <a href="act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>">
+    <div  class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                <div class="strQuestBossBattle">
+                <div class="child">
                     鎮激開始！
+                </div>
+        </a>
+    </div>
+    <div class="space"></div>
+    <div  class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>">
+                <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child">
+                    逃げる
                 </div>
         </a>
     </div>

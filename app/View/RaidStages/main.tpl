@@ -27,14 +27,14 @@ $(function () {
             </a>
         </div>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProgBoss" id="appReq" act="Stages/init<{$ownerInfo}>" params=<{$param}>>
+            <div  class="btnQuestProgBoss" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
                     進行！
                 </div>
             </div>
         <{else}> 
-            <div  class="btnQuestNotProgBoss" id="" act="Stages/init" params=<{$param}>>
+            <div  class="btnQuestNotProgBoss" id="" act="" params=<{$param}>>
                 <div class="strQuestProg" >
                     行動力がなくなりました‥
                 </div>
@@ -43,14 +43,14 @@ $(function () {
 
     <{else}>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProg" id="appReq" act="Stages/init<{$ownerInfo}>" params=<{$param}>>
+            <div  class="btnQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
                     進行！
                 </div>
             </div>
         <{else}> 
-            <div  class="btnQuestNotProg" id="" act="Stages/init" params=<{$param}>>
+            <div  class="btnQuestNotProg" id="" act="" params=<{$param}>>
                 <div class="strQuestProg" >
                     行動力がなくなりました‥
                 </div>

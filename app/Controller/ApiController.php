@@ -55,7 +55,6 @@ class ApiController extends AppController {
         $action = $this->name . '_' . $this->action;
         $this->set('action', $action);
         $keys[] = 'action';
-
         $this->viewClass = 'Json';
         $this->header('Access-Control-Allow-Origin: *');
         $this->set(array(

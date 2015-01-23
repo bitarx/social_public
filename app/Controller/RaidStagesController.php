@@ -1,12 +1,12 @@
 <?php
 App::uses('ApiController', 'Controller');
 /**
- * Stages Controller
+ * RaidStages Controller
  *
- * @property Stage $Stage
+ * @property RaidStage $RaidStage
  * @property PaginatorComponent $Paginator
  */
-class StagesController extends ApiController {
+class RaidStagesController extends ApiController {
 
     /**
      * Components
@@ -15,7 +15,7 @@ class StagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('UserStage', 'Enemy', 'UserDeck', 'Stage', 'UserCurStage', 'UserParam', 'StageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'Quest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy');
 
     /**
      *　定数
@@ -42,18 +42,18 @@ class StagesController extends ApiController {
         $questId = $this->params['quest_id'];
 
         // 到達したステージリスト
-        $ret = $this->UserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
+        $ret = $this->RaidUserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
         // このクエストは初めて
         if (empty($ret)) {
-            $list[] = $this->Stage->getFirstStage($questId);
+            $list[] = $this->RaidStage->getFirstStage($questId);
         } else {
             // 現在のクエストステージを抽出
             foreach ($ret as $val)  {
-                if ($val['quest_id'] == $questId) {
+                if ($val['raid_quest_id'] == $questId) {
                     $list[] = $val;
                 }
             }
-            $questData = $this->Quest->getQuestData($questId);
+            $questData = $this->RaidQuest->getQuestData($questId);
             $list[0]['quest_detail'] = $questData['quest_detail'];
         }
 
@@ -73,45 +73,45 @@ class StagesController extends ApiController {
         $stageId = $this->params['stage_id'];
 
         // 現在到達最大stageId
-        $curMaxStageId = $this->UserStage->getUserMaxStageId($this->userId);
+        $curMaxRaidStageId = $this->RaidUserStage->getUserMaxStageId($this->userId);
 
         // 初めてのアクセス
-        if (empty($curMaxStageId)) {
-            $curMaxStageId = 1;
+        if (empty($curMaxRaidStageId)) {
+            $curMaxRaidStageId = 1;
             $stageId = 1;
             $first = 1;
         }
 
         // 不正
-        if ( ($curMaxStageId < $stageId) || empty($stageId) ) {
+        if ( ($curMaxRaidStageId < $stageId) || empty($stageId) ) {
             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
-        $this->UserCurStage->begin(); 
+        $this->RaidUserCurStage->begin(); 
         try {
             if ($first == 1) {
                 $values = array(
                     'user_id'  => $this->userId  
-                ,   'stage_id' => $stageId
+                ,   'raid_stage_id' => $stageId
                 ,   'progress' => 0
                 ,   'state'    => 1
                 );
-                $this->UserStage->save($values);    
+                $this->RaidUserStage->save($values);    
             }
             $values = array(
                 'user_id' => $this->userId  
-            ,   'stage_id' => $stageId
+            ,   'raid_stage_id' => $stageId
             );
-            $this->UserCurStage->save($values);    
+            $this->RaidUserCurStage->save($values);    
         } catch (AppException $e) { 
-            $this->UserCurStage->rollback(); 
+            $this->UserCurRaidStage->rollback(); 
             $this->log($e->errmes);
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
-        $this->UserCurStage->commit(); 
+        $this->RaidUserCurStage->commit(); 
 
         $params = array('stage_id' => $stageId);
-        $this->rd('Stages', 'main', $params);
+        $this->rd('RaidStages', 'main', $params);
     }
 
     /**
@@ -124,19 +124,19 @@ class StagesController extends ApiController {
 
         $stageId = $this->params['stage_id'];
 
-        $data = $this->UserStage->getUserStage($this->userId, $stageId, $recu = 2);
+        $data = $this->RaidUserStage->getUserStage($this->userId, $stageId, $recu = 2);
 
         // 到達していない
         if (!isset($data['progress'])) {
-            $this->log('Stage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->log('RaidStage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
 
         $userParam = $this->UserParam->getUserParams($this->userId);
 
         $params = array(
-            'stage_id' => $stageId
-        ,   'quest_id' => $data['quest_id']
+            'raid_stage_id' => $stageId
+        ,   'raid_quest_id' => $data['raid_quest_id']
         ,   'progress' => $data['progress']
         ,   'state'    => $data['state']
         );
@@ -206,8 +206,12 @@ class StagesController extends ApiController {
         // デッキにカードが１枚もない
         if (!empty($this->params['nocard'])) $noCard = 1;
 
-        $userStageData = $this->UserStage->getUserStage($this->userId, $stageId);
-        $enemyData = $this->Enemy->getEnemyData($userStageData['enemy_id']);
+ $this->log($stageId); 
+        $where = array('user_id' => $this->userId);
+        $enemyId = $this->RaidUserCurEnemy->field('enemy_id', $where);
+//        $userRaidStageData = $this->RaidUserStage->getUserStage($this->userId, $stageId);
+ $this->log($enemyId); 
+        $enemyData = $this->Enemy->getEnemyData($enemyId);
         $this->set('data', $enemyData);
         $this->set('noCard', $noCard);
         $this->set('stageId', $stageId);
@@ -225,9 +229,9 @@ class StagesController extends ApiController {
         $targetId = $this->params['target_id'];
         $stageId  = $this->params['stage_id'];
 
-        $userStage = $this->UserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
+        $userRaidStage = $this->RaidUserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
         // ブラウザバックなど不正操作
-        if (empty($userStage) || 2 != $userStage['UserStage']['state']) {
+        if (empty($userRaidStage) || 2 != $userRaidStage['RaidUserStage']['state']) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
@@ -258,7 +262,7 @@ class StagesController extends ApiController {
         // デッキにカードがない
         if (empty($userCards)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('Stages', 'conf', array('nocard' => 1, 'stage_id'=> $stageId));
+             $this->rd('RaidStages', 'conf', array('nocard' => 1, 'stage_id'=> $stageId));
         }
 
         $battleLog = array();
@@ -382,36 +386,36 @@ class StagesController extends ApiController {
             if ($winner == 1) {
                 $where = array('enemy_id' => $targetId);
                 $field = array('stage_id');
-                $data = $this->Stage->getAllFind($where, $field, 'first');
+                $data = $this->RaidStage->getAllFind($where, $field, 'first');
 
                 $value = array('state' => 3);
                 $where = array(
                             'user_id' => $this->userId
-                        ,   'UserStage.stage_id' => $data['stage_id']
+                        ,   'RaidUserStage.stage_id' => $data['stage_id']
                         );
-                $this->UserStage->updateAll($value, $where);
+                $this->RaidUserStage->updateAll($value, $where);
 
                 // 現在到達最大ステージ
-                $stageId = $this->UserStage->getUserMaxStageId($this->userId);
+                $stageId = $this->RaidUserStage->getUserMaxRaidStageId($this->userId);
 
                 // 次のステージ
-                $nextStageId = $stageId + 1;
+                $nextRaidStageId = $stageId + 1;
 
-                if ($nextStageId <= MAX_STAGE_ID) {
+                if ($nextRaidStageId <= MAX_STAGE_ID) {
 
                     $field = array('state');
                     $where = array(
                                  'user_id'  => $this->userId
                              ,   'stage_id' => $stageId
                              );
-                    $maxStage = $this->UserStage->getAllFind($where, $field, 'first');
+                    $maxRaidStage = $this->RaidUserStage->getAllFind($where, $field, 'first');
 
-                    if ( 3 == $maxStage['state'] ) {
+                    if ( 3 == $maxRaidStage['state'] ) {
                         // 次のステージへ
                         $fields = array('user_id', 'stage_id', 'progress', 'state');
                         $values = array();
-                        $values[] = array($this->userId, $nextStageId, 0, 1);
-                        $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+                        $values[] = array($this->userId, $nextRaidStageId, 0, 1);
+                        $this->RaidUserStage->insertBulk($fields, $values, $ignore = 1);
                     }
                 }
 
@@ -424,7 +428,7 @@ class StagesController extends ApiController {
         } 
         $this->BattleLog->commit(); 
 
-        $this->rd('Stages', 'product');
+        $this->rd('RaidStages', 'product');
     }
 
     /**
@@ -573,14 +577,14 @@ class StagesController extends ApiController {
             $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
             $data = $this->Enemy->getEnemyData($log['target']);
             $enemyId = $data['enemy_id'];
-            $next = 'Stages/comp';
+            $next = 'RaidStages/comp';
         } else {
             $page = isset($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 0;
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
-            $next = 'UserStages/index?' . KEY_PAGING . '='. $page;
+            $next = 'RaidUserStages/index?' . KEY_PAGING . '='. $page;
         }
-        $stage = $this->UserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
+        $stage = $this->RaidUserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
@@ -588,7 +592,7 @@ class StagesController extends ApiController {
 
         $this->set('data', $data);
         $this->set('next', $next);
-        $this->set('questId', $stage['Stage']['quest_id']);
+        $this->set('questId', $stage['RaidStage']['quest_id']);
     }
 
     /**
@@ -601,29 +605,29 @@ class StagesController extends ApiController {
 
         $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
 
-        $nextStageId = $this->UserStage->getUserMaxStageId($this->userId);
+        $nextRaidStageId = $this->RaidUserStage->getUserMaxRaidStageId($this->userId);
 
         // 勝利ではない
         if (1 != $log['result'])  {
             $where = array('enemy_id' => $log['target']);
             $field = array('stage_id');
-            $data = $this->Stage->getAllFind($where, $field, 'first');
+            $data = $this->RaidStage->getAllFind($where, $field, 'first');
 
             $param = array(
                          'stage_id' => $data['stage_id']
                      );
-            $this->rd('Stages', 'main' , $param);
+            $this->rd('RaidStages', 'main' , $param);
         }
         // 処理済
         if ("0000-00-00 00:00:00" != $log['modified']) {
             $param = array(
-                         'stage_id' => $nextStageId
+                         'stage_id' => $nextRaidStageId
                      );
-            $this->rd('Stages', 'main' , $param);
+            $this->rd('RaidStages', 'main' , $param);
         }
 
 
-        $this->UserStage->begin(); 
+        $this->RaidUserStage->begin(); 
         try {  
 
             $values = array(
@@ -632,22 +636,22 @@ class StagesController extends ApiController {
             $this->BattleLog->save($values);
         
         } catch (AppException $e) { 
-            $this->UserStage->rollback(); 
+            $this->RaidUserStage->rollback(); 
             $this->log($e->errmes);
             return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
-        $this->UserStage->commit(); 
+        $this->RaidUserStage->commit(); 
 
         $ending = $this->Enemy->judgeEnding($log['target']);
         if (!$ending) {
             // エピローグではない場合は次のステージへ
             $param = array(
-                         'stage_id' => $nextStageId
+                         'stage_id' => $nextRaidStageId
                      );
-            $this->rd('Stages', 'main' , $param);
+            $this->rd('RaidStages', 'main' , $param);
         } else {
             // エピローグ
-            $this->rd('Stages', 'end');
+            $this->rd('RaidStages', 'end');
         }
 
     }
@@ -665,7 +669,7 @@ class StagesController extends ApiController {
         // エピローグ
         $where = array('enemy_id' => $log['target']);
         $field = array();
-        $data  = $this->Stage->getAllFind($where, $field, 'first');
+        $data  = $this->RaidStage->getAllFind($where, $field, 'first');
 
         $this->set('data', $data);
     }
@@ -694,24 +698,22 @@ class StagesController extends ApiController {
             $data['user_id'] = $userId;
 
             // 現在のユーザステージ情報取得
-            $userStageData = $this->UserStage->getUserStage($userId, $data['stage_id']);
-            $data['progress'] = $userStageData['progress'];
+            $userRaidStageData = $this->RaidUserStage->getUserStage($userId, $data['raid_stage_id']);
+            $data['progress'] = $userRaidStageData['progress'];
 
             // ユーザステータス取得
             $userParam = $this->userParam;
 
             // 行動力チェック
-            if ($userParam['act'] < $userStageData['use_act']) {
-
+            if ($userParam['act'] < $userRaidStageData['use_act']) {
                 // 不足の場合は不正
                 $ary = array(
                     'result' => 2
-                ,   'stage_id' => $data['stage_id']
+                ,   'stage_id' => $data['raid_stage_id']
                 );
                 $this->setJson($ary);
                 return false;
             }
-
             // 何かもらえるかどうか
             $lotData['kind']   = 0;
             $lotData['target'] = 0;
@@ -727,11 +729,10 @@ class StagesController extends ApiController {
             list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId);
 
             // 確変中は出現率もアップ
-            if ( 0 < $effect ) $userStageData['prob_get'] += QUEST_ITEM_EFFECT;
-
-            if ($hit <= $userStageData['prob_get']) {
+            if ( 0 < $effect ) $userRaidStageData['prob_get'] += QUEST_ITEM_EFFECT;
+            if ($hit <= $userRaidStageData['prob_get']) {
                 // 抽選設定値取得
-                $list = $this->StageProb->getStageProb($data['stage_id']);
+                $list = $this->RaidStageProb->getStageProb($data['raid_stage_id']);
 
                 // 確率変動アイテムによる効果
                 list($effect, $effectSecond) = $this->UserStageEffect->changeProbList($this->userId, $list);
@@ -742,8 +743,7 @@ class StagesController extends ApiController {
 
             // カード所有最大フラグ初期化
             $hasMaxFlg = 0;
-
-            $this->UserStage->begin(); 
+            $this->RaidUserStage->begin(); 
             try {
                 // 入手カード振込など
                 switch($lotData['kind'])
@@ -787,6 +787,12 @@ class StagesController extends ApiController {
                         break;
                     // 敵
                     case KIND_ENEMY:
+                        // 遭遇敵を記録
+                        $value = array(
+                            'user_id' => $this->userId 
+                        ,   'enemy_id' => $lotData['target']
+                        );
+                        $this->RaidUserCurEnemy->save($value);
                         break;
                     // 全力進行
                     case KIND_PROG_HIGHT:
@@ -817,12 +823,12 @@ class StagesController extends ApiController {
                         }
                         
                 }
-
                 $range   = 1;
 
                 // 進行度アップ
                 $stageClear = 0;
-                $nextStageId = $data['stage_id'];
+                $nextRaidStageId = $data['raid_stage_id'];
+/*
                 if ($data['progress'] < 100) {
 
                     $add = $this->Common->lotRange($baseInt, $range);
@@ -839,22 +845,22 @@ class StagesController extends ApiController {
                         );
                         $where = array(
                             'user_id' => $this->userId 
-                        ,   'UserStage.stage_id' => $data['stage_id']     
+                        ,   'RaidUserStage.raid_stage_id' => $data['raid_stage_id']     
                         );
-                        $this->UserStage->updateAll($value, $where);
+                        $this->RaidUserStage->updateAll($value, $where);
 
                         $stageClear = 1;
                     } else {
-                        $this->UserStage->initUserStage($data);    
+                        $this->RaidUserStage->initUserStage($data);    
                     }
                 }
-
+*/
 
                 // 行動力の減算
                 $notAct = 0;
-                $userParam['act'] -= $userStageData['use_act'];
+                $userParam['act'] -= $userRaidStageData['use_act'];
                 if ($userParam['act'] < 0) $userParam['act'] = 0;
-                if ($userParam['act'] < $userStageData['use_act']) $notAct = 1;
+                if ($userParam['act'] < $userRaidStageData['use_act']) $notAct = 1;
 
                 // 行動時間を記録
                 $values = array(
@@ -864,11 +870,11 @@ class StagesController extends ApiController {
 
                 // 経験値アップ
                 $levelUp = 0;
-                $expBaseInt = $userStageData['use_act'];
+                $expBaseInt = $userRaidStageData['use_act'];
 
                 // 一回のクエスト実行で獲得経験値最大
                 mt_srand();
-                $getExp = mt_rand(1, $expBaseInt);
+                $getExp = mt_rand(0, $expBaseInt);
                 // 獲得経験値抑制
                 $getExp = $this->Common->expMinus($getExp, $userParam['level']);
                 $userParam['exp'] += $getExp;
@@ -916,18 +922,18 @@ class StagesController extends ApiController {
                 ,   'level_up_cost_bf' => $costAtkBef               // レベルアップ前のデッキコスト
                 ,   'level_up_cost_af' => $userParam['cost_atk']    // レベルアップ後のデッキコスト
                 ,   'stage_clear'      => $stageClear               // ステージクリアの場合1 
-                ,   'stage_id'         => $data['stage_id']         // ステージID
+                ,   'stage_id'         => $data['raid_stage_id']         // ステージID
                 ,   'name'             => $targetData['name']       // 入手物の名前
                 ,   'effect'           => $effect                   // アイテム効果による確率変動(3:カードup 4:ゴールドup)
                 ,   'effectSecond'     => $effectSecond             // アイテム効果残り秒
                 ,   'has_max_flg'      => $hasMaxFlg                // カード所持最大フラグ
                 );
             } catch (AppException $e) { 
-                $this->UserStage->rollback(); 
+                $this->RaidUserStage->rollback(); 
                 $this->log($e->errmes);
                 $ary = array('result' => 2);
             } 
-            $this->UserStage->commit(); 
+            $this->RaidUserStage->commit(); 
 
         } else {
             $ary = array('result' => 2);

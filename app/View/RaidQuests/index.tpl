@@ -20,10 +20,10 @@
                     </div>
                   </div>
                   <div class="parent">
-                      <a href="<{$linkStage}>?quest_id=<{$val['quest_id']}> "> 
+                      <a href="<{$smarty.const.BASE_URL}>RaidStages/index?quest_id=<{$val['raid_quest_id']}>"> 
                           <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
                           <div class="child">
-                              鎮激ミッション開始
+                              <{$val['quest_title']}>へ
                           </div>
                       </a>
                   </div>

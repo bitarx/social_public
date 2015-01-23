@@ -208,7 +208,7 @@ $config = array();
 define("KIND_CARD","1");
 // アイテム
 define("KIND_ITEM","2");
-// ゴールド
+// ペニー
 define("KIND_GOLD","3");
 // 敵
 define("KIND_ENEMY","4");
