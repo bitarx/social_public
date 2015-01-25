@@ -1,6 +1,6 @@
 <div class="stages">
     <div>
-        <img src="<{$smarty.const.IMG_URL}>quest/main_<{$list[0]['quest_id']}>.jpg"> 
+        <img src="<{$smarty.const.IMG_URL}>raid_quest/main_<{$list[0]['raid_quest_id']}>.jpg"> 
     </div>
     <div class="guideL">
         <div class="guideImg">

@@ -9,7 +9,7 @@ $(function () {
 });
 </script>
 <div class="stageMain">
-    <img src="<{$smarty.const.IMG_URL}>quest/main_<{$data.quest_id}>.jpg">
+    <img src="<{$smarty.const.IMG_URL}>raid_quest/main_<{$data.raid_quest_id}>.jpg">
     <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
         <div class="child">
@@ -27,10 +27,10 @@ $(function () {
             </a>
         </div>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProgBoss" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
+            <div  class="btnRaidQuestProgBoss" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
-                    進行！
+                    探索！
                 </div>
             </div>
         <{else}> 
@@ -43,10 +43,10 @@ $(function () {
 
     <{else}>
         <{if empty($notAct)}> 
-            <div  class="btnQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
+            <div  class="btnRaidQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
-                    進行！
+                    探索！
                 </div>
             </div>
         <{else}> 
@@ -61,21 +61,6 @@ $(function () {
     <div class="progQuest">
         <div class="progQuestUseStr">
             消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
-        </div>
-        <div class="progQuestMainStr">
-            進行度:
-        </div>
-        <div id="progQuestMain" class="progQuestMain">
-        </div>
-        <div class="progQuestActStr">
-            行動力:
-        </div>
-        <div id="progQuestAct" class="progQuestAct">
-        </div>
-        <div class="progQuestExpStr">
-            経験値:
-        </div>
-        <div id="progQuestExp" class="progQuestExp">
         </div>
     </div>
 

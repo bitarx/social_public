@@ -333,7 +333,6 @@ boss.layout = ( function() {
   * ターン数設定
   */
   function setTurn( num ) {
-/*
     if( _stocker.getDO( "turnNum" ) ) {
       _stocker.getDO( "stage" ).removeChild( _stocker.getDO( "turnNum" ) );
       _stocker.setDO( "turnNum", null );
@@ -345,7 +344,6 @@ boss.layout = ( function() {
     turnNum_bm.y = -310;
     _stocker.setDO( "turnNum", turnNum_bm );
     _stocker.getDO( "stage" ).addChild( _stocker.getDO( "turnNum" ) );
-*/
   }
 
   var exports = {};

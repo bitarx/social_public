@@ -8,6 +8,9 @@ App::uses('ApiController', 'Controller');
  */
 class RaidStagesController extends ApiController {
 
+    // 最大ターン数
+    public static $maxTurnNum = 2;
+
     /**
      * Components
      *
@@ -15,7 +18,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'BattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt');
 
     /**
      *　定数
@@ -132,6 +135,16 @@ class RaidStagesController extends ApiController {
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
 
+        // 敵出現状態であれば敵画面へ
+        $where = array(
+            'RaidUserCurEnemy.user_id' => $this->userId
+        ,   'RaidUserCurEnemy.raid_stage_id' => $stageId
+        );
+        $ret = $this->RaidUserCurEnemy->field('user_id', $where);
+        if (!empty($ret)) {
+            $this->rd('RaidStages', 'conf', array('stage_id'=> $stageId )); 
+        }
+
         $userParam = $this->UserParam->getUserParams($this->userId);
 
         $params = array(
@@ -177,7 +190,6 @@ class RaidStagesController extends ApiController {
         if (!empty($this->ownerInfo)) {
             $ownerInfo = '?' . $this->ownerInfo;
         }
-
         $this->set('ownerInfo', $ownerInfo);
         $this->set('data', $data);
         $this->set('userParam', $userParam);
@@ -206,11 +218,13 @@ class RaidStagesController extends ApiController {
         // デッキにカードが１枚もない
         if (!empty($this->params['nocard'])) $noCard = 1;
 
- $this->log($stageId); 
-        $where = array('user_id' => $this->userId);
+        $where = array(
+            'RaidUserCurEnemy.user_id' => $this->userId
+        ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
+        );
         $enemyId = $this->RaidUserCurEnemy->field('enemy_id', $where);
 //        $userRaidStageData = $this->RaidUserStage->getUserStage($this->userId, $stageId);
- $this->log($enemyId); 
+
         $enemyData = $this->Enemy->getEnemyData($enemyId);
         $this->set('data', $enemyData);
         $this->set('noCard', $noCard);
@@ -226,15 +240,33 @@ class RaidStagesController extends ApiController {
      */
     public function act() {
 
+        if (empty($this->params['target_id']) || empty($this->params['stage_id']) || empty($this->params['at'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .': raid act Param Error : userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+        }
+
         $targetId = $this->params['target_id'];
         $stageId  = $this->params['stage_id'];
+        $attack  = $this->params['at'];
 
-        $userRaidStage = $this->RaidUserStage->getUserStageByEnemyId($this->userId, $targetId ,$state = 2);
-        // ブラウザバックなど不正操作
-        if (empty($userRaidStage) || 2 != $userRaidStage['RaidUserStage']['state']) {
+        // 不正
+        if (!($attack == 1 || $attack == 2 || $attack == 6)) {
+             $this->log( __FILE__ .  ':' . __LINE__ .' : attack Param Error : userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+        }
+
+        // 出現状態の敵がいるか
+        $where = array(
+            'RaidUserCurEnemy.user_id' => $this->userId
+        ,   'RaidUserCurEnemy.raid_stage_id' => $stageId
+        );
+        $enemyLevel = $this->RaidUserCurEnemy->field('level', $where);
+        if (empty($enemyLevel)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
+
+
 
         // 防御側のデッキ取得
         $target = $this->Enemy->getEnemyData($targetId);
@@ -270,7 +302,7 @@ class RaidStagesController extends ApiController {
         // 敵HP最大
         $battleLog['enemy_max']   = $target['hp'];
         // 敵HP初期値
-        $battleLog['enemy_cur']   = $target['hp'];
+        $startEnemyHp = $battleLog['enemy_cur']   = $target['hp'];
 
         // カード１
         $battleLog['card_id_1']   = isset($userCards[0]['UserCard']['card_id']) ? $userCards[0]['UserCard']['card_id']:0;
@@ -364,6 +396,9 @@ class RaidStagesController extends ApiController {
                 break;
             }
             $count++;
+
+            // レイドボス戦なのでターン制限
+            if (self::$maxTurnNum < $count) break;
         }
 
         // 勝者1:プレイヤー 2:敵
@@ -372,18 +407,85 @@ class RaidStagesController extends ApiController {
         // 要した攻撃回数（ターン数ではない）
         $battleLog['count']   = $count;
 
+        // 与えたダメージを抽出
+        $allDamage = 0;
+        foreach ($battleLog as $key => $val) {
+            if (is_numeric($key)) {
+                foreach ($val as $v) {
+                    if (isset($v['targetData']['enemy_id'])) {
+                        $allDamage += $v['damage'];
+                    }
+                }
+            }
+        }
         $battleLog = json_encode($battleLog);
+
+        // 敵生存時間を取得
+        $where = array('enemy_id' => $targetId);
+        $aliveTime = $this->RaidEnemyAliveTime->field('alive_time', $where);
+        if (empty($aliveTime)) {
+             $this->log( __FILE__ .  ':' . __LINE__ .' : Raid Alive Data Error :userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+        }
+        $addTimeSp = $this->Common->h2s($aliveTime);
+        $endTimeSp = time() + $addTimeSp;
+        $endTime = date("Y-m-d H:i:s", $endTimeSp);
 
 
         // バトルログ登録
-        $this->BattleLog->begin(); 
+        $this->RaidBattleLog->begin(); 
         try {  
 
-            $values[] = array($this->userId , $targetId, $winner, $battleLog);
-            $this->BattleLog->registBattleLog($values);
+
+            // レイドマスタ登録
+            $value = array(
+                'user_id'  => $this->userId 
+            ,   'enemy_id' => $targetId 
+            ,   'level'    => $enemyLevel
+            ,   'hp'       => $startEnemyHp 
+            ,   'end_time' => $endTime
+            );
+            $this->RaidMaster->save($value);
+
+            $raidMasterId = $this->RaidMaster->getLastInsertID();
+            if (empty($raidMasterId)) {
+                 $this->log( __FILE__ .  ':' . __LINE__ .' : Raid Get Latest Id Error :userId:' . $this->userId );
+                 $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+            }
+
+            $values[] = array($this->userId , $targetId, $raidMasterId, $winner, $battleLog);
+            $this->RaidBattleLog->registBattleLog($values);
+
+            // レイドダメージ登録
+            $value = array(
+                'user_id'  => $this->userId 
+            ,   'raid_master_id' => $raidMasterId 
+            ,   'damage' => $allDamage
+            );
+            $this->RaidDamage->save($value);
+
+            // HP更新
+            $afterHp = $startEnemyHp - $allDamage;
+            if ($afterHp < 0) $afterHp = 0;
+            $value = array(
+                'raid_master_id'  => $raidMasterId
+            ,   'hp'              => $afterHp 
+            );
+            $this->RaidMaster->save($value);
+
+            // 敵出現状態削除
+            $where = array(
+                'RaidUserCurEnemy.user_id' => $this->userId
+            ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
+            );
+            if(!$this->RaidUserCurEnemy->deleteAll($where)){
+                 $this->log( __FILE__ .  ':' . __LINE__ .' : Raid CurEnemy Delete Error :userId:' . $this->userId );
+                 $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+            }
 
             // 勝利の場合ステータス変更
             if ($winner == 1) {
+/*
                 $where = array('enemy_id' => $targetId);
                 $field = array('stage_id');
                 $data = $this->RaidStage->getAllFind($where, $field, 'first');
@@ -394,39 +496,16 @@ class RaidStagesController extends ApiController {
                         ,   'RaidUserStage.stage_id' => $data['stage_id']
                         );
                 $this->RaidUserStage->updateAll($value, $where);
-
-                // 現在到達最大ステージ
-                $stageId = $this->RaidUserStage->getUserMaxRaidStageId($this->userId);
-
-                // 次のステージ
-                $nextRaidStageId = $stageId + 1;
-
-                if ($nextRaidStageId <= MAX_STAGE_ID) {
-
-                    $field = array('state');
-                    $where = array(
-                                 'user_id'  => $this->userId
-                             ,   'stage_id' => $stageId
-                             );
-                    $maxRaidStage = $this->RaidUserStage->getAllFind($where, $field, 'first');
-
-                    if ( 3 == $maxRaidStage['state'] ) {
-                        // 次のステージへ
-                        $fields = array('user_id', 'stage_id', 'progress', 'state');
-                        $values = array();
-                        $values[] = array($this->userId, $nextRaidStageId, 0, 1);
-                        $this->RaidUserStage->insertBulk($fields, $values, $ignore = 1);
-                    }
-                }
+*/
 
             }
 
         } catch (AppException $e) { 
-            $this->BattleLog->rollback(); 
+            $this->RaidBattleLog->rollback(); 
             $this->log($e->errmes);
             return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
         } 
-        $this->BattleLog->commit(); 
+        $this->RaidBattleLog->commit(); 
 
         $this->rd('RaidStages', 'product');
     }
@@ -442,7 +521,7 @@ class RaidStagesController extends ApiController {
         // 共通レイアウトは使わない
         $this->layout = '';
 
-        $data = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $data = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
         $data['log'] = json_decode($data['log'], true);
         $enemy = $this->Enemy->getEnemyData($data['target']);
 
@@ -550,6 +629,9 @@ class RaidStagesController extends ApiController {
         $turn     = json_encode($turn);
         $player   = json_encode($player);
 
+        $where = array('user_id' => $this->userId);
+        $stageId = $this->RaidUserCurStage->field('raid_stage_id', $where);
+$this->log($data); 
         // Js内で画面横幅変更用
         $divNum = 1;
         if (CARRER_IPHONE == $this->carrer) $divNum = 2;
@@ -557,6 +639,7 @@ class RaidStagesController extends ApiController {
         $this->set('data', $data);
         $this->set('player', $player);
         $this->set('enemy', $enemy);
+        $this->set('stageId', $stageId);
         $this->set('turn', $turn);
         $this->set('playerSkillData', $playerSkillData);
         $this->set('enemySkillData' , $enemySkillData);
@@ -574,7 +657,7 @@ class RaidStagesController extends ApiController {
         $this->layout = '';
 
         if (empty($this->params['enemy_id'])) {
-            $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+            $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
             $data = $this->Enemy->getEnemyData($log['target']);
             $enemyId = $data['enemy_id'];
             $next = 'RaidStages/comp';
@@ -603,9 +686,9 @@ class RaidStagesController extends ApiController {
      */
     public function comp() {
 
-        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
 
-        $nextRaidStageId = $this->RaidUserStage->getUserMaxRaidStageId($this->userId);
+        $nextRaidStageId = $this->RaidUserStage->getUserMaxStageId($this->userId);
 
         // 勝利ではない
         if (1 != $log['result'])  {
@@ -633,7 +716,7 @@ class RaidStagesController extends ApiController {
             $values = array(
                           'id' => $log['id']
                       );
-            $this->BattleLog->save($values);
+            $this->RaidBattleLog->save($values);
         
         } catch (AppException $e) { 
             $this->RaidUserStage->rollback(); 
@@ -664,7 +747,7 @@ class RaidStagesController extends ApiController {
      */
     public function end() {
 
-        $log = $this->BattleLog->getBattleLogDataLatest($this->userId);
+        $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
 
         // エピローグ
         $where = array('enemy_id' => $log['target']);
@@ -787,12 +870,28 @@ class RaidStagesController extends ApiController {
                         break;
                     // 敵
                     case KIND_ENEMY:
+                        // 遭遇敵のレベルを決定
+                        $enemyLevel = 1;
+                        $where = array(
+                            'RaidUserEnemyCnt.user_id'  => $this->userId
+                        ,   'RaidUserEnemyCnt.enemy_id' => $lotData['target']
+                        );
+                        $cnt = $this->RaidUserEnemyCnt->field('cnt', $where);
+                        if (!empty($cnt)) {
+                            $enemyLevel = $cnt + 1;
+                        }
                         // 遭遇敵を記録
                         $value = array(
-                            'user_id' => $this->userId 
-                        ,   'enemy_id' => $lotData['target']
+                            'RaidUserCurEnemy.user_id'       => $this->userId 
+                        ,   'RaidUserCurEnemy.raid_stage_id' => $data['raid_stage_id']
+                        ,   'RaidUserCurEnemy.enemy_id'      => $lotData['target']
+                        ,   'RaidUserCurEnemy.level'         => $enemyLevel
                         );
-                        $this->RaidUserCurEnemy->save($value);
+$this->log($value); 
+                        $fields = array('user_id', 'raid_stage_id', 'enemy_id', 'level');
+                        $value = array();
+                        $value[] = array($this->userId, $data['raid_stage_id'], $lotData['target'], $enemyLevel);
+                        $this->RaidUserCurEnemy->insertBulk($fields, $value, $ignore = 1);
                         break;
                     // 全力進行
                     case KIND_PROG_HIGHT:

@@ -10,19 +10,28 @@
     </div>
     <{include file="../Elements/before_words.tpl"}>
     <div  class="parent">
-        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=1">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="child">
-                    鎮激開始！
+                    通常攻撃
                 </div>
         </a>
     </div>
     <div class="space"></div>
     <div  class="parent">
-        <a href="<{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>">
-                <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=2">
+                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="child">
-                    逃げる
+                    攻撃力２倍
+                </div>
+        </a>
+    </div>
+    <div class="space"></div>
+    <div  class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=6">
+                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                <div class="child">
+                    攻撃力６倍
                 </div>
         </a>
     </div>

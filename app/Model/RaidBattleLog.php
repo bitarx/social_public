@@ -1,11 +1,164 @@
 <?php
 App::uses('AppModel', 'Model');
-App::uses('BattleLog', 'Model');
 /**
  * RaidBattleLog Model
  *
  * @property User $User
  */
-class RaidBattleLog extends BattleLog {
+class RaidBattleLog extends AppModel {
 
+/**
+ * Validation rules
+ *
+ * @var array
+ */
+	public $validate = array(
+		'user_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'target' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'result' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'log' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'delete_flg' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
+
+	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'User' => array(
+			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+
+    /**
+     * バトルログリスト取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array ログリスト
+     */
+    public function getBattleLogList($userId, $limit = 2, $offset = 0) {
+
+        $where = array(
+            'OR' => array(
+                'user_id' => $userId
+            ,   'target' => $userId
+            ) 
+        );
+        $fields = array('id', 'target', 'result', 'log');
+        $order = array('BattleLog.created DESC');
+        $ret = $this->getAllFind($where, $fields, 'all', $order, $limit, $offset);
+        return $ret;
+    }
+
+    /**
+     * 最新バトルログデータ取得
+     *
+     * @author imanishi
+     * @param int $userId
+     * @return array 最新ログデータ
+     */
+    public function getBattleLogDataLatest($userId) {
+
+        $where = array('user_id' => $userId);
+        $fields = array('id', 'target', 'result', 'log', 'created', 'modified');
+        $order = array($this->getTableAlias() . '.created DESC'); 
+        $ret = $this->getAllFind($where, $fields, 'first', $order);
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ取得
+     *
+     * @author imanishi
+     * @param int $id
+     * @return array ログデータ
+     */
+    public function getBattleLogData($id) {
+
+        $where = array('id' => $id);
+        $fields = array('id', 'target', 'result', 'log');
+        $ret = $this->getAllFind($where, $fields, 'first');
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ登録更新
+     *
+     * @author imanishi
+     * @param array $values
+     * @return array ログデータ
+     */
+    public function initBattleLogData($values) {
+
+        $ret = $this->save($values);
+        return $ret;
+    }
+
+    /**
+     * バトルログデータ登録
+     *
+     * @author imanishi
+     * @param array $values
+     * @return bool
+     */
+    public function registBattleLog($values) {
+
+        $fields = array('user_id', 'target', 'raid_master_id', 'result', 'log');
+        $ret = $this->insertBulk($fields, $values);
+        return $ret;
+    }
 }

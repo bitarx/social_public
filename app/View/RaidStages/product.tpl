@@ -19,10 +19,10 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/preloadjs-0.4.1.min.js"></script>
 
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.utils.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.stocker.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/raidboss.stocker.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.loader.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.view.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.main.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/raidboss.main.js"></script>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
@@ -41,9 +41,10 @@
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
                 <{if $data.result == 2}>
-                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/comp";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>";
                 <{else}>
-                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/scene";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>";
+//                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/comp";
                 <{/if}>
             });
         }

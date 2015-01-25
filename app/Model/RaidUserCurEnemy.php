@@ -1,11 +1,19 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * RaidUserCurStage Model
+ * RaidUserCurEnemy Model
  *
- * @property RaidStage $RaidStage
+ * @property User $User
+ * @property Enemy $Enemy
  */
-class RaidUserCurStage extends AppModel {
+class RaidUserCurEnemy extends AppModel {
+
+/**
+ * Use table
+ *
+ * @var mixed False or table name
+ */
+	public $useTable = 'raid_user_cur_enemys';
 
 /**
  * Primary key field
@@ -20,7 +28,17 @@ class RaidUserCurStage extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'raid_stage_id' => array(
+		'user_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'enemy_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -43,19 +61,4 @@ class RaidUserCurStage extends AppModel {
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'RaidStage' => array(
-			'className' => 'RaidStage',
-			'foreignKey' => 'raid_stage_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
 }

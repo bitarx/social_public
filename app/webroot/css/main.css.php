@@ -1599,5 +1599,20 @@ input[type=checkbox] {
     top: 450px;
     left: 400px;
 }
+
+/** レイドボス */
+.btnRaidQuestProg {
+    left: 103px;
+    top: 150px;
+    height: 200px;
+    position: relative;
+}
+.btnRaidQuestProgBoss {
+    left: 103px;
+    top: 150px;
+    height: 130px;
+    position: relative;
+}
+
 ";
 ?>
