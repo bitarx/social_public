@@ -9,13 +9,6 @@ App::uses('AppModel', 'Model');
 class RaidUserEnemyCnt extends AppModel {
 
 /**
- * Use table
- *
- * @var mixed False or table name
- */
-	public $useTable = 'raid_user_enemy_cnt';
-
-/**
  * Primary key field
  *
  * @var string

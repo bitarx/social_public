@@ -22,7 +22,7 @@ class RaidPresent extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'raind_quest_id' => array(
+		'enemy_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -84,7 +84,7 @@ class RaidPresent extends AppModel {
 	public $belongsTo = array(
 		'RaidQuest' => array(
 			'className' => 'RaidQuest',
-			'foreignKey' => 'raind_quest_id',
+			'foreignKey' => 'enemy_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -92,16 +92,16 @@ class RaidPresent extends AppModel {
 	);
 
     /**
-     * イベント報酬一覧取得
+     * レイド報酬一覧取得
      *
      * @author imanishi 
-     * @param int イベントクエストID 
+     * @param int レイド敵ID 
      * @return array $list 報酬一覧
      */
-    public function getList($evQuestId) { 
+    public function getList($enemyId) { 
          
-        $where = array('raind_quest_id' => $evQuestId );
-        $field = array('raind_present_id', 'kind', 'target', 'num');
+        $where = array('enemy_id' => $enemyId );
+        $field = array('enemy_id', 'kind', 'target', 'num', 'prob', 'special_flg');
         $list  = $this->getAllFind($where, $field, 'all');
 
         if (!empty($list)) {

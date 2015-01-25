@@ -40,4 +40,20 @@ class RaidDamage extends AppModel {
 			'order' => ''
 		)
 	);
+
+    /**
+     * 参加者一覧を取得
+     *
+     * @param int raid_master_id
+     * @return array 参加者一覧
+     */
+    public function getAddDamageList($raidMasterId) {
+        $where = array(
+            'RaidDamage.raid_master_id' => $raidMasterId
+        ,   'damage > ' => 0     
+        ); 
+        $fields = array('DISTINCT RaidDamage.user_id');
+        $list = $this->getAllFind($where, $fields, 'all');
+        return $list;
+    }
 }

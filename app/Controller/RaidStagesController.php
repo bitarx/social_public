@@ -11,6 +11,9 @@ class RaidStagesController extends ApiController {
     // 最大ターン数
     public static $maxTurnNum = 2;
 
+    // 特別プレゼント取得確率(%)
+    public static $specialPresnt = 20;
+
     /**
      * Components
      *
@@ -18,7 +21,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent');
 
     /**
      *　定数
@@ -443,6 +446,7 @@ class RaidStagesController extends ApiController {
             ,   'enemy_id' => $targetId 
             ,   'level'    => $enemyLevel
             ,   'hp'       => $startEnemyHp 
+            ,   'hp_max'   => $startEnemyHp 
             ,   'end_time' => $endTime
             );
             $this->RaidMaster->save($value);
@@ -485,6 +489,97 @@ class RaidStagesController extends ApiController {
 
             // 勝利の場合ステータス変更
             if ($winner == 1) {
+                // 参加者リスト取得
+                $userList = $this->RaidDamage->getAddDamageList($raidMasterId);
+
+                // 最大HP取得
+                $where = array(
+                    'raid_master_id' => $raidMasterId
+                );
+                $hpMax = $this->RaidMaster->field('hp_max', $where);
+
+                // 報酬ベース
+                $moneyBase = $hpMax / 10;
+
+                // 参加人数
+                $userNum = count($userList);
+
+                // 一人あたりのペニー
+                $money = ceil($moneyBase / $userNum);
+                
+                // ペニー振込
+                $mes =  $target['card_name']. 'Lv' . $enemyLevel . 'の討伐報酬';
+                $values = array();
+                $valuesLog = array();
+                foreach ($userList as $val) {
+                    $values[] = array($val['user_id'], KIND_GOLD, 0, $money, $mes);
+                    $valuesLog[] = array($val['user_id'], $raidMasterId, KIND_GOLD, 0, $money);
+                }
+
+                $this->UserPresentBox->registPBox($values);
+                $this->RaidPresentLog->regist($valuesLog);
+
+                // 一定の確率で特別プレゼント
+                mt_srand();
+                $int = mt_rand(1, 100);
+                if ($int <= self::$specialPresnt){
+                    $pList = $this->RaidPresent->getList($target['enemy_id']);
+                    // 敵レベル補正
+                    foreach ($pList as &$val) {
+                        if (!empty($val['special_flg'])) {
+                            if ($enemyLevel < 10) {
+                                $multi = 0;
+                            } else {
+                                $multi = ceil($enemyLevel / 10);
+                            }
+                            $val['prob'] *= $multi;
+                        }
+                    }
+
+                    $lotData = $this->Common->doLot($pList);
+
+                    // 参加者全員にプレゼント
+                    foreach ($userList as $val) {
+                        $values[] = array($val['user_id'], $lotData['kind'], $lotData['target'], $lotData['num'], $mes);
+                        $valuesLog[] = array($val['user_id'], $raidMasterId, $lotData['kind'], $lotData['target'], $lotData['num']);
+                    }
+
+                }
+                $this->UserPresentBox->registPBox($values);
+                $this->RaidPresentLog->regist($valuesLog);
+
+                // 発見者の討伐数を記録
+                $where = array('raid_master_id' => $raidMasterId);
+                $findUserId = $this->RaidMaster->field('user_id', $where);
+
+                $where = array(
+                    'RaidMaster.user_id' => $findUserId 
+                ,   'RaidMaster.enemy_id' => $target['enemy_id'] 
+                );
+                $field = array('raid_master_id');
+                $rows = $this->RaidMaster->getAllFind($where, $field);
+                if(empty($rows)){
+                     $this->log( __FILE__ .  ':' . __LINE__ .' : Raid Master Count Error :userId:' . $this->userId );
+                     $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+                }
+                $cnt = count($rows);
+
+                $where = array(
+                    'RaidUserEnemyCnt.user_id' => $findUserId 
+                ,   'RaidUserEnemyCnt.enemy_id' => $target['enemy_id'] 
+                );
+                $ret = $this->RaidUserEnemyCnt->field('user_id', $where);
+                if (empty($ret)) {
+                    $fields = array('user_id', 'enemy_id', 'cnt');
+                    $values = array();
+                    $values[] = array($findUserId, $target['enemy_id'], $cnt);
+                    $this->RaidUserEnemyCnt->insertBulk($fields, $values);
+                } else {
+                    $value = array(
+                        'cnt' => $cnt  
+                    );
+                    $this->RaidUserEnemyCnt->updateAll($value, $where);
+                }
 /*
                 $where = array('enemy_id' => $targetId);
                 $field = array('stage_id');
