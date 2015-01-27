@@ -413,8 +413,12 @@ class GachasController extends ApiController {
         // 最終カード
         $afterCard = IMG_URL . 'gacha/card.png';
 
+        // push開始ミリ秒
+        $pushStartTime = 9000;
 
         $this->set('product', $product);
+        $this->set('time', time());
+        $this->set('pushStartTime', $pushStartTime);
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);
@@ -463,6 +467,7 @@ class GachasController extends ApiController {
         $afterCard = IMG_URL . 'gacha/card_s.png';
 
         $this->set('product', $product);
+        $this->set('time', time());
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);
         $this->set('afterCard', $afterCard);

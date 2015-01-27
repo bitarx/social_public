@@ -56,4 +56,23 @@ class RaidDamage extends AppModel {
         $list = $this->getAllFind($where, $fields, 'all');
         return $list;
     }
+
+    /**
+     * 交戦中一覧を取得
+     *
+     * @param int $userId
+     * @return array 交戦中レイドボス一覧
+     */
+    public function getRaidList($userId) {
+
+        $where = array(
+            'RaidDamage.user_id'       => $userId
+        ,   'RaidDamage.damage > '     => 0
+        ,   'RaidMaster.hp > '         => 0
+        ,   'RaidMaster.end_time > '   => $this->nowDate()
+        );
+        $list = $this->getAllFind($where);
+
+        return $list;
+    }
 }

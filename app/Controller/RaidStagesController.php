@@ -208,6 +208,66 @@ class RaidStagesController extends ApiController {
     }
 
     /**
+     * ボス再戦
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function again() {
+
+        if (empty($this->params['stage_id']) || empty($this->params['raid_master_id'])) {
+            $this->log('Raid Again param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
+
+        $stageId = $this->params['stage_id'];
+        $raidMasterId = $this->params['raid_master_id'];
+
+        $where = array(
+            'RaidMaster.raid_master_id' => $raidMasterId 
+        );
+        $field = array('enemy_id', 'level');
+        $data = $this->RaidMaster->getAllFind($where, $field, 'first');
+        if (empty($data)) {
+            $this->log('Raid Again param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
+
+        $where = array(
+             'RaidUserCurEnemy.user_id'       => $this->userId
+        ,    'RaidUserCurEnemy.raid_stage_id' => $stageId
+        );
+        $ret = $this->RaidUserCurEnemy->field('user_id' , $where);
+
+        $values = array();
+
+        $this->RaidUserCurEnemy->begin(); 
+        try {
+
+            if (empty($ret)) {
+                $field = array('user_id', 'raid_stage_id', 'enemy_id', 'level');
+                $values[] = array($this->userId, $stageId, $data['enemy_id'], $data['level']);
+                $this->RaidUserCurEnemy->insertBulk($field, $values, $ignore=1);
+            } else {
+                $values = array(
+                    'user_id' => $this->userId
+                ,   'raid_stage_id' => $stageId
+                ,   'enemy_id' => $data['enemy_id']
+                ,   'level'    => $data['level']
+                );
+                $this->RaidUserCurEnemy->updateAll($values, $where);
+            }
+        } catch (AppException $e) { 
+            $this->RaidUserCurEnemy->rollback(); 
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+        } 
+        $this->RaidUserCurEnemy->commit(); 
+
+        $this->rd('RaidStages', 'conf', array('stage_id'=> $stageId )); 
+    }
+
+    /**
      * ボス戦前
      *
      * @author imanishi
@@ -580,19 +640,6 @@ class RaidStagesController extends ApiController {
                     );
                     $this->RaidUserEnemyCnt->updateAll($value, $where);
                 }
-/*
-                $where = array('enemy_id' => $targetId);
-                $field = array('stage_id');
-                $data = $this->RaidStage->getAllFind($where, $field, 'first');
-
-                $value = array('state' => 3);
-                $where = array(
-                            'user_id' => $this->userId
-                        ,   'RaidUserStage.stage_id' => $data['stage_id']
-                        );
-                $this->RaidUserStage->updateAll($value, $where);
-*/
-
             }
 
         } catch (AppException $e) { 
@@ -741,36 +788,34 @@ $this->log($data);
     }
 
     /**
-     * ボス戦後Hシーン
+     * 交戦中一覧
      *
      * @author imanishi
      * @return void
      */
-    public function scene() {
+    public function raidList() {
 
-        // 共通レイアウトは使わない
-        $this->layout = '';
+        // 現在のステージ取得
+        $where = array(
+            'user_id' => $this->userId
+        );
+        $stageId = $this->RaidUserCurStage->field('raid_stage_id', $where);
 
-        if (empty($this->params['enemy_id'])) {
-            $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
-            $data = $this->Enemy->getEnemyData($log['target']);
-            $enemyId = $data['enemy_id'];
-            $next = 'RaidStages/comp';
-        } else {
-            $page = isset($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 0;
-            $enemyId = $this->params['enemy_id'];
-            $data = $this->Enemy->getEnemyData($enemyId);
-            $next = 'RaidUserStages/index?' . KEY_PAGING . '='. $page;
+        // 交戦中リスト取得
+        $pageAll = 1;
+        $list = $this->RaidDamage->getRaidList($this->userId);
+
+        foreach ($list as &$val) {
+            $where = array('enemy_id' => $val['enemy_id']);
+            $val['enemy_name'] = $this->Enemy->field('card_name', $where);
         }
-        $stage = $this->RaidUserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
-        if (empty($stage)) {
-             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
-             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
-        }
-
-        $this->set('data', $data);
-        $this->set('next', $next);
-        $this->set('questId', $stage['RaidStage']['quest_id']);
+$this->log($list); 
+        $this->set('list', $list);
+        $this->set('pageAll', $pageAll);
+        $this->set('stageId', $stageId);
+        $this->set('title', '交戦中一覧');
+        $this->set('guideId', 2);
+        $this->set('mes', '交戦中のレイドボスはいません。');
     }
 
     /**

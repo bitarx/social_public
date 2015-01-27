@@ -8,8 +8,4 @@ body {
   margin: 0px;
   height:900px;
 }
-#mainCanvas {
-  background-image: url('".$url."/img/synth_up_bg.png');
-  overflow: hidden;
-}
 ";

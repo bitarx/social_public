@@ -28,7 +28,7 @@ $(function () {
         </div>
         <{if empty($notAct)}> 
             <div  class="btnRaidQuestProgBoss" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
-                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="strQuestProg" >
                     探索！
                 </div>
@@ -44,7 +44,7 @@ $(function () {
     <{else}>
         <{if empty($notAct)}> 
             <div  class="btnRaidQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
-                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="strQuestProg" >
                     探索！
                 </div>
@@ -62,6 +62,15 @@ $(function () {
         <div class="progQuestUseStr">
             消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
         </div>
+    </div>
+
+    <div  class="btnRaidList">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/raidList">
+            <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+            <div class="strRaidList" >
+               交戦中一覧へ
+            </div>
+        </a>
     </div>
 
     <{if !empty($boss)}> 

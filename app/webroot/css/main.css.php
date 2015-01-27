@@ -1613,6 +1613,47 @@ input[type=checkbox] {
     height: 130px;
     position: relative;
 }
+.btnRaidList {
+    left: 103px;
+    top: -10px;
+    height: 130px;
+    position: relative;
+}
+.strRaidList {
+    position: absolute;
+    top: 12px;
+    left: 150px;
+}
+.raidBtList {
+    position: relative;
+}
+.raidBtAgain {
+    top:110px;
+    position: relative;
+    text-align: center;
+}
+.btnAtk {
+    text-align: center;
+    height:160px;
+    position: relative;
+}
+.btnAtk2 {
+    position: absolute;
+}
+.strAtk2 {
+    position: absolute;
+    top:155px;
+    left:105px;
+}
+.btnAtk6 {
+    left:320px;
+    position: absolute;
+}
+.strAtk6 {
+    position: absolute;
+    top:155px;
+    left:425px;
+}
 
 ";
 ?>
