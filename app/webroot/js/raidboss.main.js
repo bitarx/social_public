@@ -211,18 +211,24 @@ boss.main = ( function() {
         break;
       }
     }
-
     if( flg ) {
       _turnCount--;
-      if(_turnCount <= 0) {
+      if(_turnCount < 0) {
         setTimeout( function( i ){
           _view.setTurn( 0 );
           _view.setResult( false );
         }, 1000 );
       } else {
-        setTimeout( function( i ){
-          _startTurn();
-        }, 1000 );
+        if(_turnCount == 0) {
+            setTimeout( function( i ){
+              _view.setTurn( 0 );
+              _view.setResult( 'draw' );
+            }, 1000 );
+        } else {
+            setTimeout( function( i ){
+              _startTurn();
+            }, 1000 );
+        }
       }
     } else {
       setTimeout( function( i ){

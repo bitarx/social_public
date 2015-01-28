@@ -306,6 +306,11 @@ boss.layout = ( function() {
     _stocker.getDO( "loseText" ).visible = false;
     _stocker.getDO( "stage" ).addChild( _stocker.getDO( "loseText" ) );
 
+    //引き分けテキスト
+    _stocker.getDO( "drawText" ).x = 0; _stocker.getDO( "drawText" ).y = -200;
+    _stocker.getDO( "drawText" ).visible = false;
+    _stocker.getDO( "stage" ).addChild( _stocker.getDO( "drawText" ) );
+
     _stocker.getDO( "yajirushiDown" ).scaleX = _stocker.getDO( "yajirushiDown" ).scaleY = 0.3;
     _stocker.getDO( "yajirushiDown" ).y = 400;
     _stocker.getDO( "yajirushiDown" ).visible = false;

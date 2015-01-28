@@ -21,7 +21,7 @@
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.utils.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/raidboss.stocker.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.loader.js"></script>
-    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/boss.view.js"></script>
+    <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/raidboss.view.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>js/raidboss.main.js"></script>
     <{if $smarty.const.PLATFORM_ENV == 'niji'}>
         <script type="text/javascript" src="<{$smarty.const.NIJI_JSLIB_URL}>js/touch.js"></script>
@@ -41,10 +41,9 @@
             var element = document.getElementById("body");
             element.addEventListener("click", function(){
                 <{if $data.result == 2}>
-                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/end?stage_id=<{$stageId}>&result=<{$data.result}>";
                 <{else}>
-                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/main?stage_id=<{$stageId}>";
-//                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/comp";
+                    location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/end?stage_id=<{$stageId}>&result=<{$data.result}>";
                 <{/if}>
             });
         }
@@ -63,6 +62,7 @@
           particle001: "<{$smarty.const.BASE_URL}>img/particle001.png",
           particle002: "<{$smarty.const.BASE_URL}>img/particle002.png",
           winText: "<{$smarty.const.BASE_URL}>img/win.png",
+          drawText: "<{$smarty.const.BASE_URL}>img/draw.png",
           loseText: "<{$smarty.const.BASE_URL}>img/lose.png",
           battleStartText: "<{$smarty.const.BASE_URL}>img/battle_start.png",
           arrow: "<{$smarty.const.BASE_URL}>img/arrow.png",
@@ -113,9 +113,9 @@
         var el = document.getElementById( "skip" );
         el.addEventListener("click", function(){
             <{if $data.result == 2}>
-                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/comp";
+                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/end?stage_id=<{$stageId}>&result=<{$data.result}>";
             <{else}>
-                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Stages/scene";
+                location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>RaidStages/end?stage_id=<{$stageId}>&result=<{$data.result}>";
             <{/if}>
         }, false);
      };

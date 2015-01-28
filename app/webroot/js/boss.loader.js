@@ -43,6 +43,7 @@ boss.loader = ( function() {
       {src: fileName.particle002, id: "particle002" },
       {src: fileName.winText, id: "winText" },
       {src: fileName.loseText, id: "loseText" },
+      {src: fileName.drawText, id: "drawText" },
       {src: fileName.battleStartText, id: "battleStartText" },
       {src: fileName.arrow, id: "arrow" },
       {src: fileName.attack001, id: "attack001" },
@@ -86,6 +87,7 @@ boss.loader = ( function() {
       _stocker.setDO( "particle002", _getBitmap( loader.getResult( "particle002" ), "center" ) );
       _stocker.setDO( "winText", _getBitmap( loader.getResult( "winText" ), "center" ) );
       _stocker.setDO( "loseText", _getBitmap( loader.getResult( "loseText" ), "center" ) );
+      _stocker.setDO( "drawText", _getBitmap( loader.getResult( "drawText" ), "center" ) );
       _stocker.setDO( "battleStartText", _getBitmap( loader.getResult( "battleStartText" ), "center" ) );
       _stocker.setDO( "arrow", _getBitmap( loader.getResult( "arrow" ), "center" ) );
       _stocker.setDO( "attack001", _getBitmap( loader.getResult( "attack001" ), "center" ) );
