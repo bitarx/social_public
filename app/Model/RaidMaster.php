@@ -62,4 +62,33 @@ class RaidMaster extends AppModel {
 		)
 	);
 
+    public function getData ($raidMasterId) {
+        $where = array(
+            'raid_master_id' => $raidMasterId
+        );
+        $fields = array('user_id', 'enemy_id', 'level', 'hp', 'hp_max', 'raid_stage_id', 'end_time');
+        $data = $this->getAllFind($where, $fields, 'first');
+        return $data;
+    }
+
+    /**
+     * マスターIDと発見者を照合
+     * 
+     * @param int userId
+     * @param int raidMasterId
+     * @return bool true:正しい
+     */
+    public function judgeMasterId ($userId, $raidMasterId) {
+        $where = array(
+            'raid_master_id' => $raidMasterId 
+        );
+        $field = array('user_id');
+        $userIdRet = $this->field('user_id', $where);
+
+        if ($userIdRet == $userId) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

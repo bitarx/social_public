@@ -75,4 +75,22 @@ class RaidDamage extends AppModel {
 
         return $list;
     }
+
+    /**
+     * 最新データ１件取得
+     *
+     * @param $userId
+     * @return array 最新データ
+     */
+    public function getLatestData($userId){
+        $field = array();
+        $where = array(
+            'user_id' => $userId
+        );
+        $order = array('RaidDamage.created DESC');
+        $limit = 1;
+        $data = $this->getAllFind($where, $field, 'first', $order, $limit);
+
+        return $data;
+    }
 }

@@ -187,4 +187,10 @@ class CommonComponent extends Component {
            } 
            return ($h*60*60) + ($m*60) + $s;
     }
+
+   public function changeTimeStr ($time) {
+        $timeSp = strtotime($time);
+        $str = date("Y/m/d H時i分", $timeSp);
+        return $str;
+   }
 }

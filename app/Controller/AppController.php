@@ -361,6 +361,9 @@ class AppController extends Controller {
 
                 // 所持金
                 $this->set('haveMoney', $this->userParam['money']);
+
+                // 各パラメタ
+                $this->set('userParam', $this->userParam);
             }
 
             if ($this->User->isSnsDataUpdate($this->userId)) {

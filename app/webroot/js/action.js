@@ -109,8 +109,7 @@ function dispRotResultQuest(data)
     } else {
         var kind = data.kind;
     }
-console.log('kind'); 
-console.log(kind); 
+
     var str = "";
     var image = "";
     var filename = '';

@@ -15,7 +15,7 @@ class UsersController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserCard', 'UserParam', 'UserDeckCard', 'SnsUser');
+    public $uses = array('UserCard', 'UserParam', 'UserDeckCard', 'SnsUser', 'RaidHelp');
 
     /**
      * マイページ
@@ -36,11 +36,22 @@ class UsersController extends ApiController {
 
         $act = ($this->userParam['act'] / $this->userParam['act_max']) * 100;
 
+
+        // レイドボス救援要請
+        $helpList = $this->RaidHelp->getHelpList($this->userId);
+        if (!empty($helpList)) {
+            foreach ($helpList as &$val) {
+                $val['end_time'] = $this->Common->changeTimeStr($val['end_time']);
+            }
+        }
+
         // アサイン
         $this->set('list', $userDeckList);
         $this->set('data', $this->userParam);
         $this->set('act' , $act);
         $this->set('name', $snsUserName);
         $this->set('haveMoney', $this->userParam['money']);
+        $this->set('subTitle', 'レイドボス参戦要請');
+        $this->set('helpList', $helpList);
 	}
 }

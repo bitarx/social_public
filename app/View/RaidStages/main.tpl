@@ -62,6 +62,9 @@ $(function () {
         <div class="progQuestUseStr">
             消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
         </div>
+        <div class="mainBp">
+            BP:<span style="color:#00FF00"><{$userParam.bp}></span> / <{$userParam.bp_max}>
+        </div>
     </div>
 
     <div  class="btnRaidList">
@@ -73,20 +76,6 @@ $(function () {
         </a>
     </div>
 
-    <{if !empty($boss)}> 
-        <div class="stageItemEffectBoss">
-            <{if !empty($effectText)}>
-                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>
-            <{/if}>
-        </div>
-    <{else}>
-        <div class="stageItemEffect">
-            <{if !empty($effectText)}>
-                <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>
-            <{/if}>
-        </div>
-    <{/if}>
-
     <div id="levelUp" class="levelUp">
     </div>
     <div id="lotResultDataQuest" class="lotResultDataQuest">
@@ -94,10 +83,6 @@ $(function () {
     <div id="strLotResultDataQuest" class="strLotResultDataQuest">
     </div>
 
-    <div class="space"></div>
-    <{if !empty($boss)}>
-       <div class="spaceHigh"></div>
-    <{/if}>
     <{include file="../Elements/gacha_bn.tpl"}>
 
 </div>

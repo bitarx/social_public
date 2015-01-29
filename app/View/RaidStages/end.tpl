@@ -1,49 +1,60 @@
 <div class="commonDisplay">
-    <div>
-        <img src="<{$smarty.const.IMG_URL}>quest/epilogue_<{$data['quest_id']}>.jpg">
-    </div>
+    <div class="space"></div>
+    <{include file="../Elements/guide.tpl"}>
 
-    <div class="guideXL">
+    <div class="space"></div>
 
-        <div class="guideImg">
-           <img src="<{$smarty.const.IMG_URL}>guide/guide_1.png" width="160px">
-        </div>
-        <div class="guideFukidashi">
-            <div class="guideFukiMiddleEnd">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_middle.png" width="420px" height="446px">
-            </div>
-            <div class="guideFukiLeft">
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_left_side.png" width="20px">
-            </div>
-            <{if $carrer == $smarty.const.CARRER_IPHONE}>
-                <div class="guideFukiUpperEndIos">
-            <{else}>
-                <div class="guideFukiUpperEnd">
-            <{/if}>
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_upper.png" width="420px" height="52px">
-            </div>
-            <{if $carrer == $smarty.const.CARRER_IPHONE}>
-                <div class="guideFukiUnder4XLIos">
-            <{else}>
-                <div class="guideFukiUnder4XL">
-            <{/if}>
-               <img src="<{$smarty.const.IMG_URL}>fukidashi_under.png" width="420px">
-            </div>
-            <div class="guideFukiTextEnd">
-                <{$data['detail_after']}>
-            </div>
-        </div>
-    </div>
-    <div class="spaceHigh"></div>
-    <{if $data.stage_id < $smarty.const.MAX_STAGE_ID}>
+
+    <{if 1 < $result}>
+        <{include file="../Elements/sub_title.tpl"}>
+
+        <div class="space"></div>
+
         <div class="parent">
-            <a href="<{$linkQuest}>">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/helpOffer/?kind=1&raid_master_id=<{$latest.raid_master_id}>">
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="child" >
-                    次の鎮激へ
+                    近いレベルの人
                 </div>
             </a>
         </div>
+        <div class="space"></div>
+        <div class="parent">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/<{$action}>/?stage_id=<{$stageId}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    探索を続ける
+                </div>
+            </a>
+        </div>
+    <{else}>
+        <div style="position:relative;text-align:center;top:-40px;">
+            <img src="<{$smarty.const.IMG_URL}>line.png">
+        </div>
+        <{foreach from=$pList item=data}>
+            <{include file="../Elements/present.tpl"}>
+            <div style="position:relative;text-align:center;top:-40px;">
+                <img src="<{$smarty.const.IMG_URL}>line.png">
+            </div>
+        <{/foreach}>
+        <div class="parent">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/<{$action}>/?stage_id=<{$stageId}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    探索を続ける
+                </div>
+            </a>
+        </div>
+        <div class="space"></div>
+        <div class="parent">
+            <a href="<{$linkPbox}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    受取BOXへ
+                </div>
+            </a>
+        </div>
+
     <{/if}>
     <div class="spaceHigh"></div>
 </div>

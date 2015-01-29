@@ -36,6 +36,19 @@
     </div>
     <{include file="../Elements/status.tpl"}>
 
+    <{include file="../Elements/sub_title.tpl"}>
+
+    <div class="space"></div>
+    <{if !empty($helpList)}>
+        <{foreach from=$helpList item=data}>
+            <{include file="../Elements/help.tpl"}>
+        <{/foreach}>
+    <{else}>
+        <div style="position:relative;text-align:center;height:80px;">
+            参戦要請はありません
+        </div>
+    <{/if}>
+
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>

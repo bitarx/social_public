@@ -21,7 +21,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp');
 
     /**
      *　定数
@@ -276,23 +276,73 @@ class RaidStagesController extends ApiController {
      */
     public function conf() {
 
-        $stageId = $this->params['stage_id'];
+        $stageId = isset($this->params['stage_id']) ? $this->params['stage_id'] : 0;
+        $raidMasterId = isset($this->params['raid_master_id']) ? $this->params['raid_master_id'] : 0;
 
+        // デッキカード確認
+        $userCards = $this->UserDeck->getUserDeckData($this->userId);
+        if (empty($userCards['UserDeckCard'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+        }
+
+        $userCards = $userCards['UserDeckCard'];
+
+        foreach ($userCards as $key => $val) {
+            if (empty($val['UserCard'])) unset($userCards[$key]); 
+        }
+
+        // デッキにカードがない
         $noCard = 0;
-        // デッキにカードが１枚もない
-        if (!empty($this->params['nocard'])) $noCard = 1;
+        if (empty($userCards)) {
+             $noCard = 1;
+        }
 
-        $where = array(
-            'RaidUserCurEnemy.user_id' => $this->userId
-        ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
-        );
-        $enemyId = $this->RaidUserCurEnemy->field('enemy_id', $where);
-//        $userRaidStageData = $this->RaidUserStage->getUserStage($this->userId, $stageId);
+        $help ="";
+
+        if (!empty($stageId)) {
+
+            // 発見者
+            $where = array(
+                'RaidUserCurEnemy.user_id' => $this->userId
+            ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
+            );
+            $field = array('RaidUserCurEnemy.enemy_id', 'RaidUserCurEnemy.level');
+            $data = $this->RaidUserCurEnemy->getAllFind($where, $field, 'first');
+            $enemyId = $data['enemy_id'];
+            $level = $data['level'];
+        } elseif (!empty($raidMasterId)) {
+
+            // 参加者
+            $data = $this->RaidMaster->getData($raidMasterId);
+$this->log($data); 
+            $helpData = $this->RaidHelp->getDataByRaidMasterId($this->userId, $raidMasterId);
+$this->log($helpData); 
+            if ($data['user_id'] != $helpData['user_id']) {
+                // 不正
+                $this->log('Raid help param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+                $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+            }
+
+            $enemyId = $data['enemy_id'];
+            $stageId = $data['raid_stage_id'];
+            $level   = $data['level'];
+
+            $help = '&raid_help_id=' . $helpData['raid_help_id'];
+
+        } else {
+            $this->log('Raid conf param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
 
         $enemyData = $this->Enemy->getEnemyData($enemyId);
+$this->log($enemyData); 
+        $enemyData['card_name'] .= 'Lv' . $level;
+
         $this->set('data', $enemyData);
         $this->set('noCard', $noCard);
         $this->set('stageId', $stageId);
+        $this->set('help', $help);
 
     }
 
@@ -317,18 +367,21 @@ class RaidStagesController extends ApiController {
              $this->log( __FILE__ .  ':' . __LINE__ .' : attack Param Error : userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
+$this->log($this->params); 
+        // 参戦者の場合
+        $raidHelpId = 0;
+        if (!empty($this->params['raid_help_id'])) {
+            $raidHelpId = $this->params['raid_help_id'];
+        }
 
+$this->log($raidHelpId); 
         $raidMasterId = 0;
 
-        // 参加者か
+        // 参戦者か
+        $helpFlg = 0;
         if (!empty($raidHelpId)) {
-            $where = array(
-                'RaidHelp.raid_help_id' => $raidHelpId 
-            ,   'RaidHelp.target'       => $this->userId
-            ,   'RaidHelp.end_time > '  => $this->Common->nowDate()
-            );
-            $field = array('user_id', 'raid_master_id');
-            $help = $this->RaidHelp->getAllFind($where, $field, 'first');
+$this->log('getDataWithMster'); 
+            $help = $this->RaidHelp->getDataWithMster($raidHelpId, $this->userId);
             // 時間切れ
             if (empty($help)) {
                  $this->log( __FILE__ .  ':' . __LINE__ .' : Raid Param Error : userId:' . $this->userId );
@@ -337,6 +390,7 @@ class RaidStagesController extends ApiController {
         }
 
         // 救援要請を受けて参戦
+$this->log($help); 
         if (!empty($help)) {
             // 敵マスタより情報取得
             $where = array(
@@ -350,6 +404,8 @@ class RaidStagesController extends ApiController {
                  $this->log( __FILE__ .  ':' . __LINE__ .' : Raid Param Error : userId:' . $this->userId );
                  $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
             }
+
+            $helpFlg = 1;
 
         } else {
             // 出現状態の敵がいるか
@@ -393,8 +449,8 @@ class RaidStagesController extends ApiController {
 
         // レベル１ではない場合はステータス補正
         if (1 < $enemyLevel) {
-            $multi = $enemyLevel / 10;
-            if ($multi < 1) $multi = 1;
+            $multi = $enemyLevel / 100; 
+            $multi += 1;
 
             $target['hp'] *= $multi;
             $target['hp'] = floor($target['hp']);
@@ -526,16 +582,19 @@ class RaidStagesController extends ApiController {
 
             $userCards = $this->Battle->doBattleEnemy($targetCards, $userCards, $kind = 2, $battleLog[$count]);
             if (empty($userCards)) {
-                $winner = 2;
+                $winner = 3;
                 break;
             }
             $count++;
 
             // レイドボス戦なのでターン制限
-            if (self::$maxTurnNum < $count) break;
+            if (self::$maxTurnNum < $count) {
+                $winner = 2; 
+                break;
+            }
         }
 
-        // 勝者1:プレイヤー 2:敵
+        // 1:勝利 2:draw 3:敗北
         $battleLog['winner'] = $winner;
 
         // 要した攻撃回数（ターン数ではない）
@@ -598,6 +657,7 @@ class RaidStagesController extends ApiController {
                 'user_id'  => $this->userId 
             ,   'raid_master_id' => $raidMasterId 
             ,   'damage' => $allDamage
+            ,   'help_flg' => $helpFlg
             );
             $this->RaidDamage->save($value);
 
@@ -648,9 +708,6 @@ class RaidStagesController extends ApiController {
                     $values[] = array($val['user_id'], KIND_GOLD, 0, $money, $mes);
                     $valuesLog[] = array($val['user_id'], $raidMasterId, KIND_GOLD, 0, $money);
                 }
-
-                $this->UserPresentBox->registPBox($values);
-                $this->RaidPresentLog->regist($valuesLog);
 
                 // 一定の確率で特別プレゼント
                 mt_srand();
@@ -739,6 +796,9 @@ class RaidStagesController extends ApiController {
         $data = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
         $data['log'] = json_decode($data['log'], true);
         $enemy = $this->Enemy->getEnemyData($data['target']);
+
+        $latest = $this->RaidDamage->getLatestData($this->userId);
+        $enemy['card_name'] .= 'Lv' . $latest['level'];
 
         // 演出用ターン配列生成
         $turn = array();
@@ -854,6 +914,7 @@ $this->log($data);
         $this->set('data', $data);
         $this->set('player', $player);
         $this->set('enemy', $enemy);
+        $this->set('latest', $latest);
         $this->set('stageId', $stageId);
         $this->set('turn', $turn);
         $this->set('playerSkillData', $playerSkillData);
@@ -889,6 +950,87 @@ $this->log($list);
         $this->set('title', '交戦中一覧');
         $this->set('guideId', 2);
         $this->set('mes', '交戦中のレイドボスはいません。');
+    }
+
+    /**
+     * 救援依頼を出す
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function helpOffer() {
+
+        if (empty($this->params['kind']) || empty($this->params['raid_master_id'])) {
+            $this->log('RaidStage Param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
+        $kind = $this->params['kind'];
+        $raidMasterId = $this->params['raid_master_id'];
+
+        // 値チェック
+        $mstData = $this->RaidMaster->getData($raidMasterId);
+        if ( empty($mstData) || $this->userId != $mstData['user_id'] ) {
+            $this->log('RaidStage Param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
+
+        // 1:近いレベル 2:フレンド 3:グループ
+        $list = array();
+        switch ($kind) 
+        {
+            case 1:
+                // 自分のレベル
+                $level = $this->userParam['level'];
+                $ret = $this->UserParam->getNearLevelList($this->userId, $level);
+
+                $cnt = 0;
+                if (!empty($ret)) {
+                    shuffle($ret);
+                    foreach ($ret as $val) {
+                        $list[] = $val['user_id'];
+                        $cnt++;
+                        if (20 < $cnt) break;
+                    }
+                }
+                break;
+            case 2:
+                break;
+            case 2:
+                break;
+        }
+
+        $noHelp = 0;
+        if (!empty($list)) {
+
+            $values = array();
+            foreach ($list as $target) {
+                $values[] = array($this->userId, $target, $raidMasterId, $kind);
+            }
+
+            $this->RaidHelp->begin();
+            try { 
+
+                $this->RaidHelp->regist($values);
+
+            } catch (AppException $e) { 
+                $this->RaidHelp->rollback(); 
+                $this->log($e->errmes);
+                return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+            } 
+            $this->RaidHelp->commit();
+
+        } else {
+            $noHelp = 1;
+        }
+
+        $stageId = $this->RaidUserCurStage->getCurStageId($this->userId);
+
+        $param = array(
+            'stage_id' => $stageId
+        ,   'kind'     => $kind 
+        ,   'no_help'  => $noHelp 
+        );
+        $this->rd('RaidStages', 'main', $param); 
     }
 
     /**
@@ -960,14 +1102,46 @@ $this->log($list);
      */
     public function end() {
 
-        $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
-$this->log($log); 
-        // エピローグ
-        $where = array('enemy_id' => $log['target']);
-        $field = array();
-        $data  = $this->RaidStage->getAllFind($where, $field, 'first');
+        $pList = array();
 
-        $this->set('data', $data);
+        $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
+        $result = $log['result'];
+
+        $latest = $this->RaidDamage->getLatestData($this->userId);
+
+        // 勝利
+        if (1 == $result) {
+            $guideId = 2;
+            $mes = '以下の討伐報酬が受取BOXに送られました！';
+            // 報酬を取得
+            $pList = $this->RaidPresentLog->getListByRaidMasterId($latest['raid_master_id'], $this->userId);
+        } else {
+            // 敗北、引き分け
+            if (empty($latest['help_flg'])) {
+                // 自分で発見
+                $guideId = 3;
+                $mes = '自分だけで倒せない場合は救援依頼を出されてはいかがでしょうか？';
+            } else {
+                // 救援要請一覧へ
+                $this->rd('RaidStages', 'helpList');
+            }
+        }
+
+        // 現在のステージ
+        $stageId  = $this->RaidUserCurStage->getCurStageId($this->userId);
+        $action = 'main';
+        if (empty($stageId)) {
+            $action = 'index';
+        }
+
+        $this->set('latest', $latest);
+        $this->set('guideId', $guideId);
+        $this->set('mes', $mes);
+        $this->set('subTitle', '救援依頼を出す');
+        $this->set('result', $result);
+        $this->set('pList', $pList);
+        $this->set('action', $action);
+        $this->set('stageId', $stageId);
     }
 
     /**

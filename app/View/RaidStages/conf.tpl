@@ -11,7 +11,7 @@
     <{include file="../Elements/before_words.tpl"}>
     <div class="spaceHigh"></div>
     <div  class="parent">
-        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=1">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=1<{$help}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="child">
                     通常攻撃(BP1消費)
@@ -21,7 +21,7 @@
     <div class="space"></div>
     <div class="btnAtk">
         <div  class="btnAtk2">
-            <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=2">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=2<{$help}>">
                     <img src="<{$smarty.const.BASE_URL}>img/btn_atk2.png">
                     <div class="strAtk2">
                         BP<span style="color:#00FF00">２</span>消費
@@ -29,7 +29,7 @@
             </a>
         </div>
         <div  class="btnAtk6">
-            <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=6">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=6<{$help}>">
                     <img src="<{$smarty.const.BASE_URL}>img/btn_atk6.png">
                     <div class="strAtk2">
                         BP<span style="color:#EE82EE">５</span>消費

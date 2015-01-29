@@ -234,4 +234,28 @@ class UserParam extends AppModel {
 
         return $userParam;
     }
+
+    /**
+     * 近いレベルのuserIdリスト取得
+     *
+     * @param int $userId
+     * @param int $level レベルの基準
+     * @return array list
+     */
+    public function getNearLevelList ($userId, $level) {
+        
+        $min = $level - 5;
+        if ($min < 0) $min = 1;
+        $max = $level + 5;
+
+        $field = array('user_id');
+        $where = array(
+            'level >= ' => $min 
+        ,   'level <= ' => $max
+        ,   'NOT' => array('user_id' => array($userId))
+        );
+        $list = $this->getAllFind($where, $field);
+
+        return $list;
+    }
 }

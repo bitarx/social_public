@@ -1603,19 +1603,19 @@ input[type=checkbox] {
 /** レイドボス */
 .btnRaidQuestProg {
     left: 103px;
-    top: 150px;
+    top: 130px;
     height: 200px;
     position: relative;
 }
 .btnRaidQuestProgBoss {
     left: 103px;
-    top: 150px;
+    top: 140px;
     height: 130px;
     position: relative;
 }
 .btnRaidList {
     left: 103px;
-    top: -10px;
+    top: -50px;
     height: 130px;
     position: relative;
 }
@@ -1653,6 +1653,22 @@ input[type=checkbox] {
     position: absolute;
     top:155px;
     left:425px;
+}
+.helpBlock {
+    position:relative;
+    width:640px;
+    height:180px;
+    color:#FFA500
+}
+.helpImg {
+    left:18px;
+    top:0px;
+    position: relative;
+}
+.mainBp {
+    position: absolute;
+    top:35px;
+    left: 220px;
 }
 
 ";

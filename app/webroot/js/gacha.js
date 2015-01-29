@@ -137,7 +137,6 @@ var evolution = (function() {
 
     }, 1000 );
     setTimeout( function(){
-console.log(444); 
 //      _stage.removeChild( _bm.bg );
  //     _animationStep03( brightness );
     }, 1800 );

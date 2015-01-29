@@ -87,7 +87,7 @@
           enemy: {
             name: "<{$enemy.card_name}>",
             img: "<{$smarty.const.IMG_URL}>enemy/enemy_<{$enemy.enemy_id}>.jpg",
-            max: "<{$data.log.enemy_max}>",
+            max: "<{$latest.hp_max}>",
             current: "<{$data.log.enemy_cur}>"
           },
         }

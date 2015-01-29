@@ -58,4 +58,19 @@ class RaidUserCurStage extends AppModel {
 			'order' => ''
 		)
 	);
+
+    /**
+     * 現在のステージIDを取得
+     *
+     * @param int $userId
+     * @return int $raidStageId
+     */
+    public function getCurStageId ($userId) {
+        $where = array(
+            'user_id' => $userId
+        );
+        $raidStageId = $this->field('raid_stage_id', $where);
+
+        return $raidStageId;
+    }
 }
