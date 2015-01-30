@@ -263,6 +263,7 @@ a:hover {
 .cardImg {
     left:5px;
     top:0px;
+    text-align:left;
     position: relative;
 }
 .cardName {
@@ -1675,6 +1676,15 @@ input[type=checkbox] {
     position: absolute;
     top:35px;
     left: 240px;
+}
+
+/** 図鑑 */
+.collectHead {
+    position: relative;
+    text-align:right;
+    height:40px;
+    text-decoration:none;
+    font-size:28px;
 }
 
 ";

@@ -27,6 +27,20 @@ class UserCollectsController extends ApiController {
      */
 	public function index() {
 
+        $other = 0;
+        $name = '';
+        $addParam = '';
+        if (!empty($this->params['user_id']) && $this->userId != $this->params['user_id']) {
+            // 他人の閲覧
+            $other = 1;
+            $this->userId = $this->params['user_id'];
+
+            $where = array('user_id' => $this->userId);
+            $name = $this->User->field('user_name', $where);
+            $name .= 'の';
+
+            $addParam = '&user_id=' . $this->userId;
+        }
 
         // 入手済みカード
         $pageAll = 0;
@@ -45,7 +59,11 @@ class UserCollectsController extends ApiController {
         $this->set('list', $list);
         $this->set('key', 99);
         $this->set('pageAll', $pageAll);
-        $this->set('title', self::$title);
+        $this->set('title', $name . self::$title);
+        $this->set('other', $other);
+        $this->set('name', $name);
+        $this->set('userId', $this->userId);
+        $this->set('addParam', $addParam);
 	}
 
 }
