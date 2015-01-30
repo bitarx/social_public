@@ -69,7 +69,7 @@
                 </div>
             <{/if}>
             <div class="cardComment">
-                <{if !($smarty.const.SYNTH_AI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MAI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MI_CARD_ID == $data.card_id)}>
+                <{if empty($data.sozai_kind)}>
                     <{if empty($data.next)}>
                         <span style="color:#00FFFF">これ以上進化しません</span>
                     <{elseif $data.card_level <= $data.level}>
@@ -142,7 +142,7 @@
                 </div>
             <{/if}>
             <div class="cardComment">
-                <{if !($smarty.const.SYNTH_AI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MAI_CARD_ID == $data.card_id || $smarty.const.SYNTH_MI_CARD_ID == $data.card_id)}>
+                <{if empty($data.sozai_kind)}>
                     <{if empty($data.next)}>
                         <span style="color:#00FFFF">これ以上進化しません</span>
                     <{elseif $data.card_level <= $data.level}>
@@ -201,10 +201,12 @@
                     </div>
                 </a>
             <{else}> 
-                <div class="strSelectCardCheckBox">
-                    選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
-                </div>
-                <div class="spaceLow"></div>
+                    <div class="strSelectCardCheckBox">
+                        <{if 2 != $data.sozai_kind}>
+                          選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
+                        <{/if}>
+                    </div>
+                    <div class="spaceLow"></div>
             <{/if}> 
         <{/if}>
 
@@ -247,12 +249,14 @@
     <{* デッキに設定 *}> 
     <{elseif 'UserDeckCards' == $ctl && 'initList' == $action && isset($key)}> 
         <div class="btnSelectCard">
+            <{if empty($data.sozai_kind)}>
             <a href="<{$smarty.const.BASE_URL}>UserDeckCards/init?user_card_id=<{$data.user_card_id}><{$addParam}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
                 <div class="strSelectCard">
                    デッキ設定 
                 </div>
             </a>
+            <{/if}>
         </div>
     <{/if}> 
 

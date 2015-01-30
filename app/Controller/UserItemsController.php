@@ -87,7 +87,7 @@ class UserItemsController extends ApiController {
 
         if (empty($data)) {
             $this->log(__FILE__.__LINE__.'userId:'.$this->userId);
-            $this->rd('Errors', 'index', array('error' => 2));
+            $this->rd('Errors', 'index', array('error' => ERROR_ID_SYSTEM));
         }
         switch($data['effect']) {
             // 体力回復
@@ -107,7 +107,29 @@ class UserItemsController extends ApiController {
                 } catch (AppException $e) { 
                     $this->UserParam->rollback(); 
                     $this->log($e->errmes);
-                    $this->rd('Errors', 'index', array('error'=> 2)); 
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM)); 
+                } 
+                $this->UserParam->commit();
+
+                break;
+            // BP回復
+            case 2:
+                $bpAfter = $this->userParam['bp_max'] * ($data['percent'] / 100);
+                $this->UserParam->begin();
+                try {
+                    $values = array(
+                        'user_id'  => $this->userId  
+                    ,   'bp' => $bpAfter
+                    );
+                    $this->UserParam->save($values);    
+
+                    // 減算
+                    $userItem['num']--; 
+                    $this->UserItem->save($userItem);
+                } catch (AppException $e) { 
+                    $this->UserParam->rollback(); 
+                    $this->log($e->errmes);
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM)); 
                 } 
                 $this->UserParam->commit();
 
@@ -130,7 +152,7 @@ class UserItemsController extends ApiController {
                 } catch (AppException $e) { 
                     $this->UserStageEffect->rollback(); 
                     $this->log($e->errmes);
-                    $this->rd('Errors', 'index', array('error'=> 2)); 
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM)); 
                 } 
                 $this->UserStageEffect->commit();
 

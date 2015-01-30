@@ -13,7 +13,7 @@
         <!--
             #mainCanvas {
               background-image: url("<{$smarty.const.IMG_URL}>gacha/product10_<{$product}>.gif?t=<{$time}>");
-              overflow: hidden;
+              background-size:contain;
             }
         -->
         </style>
@@ -60,7 +60,8 @@
           },
           imageLoadComplete,
           contentsComplete,
-          <{$divNum}>
+          <{$divNum}>,
+          <{$pushStartTime}>
         );
       };
 

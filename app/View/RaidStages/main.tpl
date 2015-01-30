@@ -62,9 +62,8 @@ $(function () {
         <div class="progQuestUseStr">
             消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
         </div>
-        <div class="mainBp">
-            BP:<span style="color:#00FF00"><{$userParam.bp}></span> / <{$userParam.bp_max}>
-        </div>
+
+        <{include file="../Elements/bp.tpl"}>
     </div>
 
     <div  class="btnRaidList">

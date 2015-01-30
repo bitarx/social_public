@@ -21,7 +21,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp', 'UserLastBpTime');
 
     /**
      *　定数
@@ -367,6 +367,13 @@ $this->log($enemyData);
              $this->log( __FILE__ .  ':' . __LINE__ .' : attack Param Error : userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
+
+        // バトルポイント不足
+        $bpAfter = $this->userParam['bp'] - $attack;
+        if ($bpAfter < 0) {
+             $this->log( __FILE__ .  ':' . __LINE__ .' : attack Param Error : userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+        }
 $this->log($this->params); 
         // 参戦者の場合
         $raidHelpId = 0;
@@ -447,6 +454,7 @@ $this->log($help);
             $target['hp'] = $ret;
         }
 
+
         // レベル１ではない場合はステータス補正
         if (1 < $enemyLevel) {
             $multi = $enemyLevel / 100; 
@@ -485,6 +493,13 @@ $this->log($help);
         if (empty($userCards)) {
              $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId );
              $this->rd('RaidStages', 'conf', array('nocard' => 1, 'stage_id'=> $stageId));
+        }
+
+        // 攻撃力補正
+        if (2 == $attack || 6 == $attack) {
+            foreach ($userCards as $key => $val) {
+                $userCards[$key]['UserCard']['atk'] *= $attack;
+            }
         }
 
         $battleLog = array();
@@ -628,6 +643,20 @@ $this->log($help);
         // バトルログ登録
         $this->RaidBattleLog->begin(); 
         try {  
+
+            // BP減算
+            $update = array(
+                'user_id' => $this->userId
+            ,   'bp'      => $bpAfter
+            );
+            $this->UserParam->save($update);
+
+
+            $save = array(
+                'user_id' => $this->userId
+            );
+            $this->UserLastBpTime->save($save);
+
 
             // 初戦
             if (empty($raidMasterId)) {
@@ -780,6 +809,57 @@ $this->log($help);
         $this->RaidBattleLog->commit(); 
 
         $this->rd('RaidStages', 'product');
+    }
+
+    /**
+     * 逃げる
+     *
+     */
+    public function runAway () {
+
+        if (empty($this->params['stage_id'])) {
+             $this->log( __FILE__ .  ':' . __LINE__ .' : Raid RunAway Param Error :userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+        }
+        $stageId = $this->params['stage_id'];
+
+        $bpAfter = $this->userParam['bp'] - 1;
+        if ($bpAfter < 0) {
+             $this->log( __FILE__ .  ':' . __LINE__ .' : Raid RunAway Param Error :userId:' . $this->userId );
+             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
+        }
+
+        try {  
+
+            // BP減算
+            $update = array(
+                'user_id' => $this->userId
+            ,   'bp'      => $bpAfter
+            );
+            $this->UserParam->save($update);
+
+
+            $save = array(
+                'user_id' => $this->userId
+            );
+            $this->UserLastBpTime->save($save);
+
+            $where = array(
+                'user_id' => $this->userId
+            ,   'raid_stage_id' => $stageId
+            );
+            $this->RaidUserCurEnemy->deleteAll($where);
+
+        } catch (AppException $e) { 
+            $this->RaidBattleLog->rollback(); 
+            $this->log($e->errmes);
+            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
+        } 
+
+        $param = array(
+            'stage_id' => $stageId
+        );
+        $this->rd('RaidStages', 'main', $param);
     }
 
     /**
@@ -1033,66 +1113,6 @@ $this->log($list);
         $this->rd('RaidStages', 'main', $param); 
     }
 
-    /**
-     * ボス戦後
-     *
-     * @author imanishi
-     * @return void
-     */
-    public function comp() {
-
-        $log = $this->RaidBattleLog->getBattleLogDataLatest($this->userId);
-
-        $nextRaidStageId = $this->RaidUserStage->getUserMaxStageId($this->userId);
-
-        // 勝利ではない
-        if (1 != $log['result'])  {
-            $where = array('enemy_id' => $log['target']);
-            $field = array('stage_id');
-            $data = $this->RaidStage->getAllFind($where, $field, 'first');
-
-            $param = array(
-                         'stage_id' => $data['stage_id']
-                     );
-            $this->rd('RaidStages', 'main' , $param);
-        }
-        // 処理済
-        if ("0000-00-00 00:00:00" != $log['modified']) {
-            $param = array(
-                         'stage_id' => $nextRaidStageId
-                     );
-            $this->rd('RaidStages', 'main' , $param);
-        }
-
-
-        $this->RaidUserStage->begin(); 
-        try {  
-
-            $values = array(
-                          'id' => $log['id']
-                      );
-            $this->RaidBattleLog->save($values);
-        
-        } catch (AppException $e) { 
-            $this->RaidUserStage->rollback(); 
-            $this->log($e->errmes);
-            return $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM )); 
-        } 
-        $this->RaidUserStage->commit(); 
-
-        $ending = $this->Enemy->judgeEnding($log['target']);
-        if (!$ending) {
-            // エピローグではない場合は次のステージへ
-            $param = array(
-                         'stage_id' => $nextRaidStageId
-                     );
-            $this->rd('RaidStages', 'main' , $param);
-        } else {
-            // エピローグ
-            $this->rd('RaidStages', 'end');
-        }
-
-    }
 
     /**
      * バトル完了後

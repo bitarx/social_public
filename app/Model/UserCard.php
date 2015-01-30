@@ -207,7 +207,7 @@ class UserCard extends AppModel {
                 ),
                 array('table' => 'skills',
                     'alias' => 'Skill',
-                    'type' => 'inner',
+                    'type' => 'left',
                     'conditions' => array(
                         'Card.skill_id = Skill.skill_id',
                     ),

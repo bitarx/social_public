@@ -52,7 +52,7 @@ var evolution = (function() {
   /**
   * 初期化
   */
-  function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback , divNum) {
+  function init(canvasID, fileName, loadCompleteCallback, contentsCompleteCallback , divNum, pushStartTime) {
 
     _canvas = document.getElementById(canvasID);
 
@@ -60,6 +60,14 @@ var evolution = (function() {
     if ( 2 == divNum ) {
         window.innerWidth = 640;
     }
+
+    // アニメ終了時pushスタート
+    var timer = setTimeout(function(){
+        _startPush();
+        _contentsCompleteCallback();
+        clearTimeout(timer); 
+    }, pushStartTime);
+
     _canvas.style.width = window.innerWidth / divNum + 'px';
     _canvas.style.height = Math.floor( _canvas.style.width * 1.3 )
 
@@ -74,8 +82,8 @@ var evolution = (function() {
       _bm.bg.regX = _bm.bg.image.width / 2; _bm.bg.regY = _bm.bg.image.height / 2;
       _bm.bg.x = 0;
       _bm.bg.y = 0;
-      _stage.addChild( _bm.bg );
-      _stage.update();
+//      _stage.addChild( _bm.bg );
+//      _stage.update();
       bg.onload = null;
       bg = null;
       _loadImage( function(){
@@ -117,7 +125,7 @@ var evolution = (function() {
 
   function _animationStep01() {
     setTimeout( function(){
-      _animationStep02();
+//      _animationStep02();
     }, 300);
   }
 

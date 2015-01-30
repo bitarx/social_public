@@ -1,6 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 App::uses('UserLastActTime', 'Model');
+App::uses('UserLastBpTime', 'Model');
 /**
  * UserParam Model
  *
@@ -12,6 +13,12 @@ class UserParam extends AppModel {
 
     // 行動力回復数
     const ACT_RECOVER_NUM = 1;
+
+    // BP回復間隔（分）
+    const BP_RECOVER_INTERVAL = 3;
+
+    // BP回復数
+    const BP_RECOVER_NUM = 1;
 
 /**
  * Primary key field
@@ -229,6 +236,60 @@ class UserParam extends AppModel {
                     'modified' => NOW_DATE_DB 
                 );
                 $userLastActTime->updateAll($value, $where);
+            }
+        }
+
+        return $userParam;
+    }
+
+    /**
+     * BP自動回復
+     *
+     * @author imanishi 
+     * @param array $userParam ユーザーステータス
+     * @return array $userParam 回復後のステータス
+     */
+    public function recoverBp($userParam) {
+
+        // 回復の余地があれば処理
+        if (isset($userParam['bp']) && $userParam['bp'] < $userParam['bp_max']) {
+            // 最後にBP消費した時間
+            $userLastBpTime = new UserLastBpTime();
+            $where = array('user_id' => $userParam['user_id']);
+            $lastBpTime = $userLastBpTime->field('modified', $where);
+            $lastBpTimeSp = strtotime($lastBpTime);
+            $timeSp = time();
+
+            // 経過時間(秒)
+            $passTimeSp = $timeSp - $lastBpTimeSp;
+
+            // 必要経過時間(秒)
+            $needTimeSp = self::BP_RECOVER_INTERVAL * 60;
+
+            // 回復に必要な時間が経過していれば回復
+            if ($needTimeSp < $passTimeSp) {
+
+                $num = floor($passTimeSp / $needTimeSp);
+
+                // 行動力最大値の補正
+                $addNum = $userParam['bp_max'] / 100;
+                $recoverBp = floor((self::BP_RECOVER_NUM * $addNum) * $num);
+
+                $userParam['bp'] += $recoverBp;
+                if ($userParam['bp_max'] < $userParam['bp']) 
+                    $userParam['bp'] = $userParam['bp_max'];
+
+                // ステータス更新
+                $value = array(
+                    'bp' => $userParam['bp'] 
+                );
+                $where = array('user_id' => $userParam['user_id']); 
+                $this->updateAll($value, $where);
+
+                $value = array(
+                    'modified' => NOW_DATE_DB 
+                );
+                $userLastBpTime->updateAll($value, $where);
             }
         }
 

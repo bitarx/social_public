@@ -466,7 +466,11 @@ class GachasController extends ApiController {
         // 合成後カード
         $afterCard = IMG_URL . 'gacha/card_s.png';
 
+        // push開始ミリ秒
+        $pushStartTime = 9000;
+
         $this->set('product', $product);
+        $this->set('pushStartTime', $pushStartTime);
         $this->set('time', time());
         $this->set('baseCard', $baseCard);
         $this->set('target', $target);

@@ -419,6 +419,7 @@ input.btn_submit {
 /** リスト表示 */
 .listBlock {
     position:relative;
+    text-align:center;
     top:30px;
     left:8px;
 }
@@ -1013,7 +1014,7 @@ display: block;
     position: relative;
     top: 20px;
     left: 0px;
-    height:270px;
+    height:304px;
     color:#FFA500
 }
 .myLevel {
@@ -1051,8 +1052,13 @@ display: block;
     left: 20px;
     position: absolute;
 }
+.myBp {
+    top: 220px;
+    left: 20px;
+    position: absolute;
+}
 .emojiComment {
-    top: 218px;
+    top: 254px;
     left: 20px;
     color:#fff;
     position: absolute;
@@ -1069,7 +1075,7 @@ display: block;
     height:200px;
 }
 .presentImg {
-    left:5px;
+    left:15px;
     top:0px;
     position: relative;
 }
@@ -1668,7 +1674,7 @@ input[type=checkbox] {
 .mainBp {
     position: absolute;
     top:35px;
-    left: 220px;
+    left: 240px;
 }
 
 ";

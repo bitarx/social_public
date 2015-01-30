@@ -9,7 +9,13 @@
         <img src="<{$smarty.const.IMG_URL}>enemy/enemy_<{$data.enemy_id}>.jpg" >
     </div>
     <{include file="../Elements/before_words.tpl"}>
+
+    <div style="position:relative;">
+    <{include file="../Elements/bp.tpl"}>
+    </div>
     <div class="spaceHigh"></div>
+
+    <{if 0 < $userParam.bp}>
     <div  class="parent">
         <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=1<{$help}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
@@ -37,6 +43,47 @@
             </a>
         </div>
     </div>
+    <div class="spaceHigh"></div>
+    <div  class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/runAway?&stage_id=<{$stageId}>">
+                <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child">
+                    逃げる(BP1消費)
+                </div>
+        </a>
+    </div>
+    <{else}>
+        <div style="position:relative;color:#FF0000;text-align:center;">
+            <span style="#FF0000">BPが不足しています</span>
+        </div>
+        <div class="space"></div>
+        <div  class="parent">
+            <a href="<{$linkItem}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <div class="child">
+                        ショップへ
+                    </div>
+            </a>
+        </div>
+        <div class="space"></div>
+        <div  class="parent">
+            <a href="<{$linkUserItem}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <div class="child">
+                        アイテムへ
+                    </div>
+            </a>
+        </div>
+        <div class="space"></div>
+        <div  class="parent">
+            <a href="<{$linkQuest}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <div class="child">
+                        鎮激へ
+                    </div>
+            </a>
+        </div>
+    <{/if}>
     <{if !empty($noCard)}>
         <div class="spaceHigh"></div>
         <div style="position:relative;color:#FF0000;text-align:center;">

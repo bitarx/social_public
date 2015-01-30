@@ -359,6 +359,9 @@ class AppController extends Controller {
                 // 行動力回復
                 $this->UserParam->recoverAct($this->userParam);
 
+                // BP回復
+                $this->UserParam->recoverBp($this->userParam);
+
                 // 所持金
                 $this->set('haveMoney', $this->userParam['money']);
 

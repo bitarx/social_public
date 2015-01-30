@@ -84,6 +84,7 @@ class UserCardsController extends ApiController {
         foreach ($list as &$val) {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
+
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);

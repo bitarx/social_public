@@ -18,7 +18,7 @@
                 </div>
             </a>
         </div>
-        <div class="space"></div>
+        <div class="spaceHigh"></div>
         <div class="parent">
             <a href="<{$smarty.const.BASE_URL}>RaidStages/<{$action}>/?stage_id=<{$stageId}>">
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">

@@ -125,6 +125,11 @@ class CardGroup extends AppModel {
             $ret = true; 
         } 
 
+        // 進化素材
+        if ( 2 == $targetData['sozai_kind'] ) {
+            $ret = true;
+        }
+
         // 次へ進化できるか
         if ($ret) {
             $where = array(
