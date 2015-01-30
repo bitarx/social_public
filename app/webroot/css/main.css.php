@@ -475,7 +475,7 @@ input.btn_submit {
     top: 0px;
     left:100px;
     height: 24px;
-    width: 400px;
+    width: 450px;
     font-size: 26px;
 }
 .progQuestMain {
@@ -718,6 +718,7 @@ input.btn_submit {
     left: 0px;
     top: 270px;
     height: 200px;
+    text-align:center;
     position: relative;
 }
 .btnQuestProgBoss {
@@ -732,10 +733,20 @@ input.btn_submit {
     height: 130px;
     position: relative;
 }
+.btnQuestNotProgBossRaid {
+    left: 0px;
+    height: 130px;
+    position: relative;
+}
 .strQuestProg {
     position: absolute;
     top: 12px;
     left: 190px;
+}
+.strQuestNotProg {
+    position: absolute;
+    top: 42px;
+    left: 142px;
 }
 
 /** クエストボス */

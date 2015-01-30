@@ -481,6 +481,8 @@ $this->log($this->userId);
         $this->set('linkCollect', BASE_URL . 'UserCollects/index'); 
         // レイドボス
         $this->set('linkRaid', BASE_URL . 'RaidQuests/index'); 
+        // カード
+        $this->set('linkCard', BASE_URL . 'UserCards/cardList'); 
     }
 
     /**

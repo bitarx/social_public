@@ -209,7 +209,10 @@
                     <div class="spaceLow"></div>
             <{/if}> 
         <{/if}>
+    <{* 強化合成素材カード選択 *}> 
+    <{elseif 'UserCards' == $ctl && 'cardList' == $action}> 
 
+        <div class="space"></div>
     <{* ベースカード選択 *}> 
     <{elseif 'UserBaseCards' == $ctl && 'index' == $action}> 
         <{if empty($data.sozai_kind)}>

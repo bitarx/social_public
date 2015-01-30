@@ -19,7 +19,7 @@ $(function () {
 
     <{if !empty($boss)}> 
         <div  class="btnQuestBoss">
-            <a href="conf?stage_id=<{$data.stage_id}>">
+            <a href="<{$smarty.const.BASE_URL}>Stages/conf?stage_id=<{$data.stage_id}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="strQuestBoss">
                     ボス出現！
@@ -34,10 +34,14 @@ $(function () {
                 </div>
             </div>
         <{else}> 
-            <div  class="btnQuestNotProgBoss" id="" act="Stages/init" params=<{$param}>>
-                <div class="strQuestProg" >
-                    行動力がなくなりました‥
-                </div>
+            <div  class="btnQuestNotProgBoss">
+                行動力がなくなりました‥
+                <a href="<{$linkRaid}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                    <div class="strQuestNotProg" >
+                            行動力不要のレイドボスバトルへ
+                    </div>
+                </a>
             </div>
         <{/if}> 
 
@@ -50,10 +54,14 @@ $(function () {
                 </div>
             </div>
         <{else}> 
-            <div  class="btnQuestNotProg" id="" act="Stages/init" params=<{$param}>>
-                <div class="strQuestProg" >
-                    行動力がなくなりました‥
-                </div>
+            <div  class="btnQuestNotProg">
+                行動力がなくなりました‥
+                <a href="<{$linkRaid}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                    <div class="strQuestNotProg" >
+                            行動力不要のレイドボスバトルへ
+                    </div>
+                </a>
             </div>
         <{/if}> 
     <{/if}> 

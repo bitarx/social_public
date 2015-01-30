@@ -53,7 +53,7 @@
             <a href="<{$linkRaid}> "><img src="<{$smarty.const.BASE_URL}>img/icon_raid.png" ></a>
         </div>
         <div class="icon_card">
-            <a href="<{$linkStaticPage}> "><img src="<{$smarty.const.BASE_URL}>img/icon_help.png" ></a>
+            <a href="<{$linkCard}>"><img src="<{$smarty.const.BASE_URL}>img/icon_card.png" ></a>
         </div>
 
             <div class="bn_menu">
