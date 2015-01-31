@@ -374,20 +374,18 @@ $this->log($enemyData);
              $this->log( __FILE__ .  ':' . __LINE__ .' : attack Param Error : userId:' . $this->userId );
              $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION ));
         }
-$this->log($this->params); 
+
         // 参戦者の場合
         $raidHelpId = 0;
         if (!empty($this->params['raid_help_id'])) {
             $raidHelpId = $this->params['raid_help_id'];
         }
 
-$this->log($raidHelpId); 
         $raidMasterId = 0;
 
         // 参戦者か
         $helpFlg = 0;
         if (!empty($raidHelpId)) {
-$this->log('getDataWithMster'); 
             $help = $this->RaidHelp->getDataWithMster($raidHelpId, $this->userId);
             // 時間切れ
             if (empty($help)) {
@@ -397,7 +395,6 @@ $this->log('getDataWithMster');
         }
 
         // 救援要請を受けて参戦
-$this->log($help); 
         if (!empty($help)) {
             // 敵マスタより情報取得
             $where = array(
@@ -662,12 +659,13 @@ $this->log($help);
             if (empty($raidMasterId)) {
                 // レイドマスタ登録
                 $value = array(
-                    'user_id'  => $this->userId 
-                ,   'enemy_id' => $targetId 
-                ,   'level'    => $enemyLevel
-                ,   'hp'       => $startEnemyHp 
-                ,   'hp_max'   => $startEnemyHp 
-                ,   'end_time' => $endTime
+                    'user_id'        => $this->userId 
+                ,   'enemy_id'       => $targetId 
+                ,   'level'          => $enemyLevel
+                ,   'hp'             => $startEnemyHp 
+                ,   'hp_max'         => $startEnemyHp 
+                ,   'raid_stage_id'  => $stageId 
+                ,   'end_time'       => $endTime
                 );
                 $this->RaidMaster->save($value);
 
@@ -1017,19 +1015,51 @@ $this->log($data);
 
         // 交戦中リスト取得
         $pageAll = 1;
-        $list = $this->RaidDamage->getRaidList($this->userId);
+        $list = $this->RaidDamage->getRaidList($this->userId, $limit = PAGE_LIMIT, $this->offset, $pageAll);
 
         foreach ($list as &$val) {
             $where = array('enemy_id' => $val['enemy_id']);
             $val['enemy_name'] = $this->Enemy->field('card_name', $where);
+            $val['end_time'] = $this->Common->changeTimeStr($val['end_time']);
         }
-$this->log($list); 
+
         $this->set('list', $list);
         $this->set('pageAll', $pageAll);
         $this->set('stageId', $stageId);
         $this->set('title', '交戦中一覧');
         $this->set('guideId', 2);
         $this->set('mes', '交戦中のレイドボスはいません。');
+    }
+
+    /**
+     * 救援要請一覧
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function helpList() {
+
+        // 現在のステージ取得
+        $where = array(
+            'user_id' => $this->userId
+        );
+        $stageId = $this->RaidUserCurStage->field('raid_stage_id', $where);
+
+        // レイドボス救援要請
+        $pageAll = 1;
+        $list = $this->RaidHelp->getHelpList($this->userId, $limit = PAGE_LIMIT, $this->offset, $pageAll);
+        if (!empty($list)) {
+            foreach ($list as &$val) {
+                $val['end_time'] = $this->Common->changeTimeStr($val['end_time']);
+            }
+        }
+
+        $this->set('list', $list);
+        $this->set('pageAll', $pageAll);
+        $this->set('stageId', $stageId);
+        $this->set('title', '救援要請一覧');
+        $this->set('guideId', 2);
+        $this->set('mes', '救援要請はありません。');
     }
 
     /**

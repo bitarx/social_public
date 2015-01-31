@@ -38,13 +38,13 @@ class UsersController extends ApiController {
 
 
         // レイドボス救援要請
-        $helpList = $this->RaidHelp->getHelpList($this->userId);
+        $helpList = $this->RaidHelp->getHelpList($this->userId, $limit = 1);
         if (!empty($helpList)) {
             foreach ($helpList as &$val) {
                 $val['end_time'] = $this->Common->changeTimeStr($val['end_time']);
             }
         }
-$this->log($helpList); 
+
         // アサイン
         $this->set('list', $userDeckList);
         $this->set('data', $this->userParam);
@@ -82,7 +82,6 @@ $this->log($helpList);
         $this->userParam['card_cnt'] = $this->UserCard->getUserCardCnt($this->userId );
 
         $act = ($this->userParam['act'] / $this->userParam['act_max']) * 100;
-$this->log($userDeckList); 
 
         $atk = 0;
         $def = 0;

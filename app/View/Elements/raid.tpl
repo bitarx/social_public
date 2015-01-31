@@ -1,13 +1,6 @@
-<div class="presentBlock">
-    <div class="presentImg">
-       <{if $smarty.const.KIND_CARD == $data.kind }>
-           <img src="<{$smarty.const.IMG_URL}>card/card_s_<{$data.target}>.jpg" width="120px">
-       <{elseif $smarty.const.KIND_ITEM == $data.kind }>
-           <img src="<{$smarty.const.IMG_URL}>item/item_<{$data.target}>.png" width="120px">
-       <{elseif $smarty.const.KIND_GOLD == $data.kind }>
-           <img src="<{$smarty.const.IMG_URL}>item/gold.png" width="120px">
-
-       <{/if}>
+<div class="helpBlock">
+    <div class="helpImg">
+           <img src="<{$smarty.const.IMG_URL}>enemy/enemy_s_<{$data.enemy_id}>.jpg" width="120px">
     </div>
     <div class="presentName">
             <span style="color:#ffffff"><{$data.enemy_name}>Lv<{$data.level}>
@@ -16,7 +9,7 @@
         残りHP:<span style="color:#ffffff"><{$data.hp}></span>
     </div>
     <div class="presentDate">
-        交戦日時:<span style="color:#ffffff"><{$data.created}></span>
+        逃亡時刻:<span style="color:#ffffff"><{$data.end_time}></span>
     </div>
 
     <div class="raidBtAgain">

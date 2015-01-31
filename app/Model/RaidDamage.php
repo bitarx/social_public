@@ -63,7 +63,7 @@ class RaidDamage extends AppModel {
      * @param int $userId
      * @return array 交戦中レイドボス一覧
      */
-    public function getRaidList($userId) {
+    public function getRaidList($userId, $limit = PAGE_LIMIT, $offset, &$pageAll = 0) {
 
         $where = array(
             'RaidDamage.user_id'       => $userId
@@ -71,7 +71,17 @@ class RaidDamage extends AppModel {
         ,   'RaidMaster.hp > '         => 0
         ,   'RaidMaster.end_time > '   => $this->nowDate()
         );
-        $list = $this->getAllFind($where);
+        $field = array('DISTINCT RaidMaster.raid_master_id', 'RaidMaster.user_id', 'RaidMaster.enemy_id', 'RaidMaster.level'
+                       , 'RaidMaster.hp', 'RaidMaster.raid_stage_id', 'RaidMaster.end_time');
+        $order = array();
+        $kind = 'all';
+        $list = $this->getAllFind($where, $field, $kind, $order, $limit, $offset);
+
+        if (!empty($pageAll)) {
+            $field = array('RaidDamage.user_id');
+            $tmp = $this->getAllFind($where, $field, $kind); 
+            $pageAll = ceil(count($tmp) / $limit);
+        }
 
         return $list;
     }

@@ -42,7 +42,7 @@ class RaidHelp extends AppModel {
      * @param int userId
      * @return array 要請一覧
      */
-    public function getHelpList ($userId, $limit = 5, $offset = 0) {
+    public function getHelpList ($userId, $limit = PAGE_LIMIT, $offset = 0, &$pageAll = 0) {
 
         $recu = -1;
 
@@ -89,12 +89,25 @@ class RaidHelp extends AppModel {
         ,   'RaidMaster.hp > '  => 0
         ,   'RaidMaster.end_time > ' => $this->nowDate()
         );
+
+
         $field = array('RaidHelp.user_id', 'User.user_name', 'RaidMaster.raid_master_id', 'RaidMaster.enemy_id'
                         , 'RaidMaster.level', 'RaidMaster.end_time', 'Enemy.card_name'
                         , 'UserCard.card_id');
         $order = array('RaidHelp.created DESC');
 
+
         $list = $this->getAllFind($where, $field, 'all', $order, $limit, $offset, $recu, $joins);
+
+        // ページング用
+        if (!empty($pageAll)) {
+            $field = array('RaidHelp.user_id');
+            $order = array();
+            $lm = 0;
+            $offset = 0;
+            $tmp = $this->getAllFind($where, $field, 'all', $order, $lm, $offset, $recu, $joins);
+            $pageAll = ceil(count($tmp) / $limit);
+        }
 
         return $list;
     }

@@ -43,9 +43,12 @@
         <{foreach from=$helpList item=data}>
             <{include file="../Elements/help.tpl"}>
         <{/foreach}>
+        <div style="text-align:right;">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/helpList" style="text-decoration:none;"><span style="color:#1E90FF">⇒もっと見る</span></a>
+        </div>
     <{else}>
         <div style="position:relative;text-align:center;height:80px;">
-            参戦要請はありません
+            救援要請はありません
         </div>
     <{/if}>
 

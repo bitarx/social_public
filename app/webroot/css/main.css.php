@@ -1089,6 +1089,7 @@ display: block;
 .presentImg {
     left:15px;
     top:0px;
+    text-align:left;
     position: relative;
 }
 .presentName {
@@ -1646,7 +1647,7 @@ input[type=checkbox] {
     position: relative;
 }
 .raidBtAgain {
-    top:110px;
+    top:0px;
     position: relative;
     text-align: center;
 }
@@ -1675,7 +1676,7 @@ input[type=checkbox] {
 .helpBlock {
     position:relative;
     width:640px;
-    height:180px;
+    height:160px;
     color:#FFA500
 }
 .helpImg {

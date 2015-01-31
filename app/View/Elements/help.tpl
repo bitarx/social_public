@@ -7,7 +7,7 @@
          <{/if}>
     </div>
     <div class="presentName">
-        参戦要請者:<a href="<{$smarty.const.BASE_URL}>Users/prof/<{$data.user_id}>"><span style="color:#ffffff"><{$data.user_name}></span></a>
+        救援要請者:<a href="<{$smarty.const.BASE_URL}>Users/prof/<{$data.user_id}>"><span style="color:#ffffff"><{$data.user_name}></span></a>
     </div>
     <div class="presentMes">
         レイドボス:<a href="<{$smarty.const.BASE_URL}>RaidStages/conf/?raid_master_id=<{$data.raid_master_id}>"><span style="color:#ffffff"><{$data.card_name}>Lv<{$data.level}></span></a>

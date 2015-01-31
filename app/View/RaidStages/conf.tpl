@@ -18,7 +18,7 @@
     <{if 0 < $userParam.bp}>
     <div  class="parent">
         <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=1<{$help}>">
-                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="child">
                     通常攻撃(BP1消費)
                 </div>

@@ -9,7 +9,7 @@
         });
 </script>
 <div style="text-align:center;">
-    <span style="color:#00FF00">プレミアム&10連&強化素材は体力回復薬付き！</span>
+    <span style="color:#00FF00">プレミアム&10連&強化素材は行動力回復薬付き！</span>
 </div>
 <div class="bx-wrapper">
     <{if $ctl != 'Gachas'}>
