@@ -51,6 +51,8 @@
             救援要請はありません
         </div>
     <{/if}>
+    <div class="spaceLow"></div>
+
     <{include file="../Elements/bn_raid.tpl"}>
 
     <div style="position:relative;left:20px;">

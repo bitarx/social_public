@@ -436,7 +436,7 @@ input.btn_submit {
 /** 選択ボタン */
 .btnSelectCard {
     top: 15px;
-    left: 185px;
+    left: 0px;
     height:90px;
     position: relative;
 }
@@ -1349,10 +1349,15 @@ display: block;
     height: 60px;
     width: 600px;
 }
-.enemyFukiUp {
+.enemyFukiUpAndroid {
     position: absolute;
     left: 260px;
     top:-25px;
+}
+.enemyFukiUp {
+    position: absolute;
+    left: 260px;
+    top:-27px;
 }
 .enemyFukiUpper {
     position: absolute;
@@ -1695,7 +1700,7 @@ input[type=checkbox] {
     left: 1%;
     margin : auto;
     text-align:left;
-    width: 640px;
+    width: 635px;
 }
 .raidText {
     text-align: center;
@@ -1719,11 +1724,12 @@ input[type=checkbox] {
     left: 180px;
     top:40px;
     text-align:left;
+    line-height: 1.2em;
     position: absolute;
 }
 .raidPresentMesSp {
     left: 180px;
-    top:105px;
+    top:108px;
     text-align:left;
     position: absolute;
 }
@@ -1745,7 +1751,8 @@ input[type=checkbox] {
 .raidEnemyHp {
     position: absolute;
     top: 87%;
-    margin : auto;
+    left:2%;
+    text-align:left;
     width: 640px;
     font-size:32px;
 }

@@ -146,15 +146,18 @@ boss.main = ( function() {
           //プレイヤーキャラクター攻撃
           var enemyHP = currentTurnData.enemyHP[ i ];
           var enemyDamage = _paramater.getParam( "enemyData" ).current - enemyHP;
+          if( enemyHP <= 0 ) {
+              _paramater.getParam( "enemyData" ).current = 0;
+          }
           _view.bossDamage( i, _paramater.getParam( "enemyData" ).max, _paramater.getParam( "enemyData" ).current, enemyHP, enemyDamage );
           _paramater.getParam( "enemyData" ).current = enemyHP;
 
           if( enemyHP <= 0 ) {
             _bossDedAction();
-            break;
+          } else {
+              num++;
           }
 
-          num++;
 
           if( ( all ) <= num ) {
             setTimeout( function( i ){

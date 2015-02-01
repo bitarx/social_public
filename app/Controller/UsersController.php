@@ -51,7 +51,7 @@ class UsersController extends ApiController {
         $this->set('act' , $act);
         $this->set('name', $snsUserName);
         $this->set('haveMoney', $this->userParam['money']);
-        $this->set('subTitle', 'レイドボス参戦要請');
+        $this->set('subTitle', 'レイドボス救援要請');
         $this->set('helpList', $helpList);
 	}
 

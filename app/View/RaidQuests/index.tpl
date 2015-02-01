@@ -52,7 +52,7 @@
                <span style="color:#00FF00;"><報酬について></span><br />
            </div>
            ■レイドボスを制限時間内に討伐すると、発見者、参加者共に「<{$smarty.const.MONEY_NAME}>」が送られます。<br />
-           ■<{$smarty.const.MONEY_NAME}>の獲得数は与えた総ダメージを参加人数で割った数が等しく分配されます。<br />
+           ■<{$smarty.const.MONEY_NAME}>の獲得数は<span style="color:#FFA500;">与えた総ダメージの１０分の１を参加人数で割った数が等しく分配</span>されます。<br />
            ■討伐した時に、一定の確率でアイテやカードが獲得できます。<br />
            ■レイドボスによっては、討伐したレイドボスの<span style="color:#FFA500;">レベルが高いほど、特別アイテムを獲得できる確率が高く</span>なります。<br />
            ■討伐時報酬は、<span style="color:#FFA500;">発見者、参加者全員が獲得</span>できます。<br />

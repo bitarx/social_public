@@ -390,6 +390,7 @@ boss.view = ( function() {
   * 敵ダメージ
   */
   function bossDamage( id, max, initial, current, damage ) {
+
     var param = { value: initial };
     var flg = false;
     var intervalID = setInterval( function() {

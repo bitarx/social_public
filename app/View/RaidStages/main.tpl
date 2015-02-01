@@ -10,7 +10,7 @@ $(function () {
 </script>
 <div class="stageMain">
     <div cla ss="parent">
-        <img src="<{$smarty.const.IMG_URL}>raid_quest/main_<{$data.raid_quest_id}>.jpg">
+        <img src="<{$smarty.const.IMG_URL}>raid_quest/main_<{$stageId}>.jpg">
         <div class="child">
             <{if !empty($helpWord)}>
                 <div class="raidHelpWord">

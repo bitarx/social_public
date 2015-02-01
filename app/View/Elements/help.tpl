@@ -10,7 +10,7 @@
         救援要請者:<a href="<{$smarty.const.BASE_URL}>Users/prof/<{$data.user_id}>"><span style="color:#ffffff"><{$data.user_name}></span></a>
     </div>
     <div class="presentMes">
-        レイドボス:<a href="<{$smarty.const.BASE_URL}>RaidStages/conf/?raid_master_id=<{$data.raid_master_id}>"><span style="color:#ffffff"><{$data.card_name}>Lv<{$data.level}></span></a>
+        レイドボス:<span style="color:#ffffff"><{$data.card_name}>Lv<{$data.level}></span>
     </div>
     <div class="presentDate">
         逃亡時刻:<span style="color:#ffffff"><{$data.end_time}></span>

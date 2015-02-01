@@ -220,6 +220,7 @@ class RaidStagesController extends ApiController {
         $this->set('dateStr', $dateStr);
         $this->set('maxExp', $maxExp);
         $this->set('helpWord', $helpWord);
+        $this->set('stageId', $stageId);
     }
 
     /**
@@ -352,20 +353,31 @@ class RaidStagesController extends ApiController {
         }
 
         $enemyData = $this->Enemy->getEnemyData($enemyId);
-
         if (!empty($data)) {
             // 再戦
             $lowHp = floor($data['hp_max'] / 10);
             if ($data['hp'] < $lowHp) {
-                $hpNow = '<span style="color:#FF0000">' . $data['hp'] . '</span>';
-            } else {
-                $hpNow = $data['hp'];
+                $under = 1;
             }
+            $hpNow = $data['hp'];
         } else {
             // 初戦
-            $hpNow = $enemyData['hp'];
-            $data['hp_max'] = $enemyData['hp'];
+            if (1 < $level) {
+                $multi = $level / 100; 
+                $multi += 1;
+            } else {
+                $multi = 1;
+            }
+
+            $hpNow = $enemyData['hp'] * $multi;
+            $data['hp_max'] = $hpNow;
             $data['end_time'] = '';
+        }
+
+        if (isset($under)) {
+            $hpNow = '<span style="color:#FF0000">' . $hpNow . '</span>';
+        } else {
+            $hpNow = '<span style="color:#008000">' . $hpNow . '</span>';
         }
 
         // 敵HP
@@ -377,7 +389,7 @@ class RaidStagesController extends ApiController {
         $this->set('stageId', $stageId);
         $this->set('help', $help);
         $this->set('enemyHp', $enemyHp);
-        $this->set('dateStr', $data['end_time']);
+        $this->set('dateStr', str_replace('-', '/', $data['end_time']));
 
     }
 

@@ -131,6 +131,7 @@ var isJSON = function(arg) {
 
 
   function countDown(dateStr) {
+
       if ("" == dateStr) return;
       var startDateTime = new Date();
       var endDateTime = new Date(dateStr);
@@ -161,7 +162,7 @@ var isJSON = function(arg) {
       if ( s < 0 ) {
           str = 0 + '秒';
       }
-
+console.log(str); 
       $("#TimeLeft").text(str);
         setTimeout('countDown("' + dateStr + '")', 1000);
   }
