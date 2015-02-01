@@ -47,24 +47,36 @@ class RaidStagesController extends ApiController {
 
         $questId = $this->params['quest_id'];
 
-        // 到達したステージリスト
-        $ret = $this->RaidUserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
-        // このクエストは初めて
-        if (empty($ret)) {
-            $list[] = $this->RaidStage->getFirstStage($questId);
-        } else {
-            // 現在のクエストステージを抽出
-            foreach ($ret as $val)  {
-                if ($val['raid_quest_id'] == $questId) {
-                    $list[] = $val;
+        $list = $this->RaidStage->getList($questId);
+        if (empty($list)) {
+            $this->log('RaidStage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
+        }
+    
+        $pList = array();
+        $i = 0;
+        foreach ($list as &$val) {
+            $where = array(
+                'raid_stage_id' => $val['raid_stage_id']
+            ,   'kind' => KIND_ENEMY
+            );
+            $field = array('target');
+            $enemyIds = $this->RaidStageProb->getAllFind($where, $field);
+            if (!empty($enemyIds)) {
+                foreach ($enemyIds as $enemyId) {
+                    $pList[$i] = $this->RaidPresent->getList($enemyId);
+                    $pList[$i]['enemy'] = $this->Enemy->getEnemyData($enemyId);
+                    arsort($pList[$i]);
+                    $i++;
                 }
             }
-            $questData = $this->RaidQuest->getQuestData($questId);
-            $list[0]['quest_detail'] = $questData['quest_detail'];
         }
 
         $this->set('list', $list);
+        $this->set('pList', $pList);
+        $this->set('questId', $questId);
         $this->set('guideId', 1 );
+        $this->set('subTitle', '報酬一覧（討伐時一定の確率で獲得）' );
 	}
 
     /**
@@ -78,24 +90,16 @@ class RaidStagesController extends ApiController {
         $first = 0;
         $stageId = $this->params['stage_id'];
 
-        // 現在到達最大stageId
-        $curMaxRaidStageId = $this->RaidUserStage->getUserMaxStageId($this->userId);
-
-        // 初めてのアクセス
-        if (empty($curMaxRaidStageId)) {
-            $curMaxRaidStageId = 1;
-            $stageId = 1;
-            $first = 1;
-        }
-
-        // 不正
-        if ( ($curMaxRaidStageId < $stageId) || empty($stageId) ) {
-            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
-        }
+        // 現在到達確認
+        $where = array(
+            'user_id'        => $this->userId
+        ,   'RaidUserStage.raid_stage_id'  => $stageId 
+        );
+        $stage = $this->RaidUserStage->field('raid_stage_id', $where);
 
         $this->RaidUserCurStage->begin(); 
         try {
-            if ($first == 1) {
+            if (empty($stage)) {
                 $values = array(
                     'user_id'  => $this->userId  
                 ,   'raid_stage_id' => $stageId
@@ -104,6 +108,7 @@ class RaidStagesController extends ApiController {
                 );
                 $this->RaidUserStage->save($values);    
             }
+
             $values = array(
                 'user_id' => $this->userId  
             ,   'raid_stage_id' => $stageId
@@ -1225,6 +1230,7 @@ $this->log($data);
             $userParam = $this->userParam;
 
             // 行動力チェック
+/*
             if ($userParam['act'] < $userRaidStageData['use_act']) {
                 // 不足の場合は不正
                 $ary = array(
@@ -1234,6 +1240,7 @@ $this->log($data);
                 $this->setJson($ary);
                 return false;
             }
+*/
             // 何かもらえるかどうか
             $lotData['kind']   = 0;
             $lotData['target'] = 0;
@@ -1393,6 +1400,7 @@ $this->log($value);
 */
 
                 // 行動力の減算
+/*
                 $notAct = 0;
                 $userParam['act'] -= $userRaidStageData['use_act'];
                 if ($userParam['act'] < 0) $userParam['act'] = 0;
@@ -1438,26 +1446,26 @@ $this->log($value);
 
                 // 行動力グラフ用に変更 
                 $actBar = ($userParam['act'] / $userParam['act_max']) * 100;
-
+*/
                 // 返却データを配列に格納
                 $ary = array(
                     'result'           => 1
-                ,   'progress'         => $data['progress']         // クエスト進行度 
+//                ,   'progress'         => $data['progress']         // クエスト進行度 
                 ,   'kind'             => $lotData['kind']          // 取得対象の種別（1.カード 3.お金）
                 ,   'target'           => $lotData['target']        // 取得対象のid
                 ,   'num'              => $lotData['num']           // 取得対象の個数（金額）
                 ,   'exp'              => $userParam['exp']         // 経験値
-                ,   'act'              => $actBar                   // 行動力 
-                ,   'act_max_diff'     => $actMaxDiff               // 前のレベルとの差分
-                ,   'cost_atk_diff'    => $costAtkDiff              // 前のレベルとの差分
-                ,   'not_act'          => $notAct                   // 行動力切れの場合1
+//                ,   'act'              => $actBar                   // 行動力 
+//                ,   'act_max_diff'     => $actMaxDiff               // 前のレベルとの差分
+//                ,   'cost_atk_diff'    => $costAtkDiff              // 前のレベルとの差分
+//                ,   'not_act'          => $notAct                   // 行動力切れの場合1
                 ,   'level'            => $userParam['level']       // レベル
-                ,   'level_up'         => $levelUp                  // レベルアップの場合1
-                ,   'level_up_act_bf'  => $actMaxBef                // レベルアップ前の最大行動力
-                ,   'level_up_act_af'  => $userParam['act_max']     // レベルアップ後の最大行動力
-                ,   'level_up_cost_bf' => $costAtkBef               // レベルアップ前のデッキコスト
-                ,   'level_up_cost_af' => $userParam['cost_atk']    // レベルアップ後のデッキコスト
-                ,   'stage_clear'      => $stageClear               // ステージクリアの場合1 
+//                ,   'level_up'         => $levelUp                  // レベルアップの場合1
+//                ,   'level_up_act_bf'  => $actMaxBef                // レベルアップ前の最大行動力
+//                ,   'level_up_act_af'  => $userParam['act_max']     // レベルアップ後の最大行動力
+//                ,   'level_up_cost_bf' => $costAtkBef               // レベルアップ前のデッキコスト
+//                ,   'level_up_cost_af' => $userParam['cost_atk']    // レベルアップ後のデッキコスト
+ //               ,   'stage_clear'      => $stageClear               // ステージクリアの場合1 
                 ,   'stage_id'         => $data['raid_stage_id']         // ステージID
                 ,   'name'             => $targetData['name']       // 入手物の名前
                 ,   'effect'           => $effect                   // アイテム効果による確率変動(3:カードup 4:ゴールドup)

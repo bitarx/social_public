@@ -46,7 +46,7 @@
     <div class="spaceHigh"></div>
     <div  class="parent">
         <a href="<{$smarty.const.BASE_URL}>RaidStages/runAway?&stage_id=<{$stageId}>">
-                <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="child">
                     逃げる(BP1消費)
                 </div>
@@ -59,7 +59,7 @@
         <div class="space"></div>
         <div  class="parent">
             <a href="<{$linkItem}>">
-                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                     <div class="child">
                         ショップへ
                     </div>
@@ -68,7 +68,7 @@
         <div class="space"></div>
         <div  class="parent">
             <a href="<{$linkUserItem}>">
-                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                     <div class="child">
                         アイテムへ
                     </div>
@@ -77,7 +77,7 @@
         <div class="space"></div>
         <div  class="parent">
             <a href="<{$linkQuest}>">
-                    <img src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                    <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                     <div class="child">
                         鎮激へ
                     </div>

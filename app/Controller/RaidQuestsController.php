@@ -8,6 +8,8 @@ App::uses('ApiController', 'Controller');
  */
 class RaidQuestsController extends ApiController {
 
+    protected static $title = 'レイドボス';
+
     /**
      * Components
      *
@@ -38,6 +40,7 @@ class RaidQuestsController extends ApiController {
         $list = $this->RaidQuest->getQuestList($questId);
 
         $this->set('list', $list);
+        $this->set('title', self::$title);
 	}
 
 }

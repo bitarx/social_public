@@ -1084,7 +1084,7 @@ display: block;
 .presentBlock {
     position:relative;
     width:640px;
-    height:200px;
+    height:195px;
 }
 .presentImg {
     left:15px;
@@ -1622,7 +1622,7 @@ input[type=checkbox] {
 /** レイドボス */
 .btnRaidQuestProg {
     left: 103px;
-    top: 130px;
+    top: 20px;
     height: 200px;
     position: relative;
 }
@@ -1688,6 +1688,47 @@ input[type=checkbox] {
     position: absolute;
     top:35px;
     left: 240px;
+}
+.childTop {
+    position: absolute;
+    top: 2%;
+    margin : auto;
+    text-align:left;
+    width: 640px;
+}
+.raidText {
+    text-align: center;
+    line-height: 1.5em;
+    position: relative;
+}
+.progRaidQuest {
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+    left:-40px;
+    height:80px;
+    line-height: 0;
+    width: 520px;
+}
+.raidPList {
+    text-align: center;
+    position: relative;
+}
+.raidPresentMes {
+    left: 180px;
+    top:75px;
+    text-align:left;
+    position: absolute;
+}
+.raidStage {
+    position:relative;
+    width:640px;
+    height:5400px;
+}
+.raidBanner {
+    position:relative;
+    text-align:center;
+    height:170px;
 }
 
 /** 図鑑 */

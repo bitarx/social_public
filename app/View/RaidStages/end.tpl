@@ -12,7 +12,7 @@
 
         <div class="parent">
             <a href="<{$smarty.const.BASE_URL}>RaidStages/helpOffer/?kind=1&raid_master_id=<{$latest.raid_master_id}>">
-                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="child" >
                     近いレベルの人
                 </div>

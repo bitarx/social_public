@@ -1,6 +1,7 @@
 <div class="quest">
-    <div style="left:-40px;">
-        <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
+    <{include file="../Elements/title.tpl"}>   
+    <div style="left:-41px;">
+        <img src="<{$smarty.const.IMG_URL}>raid_quest/start.jpg">
     </div>
     <div class="spaceLow">
     </div>
@@ -9,16 +10,10 @@
             <div class="space">
             </div>
             <div style="font-size:30px;text-align:center;">
-                <span style="color:#EE82EE">鎮激<{$val['raid_quest_id']}></span>. <{$val['quest_title']}>
+                <span style="color:#EE82EE">エリア<{$val['raid_quest_id']}></span>. <{$val['quest_title']}>
             </div>
                 <div class="spaceLow">
                 </div>
-                 <div class="questText">
-                    <input type="image" src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaStageImg">
-                    <div class="strQuestList">
-                        <{$val['quest_detail']}> 
-                    </div>
-                  </div>
                   <div class="parent">
                       <a href="<{$smarty.const.BASE_URL}>RaidStages/index?quest_id=<{$val['raid_quest_id']}>"> 
                           <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
@@ -31,6 +26,40 @@
         <div class="spaceLow">
         </div>
     <{/foreach}> 
+    <div class="space"></div>
+    <div class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/raidList"> 
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child">
+                交戦中一覧
+            </div>
+        </a>
+    </div>
+    <div class="spaceLow"></div>
+    <div class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/helpList"> 
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child">
+                救援要請一覧
+            </div>
+        </a>
+    </div>
+    <div class="space"></div>
+    <div class="raidText">
+       <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="445px">
+       <div class="childTop">
+           <div style="text-align:center">
+               <span style="color:#00FF00;"><報酬について></span><br />
+           </div>
+           ■レイドボスを制限時間内に討伐すると、発見者、参加者共に「<{$smarty.const.MONEY_NAME}>」が送られます。<br />
+           ■<{$smarty.const.MONEY_NAME}>の獲得数は与えた総ダメージを参加人数で割った数が分配されます。<br />
+           ■討伐した時に、一定の確率でアイテやカードが獲得できます。<br />
+           ■レイドボスによっては、討伐したレイドボスの<span style="color:#FFA500;">レベルが高いほど、特別アイテムを獲得できる確率が高く</span>なります。<br />
+           ■討伐時報酬は、<span style="color:#FFA500;">発見者、参加者全員が獲得</span>できます。<br />
+           ■ダメージを与えていない場合は報酬を獲得できません。
+       </div>
+    </div>
     <div class="space">
     </div>
 </div>
+

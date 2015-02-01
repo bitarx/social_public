@@ -108,6 +108,25 @@ class RaidStage extends AppModel {
 	);
 
     /**
+     * クエストのステージを取得
+     *
+     * @author imanishi 
+     * @param int $questId
+     * @return array 対象のステージデータ
+     */
+    public function getList($questId) {
+
+        $fields = array();
+        $order  = array();
+        $kind = 'all';
+        $where = array('raid_quest_id' => $questId);
+        $order = array('raid_stage_id ASC');
+
+        $data = $this->getAllFind($where, $fields, $kind, $order);
+        return $data;
+    }
+
+    /**
      * クエストの最初のステージを取得
      *
      * @author imanishi 

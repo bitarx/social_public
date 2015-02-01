@@ -17,53 +17,19 @@ $(function () {
         </div>
     </div>
 
-    <{if !empty($boss)}> 
-        <div  class="btnQuestBoss">
-            <a href="conf?stage_id=<{$data.stage_id}>">
-                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                <div class="strQuestBoss">
-                    ボス出現！
-                </div>
-            </a>
-        </div>
-        <{if empty($notAct)}> 
-            <div  class="btnRaidQuestProgBoss" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
-                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                <div class="strQuestProg" >
-                    探索！
-                </div>
-            </div>
-        <{else}> 
-            <div  class="btnQuestNotProgBoss" id="" act="" params=<{$param}>>
-                <div class="strQuestProg" >
-                    行動力がなくなりました‥
-                </div>
-            </div>
-        <{/if}> 
-
-    <{else}>
-        <{if empty($notAct)}> 
-            <div  class="btnRaidQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
-                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                <div class="strQuestProg" >
-                    探索！
-                </div>
-            </div>
-        <{else}> 
-            <div  class="btnQuestNotProg" id="" act="" params=<{$param}>>
-                <div class="strQuestProg" >
-                    行動力がなくなりました‥
-                </div>
-            </div>
-        <{/if}> 
-    <{/if}> 
-
-    <div class="progQuest">
+    <div class="progRaidQuest">
         <div class="progQuestUseStr">
             消費行動力: <span style="color:#FF1493">-<{$data.use_act}></span>&nbsp;&nbsp;獲得経験値:&nbsp;<span style="color:#1E90FF">+<{if 0 == $maxExp}>0<{else}>0～<{$maxExp}><{/if}></span>
         </div>
 
         <{include file="../Elements/bp.tpl"}>
+    </div>
+
+    <div  class="btnRaidQuestProg" id="appReq" act="RaidStages/init<{$ownerInfo}>" params=<{$param}>>
+        <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+        <div class="strQuestProg" >
+            探索！
+        </div>
     </div>
 
     <div  class="btnRaidList">

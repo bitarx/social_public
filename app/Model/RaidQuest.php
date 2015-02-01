@@ -101,20 +101,6 @@ class RaidQuest extends AppModel {
 		),
 	);
 
-    /**
-     * 稼働中のイベントを返す
-     */
-    public function isRaident () {
-        $nowDate = $this->nowDate();
-
-        $where = array(
-            'start_time < ' => $nowDate
-        ,   'end_time > '   => $nowDate
-        );
-        $order = array('start_time DESC');
-        $row = $this->getAllFind($where , array(), 'first', $order);
-        return $row;
-    }
 
     /**
      * クエストデータ取得
@@ -131,7 +117,7 @@ class RaidQuest extends AppModel {
     }
 
     /**
-     * 進行可能クエストリスト取得
+     * クエストリスト取得
      *
      * @author imanishi
      * @param int $questId
@@ -139,7 +125,7 @@ class RaidQuest extends AppModel {
      */
     public function getQuestList($questId) {
 
-        $where = array('raid_quest_id <=' => $questId);
+        $where = array('raid_quest_id' => $questId);
         $order = array('raid_quest_id DESC');
         $ret = $this->getAllFind($where, $fields = array(), $kind = 'all', $order);
         return $ret;

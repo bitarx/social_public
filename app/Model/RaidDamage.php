@@ -67,13 +67,12 @@ class RaidDamage extends AppModel {
 
         $where = array(
             'RaidDamage.user_id'       => $userId
-        ,   'RaidDamage.damage > '     => 0
         ,   'RaidMaster.hp > '         => 0
         ,   'RaidMaster.end_time > '   => $this->nowDate()
         );
         $field = array('DISTINCT RaidMaster.raid_master_id', 'RaidMaster.user_id', 'RaidMaster.enemy_id', 'RaidMaster.level'
                        , 'RaidMaster.hp', 'RaidMaster.raid_stage_id', 'RaidMaster.end_time');
-        $order = array();
+        $order = array('RaidMaster.created DESC');
         $kind = 'all';
         $list = $this->getAllFind($where, $field, $kind, $order, $limit, $offset);
 

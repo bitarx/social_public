@@ -42,7 +42,6 @@ function appRequest(e){
         type: type, 
 
         success: function( data, textStatus, jqXHR ) {
-console.log(data);
            routes(data);
         },
         error: function (request, status, error) {
