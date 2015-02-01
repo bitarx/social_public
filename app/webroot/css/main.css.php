@@ -422,6 +422,7 @@ input.btn_submit {
     position:relative;
     text-align:center;
     top:30px;
+    height:290px;
     left:8px;
 }
 
