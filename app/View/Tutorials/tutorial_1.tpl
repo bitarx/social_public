@@ -38,7 +38,7 @@
       auto: true,
       manualMode: 'loop',
       frameRate: 10,
-      speed: 5,
+      speed: 3,
       pauseOnHover:false
     });
   });
