@@ -277,4 +277,14 @@ class Card extends AppModel {
         $list = $this->getAllFind($where, $field, $kind = 'all', $order, $limit, $offset, $recursive , $joins);
         return $list;
     }
+
+    /**
+     * カード全枚数
+     *
+     * @return int カード全枚数
+     */
+    public function getAllCnt () {
+        $list = $this->getAllFind();
+        return count($list);
+    }
 }

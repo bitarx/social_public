@@ -49,6 +49,13 @@
             <a href="<{$linkCollect}> "><img src="<{$smarty.const.BASE_URL}>img/icon_collect.png" ></a> 
         </div>
 
+        <div class="icon_raid">
+            <a href="<{$linkRaid}> "><img src="<{$smarty.const.BASE_URL}>img/icon_raid.png" ></a>
+        </div>
+        <div class="icon_card">
+            <a href="<{$linkCard}>"><img src="<{$smarty.const.BASE_URL}>img/icon_card.png" ></a>
+        </div>
+
             <div class="bn_menu">
                 <{if !empty($event)}>
                     <{include file="../Elements/event.tpl"}>

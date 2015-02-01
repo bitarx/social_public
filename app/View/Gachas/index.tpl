@@ -25,7 +25,7 @@
                 カードのレアリティは最大で３段階まで進化します<br />
                 レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
                 <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
-                <span style="color:#EE82EE">SR</span>カードは<pan style="color:#FFA500">ボイス付き！</span><br />
+                <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！</span><br />
                 <{$data['card_detail']}>
         </div>
     </div>

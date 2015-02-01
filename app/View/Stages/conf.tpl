@@ -10,7 +10,7 @@
     </div>
     <{include file="../Elements/before_words.tpl"}>
     <div  class="btnQuestBossBattle">
-        <a href="act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>">
+        <a href="<{$smarty.const.BASE_URL}>Stages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>">
                 <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
                 <div class="strQuestBossBattle">
                     鎮激開始！

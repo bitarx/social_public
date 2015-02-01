@@ -36,6 +36,25 @@
     </div>
     <{include file="../Elements/status.tpl"}>
 
+    <{include file="../Elements/sub_title.tpl"}>
+
+    <div class="space"></div>
+    <{if !empty($helpList)}>
+        <{foreach from=$helpList item=data}>
+            <{include file="../Elements/help.tpl"}>
+        <{/foreach}>
+        <div style="text-align:right;">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/helpList" style="text-decoration:none;"><span style="color:#1E90FF">⇒もっと見る</span></a>
+        </div>
+    <{else}>
+        <div style="position:relative;text-align:center;height:80px;">
+            救援要請はありません
+        </div>
+    <{/if}>
+    <div class="spaceLow"></div>
+
+    <{include file="../Elements/bn_raid.tpl"}>
+
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>

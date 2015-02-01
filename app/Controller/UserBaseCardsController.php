@@ -44,7 +44,18 @@ class UserBaseCardsController extends ApiController {
         $userCardId = $this->params['user_card_id'];
         if (empty($userCardId)) {
             $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
-            $this->rd('Errors', 'index', array('error'=> 1)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION)); 
+        }
+
+        // 整合性チェック
+        $cardData = $this->UserCard->getUserCardById($userCardId , $this->userId);
+        if (empty($userCardId)) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION)); 
+        }
+        if (!empty($cardData['sozai_kind'])) {
+            $this->log( __FILE__ .  ':' . __LINE__ .':userId:' . $this->userId ); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION)); 
         }
 
         $this->UserBaseCard->begin(); 
@@ -58,7 +69,7 @@ class UserBaseCardsController extends ApiController {
         } catch (AppException $e) { 
             $this->UserBaseCard->rollback(); 
             $this->log($e->errmes);
-            $this->rd('Errors', 'index', array('error'=> 2)); 
+            $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM)); 
         } 
         $this->UserBaseCard->commit(); 
 

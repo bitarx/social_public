@@ -8,6 +8,14 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha_android.css.php">
         <{/if}>
+        <style type="text/css">  
+        <!-- 
+            #mainCanvas {
+              background-image: url("<{$smarty.const.IMG_URL}>gacha/product_<{$product}>.gif?t=<{$time}>");
+              background-size:contain;
+            }
+        -->
+        </style>
     </head>
     <body>
         <canvas id="mainCanvas" height="800px" width="640px"></canvas>
@@ -22,7 +30,7 @@
         <script type="text/javascript">
         $(function() {
             setInterval(function() {
-                var height = $(document).height() / 1.8;
+                var height = $(document).height() / 2;
                 gadgets.window.adjustHeight(height); }, 500);
         });
         </script>
@@ -57,9 +65,16 @@
           },
           imageLoadComplete,
           contentsComplete,
-          <{$divNum}>
+          <{$divNum}>,
+          <{$pushStartTime}>
         );
       };
 
+    </script>
+    <script type="text/javascript">
+        //スクロール停止
+        document.ontouchmove = function( e ){
+            event.preventDefault();
+        }
     </script>
 </html>

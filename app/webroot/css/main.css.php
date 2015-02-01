@@ -203,9 +203,19 @@ a:hover {
     top: 315px;
     left: 388px;
 }
-.bn_menu {
+.icon_raid {
     position: absolute;
     top: 400px;
+    left: 0px;
+}
+.icon_card {
+    position: absolute;
+    top: 400px;
+    left: 194px;
+}
+.bn_menu {
+    position: absolute;
+    top: 485px;
     left: 10px;
 }
 
@@ -253,6 +263,7 @@ a:hover {
 .cardImg {
     left:5px;
     top:0px;
+    text-align:left;
     position: relative;
 }
 .cardName {
@@ -409,6 +420,7 @@ input.btn_submit {
 /** リスト表示 */
 .listBlock {
     position:relative;
+    text-align:center;
     top:30px;
     left:8px;
 }
@@ -424,7 +436,7 @@ input.btn_submit {
 /** 選択ボタン */
 .btnSelectCard {
     top: 15px;
-    left: 185px;
+    left: 0px;
     height:90px;
     position: relative;
 }
@@ -463,7 +475,7 @@ input.btn_submit {
     top: 0px;
     left:100px;
     height: 24px;
-    width: 400px;
+    width: 450px;
     font-size: 26px;
 }
 .progQuestMain {
@@ -706,6 +718,7 @@ input.btn_submit {
     left: 0px;
     top: 270px;
     height: 200px;
+    text-align:center;
     position: relative;
 }
 .btnQuestProgBoss {
@@ -720,10 +733,20 @@ input.btn_submit {
     height: 130px;
     position: relative;
 }
+.btnQuestNotProgBossRaid {
+    left: 0px;
+    height: 130px;
+    position: relative;
+}
 .strQuestProg {
     position: absolute;
     top: 12px;
     left: 190px;
+}
+.strQuestNotProg {
+    position: absolute;
+    top: 42px;
+    left: 142px;
 }
 
 /** クエストボス */
@@ -1003,7 +1026,7 @@ display: block;
     position: relative;
     top: 20px;
     left: 0px;
-    height:270px;
+    height:304px;
     color:#FFA500
 }
 .myLevel {
@@ -1041,8 +1064,13 @@ display: block;
     left: 20px;
     position: absolute;
 }
+.myBp {
+    top: 220px;
+    left: 20px;
+    position: absolute;
+}
 .emojiComment {
-    top: 218px;
+    top: 254px;
     left: 20px;
     color:#fff;
     position: absolute;
@@ -1056,11 +1084,12 @@ display: block;
 .presentBlock {
     position:relative;
     width:640px;
-    height:200px;
+    height:195px;
 }
 .presentImg {
-    left:5px;
+    left:15px;
     top:0px;
+    text-align:left;
     position: relative;
 }
 .presentName {
@@ -1320,10 +1349,15 @@ display: block;
     height: 60px;
     width: 600px;
 }
-.enemyFukiUp {
+.enemyFukiUpAndroid {
     position: absolute;
     left: 260px;
     top:-25px;
+}
+.enemyFukiUp {
+    position: absolute;
+    left: 260px;
+    top:-27px;
 }
 .enemyFukiUpper {
     position: absolute;
@@ -1589,5 +1623,153 @@ input[type=checkbox] {
     top: 450px;
     left: 400px;
 }
+
+/** レイドボス */
+.btnRaidQuestProg {
+    left: 103px;
+    top: 20px;
+    height: 200px;
+    position: relative;
+}
+.btnRaidQuestProgBoss {
+    left: 103px;
+    top: 140px;
+    height: 130px;
+    position: relative;
+}
+.btnRaidList {
+    left: 103px;
+    top: -50px;
+    height: 130px;
+    position: relative;
+}
+.strRaidList {
+    position: absolute;
+    top: 12px;
+    left: 150px;
+}
+.raidBtList {
+    position: relative;
+}
+.raidBtAgain {
+    top:0px;
+    position: relative;
+    text-align: center;
+}
+.btnAtk {
+    text-align: center;
+    height:160px;
+    position: relative;
+}
+.btnAtk2 {
+    position: absolute;
+}
+.strAtk2 {
+    position: absolute;
+    top:155px;
+    left:105px;
+}
+.btnAtk6 {
+    left:320px;
+    position: absolute;
+}
+.strAtk6 {
+    position: absolute;
+    top:155px;
+    left:425px;
+}
+.helpBlock {
+    position:relative;
+    width:640px;
+    height:160px;
+    color:#FFA500
+}
+.helpImg {
+    left:18px;
+    top:0px;
+    position: relative;
+}
+.mainBp {
+    position: absolute;
+    top:35px;
+    left: 240px;
+}
+.childTop {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    margin : auto;
+    text-align:left;
+    width: 635px;
+}
+.raidText {
+    text-align: center;
+    line-height: 1.5em;
+    position: relative;
+}
+.progRaidQuest {
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+    left:-40px;
+    height:80px;
+    line-height: 0;
+    width: 520px;
+}
+.raidPList {
+    text-align: center;
+    position: relative;
+}
+.raidPresentMes {
+    left: 180px;
+    top:40px;
+    text-align:left;
+    line-height: 1.2em;
+    position: absolute;
+}
+.raidPresentMesSp {
+    left: 180px;
+    top:108px;
+    text-align:left;
+    position: absolute;
+}
+.raidStage {
+    position:relative;
+    width:640px;
+    height:5400px;
+}
+.raidBanner {
+    position:relative;
+    text-align:center;
+    height:170px;
+}
+.raidHelpWord {
+    text-align: center;
+    top:-240px;
+    position: relative;
+}
+.raidEnemyHp {
+    position: absolute;
+    top: 87%;
+    left:2%;
+    text-align:left;
+    width: 640px;
+    font-size:32px;
+}
+.raidTime {
+    position:absolute;
+    top:15px;
+    left:460px;
+}
+
+/** 図鑑 */
+.collectHead {
+    position: relative;
+    text-align:right;
+    height:40px;
+    text-decoration:none;
+    font-size:28px;
+}
+
 ";
 ?>

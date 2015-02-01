@@ -160,7 +160,7 @@ class CommonComponent extends Component {
       *
       * @param 文字数
       */
-    function makeRandStr($length) {
+    public function makeRandStr($length) {
         $str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z'));
         $r_str = null;
         for ($i = 0; $i < $length; $i++) {
@@ -168,4 +168,47 @@ class CommonComponent extends Component {
         }
         return $r_str;
     }
+
+    /**
+     * 時：分：秒を秒に変換
+     */
+    public function h2s($hours) {
+           $t = explode(":", $hours);
+           $h = $t[0];
+           if (isset($t[1])) {
+            $m = $t[1];
+           } else {
+            $m = "0";
+           } 
+           if (isset($t[2])) {
+            $s = $t[2];
+           } else {
+            $s = "0";
+           } 
+           return ($h*60*60) + ($m*60) + $s;
+    }
+
+   public function changeTimeStr ($time) {
+        $timeSp = strtotime($time);
+        $str = date("Y/m/d H時i分", $timeSp);
+        return $str;
+   }
+
+   public function helpKindWord($helpKind) {
+       
+        switch ($helpKind) {
+            case 1:
+                $word = '近いレベルの人';
+                break;
+            case 2:
+                $word = SNS_FRIEND_NAME;
+                break;
+            case 3:
+                $word = '同じグループの人';
+                break;
+            default:
+                $word = '';
+        }
+        return $word;
+   }
 }

@@ -99,4 +99,19 @@ class UserCollect extends AppModel {
              return false;
          }
      }
+
+     /**
+      * ユーザーの取得種類数
+      *
+      * @param int userId
+      * @return int 取得数
+      */
+     public function getCardCnt ($userId) {
+
+         $where = array('user_id' => $userId);
+         $field = array('card_id');
+         $list = $this->getAllFind($where, $field);
+
+         return count($list);
+     }
 }

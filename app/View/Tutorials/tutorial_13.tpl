@@ -48,7 +48,7 @@
           enemyHPProgBase: "<{$smarty.const.BASE_URL}>img/hp_prog_base.png",
           playerHPProgBaseT: "<{$smarty.const.BASE_URL}>img/touka_prog.png",
           enemyHPProgRed: "<{$smarty.const.BASE_URL}>img/hp_prog_red.png",
-          playerHPProgBase: "<{$smarty.const.BASE_URL}>img/progress_base.png",
+          playerHPProgBase: "<{$smarty.const.BASE_URL}>img/progress_base_battle.png",
           playerHPProgBar: "<{$smarty.const.BASE_URL}>img/progress_yellow.png",
           fukidashiMiddle: "<{$smarty.const.BASE_URL}>img/fukidashi_middle.png",
           fukidashiLeftUnder: "<{$smarty.const.BASE_URL}>img/fukidashi_left_under.png",

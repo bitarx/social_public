@@ -8,6 +8,15 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_android.css.php">
         <{/if}>
+
+        <style type="text/css">
+        <!--
+            #mainCanvas {
+              background-image: url("<{$smarty.const.IMG_URL}>gacha/product10_<{$product}>.gif?t=<{$time}>");
+              background-size:contain;
+            }
+        -->
+        </style>
     </head>
     <body>
         <canvas id="mainCanvas" height="800px" width="640px"></canvas>
@@ -51,7 +60,8 @@
           },
           imageLoadComplete,
           contentsComplete,
-          <{$divNum}>
+          <{$divNum}>,
+          <{$pushStartTime}>
         );
       };
 

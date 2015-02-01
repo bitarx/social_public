@@ -84,6 +84,7 @@ class UserCardsController extends ApiController {
         foreach ($list as &$val) {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
+
         $this->set('list', $list);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
@@ -590,5 +591,63 @@ class UserCardsController extends ApiController {
 
         $this->rd('UserCards', 'index', array('end' => 1));  
     } 
+
+    /**
+     * 所有カード一覧
+     *
+     * @author imanishi 
+     */
+	public function cardList() {
+
+        // 並べ替え項目セット
+        $this->setSort();
+
+        $addParam = '';
+
+        // レア度ソート
+        $rareLevel = isset($this->params['rare_level']) ? $this->params['rare_level'] : 0;
+        if (!empty($this->request->data['rare_level'])) {
+            $rareLevel = $this->request->data['rare_level'];
+        }
+
+        // 項目ソート
+        $sortItem = isset($this->params['sort_item']) ? $this->params['sort_item'] : 0;
+        if (!empty($this->request->data['sort_item'])) {
+            $sortItem = $this->request->data['sort_item'];
+        }
+
+        if (!empty($rareLevel) || !empty($sortItem)) { 
+            $addParam .= '&rare_level='. $rareLevel . '&sort_item=' . $sortItem;
+        }
+
+        // 1:強化 2:進化
+        $kind = isset($this->params['kind']) ? $this->params['kind']:1;
+
+        // ベースカード
+        $userBaseCard = $this->UserBaseCard->getUserBaseCardData($this->userId);
+        // 進化グループ
+        $evolGroup = 0;
+        if (empty($userBaseCard['user_card_id'])) {
+            $userBaseCard['user_card_id'] = 0;
+        }
+
+        $notIn = array();
+
+        // 所有カード
+        $pageAll = 0;
+        $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
+
+        // 進化段階取得
+        foreach ($list as &$val) {
+            $val['next'] = $this->CardGroup->getNext($val['card_id']);
+        }
+
+        $this->set('list', $list);
+        $this->set('data', $userBaseCard);
+        $this->set('kind', $kind);
+        $this->set('key', 99);
+        $this->set('pageAll', $pageAll);
+        $this->set('addParam', $addParam);
+	}
 
 }

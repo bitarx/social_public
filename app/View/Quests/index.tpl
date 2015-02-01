@@ -1,5 +1,5 @@
 <div class="quest">
-    <div style="left:-40px;">
+    <div style="left:-41px;">
         <img src="<{$smarty.const.IMG_URL}>quest/start.jpg">
     </div>
     <div class="spaceLow">

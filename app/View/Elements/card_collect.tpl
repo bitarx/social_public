@@ -16,7 +16,7 @@
             </div>
             <div class="cardName">
                     <{$data.card_title}>
-                    <{if $data.disp == 1}>
+                    <{if $data.disp == 1 && empty($other)}>
                         <a href="<{$smarty.const.BASE_URL}>cards/index/<{$data.card_id}>">
                             <span style="color:#ffffff"><{$data.card_name}></span>
                         </a>

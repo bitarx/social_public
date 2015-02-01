@@ -344,8 +344,8 @@ boss.layout = ( function() {
     turnNum_bm.x = 250;
     turnNum_bm.y = -310;
     _stocker.setDO( "turnNum", turnNum_bm );
+    _stocker.getDO( "stage" ).addChild( _stocker.getDO( "turnNum" ) );
 */
-//    _stocker.getDO( "stage" ).addChild( _stocker.getDO( "turnNum" ) );
   }
 
   var exports = {};

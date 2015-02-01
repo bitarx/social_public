@@ -12,6 +12,7 @@ function routes(data)
     if (ret) {
         data = JSON.parse(data);
     }
+
     if (data.result == "2") {
         // 体力不足など
         if (data.action == 'EvStages_init') {
@@ -34,6 +35,7 @@ function routes(data)
         {
             case 'Stages_init':
             case 'EvStages_init':
+            case 'RaidStages_init':
                 dispProgressQuest(data.progress);
                 dispProgressQuestAct(data.act);
                 dispProgressQuestExp(data.exp);
@@ -135,11 +137,11 @@ function dispRotResultQuest(data)
 
            filename = '';
            break;
-       // 金庫
+       // アイテム
        case "2":
-           filename = 'card_kinko_on.png';
+           filename = '';
            break;
-       // ゴールド
+       // ペニー
        case "3":
            filename = '';
            image =  '<div class="parent">';
@@ -156,7 +158,7 @@ function dispRotResultQuest(data)
            break;
        // 敵
        case "4":
-           filename = '';
+           location.href = URL_PRE + BASE_URL + 'RaidStages/conf/?stage_id=' + data.stage_id;
            break;
        // 全力進行    
        case "5":
