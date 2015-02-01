@@ -12,10 +12,10 @@
     <div class="presentName">
         <span style="color:#ffffff"><{if $data.target == 88}><span style="color:#FFA500">[万能の進化素材]</span><{/if}><{$data.name}><{if $smarty.const.KIND_MONEY != $data.kind}>×<{$data.num}><{/if}>
     </div>
-    <div class="presentMes">
-        <{if $data.special_flg == 1}><span style="color:#FFD700">特別報酬</span>:敵レベルが上がるほど獲得率UP<{/if}>
-    </div>
     <div class="raidPresentMes">
         <{if $data.target == 88}>レベルMaxのカードであればどのカードでも進化させることが出来る<{/if}>
+    </div>
+    <div class="raidPresentMesSp">
+        <{if $data.special_flg == 1}><span style="color:#FFD700">特別報酬</span>:敵レベルが上がるほど獲得率UP<{/if}>
     </div>
 </div>

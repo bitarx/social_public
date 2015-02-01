@@ -135,6 +135,15 @@ class RaidStagesController extends ApiController {
 
         $stageId = $this->params['stage_id'];
 
+        $helpKind = !empty($this->params['kind']) ? $this->params['kind'] : 0;
+        $helpWord = '';
+        if (!empty($helpKind)) {
+            $word = $this->Common->helpKindWord($helpKind);
+        }
+        if (!empty($word)) {
+            $helpWord = '<span style="color:#FFA500">' . $word . '</span>に救援依頼を送りました！';
+        }
+
         $data = $this->RaidUserStage->getUserStage($this->userId, $stageId, $recu = 2);
 
         // 到達していない
@@ -210,6 +219,7 @@ class RaidStagesController extends ApiController {
         $this->set('effectText', $effectText);
         $this->set('dateStr', $dateStr);
         $this->set('maxExp', $maxExp);
+        $this->set('helpWord', $helpWord);
     }
 
     /**
@@ -312,17 +322,18 @@ class RaidStagesController extends ApiController {
                 'RaidUserCurEnemy.user_id' => $this->userId
             ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
             );
-            $field = array('RaidUserCurEnemy.enemy_id', 'RaidUserCurEnemy.level');
+            $field = array('RaidUserCurEnemy.enemy_id', 'RaidUserCurEnemy.level', 'RaidUserCurEnemy.raid_master_id');
             $data = $this->RaidUserCurEnemy->getAllFind($where, $field, 'first');
             $enemyId = $data['enemy_id'];
             $level = $data['level'];
+            $raidMasterId = $data['raid_master_id'];
+
+            $data = $this->RaidMaster->getData($raidMasterId);
         } elseif (!empty($raidMasterId)) {
 
             // 参加者
             $data = $this->RaidMaster->getData($raidMasterId);
-$this->log($data); 
             $helpData = $this->RaidHelp->getDataByRaidMasterId($this->userId, $raidMasterId);
-$this->log($helpData); 
             if ($data['user_id'] != $helpData['user_id']) {
                 // 不正
                 $this->log('Raid help param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
@@ -341,13 +352,32 @@ $this->log($helpData);
         }
 
         $enemyData = $this->Enemy->getEnemyData($enemyId);
-$this->log($enemyData); 
+
+        if (!empty($data)) {
+            // 再戦
+            $lowHp = floor($data['hp_max'] / 10);
+            if ($data['hp'] < $lowHp) {
+                $hpNow = '<span style="color:#FF0000">' . $data['hp'] . '</span>';
+            } else {
+                $hpNow = $data['hp'];
+            }
+        } else {
+            // 初戦
+            $hpNow = $enemyData['hp'];
+            $data['hp_max'] = $enemyData['hp'];
+            $data['end_time'] = '';
+        }
+
+        // 敵HP
+        $enemyHp = '<span style="color:#FFA500">HP</span> : ' . $hpNow . '  /  ' . $data['hp_max'];
         $enemyData['card_name'] .= 'Lv' . $level;
 
         $this->set('data', $enemyData);
         $this->set('noCard', $noCard);
         $this->set('stageId', $stageId);
         $this->set('help', $help);
+        $this->set('enemyHp', $enemyHp);
+        $this->set('dateStr', $data['end_time']);
 
     }
 

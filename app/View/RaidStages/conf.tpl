@@ -1,3 +1,8 @@
+<script type="text/javascript">
+$(function () {
+    countDown("<{$dateStr}>");
+});
+</script>
 <div class="stages">
     <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
@@ -5,8 +10,16 @@
             <{$data.card_name}>
         </div>
     </div>
-    <div>
+    <div class="parent">
         <img src="<{$smarty.const.IMG_URL}>enemy/enemy_<{$data.enemy_id}>.jpg" >
+        <div class="raidEnemyHp">
+            <{$enemyHp}>
+        </div>
+        <{if !empty($dateStr)}>
+            <div class="raidTime">
+                    <span style="color:#FFA500">逃亡まで</span><div id="TimeLeft" style="color:#ff0000;"></div>
+            </div>
+        <{/if}>
     </div>
     <{include file="../Elements/before_words.tpl"}>
 

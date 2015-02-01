@@ -193,4 +193,22 @@ class CommonComponent extends Component {
         $str = date("Y/m/d H時i分", $timeSp);
         return $str;
    }
+
+   public function helpKindWord($helpKind) {
+       
+        switch ($helpKind) {
+            case 1:
+                $word = '近いレベルの人';
+                break;
+            case 2:
+                $word = SNS_FRIEND_NAME;
+                break;
+            case 3:
+                $word = '同じグループの人';
+                break;
+            default:
+                $word = '';
+        }
+        return $word;
+   }
 }

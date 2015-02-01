@@ -1692,6 +1692,7 @@ input[type=checkbox] {
 .childTop {
     position: absolute;
     top: 2%;
+    left: 1%;
     margin : auto;
     text-align:left;
     width: 640px;
@@ -1716,7 +1717,13 @@ input[type=checkbox] {
 }
 .raidPresentMes {
     left: 180px;
-    top:75px;
+    top:40px;
+    text-align:left;
+    position: absolute;
+}
+.raidPresentMesSp {
+    left: 180px;
+    top:105px;
     text-align:left;
     position: absolute;
 }
@@ -1729,6 +1736,23 @@ input[type=checkbox] {
     position:relative;
     text-align:center;
     height:170px;
+}
+.raidHelpWord {
+    text-align: center;
+    top:-240px;
+    position: relative;
+}
+.raidEnemyHp {
+    position: absolute;
+    top: 87%;
+    margin : auto;
+    width: 640px;
+    font-size:32px;
+}
+.raidTime {
+    position:absolute;
+    top:15px;
+    left:460px;
 }
 
 /** 図鑑 */

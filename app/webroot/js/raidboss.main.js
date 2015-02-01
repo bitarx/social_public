@@ -151,6 +151,7 @@ boss.main = ( function() {
 
           if( enemyHP <= 0 ) {
             _bossDedAction();
+            break;
           }
 
           num++;

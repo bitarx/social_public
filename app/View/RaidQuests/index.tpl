@@ -1,4 +1,4 @@
-<div class="quest">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>   
     <div style="left:-41px;">
         <img src="<{$smarty.const.IMG_URL}>raid_quest/start.jpg">
@@ -46,17 +46,18 @@
     </div>
     <div class="space"></div>
     <div class="raidText">
-       <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="445px">
+       <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="485px">
        <div class="childTop">
            <div style="text-align:center">
                <span style="color:#00FF00;"><報酬について></span><br />
            </div>
            ■レイドボスを制限時間内に討伐すると、発見者、参加者共に「<{$smarty.const.MONEY_NAME}>」が送られます。<br />
-           ■<{$smarty.const.MONEY_NAME}>の獲得数は与えた総ダメージを参加人数で割った数が分配されます。<br />
+           ■<{$smarty.const.MONEY_NAME}>の獲得数は与えた総ダメージを参加人数で割った数が等しく分配されます。<br />
            ■討伐した時に、一定の確率でアイテやカードが獲得できます。<br />
            ■レイドボスによっては、討伐したレイドボスの<span style="color:#FFA500;">レベルが高いほど、特別アイテムを獲得できる確率が高く</span>なります。<br />
            ■討伐時報酬は、<span style="color:#FFA500;">発見者、参加者全員が獲得</span>できます。<br />
-           ■ダメージを与えていない場合は報酬を獲得できません。
+           ■ダメージを与えていない場合は報酬を獲得できません。<br />
+           ■報酬は全て<span style="color:#FFA500;">受取BOXに送られます</span>。<br />
        </div>
     </div>
     <div class="space">
