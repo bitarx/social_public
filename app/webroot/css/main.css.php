@@ -422,7 +422,6 @@ input.btn_submit {
     position:relative;
     text-align:center;
     top:30px;
-    height:290px;
     left:8px;
 }
 
@@ -1747,6 +1746,10 @@ input[type=checkbox] {
 .raidHelpWord {
     text-align: center;
     top:-240px;
+    position: relative;
+}
+.raidBpLess {
+    text-align: center;
     position: relative;
 }
 .raidEnemyHp {

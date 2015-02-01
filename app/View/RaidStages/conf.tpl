@@ -37,7 +37,16 @@ $(function () {
                 </div>
         </a>
     </div>
-    <div class="space"></div>
+    <{if !empty($errWord)}>
+        <div class="raidBpLess">
+            <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
+            <div class="child">
+                <span style="color:#ff0000;"><{$errWord}></span>
+            </div>
+        </div>
+    <{else}>
+        <div class="space"></div>
+    <{/if}>
     <div class="btnAtk">
         <div  class="btnAtk2">
             <a href="<{$smarty.const.BASE_URL}>RaidStages/act?target_id=<{$data.enemy_id}>&stage_id=<{$stageId}>&at=2<{$help}>">
