@@ -1,4 +1,4 @@
-<div class="help">
+<div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>
 
     <div class="guide">
@@ -50,6 +50,12 @@
         鎮激ミッションを行うと減少します。<br />
         行動力は<span style="color:#FFA500">３分</span>で<span style="color:#FFA500">約1%回復</span>します。<br />
         アイテムで回復させることもできます。<br /><br />
+
+        ▼<span style="color:#00FF7F">バトルポイント（BP）</span><br />
+        レイドボスで敵と戦と減少します。<br />
+        BPは<span style="color:#FFA500">３分</span>で<span style="color:#FFA500">約1%回復</span>します。<br />
+        アイテムで回復させることもできます。<br /><br />
+
         ▼<span style="color:#00FF7F">ペニー</span><br />
         鎮激ミッションなどで取得できる通貨です。<br />
         <span style="color:#FFA500">強化or進化</span>を行う時や<span style="color:#FFA500">ペニーガチャ</span>を回す時に使用します。<br /><br />
@@ -68,10 +74,17 @@
         ▼<span style="color:#00FF7F">進化</span><br />
         Lv最大(Max)に到達した美女カードに同種（同じ名前）の美女カードを合わせることで進化します。<br />
         進化することで美女は脱衣しますが、進化した地点で必ずしも強くなるとは限りません。<br />
-        <span style="color:#FFA500">進化の素材として使用した美女カードはなくなります</span>。<br /><br />
+        <span style="color:#FFA500">進化の素材として使用したカードはなくなります</span>。<br /><br />
+
+        ▼<span style="color:#00FF7F">進化素材</span><br />
+        美女ではない動物のカードでオールマイティのカードが存在します。<br />
+        進化素材としてレベルMaxの美女カードと合わせると<span style="color:#FFA500">どの美女カードと合せても進化します</span>。<br />
+        <span style="color:#FFA500">戦うことはできません</span>。<br /><br />
+
         ▼<span style="color:#00FF7F">スキルLvのアップ</span><br />
         <span style="color:#FFA500">同じ属性</span>の美女カード同士で強化を行うとアップします。<br />
         スキルLvは<span style="color:#FFA500">最大30</span>です。<br /><br />
+
         ▼<span style="color:#00FF7F"><{$smarty.const.MONEY_NAME}></span><br />
         鎮激ミッションなどで取得できる通貨です。<br />
         <span style="color:#FFA500">強化or進化</span>を行う時や<span style="color:#FFA500"><{$smarty.const.MONEY_NAME}>ガチャ</span>を行う時に使用します。<br /><br />
