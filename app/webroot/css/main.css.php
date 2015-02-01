@@ -1749,6 +1749,10 @@ input[type=checkbox] {
     top:-240px;
     position: relative;
 }
+.raidBpLess {
+    text-align: center;
+    position: relative;
+}
 .raidEnemyHp {
     position: absolute;
     top: 87%;
