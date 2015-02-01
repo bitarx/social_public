@@ -15,12 +15,21 @@
     <div class="spaceHigh"></div>
 
     <div class="parent">
-        <a href="<{$smarty.const.BASE_URL}>Quests/index">
-            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
-            <div class="child" >
-               ミッションへ 
-            </div>
-        </a>
+        <{if $itemData.item_id <= 4}>
+            <a href="<{$smarty.const.BASE_URL}>RaidQuests/index">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+                <div class="child" >
+                   レイドバトルへ 
+                </div>
+            </a>
+        <{else}>
+            <a href="<{$smarty.const.BASE_URL}>Quests/index">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+                <div class="child" >
+                   ミッションへ 
+                </div>
+            </a>
+        <{/if}>
     </div>
 
     <div class="spaceHigh"></div>

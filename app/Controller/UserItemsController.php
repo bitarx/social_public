@@ -174,12 +174,13 @@ class UserItemsController extends ApiController {
    
         $where = array('id' => $this->params['id']);
         $field = array();
-        $data = $this->UserItem->getAllFind($where, $field, 'first');
+        $itemData = $this->UserItem->getAllFind($where, $field, 'first');
 
-        $where = array('item_effect_id' => $data['item_effect_id']);
+        $where = array('item_effect_id' => $itemData['item_effect_id']);
         $field = array('detail_after');
         $data = $this->ItemEffect->getAllFind($where, $field, 'first');
         
         $this->set('data',  $data);
+        $this->set('itemData',  $itemData);
     }
 }
