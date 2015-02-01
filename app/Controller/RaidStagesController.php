@@ -11,7 +11,7 @@ class RaidStagesController extends ApiController {
     // 最大ターン数
     public static $maxTurnNum = 2;
 
-    // 特別プレゼント取得確率(%)
+    // 特別報酬取得確率(%)
     public static $specialPresnt = 20;
 
     /**
