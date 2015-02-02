@@ -16,7 +16,7 @@
         <a href="<{$smarty.const.BASE_URL}>RaidStages/again?stage_id=<{$stageId}>&raid_master_id=<{$data.raid_master_id}>">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
             <div class="child">
-                救援する
+                再戦する
             </div>
         </a>
     </div>

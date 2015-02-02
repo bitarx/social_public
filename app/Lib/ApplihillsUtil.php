@@ -7,23 +7,27 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
   const CONSUMER_KEY    = "0b32fa9b34313ac6";
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
   const PUBKEY_FILENAME = "public.crt";
+  const APP_DIR         = '/var/www/eres/app/';
 
   const SB_API_HOST        = "sb.app.appli-hills.com";
   const SB_CONSUMER_KEY    = "0bacae904380ed27";
   const SB_CONSUMER_SECRET = "54952402feba3e88d43f96859e6b25af";
   const SB_PUBKEY_FILENAME = "sb.public.crt";
+  const SB_APP_DIR         = '/var/www/social/app/';
 
   const DEV_API_HOST        = "sb.app.appli-hills.com";
   const DEV_CONSUMER_KEY    = "a706b39c5d02be7c";
   const DEV_CONSUMER_SECRET = "d0612b87942bf3a1cd78944ab47294e7";
   const DEV_PUBKEY_FILENAME = "sb.public.crt";
+  const DEV_APP_DIR         = '/var/www/dev_social/app/';
 
   protected $apiHost        = "";
   protected $consumerKey    = "";
   protected $consumerSecret = "";
   protected $publicKeyDir   = "";
+  protected $appDir         = "";
 
-  protected $errorlogFile =  "../tmp/logs/appli-hills_error.log";
+  protected $errorlogFile =  "tmp/logs/appli-hills_error.log";
 
   public static function create()
   {
@@ -33,14 +37,17 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
       $util->apiHost        = self::SB_API_HOST;
       $util->consumerKey    = self::SB_CONSUMER_KEY;
       $util->consumerSecret = self::SB_CONSUMER_SECRET;
+      $util->appDir         = self::SB_APP_DIR;
     } elseif (defined("DEV_IS_SANDBOX") && DEV_IS_SANDBOX) {
       $util->apiHost        = self::DEV_API_HOST;
       $util->consumerKey    = self::DEV_CONSUMER_KEY;
       $util->consumerSecret = self::DEV_CONSUMER_SECRET;
+      $util->appDir         = self::DEV_APP_DIR;
     } else {
       $util->apiHost        = self::API_HOST;
       $util->consumerKey    = self::CONSUMER_KEY;
       $util->consumerSecret = self::CONSUMER_SECRET;
+      $util->appDir         = self::APP_DIR;
     }
     $util->publicKeyDir = dirname(__FILE__);
 
@@ -162,10 +169,16 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
     return ($result !== false);
   }
 
-  public function createMessage($title, $body, $recipients, $url = null, $ownerId = null)
+  public function createMessage($title, $body, $recipients, $url = null, $ownerId = null, $officialUserId = null)
   {
     if (empty($ownerId)) {
       $ownerId = $this->getOwnerId();
+    }
+
+    if (!empty($officialUserId)) {
+      $id = $officialUserId;
+    } else {
+      $id = '@me';
     }
 
     $data = array();
@@ -191,7 +204,7 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
 
     $data = json_encode($data);
 
-    $request = $this->getOAuthRequest("/messages/@me/@outbox", $ownerId, "POST");
+    $request = $this->getOAuthRequest("/messages/$id/@outbox", $ownerId, "POST");
     $result  = $this->sendRequest($request, "201", $data, $this->requestToHeaders($request, $data));
 
     return ($result !== false);
@@ -470,8 +483,8 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
     if ($responseCode === $expectedCode) {
       return $body;
     } else {
-      if ($this->errorlogFile !== "") {
-        $fp = fopen($this->errorlogFile, "a+");
+      if ( $this->errorlogFile !== "") {
+        $fp = fopen($this->appDir . $this->errorlogFile, "a+");
         fwrite($fp, "Request URL: {$uri}" . PHP_EOL);
 
         if (!empty($data)) {

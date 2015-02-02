@@ -75,8 +75,8 @@ var_dump($list);
 
             $message = str_replace('##name##', $val['name'], $base['message']);
 
-            $val['delete_flg'] = 1; 
-            $this->MailList->save($val);
+            $val['del_flg'] = 1; 
+            $this->MailList->save($val, false);
 
             // 送信
             $ret = mb_send_mail($base['to'], $base['subject'], $message, $header, "-f " . $this->_from );

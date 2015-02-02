@@ -56,6 +56,7 @@
           particle001: "<{$smarty.const.BASE_URL}>img/particle001.png",
           particle002: "<{$smarty.const.BASE_URL}>img/particle002.png",
           winText: "<{$smarty.const.BASE_URL}>img/win.png",
+          winText: "<{$smarty.const.BASE_URL}>img/win.png",
           loseText: "<{$smarty.const.BASE_URL}>img/lose.png",
           battleStartText: "<{$smarty.const.BASE_URL}>img/battle_start.png",
           arrow: "<{$smarty.const.BASE_URL}>img/arrow.png",
