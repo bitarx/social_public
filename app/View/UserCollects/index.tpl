@@ -1,7 +1,7 @@
 <div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
     <div class="collectHead">
-       <a href="<{$smarty.const.BASE_URL}>Users/prof/<{$userId}>" style="text-decoration:none;"><span style="color:#1E90FF">⇒プロフへ </span></a>
+       <a href="<{$smarty.const.BASE_URL}>Users/prof/<{$userId}>" style="text-decoration:none;"><span style="color:#1E90FF">⇒プロフィールへ<span></a>
     </div>
 
     <{include file="../Elements/paging.tpl"}>

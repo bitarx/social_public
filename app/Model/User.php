@@ -97,4 +97,32 @@ class User extends AppModel {
         return empty($ret) ? false : true;
     }
 
+    /**
+     * userIdよりSNSIDを取得
+     *
+     * @param int userId
+     * @return int sns_user_id
+     */
+    public function getOwnerIdByUserId ($userId) {
+        $where = array(
+            'user_id' => $userId
+        );
+        $snsUserId = $this->field('sns_user_id', $where);
+        return $snsUserId;
+    }
+
+    /**
+     * 名前を取得
+     *
+     * @author imanishi
+     * @param int userId
+     * @return str ユーザ名
+     */
+    public function getUserName($userId) {
+        $where = array(
+            'user_id' => $userId
+        );
+        $name = $this->field('user_name', $where);
+        return $name;
+    }
 }

@@ -2,10 +2,10 @@
     <img src="<{$smarty.const.IMG_URL}>banner_title.png">
     <div class="child" >
     <{if 'UserCards' == $ctl}> 
-        <{if 'index' == $action}>
-            強化進化
-        <{elseif 'cardList' == $action}>
+        <{if 'cardList' == $action}>
             所有カード一覧 
+        <{else}>
+            強化進化
         <{/if}>
     <{elseif 'UserBaseCards' == $ctl}> 
         ベースカード変更

@@ -12,7 +12,7 @@ class RaidStagesController extends ApiController {
     public static $maxTurnNum = 2;
 
     // 特別報酬取得確率(%)
-    public static $specialPresnt = 20;
+    public static $specialPresnt = 15;
 
     /**
      * Components
@@ -21,7 +21,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp', 'UserLastBpTime');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp', 'UserLastBpTime', 'UserBaseCard');
 
     /**
      *　定数
@@ -1118,6 +1118,40 @@ class RaidStagesController extends ApiController {
         $this->set('title', '救援要請一覧');
         $this->set('guideId', 2);
         $this->set('mes', '救援要請はありません。');
+    }
+
+    /**
+     * 救援してくれた人一覧
+     *
+     * @author imanishi
+     * @return void
+     */
+    public function helpSelfList() {
+
+        // 現在のステージ取得
+        $where = array(
+            'user_id' => $this->userId
+        );
+        $stageId = $this->RaidUserCurStage->field('raid_stage_id', $where);
+
+        // レイドボス救援してくれた人
+        $pageAll = 1;
+        $list = $this->RaidDamage->getHelpSelfList($this->userId, $limit = PAGE_LIMIT, $this->offset, $pageAll);
+        if (!empty($list)) {
+            foreach ($list as &$val) {
+                $val['created'] = $this->Common->changeTimeStr($val['created']);
+                $val['user_name']    = $this->User->getUserName($val['user_id']);
+                $val['enemy_name']   = $this->Enemy->getEnemyName($val['enemy_id']);
+                $val['card_id']      = $this->UserBaseCard->getCardId($val['user_id']);
+            }
+        }
+
+        $this->set('list', $list);
+        $this->set('pageAll', $pageAll);
+        $this->set('stageId', $stageId);
+        $this->set('title', '救援してくれた人一覧');
+        $this->set('guideId', 2);
+        $this->set('mes', '救援してくれた人はいません。');
     }
 
     /**

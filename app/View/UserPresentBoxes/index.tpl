@@ -29,11 +29,8 @@
         <{include file="../Elements/paging.tpl"}>
 
         <{foreach from=$list item=data key=key}>
-            <div class="spaceLow"></div>
-            <div class="presentBlock">
+            <div class="space"></div>
               <{include file="../Elements/present.tpl"}>
-            </div>
-            <div class="spaceLow"></div>
             <{include file="../Elements/line.tpl"}>
         <{/foreach}>
 

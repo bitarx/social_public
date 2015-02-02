@@ -437,7 +437,6 @@ class AppController extends Controller {
             $this->set('ctlAction',  $this->name . '/' . $this->action); 
             $this->set('event', $this->event);
 
-$this->log($this->userId); 
             // URLアサイン
             $this->_setUrl();
         }

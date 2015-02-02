@@ -44,6 +44,15 @@
             </div>
         </a>
     </div>
+    <div class="spaceLow"></div>
+    <div class="parent">
+        <a href="<{$smarty.const.BASE_URL}>RaidStages/helpSelfList"> 
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child">
+                救援してくれた人一覧
+            </div>
+        </a>
+    </div>
     <div class="space"></div>
     <div class="raidText">
        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="485px">

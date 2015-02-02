@@ -152,6 +152,21 @@ class Enemy extends AppModel {
     }  
 
     /**
+     * 敵名取得
+     *
+     * @author imanishi
+     * @param int $enemyId
+     * @return array 敵データ
+     */
+    public function getEnemyName($enemyId) { 
+
+        $where = array('enemy_id' => $enemyId); 
+        $field = array('card_name');
+        $ret = $this->getAllFind($where, $fields = array(), 'first');  
+        return $ret['card_name'];
+    }  
+
+    /**
      * エピローグ判定
      *
      * @author imanishi

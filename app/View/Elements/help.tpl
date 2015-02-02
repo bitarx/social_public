@@ -3,7 +3,7 @@
          <{if !empty($data.card_id)}>
              <img src="<{$smarty.const.IMG_URL}>card/card_s_<{$data.card_id}>.jpg" width="120px">
          <{else}>
-             <img src="<{$smarty.const.IMG_URL}>card/card_s_<{$data.target}>.jpg" width="120px">
+             <img src="<{$smarty.const.IMG_URL}>noimg.png" width="120px">
          <{/if}>
     </div>
     <div class="presentName">
@@ -19,7 +19,7 @@
         <a href="<{$smarty.const.BASE_URL}>RaidStages/conf/?raid_master_id=<{$data.raid_master_id}>">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_s.png">
             <div class="child">
-                <span style="color:#ffffff">参戦する</span>
+                <span style="color:#ffffff">救援する</span>
             </div>
         </a>
     </div>

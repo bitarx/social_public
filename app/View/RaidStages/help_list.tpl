@@ -13,16 +13,16 @@
         <{else}>
             <div class="spaceHigh"></div>
             <{include file="../Elements/guide.tpl"}>   
-            <div class="spaceHigh"></div>
-            <div class="parent">
-                <a href="<{$linkRaid}>">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
-                <div class="child">
-                    レイドボスへ
-                </div>
-                </a>
-            </div>
-            <div class="spaceHigh"></div>
         <{/if}>
+        <div class="space"></div>
+        <div class="parent">
+            <a href="<{$linkRaid}>">
+            <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
+            <div class="child">
+                レイドボスへ
+            </div>
+            </a>
+        </div>
+        <div class="spaceHigh"></div>
     </div>
 </div>

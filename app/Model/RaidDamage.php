@@ -86,6 +86,34 @@ class RaidDamage extends AppModel {
     }
 
     /**
+     * 救援してくれた人一覧を取得
+     *
+     * @param int $userId
+     * @return array 一覧
+     */
+    public function getHelpSelfList($userId, $limit = PAGE_LIMIT, $offset, &$pageAll = 0) {
+
+        $where = array(
+            'RaidMaster.user_id'       => $userId
+        ,   'RaidDamage.user_id != '   => $userId
+        );
+        $field = array('RaidMaster.raid_master_id', 'RaidMaster.enemy_id', 'RaidMaster.level'
+                       , 'RaidMaster.hp', 'RaidMaster.raid_stage_id', 'RaidMaster.end_time'
+                       , 'RaidDamage.user_id', 'RaidDamage.damage', 'RaidDamage.created');
+        $order = array('RaidDamage.created DESC');
+        $kind = 'all';
+        $list = $this->getAllFind($where, $field, $kind, $order, $limit, $offset);
+
+        if (!empty($pageAll)) {
+            $field = array('RaidDamage.user_id');
+            $tmp = $this->getAllFind($where, $field, $kind); 
+            $pageAll = ceil(count($tmp) / $limit);
+        }
+
+        return $list;
+    }
+
+    /**
      * 最新データ１件取得
      *
      * @param $userId

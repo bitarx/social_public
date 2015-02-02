@@ -1765,6 +1765,21 @@ input[type=checkbox] {
     top:15px;
     left:460px;
 }
+.helpSelfMes {
+    left: 180px;
+    top:40px;
+    position: absolute;
+}
+.helpSelfDamage {
+    left: 180px;
+    top:72px;
+    position: absolute;
+}
+.helpSelfDate {
+    left: 180px;
+    top:104px;
+    position: absolute;
+}
 
 /** 図鑑 */
 .collectHead {

@@ -6,8 +6,8 @@
             <{include file="../Elements/paging.tpl"}>
             <div class="space"></div>
             <{foreach from=$list item=data}>
-                <{include file="../Elements/raid.tpl"}>
-                <div class="spaceHigh"></div>
+                <{include file="../Elements/help_self.tpl"}>
+                <div class="spaceLow"></div>
             <{/foreach}>
             <{include file="../Elements/paging.tpl"}>
         <{else}>
