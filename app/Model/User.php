@@ -125,4 +125,26 @@ class User extends AppModel {
         $name = $this->field('user_name', $where);
         return $name;
     }
+
+    /**
+     * Message未送信ユーザー一覧取得
+     *
+     */
+    public function getStillSendUserList ($limit, $notIn = array()) {
+
+        $where = array();
+
+        // NOT IN
+        if (!empty($notIn)) {
+            $where['NOT'] = $notIn;
+        }
+
+        $order = array();
+        $offset = 0;
+        $recursive = -1;
+
+        $list = $this->getAllFind($where, $fields = array('*'), $kind = 'all', $order, $limit, $offset, $recursive );
+
+        return $list;
+    }
 }

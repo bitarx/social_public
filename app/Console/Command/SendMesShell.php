@@ -14,8 +14,10 @@ class SendMesShell extends AppShell {
 
     protected static $body = '行動力不要のレイドボスバトルで特別報酬をGET!';
 
+    protected static $limit = 100; // １回の送信件数
 
-    public $uses = array('User', 'SnsUser');
+
+    public $uses = array('User', 'SnsUser', 'TmpSendMe');
  
     /**
      * バッチ開始前の処理
@@ -56,23 +58,53 @@ class SendMesShell extends AppShell {
         }
 
         $targetUrl = BASE_URL . 'RaidQuests/index';
-        $targetUrl = null;
+//        $targetUrl = null;
+
+        // 送信済みユーザー
+        $endUserList = $this->TmpSendMe->getList();
+
+        $notIn = array();
+        if (!empty($endUserList)) {
+            $notIds = array();
+            foreach ($endUserList as $val) {
+                $notIds[] = $val['sns_user_id'];
+            }
+            $notIn = array('sns_user_id' => $notIds);
+        }
 
         $recipients = array();
 
         if (!empty($this->args[2])) {
             // テスト
             $recipients = array($this->args[2]);
+
         } else {
 
-            $field = array('sns_user_id');
-            $list = $this->SnsUser->getAllFind($where = array(), $field);
+            $list = $this->User->getStillSendUserList(self::$limit, $notIn);
             foreach ($list as $val) {
                 $recipients[] = $val['sns_user_id'];
+                $values[] = array($val['sns_user_id'], $val['user_id']);
+            }
+
+            if (!empty($values) && 1 < count($values)) {
+                $this->TmpSendMe->begin();
+                try {
+
+                    $field = array('sns_user_id', 'user_id');
+                    $this->TmpSendMe->insertBulk($field, $values, $ignore = 1);
+
+                } catch (AppException $e) {
+                    $this->TmpSendMe->rollback();
+                    $this->log($e->errmes);
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+                }
+                $this->TmpSendMe->commit();
             }
         }
 
-        $this->snsUtil->createMessage(self::$title, self::$body, $recipients, $targetUrl, PLATFORM_APP_ID, $officialUserId); 
+        if (!empty($recipients)) {
+            $this->snsUtil->createMessage(self::$title, self::$body, $recipients, $targetUrl, PLATFORM_APP_ID, $officialUserId); 
+        }
     }
  
     /**
