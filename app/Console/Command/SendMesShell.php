@@ -57,8 +57,8 @@ class SendMesShell extends AppShell {
             die;
         }
 
-        $targetUrl = BASE_URL . 'RaidQuests/index';
-//        $targetUrl = null;
+//        $targetUrl = BASE_URL . 'RaidQuests/index';
+        $targetUrl = null;
 
         // 送信済みユーザー
         $endUserList = $this->TmpSendMe->getList();

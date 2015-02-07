@@ -515,8 +515,11 @@ class RaidStagesController extends ApiController {
             $multi = $enemyLevel / 100; 
             $multi += 1;
 
-            $target['hp'] *= $multi;
-            $target['hp'] = floor($target['hp']);
+            if (empty($raidMasterId)) {
+                // 初戦の場合はHPも補正
+                $target['hp'] *= $multi;
+                $target['hp'] = floor($target['hp']);
+            }
             $target['atk'] *= $multi;
             $target['atk'] = floor($target['atk']);
             $target['def'] *= $multi;
