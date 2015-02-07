@@ -469,7 +469,7 @@ class GachasController extends ApiController {
 
         // push開始ミリ秒
         $pushStartTime = 9000;
-        if ( 5 == $rareLevel ) $pushStartTime = 11000;
+        if ( 5 == $rareLevel ) $pushStartTime = 11500;
 
         $this->set('product', $product);
         $this->set('pushStartTime', $pushStartTime);

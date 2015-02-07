@@ -1502,7 +1502,7 @@ display: block;
 }
 .child {
     position: absolute;
-    top: 22%;
+    top: 21%;
     margin : auto;
     width: 640px;
 }
