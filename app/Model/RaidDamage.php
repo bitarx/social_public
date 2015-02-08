@@ -75,13 +75,10 @@ class RaidDamage extends AppModel {
         $order = array('RaidMaster.created DESC');
         $kind = 'all';
         $list = $this->getAllFind($where, $field, $kind, $order, $limit, $offset);
-
         if (!empty($pageAll)) {
-            $field = array('RaidDamage.user_id');
             $tmp = $this->getAllFind($where, $field, $kind); 
             $pageAll = ceil(count($tmp) / $limit);
         }
-
         return $list;
     }
 

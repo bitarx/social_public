@@ -128,7 +128,7 @@ class BattleComponent extends Component {
      */
     public function calcDamage($selfData, $targetData) {
         mt_srand();
-        $multi = mt_rand(90 , 110) / 100;
+        $multi = mt_rand(93 , 107) / 100;
         $base = (($selfData['atk'] * 2) * $multi) - ( $targetData['def'] * $multi );     
         if ($base <= 0) {
             $ret = 0;
@@ -151,7 +151,7 @@ class BattleComponent extends Component {
      * @return void
      */
     public function doSkill($skillData, $key, &$selfCards, &$targetCards, &$logSkill, $kind = 'player') {
-
+$this->log($skillData); 
         switch($skillData['effect'])
         {
             // 防御
