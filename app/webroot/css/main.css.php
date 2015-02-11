@@ -644,7 +644,7 @@ input.btn_submit {
     line-height: 1.5em;
 }
 .textAreaEvent {
-    height:275px;
+    height:300px;
     width:635px;
 }
 

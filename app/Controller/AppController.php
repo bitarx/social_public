@@ -410,6 +410,9 @@ class AppController extends Controller {
 
             // イベント
             $this->event = $this->EvQuest->isEvent();
+            if (!empty($this->event)) {
+                $this->event['end_time'] = $this->Common->changeTimeStrS ($this->event['end_time']);
+            }
 
             // ページング
             $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
@@ -430,7 +433,7 @@ class AppController extends Controller {
                 $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
                 $this->ownerInfo .= '&qststg_flg=1';
             }
-$this->log($this->userId); 
+
             // コントローラとアクション
             $this->set('ctl', $this->name ); 
             $this->set('action',  $this->action); 
