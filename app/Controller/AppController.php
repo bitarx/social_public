@@ -36,6 +36,7 @@ class AppController extends Controller {
      * メンテナンス
      */
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
+    public static $mentePlatform = 'hills';      // allにすると全環境メンテ
     public static $menteEnd = '8:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
@@ -227,10 +228,12 @@ class AppController extends Controller {
                         $testUser = self::$testUserNiji;
                     }
                     if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
-                         $this->rd('Errors', 'index', array(
-                                      'error' => 'mente'
-                                   ,  'mente_no' => self::$menteNo    
-                                   ));
+                        if (self::$mentePlatform == PLATFORM_ENV || self::$mentePlatform == 'all') {
+                            $this->rd('Errors', 'index', array(
+                                          'error' => 'mente'
+                                       ,  'mente_no' => self::$menteNo    
+                                       ));
+                        }
                     }
                 }
 

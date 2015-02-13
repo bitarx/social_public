@@ -80,13 +80,16 @@ class UsersController extends ApiController {
             $ownerIdOther = $this->User->getOwnerIdByUserId ($id);
 
             // ブラックリストチェック
-            $ret = $this->snsUtil->isBlocked($this->ownerId, $ownerIdOther);
-            if ($ret) {
-                $notDisp = 1;
-            } else {
-                $ret = $this->snsUtil->isBlocked($ownerIdOther, $this->ownerId);
+            if ('niji' != PLATFORM_ENV) {
+
+                $ret = $this->snsUtil->isBlocked($this->ownerId, $ownerIdOther);
                 if ($ret) {
                     $notDisp = 1;
+                } else {
+                    $ret = $this->snsUtil->isBlocked($ownerIdOther, $this->ownerId);
+                    if ($ret) {
+                        $notDisp = 1;
+                    }
                 }
             }
         }
