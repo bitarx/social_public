@@ -1119,7 +1119,17 @@ display: block;
 }
 .presentDate {
     left: 180px;
-    top:75px;
+    top:96px;
+    position: absolute;
+}
+.presentGet {
+    left: 180px;
+    top:135px;
+    position: absolute;
+}
+.strPresentGet {
+    left: 86px;
+    top:10px;
     position: absolute;
 }
 .btnSelectPresent {

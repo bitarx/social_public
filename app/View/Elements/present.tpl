@@ -16,18 +16,19 @@
         <span style="color:#ffffff"><{$data.message}></span>
     </div>
     <div class="presentDate">
-        入手日時:<span style="color:#ffffff"><{$data.created}></span>
+        <span style="color:#FFA500">入手日時</span>:<span style="color:#ffffff"><{$data.created}></span>
     </div>
 
     <{if $ctl == 'UserPresentBoxes'}>
-
-        <div class="parent">
-            <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/init?user_present_box_id=<{$data.user_present_box_id}><{$addParam}>">
-                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                <div class="child">
-                   受け取る 
-                </div>
-            </a>
+        <div class="presentGet">
+            <div class="parent">
+                <a href="<{$smarty.const.BASE_URL}>UserPresentBoxes/init?user_present_box_id=<{$data.user_present_box_id}><{$addParam}>">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <div class="strPresentGet">
+                       受け取る 
+                    </div>
+                </a>
+            </div>
         </div>
     <{/if}>
 
