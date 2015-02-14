@@ -159,6 +159,7 @@ class TutorialsController extends ApiController {
 
             // アサイン
             $this->set('row',  $this->row);
+            $this->set('time',  time());
             $this->set('next', self::$actionPref . $this->row['tutorial_next']);
         }
 	}

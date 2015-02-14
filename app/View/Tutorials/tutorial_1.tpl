@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
     <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <{if $carrer == $smarty.const.CARRER_IPHONE}>
         <{if $smarty.const.PLATFORM_ENV == 'waku'}>
@@ -79,7 +82,7 @@
 <body>
         <div class="slider">
             <ul id="slider">
-                <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png" class="opening_text" >
+                <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png?t=<{$time}>" class="opening_text" >
             </ul>
         </div>
     <{if 'waku' == $smarty.const.PLATFORM_ENV}>
