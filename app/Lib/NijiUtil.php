@@ -365,15 +365,18 @@ class NijiUtil extends OAuthSignatureMethod_HMAC_SHA1
       $targetId = $ownerId;
     }
 
-    $request = $this->getOAuthRequest("/accessblocks/{$userId}/{$targetId}", $ownerId, "GET");
+    $request = $this->getOAuthRequest("/ignorelist/{$userId}/@all/$targetId", $ownerId, "GET");
     $result  = $this->sendRequest($request, "200", $request->to_postdata());
-
-    if (!$result) {
-      return false;
-    }
+    if (empty($result)) return false;
 
     $result = @json_decode($result, true);
-    return (isset($result["status"])) ? ($result["status"] === "1") : false;
+    if (empty($result['entry']['ignorelistId'])) {
+      return false;
+    }
+    if ($targetId == $result['entry']['ignorelistId']) {
+        return true;
+    }
+    return false;
   }
 
   public function getPeople($userId, $selector, $pid = null, $fields = array())

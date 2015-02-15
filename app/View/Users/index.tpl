@@ -43,6 +43,7 @@
         <{foreach from=$helpList item=data}>
             <{include file="../Elements/help.tpl"}>
         <{/foreach}>
+        <div class="space"></div>
         <div style="text-align:right;">
             <a href="<{$smarty.const.BASE_URL}>RaidStages/helpList" style="text-decoration:none;"><span style="color:#1E90FF">⇒もっと見る</span></a>
         </div>

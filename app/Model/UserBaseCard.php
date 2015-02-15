@@ -89,4 +89,18 @@ class UserBaseCard extends AppModel {
         $data = $this->getAllFind($where, $field, 'first', array(), 0, 0, $recurcive, $joins);
         return $data;
     }
+
+    /**
+     * ベースカードのID取得
+     *
+     */
+    public function getCardId ($userId) {
+        $where = array('user_id' => $userId); 
+        $row = $this->getAllFind($where,array(),'first');
+        $cardId = 0;
+        if (!empty($row['card_id'])) {
+            $cardId = $row['card_id'];
+        }
+        return $cardId;
+    }
 }

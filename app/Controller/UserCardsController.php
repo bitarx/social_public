@@ -294,7 +294,7 @@ class UserCardsController extends ApiController {
 
                // 進化ログ
                $value = array(
-                   'UserEvolLog.user_id' => $this->userId
+                   'user_id' => $this->userId
                ,   'base_card_id' => $userBaseCard['card_id']
                ,   'target_card_id' => $targetData['card_id']
                ,   'after_card_id'  => $afterCardId

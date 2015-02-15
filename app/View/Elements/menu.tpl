@@ -59,8 +59,9 @@
             <div class="bn_menu">
                 <{if !empty($event)}>
                     <{include file="../Elements/event.tpl"}>
+                <{else}>
+                    <{include file="../Elements/friend_invite.tpl"}>
                 <{/if}>
-                <{include file="../Elements/friend_invite.tpl"}>
             </div>
     </div>
 </div>

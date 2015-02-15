@@ -48,13 +48,14 @@
           namePlate: "<{$smarty.const.BASE_URL}>img/textarea_gd.png", //背景
           enemyHPProgBase: "<{$smarty.const.BASE_URL}>img/hp_prog_base.png",
           enemyHPProgRed: "<{$smarty.const.BASE_URL}>img/hp_prog_red.png",
-          playerHPProgBase: "<{$smarty.const.BASE_URL}>img/progress_base.png",
+          playerHPProgBase: "<{$smarty.const.BASE_URL}>img/progress_base_battle.png",
           playerHPProgBaseT: "<{$smarty.const.BASE_URL}>img/touka_prog.png",
           playerHPProgBar: "<{$smarty.const.BASE_URL}>img/progress_yellow.png",
           fukidashiMiddle: "<{$smarty.const.BASE_URL}>img/fukidashi_middle.png",
           fukidashiLeftUnder: "<{$smarty.const.BASE_URL}>img/fukidashi_left_under.png",
           particle001: "<{$smarty.const.BASE_URL}>img/particle001.png",
           particle002: "<{$smarty.const.BASE_URL}>img/particle002.png",
+          winText: "<{$smarty.const.BASE_URL}>img/win.png",
           winText: "<{$smarty.const.BASE_URL}>img/win.png",
           loseText: "<{$smarty.const.BASE_URL}>img/lose.png",
           battleStartText: "<{$smarty.const.BASE_URL}>img/battle_start.png",
@@ -70,7 +71,9 @@
           numSL: "<{$smarty.const.BASE_URL}>img/num_sl.png",
           numList: [ "<{$smarty.const.BASE_URL}>img/num_0.png", "<{$smarty.const.BASE_URL}>img/num_1.png", "<{$smarty.const.BASE_URL}>img/num_2.png", "<{$smarty.const.BASE_URL}>img/num_3.png", "<{$smarty.const.BASE_URL}>img/num_4.png", "<{$smarty.const.BASE_URL}>img/num_5.png", "<{$smarty.const.BASE_URL}>img/num_6.png", "<{$smarty.const.BASE_URL}>img/num_7.png", "<{$smarty.const.BASE_URL}>img/num_8.png", "<{$smarty.const.BASE_URL}>img/num_9.png" ],
           num_l_List: [ "<{$smarty.const.BASE_URL}>img/num_l_0.png", "<{$smarty.const.BASE_URL}>img/num_l_1.png", "<{$smarty.const.BASE_URL}>img/num_l_2.png", "<{$smarty.const.BASE_URL}>img/num_l_3.png", "<{$smarty.const.BASE_URL}>img/num_l_4.png", "<{$smarty.const.BASE_URL}>img/num_l_5.png", "<{$smarty.const.BASE_URL}>img/num_l_6.png", "<{$smarty.const.BASE_URL}>img/num_l_7.png", "<{$smarty.const.BASE_URL}>img/num_l_8.png", "<{$smarty.const.BASE_URL}>img/num_l_9.png" ],
-          num_d_List: [ "<{$smarty.const.BASE_URL}>img/num_d_0.png", "<{$smarty.const.BASE_URL}>img/num_d_1.png", "<{$smarty.const.BASE_URL}>img/num_d_2.png", "<{$smarty.const.BASE_URL}>img/num_d_3.png", "<{$smarty.const.BASE_URL}>img/num_d_4.png", "<{$smarty.const.BASE_URL}>img/num_d_5.png", "<{$smarty.const.BASE_URL}>img/num_d_6.png", "<{$smarty.const.BASE_URL}>img/num_d_7.png", "<{$smarty.const.BASE_URL}>img/num_d_8.png", "<{$smarty.const.BASE_URL}>img/num_d_9.png" ]
+          num_d_List: [ "<{$smarty.const.BASE_URL}>img/num_d_0.png", "<{$smarty.const.BASE_URL}>img/num_d_1.png", "<{$smarty.const.BASE_URL}>img/num_d_2.png", "<{$smarty.const.BASE_URL}>img/num_d_3.png", "<{$smarty.const.BASE_URL}>img/num_d_4.png", "<{$smarty.const.BASE_URL}>img/num_d_5.png", "<{$smarty.const.BASE_URL}>img/num_d_6.png", "<{$smarty.const.BASE_URL}>img/num_d_7.png", "<{$smarty.const.BASE_URL}>img/num_d_8.png", "<{$smarty.const.BASE_URL}>img/num_d_9.png" ],
+          pushL: "<{$smarty.const.BASE_URL}>img/push_l.png",
+          pushS: "<{$smarty.const.BASE_URL}>img/push_s.png"
         };
         var result = true;
         var initial = {

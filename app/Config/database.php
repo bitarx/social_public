@@ -75,7 +75,7 @@ class DATABASE_CONFIG {
 	public $com_waku = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'eres.xyz',
+		'host' => 'localhost',
 		'login' => 'barx',
 		'password' => 'arx0505q',
 		'database' => 'eres_waku',

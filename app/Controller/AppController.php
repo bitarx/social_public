@@ -36,6 +36,7 @@ class AppController extends Controller {
      * メンテナンス
      */
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
+    public static $mentePlatform = 'hills';      // allにすると全環境メンテ
     public static $menteEnd = '8:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
@@ -227,10 +228,12 @@ class AppController extends Controller {
                         $testUser = self::$testUserNiji;
                     }
                     if (!empty(self::$menteNo) && !in_array($this->ownerId, $testUser)) {
-                         $this->rd('Errors', 'index', array(
-                                      'error' => 'mente'
-                                   ,  'mente_no' => self::$menteNo    
-                                   ));
+                        if (self::$mentePlatform == PLATFORM_ENV || self::$mentePlatform == 'all') {
+                            $this->rd('Errors', 'index', array(
+                                          'error' => 'mente'
+                                       ,  'mente_no' => self::$menteNo    
+                                       ));
+                        }
                     }
                 }
 
@@ -410,6 +413,9 @@ class AppController extends Controller {
 
             // イベント
             $this->event = $this->EvQuest->isEvent();
+            if (!empty($this->event)) {
+                $this->event['end_time'] = $this->Common->changeTimeStrS ($this->event['end_time']);
+            }
 
             // ページング
             $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
@@ -437,7 +443,6 @@ class AppController extends Controller {
             $this->set('ctlAction',  $this->name . '/' . $this->action); 
             $this->set('event', $this->event);
 
-$this->log($this->userId); 
             // URLアサイン
             $this->_setUrl();
         }

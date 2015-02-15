@@ -194,6 +194,12 @@ class CommonComponent extends Component {
         return $str;
    }
 
+   public function changeTimeStrS ($time) {
+        $timeSp = strtotime($time);
+        $str = date("m/d G時", $timeSp);
+        return $str;
+   }
+
    public function helpKindWord($helpKind) {
        
         switch ($helpKind) {

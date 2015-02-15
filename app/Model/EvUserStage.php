@@ -7,12 +7,6 @@ App::uses('AppModel', 'Model');
  */
 class EvUserStage extends AppModel {
 
-/**
- * Primary key field
- *
- * @var string
- */
-	public $primaryKey = 'user_id';
 
 /**
  * Validation rules
@@ -87,10 +81,13 @@ class EvUserStage extends AppModel {
      * @param int $userId
      * @return int 到達最大stageId
      */
-    public function getUserMaxStageId($userId) {
+    public function getUserMaxStageId($userId, $questId = 0) {
 
         $ret = 0;
-        $where  = array('user_id' => $userId); 
+        $where  = array(
+            'user_id' => $userId
+        ,   'EvStage.ev_quest_id' => $questId
+        ); 
         $fields = array('MAX(EvUserStage.ev_stage_id) AS ev_stage_id');
         $data = $this->getAllFind($where, $fields, $kind = 'first');
         if (!empty($data['ev_stage_id'])) { $ret = $data['ev_stage_id']; } 
@@ -106,12 +103,16 @@ class EvUserStage extends AppModel {
      * @param int $recu 2でクエスト情報を含むステージ取得
      * @return array 対象データ
      */
-    public function getUserStage($userId, $stageId = 0, $recu = 0) {
+    public function getUserStage($userId, $stageId = 0, $recu = 0, $questId = 0) {
 
         $fields = array();
         $order  = array();
         $kind = 'all';
         $where = array('user_id' => $userId);
+        if (!empty($questId)) {
+            $where['EvStage.ev_quest_id'] = $questId;
+        }
+
         if (!empty($stageId)) {
             $where['ev_stage_id'] = $stageId;
             

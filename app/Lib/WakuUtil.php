@@ -356,7 +356,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     return (isset($result["entry"]["payment"][0])) ? $result["entry"]["payment"][0] : null;
   }
 
-  public function isBlocked($userId, $targetId = null)
+  public function isBlocked($userId, $targetId)
   {
     $ownerId = $this->getOwnerId();
 
@@ -364,15 +364,24 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
       $targetId = $ownerId;
     }
 
-    $request = $this->getOAuthRequest("/accessblocks/{$userId}/{$targetId}", $ownerId, "GET");
+    $request = $this->getOAuthRequest("/blacklist/{$userId}/@all/$targetId", $ownerId, "GET");
     $result  = $this->sendRequest($request, "200", $request->to_postdata());
-
     if (!$result) {
       return false;
     }
 
     $result = @json_decode($result, true);
-    return (isset($result["status"])) ? ($result["status"] === "1") : false;
+    if (empty($result['blacklist']['targetId'])) {
+      return false;
+    }
+
+    $tmp = $result['blacklist']['targetId'];
+    $tmp = explode(':', $tmp);
+    $tid = $tmp[1];
+    if ($targetId == $tid) {
+        return true;
+    }
+    return false;
   }
 
   public function getPeople($userId, $selector, $pid = null, $fields = array())

@@ -1,6 +1,6 @@
 <div class="ev_quest">
     <{include file="../Elements/title.tpl"}>
-    <img src="<{$smarty.const.IMG_URL}>ev_quest/prologue_<{$event.ev_quest_id}>.jpg">
+    <img src="<{$smarty.const.IMG_URL}>ev_quest/epilogue_<{$event.ev_quest_id}>.jpg">
     <div class="spaceLow">
     </div>
      <div class="eventTextArea">

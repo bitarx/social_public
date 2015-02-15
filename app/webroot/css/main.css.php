@@ -299,6 +299,7 @@ a:hover {
 .cardExp {
     top: 78px;
     left: 180px;
+    text-align:left;
     font-size: 24px;
     position: absolute;
 }
@@ -370,6 +371,7 @@ a:hover {
 }
 .progCardExp {
     position: absolute;
+    text-align:left;
     top: 81px;
     left: 265px;
     background: url(" . $url . "/img/progress_base.png) top repeat-x;
@@ -381,6 +383,7 @@ a:hover {
 }
 .progCardExpIos {
     position: absolute;
+    text-align:left;
     top: 86px;
     left: 265px;
     background: url(" . $url . "/img/progress_base.png) top repeat-x;
@@ -641,7 +644,7 @@ input.btn_submit {
     line-height: 1.5em;
 }
 .textAreaEvent {
-    height:275px;
+    height:300px;
     width:635px;
 }
 
@@ -696,13 +699,13 @@ input.btn_submit {
 
 .stageItemEffect {
     position:relative;
-    top:15px;
+    top:40px;
     height:100px;
     text-align:center;
 }
 .stageItemEffectBoss {
     position:relative;
-    top:95px;
+    top:120px;
     height:100px;
     text-align:center;
 }
@@ -747,6 +750,18 @@ input.btn_submit {
     position: absolute;
     top: 42px;
     left: 142px;
+}
+.btnQuestToStageList {
+    left: 0px;
+    top: 50px;
+    text-align:center;
+    position: relative;
+}
+.btnQuestToStageListBoss {
+    left: 0px;
+    top: 95px;
+    text-align:center;
+    position: relative;
 }
 
 /** クエストボス */
@@ -1104,7 +1119,17 @@ display: block;
 }
 .presentDate {
     left: 180px;
-    top:75px;
+    top:96px;
+    position: absolute;
+}
+.presentGet {
+    left: 180px;
+    top:135px;
+    position: absolute;
+}
+.strPresentGet {
+    left: 86px;
+    top:10px;
     position: absolute;
 }
 .btnSelectPresent {
@@ -1487,7 +1512,7 @@ display: block;
 }
 .child {
     position: absolute;
-    top: 22%;
+    top: 21%;
     margin : auto;
     width: 640px;
 }
@@ -1764,6 +1789,21 @@ input[type=checkbox] {
     position:absolute;
     top:15px;
     left:460px;
+}
+.helpSelfMes {
+    left: 180px;
+    top:40px;
+    position: absolute;
+}
+.helpSelfDamage {
+    left: 180px;
+    top:72px;
+    position: absolute;
+}
+.helpSelfDate {
+    left: 180px;
+    top:104px;
+    position: absolute;
 }
 
 /** 図鑑 */

@@ -8,6 +8,10 @@ App::uses('ApiController', 'Controller');
  */
 class UsersController extends ApiController {
 
+    protected static $title = 'プロフィール';
+
+    protected static $guideMes = '閲覧制限がかかっています。';
+
     /**
      * Components
      *
@@ -67,7 +71,28 @@ class UsersController extends ApiController {
             $this->log('User Prof Param Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
-        $this->userId = $id;
+
+        $notDisp = 0;
+        if ($this->userId != $id) {
+            // 他人
+            $this->userId = $id;
+
+            $ownerIdOther = $this->User->getOwnerIdByUserId ($id);
+
+            // ブラックリストチェック
+            if ('niji' != PLATFORM_ENV) {
+
+                $ret = $this->snsUtil->isBlocked($this->ownerId, $ownerIdOther);
+                if ($ret) {
+                    $notDisp = 1;
+                } else {
+                    $ret = $this->snsUtil->isBlocked($ownerIdOther, $this->ownerId);
+                    if ($ret) {
+                        $notDisp = 1;
+                    }
+                }
+            }
+        }
 
         // デッキリスト
         $userDeckList = $this->UserDeckCard->getUserDeckData($this->userId);
@@ -108,5 +133,9 @@ class UsersController extends ApiController {
         $this->set('haveCnt'  , $haveCnt);
         $this->set('allCnt'  , $allCnt);
         $this->set('id'  , $id);
+        $this->set('guideId'  , 1 );
+        $this->set('mes'  , self::$guideMes );
+        $this->set('notDisp'  , $notDisp);
+        $this->set('title'  , $snsUserName . 'の' . self::$title);
 	}
 }

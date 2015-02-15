@@ -192,22 +192,22 @@
     <{if 'UserCards' == $ctl && 'index' == $action}> 
         <{if isset($key) && $key <= 10}> 
             <{if $kind == 2}> 
-                <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
-                    <div class="btnSelectCard">
+                <div class="parent">
+                    <a href="<{$smarty.const.BASE_URL}>UserCards/conf?user_card_id=<{$data.user_card_id}>">
                         <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                        <div class="strSelectCardSozai">
+                        <div class="child">
                             素材に選択
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             <{else}> 
-                    <div class="strSelectCardCheckBox">
-                        <{if 2 != $data.sozai_kind}>
-                          選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
-                        <{/if}>
-                    </div>
-                    <div class="spaceLow"></div>
+                <div class="strSelectCardCheckBox">
+                    <{if 2 != $data.sozai_kind}>
+                      選択=><input type="checkbox" name="user_card_id_<{$data.user_card_id}>" class="ckbox">
+                    <{/if}>
+                </div>
             <{/if}> 
+            <div class="spaceLow"></div>
         <{/if}>
     <{* 強化合成素材カード選択 *}> 
     <{elseif 'UserCards' == $ctl && 'cardList' == $action}> 
@@ -216,10 +216,10 @@
     <{* ベースカード選択 *}> 
     <{elseif 'UserBaseCards' == $ctl && 'index' == $action}> 
         <{if empty($data.sozai_kind)}>
-            <div class="btnSelectCard">
+            <div class="parent">
                 <a href="initBaseCard?user_card_id=<{$data.user_card_id}>">
                     <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
-                    <div class="strSelectCard">
+                    <div class="child">
                         ベース選択
                     </div>
                 </a>

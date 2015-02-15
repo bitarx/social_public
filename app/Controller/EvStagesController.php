@@ -26,7 +26,9 @@ class EvStagesController extends ApiController {
     const STAGE_PROG_HIGHT  = 15; // 全力進行
 
     public function beforeFilter(){
+
         parent::beforeFilter();
+
         if(empty($this->event) && $this->action != 'scene') {
             $this->log( __FILE__ .  ':' . __LINE__ .' : EndEvent :userId:' . $this->userId );
             $this->rd('errors', 'index', array('error' => END_EVENT )); 
@@ -68,7 +70,8 @@ class EvStagesController extends ApiController {
         $questId = $this->params['ev_quest_id'];
 
         // 到達したステージリスト
-        $ret = $this->EvUserStage->getUserStage($this->userId, $stageId = 0, $recu = 0);
+        $ret = $this->EvUserStage->getUserStage($this->userId, $stageId = 0, $recu = 2, $questId);
+$this->log($ret); 
         // このクエストは初めて
         if (empty($ret)) {
             $list[] = $this->EvStage->getFirstStage($questId);
@@ -99,17 +102,19 @@ class EvStagesController extends ApiController {
         $stageId = $this->params['ev_stage_id'];
 
         // 現在到達最大stageId
-        $curMaxStageId = $this->EvUserStage->getUserMaxStageId($this->userId);
+        $curMaxStageId = $this->EvUserStage->getUserMaxStageId($this->userId, $this->event['ev_quest_id']);
 
         // 初めてのアクセス
         if (empty($curMaxStageId)) {
-            $curMaxStageId = 1;
-            $stageId = 1;
+            $firstStage = $this->EvStage->getFirstStage($this->event['ev_quest_id']);
+            $curMaxStageId = $firstStage['ev_stage_id'];
+            $stageId = $firstStage['ev_stage_id'];
             $first = 1;
         }
 
         // 不正
         if ( ($curMaxStageId < $stageId) || empty($stageId) ) {
+            $this->log('EvStage init Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
             $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
         }
 
@@ -154,7 +159,7 @@ class EvStagesController extends ApiController {
 
         // 到達していない
         if (!isset($data['progress'])) {
-            $this->log('Stage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
+            $this->log('EvStage Access Error :'. __FILE__ . __LINE__. 'userId:'.$this->userId);  
             $this->rd('Errors', 'index', array('error'=> ERROR_ID_BAD_OPERATION )); 
         }
 
@@ -419,7 +424,7 @@ class EvStagesController extends ApiController {
                 $this->EvUserStage->updateAll($value, $where);
 
                 // 現在到達最大ステージ
-                $stageId = $this->EvUserStage->getUserMaxStageId($this->userId);
+                $stageId = $this->EvUserStage->getUserMaxStageId($this->userId, $this->event['ev_quest_id']);
 
                 // 次のステージ
                 $nextStageId = $stageId + 1;
@@ -438,8 +443,8 @@ class EvStagesController extends ApiController {
                                  'user_id'  => $this->userId
                              ,   'ev_stage_id' => $stageId
                              );
-                    $maxStage = $this->EvUserStage->getAllFind($where, $field, 'first');
 
+                    $maxStage = $this->EvUserStage->getAllFind($where, $field, 'first');
                     if ( 3 == $maxStage['state'] ) {
                         // 次のステージへ
                         $fields = array('user_id', 'ev_stage_id', 'progress', 'state');
@@ -644,7 +649,7 @@ class EvStagesController extends ApiController {
 
         $log = $this->EvBattleLog->getBattleLogDataLatest($this->userId);
 
-        $nextStageId = $this->EvUserStage->getUserMaxStageId($this->userId);
+        $nextStageId = $this->EvUserStage->getUserMaxStageId($this->userId, $this->event['ev_quest_id']);
 
         // 勝利ではない
         if (1 != $log['result'])  {

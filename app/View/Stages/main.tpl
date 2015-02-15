@@ -88,12 +88,28 @@ $(function () {
     </div>
 
     <{if !empty($boss)}> 
+        <div  class="btnQuestToStageListBoss">
+            <a href="<{$linkStage}>?quest_id=<{$data.quest_id}>">
+                <input type="image"  src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    ステージ一覧へ
+                </div>
+            </a>
+        </div>
         <div class="stageItemEffectBoss">
             <{if !empty($effectText)}>
                 <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>
             <{/if}>
         </div>
     <{else}>
+        <div  class="btnQuestToStageList">
+            <a href="<{$linkStage}>?quest_id=<{$data.quest_id}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    ステージ一覧へ
+                </div>
+            </a>
+        </div>
         <div class="stageItemEffect">
             <{if !empty($effectText)}>
                 <{$effectText}>終了まであと<div id="TimeLeft" style="color:#ff0000;"></div>

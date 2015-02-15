@@ -8,7 +8,14 @@ if (!defined('PRIVATE_DIR')) {
  * URL基本設定
  */
 if (!defined('DOMAIN')) {
-    define("DOMAIN", $_SERVER['SERVER_NAME']);
+    if (isset($_SERVER['SERVER_NAME'])) {
+        define("DOMAIN", $_SERVER['SERVER_NAME']);
+    } elseif (isset($_SERVER['argv'][4]) ) {
+        // バッチ処理
+        define("DOMAIN", $_SERVER['argv'][4]);
+    } else {
+        define("DOMAIN", '');
+    }
 }
 
 
