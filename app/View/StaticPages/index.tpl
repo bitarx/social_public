@@ -107,7 +107,7 @@
         <span style="color:#FFA500"><{$smarty.const.MONEY_NAME}></span>を使ってガチャを行えます。<br /><br />
 
         ▼<span style="color:#00FF7F">強化素材ガチャ</span><br />
-        <span style="color:#FFA500"><{$smarty.const.MONEY_NAME}></span>を使ってガチャを行えます。強化素材カードが入手できます。<br /><br />
+        <span style="color:#FFA500"><{$smarty.const.POINT_NAME}></span>を使ってガチャを行えます。強化素材カードが入手できます。<br /><br />
     </div>
     <div class="space"></div>
 </div>
