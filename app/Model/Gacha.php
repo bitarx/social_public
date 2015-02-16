@@ -86,13 +86,15 @@ class Gacha extends AppModel {
      * ガチャ一覧取得
      *
      * @author imanishi
+     * @param array ガチャID
      * @return array $list
      */
-    public function getList() {
+    public function getList($gachaIds) {
 
         $date = date("Y-m-d H:i:s");
         $where = array(
-            'start_time <' => $date
+            'gacha_id' => $gachaIds
+        ,   'start_time <' => $date
         ,   'end_time >' => $date
         );
         $list = $this->getAllFind($where);

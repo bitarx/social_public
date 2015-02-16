@@ -273,6 +273,8 @@ define("GACHA_10_ID", 2 );
 define("GACHA_MONEY_ID", 3 );
 // 強化素材ガチャID
 define("GACHA_SOZAI_ID", 4 );
+// 無課金10連ガチャID
+define("GACHA_MONEY_10_ID", 5 );
 
 
 /**

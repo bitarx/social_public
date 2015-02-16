@@ -11,14 +11,39 @@
 <div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>   
 
-    <div class="bx-wrapper">
-        <ul class="bxslider">
-          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
-          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
-          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
-          <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad3" /></li>
-        </ul>
-    </div>
+    <div class="selectGachaKind">
+      <ul class="tabs">
+        <li>
+            <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?kind=1">
+            <{if 1 == $kind}> 
+                <label class="labelOn"><{$smarty.const.POINT_NAME}></label>
+            <{else}> 
+                <label class="labelOff"><{$smarty.const.POINT_NAME}></label>
+            <{/if}> 
+            </a>
+        </li>
+        <li>
+            <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?kind=2">
+            <{if 2 == $kind}> 
+                <label class="labelOn"><{$smarty.const.MONEY_NAME}></div>
+            <{else}> 
+                <label class="labelOff"><{$smarty.const.MONEY_NAME}></label>
+            <{/if}> 
+            </a>
+        </li> 
+      </ul>
+    </div> 
+
+    <{if 1 == $kind}>
+        <div class="bx-wrapper">
+            <ul class="bxslider">
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad3" /></li>
+            </ul>
+        </div>
+    <{/if}>
 
     <div class="gachaTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="170px" width="630px">

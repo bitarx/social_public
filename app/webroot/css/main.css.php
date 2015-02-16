@@ -221,6 +221,13 @@ a:hover {
 
 
 /** ガチャ */
+/** 選択 */
+.selectGachaKind {
+    top: -60px;
+    height: 30px;
+    position: relative;
+}
+
 .gachaImg {
     left:5px;
     top:10px;
@@ -873,6 +880,7 @@ input.btn_submit {
     text-align:center;
     float: left; 
     width:320px;    
+    height:30px;
 }
 
 .tabs label.labelOff {

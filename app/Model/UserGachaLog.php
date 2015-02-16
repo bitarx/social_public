@@ -131,4 +131,13 @@ class UserGachaLog extends AppModel {
         $ret = $this->field('id', $where);
         return empty($ret) ? false : true;
     }
+
+    /**
+     * ガチャログ登録
+     *
+     */
+    public function regist ($values) {
+        $field = array('user_id', 'gacha_id', 'card_id', 'end_flg');
+        return $this->insertBulk($field, $values);
+    }
 }
