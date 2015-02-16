@@ -151,7 +151,7 @@ class BattleComponent extends Component {
      * @return void
      */
     public function doSkill($skillData, $key, &$selfCards, &$targetCards, &$logSkill, $kind = 'player') {
-$this->log($skillData); 
+
         switch($skillData['effect'])
         {
             // 防御
