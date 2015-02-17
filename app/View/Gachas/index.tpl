@@ -46,13 +46,14 @@
     <{/if}>
 
     <div class="gachaTextArea">
-        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="170px" width="630px">
+        <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="<{$textHeight}>px" width="630px">
         <div class="cardGachaText">
                 カードのレアリティは最大で３段階まで進化します<br />
                 レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
+                <{if 1 == $kind}>
                 <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
                 <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！</span><br />
-                <{$data['card_detail']}>
+                <{/if}>
         </div>
     </div>
     <div style="position:relative;left:20px;">
@@ -85,7 +86,7 @@
             <{$data.gacha_detail}>
         </div>
         <div class="gachaPrice">
-            <{if $data.gacha_id == $smarty.const.GACHA_MONEY_ID}>
+            <{if $data.gacha_id == $smarty.const.GACHA_MONEY_ID || $data.gacha_id == $smarty.const.GACHA_MONEY_10_ID}>
                 <{$data.point}><{$smarty.const.MONEY_NAME}><br />
                 所持<{$smarty.const.MONEY_NAME}>：<{$haveMoney}>
             <{else}> 
@@ -98,7 +99,7 @@
         </div>
 
         <div class="parent">
-            <{if $data.gacha_id == 3 && 0 < $data.point && $haveMoney < $data.point }>
+            <{if ($data.gacha_id == $smarty.const.GACHA_MONEY_ID || $data.gacha_id == $smarty.const.GACHA_MONEY_10_ID) && 0 < $data.point && $haveMoney < $data.point }>
                 <{$smarty.const.MONEY_NAME}>が足りません
             <{else}>
                 <a href="<{$smarty.const.BASE_URL}>Gachas/act?gacha_id=<{$data.gacha_id}>&<{$queryString}>">

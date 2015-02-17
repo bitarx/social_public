@@ -62,7 +62,10 @@ class GachasController extends ApiController {
             $queryString = $this->UserQueryString->getQueryString($this->ownerId);
         }
 
+        $textHeight = $kind == 1 ? 175 : 100;
+
         $this->set('list', $list);
+        $this->set('textHeight', $textHeight);
         $this->set('kind', $kind);
         $this->set('tNum', $tNum);
         $this->set('queryString', $queryString);
@@ -292,6 +295,17 @@ class GachasController extends ApiController {
 
         // 以下の処理はチケットで回した場合と無課金ガチャの場合に通る
 
+        // ペニーチェック
+        if (in_array($gachaId, $this->gachaFree)) {
+            $money = $this->userParam['money'] - $gachaData['point'];
+            if ($money < 0) {
+                $pam = array(
+                    'kind' => 2 
+                );
+                return $this->rd('Gachas', 'index', $pam);
+            }
+        }
+
         // １０連以外
         if ( empty($gacha10) ) {
 
@@ -433,6 +447,16 @@ class GachasController extends ApiController {
                 }
 
                 $this->UserGachaLog->regist($logListRegist);
+
+                // 無料ガチャの場合はゴールド減算
+                if (in_array($gachaId, $this->gachaFree)) {
+                    $money = $this->userParam['money'] - $gachaData['point'];
+                    $values = array(
+                        'user_id' => $this->userId
+                    ,   'money'   => $money 
+                    );
+                    $this->UserParam->save($values);
+                }
 
                 // コレクション登録
                 if (empty($hasMaxFlg)) {
@@ -871,8 +895,14 @@ class GachasController extends ApiController {
         if (in_array($log[0]['gacha_id'],$this->gachaPoint)) {
             $plus = 1;
         }
+
+        $kind = 1;
+        if (in_array($log[0]['gacha_id'],$this->gachaFree)) {
+            $kind = 2;
+        }
         $this->set('plus', $plus);
         $this->set('list', $list);
+        $this->set('kind', $kind);
         $this->set('hasMaxFlg', $hasMaxFlg);
     }
 

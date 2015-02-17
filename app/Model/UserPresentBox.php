@@ -176,7 +176,7 @@ class UserPresentBox extends AppModel {
      * @param array  $userParam   ユーザステータス    
      * @return array [0]受け取り後登録テーブルのID [1]カード所持最大フラグ
      */
-    public function getPresent($userId, $data, $userParam = array()) { 
+    public function getPresent($userId, $data,&$userParam = array()) { 
 
         $id = 0;
         $hasMaxFlg = 0;
