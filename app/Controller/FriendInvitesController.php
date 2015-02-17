@@ -140,7 +140,9 @@ class FriendInvitesController extends ApiController {
 
         $this->FriendInvite->commit(); 
 
-        $params = array('invite_membe', $inviteMember);
+        $params = array(
+            'invite_membe' => $inviteMember
+        );
         $this->rd($this->name, 'end', $params);
     }
 
