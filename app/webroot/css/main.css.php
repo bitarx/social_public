@@ -1518,6 +1518,16 @@ display: block;
     text-align: center;
     position: relative;
 }
+.allCheckL {
+    text-align: center;
+    position: relative;
+}
+.allCheckR {
+    text-align: center;
+    position: relative;
+    left:150px;
+    top:-60px;
+}
 .child {
     position: absolute;
     top: 21%;

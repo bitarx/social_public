@@ -1,3 +1,23 @@
+<{if $kind == 1}>
+<script type="text/javascript">
+$(function(){
+    $('#check-all').on('click', function() {
+          var ids = <{$ids}>;
+          for (i = 0; i < ids.length ; i++) {
+              var name = 'user_card_id_' + ids[i];
+              document.formck.elements.namedItem(name).checked = true;
+          }
+    });
+    $('#delcheck-all').on('click', function() {
+          var ids = <{$ids}>;
+          for (i = 0; i < ids.length ; i++) {
+              var name = 'user_card_id_' + ids[i];
+              document.formck.elements.namedItem(name).checked = false;
+          }
+    });
+});
+</script>
+<{/if}>
 <div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
     <{include file="../Elements/card.tpl"}>
@@ -39,10 +59,15 @@
 
     <{if $kind == 1}> 
         <div class="space"></div>
-        <form method="post" action="<{$smarty.const.BASE_URL_PRE}>UserCards/confUp">
+        <{include file="../Elements/allCheck.tpl"}>
+        <div class="space"></div>
+
+        <form method="post" name="formck" action="<{$smarty.const.BASE_URL_PRE}>UserCards/confUp">
             <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_conf.png" alt="強化確認" name="submit">
             </div>
+
+            <div class="space"></div>
     <{/if}>
 
     <{if $kind == 2 && empty($list)}> 
@@ -68,8 +93,8 @@
             <div class="parent">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_synth_conf.png" alt="強化確認" name="submit">
             </div>
-            <div class="space"></div>
         </form>
+        <div class="space"></div>
     <{/if}>
     
     <{include file="../Elements/pagingNum.tpl"}>

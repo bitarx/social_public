@@ -80,12 +80,19 @@ class UserCardsController extends ApiController {
         $pageAll = 0;
         $list = $this->UserCard->getUserCard($this->userId, $cardId = 0, $userBaseCard['user_card_id'], $limit = PAGE_LIMIT, $this->offset, $rareLevel, $sortItem, $evolGroup, $pageAll, $notIn);
 
+        $ids = array();
+
         // 進化段階取得
         foreach ($list as &$val) {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
+            if (SYNTH_EVOL_CARD_ID != $val['card_id']) {
+                $ids[] = $val['user_card_id'];
+            }
         }
+        $ids = json_encode($ids);
 
         $this->set('list', $list);
+        $this->set('ids', $ids);
         $this->set('data', $userBaseCard);
         $this->set('kind', $kind);
         $this->set('key', 99);

@@ -293,4 +293,6 @@ define("QUEST_ITEM_EFFECT", 5 );
 define("SYNTH_AI_CARD_ID", 64 );
 define("SYNTH_MAI_CARD_ID", 65 );
 define("SYNTH_MI_CARD_ID", 66 );
+// 進化素材カードID
+define("SYNTH_EVOL_CARD_ID", 88 );
 
