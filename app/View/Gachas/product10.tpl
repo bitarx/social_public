@@ -8,7 +8,7 @@
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_android.css.php">
         <{/if}>
-
+        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/loading.css.php">
         <style type="text/css">
         <!--
             #mainCanvas {
@@ -19,6 +19,7 @@
         </style>
     </head>
     <body>
+        <{include file="../Elements/loading.tpl"}>
         <canvas id="mainCanvas" height="800px" width="640px"></canvas>
     </body>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -32,6 +33,9 @@
     <{/if}>
 
     <script type="text/javascript">
+    jQuery(window).load(function(){
+        jQuery("#loading").hide();
+    });
       function back()
       {
            location.href = "<{$smarty.const.URL_PRE}><{$smarty.const.BASE_URL}>Gachas/end?has_max_flg=<{$hasMaxFlg}>";
