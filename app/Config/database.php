@@ -64,7 +64,7 @@ class DATABASE_CONFIG {
 	public $com = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'eres.xyz',
+		'host' => 'localhost',
 		'login' => 'barx',
 		'password' => 'arx0505q',
 		'database' => 'eres',

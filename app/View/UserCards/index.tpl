@@ -20,6 +20,12 @@ $(function(){
 <{/if}>
 <div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
+    <div class="parent">
+       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="64px" width="680px">
+        <div class="child">
+            全てのカードは進化すると<span style="color:#FFA500">脱衣します！</span>
+        </div>
+    </div>
     <{include file="../Elements/card.tpl"}>
     <div class="space"></div>
     <div class="parent">
@@ -60,6 +66,12 @@ $(function(){
     <{if $kind == 1}> 
         <div class="space"></div>
         <{include file="../Elements/allCheck.tpl"}>
+        <div class="parent">
+           <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="64px" width="680px">
+            <div class="child">
+              <span style="color:#FFA500"> 大事なカードを素材に選択しないようご注意ください</span>
+            </div>
+        </div>
         <div class="space"></div>
 
         <form method="post" name="formck" action="<{$smarty.const.BASE_URL_PRE}>UserCards/confUp">

@@ -118,7 +118,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
     } elseif ('waku' == PLATFORM_ENV) {
-        define("PLATFORM_APP_ID", 100388);
+        define("PLATFORM_APP_ID", 100398);
     } else {
         define("PLATFORM_APP_ID", 218);
     }
@@ -143,7 +143,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 178);
     } elseif ('waku' == PLATFORM_ENV) {
-        define("PLATFORM_APP_ID", 100388);
+        define("PLATFORM_APP_ID", 100398);
     } else {
         define("PLATFORM_APP_ID", 265);
     }
@@ -164,7 +164,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 190);
     } elseif ('waku' == PLATFORM_ENV) {
-        define("PLATFORM_APP_ID", 100388);
+        define("PLATFORM_APP_ID", 100398);
     } else {
         define("PLATFORM_APP_ID", 264);
     }

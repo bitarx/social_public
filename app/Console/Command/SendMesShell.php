@@ -10,9 +10,9 @@ App::uses('AppModel', 'Model');
 class SendMesShell extends AppShell {
 
 
-    protected static $title = '鎮激のエロイーズにレイドボス機能を追加しました';
+    protected static $title = 'ペニー10連ガチャを追加しました！';
 
-    protected static $body = '行動力不要のレイドボスバトルで特別報酬をGET!';
+    protected static $body = '無課金のペニー10連ガチャを回してカードをGET！';
 
     protected static $limit = 100; // １回の送信件数
 
@@ -103,7 +103,14 @@ class SendMesShell extends AppShell {
         }
 
         if (!empty($recipients)) {
-            $this->snsUtil->createMessage(self::$title, self::$body, $recipients, $targetUrl, PLATFORM_APP_ID, $officialUserId); 
+            if ('hills' == PLATFORM_ENV) {
+                $this->snsUtil->createMessage(self::$title, self::$body, $recipients, $targetUrl, PLATFORM_APP_ID, $officialUserId); 
+            } elseif ('waku' == PLATFORM_ENV) {
+                $targetUrl = BASE_URL . 'Gachas/index';
+                foreach ($recipients as $id) {
+                    $this->snsUtil->createMessage(self::$title, self::$body, $id, $targetUrl, PLATFORM_APP_ID); 
+                }
+            }
         }
     }
  

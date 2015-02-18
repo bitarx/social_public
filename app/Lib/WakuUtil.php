@@ -159,38 +159,35 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     return ($result !== false);
   }
 
-  public function createMessage($title, $body, $recipients, $url = null, $ownerId = null)
+  public function createMessage($title, $body, $recipients, $url = null, $ownerId = null, $officialUserId = 0)
   {
     if (empty($ownerId)) {
       $ownerId = $this->getOwnerId();
     }
 
+    if (!empty($officialUserId)) {
+      $id = $officialUserId;
+    } else {
+      $id = '@me';
+    }
+
     $data = array();
 
     $data["title"]      = $title;
-    $data["body"]       = $body;
+//    $data["body"]       = $body;
     $data["recipients"] = (is_array($recipients)) ? $recipients : array($recipients);
-
-    if (!empty($url)) {
-      if (is_array($url)) {
-        $urls = array();
-        foreach ($url as $type => $_url) {
-          $urls[] = array("value" => $_url, "type" => $type);
-        }
-
-        $data["urls"] = $urls;
-      } else {
-        $data["urls"] = array(
-          array("value" => $url),
-        );
-      }
-    }
+    $data["urls"] = array(
+      array(
+          "value" => $url,
+          "type"  => 'mobile' 
+          ),
+    );
+    $data['type'] = 'NOTIFICATION';
 
     $data = json_encode($data);
 
-    $request = $this->getOAuthRequest("/messages/@me/@outbox", $ownerId, "POST");
-    $result  = $this->sendRequest($request, "201", $data, $this->requestToHeaders($request, $data));
-
+    $request = $this->getOAuthRequest("/messages/$id/@outbox", $ownerId, "POST");
+    $result  = $this->sendRequest($request, "202", $data, $this->requestToHeaders($request, $data));
     return ($result !== false);
   }
 
@@ -481,7 +478,6 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
     }
 
     $result = curl_exec($curl);
-
     curl_close($curl);
 
     list ($header, $body) = split("(\r\n){2}", $result);
