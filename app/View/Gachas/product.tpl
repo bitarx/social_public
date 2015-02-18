@@ -5,10 +5,11 @@
         <title>ガチャ</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha.css.php">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/loading.css.php">
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha_android.css.php">
+            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/loading_android.css.php">
         <{/if}>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/loading.css.php">
         <style type="text/css">  
         <!-- 
             #mainCanvas {
