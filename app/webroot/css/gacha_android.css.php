@@ -8,4 +8,18 @@ body {
   margin: 0px;
   height:900px;
 }
+
+
+/** Loading */
+#loading {
+    width: 96px; /* gif画像の幅 */
+    height: 96px; /* gif画像の高さ */
+    margin: -68px 0 0 -68px; /* gif画像を画面中央に */
+    padding: 20px; /* gif画像を大きく */
+    opacity: 0.5; /* 透過させる */
+    border-radius: 15px; /* 丸角 */
+    position: fixed; /* gif画像をスクロールさせない */
+    left: 50%; /* gif画像を画面横中央へ */
+    top: 50%; /* gif画像を画面縦中央へ */
+}
 ";

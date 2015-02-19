@@ -6,7 +6,7 @@ echo "
 body {
   padding: 0px;
   margin: 0px;
-  height:900px;
+  height:400px;
 }
 
 
@@ -19,7 +19,7 @@ body {
     opacity: 0.5; /* 透過させる */
     border-radius: 15px; /* 丸角 */
     position: fixed; /* gif画像をスクロールさせない */
-    left: 50%; /* gif画像を画面横中央へ */
-    top: 55%; /* gif画像を画面縦中央へ */
+    left: 25%; /* gif画像を画面横中央へ */
+    top: 25%; /* gif画像を画面縦中央へ */
 }
 ";

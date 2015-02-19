@@ -20,7 +20,7 @@ class WakuUtil extends OAuthSignatureMethod_HMAC_SHA1
   protected $consumerSecret = "";
   protected $publicKeyDir   = "";
 
-  protected $errorlogFile =  "../tmp/logs/waku_error.log";
+  protected $errorlogFile =  "/var/www/eres/app/tmp/logs/waku_error.log";
 
   public static function create()
   {

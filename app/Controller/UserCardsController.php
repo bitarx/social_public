@@ -132,6 +132,7 @@ class UserCardsController extends ApiController {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
 
+        $this->set('subTitle', '選択された素材');
         $this->set('useMoney', $useMoney);
         $this->set('money', $money);
         $this->set('data', $userBaseCard);
@@ -187,6 +188,7 @@ class UserCardsController extends ApiController {
             $val['next'] = $this->CardGroup->getNext($val['card_id']);
         }
 
+        $this->set('subTitle', '選択された素材');
         $this->set('useMoney', $useMoney);
         $this->set('money', $money);
         $this->set('data', $userBaseCard);

@@ -8,18 +8,20 @@ class ApplihillsUtil extends OAuthSignatureMethod_RSA_SHA1
   const CONSUMER_SECRET = "25313091937645d622d373aba1882531";
   const PUBKEY_FILENAME = "public.crt";
   const APP_DIR         = '/var/www/eres/app/';
-/*
+
   const SB_API_HOST        = "sb.app.appli-hills.com";
   const SB_CONSUMER_KEY    = "0bacae904380ed27";
   const SB_CONSUMER_SECRET = "54952402feba3e88d43f96859e6b25af";
   const SB_PUBKEY_FILENAME = "sb.public.crt";
   const SB_APP_DIR         = '/var/www/social/app/';
-*/
+
+/*
   const SB_API_HOST        = "sb.app.appli-hills.com";
   const SB_CONSUMER_KEY    = "38fb76184bb9586b";
   const SB_CONSUMER_SECRET = "f725a825d2d594494509f7f2f03a96b1";
   const SB_PUBKEY_FILENAME = "sb.public.crt";
   const SB_APP_DIR         = '/var/www/eres/app/';
+*/
 
   const DEV_API_HOST        = "sb.app.appli-hills.com";
   const DEV_CONSUMER_KEY    = "a706b39c5d02be7c";

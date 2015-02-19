@@ -4,6 +4,10 @@
     <{if 'UserCards' == $ctl}> 
         <{if 'cardList' == $action}>
             所有カード一覧 
+        <{elseif 'conf' == $action}>
+            進化確認
+        <{elseif 'confUp' == $action}>
+            強化確認
         <{else}>
             強化進化
         <{/if}>

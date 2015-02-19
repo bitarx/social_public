@@ -1,11 +1,5 @@
 <div style="position:relative">
     <{include file="../Elements/title.tpl"}>
-    <div class="parent">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png" class="subjectImg">
-        <div class="child">
-            強化確認
-        </div>
-    </div>
     <{include file="../Elements/card.tpl"}>
     <{include file="../Elements/line.tpl"}>
 
@@ -31,12 +25,7 @@
     <{/if}>
     <div class="space"></div>
 
-    <div class="parent">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  class="subjectImg">
-        <div class="child">
-           選択された素材
-        </div>
-    </div>
+    <{include file="../Elements/sub_title.tpl"}>
 
     <{foreach from=$list item=data key=key}>
         <{include file="../Elements/card.tpl"}>

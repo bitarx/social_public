@@ -4,11 +4,16 @@
         <meta charset="UTF-8">
         <title>ガチャ</title>
         <{if $smarty.const.CARRER_IPHONE == $carrer}>
-            <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10.css.php">
+            <{if $smarty.const.PLATFORM_ENV == 'waku'}>
+                <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_waku.css.php">
+            <{elseif $smarty.const.PLATFORM_ENV == 'hills'}>
+                <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_hills.css.php">
+            <{else}>
+                <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_niji.css.php">
+            <{/if}>
         <{else}>
             <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/gacha10_android.css.php">
         <{/if}>
-        <link rel=stylesheet type="text/css" href="<{$smarty.const.BASE_URL}>css/loading.css.php">
         <style type="text/css">
         <!--
             #mainCanvas {
@@ -69,5 +74,11 @@
         );
       };
 
+    </script>
+    <script type="text/javascript">
+        //スクロール停止
+        document.ontouchmove = function( e ){
+            event.preventDefault();
+        }
     </script>
 </html>
