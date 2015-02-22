@@ -19,12 +19,32 @@
     </div>
 
     <{if !$judgeEvol}> 
-        <div style="text-align:center;">
-            <{if 0 === $judgeEvol}>これ以上<{/if}>進化できません
-        </div>
+            <{if 0 === $judgeEvol}>
+                <div style="text-align:center;">
+                    これ以上進化できません
+                </div>
+            <{else}>
+                <{include file="../Elements/guide.tpl"}>
+            <{/if}>
+            <div class="parent">
+                <a href="<{$smarty.const.BASE_URL}>UserCards/index?kind=2">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                    <div class="child">
+                        戻る
+                    </div>
+                </a>
+            </div>
     <{elseif !$money}> 
         <div style="text-align:center;">
             <{$smarty.const.MONEY_NAME}>が足りません
+        </div>
+        <div class="parent">
+            <a href="<{$smarty.const.BASE_URL}>UserCards/index?kind=2">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_m.png">
+                <div class="child">
+                    戻る
+                </div>
+            </a>
         </div>
     <{else}>
     <div class="space"></div>

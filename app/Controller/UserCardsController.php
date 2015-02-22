@@ -133,6 +133,8 @@ class UserCardsController extends ApiController {
         }
 
         $this->set('subTitle', '選択された素材');
+        $this->set('guideId', 1);
+        $this->set('mes', '進化できません。ベースカードはレベルMAX(Lv20)に達しているでしょうか？');
         $this->set('useMoney', $useMoney);
         $this->set('money', $money);
         $this->set('data', $userBaseCard);

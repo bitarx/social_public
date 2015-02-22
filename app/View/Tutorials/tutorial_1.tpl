@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
     <meta charset="UTF-8">
-    <{if $smarty.const.PLATFORM_ENV == 'hills'}>
+    <{if $smarty.const.PLATFORM_ENV != 'waku'}>
         <meta http-equiv="Pragma" content="no-cache">
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta http-equiv="Expires" content="0" />
