@@ -20,6 +20,15 @@
         </div>
         <div class="spaceHigh"></div>
         <div class="parent">
+            <a href="<{$smarty.const.BASE_URL}>RaidStages/again/?stage_id=<{$stageId}>&raid_master_id=<{$latest.raid_master_id}>">
+                <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
+                <div class="child" >
+                    再戦する
+                </div>
+            </a>
+        </div>
+        <div class="space"></div>
+        <div class="parent">
             <a href="<{$smarty.const.BASE_URL}>RaidStages/<{$action}>/?stage_id=<{$stageId}>">
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="child" >
