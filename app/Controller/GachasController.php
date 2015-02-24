@@ -907,4 +907,10 @@ class GachasController extends ApiController {
     }
 
 
+    public function rareLevel () {
+
+        $this->set('title', 'ガチャ出現率');
+        $this->set('subTitle', 'プレミアム&10連');
+    }
+
 }

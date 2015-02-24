@@ -13,7 +13,9 @@ class InfoController extends ApiController {
      *
      * @var array
      */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Common');
+
+	public $use = array('Info');
 
     /**
      * index method
@@ -23,32 +25,13 @@ class InfoController extends ApiController {
      */
 	public function index() {
 
-        $fields = array('id');
-        $where  = array();
-        $this->Info->getAllFind($where, $fields);
-        $this->set('news', $this->Paginator->paginate());
+        
+        $pageAll = 1;
+        $list = $this->Info->getList($limit = PAGE_LIMIT, array(), $this->offset, $pageAll);
 
-        $this->Info->begin();
-        try {
-            $values = array(
-                'user_id'     => $userId
-            );
-            $ret = $this->Info->save($values);
-            if (!$ret) {
-                throw new AppException('News save failed :' . $this->name . '/' . $this->action);
-            }
-
-        } catch (AppException $e) {
-
-            $this->News->rollback();
-
-            $this->log($e->errmes);
-            return $this->redirect(
-                       array('controller' => 'errors', 'action' => 'index'
-                             , '?' => array('error' => 2)
-                   ));
-        }
-        $this->Info->commit();
+        $this->set('list',  $list);
+        $this->set('pageAll',  $pageAll);
+        $this->set('title',  'お知らせ一覧');
 	}
 
     public function view($id) {
@@ -58,6 +41,7 @@ class InfoController extends ApiController {
         $timesp = strtotime($data['start_time']);
         $data['start_time'] = date("Y/m/d G時", $timesp);
         $this->set('data', $data);
+        $this->set('subTitle', $data['news_title']. '&nbsp;<span style="color:#FFA500">' .$data['start_time'] . '</span>');
     }
 
 

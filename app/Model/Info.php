@@ -71,11 +71,17 @@ class Info extends AppModel {
 		),
 	);
 
-    public function getList($limit, $where = array()) {
+    public function getList($limit = PAGE_LIMIT, $where = array(), $offset = 0, &$pageAll = 1) {
 
         $order = array('Info.start_time DESC');
         $fields = array();
-        $list = $this->getAllFind($where, $fields, 'all', $order, $limit);
+        $list = $this->getAllFind($where, $fields, 'all', $order);
+
+        $num = count($list);
+
+        $pageAll = ceil($num / $limit);
+
+        $list = $this->getAllFind($where, $fields, 'all', $order, $limit, $offset);
 
         foreach ($list as &$val) {
             $timesp = strtotime($val['start_time']);

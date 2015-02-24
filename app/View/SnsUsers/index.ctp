@@ -21,5 +21,8 @@
             <img src="<{$smarty.const.IMG_URL}>line.png"><br />
         <{/foreach}>
     </div>
+    <div class="collectHead">
+       <a href="<{$smarty.const.BASE_URL}>Info/index" style="text-decoration:none;"><span style="color:#1E90FF">⇒もっと見る<span></a>
+    </div>
     <div class="space"></div>
 </div>

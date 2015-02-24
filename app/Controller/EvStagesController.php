@@ -627,6 +627,9 @@ $this->log($ret);
             $enemyId = $this->params['enemy_id'];
             $data = $this->Enemy->getEnemyData($enemyId);
             $next = 'UserStages/index?' . KEY_PAGING . '='. $page. '&kind=2';
+            if ('waku' == PLATFORM_ENV) {
+                $next = urlencode($next);
+            }
         }
         $stage = $this->EvUserStage->getUserStageByEnemyId($this->userId, $enemyId, $state = 3);
         if (empty($stage)) {

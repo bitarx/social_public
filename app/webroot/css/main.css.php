@@ -1600,6 +1600,14 @@ display: block;
     top:15px; 
     left:160px;
 }
+.view {
+    position: relative;
+    top:10px;
+    left:5px;
+    float:left;
+    color:#fff;
+    line-height: 1.5em;
+}
 .strSozai {
     position:absolute;
     left:130px;

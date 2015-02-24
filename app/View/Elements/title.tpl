@@ -21,6 +21,8 @@
         受取BOX 
     <{elseif 'Gachas' == $ctl && 'comp' == $action}> 
         ガチャ結果 
+    <{elseif 'Gachas' == $ctl && 'rareLevel' == $action}> 
+        ガチャ出現率
     <{elseif 'Gachas' == $ctl}> 
        ガチャ 
     <{elseif 'StaticPages' == $ctl}> 

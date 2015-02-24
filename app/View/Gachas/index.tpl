@@ -124,4 +124,10 @@
         </div>
     <{/foreach}>
 
+    <{if $kind == 1}>
+        <div class="collectHead">
+            <a href="<{$smarty.const.BASE_URL}>Gachas/rareLevel" style="text-decoration:none;"><span style="color:#1E90FF">⇒プレミアムガチャ出現率<span></a>
+        </div>
+        <div class="space"></div>
+    <{/if}>
 </div>
