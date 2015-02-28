@@ -10,9 +10,13 @@
        <{/if}>
     </div>
     <div class="presentName">
-            <span style="color:#ffffff"><{$data.name}><{if $data.kind != $smarty.const.KIND_GOLD}> × <{$data.num}><{/if}></span>
+        <span style="color:#FFA500"><{$data.title}></span><{$data.name}><{if $data.kind != $smarty.const.KIND_GOLD}> × <{$data.num}><{/if}></span>
     </div>
-    <div style="position:absolute;top:120px;left:15px;">
+    <{if $data.target == 88}>
+        <div style="position:absolute;top:150px;left:15px;">
+    <{else}>
+        <div style="position:absolute;top:120px;left:15px;">
+    <{/if}>
         <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>
 </div>

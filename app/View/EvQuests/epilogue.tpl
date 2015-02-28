@@ -1,6 +1,6 @@
 <div class="ev_quest">
     <{include file="../Elements/title.tpl"}>
-    <img src="<{$smarty.const.IMG_URL}>ev_quest/epilogue_<{$event.ev_quest_id}>.jpg">
+    <img src="<{$smarty.const.IMG_URL}>ev_quest/end_<{$event.ev_quest_id}>.jpg">
     <div class="spaceLow">
     </div>
      <div class="eventTextArea">
@@ -15,7 +15,7 @@
         <a href="<{$linkPbox}>">
             <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_l.png">
             <div class="child" >
-               プレゼントボックスへ
+               受取BOXへ
             </div>
         </a>
     </div>

@@ -9,6 +9,7 @@ body {
   background-image: url('".$url."/img/synth_evol_bg.png');
   text-align:center;
   height:400px;
+  width:318px;
   overflow: hidden;
 }
 #mainCanvas {

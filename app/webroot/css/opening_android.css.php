@@ -4,12 +4,7 @@ $url = 'http://' . $_SERVER['HTTP_HOST'];
 
 echo "
 body {
-    background-image: url('" . $url . "/img/tutorial/opening.png');
     background-color:#000000;
-    background-position:center top;
-    background-repeat:no-repeat;
-    -moz-background-size:100% auto;
-    background-size:100% auto;
 }
 
 .tutorial1 {
@@ -18,14 +13,13 @@ body {
     position: relative;
     width:320px;
     height:400px;
-    top:-370px;
-    left:-20px;
+    left:11px;
 }
 
 .btnStart {
     position: relative;
     top: 55px;
-    left: 10px;
+    left: 16px;
     height: 50px;
 }
 .btnStartNiji {
@@ -37,7 +31,7 @@ body {
 .strStart {
     position: absolute;
     top: 8px;
-    left: 90px;
+    left: 86px;
     font-size: 20px
 }
 .opening_text {

@@ -1127,12 +1127,12 @@ display: block;
 }
 .presentDate {
     left: 180px;
-    top:96px;
+    top:106px;
     position: absolute;
 }
 .presentGet {
     left: 180px;
-    top:135px;
+    top:145px;
     position: absolute;
 }
 .strPresentGet {
@@ -1352,7 +1352,7 @@ display: block;
     line-height: 1.3em;
     left: 30px;
     width:400px;
-    top: 11px;
+    top: 10px;
 }
 .guideFukiMiddle {
     position: absolute;

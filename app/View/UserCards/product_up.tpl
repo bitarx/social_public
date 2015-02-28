@@ -10,7 +10,7 @@
         <{/if}>
     </head>
     <body>
-        <canvas id="mainCanvas" height="832px" width="640px"></canvas>
+        <canvas id="mainCanvas" height="832px" width="630px"></canvas>
     </body>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="<{$smarty.const.BASE_URL}>libs/easeljs-0.7.1.min.js"></script>

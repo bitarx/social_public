@@ -82,10 +82,18 @@
 <{/if}>
 </head>
 <body>
-        <div class="slider">
-            <ul id="slider">
-                <img src="<{$smarty.const.IMG_URL}>tutorial/opening_text.png?t=<{$time}>" class="opening_text" >
-            </ul>
+    <div class="slider">
+    <{if $carrer == $smarty.const.CARRER_IPHONE}>
+        <video width="310px" height="400" src="<{$smarty.const.IMG_URL}>mv4xd3e/opening.mp4">
+          <source src="<{$smarty.const.IMG_URL}>mv4xd3e/opening.mp4"></source>
+          <p>HTML5 Videoに対応したブラウザでご覧ください</p>
+        </video>
+    <{else}>
+        <video width="320px" height="400" src="<{$smarty.const.IMG_URL}>mv4xd3e/opening.mp4" poster="<{$smarty.const.IMG_URL}>btn_play.png" onclick="this.play();" preload="none">
+          <p>HTML5 Videoに対応したブラウザでご覧ください</p>
+        </video>
+    <{/if}>
+
         </div>
     <{if 'waku' == $smarty.const.PLATFORM_ENV}>
         <div class="btnStart">

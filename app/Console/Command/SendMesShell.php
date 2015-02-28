@@ -10,9 +10,9 @@ App::uses('AppModel', 'Model');
 class SendMesShell extends AppShell {
 
 
-    protected static $title = 'ペニー10連ガチャを追加しました！';
+    protected static $title = 'イベント開催中！RカードをGET';
 
-    protected static $body = '無課金のペニー10連ガチャを回してカードをGET！';
+    protected static $body = 'イベント「IVで種付けされちゃいました」開催中！';
 
     protected static $limit = 100; // １回の送信件数
 
@@ -106,7 +106,7 @@ class SendMesShell extends AppShell {
             if ('hills' == PLATFORM_ENV) {
                 $this->snsUtil->createMessage(self::$title, self::$body, $recipients, $targetUrl, PLATFORM_APP_ID, $officialUserId); 
             } elseif ('waku' == PLATFORM_ENV) {
-                $targetUrl = BASE_URL . 'Gachas/index';
+                $targetUrl = BASE_URL;
                 foreach ($recipients as $id) {
                     $this->snsUtil->createMessage(self::$title, self::$body, $id, $targetUrl, PLATFORM_APP_ID); 
                 }

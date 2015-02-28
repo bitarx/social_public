@@ -43,6 +43,7 @@ $(function () {
                     </div>
                 </a>
             </div>
+            <div class="space"></div>
         <{/if}> 
 
     <{else}>
@@ -63,6 +64,7 @@ $(function () {
                     </div>
                 </a>
             </div>
+            <div class="space"></div>
         <{/if}> 
     <{/if}> 
 

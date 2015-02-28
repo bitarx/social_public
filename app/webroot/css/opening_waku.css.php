@@ -4,28 +4,22 @@ $url = 'http://' . $_SERVER['HTTP_HOST'];
 
 echo "
 body {
-    background-image: url('" . $url . "/img/tutorial/opening.png');
     background-color:#000000;
-    background-position:left top;
-    background-repeat:no-repeat;
-    -moz-background-size:100% auto;
-    background-size:100% auto;
 }
 
 .tutorial1 {
 }
 .slider {
     position: relative;
-    width:640px;
-    height:800px;
-    top:0px;
-    left:-5px;
+    width:300px;
+    height:400px;
+    left:-4px;
 }
 
 .btnStart {
     position: relative;
-    top: -405px;
-    left: 20px;
+    top: 0px;
+    left: 8px;
     height: 50px;
 }
 .btnStartNiji {
@@ -37,14 +31,14 @@ body {
 .strStart {
     position: absolute;
     top: 3px;
-    left: 70px;
+    left: 75px;
     font-size: 20px
 }
 .opening_text {
-    width:320px;
+    width:300px;
 }
 .btnStrongL {
-    width:275px;
+    width:285px;
 }
 ";
 ?>

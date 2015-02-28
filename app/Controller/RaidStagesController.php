@@ -157,9 +157,37 @@ class RaidStagesController extends ApiController {
             'RaidUserCurEnemy.user_id' => $this->userId
         ,   'RaidUserCurEnemy.raid_stage_id' => $stageId
         );
-        $ret = $this->RaidUserCurEnemy->field('user_id', $where);
+        $field = array('raid_master_id');
+        $ret = $this->RaidUserCurEnemy->getAllFind($where, $field, 'first');
         if (!empty($ret)) {
-            $this->rd('RaidStages', 'conf', array('stage_id'=> $stageId )); 
+            $rd = 1;
+            if (!empty($ret['raid_master_id'])) {
+                $where = array(
+                    'RaidMaster.raid_master_id' => $ret['raid_master_id']
+                ,   'RaidMaster.end_time > '    => $this->Common->nowDate() 
+                );
+                $res = $this->RaidMaster->field('raid_master_id', $where);
+                if (empty($res)) {
+                    $rd = 0;
+
+                    // 時間切れの為敵出現状態削除
+                    $this->RaidUserCurEnemy->begin();
+                    $where = array(
+                        'RaidUserCurEnemy.user_id' => $this->userId
+                    ,   'RaidUserCurEnemy.raid_stage_id' => $stageId 
+                    );
+                    if(!$this->RaidUserCurEnemy->deleteAll($where)){
+                         $this->log( __FILE__ .  ':' . __LINE__ .' : Raid CurEnemy Delete Error :userId:' . $this->userId );
+                         $this->rd('errors', 'index', array('error' => ERROR_ID_SYSTEM ));
+                    }
+                    $this->RaidUserCurEnemy->commit();
+
+                }
+            }
+
+            if (!empty($rd)) {
+                $this->rd('RaidStages', 'conf', array('stage_id'=> $stageId )); 
+            }
         }
 
         $userParam = $this->UserParam->getUserParams($this->userId);

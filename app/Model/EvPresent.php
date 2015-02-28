@@ -110,6 +110,7 @@ class EvPresent extends AppModel {
                     $card = new Card();
                     $tmp = $card->getCardData($val['target']);
                     $val['name'] = $tmp['card_name'];
+                    $val['title'] = $tmp['card_title'];
 
                 } elseif (KIND_ITEM == $val['kind']) {
                     $item = new Item();
