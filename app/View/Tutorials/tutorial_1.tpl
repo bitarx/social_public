@@ -89,7 +89,7 @@
           <p>HTML5 Videoに対応したブラウザでご覧ください</p>
         </video>
     <{else}>
-        <video width="320px" height="400" src="<{$smarty.const.IMG_URL}>mv4xd3e/opening.mp4" poster="<{$smarty.const.IMG_URL}>btn_play.png" onclick="this.play();" preload="none">
+        <video width="320px" height="400" src="<{$smarty.const.IMG_URL}>mv4xd3e/opening.mp4" poster="<{$smarty.const.IMG_URL}>btn_mvplay.png" onclick="this.play();" preload="none">
           <p>HTML5 Videoに対応したブラウザでご覧ください</p>
         </video>
     <{/if}>
