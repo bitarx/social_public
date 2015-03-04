@@ -127,4 +127,35 @@ class RaidDamage extends AppModel {
 
         return $data;
     }
+
+    /**
+     * ランキング生成
+     *
+     * @param $start 開始時間
+     * @param $end   終了時間
+     * @return array 最新データ
+     */
+    public function makeRank($start, $end, $enemyId){
+
+        $where = array(
+            'RaidDamage.created > ' => $start
+        ,   'RaidDamage.created < ' => $end
+        ,   'RaidDamage.damage > '  => 0
+        ,   'RaidMaster.enemy_id > '  => $enemyId
+        );
+        $field = array('count(raid_damage_id) as cnt', 'user_id');
+        $group = array('user_id');
+        $order = array('cnt DESC');
+
+        $options = array(
+            'fields'     => $field
+        ,   'conditions' => $where 
+        ,   'group'      => $group
+        ,   'order'      => $order
+        );
+
+        $list = $this->find($kind = 'all', $options);
+
+        return $list;
+    }
 }
