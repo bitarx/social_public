@@ -55,6 +55,9 @@
         <div class="icon_card">
             <a href="<{$linkCard}>"><img src="<{$smarty.const.BASE_URL}>img/icon_card.png" ></a>
         </div>
+        <div class="icon_rank">
+            <a href="<{$linkRank}>"><img src="<{$smarty.const.BASE_URL}>img/icon_rank.png" ></a>
+        </div>
 
             <div class="bn_menu">
                 <{if !empty($event)}>
@@ -63,5 +66,11 @@
                     <{include file="../Elements/friend_invite.tpl"}>
                 <{/if}>
             </div>
+            <div class="bn_menu_raid">
+                 <{if !empty($raidEvent)}>
+                     <a href="<{$linkRaid}>"><img src="<{$smarty.const.IMG_URL}>banner/bn_raid_event_1.gif" width="550px"></a><br />
+                 <{/if}>
+            </div>
+
     </div>
 </div>
