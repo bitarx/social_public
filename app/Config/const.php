@@ -114,6 +114,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // Lサイズカード保存ディレクトリ
     define("CARD_L_DIR", '9KegdFdW' );
     define("SCENE_DIR", 'xD7ywE4p' );
+    define("MOVIE_DIR", 'mv4xd3e' );
 
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 155);
@@ -139,6 +140,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // Lサイズカード保存ディレクトリ
     define("CARD_L_DIR", '9KegdFdW' );
     define("SCENE_DIR", 'xD7ywE4p' );
+    define("MOVIE_DIR", 'mv4xd3e' );
 
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 178);
@@ -160,6 +162,7 @@ if ( false !== strpos( DOMAIN, 'eres')) {
     // Lサイズカード保存ディレクトリ
     define("CARD_L_DIR", '9KegdFdW' );
     define("SCENE_DIR", 'xD7ywE4p' );
+    define("MOVIE_DIR", 'mv4xd3e' );
 
     if ('hills' == PLATFORM_ENV) {
         define("PLATFORM_APP_ID", 190);

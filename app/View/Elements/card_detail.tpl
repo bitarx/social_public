@@ -22,6 +22,17 @@
             </div>
         </div>
     <{/if}>
+    <{if !empty($movie)}>
+        <div class="space"></div>
+        <div class="parent">
+            <a href="<{$smarty.const.BASE_URL}>Cards/movie/<{$data.card_id}>">
+                <input type="image" src="<{$smarty.const.IMG_URL}>btn_st_l.png">
+                <div class="child">
+                   動画を見る（音声が出ます！）
+                </div>
+            </a>
+        </div>
+    <{/if}>
     <div class="cardTextArea">
         <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="280px">
         <div class="cardText">

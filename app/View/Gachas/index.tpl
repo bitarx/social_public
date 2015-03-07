@@ -38,6 +38,9 @@
         <div class="bx-wrapper">
             <ul class="bxslider">
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
+              <{if $smarty.const.PLATFORM_ENV == 'hills'}>
+                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad5.jpg" title="ad5" /></li>
+              <{/if}>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad3" /></li>
@@ -52,7 +55,7 @@
                 レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
                 <{if 1 == $kind}>
                 <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
-                <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！</span><br />
+                <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！一部動画有！</span><br />
                 <{/if}>
         </div>
     </div>

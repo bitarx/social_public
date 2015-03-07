@@ -55,8 +55,17 @@ class CardsController extends ApiController {
         if (file_exists($file))
             $voice = true;
 
+        // movieチェック
+        $docRoot = $_SERVER['DOCUMENT_ROOT'];
+        $fname = 'card_' . $data['card_id']. '.mp4';
+        $movie = false;
+        $file = $docRoot . '/img/' . MOVIE_DIR . '/card/'. $fname;
+        if (file_exists($file))
+            $movie = true;
+
         $this->set('hasCard', $hasCard);
         $this->set('voice', $voice);
+        $this->set('movie', $movie);
         $this->set('mes', self::$errMes);
         $this->set('guideId', 1 );
         $this->set('data', $data);
@@ -64,5 +73,18 @@ class CardsController extends ApiController {
         $this->set('evStageId', $evStageId);
         $this->set('subTitle', $subTitle);
 	}
+
+    /**
+     * movie method
+     *
+     * @author imanishi 
+     */
+	public function movie($id = 0) {
+
+        // 共通レイアウトは使わない
+        $this->layout = '';
+        
+        $this->set('cardId', $id);
+    }
 
 }
