@@ -10,9 +10,9 @@ App::uses('AppModel', 'Model');
 class SendMesShell extends AppShell {
 
 
-    protected static $title = 'イベント開催中！RカードをGET';
+    protected static $title = 'SRカード動画閲覧機能追加！';
 
-    protected static $body = 'イベント「IVで種付けされちゃいました」開催中！';
+    protected static $body = 'SRカードの一部で動画が閲覧できるようになりました！';
 
     protected static $limit = 100; // １回の送信件数
 
