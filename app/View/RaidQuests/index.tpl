@@ -5,6 +5,16 @@
             <img src="<{$smarty.const.IMG_URL}>raid_quest/start.jpg">
         <{else}>
             <{include file="../Elements/sub_title.tpl"}>
+            <div class="spaceLow"></div>
+            <div style="text-align:center;font-size:30px;">
+                <span style="color:#EE82EE"><{$eventStr}></span>
+            </div>
+            <{if !empty($topPercent)}>
+                <div style="text-align:center;font-size:32px;">
+                    現在上位<span style="color:#FFA500;"><{$topPercent}>％</span>
+                </div>
+            <{/if}>
+            <div class="spaceLow"></div>
             <img src="<{$smarty.const.IMG_URL}>ev_raid/plorogue_<{$raidEvent.ev_raid_id}>.jpg">
             <div>
                 <div class="eventTextArea">
@@ -22,11 +32,36 @@
                    </div>
                    ■イベント期間内にレイドボス「舞奈」を討伐すると<span style="color:#FFA500;">討伐Pt</span>が獲得出来ます。<br />
                    ■ 討伐時1Pt取得できます。発見者だけでなく協力者も取得できます。<br />
-                   ■舞奈を１体でも討伐すれば、<span style="color:#FFA500;">Rカード舞奈を取得</span>できます(イベント各期間終了時の報酬として受け取れます)。<br />
+                   ■舞奈を１体でも討伐すれば、<span style="color:#FFA500;">Rカード舞奈を取得</span>できます(討伐後受取BOXへ送られます)。<br />
                    ■イベントは期間の前半と後半のランキングの順位により報酬がGETできます。<br />
-                   ■報酬の詳細はこちらをご確認ください。<br />
+                   ■報酬の詳細は<a href="<{$linkRank}>"><span style="color:#1E90FF">こちら</span></a>をご確認ください。<br />
                    ■報酬は<span style="color:#FFA500;">イベント各期間終了後受取BOX</span>へ送られます。
                </div>
+            </div>
+            <div class="spaceLow"></div>
+            <div style="text-align:center;font-size:30px;">
+                <span style="color:#EE82EE"><{$eventStr}></span>
+            </div>
+            <{if !empty($topPercent)}>
+                <div style="text-align:center;font-size:32px;">
+                    現在上位<span style="color:#FFA500;"><{$topPercent}>％</span>
+                </div>
+            <{/if}>
+            <div class="spaceLow"></div>
+            <div style="text-align:center;font-size:24px;">
+                ※ランキングは１時間に１回の更新です
+            </div>
+            <div class="spaceLow"></div>
+            <div>
+                <{foreach from=$rankList item=data}>
+                    <{include file="../Elements/rank.tpl"}>
+                    <div class="spaceHigh"></div>
+                <{foreachelse}>
+                    <div class="space"></div>
+                    <div style="text-align:center;">
+                    まだランクがありません
+                    </div>
+                <{/foreach}>
             </div>
         <{/if}>
     </div>

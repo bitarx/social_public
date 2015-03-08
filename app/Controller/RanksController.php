@@ -8,6 +8,8 @@ App::uses('ApiController', 'Controller');
  */
 class RanksController extends ApiController {
 
+    public static $title = '逆ブートキャンプで教姦です！ランキングTOP10';
+
     /**
      * Components
      *
@@ -15,54 +17,34 @@ class RanksController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('Card', 'UserCollect');
-
-    public static $errMes = 'カードの取得履歴が確認できません。受取BOXにある場合は受け取ってください。';
+    public $uses = array('EvRaidRankFirst', 'EvRaidRankSecond', 'User', 'UserCard');
 
     /**
      * index method
      *
      * @author imanishi 
      */
-	public function index($id = 0) {
+	public function index() {
 
-        if (empty($id)) {
-            $this->rd('errors', 'index', array('error' => ERROR_ID_BAD_OPERATION )); 
+        // 1:前半 2:後半
+        $kind = empty($this->params['kind']) ? 1 : $this->params['kind'];
+
+        $limit = 10;
+
+        if (1 == $kind) {
+            // 前半
+            $list = $this->EvRaidRankFirst->getList($limit);
+
+        } else {
+            // 後半
+            $list = $this->EvRaidRankSecond->getList($limit);
         }
 
-        // 所有チェック
-        $where = array(
-            'user_id' => $this->userId
-        ,   'Card.card_id' => $id
-        );
-        $hasCard = $this->UserCollect->field('user_id', $where);
-        
-        $stageId = !empty($this->params['stage_id']) ? $this->params['stage_id'] : 0 ;
-        $evStageId = !empty($this->params['ev_stage_id']) ? $this->params['ev_stage_id'] : 0 ;
-
-
-        $where  = array('card_id' => $id);
-        $data = $this->Card->getAllFind($where);
-        $data = $data[0];
-
-        $subTitle = '<span style="color:#FFA500">' . $data['card_title'] . '</span>' . $data['card_name'];
-
-        // voiceチェック
-        $docRoot = $_SERVER['DOCUMENT_ROOT'];
-        $fname = 'card_' . $data['card_id']. '.mp3';
-        $voice = false;
-        $file = $docRoot . '/voice/card/'. $fname;
-        if (file_exists($file))
-            $voice = true;
-
-        $this->set('hasCard', $hasCard);
-        $this->set('voice', $voice);
-        $this->set('mes', self::$errMes);
-        $this->set('guideId', 1 );
-        $this->set('data', $data);
-        $this->set('stageId', $stageId);
-        $this->set('evStageId', $evStageId);
-        $this->set('subTitle', $subTitle);
+        $this->set('list', $list);
+        $this->set('kind', $kind);
+        $this->set('guideId', 2);
+        $this->set('mes', 'ランキングがまだありません。');
+        $this->set('title', self::$title);
 	}
 
 }

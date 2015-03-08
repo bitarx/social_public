@@ -499,7 +499,7 @@ class AppController extends Controller {
         // カード
         $this->set('linkCard', BASE_URL . 'UserCards/cardList'); 
         // ランキング
-        $this->set('linkRank', BASE_URL . 'Rank/index'); 
+        $this->set('linkRank', BASE_URL . 'Ranks/index'); 
     }
 
     /**

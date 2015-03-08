@@ -196,7 +196,7 @@ class CommonComponent extends Component {
 
    public function changeTimeStrS ($time) {
         $timeSp = strtotime($time);
-        $str = date("m/d G時", $timeSp);
+        $str = date("n/j G時", $timeSp);
         return $str;
    }
 
