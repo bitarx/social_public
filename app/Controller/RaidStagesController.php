@@ -21,7 +21,7 @@ class RaidStagesController extends ApiController {
      */
 	public $components = array('Paginator', 'Battle');
 
-    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp', 'UserLastBpTime', 'UserBaseCard');
+    public $uses = array('RaidUserStage', 'Enemy', 'UserDeck', 'RaidStage', 'RaidUserCurStage', 'UserParam', 'RaidStageProb', 'UserCard', 'RaidBattleLog', 'Card', 'UserLastActTime', 'RaidQuest', 'UserStageEffect', 'Skill', 'UserCollect', 'UserPresentBox', 'RaidMaster', 'RaidDamage', 'RaidUserCurEnemy', 'RaidEnemyAliveTime', 'RaidUserEnemyCnt', 'RaidPresentLog', 'RaidPresent', 'RaidHelp', 'UserLastBpTime', 'UserBaseCard', 'EvRaidPresent');
 
     /**
      *　定数
@@ -851,6 +851,48 @@ class RaidStagesController extends ApiController {
                     }
 
                 }
+
+                // イベント期間処理
+                if (!empty($this->raidEvent)) {
+                    
+                    $now  = $this->Common->nowDate();
+
+                    $tarm = 1;
+                    if ($now < $this->raidEvent['1st_end_time']) {
+                        // 前半
+                        $start = $this->raidEvent['start_time'];
+                        $end   = $this->raidEvent['1st_end_time'];
+                        $tmName = '前半';
+                    } else {
+                        // 後半
+                        $start = $this->raidEvent['1st_end_time'];
+                        $end   = $this->raidEvent['end_time'];
+                        $tarm = 2;
+                        $tmName = '後半';
+                    }
+
+                    // 対象がカードである
+                    $where = array(
+                        'ev_raid_id' => $this->raidEvent['ev_raid_id']
+                    ,   'kind'       => KIND_CARD
+                    );
+                    $targetEnemyData = $this->EvRaidPresent->getAllFind($where, $field = array(), 'first');
+                    if (!empty($targetEnemyData)) {
+                        // イベント期間内に対照敵を討伐したことがあるか
+                        $ret = $this->RaidPresentLog->isTarget($this->userId, $targetEnemyData['target'], $start, $end); 
+                        if (!$ret) {
+                             
+                            $mes = $this->raidEvent['title'] . $tmName . 'の参加報酬';
+                            // 倒したことがなければ振込
+                            foreach ($userList as $val) {
+                                $values[] = array($val['user_id'], $targetEnemyData['kind'], $targetEnemyData['target'], $targetEnemyData['num'], $mes);
+                                $valuesLog[] = array($val['user_id'], $raidMasterId, $targetEnemyData['kind'], $targetEnemyData['target'], $targetEnemyData['num']);
+                            }
+                            
+                        }
+                    }
+                }
+
                 $this->UserPresentBox->registPBox($values);
                 $this->RaidPresentLog->regist($valuesLog);
 

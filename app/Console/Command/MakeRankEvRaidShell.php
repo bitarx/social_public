@@ -74,7 +74,6 @@ class MakeRankEvRaidShell extends AppShell {
         }
 
         $list = $this->RaidDamage->makeRank($start, $end, self::$enemyId);
-var_dump($list);
         $values = array();
         foreach ($list as $val) {
             $values[] = array($val['ev_raid_rank'], $val['user_id'], $val['cnt']);

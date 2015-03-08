@@ -30,7 +30,6 @@ class RaidPresentLog extends AppModel {
 
         $where['raid_master_id'] = $raidMasterId;
         $list = $this->getAllFind($where);
-
         foreach ($list as &$val) {
             if (KIND_CARD == $val['kind']) {
                 $card = new Card();
@@ -51,5 +50,27 @@ class RaidPresentLog extends AppModel {
         }
 
         return $list;
+    }
+
+    /**
+     * 対象期間に対象のレイドボスを討伐したことがあるか
+     *
+     * @return bool ture:有り false:無し
+     */
+    public function isTarget($userId, $enemyId, $start, $end) {
+        $where = array(
+            'RaidPresentLog.user_id'    => $userId 
+        ,   'RaidPresentLog.kind'       => KIND_CARD
+        ,   'RaidPresentLog.target'     => $enemyId
+        ,   'RaidPresentLog.created > ' => $start
+        ,   'RaidPresentLog.created < ' => $end
+        ); 
+        $field = array('id');
+        $ret = $this->getAllFind($where, $field, 'first');
+        if (empty($ret)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

@@ -1,7 +1,34 @@
 <div class="commonDisplay">
     <{include file="../Elements/title.tpl"}>   
     <div style="left:-41px;">
-        <img src="<{$smarty.const.IMG_URL}>raid_quest/start.jpg">
+        <{if empty($raidEvent)}>
+            <img src="<{$smarty.const.IMG_URL}>raid_quest/start.jpg">
+        <{else}>
+            <{include file="../Elements/sub_title.tpl"}>
+            <img src="<{$smarty.const.IMG_URL}>ev_raid/plorogue_<{$raidEvent.ev_raid_id}>.jpg">
+            <div>
+                <div class="eventTextArea">
+                    <input type="image" src="<{$smarty.const.IMG_URL}>textarea.png" class="textAreaEventH">
+                    <div class="eventStrH">
+                        <{$raidEvent['detail']}> 
+                    </div>
+                </div>
+            </div>
+            <div class="raidText">
+               <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="485px">
+               <div class="childTop">
+                   <div style="text-align:center">
+                       <span style="color:#00FF00;"><イベントについて></span><br />
+                   </div>
+                   ■イベント期間内にレイドボス「舞奈」を討伐すると<span style="color:#FFA500;">討伐Pt</span>が獲得出来ます。<br />
+                   ■ 討伐時1Pt取得できます。発見者だけでなく協力者も取得できます。<br />
+                   ■舞奈を１体でも討伐すれば、<span style="color:#FFA500;">Rカード舞奈を取得</span>できます(イベント各期間終了時の報酬として受け取れます)。<br />
+                   ■イベントは期間の前半と後半のランキングの順位により報酬がGETできます。<br />
+                   ■報酬の詳細はこちらをご確認ください。<br />
+                   ■報酬は<span style="color:#FFA500;">イベント各期間終了後受取BOX</span>へ送られます。
+               </div>
+            </div>
+        <{/if}>
     </div>
     <div class="spaceLow">
     </div>

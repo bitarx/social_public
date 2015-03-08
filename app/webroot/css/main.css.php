@@ -213,9 +213,19 @@ a:hover {
     top: 400px;
     left: 194px;
 }
+.icon_rank {
+    position: absolute;
+    top: 400px;
+    left: 388px;
+}
 .bn_menu {
     position: absolute;
     top: 485px;
+    left: 10px;
+}
+.bn_menu_raid {
+    position: absolute;
+    top: 595px;
     left: 10px;
 }
 
@@ -653,6 +663,18 @@ input.btn_submit {
 .textAreaEvent {
     height:300px;
     width:635px;
+}
+.textAreaEventH {
+    height:320px;
+    width:635px;
+}
+.eventStrH {
+    position: absolute;
+    top:12px;
+    left:5px;
+    float:left;
+    color:#000;
+    line-height: 1.5em;
 }
 
 /**

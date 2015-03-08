@@ -67,7 +67,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString', 'EvRaid');
 
     public $components = array('Cookie', 'Common');
 
@@ -78,7 +78,8 @@ class AppController extends Controller {
     public $userParam  = array();
     public $tutoEnd  = 0;
 
-    public $event = array();
+    public $event     = array();
+    public $raidEvent = array();
 
     public static $ctlRegist = array('Tutorials');
 
@@ -419,6 +420,11 @@ class AppController extends Controller {
             if (!empty($this->event)) {
                 $this->event['end_time'] = $this->Common->changeTimeStrS ($this->event['end_time']);
             }
+            // レイドイベント
+            $this->raidEvent = $this->EvRaid->isEvent();
+            if (!empty($this->raidEvent)) {
+                $this->raidEvent['end_time_st'] = $this->Common->changeTimeStrS ($this->raidEvent['end_time']);
+            }
 
             // ページング
             $this->page = !empty($this->params[KEY_PAGING]) ? $this->params[KEY_PAGING] : 1;
@@ -445,6 +451,7 @@ class AppController extends Controller {
             $this->set('action',  $this->action); 
             $this->set('ctlAction',  $this->name . '/' . $this->action); 
             $this->set('event', $this->event);
+            $this->set('raidEvent', $this->raidEvent);
 
             // URLアサイン
             $this->_setUrl();
@@ -491,6 +498,8 @@ class AppController extends Controller {
         $this->set('linkRaid', BASE_URL . 'RaidQuests/index'); 
         // カード
         $this->set('linkCard', BASE_URL . 'UserCards/cardList'); 
+        // ランキング
+        $this->set('linkRank', BASE_URL . 'Rank/index'); 
     }
 
     /**

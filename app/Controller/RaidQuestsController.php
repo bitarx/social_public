@@ -39,7 +39,13 @@ class RaidQuestsController extends ApiController {
 
         $list = $this->RaidQuest->getQuestList($questId);
 
+        $eventTitle = '';
+        if (!empty($this->raidEvent['title'])) {
+            $eventTitle = '<span style="color:#FFA500">[EVENT]</span>' . $this->raidEvent['title'];
+        }
+
         $this->set('list', $list);
+        $this->set('subTitle', $eventTitle);
         $this->set('title', self::$title);
 	}
 
