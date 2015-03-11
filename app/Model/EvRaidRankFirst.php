@@ -6,10 +6,9 @@ App::uses('AppModel', 'Model');
  */
 class EvRaidRankFirst extends AppModel {
 
-    public function getList($limit) {
+    public function getList($limit, $where = array()) {
 
         $field = array('EvRaidRankFirst.rank', 'EvRaidRankFirst.user_id', 'EvRaidRankFirst.point',  'User.user_name', 'UserCard.card_id');
-        $where = array();
         $order = array('id ASC');
 
         $joins = array(
@@ -57,5 +56,65 @@ class EvRaidRankFirst extends AppModel {
         $maxrank = !empty($row['maxrank']) ? $row['maxrank'] : 0;
 
         return $maxrank;
+    }
+
+    public function getSelfRankList($userId) {
+
+        $list = array();
+        $field = array();
+        $limit = 1;
+
+        // 自分
+        $where = array(
+            'user_id' => $userId
+        );
+        $rowSelf = $this->getList($limit, $where);
+
+        if (empty($rowSelf)) {
+            return $list;
+        }
+
+        // 一つ上位
+        $upRank = $rowSelf[0]['rank'] - 1;
+        $where = array(
+            'rank' => $upRank
+        );
+        $rowUp = $this->getList($limit, $where);
+        if (empty($rowUp)) {
+            $upRank = $rowSelf[0]['rank'] - 2;
+            $where = array(
+                'rank' => $upRank
+            );
+            $rowUp = $this->getList($limit, $where);
+        }
+
+        // 一つ下位
+        $downRank = $rowSelf[0]['rank'] + 1;
+        $where = array(
+            'rank' => $downRank
+        );
+        $rowDown = $this->getList($limit, $where);
+        if (empty($rowDown)) {
+            $downRank = $rowSelf[0]['rank'] + 2;
+            $where = array(
+                'rank' => $downRank
+            );
+            $rowDown = $this->getList($limit, $where);
+        }
+
+        if (!empty($rowUp)) {
+            $rowUp[0]['rankStr'] = '一つ上';
+            $list[] = $rowUp[0];
+        }
+
+        $rowSelf[0]['rankStr'] = 'あなた';
+        $list[] = $rowSelf[0];
+
+        if (!empty($rowDown)) {
+            $rowDown[0]['rankStr'] = '一つ下';
+            $list[] = $rowDown[0];
+        }
+
+        return $list;
     }
 }

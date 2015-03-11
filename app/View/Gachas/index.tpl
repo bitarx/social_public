@@ -38,9 +38,7 @@
         <div class="bx-wrapper">
             <ul class="bxslider">
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
-              <{if $smarty.const.PLATFORM_ENV == 'hills'}>
-                  <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad5.jpg" title="ad5" /></li>
-              <{/if}>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad5.jpg" title="ad5" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad3" /></li>

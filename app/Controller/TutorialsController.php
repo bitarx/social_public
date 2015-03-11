@@ -1165,8 +1165,6 @@ class TutorialsController extends ApiController {
 
         if ('waku' == PLATFORM_ENV || $this->request->is(array('ajax'))) {
 
-            $this->autoRender = false;   // 自動描画をさせない
-
             $params = $this->params;
             $data = (array)json_decode($params['params']);
 
@@ -1231,13 +1229,8 @@ class TutorialsController extends ApiController {
             $data = array('result' => 2);
         }
 
-        $params = json_encode($data);
-
-        if ('waku' == PLATFORM_ENV) {
-            // クロスドメイン許可
-            $this->header('Access-Control-Allow-Origin: *');
-        }
-        echo $params;
+        // クロスドメイン許可
+        $this->setJson($data);
 	}
 
 

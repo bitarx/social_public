@@ -348,16 +348,14 @@ class GachasController extends ApiController {
                     );
                     $this->UserParam->save($values);
                 } else {
-                    if ($gachaData['gacha_id'] == GACHA_SOZAI_ID) {
-                        $itemId = 14;
-                    } else {
-                        $itemId = 6;
-                    }
+
+                    $itemId = 88;
+
                     // 有料ガチャの場合はおまけを受け取りボックスへ
                     $values = array();
                     $values[] = array(
                         $this->userId
-                    ,   KIND_ITEM
+                    ,   KIND_CARD
                     ,   $itemId 
                     ,   1
                     ,   $gachaData['gacha_name'] . 'のおまけ'
@@ -732,14 +730,14 @@ class GachasController extends ApiController {
 
                 // 有料ガチャの場合はおまけを受け取りボックスへ
                 if ($gachaData['gacha_id'] == GACHA_SOZAI_ID) {
-                    $itemId = 6;
+                    $itemId = 88;
                 } else {
-                    $itemId = 6;
+                    $itemId = 88;
                 }
                 $values = array();
                 $values[] = array(
                     $this->userId
-                ,   KIND_ITEM
+                ,   KIND_CARD
                 ,   $itemId 
                 ,   1
                 ,   $gachaData['gacha_name'] . 'のおまけ'
@@ -806,12 +804,12 @@ class GachasController extends ApiController {
                 }
 
                 // 有料ガチャの場合はおまけを受け取りボックスへ
-                $itemId = 6;
+                $itemId = 88;
 
                 $values = array();
                 $values[] = array(
                     $this->userId
-                ,   KIND_ITEM
+                ,   KIND_CARD
                 ,   $itemId 
                 ,   10
                 ,   $gachaData['gacha_name'] . 'のおまけ'

@@ -1465,7 +1465,7 @@ display: block;
 
 /** カード詳細 */
 .cardDetail {
-    height:1700px;
+    height:1780px;
 }
 .cardDetailName {
     position: relative;

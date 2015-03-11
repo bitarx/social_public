@@ -217,4 +217,34 @@ class CommonComponent extends Component {
         }
         return $word;
    }
+
+   /**
+    * ランク付けを行う
+    *
+    */
+    public function addRank($list) {
+        if (empty($list)) return $list;
+        
+        $rank = 1;
+        $i = 0;
+        $keep = 1;
+        foreach ($list as &$val) {
+
+            $val['rank'] = $rank;
+
+            $i++;
+
+            if (empty($list[$i]['cnt'])) {
+                break;
+            }
+
+            if ($val['cnt'] != $list[$i]['cnt']) {
+                $rank += $keep;
+                $keep = 1;
+            } else {
+                $keep++;
+            }
+        }
+        return $list;
+    }
 }

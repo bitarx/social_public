@@ -40,6 +40,12 @@ class RaidQuestsController extends ApiController {
         $list = $this->RaidQuest->getQuestList($questId);
 
         $eventTitle = '';
+        $start = "";
+        $middle = "";
+        $end = "";
+        $rankList = array();
+        $eventStr = "";
+        $topPercent = "";
         if (!empty($this->raidEvent['title'])) {
             $eventTitle = '<span style="color:#FFA500">[EVENT]</span>' . $this->raidEvent['title'];
 
@@ -70,9 +76,17 @@ class RaidQuestsController extends ApiController {
             }
 
             $rankList = $md->getSelfRankList($this->userId);
+
+            // 期間文字列
+            $start = $this->Common->changeTimeStrS($this->raidEvent['start_time']);
+            $middle = $this->Common->changeTimeStrS($this->raidEvent['1st_end_time']);
+            $end = $this->Common->changeTimeStrS($this->raidEvent['end_time']);
         }
 
         $this->set('list', $list);
+        $this->set('start', $start);
+        $this->set('middle', $middle);
+        $this->set('end', $end);
         $this->set('rankList', $rankList);
         $this->set('eventStr', $eventStr);
         $this->set('topPercent', $topPercent);

@@ -26,7 +26,7 @@ body {
 .btnStartMovie {
     position: relative;
     top: 30px;
-    left: 8px;
+    left: 3px;
     height: 50px;
 }
 .playNotice {

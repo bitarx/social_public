@@ -13,7 +13,7 @@ body {
     position: relative;
     width:300px;
     height:400px;
-    left:-4px;
+    left:-8px;
 }
 
 .btnStart {
@@ -21,6 +21,17 @@ body {
     top: 0px;
     left: 8px;
     height: 50px;
+}
+.btnStartMovie {
+    position: relative;
+    top: 30px;
+    left: 8px;
+    height: 50px;
+}
+.playNotice {
+    position: relative;
+    top: 25px;
+    color: #fff;
 }
 .btnStartNiji {
     position: relative;
@@ -33,6 +44,13 @@ body {
     top: 3px;
     left: 75px;
     font-size: 20px
+}
+.strStartMovie {
+    position: absolute;
+    top: 3px;
+    left: 115px;
+    font-size: 20px;
+    color:#fff;
 }
 .opening_text {
     width:300px;

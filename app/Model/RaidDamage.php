@@ -141,7 +141,7 @@ class RaidDamage extends AppModel {
             'RaidDamage.created > ' => $start
         ,   'RaidDamage.created < ' => $end
         ,   'RaidDamage.damage > '  => 0
-        ,   'RaidMaster.enemy_id > '  => $enemyId
+        ,   'RaidMaster.enemy_id'  => $enemyId
         );
         $field = array('count(raid_damage_id) as cnt', 'user_id');
         $group = array('user_id');
@@ -154,7 +154,17 @@ class RaidDamage extends AppModel {
         ,   'order'      => $order
         );
 
-        $list = $this->find($kind = 'all', $options);
+        $tmp = $this->find($kind = 'all', $options);
+
+        $list = array();
+        if (!empty($tmp)) {
+            foreach ($tmp as $val) {
+                $list[] = array(
+                    'cnt' => $val[0]['cnt']
+                ,   'user_id' => $val['RaidDamage']['user_id'] 
+                );
+            }
+        }
 
         return $list;
     }

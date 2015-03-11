@@ -2,15 +2,14 @@
     <{include file="../Elements/title.tpl"}>
 
     <div class="raidText">
-       <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="250px">
+       <img src="<{$smarty.const.IMG_URL}>textarea_to.png" height="190px">
        <div class="childTop">
            <div style="text-align:center">
                <span style="color:#00FF00;"><イベント報酬></span><br />
            </div>
-           ■上位１０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ × 10</span><br />
-           ■上位５０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ × 4</span><br />
-           ■上位９０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ  × 2</span><br />
-           ■上位100％&nbsp;&nbsp;<span style="color:#FFA500;">[進化素材]ビビ  × 1</span><br />
+           ■上位１０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ × 5</span><br />
+           ■上位５０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ × 2</span><br />
+           ■上位９０％&nbsp;<span style="color:#FFA500;">[進化素材]ビビ  × 1</span><br />
            ※報酬は各期間終了後受取BOXに送られます
        </div>
     </div>
@@ -18,6 +17,13 @@
     <div style="text-align:center">
         ※ランキングは１時間に１回の更新となります
     </div>
+
+    <div class="spaceLow"></div>
+    <{if !empty($topPercent)}>
+        <div style="text-align:center;font-size:32px;">
+            <span style="color:#EE82EE"><{$termName}></span> : <span style="color:#00FF00;"><{$snsName}></span>は上位<span style="color:#FFA500;"><{$topPercent}>％</span>
+        </div>
+    <{/if}>
 
     <div class="selectSynthKind">
       <ul class="tabs">

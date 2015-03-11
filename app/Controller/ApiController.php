@@ -51,7 +51,6 @@ class ApiController extends AppController {
         } else {
             $keys = $data;
         }
-
         $action = $this->name . '_' . $this->action;
         $this->set('action', $action);
         $keys[] = 'action';

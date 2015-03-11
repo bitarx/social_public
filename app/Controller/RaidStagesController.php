@@ -414,10 +414,17 @@ class RaidStagesController extends ApiController {
             $hpNow = '<span style="color:#008000">' . $hpNow . '</span>';
         }
 
+        // イベント期間台詞変更
+        if (!empty($this->raidEvent)) {
+
+            if (!empty($enemyData['after_win_words'])) {
+                $enemyData['before_words'] = $enemyData['after_win_words'];
+            }
+        }
+
         // 敵HP
         $enemyHp = '<span style="color:#FFA500">HP</span> : ' . $hpNow . '  /  ' . $data['hp_max'];
         $enemyData['card_name'] .= 'Lv' . $level;
-
         $this->set('data', $enemyData);
         $this->set('errWord', $errWord);
         $this->set('noCard', $noCard);
@@ -877,8 +884,8 @@ class RaidStagesController extends ApiController {
                     ,   'kind'       => KIND_CARD
                     );
                     $targetEnemyData = $this->EvRaidPresent->getAllFind($where, $field = array(), 'first');
-                    if (!empty($targetEnemyData)) {
-                        // イベント期間内に対照敵を討伐したことがあるか
+                    if (!empty($targetEnemyData) && $targetId == $targetEnemyData['target']) {
+                        // イベント期間内に対象敵を討伐したことがあるか
                         $ret = $this->RaidPresentLog->isTarget($this->userId, $targetEnemyData['target'], $start, $end); 
                         if (!$ret) {
                              

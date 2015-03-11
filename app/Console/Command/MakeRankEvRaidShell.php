@@ -15,7 +15,7 @@ class MakeRankEvRaidShell extends AppShell {
 
     public $components = array('Cookie', 'Common');
 
-    public $uses = array('User', 'SnsUser', 'EvRaid', 'EvRaidRank1st', 'EvRaidRank2st', 'RaidDamage');
+    public $uses = array('User', 'SnsUser', 'EvRaid', 'EvRaidRankFirst', 'EvRaidRankSecond', 'RaidDamage');
  
     /**
      * バッチ開始前の処理
@@ -74,32 +74,52 @@ class MakeRankEvRaidShell extends AppShell {
         }
 
         $list = $this->RaidDamage->makeRank($start, $end, self::$enemyId);
+//var_dump($list);
+        // ランクづけ
+        $list = $this->Common->addRank($list);
+
         $values = array();
         foreach ($list as $val) {
-            $values[] = array($val['ev_raid_rank'], $val['user_id'], $val['cnt']);
+            $values[] = array($val['rank'], $val['user_id'], $val['cnt']);
         }
 
         if (!empty($values) && 1 <= count($values)) {
 
             if (1 == $tarm) {
                 // 前半
-                $this->EvRaidRank1st->begin();
+                $this->EvRaidRankFirst->begin();
                 try {
 
-                    $field = array('ev_raid_rank', 'user_id', 'point');
-                    $this->EvRaidRank1st->insertBulk($field, $values, $ignore = 1);
+                    $this->EvRaidRankFirst->query('TRUNCATE ev_raid_rank_firsts;');
+                    $field = array('rank', 'user_id', 'point');
+                    $this->EvRaidRankFirst->insertBulk($field, $values, $ignore = 1);
 
                 } catch (AppException $e) {
-                    $this->EvRaidRank1st->rollback();
+                    $this->EvRaidRankFirst->rollback();
                     $this->log($e->errmes);
                     $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
                 }
-                $this->EvRaidRank1st->commit();
+                $this->EvRaidRankFirst->commit();
             } else {
                 // 後半
+                $this->EvRaidRankSecond->begin();
+                try {
+
+                    $this->EvRaidRankSecond->query('TRUNCATE ev_raid_rank_seconds;');
+                    $field = array('rank', 'user_id', 'point');
+                    $this->EvRaidRankSecond->insertBulk($field, $values, $ignore = 1);
+
+                } catch (AppException $e) {
+                    $this->EvRaidRankSecond->rollback();
+                    $this->log($e->errmes);
+                    $this->rd('Errors', 'index', array('error'=> ERROR_ID_SYSTEM ));
+                }
+                $this->EvRaidRankSecond->commit();
 
             }
         }
+
+        exec('chmod -R 777 ../../tmp' );
     }
  
     /**

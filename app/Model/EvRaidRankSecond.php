@@ -81,6 +81,13 @@ class EvRaidRankSecond extends AppModel {
             'rank' => $upRank
         );
         $rowUp = $this->getList($limit, $where);
+        if (empty($rowUp)) {
+            $upRank = $rowSelf[0]['rank'] - 2;
+            $where = array(
+                'rank' => $upRank
+            );
+            $rowUp = $this->getList($limit, $where);
+        }
 
         // 一つ下位
         $downRank = $rowSelf[0]['rank'] + 1;
@@ -88,6 +95,13 @@ class EvRaidRankSecond extends AppModel {
             'rank' => $downRank
         );
         $rowDown = $this->getList($limit, $where);
+        if (empty($rowDown)) {
+            $downRank = $rowSelf[0]['rank'] + 2;
+            $where = array(
+                'rank' => $downRank
+            );
+            $rowDown = $this->getList($limit, $where);
+        }
 
         if (!empty($rowUp)) {
             $rowUp[0]['rankStr'] = '一つ上';

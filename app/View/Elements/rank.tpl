@@ -10,7 +10,7 @@
         <{if empty($data.rankStr)}><{$data.rank}>位<{else}><{$data.rankStr}><{/if}>:<a href="<{$smarty.const.BASE_URL}>Users/prof/<{$data.user_id}>"><span style="color:#ffffff"><{$data.user_name}></span></a>
     </div>
     <div class="presentMes">
-        Pt:<span style="color:#ffffff"><{$data.point}></span>
+        討伐Pt:<span style="color:#ffffff"><{$data.point}></span>
     </div>
     <div class="parent">
         <a href="<{$smarty.const.BASE_URL}>Users/prof/<{$data.user_id}>">

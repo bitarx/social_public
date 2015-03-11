@@ -37,14 +37,14 @@ class AppController extends Controller {
      */
     public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
     public static $mentePlatform = 'waku';      // allにすると全環境メンテ
-    public static $menteEnd = '11:00';
+    public static $menteEnd = '15:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
 //    public static $testUserHills = array(553544, 553984, 566162);
     public static $testUserHills = array();
 
-//    public static $testUserWaku = array(6578349);
-    public static $testUserWaku = array();
+    public static $testUserWaku = array(6578349);
+//    public static $testUserWaku = array();
 
     public static $testUserNiji = array(193408, 684606);
 //    public static $testUserNiji = array();

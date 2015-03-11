@@ -6,6 +6,10 @@
         <{else}>
             <{include file="../Elements/sub_title.tpl"}>
             <div class="spaceLow"></div>
+            <div style="text-align:center;font-size:26px;">
+                前半戦 : <span style="color:#FFFF00"><{$start}>～<{$middle}></span><br />
+                後半戦 : <span style="color:#FFFF00"><{$middle}>～<{$end}></span>
+            </div>
             <div style="text-align:center;font-size:30px;">
                 <span style="color:#EE82EE"><{$eventStr}></span>
             </div>
@@ -30,8 +34,9 @@
                    <div style="text-align:center">
                        <span style="color:#00FF00;"><イベントについて></span><br />
                    </div>
-                   ■イベント期間内にレイドボス「舞奈」を討伐すると<span style="color:#FFA500;">討伐Pt</span>が獲得出来ます。<br />
+                   ■イベント期間内にレイドボス「舞奈」を討伐すると<span style="color:#FFA500;">討伐Pt</span>が獲得出来ます(このページのランクで確認できます)。<br />
                    ■ 討伐時1Pt取得できます。発見者だけでなく協力者も取得できます。<br />
+                   ■ イベント参加条件は<span style="color:#FFA500;">レイドボス「舞奈」を１体以上討伐する</span>ことになります。<br />
                    ■舞奈を１体でも討伐すれば、<span style="color:#FFA500;">Rカード舞奈を取得</span>できます(討伐後受取BOXへ送られます)。<br />
                    ■イベントは期間の前半と後半のランキングの順位により報酬がGETできます。<br />
                    ■報酬の詳細は<a href="<{$linkRank}>"><span style="color:#1E90FF">こちら</span></a>をご確認ください。<br />
