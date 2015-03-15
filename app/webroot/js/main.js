@@ -38,6 +38,7 @@ function appRequest(e){
     //  jQuery.ajax
     $.ajax({
         url: url,   
+        cache : false,
         data: obj,
         type: type, 
 

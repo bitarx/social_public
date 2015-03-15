@@ -12,10 +12,7 @@
     <{/if}> 
 
     <div class="btnSortUpdate">
-        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_ss_off.png" alt="更新
+        <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_update.png" alt="更新
 確認" name="submit">
-        <div class="strSortUpdate">
-            更新
-        </div>
     </div>
 </form>

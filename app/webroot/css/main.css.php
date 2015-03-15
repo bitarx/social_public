@@ -760,8 +760,8 @@ input.btn_submit {
     position: relative;
 }
 .btnQuestNotProgBoss {
-    left: 0px;
-    top: 250px;
+    left: 103px;
+    top: 252px;
     height: 130px;
     position: relative;
 }
@@ -780,6 +780,11 @@ input.btn_submit {
     top: 42px;
     left: 142px;
 }
+.strQuestNotProgBoss {
+    position: absolute;
+    top: 42px;
+    left: 42px;
+}
 .btnQuestToStageList {
     left: 0px;
     top: 50px;
@@ -796,7 +801,12 @@ input.btn_submit {
 /** クエストボス */
 .btnQuestBoss {
     left: 103px;
-    top: 233px;
+    top: 242px;
+    position: relative;
+}
+.btnQuestBossNotProg {
+    left: 103px;
+    top: 246px;
     position: relative;
 }
 .strQuestBoss {
@@ -1553,6 +1563,12 @@ display: block;
 .child {
     position: absolute;
     top: 21%;
+    margin : auto;
+    width: 640px;
+}
+.childIos {
+    position: absolute;
+    top: 7%;
     margin : auto;
     width: 640px;
 }

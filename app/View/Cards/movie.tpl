@@ -42,7 +42,7 @@
           <p>HTML5 Videoに対応したブラウザでご覧ください</p>
         </video>
     <{else}>
-        <video width="320px" height="420px" src="<{$smarty.const.IMG_URL}><{$smarty.const.MOVIE_DIR}>/card/card_<{$cardId}>.mp4" poster="<{$smarty.const.IMG_URL}>btn_mvplay.png" onclick="this.play();" preload="none">
+        <video width="320px" height="420px" src="<{$smarty.const.IMG_URL}><{$smarty.const.MOVIE_DIR}>/card/card_<{$cardId}>.mp4" poster="<{$smarty.const.IMG_URL}>btn_mvplay_card.png" onclick="this.play();" preload="none">
           <p>HTML5 Videoに対応したブラウザでご覧ください</p>
         </video>
     <{/if}>

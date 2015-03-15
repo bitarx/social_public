@@ -21,9 +21,14 @@ $(function(){
 <div class="commonDisplayFree">
     <{include file="../Elements/title.tpl"}>
     <div class="parent">
-       <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="64px" width="680px">
-        <div class="child">
-            全てのカードは進化すると<span style="color:#FFA500">脱衣します！</span>
+        <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="85px" width="640px">
+        <{if $carrer == $smarty.const.CARRER_IPHONE}>
+            <div class="childIos">
+        <{else}>
+            <div class="child">
+        <{/if}>
+            全てのカードは進化すると<span style="color:#FFA500">脱衣します！</span><br />
+            <span style="color:#EE82EE">SR</span>の一部は<span style="color:#FFA500">動画有！(順次動画化)</span>
         </div>
     </div>
     <{include file="../Elements/card.tpl"}>

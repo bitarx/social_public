@@ -18,15 +18,15 @@ $(function () {
     </div>
 
     <{if !empty($boss)}> 
-        <div  class="btnQuestBoss">
-            <a href="<{$smarty.const.BASE_URL}>Stages/conf?stage_id=<{$data.stage_id}>">
-                <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                <div class="strQuestBoss">
-                    ボス出現！
-                </div>
-            </a>
-        </div>
         <{if empty($notAct)}> 
+            <div  class="btnQuestBoss">
+                <a href="<{$smarty.const.BASE_URL}>Stages/conf?stage_id=<{$data.stage_id}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                    <div class="strQuestBoss">
+                        ボス出現！
+                    </div>
+                </a>
+            </div>
             <div  class="btnQuestProgBoss" id="appReq" act="Stages/init<{$ownerInfo}>" params=<{$param}>>
                 <input type="image" src="<{$smarty.const.BASE_URL}>img/btn_cm_l.png">
                 <div class="strQuestProg" >
@@ -34,11 +34,19 @@ $(function () {
                 </div>
             </div>
         <{else}> 
+            <div  class="btnQuestBossNotProg">
+                <a href="<{$smarty.const.BASE_URL}>Stages/conf?stage_id=<{$data.stage_id}>">
+                    <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
+                    <div class="strQuestBoss">
+                        ボス出現！
+                    </div>
+                </a>
+            </div>
             <div  class="btnQuestNotProgBoss">
                 行動力がなくなりました‥
                 <a href="<{$linkRaid}>">
                     <img src="<{$smarty.const.BASE_URL}>img/btn_st_l.png">
-                    <div class="strQuestNotProg" >
+                    <div class="strQuestNotProgBoss" >
                             行動力不要のレイドボスバトルへ
                     </div>
                 </a>
