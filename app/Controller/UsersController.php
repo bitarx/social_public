@@ -96,6 +96,8 @@ class UsersController extends ApiController {
 
         // デッキリスト
         $userDeckList = $this->UserDeckCard->getUserDeckData($this->userId);
+        // ユーザーステータス取得
+        $this->userParam = $this->UserParam->getUserParams($this->userId);
 
         $where = array('user_id' => $this->userId);
         $this->ownerId = $this->User->field('sns_user_id', $where);
