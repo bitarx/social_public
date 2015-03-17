@@ -278,6 +278,10 @@ define("GACHA_MONEY_ID", 3 );
 define("GACHA_SOZAI_ID", 4 );
 // 無課金10連ガチャID
 define("GACHA_MONEY_10_ID", 5 );
+// レアガチャID
+define("GACHA_RARE_ID", 6 );
+// レア10連ガチャID
+define("GACHA_RARE_10_ID", 7 );
 
 
 /**

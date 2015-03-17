@@ -39,9 +39,10 @@
             <ul class="bxslider">
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad1.jpg" title="ad1" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad5.jpg" title="ad5" /></li>
-              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad6.jpg" title="ad6" /></li>
               <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad3.jpg" title="ad3" /></li>
-              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad3" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad2.jpg" title="ad2" /></li>
+              <li><img src="<{$smarty.const.IMG_URL}>banner/gacha_ad4.jpg" title="ad4" /></li>
             </ul>
         </div>
     <{/if}>

@@ -24,7 +24,7 @@ class GachasController extends ApiController {
     public $gachaFree = array( GACHA_MONEY_ID , GACHA_MONEY_10_ID );
 
     // 課金ガチャID
-    public $gachaPoint = array( GACHA_PREMIUM_ID , GACHA_10_ID, GACHA_SOZAI_ID );
+    public $gachaPoint = array( GACHA_PREMIUM_ID , GACHA_10_ID, GACHA_SOZAI_ID , GACHA_RARE_ID, GACHA_RARE_10_ID );
 
 
     /**
