@@ -15,7 +15,7 @@ class GachasController extends ApiController {
      */
 	public $components = array('Paginator', 'Common', 'GachaFunc');
 
-    public $uses = array('User', 'SnsUser', 'Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox', 'UserQueryString');
+    public $uses = array('User', 'SnsUser', 'Gacha', 'GachaProb', 'UserCard', 'Card', 'UserGachaLog', 'PaymentLog', 'UserItem', 'UserCollect', 'UserPresentBox', 'UserQueryString', 'UserFirstItem');
 
     // 10連ガチャID
     public $gacha10 = array( GACHA_10_ID, GACHA_MONEY_10_ID );
@@ -62,13 +62,19 @@ class GachasController extends ApiController {
             $queryString = $this->UserQueryString->getQueryString($this->ownerId);
         }
 
-        $textHeight = $kind == 1 ? 175 : 100;
+        // 初心者セット購入済み
+        $where = array('user_id' => $this->userId);
+        $fields = array('user_first_item_id');
+        $firstItem = $this->UserFirstItem->getAllFind($where, $fields, 'first');
+
+        $textHeight = $kind == 1 ? 205 : 100;
 
         $this->set('list', $list);
         $this->set('textHeight', $textHeight);
         $this->set('kind', $kind);
         $this->set('tNum', $tNum);
         $this->set('queryString', $queryString);
+        $this->set('firstItem', $firstItem);
 	}
 
     /**

@@ -54,13 +54,22 @@
                 レアリティは<span style="color:#FFA500">N→HN→R→HR→SR</span>の順に進化します<br />
                 <{if 1 == $kind}>
                 <span style="color:#FF0000">R</span>(レア)スタートで最終進化<span style="color:#EE82EE">SR</span>（エスレア）まで到達！<br />
-                <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！一部動画有！</span><br />
+                <span style="color:#EE82EE">SR</span>カードは<span style="color:#FFA500">ボイス付き！一部動画有！<br />(SRで現在動画のないものも動画化していきます)</span><br />
                 <{/if}>
         </div>
     </div>
     <div style="position:relative;left:20px;">
          <img src="<{$smarty.const.IMG_URL}>line.png">
     </div>
+
+    <{if !$firstItem}>
+        <div class="parent">
+            <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="55px" width="640px">
+            <div class="child">
+                <a href="<{$linkItem}>"><span style="color:#FF0000">ガチャ初回は初心者セットがお得！</span></a>
+            </div>
+        </div>
+    <{/if}>
 
     <{foreach from=$list item=data key=key}>
         <{if $data.gacha_id == $smarty.const.GACHA_10_ID}>

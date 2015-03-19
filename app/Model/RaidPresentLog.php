@@ -57,7 +57,11 @@ class RaidPresentLog extends AppModel {
      *
      * @return bool ture:有り false:無し
      */
-    public function isTarget($userId, $enemyId, $start, $end) {
+    public function isTarget($userId, $enemyId, $start = null, $end = null) {
+
+        if (empty($start)) $start = '2000-01-01 00:00:00';
+        if (empty($end)) $end   = '3000-01-01 00:00:00';
+
         $where = array(
             'RaidPresentLog.user_id'    => $userId 
         ,   'RaidPresentLog.kind'       => KIND_CARD

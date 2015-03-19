@@ -68,6 +68,7 @@ class PresentEvRaidShell extends AppShell {
         } elseif ($data['end_time'] < $now) {
             // 後半終了
             $md = $this->EvRaidRankSecond;
+            self::$message = 'EVENT逆ブートキャンプで教姦です後半の報酬';
             $tarm = 2;
         } else {
             $this->out("振込期間ではありません");
