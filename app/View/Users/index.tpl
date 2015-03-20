@@ -34,7 +34,12 @@
            <img src="<{$smarty.const.IMG_URL}>noset.jpg" width="128px" height="360px">
        <{/if}>
     </div>
+
     <{include file="../Elements/status.tpl"}>
+
+    <{include file="../Elements/first_present.tpl"}>
+
+    <div class="spaceLow"></div>
 
     <{include file="../Elements/sub_title.tpl"}>
 

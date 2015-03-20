@@ -288,7 +288,7 @@ define("GACHA_RARE_10_ID", 7 );
  * クエスト関連
  */
 // 最大ステージID
-define("MAX_STAGE_ID", 30 );
+define("MAX_STAGE_ID", 33 );
 // クエストアイテム出現率プラス値(%)
 define("QUEST_ITEM_EFFECT", 5 );
 
@@ -302,4 +302,6 @@ define("SYNTH_MAI_CARD_ID", 65 );
 define("SYNTH_MI_CARD_ID", 66 );
 // 進化素材カードID
 define("SYNTH_EVOL_CARD_ID", 88 );
+// 初回特典カードID
+define("FIRST_PRESENT_CARD_ID", 2000 );
 

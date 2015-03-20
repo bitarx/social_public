@@ -877,6 +877,7 @@ input.btn_submit {
     position: absolute;
     top: 8px;
     left: 150px;
+    width:400px;
     font-size:30px;
 }
 
@@ -1549,6 +1550,19 @@ display: block;
 .parent {
     text-align: center;
     position: relative;
+}
+.commonBord {
+    text-align: center;
+    position: relative;
+    left:1px;
+    color:#000;
+}
+.strCommonBord {
+    position: absolute;
+    top: 4%;
+    left:10px;
+    margin : auto;
+    width: 640px;
 }
 .allCheckL {
     text-align: center;

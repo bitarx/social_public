@@ -900,6 +900,26 @@ class RaidStagesController extends ApiController {
                     }
                 }
 
+                /** 舞奈初回特典 */
+                // 舞奈を討伐したことがあるか
+                if ( FIRST_PRESENT_CARD_ID == $targetId ) {
+                    $ret = $this->RaidPresentLog->isTarget($this->userId, FIRST_PRESENT_CARD_ID); 
+                    if (!$ret) {
+                        $mes = 'レイドボス「舞奈」初回討伐特典';
+                        $num = 1;
+                        $numPlus = 2;
+
+                        // 倒したことがなければ振込
+                        // 舞奈
+                        $values[] = array($this->userId, KIND_CARD, FIRST_PRESENT_CARD_ID, $num, $mes);
+                        $valuesLog[] = array($this->userId, $raidMasterId, KIND_CARD, FIRST_PRESENT_CARD_ID, $num);
+                        // その他特典
+                        $values[] = array($this->userId, KIND_CARD, SYNTH_EVOL_CARD_ID, $numPlus, $mes);
+                        $valuesLog[] = array($this->userId, $raidMasterId, KIND_CARD, SYNTH_EVOL_CARD_ID, $numPlus);
+                    }
+                }
+
+
                 $this->UserPresentBox->registPBox($values);
                 $this->RaidPresentLog->regist($valuesLog);
 
