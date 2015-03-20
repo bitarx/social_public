@@ -49,6 +49,7 @@ class AppController extends Controller {
     public static $testUserNiji = array(193408, 684606);
 //    public static $testUserNiji = array();
 
+
     /**
      * 定数
      *

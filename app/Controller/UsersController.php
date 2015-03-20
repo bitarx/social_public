@@ -19,7 +19,7 @@ class UsersController extends ApiController {
      */
 	public $components = array('Paginator');
 
-    public $uses = array('UserCard', 'UserParam', 'UserDeckCard', 'SnsUser', 'RaidHelp', 'UserCollect', 'Card');
+    public $uses = array('UserCard', 'UserParam', 'UserDeckCard', 'SnsUser', 'RaidHelp', 'UserCollect', 'Card', 'RaidPresentLog');
 
     /**
      * マイページ
@@ -49,6 +49,9 @@ class UsersController extends ApiController {
             }
         }
 
+        // 舞奈を討伐したことがあるか
+        $firstPresent = $this->RaidPresentLog->isTarget($this->userId, FIRST_PRESENT_CARD_ID); 
+
         // アサイン
         $this->set('list', $userDeckList);
         $this->set('data', $this->userParam);
@@ -57,6 +60,7 @@ class UsersController extends ApiController {
         $this->set('haveMoney', $this->userParam['money']);
         $this->set('subTitle', 'レイドボス救援要請');
         $this->set('helpList', $helpList);
+        $this->set('firstPresent', $firstPresent);
 	}
 
     /**
