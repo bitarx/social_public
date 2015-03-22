@@ -64,9 +64,10 @@
 
     <{if !$firstItem}>
         <div class="parent">
-            <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="55px" width="640px">
+            <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="105px" width="640px">
             <div class="child">
-                <a href="<{$linkItem}>"><span style="color:#FF0000">ガチャ初回は初心者セットがお得！</span></a>
+                <a href="<{$linkItem}>"><span style="color:#FF0000">ガチャは初心者限定セットがお得！</span></a><br />
+                <a href="<{$linkItem}>"><span style="color:#FF0000">プレミアムガチャチケット入り100<{$smarty.const.POINT_NAME}>！</span></a>
             </div>
         </div>
     <{/if}>
@@ -128,6 +129,17 @@
             <{/if}>
         </div>
 
+        <{if $data.gacha_id == $smarty.const.GACHA_PREMIUM_ID}>
+            <{if !$firstItem}>
+                <div class="parent">
+                    <img src="<{$smarty.const.IMG_URL}>textarea_gd.png"  height="105px" width="640px">
+                    <div class="child">
+                        <a href="<{$linkItem}>"><span style="color:#FF0000">ガチャは初心者限定セットがお得！</span></a><br />
+                        <a href="<{$linkItem}>"><span style="color:#FF0000">プレミアムガチャチケット入り100<{$smarty.const.POINT_NAME}>！</span></a>
+                    </div>
+                </div>
+            <{/if}>
+        <{/if}>
         <div class="space"></div>
 
         <div class="lineGacha">
