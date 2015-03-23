@@ -10,9 +10,9 @@ App::uses('AppModel', 'Model');
 class SendMesShell extends AppShell {
 
 
-    protected static $title = 'SRカード動画閲覧機能追加！';
+    protected static $title = '鎮激クエスト11章を追加！';
 
-    protected static $body = 'SRカードの一部で動画が閲覧できるようになりました！';
+    protected static $body = '鎮激クエスト11章を追加しました！SR静香に動画を追加！';
 
     protected static $limit = 100; // １回の送信件数
 

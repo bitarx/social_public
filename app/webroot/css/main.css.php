@@ -620,6 +620,7 @@ input.btn_submit {
     position:absolute;
     top:2px;
     left:32px;
+    font-size: 26px;
 }
 
 /**
@@ -728,13 +729,13 @@ input.btn_submit {
 
 .stageItemEffect {
     position:relative;
-    top:40px;
+    top:47px;
     height:100px;
     text-align:center;
 }
 .stageItemEffectBoss {
     position:relative;
-    top:120px;
+    top:127px;
     height:100px;
     text-align:center;
 }
@@ -1559,7 +1560,14 @@ display: block;
 }
 .strCommonBord {
     position: absolute;
-    top: 4%;
+    top: 15%;
+    left:10px;
+    margin : auto;
+    width: 640px;
+}
+.strCommonBordIos {
+    position: absolute;
+    top: 5%;
     left:10px;
     margin : auto;
     width: 640px;

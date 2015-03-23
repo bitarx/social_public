@@ -8,14 +8,15 @@
 
                 <div class="strPagingNum">
                 <{$smarty.section.pageNum.index}>&nbsp;
+                </div>
               <{else}>
-                <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$smarty.section.pageNum.index}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>">
                 <input type="image" src="<{$smarty.const.IMG_URL}>btn_cm_ss_on.png" height="30px" width="45px">
+                <a href="<{$smarty.const.BASE_URL}><{$ctlAction}>?<{$smarty.const.KEY_PAGING}>=<{$smarty.section.pageNum.index}>&kind=<{$kind}>&rare_level=<{$rareLevelSelect}>&sort_item=<{$sortItemSelect}><{if isset($addParam)}><{$addParam}><{/if}>">
                 <div class="strPagingNum">
-                <{$smarty.section.pageNum.index}></a>&nbsp;
+                <{$smarty.section.pageNum.index}>&nbsp;
+                </div>
+                </a>
               <{/if}>
-              </div>
-              </a>
           </div>
         <{if $smarty.section.pageNum.index == 5 || $smarty.section.pageNum.index == $pageAll}>
             </div>

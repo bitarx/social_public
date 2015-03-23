@@ -40,8 +40,8 @@ class AppController extends Controller {
     public static $menteEnd = '11:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
-    public static $testUserHills = array(553544, 553984, 566162);
-//    public static $testUserHills = array();
+//    public static $testUserHills = array(553544, 553984, 566162);
+    public static $testUserHills = array();
 
     public static $testUserWaku = array(6578349);
 //    public static $testUserWaku = array();
@@ -68,7 +68,7 @@ class AppController extends Controller {
 
     public $viewClass = 'Smarty';
 
-    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString', 'EvRaid');
+    public $uses = array('SnsUser', 'User', 'UserTutorial', 'UserParam', 'EvQuest', 'UserQueryString', 'EvRaid', 'UserStage');
 
     public $components = array('Cookie', 'Common');
 
@@ -445,6 +445,30 @@ class AppController extends Controller {
             if ('hills' != PLATFORM_ENV) {
                 $this->ownerInfo = 'opensocial_owner_id=' . $this->ownerId . '&opensocial_viewer_id=' . $this->viewerId;
                 $this->ownerInfo .= '&qststg_flg=1';
+            }
+
+            // 現在到達最大ステージ
+            $stageId = $this->UserStage->getUserMaxStageId($this->userId);
+
+            // 次のステージ
+            $nextStageId = $stageId + 1;
+
+            if ( 31 == $nextStageId ) {
+
+                $field = array('state');
+                $where = array(
+                             'user_id'  => $this->userId
+                         ,   'stage_id' => $stageId
+                         );
+                $maxStage = $this->UserStage->getAllFind($where, $field, 'first');
+
+                if ( 3 == $maxStage['state'] ) {
+                    // 次のステージへ
+                    $fields = array('user_id', 'stage_id', 'progress', 'state');
+                    $values = array();
+                    $values[] = array($this->userId, $nextStageId, 0, 1);
+                    $this->UserStage->insertBulk($fields, $values, $ignore = 1);
+                }
             }
 
             // コントローラとアクション
