@@ -12,7 +12,7 @@ class SendMesShell extends AppShell {
 
     protected static $title = '鎮激クエスト11章を追加！';
 
-    protected static $body = '鎮激クエスト11章を追加しました！SR静香に動画を追加！';
+    protected static $body = '鎮激クエスト11章を追加しました！SR夏月静香に動画を追加！';
 
     protected static $limit = 100; // １回の送信件数
 
