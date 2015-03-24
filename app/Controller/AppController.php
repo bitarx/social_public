@@ -35,8 +35,8 @@ class AppController extends Controller {
     /**
      * メンテナンス
      */
-    public static $menteNo = 0;      // 1:通常メンテ 2:メンテ時刻遅延
-    public static $mentePlatform = 'hills';      // allにすると全環境メンテ
+    public static $menteNo = 1;      // 1:通常メンテ 2:メンテ時刻遅延
+    public static $mentePlatform = 'niji';      // allにすると全環境メンテ
     public static $menteEnd = '11:00';
 
     // メンテナンス中でも入れるユーザーのowner_id
